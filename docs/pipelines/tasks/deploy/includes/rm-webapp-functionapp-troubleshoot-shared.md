@@ -14,15 +14,16 @@ Check if the package mentioned in the task is published as an artifact in the bu
 
 ### Error: Publish using zip deploy option is not supported for msBuild package type
 
-Web packages created using MSBuild task (with default arguments) have a nested folder structure that can only be deployed correctly by Web Deploy. Publish to zip deploy option can not be used to deploy those packages. To convert the packaging structure, follow the below steps. 
+Web packages created using MSBuild task (with default arguments) have a nested folder structure that can only be deployed correctly by Web Deploy. Publish to zip deploy option can not be used to deploy those packages. To convert the packaging structure, follow the below steps.
 
-* In Build Solution task, change the MSBuild Arguments to
-/p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:publishUrl="$(System.DefaultWorkingDirectory)\\WebAppContent"
+- In Build Solution task, change the MSBuild Arguments to
+  /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:publishUrl="\$(System.DefaultWorkingDirectory)\\WebAppContent"
 
-* Add Archive Task and change the inputs as follows:
-  * Change *Root folder or file to archive* to
-    $(System.DefaultWorkingDirectory)\\WebAppContent
+- Add Archive Task and change the inputs as follows:
+
+  - Change _Root folder or file to archive_ to
+    \$(System.DefaultWorkingDirectory)\\WebAppContent
     ![Root folder or file to archive](../media/azure-rm-web-app-deployment-03.png)
- 
-   * Disable *Prepend root folder name to archive paths* option
+
+  - Disable _Prepend root folder name to archive paths_ option
     ![Prepend root folder name to archive paths](../media/azure-rm-web-app-deployment-04.png)

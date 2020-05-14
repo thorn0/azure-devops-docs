@@ -9,20 +9,19 @@ ms.author: apawast
 author: apawast
 ms.topic: quickstart
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Develop and share your code in TFVC using Visual Studio
 
 #### Azure Repos | Azure DevOps Server 2019 | TFS 2018 | TFS 2017 | TFS 2015 | VS 2017 | VS 2015 | VS 2013
 
-Whether your software project is large, small, or brand new, 
-in most cases you'll be better off if you use version control 
-as early as possible. 
-Here, we'll show you how to get started with 
+Whether your software project is large, small, or brand new,
+in most cases you'll be better off if you use version control
+as early as possible.
+Here, we'll show you how to get started with
 Team Foundation Version Control (TFVC), a centralized system.
-If you want to work in a distributed system, 
+If you want to work in a distributed system,
 you can instead use [Git with Azure Repos](../../repos/git/share-your-code-in-git-vs.md).
 
 Is your code in another place? [Learn how to migrate it here](#migrate).
@@ -30,6 +29,7 @@ Is your code in another place? [Learn how to migrate it here](#migrate).
 [!INCLUDE [open-team-project-in-vs](includes/open-team-project-in-vs.md)]
 
 <a name="workspace"></a>
+
 ## Configure your workspace
 
 1. In Visual Studio, configure your workspace.
@@ -53,10 +53,11 @@ skip down to [Add an existing app](#app_add).
 
 ![New solution from team explorer](media/share-your-code-in-tfvc-vs/team-explorer-new-solution.png)
 
-Now that you've added your app, you can skip down to 
+Now that you've added your app, you can skip down to
 [snapshot your code](#snapshot).
 
 <a name="app_add"></a>
+
 ## Add an existing app
 
 ### Move and open the solution
@@ -74,7 +75,6 @@ Now that you've added your app, you can skip down to
 4. Open your solution in Visual Studio.
 
    ![Open your solution in Visual Studio](media/share-your-code-in-tfvc-vs/open-solution-from-team-explorer-home.png)
-
 
 ### Add the solution to Azure Repos
 
@@ -103,6 +103,7 @@ Now that you've added your app, you can skip down to
 Your whole team can work on the code now. All your changes are tracked in version control.
 
 <a name="snapshot"></a>
+
 ## Snapshot (check in) your code
 
 1. When you edit code in Visual Studio, the changed file is automatically checked out. For example, Site.css is checked out after the border color has been changed to #ddd.
@@ -145,28 +146,29 @@ Your whole team can work on the code now. All your changes are tracked in versio
 
 ## Troubleshooting
 
-* [My code is somewhere else. Can I migrate it to my TFVC project on Azure DevOps Services?](#my-code-is-somewhere-else-can-i-migrate-it-to-my-tfvc-project-on-azure-devops-services)
-* [I don't see the Configure Workspace link shown in the steps above. What do I do next?](#i-dont-see-the-configure-workspace-link-shown-in-the-steps-above-what-do-i-do-next)
+- [My code is somewhere else. Can I migrate it to my TFVC project on Azure DevOps Services?](#my-code-is-somewhere-else-can-i-migrate-it-to-my-tfvc-project-on-azure-devops-services)
+- [I don't see the Configure Workspace link shown in the steps above. What do I do next?](#i-dont-see-the-configure-workspace-link-shown-in-the-steps-above-what-do-i-do-next)
 
 <a name="migrate"></a>
+
 ### My code is somewhere else. Can I migrate it to my TFVC project on Azure DevOps Services?
 
 Yes:
 
- * [Upgrade From Visual SourceSafe](https://msdn.microsoft.com/library/ms253060).
- * [Migrate from Team Foundation Server into Azure DevOps Services](../../migrate/migrate-from-tfs.md).
+- [Upgrade From Visual SourceSafe](https://msdn.microsoft.com/library/ms253060).
+- [Migrate from Team Foundation Server into Azure DevOps Services](../../migrate/migrate-from-tfs.md).
 
 <a name="workspace_exists"></a>
+
 ### I don't see the Configure Workspace link shown in the steps above. What do I do next?
 
-You might already have a workspace on your computer. To see your workspace, open Source 
-Control Explorer. Or change your workspace. Find out how to [manage files under 
-source control](https://msdn.microsoft.com/library/ms181370.aspx) or 
+You might already have a workspace on your computer. To see your workspace, open Source
+Control Explorer. Or change your workspace. Find out how to [manage files under
+source control](https://msdn.microsoft.com/library/ms181370.aspx) or
 [manage workspaces](https://msdn.microsoft.com/library/ms181383.aspx).
 
 ![In Team Explorer, click Source Control Explorer or Manage Workspaces](media/share-your-code-in-tfvc-vs/OpenSCE_ManageWorkspaces.png)
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Get your code reviewed](get-code-reviewed-vs.md)
+> [!div class="nextstepaction"][get your code reviewed](get-code-reviewed-vs.md)

@@ -14,8 +14,6 @@ ms.date: 08/04/2016
 
 Module path: `TFS/WorkItemTracking/UIContracts`
 
-
 ### Members
 
-* `query`: [WitContracts.QueryHierarchyItem](../../../TFS/WorkItemTracking/Contracts/QueryHierarchyItem.md). 
-
+- `query`: [WitContracts.QueryHierarchyItem](../../../TFS/WorkItemTracking/Contracts/QueryHierarchyItem.md).

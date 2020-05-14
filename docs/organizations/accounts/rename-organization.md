@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 04/16/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Rename your organization in Azure DevOps
@@ -51,12 +51,10 @@ Your organization is renamed.
 
 ### Q: If I change the organization URL, can I switch back?
 
-A: The organization URL setting is two-way toggle. You can turn on the new domain name URL. You can also turn off the new URL - then, you go back to using old URL format.  
+A: The organization URL setting is two-way toggle. You can turn on the new domain name URL. You can also turn off the new URL - then, you go back to using old URL format.
 
 ## Related articles
 
 - [Resolve orphaned organization](resolve-orphaned-organization.md)
 - [Delete your organization](delete-your-organization.md)
 - [Connect your organization to Azure Active Directory](connect-organization-to-azure-ad.md)
-
-

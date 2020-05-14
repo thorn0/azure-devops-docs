@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `cloneOptions`: [CloneOptions](../../../TFS/TestManagement/Contracts/CloneOptions.md). 
+- `cloneOptions`: [CloneOptions](../../../TFS/TestManagement/Contracts/CloneOptions.md).
 
-* `destinationSuiteId`: number. 
+- `destinationSuiteId`: number.
 
-* `destinationSuiteProjectName`: string. 
-
+- `destinationSuiteProjectName`: string.

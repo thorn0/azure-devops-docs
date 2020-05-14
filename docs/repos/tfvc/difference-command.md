@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Difference Command
 
@@ -23,20 +22,20 @@ Compares, and if it is possible, displays differences between two files, files i
 To use the **difference** command, you must have the **Read** permission for all specified items set to **Allow**. For more information, see [Permissions and groups reference](../../organizations/security/permissions.md).
 
 ```
-tf diff[erence] itemspec [/version:versionspec] [/type:filetype] 
-[/format:format [/ignorespace] [/ignoreeol] [/ignorecase] [/recursive] 
+tf diff[erence] itemspec [/version:versionspec] [/type:filetype]
+[/format:format [/ignorespace] [/ignoreeol] [/ignorecase] [/recursive]
 [/options][/noprompt][/login:username,[password]]
 ```
 
 ```
-tf diff[erence] itemspec itemspec2 [/type:filetype] [/format: format] 
+tf diff[erence] itemspec itemspec2 [/type:filetype] [/format: format]
 [/ignorespace] [/ignoreeol] [/ignorecase] [/recursive] [/options] [/noprompt][/login:username,[password]]
 ```
 
 ```
-tf diff[erence] [/shelveset:shelvesetname[;shelvesetowner]] 
-shelveset_itemspec [/type:filetype] 
-[/format: format] [/ignorespace] [/ignoreeol] [/ignorecase] 
+tf diff[erence] [/shelveset:shelvesetname[;shelvesetowner]]
+shelveset_itemspec [/type:filetype]
+[/format: format] [/ignorespace] [/ignoreeol] [/ignorecase]
 [/recursive] [/options] [/noprompt][/login:username,[password]]
 ```
 
@@ -77,32 +76,33 @@ tf diff[erence] /configure
     <td><p>Provides a value to the <strong>/login</strong> option. You can specify a username value as either <em>DOMAIN</em>&lt;em&gt;UserName</em> or <em>UserName.</em></p></td></tr></tbody>
 </table>
 
-|**Option**|**Description**|
-|---|---|
-|**/type**|Overrides any detected encodings and uses the specified encoding to present the files to the differencing engine.|
-|**/version**|Specifies the version of the file or folder to compare. By default, Team Foundation uses the workspace version if you do not provide a *versionspec*.<br /><br />Instead of using the **/version** flag, you can specify versions by appending a semicolon and version specifier to the end of each file name.|
-|**/format**|Specifies an output format specified by the *format* argument.|
-|**/ignorespace**|Does not highlight white-space differences between the compared files.|
-|**/ignoreeol**|Ignores differences between the new line characters in two files or file versions. **/ignoreeol** works differently from **/ignoreSpace**. **/ignorespace** treats eight spaces identically to one. However, if you use the **/ignoreeol** option and File A has two new line characters between unchanged areas of text, and File B has one, the result displays as a difference. If both files have only one new line, but File A uses `\r\n` as a new line and File B uses `\n`, **/ignoreEOL** option would ignore that as a difference.|
-|**/ignorecase**|Does not highlight differences in letter casing between the compared files.|
-|**/recursive**|Compares the differences between the current folder and all its subfolders.|
-|**/options**|Specifies an option string for the tool to be invoked by diff. For more information, see [Associate a File Type with a Difference Tool](associate-file-type-file-comparison-tool.md) and [Associate a File Type with a Merge Tool](associate-file-type-merge-tool.md).|
-|**/shelveset**|Specifies a shelveset to compare to the Team Foundation version control server version upon which the shelveset is based.<br /><br />This option cannot be combined with an *itemspec* argument. To compare individual shelveset items, you can provide a *shelveset_itemspec*.|
-|**/noprompt**|Suppresses any dialog boxes that would otherwise be displayed during the completion of this operation.|
-|**/configure**|Invokes the **Configure User Tools** dialog box. This tool is available from the Visual Studio user interface. For more information, see [Associate a File Type with a Difference Tool](associate-file-type-file-comparison-tool.md).|
-|**/login**|Specifies the user name and password to authenticate the user with Team Foundation Server.|
+| **Option**       | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **/type**        | Overrides any detected encodings and uses the specified encoding to present the files to the differencing engine.                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **/version**     | Specifies the version of the file or folder to compare. By default, Team Foundation uses the workspace version if you do not provide a _versionspec_.<br /><br />Instead of using the **/version** flag, you can specify versions by appending a semicolon and version specifier to the end of each file name.                                                                                                                                                                                                                               |
+| **/format**      | Specifies an output format specified by the _format_ argument.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **/ignorespace** | Does not highlight white-space differences between the compared files.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **/ignoreeol**   | Ignores differences between the new line characters in two files or file versions. **/ignoreeol** works differently from **/ignoreSpace**. **/ignorespace** treats eight spaces identically to one. However, if you use the **/ignoreeol** option and File A has two new line characters between unchanged areas of text, and File B has one, the result displays as a difference. If both files have only one new line, but File A uses `\r\n` as a new line and File B uses `\n`, **/ignoreEOL** option would ignore that as a difference. |
+| **/ignorecase**  | Does not highlight differences in letter casing between the compared files.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **/recursive**   | Compares the differences between the current folder and all its subfolders.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **/options**     | Specifies an option string for the tool to be invoked by diff. For more information, see [Associate a File Type with a Difference Tool](associate-file-type-file-comparison-tool.md) and [Associate a File Type with a Merge Tool](associate-file-type-merge-tool.md).                                                                                                                                                                                                                                                                       |
+| **/shelveset**   | Specifies a shelveset to compare to the Team Foundation version control server version upon which the shelveset is based.<br /><br />This option cannot be combined with an _itemspec_ argument. To compare individual shelveset items, you can provide a _shelveset_itemspec_.                                                                                                                                                                                                                                                              |
+| **/noprompt**    | Suppresses any dialog boxes that would otherwise be displayed during the completion of this operation.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **/configure**   | Invokes the **Configure User Tools** dialog box. This tool is available from the Visual Studio user interface. For more information, see [Associate a File Type with a Difference Tool](associate-file-type-file-comparison-tool.md).                                                                                                                                                                                                                                                                                                        |
+| **/login**       | Specifies the user name and password to authenticate the user with Team Foundation Server.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ## Remarks
+
 > [!NOTE]
 > You can type **tf diff** or **tf difference** at the command line to run this command.
 
 You can use the **difference** command to compare and if it is possible, display differences between:
 
--   Two different files or two versions of the same file.
+- Two different files or two versions of the same file.
 
--   One or more of the items in a folder.
+- One or more of the items in a folder.
 
--   One, some, or all the items in a shelveset on the Team Foundation Server.
+- One, some, or all the items in a shelveset on the Team Foundation Server.
 
 You can use the **difference** command to compare both versioned and non-versioned files.
 
@@ -110,19 +110,19 @@ Team Foundation categorizes all files by type. Text files can be merged and comp
 
 If you specify two file names, the two files are compared. Instead of using the **/version** flag, you can specify versions by appending a semicolon and version specifier to the end of each file name.
 
-If you pass only one *itemspec* to the difference command:
+If you pass only one _itemspec_ to the difference command:
 
--   If do not provide a versionspec, your current workspace version of the item is compared to the base workspace version, by default. For example, **tf difference header.h** compares the current version of header.h to the version upon which header.h is based.
+- If do not provide a versionspec, your current workspace version of the item is compared to the base workspace version, by default. For example, **tf difference header.h** compares the current version of header.h to the version upon which header.h is based.
 
--   If you include a versionspec in your itemspec such as , **tf difference header.h;LBeta1**, Team Foundation compares that version to your current workspace version on disk.
+- If you include a versionspec in your itemspec such as , **tf difference header.h;LBeta1**, Team Foundation compares that version to your current workspace version on disk.
 
--   If you specify a range of versions such as **/version:C1~C4**, the versions of the file at the two end points of the range are compared.
+- If you specify a range of versions such as **/version:C1~C4**, the versions of the file at the two end points of the range are compared.
 
 For more information on how to find the **tf** command-line utility, see [Tf Command-Line Utility Commands](https://msdn.microsoft.com/library/z51z7zy0).
 
 ### Output Format types
 
-The *format* parameter, used with the **/format** option, specifies many different output formats. The available output types are
+The _format_ parameter, used with the **/format** option, specifies many different output formats. The available output types are
 
 - **Visual**
 
@@ -146,13 +146,13 @@ The *format* parameter, used with the **/format** option, specifies many differe
 
   **SS** is default difference output format for Visual SourceSafe. For more information, see "Diff (Command Line)" at the Microsoft Web site (<https://go.microsoft.com/fwlink/?LinkId=99139>).
 
-- **SS\_SideBySide**
+- **SS_SideBySide**
 
-  **SS\_SideBySide** is the default side-by-side output format for Visual SourceSafe.
+  **SS_SideBySide** is the default side-by-side output format for Visual SourceSafe.
 
-- **SS\_Unix**
+- **SS_Unix**
 
-  SS\_Unix is similar to the /format:unix output format, but /format:ss\_unix includes context lines and /format:unix does not.
+  SS_Unix is similar to the /format:unix output format, but /format:ss_unix includes context lines and /format:unix does not.
 
 - **Unified**
 
@@ -166,26 +166,27 @@ The *format* parameter, used with the **/format** option, specifies many differe
 
   The **Unix** output format is constructed in the following way:
 
-    ```
-    <metadataline>
-    "< " line prefix for lines from the first file
-    "---" line
-    "> " line prefix for lines from the second file
+  ```
+  <metadataline>
+  "< " line prefix for lines from the first file
+  "---" line
+  "> " line prefix for lines from the second file
 
-    <metadataline> can be one of these possibilities:
-    #a#,# -- add lines from line # in file1 into file2 at lines #->#
-    #,#d# -- delete lines from line # -> # in file 1 from file2 at line #
-    #,#c#,# -- change lines from line # -> # in file1 into the lines in file2 at line # -> #
+  <metadataline> can be one of these possibilities:
+  #a#,# -- add lines from line # in file1 into file2 at lines #->#
+  #,#d# -- delete lines from line # -> # in file 1 from file2 at line #
+  #,#c#,# -- change lines from line # -> # in file1 into the lines in file2 at line # -> #
 
-    # signs separated by commas indicate a line range.
-    # signs before the character indicate line numbers in the first file
-    # signs after the character indicate line numbers in the second file
+  # signs separated by commas indicate a line range.
+  # signs before the character indicate line numbers in the first file
+  # signs after the character indicate line numbers in the second file
 
-    /// No end of line marker at the end of the file:
-    /// \ No newline at end of file
-    ```
+  /// No end of line marker at the end of the file:
+  /// \ No newline at end of file
+  ```
 
   ## Examples
+
   The following example displays the differences between the local version of 314.cs and the workspace version of 314.cs that is the version of the file that was checked out from the Team Foundation version control server.
 
   c:\projects>tf difference 314.cs
@@ -214,7 +215,7 @@ c:\projects>tf difference 314.cs;Lrelease 314.cs;C3200
 c:\projects>tf difference 314.cs;Lrelease~C3200
 ```
 
-The following example displays the difference between the versions of e271.cs that a user named Nadia shelved in shelveset PeerCodeReview8 and the *base shelveset version* that is the version upon which she based her changes. Also displays the types of changes pending against e271.cs when Nadia shelved.
+The following example displays the difference between the versions of e271.cs that a user named Nadia shelved in shelveset PeerCodeReview8 and the _base shelveset version_ that is the version upon which she based her changes. Also displays the types of changes pending against e271.cs when Nadia shelved.
 
 ```
 c:\projects> tf difference /shelveset:PeerCodeReview8;Nadia e271.cs

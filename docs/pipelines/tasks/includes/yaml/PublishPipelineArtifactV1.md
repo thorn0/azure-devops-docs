@@ -12,6 +12,6 @@ ms.technology: devops-cicd-tasks
 # Publish (upload) a file or directory as a named artifact for the current run
 - task: PublishPipelineArtifact@1
   inputs:
-    #targetPath: '$(Pipeline.Workspace)' 
+    #targetPath: '$(Pipeline.Workspace)'
     #artifactName: # 'drop'
 ```

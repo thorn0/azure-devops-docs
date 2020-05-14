@@ -1,14 +1,14 @@
 ---
 title: Review and merge code with pull requests
 titleSuffix: Azure Repos
-description:  Conduct a code review in a Git with Azure Repos or Azure DevOps Server, create a pull request.
+description: Conduct a code review in a Git with Azure Repos or Azure DevOps Server, create a pull request.
 ms.assetid: 4C9DFD24-E894-454A-A080-DA511C90CA74
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 11/15/2019
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Review code with pull requests
@@ -50,9 +50,9 @@ Manage pull requests you own or are assigned to with the **Pull Requests** tab i
 
 ![Viewing completed and abandoned pull requests in Azure Repos](media/repos-navigation/repos-code-pull-requests.png)
 
-::: moniker-end 
+::: moniker-end
 
-::: moniker range=">= tfs-2017" 
+::: moniker range=">= tfs-2017"
 
 Select **Active** to show all active pull requests for the current repo.
 
@@ -64,7 +64,7 @@ You can view all of your pull requests in your organization, across all projects
 
 ![View all my pull requests](media/pull-requests/view-all-pull-requests.png)
 
-::: moniker-end 
+::: moniker-end
 
 ## Create a new pull request
 
@@ -73,7 +73,7 @@ Create a new pull request from:
 - [Pushed feature branches to your Git repo](#after-pushing-a-branch)
 - [The **Development** section in a linked work item](#from-a-linked-work-item)
 - [From the Pull Requests page on the web](#from-the-pull-requests-page-on-the-web)
-- [Team Explorer in Visual Studio](#from-visual-studio) 
+- [Team Explorer in Visual Studio](#from-visual-studio)
 - [Using the Azure DevOps Services CLI](#from-the-azure-devops-services-cli)
 
 ### After pushing a branch
@@ -120,7 +120,7 @@ Create pull requests from any branch from the **Pull Request** page on the web.
 ![New pull request](media/pull-requests/new-pr-button.png)
 
 Select **New pull request** in the upper right. You can [enter your pull request details](pull-requests.md#finish) and create the pull request.
-Pick the branch you want to have reviewed and the branch you want to merge the changes into, such as the master branch.  
+Pick the branch you want to have reviewed and the branch you want to merge the changes into, such as the master branch.
 
 ![Choosing source and target branches for a pull request in Azure Repos](media/pull-requests/pr-branch-targets.png)
 
@@ -320,7 +320,7 @@ Keep these fields up to date so reviewers know what the changes in the pull requ
 ## Review a pull request
 
 The **Overview** tab shows the current state of the pull request at a glance.
-Review the title, description, and discussion to understand proposed changes and see issues brought up by other reviewers.  
+Review the title, description, and discussion to understand proposed changes and see issues brought up by other reviewers.
 
 ![Pull request overview](media/pull-requests/pull-request-overview.png)
 
@@ -332,8 +332,8 @@ Starting with Visual Studio 2017 Update 6, you can check out the source branch f
 
 Select **Files** to view the changes made to the source branch next to the target branch of the pull request.
 
->[!NOTE]
->The size limit for files in the files view and the diff view is 5 MB. To view and diff files larger than 5 MB, you can download the file and view it using a local diff tool.
+> [!NOTE]
+> The size limit for files in the files view and the diff view is 5 MB. To view and diff files larger than 5 MB, you can download the file and view it using a local diff tool.
 
 ![Pull request files](media/pull-requests/pull-request-files.png)
 
@@ -394,7 +394,7 @@ The number of required approvals in a pull request can be set from the [branch p
 
 When you configure the [Require a minimum number of reviewers](branch-policies.md#require-a-minimum-number-of-reviewers) branch policy, select **Reset code reviewer votes when there are new changes** to reset votes when you push new changes.
 
-Best practice: At least two reviewers should review and approve the changes in a significant pull request.  
+Best practice: At least two reviewers should review and approve the changes in a significant pull request.
 
 ## Update code in response to feedback
 
@@ -438,7 +438,7 @@ Linked work items are also updated showing the pull request completion.
 
 ![Linked Work Items showing completed pull requests](./media/pull-requests/pr_workitem_complete.png)
 
-::: moniker range=">= tfs-2017" 
+::: moniker range=">= tfs-2017"
 
 ### Complete automatically
 
@@ -450,10 +450,10 @@ Select **Cancel auto-complete** to turn off auto-complete and return the pull re
 
 ![A banner displays when your pull request is in auto-complete state](./media/pull-requests/pr_banner_autocomplete.png)
 
->[!NOTE]
->The **Auto-complete** option is available in Azure Repos and TFS 2017 and higher. It is only present when you have branch policies that must be satisfied. If you don't see **Auto-complete**, you don't have any branch policies. For more information, see [Branch policies](branch-policies.md).
+> [!NOTE]
+> The **Auto-complete** option is available in Azure Repos and TFS 2017 and higher. It is only present when you have branch policies that must be satisfied. If you don't see **Auto-complete**, you don't have any branch policies. For more information, see [Branch policies](branch-policies.md).
 
-::: moniker-end 
+::: moniker-end
 
 ### Abandon your changes
 
@@ -464,18 +464,19 @@ It stays linked to work items.
 Reactivate an abandoned pull request at any time. Select the pull request from the **Abandoned** tab in the **Pull Request** view.
 
 <a name="notifications"></a>
+
 ## Receiving notification of pull request updates
 
 Subscribe to email alerts to get notified for changes to your pull requests.
 
->[!NOTE]
->By default, you are subscribed to several common pull request notifications. For a complete list of default notification subscriptions, see [Out-of-the-box (OOB) or default subscriptions](../../notifications/oob-built-in-notifications.md#out-of-the-box-oob-or-default-subscriptions)
+> [!NOTE]
+> By default, you are subscribed to several common pull request notifications. For a complete list of default notification subscriptions, see [Out-of-the-box (OOB) or default subscriptions](../../notifications/oob-built-in-notifications.md#out-of-the-box-oob-or-default-subscriptions)
 
 ::: moniker range=">= azure-devops-2019"
 
 [Go to your project](../../project/navigation/go-to-project-repo.md) and select **Project settings** > **Notifications** to view your notification settings.
 
-   ![Settings for pull request emails](./media/pull-requests/pr-notifications-new-nav.png)
+![Settings for pull request emails](./media/pull-requests/pr-notifications-new-nav.png)
 
 - Choose **New subscription** to subscribe to additional notifications.
 
@@ -495,23 +496,23 @@ Subscribe to email alerts to get notified for changes to your pull requests.
 
 Select the settings button while you have your project open to bring up the project administration page.
 
-![Open up the administrative area of the web portal for your project](media/pull-requests/gear_icon_settings.png) 
+![Open up the administrative area of the web portal for your project](media/pull-requests/gear_icon_settings.png)
 
 - Select the **Notifications** tab to view your notification settings, and choose **New subscription** to subscribe to additional notifications.
 
   ![Subscribe to emails](./media/pull-requests/pr-notifications.png)
 
-- To edit a notification, select **...** for the notification and choose **View** to edit the subscription. 
+- To edit a notification, select **...** for the notification and choose **View** to edit the subscription.
 
   ![Change subscription](./media/pull-requests/view-pr-notifications.png)
 
 - To opt-out of a notification, set the **State** to **Off**.
 
-   ![Opt out of emails](./media/pull-requests/opt-out-notifications.png)
+  ![Opt out of emails](./media/pull-requests/opt-out-notifications.png)
 
 ::: moniker-end
 
-::: moniker range=">= tfs-2017" 
+::: moniker range=">= tfs-2017"
 
 ## Revert a pull request
 
@@ -543,12 +544,12 @@ To copy changes made in a pull request to another branch in your repo, follow th
 
 1. Select **Create pull request** to merge the topic branch into the target branch to complete the cherry-pick.
 
-::: moniker-end 
+::: moniker-end
 
 ## Set a new default branch
 
->[!NOTE]
->This step requires [Edit Policies permissions](../../organizations/security/set-git-tfvc-repository-permissions.md#git-repository) on your Git repo.
+> [!NOTE]
+> This step requires [Edit Policies permissions](../../organizations/security/set-git-tfvc-repository-permissions.md#git-repository) on your Git repo.
 
 Configure your Git repo to use a different default branch to merge code into when your team creates new pull requests.
 You can use a branch other than `master` for new changes or change your main line of development in your repo.

@@ -12,7 +12,7 @@ First, get the tools and your feed URL:
 
 [!INCLUDE [](nuget-publish-endpoint.md)]
 
-### Install and publish a sample NuGet package  
+### Install and publish a sample NuGet package
 
 If you don't have a package but want to try publishing, you can install a NuGet sample package from the public NuGet gallery.
 
@@ -42,3 +42,4 @@ If you don't have a package but want to try publishing, you can install a NuGet 
    ```Command
    nuget sources add -Name <SourceName> -Source <SourceURL> -username <UserName> -password <Pat>
    nuget push -Source <SourceName> -ApiKey az <PackagePath exp:(.\Get-Hello.1.0.0.nupkg)>
+   ```

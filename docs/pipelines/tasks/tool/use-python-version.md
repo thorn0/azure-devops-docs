@@ -23,7 +23,7 @@ None
 
 ## Prerequisites
 
-* A [Microsoft-hosted agent](../../agents/hosted.md#software) with side-by-side versions of Python installed, or a self-hosted agent with Agent.ToolsDirectory configured (see [Q&A](#how-can-i-configure-a-self-hosted-agent-to-use-this-task)).
+- A [Microsoft-hosted agent](../../agents/hosted.md#software) with side-by-side versions of Python installed, or a self-hosted agent with Agent.ToolsDirectory configured (see [Q&A](#how-can-i-configure-a-self-hosted-agent-to-use-this-task)).
 
 This task will fail if no Python versions are found in Agent.ToolsDirectory. Available Python versions on Microsoft-hosted agents can be found [here](../../agents/hosted.md#software).
 
@@ -40,11 +40,11 @@ This task will fail if no Python versions are found in Agent.ToolsDirectory. Ava
 
 ## Arguments
 
-| Argument | Description |
-|----------|-------------|
-|`versionSpec`<br/> Version spec | (Required) Version range or exact version of a Python version to use. <br/>Default value: `3.x` |
-|`addToPath`<br/> Add to PATH | (Required) Whether to prepend the retrieved Python version to the PATH environment variable to make it available in subsequent tasks or scripts without using the output variable.<br/>Default value: `true` |
-|`architecture`<br/> Architecture | (Required) The target architecture (x86, x64) of the Python interpreter. x86 is supported only on Windows.<br/>Default value: `x64` |
+| Argument                         | Description                                                                                                                                                                                                  |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `versionSpec`<br/> Version spec  | (Required) Version range or exact version of a Python version to use. <br/>Default value: `3.x`                                                                                                              |
+| `addToPath`<br/> Add to PATH     | (Required) Whether to prepend the retrieved Python version to the PATH environment variable to make it available in subsequent tasks or scripts without using the output variable.<br/>Default value: `true` |
+| `architecture`<br/> Architecture | (Required) The target architecture (x86, x64) of the Python interpreter. x86 is supported only on Windows.<br/>Default value: `x64`                                                                          |
 
 ::: moniker range="> azure-devops-2019"
 
@@ -75,6 +75,7 @@ Hosted Ubuntu and Hosted macOS run 64-bit operating systems and run only 64-bit 
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 ### Where can I learn more about tool installers?
@@ -96,7 +97,7 @@ $AGENT_TOOLSDIRECTORY/
             {platform}.complete
 ```
 
-The `version number` should follow the format of `1.2.3`. 
+The `version number` should follow the format of `1.2.3`.
 The `platform` should either be `x86` or `x64`.
 The `tool files` should be the unzipped Python version files.
 The `{platform}.complete` should be a 0 byte file that looks like `x86.complete` or `x64.complete` and just signifies the tool has been installed in the cache properly.

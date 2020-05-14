@@ -1,18 +1,18 @@
 ---
-title: Pipeline outcome summary sample Power BI report 
+title: Pipeline outcome summary sample Power BI report
 titleSuffix: Azure DevOps
-description: How-to guide to generate a pipeline outcome summary Power BI report for all pipelines in the project  
+description: How-to guide to generate a pipeline outcome summary Power BI report for all pipelines in the project
 ms.technology: devops-analytics
 ms.reviewer: ravishan
 ms.author: kaghai
 ms.custom: powerbisample
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= azure-devops'  
+monikerRange: ">= azure-devops"
 ms.date: 01/30/2020
 ---
 
-# Pipeline outcome summary for all pipelines sample report 
+# Pipeline outcome summary for all pipelines sample report
 
 [!INCLUDE [temp](../includes/version-azure-devops-cloud.md)]
 
@@ -22,16 +22,15 @@ You may want to see pipeline metrics such as pass rate, number of failures, dura
 
 An example is shown in the following image.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample - Pipelines Outcome Summary - Report](media/odatapowerbi-pipelines/allpipelines-report1.png)
 
 As shown in the above image, you can select any pipeline from the "Pipeline Name" drop down at top right and the report will show the outcome summary for the selected pipeline only
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample - Pipelines Outcome Summary - Report](media/odatapowerbi-pipelines/allpipelines-report2.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
-
 
 ## Sample queries
 
@@ -54,7 +53,7 @@ let
             &"PartiallySucceededCount with sum as PartiallySucceededCount, "
                 &"CanceledCount with sum as CanceledCount "
             &")) "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -69,7 +68,7 @@ $apply=filter(
 	CompletedDate ge {startdate}
 	)
 /groupby(
-(Pipeline/PipelineName), 
+(Pipeline/PipelineName),
 aggregate(
 	$count as TotalCount,
 	SucceededCount with sum as SucceededCount,
@@ -80,12 +79,12 @@ aggregate(
 
 ```
 
-***
+---
 
 ### Substitution strings
 
 Each query contains the following strings that you must substitute with your values. Don't include brackets {} with your substitution. For example if your organization name is "Fabrikam", replace {organization} with **Fabrikam**, not {Fabrikam}.
- 
+
 - {organization} - Your organization name
 - {project} - Your team project name
 - {startdate} - The date to start your report. Format: YYYY-MM-DDZ. Example: **2019-09-04Z** represents September 4, 2019. Don't enclose in quotes or brackets and use two digits for both, month and date.
@@ -137,7 +136,6 @@ The following table describes each part of the query.
 </tbody>
 </table>
 
-
 ## Power BI transforms
 
 ### Expand Pipeline column
@@ -148,81 +146,77 @@ After closing the Advanced Editor and while remaining in the Power Query Editor,
 
 1. Choose the expand button
 
-    > [!div class="mx-imgBorder"] 
-    > ![Power BI + OData - Choose expand button](media/odatapowerbi-pipelines/allpipelines-expand1.png)
-    
+   > [!div class="mx-imgBorder"]
+   > ![Power BI + OData - Choose expand button](media/odatapowerbi-pipelines/allpipelines-expand1.png)
+
 1. Select the checkbox "(Select All Columns)" to expand
 
-    > [!div class="mx-imgBorder"] 
-    > ![Power BI + OData - Select all columns](media/odatapowerbi-pipelines/allpipelines-expand2.png)
+   > [!div class="mx-imgBorder"]
+   > ![Power BI + OData - Select all columns](media/odatapowerbi-pipelines/allpipelines-expand2.png)
 
 1. The table now contains the expanded entity **Pipeline.PipelineName**
 
-    > [!div class="mx-imgBorder"] 
-    > ![Power BI + OData - Expanded entity](media/odatapowerbi-pipelines/allpipelines-expand3.png)
-    
+   > [!div class="mx-imgBorder"]
+   > ![Power BI + OData - Expanded entity](media/odatapowerbi-pipelines/allpipelines-expand3.png)
 
 ### Change column type
 
 1. Change the type of column TotalCount to **Whole Number**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Power BI + OData - change column type](media/odatapowerbi-pipelines/outcomesummary-changecolumntype.png)
+   > [!div class="mx-imgBorder"]
+   > ![Power BI + OData - change column type](media/odatapowerbi-pipelines/outcomesummary-changecolumntype.png)
 
 ### Rename fields and query, then Close & Apply
 
-When finished, you may choose to rename columns. 
+When finished, you may choose to rename columns.
 
 1. Right-click a column header and select **Rename...**
 
-	> [!div class="mx-imgBorder"] 
-	> ![Power BI Rename Columns](media/odatapowerbi-pipelines/outcomesummary-renamerightclick.png)
+   > [!div class="mx-imgBorder"]
+   > ![Power BI Rename Columns](media/odatapowerbi-pipelines/outcomesummary-renamerightclick.png)
 
-1. You also may want to rename the query from the default **Query1**, to something more meaningful. 
+1. You also may want to rename the query from the default **Query1**, to something more meaningful.
 
-	> [!div class="mx-imgBorder"] 
-	> ![Power BI Rename Query](media/odatapowerbi-pipelines/renamequery.png)
+   > [!div class="mx-imgBorder"]
+   > ![Power BI Rename Query](media/odatapowerbi-pipelines/renamequery.png)
 
 1. Once done, choose **Close & Apply** to save the query and return to Power BI.
 
-	> [!div class="mx-imgBorder"] 
-	> ![Power BI Close & Apply](media/odatapowerbi-pipelines/closeandapply.png)
-  
-  
+   > [!div class="mx-imgBorder"]
+   > ![Power BI Close & Apply](media/odatapowerbi-pipelines/closeandapply.png)
+
 ## Create the report
 
-Power BI shows you the fields you can report on. 
+Power BI shows you the fields you can report on.
 
-> [!NOTE]   
-> The example below assumes that no one renamed any columns. 
+> [!NOTE]  
+> The example below assumes that no one renamed any columns.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample - Pipelines Outcome Summary - Fields](media/odatapowerbi-pipelines/allpipelines-fields.png)
 
 For a simple report, do the following steps:
 
-1. Select Power BI Visualization **Stacked Column Chart**. 
+1. Select Power BI Visualization **Stacked Column Chart**.
 1. Add the field "SucceededCount" to **Values**.
-    - Right-click "SucceededCount" field and ensure **Sum** is selected.
+   - Right-click "SucceededCount" field and ensure **Sum** is selected.
 1. Add the field "FailedCount" to **Values**.
-	  - Right-click "FailedCount" field and ensure **Sum** is selected.
+   - Right-click "FailedCount" field and ensure **Sum** is selected.
 1. Add the field "CanceledCount" to **Values**.
-	  - Right-click "CanceledCount" field and ensure **Sum** is selected.
+   - Right-click "CanceledCount" field and ensure **Sum** is selected.
 1. Add the field "PartiallySucceededCount " to **Values**.
-    - Right-click "PartiallySucceededCount " field and ensure **Sum** is selected.
-1. Add the field "Pipeline.PipelineName" to **Axis**. 
+   - Right-click "PartiallySucceededCount " field and ensure **Sum** is selected.
+1. Add the field "Pipeline.PipelineName" to **Axis**.
 1. Click somewhere outside the stacked column chart and select Power BI Visualization **Slider** to add a slicer.
 1. Add the field "Pipeline.PipelineName" to **Field**.
 1. Select the down-arrow of slicer to select the option Dropdown instead of List.
 
-    
-Your report should look like this. 
+Your report should look like this.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample - Pipelines Outcome Summary - Report](media/odatapowerbi-pipelines/allpipelines-report1.png)
 
-
-## Full list of Pipelines sample reports 
+## Full list of Pipelines sample reports
 
 [!INCLUDE [temp](includes/sample-full-list-pipelines.md)]
 

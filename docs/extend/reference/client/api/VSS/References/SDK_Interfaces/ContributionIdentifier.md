@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,16 +15,14 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Identifier for contributions and contribution types 
+Identifier for contributions and contribution types
 
 ### Members
 
-* `extensionId`: string. The extension ID
+- `extensionId`: string. The extension ID
 
-* `id`: string. The full/unique identifier of the contribution/contributionType
+- `id`: string. The full/unique identifier of the contribution/contributionType
 
-* `publisherId`: string. The publisher ID
+- `publisherId`: string. The publisher ID
 
-* `relativeId`: string. The extension-relative contribution ID
-
+- `relativeId`: string. The extension-relative contribution ID

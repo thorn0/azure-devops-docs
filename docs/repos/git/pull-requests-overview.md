@@ -1,15 +1,15 @@
 ---
 title: Pull requests
-titleSuffix: Azure Repos  
-description: Learn about pull requests in Azure DevOps Services & TFS  
-ms.technology: devops-code-git 
-ms.assetid: 36A4986E-BFB8-422B-BFC9-8A0CB75D0603    
+titleSuffix: Azure Repos
+description: Learn about pull requests in Azure DevOps Services & TFS
+ms.technology: devops-code-git
+ms.assetid: 36A4986E-BFB8-422B-BFC9-8A0CB75D0603
 ms.author: apawast
 author: apawast
 ms.topic: overview
 ms.date: 09/10/2018
 layout: LandingPage
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Get feedback with pull requests
@@ -79,10 +79,10 @@ Diffusing skills and knowledge makes your team stronger and more resilient.
 High quality reviews start with high quality feedback.
 The keys to great feedback in a pull request are:
 
-* Have the right people review the pull request
-* Make sure that reviewers know what the code does
-* Give actionable, constructive feedback
-* Reply to comments in a timely manner
+- Have the right people review the pull request
+- Make sure that reviewers know what the code does
+- Give actionable, constructive feedback
+- Reply to comments in a timely manner
 
 When assigning reviewers to your pull request, make sure you select the right set of reviewers.
 You want reviewers that will know how your code works, but try to also include developers working in other areas so they can share their ideas.
@@ -221,7 +221,7 @@ A clean build of the merged code and approval from multiple reviewers are some e
 
 ## Extend pull request workflows with pull request status
 
-Pull requests and branch policies enable teams to enforce many best practices related to reviewing code and running automated builds, but many teams have additional requirements and validations to perform on code. To cover these individual and custom needs, Azure Repos offers pull request statuses. Pull request statuses integrate into the PR workflow and allow external services to programmatically sign off on a code change by associating simple success/failure type information with a pull request. 
+Pull requests and branch policies enable teams to enforce many best practices related to reviewing code and running automated builds, but many teams have additional requirements and validations to perform on code. To cover these individual and custom needs, Azure Repos offers pull request statuses. Pull request statuses integrate into the PR workflow and allow external services to programmatically sign off on a code change by associating simple success/failure type information with a pull request.
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -298,5 +298,6 @@ Pull requests and branch policies enable teams to enforce many best practices re
     </li>
 </ul>
 
-## Videos 
+## Videos
+
 > [!VIDEO https://www.youtube.com/embed/J_DHkUKxI0E?start=0]

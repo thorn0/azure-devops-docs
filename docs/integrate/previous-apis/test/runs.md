@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Test Runs | REST API Reference for Team Foundation Server
 description: Work with test runs programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: D2ABEFCD-11BE-4155-BA82-3B39A9593505
@@ -19,26 +19,29 @@ ms.date: 08/04/2016
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get a list of test runs
+
 <a name="getalistoftestruns" />
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/test/runs?api-version={version}[&buildUri={string}&owner={string}&planId={int}&automated={bool}&includerundetails={bool}&$skip={int}&$top={int}
 ```
 
-| Parameter         | Type   | Default | Notes
-|:------------------|:-------|:--------|:------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance          | string |         | TFS server name ({server:port}).
-| project           | string |         | Name or ID of the project.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
 | Query
-| api-version       | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| buildUri          | string |         | URI of the build that the runs used.
-| owner             | string |         | Team foundation ID of the owner of the runs.
-| planId            | int    |         | ID of the test plan that the runs are a part of.
-| automated         | bool   |         | If true, only returns automated runs.
-| includeRunDetails | bool   | false   | If true, include all the properties of the runs.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| buildUri | string | | URI of the build that the runs used.
+| owner | string | | Team foundation ID of the owner of the runs.
+| planId | int | | ID of the test plan that the runs are a part of.
+| automated | bool | | If true, only returns automated runs.
+| includeRunDetails | bool | false | If true, include all the properties of the runs.
 | $skip             | int    |         | Number of test runs to skip.
-| $top              | int    |         | Number of test runs to return.
+| $top | int | | Number of test runs to return.
 
 #### Sample request
 
@@ -127,7 +130,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?ap
   "count": 4
 }
 ```
-
 
 ### With details
 
@@ -309,7 +311,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?in
 }
 ```
 
-
 ### A page at a time
 
 #### Sample request
@@ -400,8 +401,8 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?to
 }
 ```
 
-
 ## Get test runs by query (deprecated)
+
 > This API is deprecated as of [!INCLUDE [API_version](../_data/version3-preview.md)].
 
 ```no-highlight
@@ -418,25 +419,27 @@ Content-Type: application/json
 }
 ```
 
-| Parameter         | Type   | Default | Notes
-|:------------------|:-------|:--------|:------------------------
-| URL
-| instance          | string |         | TFS server name ({server:port}).
-| project           | string |         | Name or ID of the project.
-| Query
-| api-version       | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| includeRunDetails | bool   | false   | If true, include all the properties of the runs.
-| $skip             | int    |         | Number of test runs to skip.
-| $top              | int    |         | Number of test runs to return.
-| Body
-| query             | string |         | Query string
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
 
+
+| URL
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
+| Query
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| includeRunDetails | bool | false | If true, include all the properties of the runs.
+| $skip             | int    |         | Number of test runs to skip.
+| $top | int | | Number of test runs to return.
+| Body
+| query | string | | Query string
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/runs/query?$top=2&api-version=2.0-preview
 ```
+
 ```json
 {
   "query": "Select * From TestRun"
@@ -496,21 +499,22 @@ POST https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/runs/query?$top=2
 }
 ```
 
-
 ## Get a test run
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}?api-version={version}
 ```
 
-| Parameter         | Type   | Notes
-|:------------------|:-------|:------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance          | string | TFS server name ({server:port}).
-| project           | string | Name or ID of the project.
-| run               | int    | ID of the run to get.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| run | int | ID of the run to get.
 | Query
-| api-version       | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -563,20 +567,22 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/1?
 }
 ```
 
-
 ## Get test run statistics
+
 <a name="gettestrunstatistic" />
 <code>no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}/statistics?api-version={version}</code>
 
-| Parameter         | Type   | Notes
-|:------------------|:-------|:------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance          | string | TFS server name ({server:port}).
-| project           | string | Name or ID of the project.
-| run               | int    | ID of the run to get.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| run | int | ID of the run to get.
 | Query
-| api-version       | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -603,21 +609,22 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/1/
 }
 ```
 
-
 ## Get test run message logs
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}/messageLogs?api-version={version}
 ```
 
-| Parameter         | Type   | Notes
-|:------------------|:-------|:------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance          | string | TFS server name ({server:port}).
-| project           | string | Name or ID of the project.
-| run               | int    | ID of the run to get.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| run | int | ID of the run to get.
 | Query
-| api-version       | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -645,15 +652,16 @@ GET https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/runs/41/messageLog
 }
 ```
 
-
 ## Create new test run
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/_apis/test/runs?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
   "name": { string },
@@ -683,7 +691,7 @@ Content-Type: application/json
   "completedDate": { DateTime },
   "owner": {
      "displayName": { string }
-  },  
+  },
   "buildDropLocation": { string },
   "buildPlatform": { string },
   "buildFlavor": { string },
@@ -695,51 +703,52 @@ Content-Type: application/json
 }
 ```
 
-| Parameter                           | Type     | Default                            | Notes
-|:------------------------------------|:---------|:-----------------------------------|:------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance                            | string   |                                    | TFS server name ({server:port}).
-| project                             | string   |                                    | Name or ID of the project.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
 | Query
-| api-version                         | string   |                                    | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name                                | string   |                                    | Name of the test run.
-| plan.id                             | int      |                                    | ID of the test plan to contain the run.
-| iteration                           | string   | Root iteration of the project | The iteration in which to create the run.
-| build.id                            | int      |                                    | ID the build to use.
-| state                               | enum { NotStarted, InProgress, Waiting } | NotStarted | The state to place the run in when it's created.
-| dueDate                             | DateTime |                                    | Due date and time for test run.
-| comment                             | string   |                                    | Comments entered by those analyzing the run.
-| pointIds                            | int[]    |                                    | IDs of the test points to use in the run.
-| isAutomated                         | bool     | false                              | true if test run is automated, false otherwise.
-| controller                          | string   |                                    | Name of the test controller used for automated run.
-| errorMessage                        | string   |                                    | Error message associated with the run.
-| testSettings.Id                     | int      |                                    | ID of the test settings associated with the run.
-| testEnvironmentId                   | Guid     |                                    | ID of the test environment associated with the run.
-| startedDate                         | DateTime |                                    | Start date time of the run.
-| completedDate                       | DateTime |                                    | Completed date time of the run.
-| owner.displayName                   | string   |                                    | Display name of the owner of the run.
-| buildDropLocation                   | string   |                                    | Drop location of the build used for test run.
-| buildPlatform                       | string   |                                    | Platform of the build used for test run. (E.g.: x86, amd64)
-| buildFlavor                         | string   |                                    | Flavor of the build used for test run. (E.g: Release, Debug)
-| configIds                           | int[]    |                                    | IDs of the test configurations associated with the run.
-| releaseUri                          | string   |                                    | URI of release associated with the run.
-| releaseEnvironmentUri               | string   |                                    | URI of release environment associated with the run.
+| name | string | | Name of the test run.
+| plan.id | int | | ID of the test plan to contain the run.
+| iteration | string | Root iteration of the project | The iteration in which to create the run.
+| build.id | int | | ID the build to use.
+| state | enum { NotStarted, InProgress, Waiting } | NotStarted | The state to place the run in when it's created.
+| dueDate | DateTime | | Due date and time for test run.
+| comment | string | | Comments entered by those analyzing the run.
+| pointIds | int[] | | IDs of the test points to use in the run.
+| isAutomated | bool | false | true if test run is automated, false otherwise.
+| controller | string | | Name of the test controller used for automated run.
+| errorMessage | string | | Error message associated with the run.
+| testSettings.Id | int | | ID of the test settings associated with the run.
+| testEnvironmentId | Guid | | ID of the test environment associated with the run.
+| startedDate | DateTime | | Start date time of the run.
+| completedDate | DateTime | | Completed date time of the run.
+| owner.displayName | string | | Display name of the owner of the run.
+| buildDropLocation | string | | Drop location of the build used for test run.
+| buildPlatform | string | | Platform of the build used for test run. (E.g.: x86, amd64)
+| buildFlavor | string | | Flavor of the build used for test run. (E.g: Release, Debug)
+| configIds | int[] | | IDs of the test configurations associated with the run.
+| releaseUri | string | | URI of release associated with the run.
+| releaseEnvironmentUri | string | | URI of release environment associated with the run.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?api-version=1.0
 ```
+
 ```json
 {
   "name": "NewTestRun",
   "plan": {
     "id": "1"
   },
-  "pointIds": [
-    1
-  ]
+  "pointIds": [1]
 }
 ```
 
@@ -787,7 +796,6 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
 }
 ```
 
-
 ### In an iteration
 
 #### Sample request
@@ -795,6 +803,7 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?api-version=1.0
 ```
+
 ```json
 {
   "name": "NewTestRun",
@@ -802,9 +811,7 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
   "plan": {
     "id": "1"
   },
-  "pointIds": [
-    1
-  ]
+  "pointIds": [1]
 }
 ```
 
@@ -852,7 +859,6 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
 }
 ```
 
-
 ### With a specific state
 
 #### Sample request
@@ -860,6 +866,7 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?api-version=1.0
 ```
+
 ```json
 {
   "name": "NewRun",
@@ -867,9 +874,7 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
   "plan": {
     "id": "1"
   },
-  "pointIds": [
-    1
-  ]
+  "pointIds": [1]
 }
 ```
 
@@ -917,7 +922,6 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
 }
 ```
 
-
 ### With a due date
 
 #### Sample request
@@ -925,6 +929,7 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?api-version=1.0
 ```
+
 ```json
 {
   "name": "NewRun",
@@ -932,9 +937,7 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
   "plan": {
     "id": "1"
   },
-  "pointIds": [
-    1
-  ]
+  "pointIds": [1]
 }
 ```
 
@@ -983,7 +986,6 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
 }
 ```
 
-
 ### With a comment
 
 #### Sample request
@@ -991,6 +993,7 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?api-version=1.0
 ```
+
 ```json
 {
   "name": "NewRun",
@@ -998,9 +1001,7 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
   "plan": {
     "id": "1"
   },
-  "pointIds": [
-    1
-  ]
+  "pointIds": [1]
 }
 ```
 
@@ -1049,18 +1050,19 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs?a
 }
 ```
 
-
 ## Update test run
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
-  "name": { string },  
+  "name": { string },
   "iteration": { string } ,
   "build": {
     "id": { int }
@@ -1077,38 +1079,39 @@ Content-Type: application/json
   },
   "testEnvironmentId": { Guid },
   "startedDate": { DateTime },
-  "completedDate": { DateTime },   
-  "deleteUnexecutedResults": { bool },  
+  "completedDate": { DateTime },
+  "deleteUnexecutedResults": { bool },
   "logEntries": [
       { "entryId": { int },   "dateCreated":  { DateTime }, "message": { string } }
   ]
 }
 ```
 
-| Parameter                           | Type     | Notes
-|:------------------------------------|:---------|:------------------------
-| URL
-| instance                            | string   | TFS server name ({server:port}).
-| project                             | string   | Name or ID of the project.
-| run                                 | int      | ID of the run to update.
-| Query
-| api-version                         | string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| Body
-| name                                | string   | Name of the test run.
-| iteration                           | string   | The iteration in which to create the run.
-| build.id                            | int      | ID the build to use.
-| state                               | enum { NotStarted, InProgress, Completed, Aborted, Waiting } | The state to place the run in when it's updated.
-| dueDate                             | DateTime | Due date and time for test run.
-| controller                          | string   | Name of the test controller used for automated run.
-| errorMessage                        | string   | Error message associated with the run.
-| comment                             | string   | Comments entered by those analyzing the run.
-| testSettings.Id                     | int      | ID of the test settings associated with the run.
-| testEnvironmentId                   | Guid     | ID of the test environment associated with the run.
-| startedDate                         | DateTime | Start date time of the run.
-| completedDate                       | DateTime | Completed date time of the run.
-| deleteUnexecutedResults             | bool     | Delete the results for test cases that were not executed.
-| logEntries                          | { logEntry }, { logEntry }, ... | Log entries associated with the run.<br/>Use a comma-separated list of multiple log entry objects.
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
 
+
+| URL
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| run | int | ID of the run to update.
+| Query
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Body
+| name | string | Name of the test run.
+| iteration | string | The iteration in which to create the run.
+| build.id | int | ID the build to use.
+| state | enum { NotStarted, InProgress, Completed, Aborted, Waiting } | The state to place the run in when it's updated.
+| dueDate | DateTime | Due date and time for test run.
+| controller | string | Name of the test controller used for automated run.
+| errorMessage | string | Error message associated with the run.
+| comment | string | Comments entered by those analyzing the run.
+| testSettings.Id | int | ID of the test settings associated with the run.
+| testEnvironmentId | Guid | ID of the test environment associated with the run.
+| startedDate | DateTime | Start date time of the run.
+| completedDate | DateTime | Completed date time of the run.
+| deleteUnexecutedResults | bool | Delete the results for test cases that were not executed.
+| logEntries | { logEntry }, { logEntry }, ... | Log entries associated with the run.<br/>Use a comma-separated list of multiple log entry objects.
 
 ### Rename
 
@@ -1117,6 +1120,7 @@ Content-Type: application/json
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/1?api-version=1.0
 ```
+
 ```json
 {
   "name": "NewTestRun2",
@@ -1170,7 +1174,6 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/
 }
 ```
 
-
 ### Due date
 
 #### Sample request
@@ -1178,6 +1181,7 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/1?api-version=1.0
 ```
+
 ```json
 {
   "dueDate": "2014-05-07"
@@ -1231,7 +1235,6 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/
 }
 ```
 
-
 ### Start time
 
 #### Sample request
@@ -1239,6 +1242,7 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/1?api-version=1.0
 ```
+
 ```json
 {
   "startedDate": "2014-05-05"
@@ -1292,7 +1296,6 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/
 }
 ```
 
-
 ### Completed time
 
 #### Sample request
@@ -1300,6 +1303,7 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/1?api-version=1.0
 ```
+
 ```json
 {
   "completedDate": "2014-05-10"
@@ -1353,7 +1357,6 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/
 }
 ```
 
-
 ### Comment
 
 #### Sample request
@@ -1361,6 +1364,7 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/1?api-version=1.0
 ```
+
 ```json
 {
   "comment": "This test run is doomed"
@@ -1414,7 +1418,6 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/
 }
 ```
 
-
 ### Log entries
 
 #### Sample request
@@ -1422,6 +1425,7 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/runs/41?api-version=2.0-preview
 ```
+
 ```json
 {
   "logEntries": [
@@ -1481,26 +1485,25 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/runs/41?api-vers
 }
 ```
 
-
 ## Delete a test run
 
 ```no-highlight
 DELETE https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}?api-version={version}
 ```
 
-| Parameter               | Type     | Notes
-|:------------------------|:---------|:------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance                | string   | TFS server name ({server:port}).
-| project                 | string   | Name or ID of the project.
-| run                     | int      | ID of the run to update
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| run | int | ID of the run to update
 | Query
-| api-version             | string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 DELETE https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/5?api-version=1.0
 ```
-
-

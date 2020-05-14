@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Work/Contracts`
 
-
 ### Members
 
-* `activities`: [Activity](../../../TFS/Work/Contracts/Activity.md)[]. 
+- `activities`: [Activity](../../../TFS/Work/Contracts/Activity.md)[].
 
-* `daysOff`: [DateRange](../../../TFS/Work/Contracts/DateRange.md)[]. 
-
+- `daysOff`: [DateRange](../../../TFS/Work/Contracts/DateRange.md)[].

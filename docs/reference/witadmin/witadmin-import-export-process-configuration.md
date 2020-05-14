@@ -1,5 +1,5 @@
 ---
-title: Import or export process configuration  
+title: Import or export process configuration
 titleSuffix: TFS
 description: Modify the display of the Agile planning tool pages that you view through the web portal for Team Foundation Server (TFS)
 ms.technology: devops-agile
@@ -7,130 +7,131 @@ ms.assetid: 95fd448f-d702-4399-b9c2-d61cdce33c02
 ms.author: kaelli
 author: KathrynEE
 ms.topic: reference
-monikerRange: '<= azure-devops-2019'
+monikerRange: "<= azure-devops-2019"
 ms.date: 03/20/2018
 ---
-
 
 # Import and export process configuration
 
 [!INCLUDE [temp](../../includes/customization-witadmin-plus-version-header.md)]
 
-You customize the process configuration to modify the display of the web portal Agile tools. A few additional tools require that you map workflow states to metastate mappings.  
+You customize the process configuration to modify the display of the web portal Agile tools. A few additional tools require that you map workflow states to metastate mappings.
 
 > [!NOTE]  
-> If you receive error message TF400917, an invalid configuration has occurred. Re-import the process configuration file to your project using **witadmin importprocessconfig**. You'll get the messages you need to resolve the error.  
+> If you receive error message TF400917, an invalid configuration has occurred. Re-import the process configuration file to your project using **witadmin importprocessconfig**. You'll get the messages you need to resolve the error.
 
-To manage the process configuration for a project, use the **witadmin** command line tool to export and import the process configuration XML definition file. To learn about process configuration, see [ProcessConfiguration](../xml/process-configuration-xml-element.md).   
--   **exportprocessconfig**:  Exports the process configuration definition to an XML file or the Command Prompt window.    
--   **importprocessconfig**:  Imports the process configuration definition XML file.  
+To manage the process configuration for a project, use the **witadmin** command line tool to export and import the process configuration XML definition file. To learn about process configuration, see [ProcessConfiguration](../xml/process-configuration-xml-element.md).
+
+- **exportprocessconfig**: Exports the process configuration definition to an XML file or the Command Prompt window.
+- **importprocessconfig**: Imports the process configuration definition XML file.
 
 [!INCLUDE [temp](../../includes/witadmin-run-tool.md)]
 
 [!INCLUDE [temp](../../includes/process-editor.md)]
 
+## Prerequisites
 
-## Prerequisites  
+- To export process configuration definitions, you must be a valid user of the project or collection.
+- To import process configuration definitions, you must be a member of the following security groups: **Team Foundation Administrators** or **Project Administrators**.
 
-- To export process configuration definitions, you must be a valid user of the project or collection.    
-- To import process configuration definitions, you must be a member of the following security groups: **Team Foundation Administrators** or **Project Administrators**.  
+For more information, see [Add an administrator](../../organizations/security/set-project-collection-level-permissions.md).
 
-For more information, see [Add an administrator](../../organizations/security/set-project-collection-level-permissions.md).  
+## Syntax
 
-## Syntax  
+```
+witadmin exportprocessconfig /collection:CollectionURL /p:ProjectName [/f:FileName] [/e:encoding]
+witadmin importprocessconfig /collection:CollectionURL [/p:ProjectName] /f:FileName [/e:encoding] [/v]
+```
 
-```  
-witadmin exportprocessconfig /collection:CollectionURL /p:ProjectName [/f:FileName] [/e:encoding]    
-witadmin importprocessconfig /collection:CollectionURL [/p:ProjectName] /f:FileName [/e:encoding] [/v]  
-```  
+#### Parameters
 
-#### Parameters  
+| **Parameter**                    | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **/collection**:`CollectionURLx` | Specifies the URI of the project collection. For example:<br /><br /> **On-premises TFS format: http**://_ServerName:Port/VirtualDirectoryName/CollectionName_<br /><br /> If no virtual directory is used, then the format for the URI is the following: **http**://_ServerName:Port/CollectionName_.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **/p**:`ProjectName`             | Required. Specifies the project for which you want to export or import the process configuration. This project must be defined in the collection that you specified by using the /collection parameter. You do not need to specify a project when you specify the `/v` switch.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **/f**:`FileName`                | The path and the name of the XML definition file for the process configuration to export or import.<br /><br /> **Note:** If the client computer is running Windows Vista, you might not have permissions to certain folders. If you try to export the global list to a location where you do not have permissions, the registry virtualization technology automatically redirects the exported file and saves it to the virtual store. For more information, see the following pages on the Microsoft website: [Registry Virtualization](https://go.microsoft.com/fwlink/?LinkId=92325) and [Common file and registry virtualization issues in Windows Vista](https://go.microsoft.com/fwlink/?LinkId=92323). To avoid this redirection, you can export the file to a location where you have permissions. |
+| **/e**:`Encoding`                | Optional. The name of a .NET Framework 2.0 encoding format. The specified encoding will be used to export or import the XML data. For example, `/e utf-7` specifies Unicode (UTF-7) encoding. If you omit this parameter, **witadmin** attempts to detect the encoding and uses UTF-8 if detection fails.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **/v**                           | Optional. Validates the XML that defines the process configuration but does not import the definition file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **/?** or **help**               | Displays help about the command in the Command Prompt window.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
-|**Parameter**|**Description**|  
-|-------------------|---------------------|  
-|**/collection**:`CollectionURLx`|Specifies the URI of the project collection. For example:<br /><br /> **On-premises TFS format:  http**://*ServerName:Port/VirtualDirectoryName/CollectionName*<br /><br /> If no virtual directory is used, then the format for the URI is the following: **http**://*ServerName:Port/CollectionName*.|  
-|**/p**:`ProjectName`|Required. Specifies the project for which you want to export or import the process configuration. This project must be defined in the collection that you specified by using the /collection parameter. You do not need to specify a project when you specify the `/v` switch.|  
-|**/f**:`FileName`|The path and the name of the XML definition file for the process configuration to export or import.<br /><br /> **Note:** If the client computer is running Windows Vista, you might not have permissions to certain folders. If you try to export the global list to a location where you do not have permissions, the registry virtualization technology automatically redirects the exported file and saves it to the virtual store. For more information, see the following pages on the Microsoft website: [Registry Virtualization](https://go.microsoft.com/fwlink/?LinkId=92325) and [Common file and registry virtualization issues in Windows Vista](https://go.microsoft.com/fwlink/?LinkId=92323). To avoid this redirection, you can export the file to a location where you have permissions.|  
-|**/e**:`Encoding`|Optional. The name of a .NET Framework 2.0 encoding format. The specified encoding will be used to export or import the XML data. For example, `/e utf-7` specifies Unicode (UTF-7) encoding. If you omit this parameter, **witadmin** attempts to detect the encoding and uses UTF-8 if detection fails.|  
-|**/v**|Optional. Validates the XML that defines the process configuration but does not import the definition file.|  
-|**/?** or **help**|Displays help about the command in the Command Prompt window.|  
+## Remarks
 
-## Remarks  
- Installing the latest version of TFS upgrades existing projects. If you are updating an upgraded project, see [Configure features after an upgrade](../configure-features-after-upgrade.md).  
+Installing the latest version of TFS upgrades existing projects. If you are updating an upgraded project, see [Configure features after an upgrade](../configure-features-after-upgrade.md).
 
- If you encounter problems accessing existing test plans or test suites after an upgrade, see [Manual updates to support test management](../xml/update-a-team-project-manually-to-support-test-management.md).  
+If you encounter problems accessing existing test plans or test suites after an upgrade, see [Manual updates to support test management](../xml/update-a-team-project-manually-to-support-test-management.md).
 
-## Examples  
+## Examples
 
-The following values apply in each example:  
+The following values apply in each example:
 
--   URL for the collection: http://AdventureWorksServer:8080/tfs/DefaultCollection    
--   Project: Contoso   
--   Port number for the server website: 8080  
+- URL for the collection: http://AdventureWorksServer:8080/tfs/DefaultCollection
+- Project: Contoso
+- Port number for the server website: 8080
 
-<a name="quick_add"></a>   
+<a name="quick_add"></a>
 
-### To add a field to the quick add panel  
+### To add a field to the quick add panel
 
-You can add fields for any quick add panel. For example, the following example adds **Business Value** to the product backlog panel.  
+You can add fields for any quick add panel. For example, the following example adds **Business Value** to the product backlog panel.
 
-![Backlog panel with Business Value field added](media/alm_upg_addpanel.png "ALM_UPG_AddPanel")  
+![Backlog panel with Business Value field added](media/alm_upg_addpanel.png "ALM_UPG_AddPanel")
 
-The panel only displays fields that are included in the `FIELDS` section of the WIT definition for the WIT selected. For example, if you select the bug WIT, then only Title displays, as Business Value isn't defined for bugs. To add another WIT to the panel, you add it to the Requirements Category. See [Add a work item type to a backlog and board](../add-wits-to-backlogs-and-boards.md).  
+The panel only displays fields that are included in the `FIELDS` section of the WIT definition for the WIT selected. For example, if you select the bug WIT, then only Title displays, as Business Value isn't defined for bugs. To add another WIT to the panel, you add it to the Requirements Category. See [Add a work item type to a backlog and board](../add-wits-to-backlogs-and-boards.md).
 
-1.  If you don't have administrative permissions for your project, [get them](../../organizations/security/set-project-collection-level-permissions.md).  
+1.  If you don't have administrative permissions for your project, [get them](../../organizations/security/set-project-collection-level-permissions.md).
 
-2.  Open a Command Prompt window according to the instructions provided in [How to run the witadmin command-line tool](#run-witadmin-tool). For example:   
+2.  Open a Command Prompt window according to the instructions provided in [How to run the witadmin command-line tool](#run-witadmin-tool). For example:
 
     ```
     cd %programfiles(x86)%\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer
-    ```    
+    ```
 
-3.  Export the process configuration file.  
+3.  Export the process configuration file.
 
-    ```  
-    witadmin exportprocessconfig /collection:CollectionURL /p:ProjectName /f:"DirectoryPath\ProcessConfiguration.xml"  
-    ``` 
+    ```
+    witadmin exportprocessconfig /collection:CollectionURL /p:ProjectName /f:"DirectoryPath\ProcessConfiguration.xml"
+    ```
 
-    An example of a *CollectionURL* is http://MyServer:8080/tfs/TeamProjectCollectionName.  
+    An example of a _CollectionURL_ is http://MyServer:8080/tfs/TeamProjectCollectionName.
 
-4.  Add the field reference name to the `AddPanel` section.  
+4.  Add the field reference name to the `AddPanel` section.
 
-     For example, the following syntax adds the **Priority** element to the panel.  
+    For example, the following syntax adds the **Priority** element to the panel.
 
     ```xml
-    <AddPanel>  
-       <Fields>  
-          <Field refname="System.Title" />  
-          <Field refname="Microsoft.VSTS.Common.BusinessValue" />  
-       </Fields>  
-    </AddPanel>  
-    ```  
+    <AddPanel>
+       <Fields>
+          <Field refname="System.Title" />
+          <Field refname="Microsoft.VSTS.Common.BusinessValue" />
+       </Fields>
+    </AddPanel>
+    ```
 
-     > [!TIP]    
-    > -  You can look up the reference name for a field using this [index](../../boards/work-items/guidance/work-item-field.md).    
-    > -  Add all required fields for work item types defined for the Requirements Category. That way, you avoid having to open the work item form to fill them in when you add backlog items through the panel.  
+    > [!TIP]
+    >
+    > - You can look up the reference name for a field using this [index](../../boards/work-items/guidance/work-item-field.md).
+    > - Add all required fields for work item types defined for the Requirements Category. That way, you avoid having to open the work item form to fill them in when you add backlog items through the panel.
 
-5.  Import the process configuration file.  
+5.  Import the process configuration file.
 
-    ```  
-    witadmin importprocessconfig /collection:CollectionURL /p:ProjectName /f:"DirectoryPath\ProcessConfiguration.xml"  
-    ```  
+    ```
+    witadmin importprocessconfig /collection:CollectionURL /p:ProjectName /f:"DirectoryPath\ProcessConfiguration.xml"
+    ```
 
-6.  Refresh your backlog page to view the updated panel.  
+6.  Refresh your backlog page to view the updated panel.
 
-<a name="test_manager"></a> 
+<a name="test_manager"></a>
 
-### Update metastate mappings to support Test Manager  
+### Update metastate mappings to support Test Manager
 
- If you customize the `WORKFLOW` section of the test plan or test suite, you must map the states to metastates.  
+If you customize the `WORKFLOW` section of the test plan or test suite, you must map the states to metastates.
 
- In the following example, the test plan workflow has been updated to use the Design, Testing, and Signed Off states. To support backward compatibility, the `TestPlanWorkItems` is added to the `ProjectProcessConfiguration` section of the process configuration definition.  
-
+In the following example, the test plan workflow has been updated to use the Design, Testing, and Signed Off states. To support backward compatibility, the `TestPlanWorkItems` is added to the `ProjectProcessConfiguration` section of the process configuration definition.
 
 **Workflow**
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```XML
 > <WORKFLOW>
 >       <STATES>
@@ -148,7 +149,7 @@ The panel only displays fields that are included in the `FIELDS` section of the 
 >           <REASONS>
 >             <DEFAULTREASON value="Authoring complete" />
 >           </REASONS>
->         </TRANSITION>        
+>         </TRANSITION>
 >      <TRANSITION from="Testing" to="Signed Off">
 >           <REASONS>
 >             <DEFAULTREASON value="Signed Off testing" />
@@ -176,6 +177,7 @@ The panel only displays fields that are included in the `FIELDS` section of the 
 **Metastate mappings**
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```XML
 > <TestPlanWorkItems category="Microsoft.TestPlanCategory" pluralName="Test Plans" singularName="Test Plan">
 >     <States>
@@ -193,40 +195,40 @@ The panel only displays fields that are included in the `FIELDS` section of the 
 >   </TestSuiteWorkItems>
 > ```
 
-If you modify the test suite workflow, then you have to make a similar update if you want to map new states. You would add it within a `TestSuiteWorkItems` section.  See [ProcessConfiguration](../xml/process-configuration-xml-element.md).  
+If you modify the test suite workflow, then you have to make a similar update if you want to map new states. You would add it within a `TestSuiteWorkItems` section. See [ProcessConfiguration](../xml/process-configuration-xml-element.md).
 
 ## Related articles
-- [Configure features after an upgrade](../configure-features-after-upgrade.md) 
-- [Control XML element reference](../xml/control-xml-element-reference.md)  
-- [Change the work item form layout](../xml/change-work-item-form-layout.md)   
+
+- [Configure features after an upgrade](../configure-features-after-upgrade.md)
+- [Control XML element reference](../xml/control-xml-element-reference.md)
+- [Change the work item form layout](../xml/change-work-item-form-layout.md)
 - [Edit a WIT definition to add web content to a work item form](..//xml/edit-wit-definition-add-web-content-form.md)
 
+## Q & A
 
-## Q & A  
+### Q: What customizations can I make and still use the Configure Features Wizard to update my project after a TFS upgrade?
 
-### Q: What customizations can I make and still use the Configure Features Wizard to update my project after a TFS upgrade?  
+**A:** You can customize the quick add panel. The [Configure Features Wizard](../configure-features-after-upgrade.md) will update your projects and you'll get access to the latest features.
 
-**A:** You can customize the quick add panel. The [Configure Features Wizard](../configure-features-after-upgrade.md) will update your projects and you'll get access to the latest features.  
+Other changes might require you to perform some manual operations when updating your project. To learn about which customizations you can safely make and which you should avoid, see [Customize the work tracking experience: Before you customize, understand the maintenance and upgrade implications](../customize-work.md).
 
-Other changes might require you to perform some manual operations when updating your project. To learn about which customizations you can safely make and which you should avoid, see [Customize the work tracking experience: Before you customize, understand the maintenance and upgrade implications](../customize-work.md).  
+### Q: When do I need to map workflow states to metastates?
 
-### Q: When do I need to map workflow states to metastates?  
+**A:** When you add or remove workflow states to the following WITs, you should consider updating the process configuration to add or remove corresponding metastate mappings.
 
-**A:** When you add or remove workflow states to the following WITs, you should consider updating the process configuration to add or remove corresponding metastate mappings.  
+- **WITs that belong to the Requirement Category or Task Category**: Metastate mappings support the display of the Agile planning tools.
 
-- **WITs that belong to the Requirement Category or Task Category**: Metastate mappings support the display of the Agile planning tools.  
+- **WITs that belong to the Bug Category**: Metastate mappings to support **My Work** tool (Agile and CMMI-based projects).
 
-- **WITs that belong to the Bug Category**: Metastate mappings to support **My Work** tool (Agile and CMMI-based projects).  
+- **Test Plan and Test Suite**: Updates to the workflow of these WITs must be mapped only when you support team members connecting to TFS from a version of Test Manager that is based on Visual Studio 2013.2 or earlier version.
 
-- **Test Plan and Test Suite**: Updates to the workflow of these WITs must be mapped only when you support team members connecting to TFS from a version of Test Manager that is based on Visual Studio 2013.2 or earlier version.  
+  Update the metastate mappings if you receive an **Application detected an unexpected fault** error when you connect to your project.
 
-    Update the metastate mappings if you receive an **Application detected an unexpected fault** error when you connect to your project.  
+  ![Application fault error message after TFS upgrade](media/alm_upg_testcenterfaulterror.png "ALM_UPG_TestCenterFaultError")
 
-    ![Application fault error message after TFS upgrade](media/alm_upg_testcenterfaulterror.png "ALM_UPG_TestCenterFaultError")  
+### How do I resolve process configuration errors?
 
-### How do I resolve process configuration errors?  
-
-**A:**  When you make one of the following changes to a project, you'll need to update the definitions for the WIT, categories, or process configuration. To avoid errors, always make your changes in this order: (1) WITs, (2) categories, and (3) process configuration.
+**A:** When you make one of the following changes to a project, you'll need to update the definitions for the WIT, categories, or process configuration. To avoid errors, always make your changes in this order: (1) WITs, (2) categories, and (3) process configuration.
 
 <table><tr><th><p>Customization</p></th><th><p>Update or verify the WIT definition</p></th><th scope="col"><p>Update or verify the process configuration definition</p></th>
 </tr>
@@ -243,12 +245,10 @@ Other changes might require you to perform some manual operations when updating 
 </tbody>
 </table>
 
+### Q: Do you want to work with two or more portfolio backlogs?
 
-### Q: Do you want to work with two or more portfolio backlogs?  
+**A:** The default experience supports one level of portfolio backlog. You can add up to five levels as described in [Add portfolio backlogs to Agile tools](../add-portfolio-backlogs.md).
 
-**A:** The default experience supports one level of portfolio backlog. You can add up to five levels as described in [Add portfolio backlogs to Agile tools](../add-portfolio-backlogs.md).  
+### Q: Do you want to add or change the WITs that appear on your task board or product backlog?
 
-### Q: Do you want to add or change the WITs that appear on your task board or product backlog?  
-
-**A:** If you've added a custom WIT and want to add that to either the backlog or task board, you can. You just can't have them appear in both places. Learn how by reading [Add work item types to backlogs and boards](../add-wits-to-backlogs-and-boards.md).  
-
+**A:** If you've added a custom WIT and want to add that to either the backlog or task board, you can. You just can't have them appear in both places. Learn how by reading [Add work item types to backlogs and boards](../add-wits-to-backlogs-and-boards.md).

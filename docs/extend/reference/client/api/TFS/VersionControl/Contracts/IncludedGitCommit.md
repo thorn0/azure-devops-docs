@@ -13,14 +13,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `commitId`: string. 
+- `commitId`: string.
 
-* `commitTime`: Date. 
+- `commitTime`: Date.
 
-* `parentCommitIds`: string[]. 
+- `parentCommitIds`: string[].
 
-* `repositoryId`: string. 
-
+- `repositoryId`: string.

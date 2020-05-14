@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `id`: number. 
+- `id`: number.
 
-* `name`: string. 
+- `name`: string.
 
-* `project`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
-
+- `project`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).

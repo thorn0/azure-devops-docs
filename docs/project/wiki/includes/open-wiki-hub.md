@@ -2,14 +2,14 @@
 ms.topic: include
 ---
 
-## Open the Wiki  
+## Open the Wiki
 
-#### [Browser](#tab/browser) 
+#### [Browser](#tab/browser)
 
 Connect to your project using a [supported web browser](/azure/devops/server/compatibility#supported-browsers) and choose **Wiki**.
 
-> [!div class="mx-imgBorder"] 
->![Create wiki, provision a Git repo for your wiki or publish existing repo Markdown files](../../../organizations/public/media/wiki/open-wiki-vert-brn.png)
+> [!div class="mx-imgBorder"]
+> ![Create wiki, provision a Git repo for your wiki or publish existing repo Markdown files](../../../organizations/public/media/wiki/open-wiki-vert-brn.png)
 
 If you need to switch your team project, choose the ![project-icon.png](../../../media/icons/project-icon.png) Azure DevOps logo to [browse all team projects and teams](../../navigation/work-across-projects.md).
 
@@ -20,6 +20,7 @@ If you need to switch your team project, choose the ![project-icon.png](../../..
 You can view and open a wiki page defined for a project using the `az devops wiki show` command. To get started, see [Get started with Azure DevOps CLI](../../../cli/index.md).
 
 > [!div class="tabbedCodeSnippets"]
+
 ```CLI
 az devops wiki show --wiki
                       [--open]
@@ -39,6 +40,7 @@ az devops wiki show --wiki
 Open a wiki named 'myprojectwiki'.
 
 > [!div class="tabbedCodeSnippets"]
+
 ```CLI
 az devops wiki show --wiki myprojectwiki --open
 ```
@@ -51,4 +53,4 @@ az devops wiki show --wiki myprojectwiki --open
 
 ::: moniker-end
 
-* * *
+---

@@ -24,40 +24,34 @@ You want to package and publish some projects in a C# class library to your Azur
             |-- AssemblyInfo.cs
 ```
 
-
 <a name="prepare"></a>
-### Prepare
 
+### Prepare
 
 #### AssemblyInfo.cs
 
-Make sure your AssemblyInfo.cs files contain the information you want shown in your packages. For example, ```AssemblyCompanyAttribute``` will be shown as the author, and ```AssemblyDescriptionAttribute``` will be shown as the description.
-
+Make sure your AssemblyInfo.cs files contain the information you want shown in your packages. For example, `AssemblyCompanyAttribute` will be shown as the author, and `AssemblyDescriptionAttribute` will be shown as the description.
 
 #### [Variables](../../build/variables.md) tab
 
-| Name | Value | 
-|---|---|
-|```$(BuildConfiguration)``` | ```release```|
-|```$(BuildPlatform)``` | ```any cpu```|
-
+| Name                    | Value     |
+| ----------------------- | --------- |
+| `$(BuildConfiguration)` | `release` |
+| `$(BuildPlatform)`      | `any cpu` |
 
 #### [Options](../../build/options.md)
 
-| Setting | Value | 
-|---|---|
-| Build number format | ```$(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)```|
-
+| Setting             | Value                                                                 |
+| ------------------- | --------------------------------------------------------------------- |
+| Build number format | `$(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)` |
 
 ### Publish to Azure Artifacts
 
 Make sure you've prepared the build as described [above](#prepare).
 
-
 #### Create the feed
 
 See [Create a feed](../../../artifacts/feeds/create-feed.md).
-
 
 #### [Build](../../index.yml) tasks
 
@@ -68,6 +62,7 @@ See [Create a feed](../../../artifacts/feeds/create-feed.md).
 <img src="/azure/devops/pipelines/tasks/build/media/visual-studio-build.png" alt="Build: Visual Studio Build"/>
 
 <br/><strong>Build: Visual Studio Build</strong></td>
+
 <td>
 <p>Build your solution.</p>
 <ul>
@@ -84,6 +79,7 @@ See [Create a feed](../../../artifacts/feeds/create-feed.md).
 <img src="/azure/devops/pipelines/tasks/package/media/nuget-packager.png" alt="Package: NuGet Packager"/>
 
 <br/></strong>Package: NuGet Packager<strong></td>
+
 <td>
 <p>Package your projects.</p>
 <ul>
@@ -99,6 +95,7 @@ See [Create a feed](../../../artifacts/feeds/create-feed.md).
 <img src="/azure/devops/pipelines/tasks/package/media/nuget-publisher.png" alt="Package: NuGet Publisher"/>
 
 <br/><strong>Package: NuGet Publisher</strong></td>
+
 <td>
 <p>Publish your packages to Azure Artifacts.</p>
 <ul>
@@ -119,9 +116,7 @@ Make sure you've prepared the build as described [above](#prepare).
 
 If you haven't already, [register with NuGet.org](https://www.nuget.org/).
 
-
 #### [Build](../../tasks/index.md) tasks
-
 
 <table>
 <tr>
@@ -130,6 +125,7 @@ If you haven't already, [register with NuGet.org](https://www.nuget.org/).
 <img src="/azure/devops/pipelines/tasks/build/media/visual-studio-build.png" alt="Build: Visual Studio Build"/>
 
 <br/><strong>Build: Visual Studio Build</strong></td>
+
 <td>
 <p>Build your solution.</p>
 <ul>
@@ -146,6 +142,7 @@ If you haven't already, [register with NuGet.org](https://www.nuget.org/).
 <img src="/azure/devops/pipelines/tasks/package/media/nuget-packager.png" alt="Package: NuGet Packager"/>
 
 <br/></strong>Package: NuGet Packager<strong></td>
+
 <td>
 <p>Package your projects.</p>
 <ul>
@@ -161,6 +158,7 @@ If you haven't already, [register with NuGet.org](https://www.nuget.org/).
 <img src="/azure/devops/pipelines/tasks/package/media/nuget-publisher.png" alt="Package: NuGet Publisher"/>
 
 <br/><strong>Package: NuGet Publisher</strong></td>
+
 <td>
 <p>Publish your packages to NuGet.org.</p>
 <ul>

@@ -17,9 +17,8 @@ Extends: [HistoryQueryResults](../../../TFS/VersionControl/Contracts/HistoryQuer
 
 ### Members
 
-* `startingCommitId`: string. Seed commit used for querying history.  Used for skip feature.
+- `startingCommitId`: string. Seed commit used for querying history. Used for skip feature.
 
-* `unpopulatedCount`: number. 
+- `unpopulatedCount`: number.
 
-* `unprocessedCount`: number. 
-
+- `unprocessedCount`: number.

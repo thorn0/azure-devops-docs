@@ -1,5 +1,5 @@
 ---
-title: All FIELD XML elements reference 
+title: All FIELD XML elements reference
 titleSuffix: Azure DevOps & TFS
 description: Index to XML syntax elements for the FIELD element for Team Foundation Server (TFS)
 ms.technology: devops-agile
@@ -14,51 +14,55 @@ ms.date: 06/16/2017
 
 [!INCLUDE [temp](../../includes/customization-phase-0-and-1-plus-version-header.md)]
 
-Use this topic to look up the syntax of the `FIELD` element or one of its child elements.  
+Use this topic to look up the syntax of the `FIELD` element or one of its child elements.
 
- You specify these elements in the **FIELD** (Definition) element container. You add a field for a work item type (WIT) by specifying a **FIELD** (Definition) element within the **FIELDS** (Definition) element. You can specify these elements within the definition of a WIT or as part of a global workflow.  
+You specify these elements in the **FIELD** (Definition) element container. You add a field for a work item type (WIT) by specifying a **FIELD** (Definition) element within the **FIELDS** (Definition) element. You can specify these elements within the definition of a WIT or as part of a global workflow.
 
- You can add child elements to specify the behavior of a field, define default values, or define a pick list of values. You can use field rule elements in combination with each other. You can scope most rules to apply to one or more users or groups or to be ignored for one or more users or groups.  
+You can add child elements to specify the behavior of a field, define default values, or define a pick list of values. You can use field rule elements in combination with each other. You can scope most rules to apply to one or more users or groups or to be ignored for one or more users or groups.
 
-##  <a name="FIELD"></a> FIELD (Definition) container element  
- You use the following syntax to define the data fields for a type of work item. This example shows the format of the **FIELD** (Definition) element and all optional child elements. For more information, see [FIELD (Definition) element reference](field-definition-element-reference.md).  
+## <a name="FIELD"></a> FIELD (Definition) container element
+
+You use the following syntax to define the data fields for a type of work item. This example shows the format of the **FIELD** (Definition) element and all optional child elements. For more information, see [FIELD (Definition) element reference](field-definition-element-reference.md).
 
 > [!NOTE]
-> The Boolean data type is supported for Azure DevOps Services (Hosted XML) and for TFS 2017.2 and later versions (On-Premises XML). 
-> 
+> The Boolean data type is supported for Azure DevOps Services (Hosted XML) and for TFS 2017.2 and later versions (On-Premises XML).
+>
 > [!div class="tabbedCodeSnippets"]
+>
 > ```XML
-> <FIELD name="fieldDisplayName" refname="fieldReferenceName" type="String | Integer | Double | DateTime | PlainText | HTML | History | TreePath | GUID | Boolean"  
-> syncnamechanges="true | false" reportingname="reportingDisplayName" reportingrefname="reportingReferenceName"  
-> reportable="Dimension | Detail | Measure" formula="avg" >  
->       <ALLOWEDVALUES> . . . </ALLOWEDVALUES>  
->       <ALLOWEXISTINGVALUE />  
->       <CANNOTLOSEVALUE />  
->       <COPY />  
->       <DEFAULT />  
->       <EMPTY />  
->       <FROZEN />  
->       <HELPTEXT> . . . </HELPTEXT>  
->       <MATCH />  
->       <NOTSAMEAS />  
->       <PROHIBITEDVALUES /> . . . </PROHIBITEDVALUES>  
->       <READONLY />  
->       <REQUIRED />  
->       <SERVERDEFAULT />  
->       <SUGGESTEDVALUES /> . . . </SUGGESTEDVALUES>  
->       <VALIDUSER />  
->       <WHEN>> . . . </WHEN>  
->       <WHENNOT> . . . </WHENNOT>  
->       <WHENCHANGED> . . . </WHENCHANGED>  
->       <WHENNOTCHANGED> . . . </WHENNOTCHANGED>  
-> </FIELD>  
+> <FIELD name="fieldDisplayName" refname="fieldReferenceName" type="String | Integer | Double | DateTime | PlainText | HTML | History | TreePath | GUID | Boolean"
+> syncnamechanges="true | false" reportingname="reportingDisplayName" reportingrefname="reportingReferenceName"
+> reportable="Dimension | Detail | Measure" formula="avg" >
+>       <ALLOWEDVALUES> . . . </ALLOWEDVALUES>
+>       <ALLOWEXISTINGVALUE />
+>       <CANNOTLOSEVALUE />
+>       <COPY />
+>       <DEFAULT />
+>       <EMPTY />
+>       <FROZEN />
+>       <HELPTEXT> . . . </HELPTEXT>
+>       <MATCH />
+>       <NOTSAMEAS />
+>       <PROHIBITEDVALUES /> . . . </PROHIBITEDVALUES>
+>       <READONLY />
+>       <REQUIRED />
+>       <SERVERDEFAULT />
+>       <SUGGESTEDVALUES /> . . . </SUGGESTEDVALUES>
+>       <VALIDUSER />
+>       <WHEN>> . . . </WHEN>
+>       <WHENNOT> . . . </WHENNOT>
+>       <WHENCHANGED> . . . </WHENCHANGED>
+>       <WHENNOTCHANGED> . . . </WHENNOTCHANGED>
+> </FIELD>
 > ```
 
-<a name="CHILDElements"></a>   
-##  FIELD child elements  
-Use child elements to set various restrictions on what data can be entered into a field. You can specify values for a pick list (drop-down menu), set default values, clear entries, or restrict changes. The following table provides the syntax structure for each child element.  
+<a name="CHILDElements"></a>
 
-To learn how to use these elements, see [Apply a field rule](apply-rule-work-item-field.md).  Restrictions exist on applying most rules to system fields. All child elements are optional.  
+## FIELD child elements
+
+Use child elements to set various restrictions on what data can be entered into a field. You can specify values for a pick list (drop-down menu), set default values, clear entries, or restrict changes. The following table provides the syntax structure for each child element.
+
+To learn how to use these elements, see [Apply a field rule](apply-rule-work-item-field.md). Restrictions exist on applying most rules to system fields. All child elements are optional.
 
 <table Responsive="true" summary="table">
 <tr Responsive="true"><th scope="col"><p>Element</p></th><th scope="col"><p>Description and syntax</p></th>
@@ -220,9 +224,9 @@ expanditems="true | false" filteritems="excludegroups"&gt;
 
 <a name="LISTElements"></a>
 
-## GLOBALLIST and LISTITEM child elements  
+## GLOBALLIST and LISTITEM child elements
 
- You specify the **GLOBALLIST** and **LISTITEM** elements as child elements of the `ALLOWEDVALUES`, `SUGGESTEDVALUES`, and `PROHIBITEDVALUES` elements. You can use these elements to enumerate a list of values that appears. Users select values from a pick list or a drop-down menu. For more information, see [GLOBALLIST XML element reference](define-global-lists.md).   
+You specify the **GLOBALLIST** and **LISTITEM** elements as child elements of the `ALLOWEDVALUES`, `SUGGESTEDVALUES`, and `PROHIBITEDVALUES` elements. You can use these elements to enumerate a list of values that appears. Users select values from a pick list or a drop-down menu. For more information, see [GLOBALLIST XML element reference](define-global-lists.md).
 
 <table Responsive="true" summary="table">
 <tr Responsive="true"><th scope="col"><p>Element</p></th><th scope="col"><p>Description</p></th></tr>
@@ -237,23 +241,25 @@ expanditems="true | false" filteritems="excludegroups"&gt;
 </tbody> 
 </table>
 
-<a name="Attributes">  </a> 
+<a name="Attributes"> </a>
 
-## Attributes specified by FIELD child elements  
- You can qualify most **FIELD** rules to apply or not apply to a set of groups or users by including the `for` or `not` attributes. For more information, see [Apply a field rule](apply-rule-work-item-field.md).  
+## Attributes specified by FIELD child elements
 
-|Attribute|Syntax|Description|  
-|---------------|------------|-----------------|  
-|`expanditems`|expanditems="true &#124; false"|Optional. Specifies whether a group that the **LISTITEM** element  identifies should be expanded to include subordinate groups in the list. The default value of this attribute is `true`.|  
-|`filteritems`|filteritems="*excludegroups*"|Optional. Specifies that only the members of groups, and not group names, are included in the list. The only allowed value for this attribute is `excludegroups`.|  
-|`for`|for="*userGroupName*"|Optional. Specifies the name of a user or group in Team Foundation to whom the rule applies. Valid values consist of a string of text that contains between 1 and 255 characters.|  
-|`not`|not="*userGroupName*"|Optional. Specifies the name of a user or group in Team Foundation to whom the rule does not apply. Valid values consist of a string of text that contains between 1 and 255 characters.|  
-|`from`|from="value &#124; field &#124; clock &#124; currentuser"|Required. Specifies the source of the value from which to copy a value or specify a default value. The following values are valid:<br /><br /> -                      `clock`:  Copies the current date and time from the system clock to DateTime fields. No additional attributes are required. For **COPY** and **DEFAULT** rules, this value comes from the local computer clock time. For **SERVERDEFAULT**, the value comes from the server clock when a user saves the work item.<br /><br /> -                      `currentuser`:  Copies the name of the user who is currently logged on. Use the short username of the current user as the value. No additional attributes are required. Used for string fields.<br /><br /> -                      `field`:  Copies the value of the `field` attribute that you specify. Requires a `field="abc"` attribute. By default, if the specified "from" field is empty, nothing is performed. The `field` attribute is used only for \<COPY> and \<DEFAULT> rules.<br / -                     `value`: Copies the value of the `value` attribute that you specify. Use the value of a string constant that you specify. Requires a `value="abc"` attribute. `value` is used only for \<COPY> and \<DEFAULT> rules.<br /><br /> If you specify "value" or "field," you must also include the value or field attribute, respectively.|  
-|`field`|field="*fieldReferenceName*"|Optional. Specifies the name of the field whose value is to be copied into the field when `field` is specified for the `from` attribute.|  
-|`pattern`|pattern="*patternValue*"|Required. Enforces basic pattern matching for strings only. *patternValue* is a string that consists of between 1 and 255 characters, inclusive. That string must not contain a backslash character (\\). Each character in the string is interpreted as a literal, unless it is one of the following six metacharacters:<br /><br /> - "A" or "a" represent a single alphabetical character.<br /> - "N" or "n" represent a single numeric character.<br /> - "X" or "x" represent a single alphanumeric character.<br /><br /> Pattern value: ^[^\\\\]*$<br /><br /> For example, `pattern="xxxxx.nn.nn"` matches any five alphanumeric characters, then a period, then two numeric characters, then a period, then two more numeric characters.|  
-|`value`|value="*valueToCopy*"|Optional. Specifies the value to be copied into the field when `value` is specified for the `from` attribute.|  
+You can qualify most **FIELD** rules to apply or not apply to a set of groups or users by including the `for` or `not` attributes. For more information, see [Apply a field rule](apply-rule-work-item-field.md).
 
-## Related articles 
--  [About work item fields and attributes](../../boards/work-items/work-item-fields.md)   
--  [Change the workflow](change-workflow-wit.md)
--  [Customize your work tracking experience](../customize-work.md)  
+| Attribute     | Syntax                                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `expanditems` | expanditems="true &#124; false"                           | Optional. Specifies whether a group that the **LISTITEM** element identifies should be expanded to include subordinate groups in the list. The default value of this attribute is `true`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `filteritems` | filteritems="_excludegroups_"                             | Optional. Specifies that only the members of groups, and not group names, are included in the list. The only allowed value for this attribute is `excludegroups`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `for`         | for="_userGroupName_"                                     | Optional. Specifies the name of a user or group in Team Foundation to whom the rule applies. Valid values consist of a string of text that contains between 1 and 255 characters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `not`         | not="_userGroupName_"                                     | Optional. Specifies the name of a user or group in Team Foundation to whom the rule does not apply. Valid values consist of a string of text that contains between 1 and 255 characters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `from`        | from="value &#124; field &#124; clock &#124; currentuser" | Required. Specifies the source of the value from which to copy a value or specify a default value. The following values are valid:<br /><br /> - `clock`: Copies the current date and time from the system clock to DateTime fields. No additional attributes are required. For **COPY** and **DEFAULT** rules, this value comes from the local computer clock time. For **SERVERDEFAULT**, the value comes from the server clock when a user saves the work item.<br /><br /> - `currentuser`: Copies the name of the user who is currently logged on. Use the short username of the current user as the value. No additional attributes are required. Used for string fields.<br /><br /> - `field`: Copies the value of the `field` attribute that you specify. Requires a `field="abc"` attribute. By default, if the specified "from" field is empty, nothing is performed. The `field` attribute is used only for \<COPY> and \<DEFAULT> rules.<br / - `value`: Copies the value of the `value` attribute that you specify. Use the value of a string constant that you specify. Requires a `value="abc"` attribute. `value` is used only for \<COPY> and \<DEFAULT> rules.<br /><br /> If you specify "value" or "field," you must also include the value or field attribute, respectively. |
+| `field`       | field="_fieldReferenceName_"                              | Optional. Specifies the name of the field whose value is to be copied into the field when `field` is specified for the `from` attribute.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `pattern`     | pattern="_patternValue_"                                  | Required. Enforces basic pattern matching for strings only. _patternValue_ is a string that consists of between 1 and 255 characters, inclusive. That string must not contain a backslash character (\\). Each character in the string is interpreted as a literal, unless it is one of the following six metacharacters:<br /><br /> - "A" or "a" represent a single alphabetical character.<br /> - "N" or "n" represent a single numeric character.<br /> - "X" or "x" represent a single alphanumeric character.<br /><br /> Pattern value: ^[^\\\\]\*\$<br /><br /> For example, `pattern="xxxxx.nn.nn"` matches any five alphanumeric characters, then a period, then two numeric characters, then a period, then two more numeric characters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `value`       | value="_valueToCopy_"                                     | Optional. Specifies the value to be copied into the field when `value` is specified for the `from` attribute.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+
+## Related articles
+
+- [About work item fields and attributes](../../boards/work-items/work-item-fields.md)
+- [Change the workflow](change-workflow-wit.md)
+- [Customize your work tracking experience](../customize-work.md)

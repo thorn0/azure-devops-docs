@@ -8,7 +8,7 @@ ms.manager: atulmal
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 02/28/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Helm installer task
@@ -38,21 +38,21 @@ This task can be used for installing a specific version of helm binary on agents
   </tr>
 </table>
 
-The following YAML example showcases the installation of latest version of helm binary on the agent - 
+The following YAML example showcases the installation of latest version of helm binary on the agent -
 
 ```YAML
 - task: HelmInstaller@1
   displayName: Helm installer
-  inputs: 
+  inputs:
     helmVersionToInstall: latest
 ```
 
-The following YAML example demonstrates the use of an explicit version string rather than installing the latest version available at the time of task execution - 
+The following YAML example demonstrates the use of an explicit version string rather than installing the latest version available at the time of task execution -
 
 ```YAML
 - task: HelmInstaller@1
   displayName: Helm installer
-  inputs: 
+  inputs:
     helmVersionToInstall: 2.14.1
 ```
 

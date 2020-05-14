@@ -8,7 +8,7 @@ ms.assetid: ca05800c-905a-407f-bea8-a7ee32b65973
 ms.author: kaelli
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 11/19/2018
 ---
 
@@ -16,21 +16,22 @@ ms.date: 11/19/2018
 
 [!INCLUDE [temp](../includes/version-vsts-tfs-all-versions.md)]
 
-You use planning, ranking, and priority fields to specify which work the team should complete first.  By ranking and prioritizing work items, all team members gain an understanding of the relative importance of the work that they must accomplish.  
+You use planning, ranking, and priority fields to specify which work the team should complete first. By ranking and prioritizing work items, all team members gain an understanding of the relative importance of the work that they must accomplish.
 
 You rank and prioritize work items when you [Create your backlog](../backlogs/create-your-backlog.md).
 
-## Supported operators and macros 
+## Supported operators and macros
 
 Query clauses that specify a string or integer field can use the operators listed below.
-- = , <> , > , < , >= , <=  
-- =[Field], <>[Field], >[Field], <[Field], >=[Field], <=[Field]  
-- In, Not In  
-- Was Ever  
 
-## Pick list queries 
+- = , <> , > , < , >= , <=
+- =[Field], <>[Field], >[Field], <[Field], >=[Field], <=[Field]
+- In, Not In
+- Was Ever
 
-Most of the planning fields described in the next section are either an integer or string field. For example queries of numeric or rich-text fields, see [Query by numeric fields](query-numeric.md) and [Query by titles, IDs, and rich-text fields](titles-ids-descriptions.md).    
+## Pick list queries
+
+Most of the planning fields described in the next section are either an integer or string field. For example queries of numeric or rich-text fields, see [Query by numeric fields](query-numeric.md) and [Query by titles, IDs, and rich-text fields](titles-ids-descriptions.md).
 
 <table width="100%">
 <tbody valign="top">
@@ -63,12 +64,11 @@ Features and stories that address Architectural areas<br/>
 </tr>
 
 </tbody>
-</table>  
+</table>
 
-## Fields used to plan and prioritize work  
+## Fields used to plan and prioritize work
 
 The following table describes the fields that you can use to plan and prioritize work. Some fields are only valid for a specific process&mdash;[Basic](../get-started/plan-track-work.md), [Agile](../work-items/guidance/agile-process.md), [Scrum](../work-items/guidance/scrum-process.md), or [Capability Maturity Model Integration (CMMI)](../work-items/guidance/cmmi-process.md).
-
 
 <table width="100%">
 <thead>
@@ -156,17 +156,16 @@ The following table describes the fields that you can use to plan and prioritize
 </tbody>
 </table>
 
-#### Notes:  
+#### Notes:
 
-1.  To change the menu selection, see [Add and manage fields (Inherited process)](../../organizations/settings/work/customize-process-field.md) or [Add or modify a field, customize a picklist (On-premises XML process)](../../reference/add-modify-field.md).  
-1. The sequence of items on a product backlog page is determined according to where you have added or dragged the items. As you drag items, a background process updates either the Backlog Priority (Scrum) or Stack Rank (Agile, Basic, CMMI) field. These fields determine the order in which backlog items appear on a backlog page. They are assigned to `type="Order"` in the ProcessConfiguration file.  
+1.  To change the menu selection, see [Add and manage fields (Inherited process)](../../organizations/settings/work/customize-process-field.md) or [Add or modify a field, customize a picklist (On-premises XML process)](../../reference/add-modify-field.md).
+1.  The sequence of items on a product backlog page is determined according to where you have added or dragged the items. As you drag items, a background process updates either the Backlog Priority (Scrum) or Stack Rank (Agile, Basic, CMMI) field. These fields determine the order in which backlog items appear on a backlog page. They are assigned to `type="Order"` in the ProcessConfiguration file.
 
+## Related articles
 
-## Related articles 
-
-- [Query by a numeric field](query-numeric.md)   
-- [Work item field index](../work-items/guidance/work-item-field.md)  
-- [Work item fields and attributes](../work-items/work-item-fields.md).  
+- [Query by a numeric field](query-numeric.md)
+- [Work item field index](../work-items/guidance/work-item-field.md)
+- [Work item fields and attributes](../work-items/work-item-fields.md).
 
 ### More on Backlog Priority or Stack Rank fields
 
@@ -175,7 +174,7 @@ The Backlog Priority and Stack Rank fields don't appear on the work item forms. 
 ::: moniker range="azure-devops"  
 To add the field to the form, add the Stack Rank field to a work item type ([for the custom process that your project references](../../organizations/settings/work/customize-process-form.md)).
 
-::: moniker-end  
+::: moniker-end
 
 ::: moniker range=">= tfs-2015 <= tfs-2018"  
 To add the field to the form, [modify the WIT XML definition to add the following control element](../../reference/add-modify-wit.md):
@@ -190,4 +189,4 @@ or, for Scrum
 <Control FieldName="Microsoft.VSTS.Common.BacklogPriority" Type="FieldControl" Label="Stack Rank" LabelPosition="Left" />
 ```
 
-::: moniker-end  
+::: moniker-end

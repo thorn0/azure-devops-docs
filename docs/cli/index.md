@@ -1,25 +1,25 @@
 ---
 title: Learn about Azure DevOps command line interface extension
-titleSuffix: Azure DevOps 
-description: Use Azure DevOps extension command line interface 
+titleSuffix: Azure DevOps
+description: Use Azure DevOps extension command line interface
 ms.topic: conceptual
-ms.prod: devops 
+ms.prod: devops
 ms.technology: devops-ref
-ms.manager: mijacobs 
+ms.manager: mijacobs
 ms.author: geverghe
 author: KathrynEE
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ms.date: 10/14/2019
 ---
 
 # Get started with Azure DevOps CLI
 
-[!INCLUDE [temp](../includes/version-vsts-only.md)] 
+[!INCLUDE [temp](../includes/version-vsts-only.md)]
 
 The Azure DevOps extension for Azure Command Line Interface (CLI) allows you to experience Azure DevOps Services from the command line, bringing the capability to manage Azure DevOps right to your fingertips! This allows you to work in a streamlined task/command oriented manner without having to worry about the GUI flows, providing you a faster and flexible interaction canvas.
 
 > [!NOTE]  
-> The Azure DevOps Command Line Interface (CLI) is only available for Azure DevOps Services at this time. 
+> The Azure DevOps Command Line Interface (CLI) is only available for Azure DevOps Services at this time.
 
 To start using the Azure DevOps extension for Azure CLI, execute the following steps:
 
@@ -27,19 +27,19 @@ To start using the Azure DevOps extension for Azure CLI, execute the following s
 
 2. Add the Azure DevOps extension:
 
-    ```
-	az extension add --name azure-devops
-    ```
+   ```
+   az extension add --name azure-devops
+   ```
 
-	You can use `az extension list` or `az extension show --name azure-devops` to confirm the installation.
+   You can use `az extension list` or `az extension show --name azure-devops` to confirm the installation.
 
-3. Sign in: Run `az login` to sign in. Note that we support only interactive or log in using user name and password with `az login`. We do not support use of service principals with `az login`. You would need to use a PAT token in this case. For more information, see [Log in via Azure DevOps Personal Access Token (PAT)](log-in-via-pat.md).  
+3. Sign in: Run `az login` to sign in. Note that we support only interactive or log in using user name and password with `az login`. We do not support use of service principals with `az login`. You would need to use a PAT token in this case. For more information, see [Log in via Azure DevOps Personal Access Token (PAT)](log-in-via-pat.md).
 
 4. Configure defaults: Although you can provide the organization and project for each command, we recommend you set these values as defaults in configuration for seamless commanding.
 
-    ```
-	az devops configure --defaults organization=https://dev.azure.com/contoso project=ContosoWebApp
-    ```
+   ```
+   az devops configure --defaults organization=https://dev.azure.com/contoso project=ContosoWebApp
+   ```
 
 ## Command usage
 
@@ -48,7 +48,7 @@ For usage and help content for any command, pass in the -h parameter, for exampl
 
 ```bash
 $ az devops -h
-   
+
 Group
     az devops : Manage Azure DevOps organization level operations.
         Related Groups
@@ -56,7 +56,7 @@ Group
         az boards: Manage Azure Boards
         az repos: Manage Azure Repos
         az artifacts: Manage Azure Artifacts.
-   
+
 Subgroups:
     admin            : Manage administration operations.
     extension        : Manage extensions.

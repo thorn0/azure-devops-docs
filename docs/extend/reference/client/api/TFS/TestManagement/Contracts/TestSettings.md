@@ -14,20 +14,18 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `areaPath`: string. Area path required to create test settings
+- `areaPath`: string. Area path required to create test settings
 
-* `description`: string. Description of the test settings. Used in create test settings.
+- `description`: string. Description of the test settings. Used in create test settings.
 
-* `isPublic`: boolean. Indicates if the tests settings is public or private.Used in create test settings.
+- `isPublic`: boolean. Indicates if the tests settings is public or private.Used in create test settings.
 
-* `machineRoles`: string. Xml string of machine roles. Used in create test settings.
+- `machineRoles`: string. Xml string of machine roles. Used in create test settings.
 
-* `testSettingsContent`: string. Test settings content.
+- `testSettingsContent`: string. Test settings content.
 
-* `testSettingsId`: number. Test settings id.
+- `testSettingsId`: number. Test settings id.
 
-* `testSettingsName`: string. Test settings name.
-
+- `testSettingsName`: string. Test settings name.

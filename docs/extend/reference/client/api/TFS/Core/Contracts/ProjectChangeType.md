@@ -16,6 +16,6 @@ Module path: `TFS/Core/Contracts`
 
 ### Values
 
-* `Modified` 
-* `Deleted` 
-* `Added` 
+- `Modified`
+- `Deleted`
+- `Added`

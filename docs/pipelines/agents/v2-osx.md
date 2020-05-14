@@ -5,7 +5,7 @@ description: Learn how to deploy a macOS agent to build and deploy your iOS appl
 ms.topic: conceptual
 ms.assetid: 3D487E4E-D940-4DA9-BDE1-1F60E74DD6F1
 ms.date: 03/09/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Self-hosted macOS agents
@@ -21,8 +21,9 @@ monikerRange: '>= tfs-2015'
 To build and deploy Xcode apps or Xamarin.iOS projects, you'll need at least one macOS agent. This agent can also build and deploy Java and Android apps.
 
 > Before you begin:
-> * If your pipelines are in [Azure Pipelines](https://visualstudio.microsoft.com/products/visual-studio-team-services-vs) and a [Microsoft-hosted agent](hosted.md) meets your needs, you can skip setting up a self-hosted macOS agent.
-> *  Otherwise, you've come to the right place to set up an agent on macOS. Continue to the next section.
+>
+> - If your pipelines are in [Azure Pipelines](https://visualstudio.microsoft.com/products/visual-studio-team-services-vs) and a [Microsoft-hosted agent](hosted.md) meets your needs, you can skip setting up a self-hosted macOS agent.
+> - Otherwise, you've come to the right place to set up an agent on macOS. Continue to the next section.
 
 [!INCLUDE [include](includes/concepts.md)]
 
@@ -31,6 +32,7 @@ To build and deploy Xcode apps or Xamarin.iOS projects, you'll need at least one
 ::: moniker range=">= tfs-2018"
 
 Make sure your machine has these prerequisites:
+
 - macOS Sierra (10.12) or higher
 - Git 2.9.0 or higher (latest version strongly recommended - you can easily install with [Homebrew](https://brew.sh/))
 
@@ -44,6 +46,7 @@ These prereqs are required for agent version 2.124.0 and below.
 **If you're able, we recommend upgrading to a newer macOS (10.12+) and upgrading to the newest agent.**
 
 Make sure your machine has these prerequisites:
+
 - OS X Yosemite (10.10), El Capitan (10.11), or macOS Sierra (10.12)
 - Git 2.9.0 or higher (latest version strongly recommended)
 - Meets all prereqs for [.NET Core 1.x](https://dotnet.microsoft.com/download/dotnet-core/1.0)
@@ -63,6 +66,7 @@ After you get a feel for how agents work, or if you want to automate setting up 
 [!INCLUDE [permissions](includes/v2/prepare-permissions.md)]
 
 <a name="download-configure"></a>
+
 ## Download and configure the agent
 
 ::: moniker range="azure-devops"
@@ -185,7 +189,7 @@ To run the agent interactively:
    ./run.sh
    ```
 
-  To restart the agent, press Ctrl+C and then run `run.sh` to restart it.
+To restart the agent, press Ctrl+C and then run `run.sh` to restart it.
 
 To use your agent, run a [job](../process/phases.md) using the agent's pool.
 If you didn't choose a different pool, your agent will be in the **Default** pool.
@@ -194,7 +198,7 @@ If you didn't choose a different pool, your agent will be in the **Default** poo
 
 For agents configured to run interactively, you can choose to have the agent accept only one job. To run in this configuration:
 
- ```bash
+```bash
 ./run.sh --once
 ```
 
@@ -211,15 +215,15 @@ We provide the `./svc.sh` script for you to run and manage your agent as a launc
 
 In the section below, these tokens are replaced:
 
-* `{agent-name}`
+- `{agent-name}`
 
-* `{tfs-name}`
+- `{tfs-name}`
 
 For example, you have configured an agent (see above) with the name `our-osx-agent`. In the following examples, `{tfs-name}` will be either:
 
-* Azure Pipelines: the name of your organization. For example if you connect to `https://dev.azure.com/fabrikam`, then the service name would be `vsts.agent.fabrikam.our-osx-agent`
+- Azure Pipelines: the name of your organization. For example if you connect to `https://dev.azure.com/fabrikam`, then the service name would be `vsts.agent.fabrikam.our-osx-agent`
 
-* TFS: the name of your on-premises TFS AT server. For example if you connect to `http://our-server:8080/tfs`, then the service name would be `vsts.agent.our-server.our-osx-agent`
+- TFS: the name of your on-premises TFS AT server. For example if you connect to `http://our-server:8080/tfs`, then the service name would be `vsts.agent.our-server.our-osx-agent`
 
 ### Commands
 
@@ -231,7 +235,6 @@ For example, if you installed in the `myagent` subfolder of your home directory:
 cd ~/myagent$
 ```
 
-
 #### Install
 
 Command:
@@ -241,7 +244,6 @@ Command:
 ```
 
 This command creates a launchd plist that points to `./runsvc.sh`. This script sets up the environment (more details below) and starts the agent's host.
-
 
 #### Start
 
@@ -268,6 +270,7 @@ The left number is the pid if the service is running. If second number is not ze
 #### Status
 
 Command:
+
 ```bash
 ./svc.sh status
 ```
@@ -335,7 +338,7 @@ The snapshot of the environment variables is stored in `.env` file under agent r
 
 ### Run instructions before the service starts
 
-You can also run your own instructions and commands to run when the service starts.  For example, you could set up the environment or call scripts.
+You can also run your own instructions and commands to run when the service starts. For example, you could set up the environment or call scripts.
 
 1. Edit `runsvc.sh`.
 

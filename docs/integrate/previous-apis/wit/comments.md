@@ -1,8 +1,8 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Work Item Comments | REST API Reference for Team Foundation Server
-description: Work with work item comments programmatically using the REST APIs for Team Foundation Server. 
+description: Work with work item comments programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: EF2796AF-2400-4396-ABFC-1903BA1581CC
 ms.topic: article
 ms.author: chcomley
@@ -26,14 +26,16 @@ Every work item comment is associated with a single [revision](./revisions.md). 
 GET https://{instance}/DefaultCollection/_apis/wit/workitems/{id}/comments/{revision}?api-version={version}
 ```
 
-| Parameter | Type    | Default | Notes	
-|:----------|:--------|:--------|:--------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance  | string  |         | [VS Team Services account](../../get-started/rest/basics.md) ({account}.visualstudio.com) or [TFS server](../../get-started/rest/basics.md) ({server:port}).
-| id        | int     |         | ID of the work item.
-| revision  | int     |         | Revision number of the comment.
+| instance | string | | [VS Team Services account](../../get-started/rest/basics.md) ({account}.visualstudio.com) or [TFS server](../../get-started/rest/basics.md) ({server:port}).
+| id | int | | ID of the work item.
+| revision | int | | Revision number of the comment.
 | Query
-| api-version| string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version| string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -57,10 +59,9 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/comments/2?api
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetSingleWorkItemComment method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/CommentsSample.cs#L13)
+- [C# (GetSingleWorkItemComment method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/CommentsSample.cs#L13)
 
 ## Get a page of comments
 
@@ -68,16 +69,18 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/comments/2?api
 GET https://{instance}/DefaultCollection/_apis/wit/workitems/{id}/comments?api-version={version}[&fromRevision={int}&$top={int}&order={order}]
 ```
 
-| Parameter | Type    | Default | Notes	
-|:----------|:--------|:--------|:------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance  | string  |         | [VS Team Services account](../../get-started/rest/basics.md) ({account}.visualstudio.com) or [TFS server](../../get-started/rest/basics.md) ({server:port}).
-| id        | int     |         | ID of the work item.
+| instance | string | | [VS Team Services account](../../get-started/rest/basics.md) ({account}.visualstudio.com) or [TFS server](../../get-started/rest/basics.md) ({server:port}).
+| id | int | | ID of the work item.
 | Query
-| api-version   | string             |       | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| fromRevision  | integer            | 1     | Starting revision ID to fetch comments from.
-| $top          | integer            | 200   | Number of comments to fetch.
-| order         | enum { asc, desc}  | asc   | Revision number sort order.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| fromRevision | integer | 1 | Starting revision ID to fetch comments from.
+| \$top | integer | 200 | Number of comments to fetch.
+| order | enum { asc, desc} | asc | Revision number sort order.
 
 #### Sample request
 
@@ -119,8 +122,6 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/comments?fromR
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetPageOfWorkItemComments method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/CommentsSample.cs#L30)
-
+- [C# (GetPageOfWorkItemComments method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/CommentsSample.cs#L30)

@@ -1,32 +1,31 @@
 ---
-title: Pipeline task duration trend sample Power BI report 
+title: Pipeline task duration trend sample Power BI report
 titleSuffix: Azure DevOps
-description: How-to guide to generate a pipeline task duration trend Power BI report  
+description: How-to guide to generate a pipeline task duration trend Power BI report
 ms.technology: devops-analytics
 ms.reviewer: ravishan
 ms.author: kaghai
 ms.custom: powerbisample
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= azure-devops'  
+monikerRange: ">= azure-devops"
 ms.date: 12/10/2019
 ---
 
-# Pipeline task duration trend sample report 
+# Pipeline task duration trend sample report
 
 [!INCLUDE [temp](../includes/version-azure-devops-cloud.md)]
 
-This article shows you how to get the daily trend report of the time taken to execute a pipeline task. 
+This article shows you how to get the daily trend report of the time taken to execute a pipeline task.
 
 [!INCLUDE [temp](includes/preview-note.md)]
 
 The following image shows an example of such a chart.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample - Pipelines task duration trend - Report](media/odatapowerbi-pipelines/taskdurationtrend-report.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
-
 
 ## Sample queries
 
@@ -49,7 +48,7 @@ let
             &"/groupby( "
                 &"(TaskDuration80thPercentileInSeconds, PipelineRunCompletedOn/Date)) "
             &"&$orderby=PipelineRunCompletedOn/Date asc "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -74,12 +73,11 @@ $apply=filter(
 &$orderby=PipelineRunCompletedOn/Date asc
 ```
 
-***
+---
 
 ### Substitution strings
 
 [!INCLUDE [temp](includes/pipelines-sample-query-substitutions-task-name.md)]
-
 
 ### Query breakdown
 
@@ -131,7 +129,6 @@ The following table describes each part of the query.
 </tbody>
 </table>
 
-
 ## Power BI transforms
 
 ### Expand PipelineRunCompletedOn column
@@ -142,19 +139,18 @@ After closing the Advanced Editor and while remaining in the Power Query Editor,
 
 1. Choose the expand button
 
-    > [!div class="mx-imgBorder"] 
-    > ![Power BI + OData - Choose expand button](media/odatapowerbi-pipelines/taskdurationtrend-expand1.png)
-    
+   > [!div class="mx-imgBorder"]
+   > ![Power BI + OData - Choose expand button](media/odatapowerbi-pipelines/taskdurationtrend-expand1.png)
+
 1. Select the checkbox "(Select All Columns)" to expand
 
-    > [!div class="mx-imgBorder"] 
-    > ![Power BI + OData - Select all columns](media/odatapowerbi-pipelines/taskdurationtrend-expand2.png)
+   > [!div class="mx-imgBorder"]
+   > ![Power BI + OData - Select all columns](media/odatapowerbi-pipelines/taskdurationtrend-expand2.png)
 
 1. The table now contains the expanded entity **CompletedOn.Date**
 
-    > [!div class="mx-imgBorder"] 
-    > ![Power BI + OData - Expanded entity](media/odatapowerbi-pipelines/taskdurationtrend-expand3.png)
-
+   > [!div class="mx-imgBorder"]
+   > ![Power BI + OData - Expanded entity](media/odatapowerbi-pipelines/taskdurationtrend-expand3.png)
 
 ### Change column type
 
@@ -162,37 +158,35 @@ The query doesn't return all the columns in the format in which you can directly
 
 1. 1. Change the type of column **TaskDuration80thPercentileInSeconds** to **Decimal Number**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Power BI + OData - change column type](media/odatapowerbi-pipelines/taskduration-changecolumntype.png)
+   > [!div class="mx-imgBorder"]
+   > ![Power BI + OData - change column type](media/odatapowerbi-pipelines/taskduration-changecolumntype.png)
 
+### Rename fields and query
 
-### Rename fields and query 
-
-When finished, you may choose to rename columns. 
+When finished, you may choose to rename columns.
 
 1. Right-click a column header and select **Rename...**
 
-	> [!div class="mx-imgBorder"] 
-	> ![Power BI Rename Columns](media/odatapowerbi-pipelines/taskduration-renamerightclick.png)
-  
-1. You also may want to rename the query from the default **Query1**, to something more meaningful. 
+   > [!div class="mx-imgBorder"]
+   > ![Power BI Rename Columns](media/odatapowerbi-pipelines/taskduration-renamerightclick.png)
 
-	> [!div class="mx-imgBorder"] 
-	> ![Power BI Rename Query](media/odatapowerbi-pipelines/renamequery.png)
-  
+1. You also may want to rename the query from the default **Query1**, to something more meaningful.
+
+   > [!div class="mx-imgBorder"]
+   > ![Power BI Rename Query](media/odatapowerbi-pipelines/renamequery.png)
+
 1. Once done, choose **Close & Apply** to save the query and return to Power BI.
 
-	> [!div class="mx-imgBorder"] 
-	> ![Power BI Close & Apply](media/odatapowerbi-pipelines/closeandapply.png)
-  
-  
+   > [!div class="mx-imgBorder"]
+   > ![Power BI Close & Apply](media/odatapowerbi-pipelines/closeandapply.png)
+
 ## Create the report
 
-Power BI shows you the fields you can report on. 
+Power BI shows you the fields you can report on.
 
-> [!NOTE]   
-> The example below assumes that no one renamed any columns. 
-> [!div class="mx-imgBorder"] 
+> [!NOTE]  
+> The example below assumes that no one renamed any columns.
+> [!div class="mx-imgBorder"]
 > ![Sample - Pipelines Duration - Fields](media/odatapowerbi-pipelines/taskdurationtrend-fields.png)
 
 For a simple report, do the following steps:
@@ -201,27 +195,25 @@ For a simple report, do the following steps:
 
 1. Add the field "PipelineRunCompletedOn.Date" to **Axis**.
 
-    - Right-click "PipelineRunCompletedOn.Date" and select "PipelineRunCompletedOn.Date", rather than Date Hierarchy.
-	
+   - Right-click "PipelineRunCompletedOn.Date" and select "PipelineRunCompletedOn.Date", rather than Date Hierarchy.
+
 1. Add the field "TaskDuration80thPercentileInSeconds" to **Values**.
 
-    - Right-click "TaskDuration80thPercentileInSeconds" field and ensure **Sum** is selected.
+   - Right-click "TaskDuration80thPercentileInSeconds" field and ensure **Sum** is selected.
 
-Your report should look like this. 
+Your report should look like this.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample - Pipelines task duration trend - Report](media/odatapowerbi-pipelines/taskdurationtrend-report.png)
-
 
 ## Additional queries
 
 You can use the following additional queries to create different but similar reports using the same steps defined previously in this article.
 
-
 ### Use Pipeline Id, rather than Pipeline Name
 
-You can change your Pipeline name. To ensure that the Power BI reports don't break when the pipeline name is changed, use the pipeline ID rather than pipeline name. You can obtain the pipeline ID  from the URL of the pipeline runs page.
-https:\//dev.azure.com/{organization}/{project}/_build?definitionId= **{pipelineid}**
+You can change your Pipeline name. To ensure that the Power BI reports don't break when the pipeline name is changed, use the pipeline ID rather than pipeline name. You can obtain the pipeline ID from the URL of the pipeline runs page.
+https:\//dev.azure.com/{organization}/{project}/\_build?definitionId= **{pipelineid}**
 
 #### [Power BI query](#tab/powerbi/)
 
@@ -242,10 +234,11 @@ let
             &"/groupby( "
                 &"(TaskDuration80thPercentileInSeconds, PipelineRunCompletedOn/Date)) "
             &"&$orderby=PipelineRunCompletedOn/Date asc "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
+
 #### [OData query](#tab/odata/)
 
 [!INCLUDE [temp](includes/sample-odata-query.md)]
@@ -266,7 +259,7 @@ $apply=filter(
 &$orderby=PipelineRunCompletedOn/Date asc
 ```
 
-***
+---
 
 ### Get 50th and 90th percentile, along with 80th percentile duration trend
 
@@ -293,10 +286,11 @@ let
             &"/groupby( "
         &"(TaskDuration50thPercentileInSeconds, TaskDuration80thPercentileInSeconds, TaskDuration95thPercentileInSeconds, PipelineRunCompletedOn/Date)) "
     &"&$orderby=PipelineRunCompletedOn/Date asc "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
+
 #### [OData query](#tab/odata/)
 
 [!INCLUDE [temp](includes/sample-odata-query.md)]
@@ -319,7 +313,7 @@ percentile_cont(ActivityDurationSeconds, 0.95, PipelineRunCompletedDateSK) as Ta
 &$orderby=PipelineRunCompletedOn/Date asc
 ```
 
-***
+---
 
 ### Filter by branch
 
@@ -348,7 +342,7 @@ let
             &"/groupby( "
                 &" (TaskDuration80thPercentileInSeconds, Branch/BranchName, PipelineRunCompletedOn/Date)) "
             &"&$orderby=PipelineRunCompletedOn/Date asc "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -373,16 +367,15 @@ $apply=filter(
 &$orderby=PipelineRunCompletedOn/Date asc
 ```
 
-***
+---
 
 ### Task duration trend for all pipeline tasks
 
 You may want to view the task duration trend for all the pipeline tasks in a single report. To create the report, perform the following additional steps along with those steps defined previously in this article.
 
-- Select Power BI Visualization **Slicer** and add the field TaskDisplayName to the slicer's **Field**  
+- Select Power BI Visualization **Slicer** and add the field TaskDisplayName to the slicer's **Field**
 
 - Select the task from the slicer for which you need to see the duration trend
- 
 
 #### [Power BI query](#tab/powerbi/)
 
@@ -402,10 +395,11 @@ let
                 &"/groupby( "
             &"(TaskDuration80thPercentileInSeconds, TaskDisplayName, PipelineRunCompletedOn/Date)) "
                 &"&$orderby=PipelineRunCompletedOn/Date asc "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
+
 #### [OData query](#tab/odata/)
 
 [!INCLUDE [temp](includes/sample-odata-query.md)]
@@ -425,9 +419,7 @@ $apply=filter(
 &$orderby=PipelineRunCompletedOn/Date asc
 ```
 
-***
-
-
+---
 
 ## Full list of Pipelines sample reports
 

@@ -2,14 +2,13 @@
 ms.topic: include
 ---
 
-
-## Definitions for common WIT fields  
+## Definitions for common WIT fields
 
 <a id="definitions-in-common"></a>
 
-The following fields and tabs appear in most work items. Each tab is used to track specific information, such as ![History tab icon](/azure/devops/boards/backlogs/media/icon-history-tab-wi.png) history, ![Links tab icon](/azure/devops/boards/backlogs/media/icon-links-tab-wi.png) links, or ![Attachment tab icon](/azure/devops/boards/backlogs/media/icon-attachments-tab-wi.png) attachments. These three tabs provide a history of changes, view of linked work items, and ability to view and attach files.  
+The following fields and tabs appear in most work items. Each tab is used to track specific information, such as ![History tab icon](/azure/devops/boards/backlogs/media/icon-history-tab-wi.png) history, ![Links tab icon](/azure/devops/boards/backlogs/media/icon-links-tab-wi.png) links, or ![Attachment tab icon](/azure/devops/boards/backlogs/media/icon-attachments-tab-wi.png) attachments. These three tabs provide a history of changes, view of linked work items, and ability to view and attach files.
 
-The only required field for all WITs is **Title**. When the work item is saved, the system assigns it a unique **ID**. The form highlights required field in yellow. For information about other fields, see [Work item field index](/azure/devops/boards/work-items/guidance/work-item-field).   
+The only required field for all WITs is **Title**. When the work item is saved, the system assigns it a unique **ID**. The form highlights required field in yellow. For information about other fields, see [Work item field index](/azure/devops/boards/work-items/guidance/work-item-field).
 
 <table><thead>
 <tr><th><p>Field/tab</p></th><th><p>Usage</p></th></tr></thead>
@@ -45,6 +44,3 @@ The only required field for all WITs is **Title**. When the work item is saved, 
 	<td><p>Share more detailed information by adding files to the work item, such as email threads, documents, images, log files, or other file types.</p></td></tr>
 </tbody>
 </table>
-
-
-

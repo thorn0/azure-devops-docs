@@ -15,7 +15,7 @@ Module path: `TFS/WorkItemTracking/Contracts`
 
 ### Values
 
-* `None` 
-* `Relations` 
-* `Fields` 
-* `All` 
+- `None`
+- `Relations`
+- `Fields`
+- `All`

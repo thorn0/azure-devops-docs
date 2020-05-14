@@ -10,14 +10,15 @@ ms.date: 01/20/2017
 ---
 
 # Work item save is slow to complete
+
 [!INCLUDE [temp](../../includes/version-tfs-all-versions.md)]
 
-This problem might occur when you save a work item. The problem might be intermittent and difficult to reproduce.  
-  
- **Possible Causes**  
-  
- The client computer might not be configured to automatically detect the link speed of its network adapter. This setting might decrease performance between the client computer and Visual Studio Team Foundation Server.  
-  
- **Solutions**  
-  
- On the client computer, enable automatic detection of the link speed for the network adapter. For more information, see [Configure a network adapter to automatically adjust speed](configure-network-adapter-automatically-adjust-speed.md).
+This problem might occur when you save a work item. The problem might be intermittent and difficult to reproduce.
+
+**Possible Causes**
+
+The client computer might not be configured to automatically detect the link speed of its network adapter. This setting might decrease performance between the client computer and Visual Studio Team Foundation Server.
+
+**Solutions**
+
+On the client computer, enable automatic detection of the link speed for the network adapter. For more information, see [Configure a network adapter to automatically adjust speed](configure-network-adapter-automatically-adjust-speed.md).

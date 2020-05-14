@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `type`: [MaskType](../../../TFS/DistributedTask/Contracts/MaskType.md). 
+- `type`: [MaskType](../../../TFS/DistributedTask/Contracts/MaskType.md).
 
-* `value`: string. 
-
+- `value`: string.

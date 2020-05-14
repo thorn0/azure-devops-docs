@@ -18,9 +18,8 @@ Extends: [TeamProjectReference](../../../TFS/DistributedTask/Contracts/TeamProje
 
 ### Members
 
-* `_links`: any. The links to other objects related to this object.
+- `_links`: any. The links to other objects related to this object.
 
-* `capabilities`: {[key: string]: {[key: string]: string}}. Set of capabilities this project has (such as process template &amp; version control).
+- `capabilities`: {[key: string]: {[key: string]: string}}. Set of capabilities this project has (such as process template &amp; version control).
 
-* `defaultTeam`: [WebApiTeamRef](../../../TFS/Core/Contracts/WebApiTeamRef.md). The shallow ref to the default team.
-
+- `defaultTeam`: [WebApiTeamRef](../../../TFS/Core/Contracts/WebApiTeamRef.md). The shallow ref to the default team.

@@ -7,7 +7,7 @@ ms.assetid: 43289B55-AB44-415C-BD44-DC6C8BC0479E
 ms.date: 08/10/2016
 ---
 
-# NuGet Installer task version 0.*
+# NuGet Installer task version 0.\*
 
 **Azure Pipelines (deprecated) | TFS 2017 (deprecated in 2017 Update 2)**
 
@@ -72,7 +72,6 @@ You're building a Visual Studio solution that depends on a NuGet feed.
         |-- ConsoleApplication1.csproj
 ```
 
-
 #### Build tasks
 
 <table>
@@ -82,6 +81,7 @@ You're building a Visual Studio solution that depends on a NuGet feed.
 <img src="../media/nuget-installer.png" alt="Package: NuGet Installer"/>
 
 <br/><strong>Package: NuGet Installer</strong></td>
+
 <td>
 <p>Install your NuGet package dependencies.</p>
 <ul>
@@ -96,6 +96,7 @@ You're building a Visual Studio solution that depends on a NuGet feed.
 <img src="../../build/media/visual-studio-build.png" alt="Build: Visual Studio Build"/>
 
 <br/></strong>Build: Visual Studio Build<strong></td>
+
 <td>
 <p>Build your solution.</p>
 <ul>
@@ -105,5 +106,3 @@ You're building a Visual Studio solution that depends on a NuGet feed.
 </td>
 </tr>
 </table>
-
-

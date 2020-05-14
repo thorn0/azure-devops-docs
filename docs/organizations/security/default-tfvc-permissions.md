@@ -1,15 +1,16 @@
 ---
 title: TFVC repository default permissions
 titleSuffix: Azure DevOps
-description: At-a-glance view of default permissions assigned to built-in security groups made for Team Foundation Version Control (TFVC) repositories 
+description: At-a-glance view of default permissions assigned to built-in security groups made for Team Foundation Version Control (TFVC) repositories
 ms.topic: reference
-ms.assetid:   
+ms.assetid:
 ms.technology: devops-security
 ms.author: kaelli
 author: KathrynEE
 ms.date: 02/07/2018
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
+
 # Default TFVC permissions
 
 [!INCLUDE [temp](../../includes/version-vsts-tfs-all-versions.md)]

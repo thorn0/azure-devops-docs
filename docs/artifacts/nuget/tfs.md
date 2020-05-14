@@ -5,7 +5,7 @@ ms.assetid: 1BB88A4E-C40E-48CD-B44A-25C90B935E5B
 ms.technology: devops-artifacts
 ms.topic: conceptual
 ms.date: 09/01/2017
-monikerRange: '>= tfs-2017 < azure-devops'
+monikerRange: ">= tfs-2017 < azure-devops"
 ---
 
 # Use NuGet or dotnet with Team Foundation Server feeds
@@ -22,15 +22,15 @@ You can use [consume packages with Visual Studio](consume.md), [publish with nug
 
 > This workflow is **not recommended**, because it requires that you store **your encrypted domain password** on disk. Please consider the security implications before continuing.
 
-1. Navigate to your feed ([or create a feed if you haven't](../feeds/create-feed.md)). 
+1. Navigate to your feed ([or create a feed if you haven't](../feeds/create-feed.md)).
 
 1. Select **Connect to feed**:
 
-    ![Connect to feed button in the upper-right of the page](../media/connect-to-feed.png)
-   
+   ![Connect to feed button in the upper-right of the page](../media/connect-to-feed.png)
+
 1. Copy the NuGet package source URL:
 
-    ![NuGet Package source URL in the Connect to feed dialog](../media/nuget-consume-url.png)
+   ![NuGet Package source URL in the Connect to feed dialog](../media/nuget-consume-url.png)
 
 Then, run the following command (replacing {values} where applicable):
 

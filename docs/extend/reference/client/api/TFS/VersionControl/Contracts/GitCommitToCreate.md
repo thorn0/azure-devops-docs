@@ -13,12 +13,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `baseRef`: [GitRef](../../../TFS/VersionControl/Contracts/GitRef.md). 
+- `baseRef`: [GitRef](../../../TFS/VersionControl/Contracts/GitRef.md).
 
-* `comment`: string. 
+- `comment`: string.
 
-* `pathActions`: [GitPathAction](../../../TFS/VersionControl/Contracts/GitPathAction.md)[]. 
-
+- `pathActions`: [GitPathAction](../../../TFS/VersionControl/Contracts/GitPathAction.md)[].

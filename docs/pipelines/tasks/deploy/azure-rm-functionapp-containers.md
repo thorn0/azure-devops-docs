@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 03/13/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Azure Function App for Container task

@@ -18,13 +18,12 @@ Extends: [TaskLogReference](../../../TFS/DistributedTask/Contracts/TaskLogRefere
 
 ### Members
 
-* `createdOn`: Date. 
+- `createdOn`: Date.
 
-* `indexLocation`: string. 
+- `indexLocation`: string.
 
-* `lastChangedOn`: Date. 
+- `lastChangedOn`: Date.
 
-* `lineCount`: number. 
+- `lineCount`: number.
 
-* `path`: string. 
-
+- `path`: string.

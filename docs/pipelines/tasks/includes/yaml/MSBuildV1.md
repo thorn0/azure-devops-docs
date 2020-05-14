@@ -12,7 +12,7 @@ ms.technology: devops-cicd-tasks
 # Build with MSBuild
 - task: MSBuild@1
   inputs:
-    #solution: '**/*.sln' 
+    #solution: '**/*.sln'
     #msbuildLocationMethod: 'version' # Optional. Options: version, location
     #msbuildVersion: 'latest' # Optional. Options: latest, 16.0, 15.0, 14.0, 12.0, 4.0
     #msbuildArchitecture: 'x86' # Optional. Options: x86, x64

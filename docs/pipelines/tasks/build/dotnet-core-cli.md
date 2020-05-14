@@ -7,7 +7,7 @@ ms.assetid: 5541a522-603c-47ad-91fc-a4b1d163081b
 ms.author: puagarw
 author: pulkitaggarwl
 ms.date: 10/30/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # .NET Core CLI task
@@ -29,7 +29,7 @@ If your .NET Core or .NET Standard build depends on NuGet packages, make sure to
 ::: moniker range="> tfs-2018"
 
 ## YAML snippet
- 
+
 [!INCLUDE [temp](../includes/yaml/DotNetCoreCliV2.md)]
 
 ::: moniker-end
@@ -43,7 +43,8 @@ If your .NET Core or .NET Standard build depends on NuGet packages, make sure to
 
 If you choose &#39;Use an environment variable&#39;, you must select an environment variable and ensure it contains the version number you want to use.
 
-If you choose &#39;Use the build number&#39;, this will use the build number to version your package. <strong>Note:</strong> Under Options set the build number format to be &#39;<a href="https://go.microsoft.com/fwlink/?LinkID=627416" data-raw-source="[$(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)](https://go.microsoft.com/fwlink/?LinkID=627416)">$(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)</a>&#39; <br/>Options: <code>off</code>, <code>byPrereleaseNumber</code>, <code>byEnvVar</code>, <code>byBuildNumber</code>, </td></tr>
+If you choose &#39;Use the build number&#39;, this will use the build number to version your package. <strong>Note:</strong> Under Options set the build number format to be &#39;<a href="https://go.microsoft.com/fwlink/?LinkID=627416" data-raw-source="[$(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)](https://go.microsoft.com/fwlink/?LinkID=627416)">$(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)\$(Rev:.r)</a>&#39; <br/>Options: <code>off</code>, <code>byPrereleaseNumber</code>, <code>byEnvVar</code>, <code>byBuildNumber</code>, </td></tr>
+
 <tr><td><code>arguments</code><br/>Arguments</td><td>Arguments to the selected command. For example, build configuration, output folder, runtime. The arguments depend on the command selected<br/>Note: This input only currently accepts arguments for <code>build</code>, <code>publish</code>, <code>run</code>, <code>test</code>, <code>custom</code>. If you would like to add arguments for a command not listed, use <code>custom</code>.</td></tr>
 <tr><td><code>projects</code><br/>Path to project(s)</td><td>The path to the csproj file(s) to use. You can use wildcards (e.g. <code>&ast;&ast;/&ast;.csproj</code> for all .csproj files in all subfolders).</td></tr>
 <tr><td><code>noCache</code><br/>Disable local cache</td><td>Prevents NuGet from using packages from local machine caches.</td></tr>
@@ -105,8 +106,8 @@ If you choose &#39;Use the build number&#39;, this will use the build number to 
   inputs:
     command: 'build'
     projects: |
-      src/proj1/proj1.csproj 
-      src/proj2/proj2.csproj 
+      src/proj1/proj1.csproj
+      src/proj2/proj2.csproj
       src/other/other.sln    # Pass a solution instead of a csproj.
 ```
 
@@ -141,7 +142,7 @@ If you choose &#39;Use the build number&#39;, this will use the build number to 
 ```YAML
 # Pack a NuGet package to a test directory
 - task: DotNetCoreCLI@2
-  inputs: 
+  inputs:
     command: 'pack'
     outputDir: '$(Build.ArtifactStagingDirectory)/TestDir'
 ```
@@ -151,7 +152,7 @@ If you choose &#39;Use the build number&#39;, this will use the build number to 
 ```YAML
 # Pack a symbol package along with NuGet package
 - task: DotNetCoreCLI@2
-  inputs: 
+  inputs:
     command: 'pack'
     includesymbols: true
 ```
@@ -169,6 +170,7 @@ If you choose &#39;Use the build number&#39;, this will use the build number to 
     nugetConfigPath: '$(System.DefaultWorkingDirectory)/NuGet.config'
     externalEndpoints: $(externalFeedCredential)
 ```
+
 ## Test
 
 ### Run tests in your repository
@@ -188,8 +190,7 @@ Most `dotnet` commands, including `build`, `publish`, and `test` include an impl
 
 To fix this issue, add the `--no-restore` flag to the Arguments textbox.
 
-In addition, the `test` command does not recognize the `feedRestore` or `vstsFeed` arguments and feeds specified in this manner will not be included in the generated NuGet.config file when the implicit `restore` step runs.  It is recommended that an explicit `dotnet restore` step be used to restore packages.  The `restore` command respects the `feedRestore` and `vstsFeed` arguments.
-
+In addition, the `test` command does not recognize the `feedRestore` or `vstsFeed` arguments and feeds specified in this manner will not be included in the generated NuGet.config file when the implicit `restore` step runs. It is recommended that an explicit `dotnet restore` step be used to restore packages. The `restore` command respects the `feedRestore` and `vstsFeed` arguments.
 
 ### Why should I check in a NuGet.config?
 
@@ -204,7 +205,7 @@ However, for situations where a team of developers works on a large range of pro
 Azure DevOps hosted agents are configured with .NET Core 3.0, 2.1 and 2.2.
 CLI for .NET Core 3.0 has a different behavior while publishing projects using output folder argument. When publishing projects with the output folder argument (-o), the output folder is created in the root directory and not in the project file’s directory. Hence while publishing more than one projects, all the files are published to the same directory, which causes an issue.
 
-To resolve this issue, use the *Add project name to publish path* parameter (modifyOutputPath in YAML) in the .NET Core CLI task. This creates a sub folder with project file’s name, inside the output folder. Hence all your projects will be published under different sub-folder’s inside the main output folder.
+To resolve this issue, use the _Add project name to publish path_ parameter (modifyOutputPath in YAML) in the .NET Core CLI task. This creates a sub folder with project file’s name, inside the output folder. Hence all your projects will be published under different sub-folder’s inside the main output folder.
 
 ```YAML
 steps:

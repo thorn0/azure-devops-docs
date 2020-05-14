@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: ronai
 author: RoopeshNair
 ms.date: 08/24/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Provision deployment groups
@@ -18,7 +18,7 @@ monikerRange: '>= tfs-2018'
 [!INCLUDE [temp](../../includes/concept-rename-note.md)]
 ::: moniker-end
 
-A deployment group is a logical set of deployment target machines 
+A deployment group is a logical set of deployment target machines
 that have agents installed on each one. Deployment groups represent the physical environments;
 for example, "Dev", "Test", "UAT", and "Production". In effect, a
 deployment group is just another grouping of agents, much like an
@@ -32,16 +32,16 @@ of deployment tasks.
 
 Deployment groups:
 
-* Specify the security context and runtime
+- Specify the security context and runtime
   targets for the agents. As you create a deployment group, you
   add users and give them appropriate permissions to administer,
   manage, view, and use the group.
 
-* Let you view live logs for each server as a
+- Let you view live logs for each server as a
   deployment takes place, and download logs for all servers to
   track your deployments down to individual machines.
 
-* Enable you to use machine tags to limit deployment to specific
+- Enable you to use machine tags to limit deployment to specific
   sets of target servers.
 
 ## Create a deployment group
@@ -52,7 +52,7 @@ target servers, they appear in the **Deployment Groups** tab. The list indicates
 server is available, the tags you assigned to each server, and the latest
 deployment to each server.
 
-The tags you assign allow you to limit deployment to specific servers when 
+The tags you assign allow you to limit deployment to specific servers when
 the deployment group is used in a [Deployment group job](../../process/deployment-group-phases.md).
 Tags are each limited to 256 characters, but there is no limit to the number of tags you can use.
 You manage the security for a deployment group by
@@ -66,17 +66,17 @@ to be installed. You can do this using the script that is generated in the
 type of agent to suit the target operating system and platform; such as Windows
 and Linux.
 
-If the target machines are Azure VMs, you can quickly and easily prepare them 
+If the target machines are Azure VMs, you can quickly and easily prepare them
 by installing the **Azure Pipelines Agent** Azure VM extension on each of the VMs,
 or by using the **Azure Resource Group Deployment** task in your release pipeline
 to create a deployment group dynamically.
 
 You can force the agents on the target machines to be upgraded to the latest version
 without needing to redeploy them by choosing the **Upgrade targets** command on the shortcut
-menu for a deployment group.  
+menu for a deployment group.
 
 For more information, see [Provision agents for deployment groups](howto-provision-deployment-group-agents.md).
- 
+
 ## Monitor releases for deployment groups
 
 When release is executing, you see an entry in the live logs page
@@ -90,14 +90,14 @@ use the links in the **Releases** tab.
 Each deployment group is a member of a **deployment pool**, and you can share
 the deployment pool and groups across projects provided that:
 
-* The user sharing the deployment pool has [User permission](../../agents/pools-queues.md#security) for the pool containing the group.
-* The user sharing the deployment pool has permission to create a deployment group in the project where it is being shared.
-* The project does not already contain a deployment group that is a member of the same deployment pool.
+- The user sharing the deployment pool has [User permission](../../agents/pools-queues.md#security) for the pool containing the group.
+- The user sharing the deployment pool has permission to create a deployment group in the project where it is being shared.
+- The project does not already contain a deployment group that is a member of the same deployment pool.
 
 The tags you assign to each machine in the pool are scoped at project level,
 so you can specify a different tag for the same machine in each deployment group.
 
-### Add a deployment pool and group to another project 
+### Add a deployment pool and group to another project
 
 To manage a deployment pool, or to add an existing deployment pool and the groups it contains to another project,
 choose the **Manage** link in the **Agent Pool** section of the **Deployment Group** page.
@@ -118,10 +118,9 @@ will see the deployment group you added and you can assign project-specific mach
 
 ## Related topics
 
-* [Run on machine group job](../../process/deployment-group-phases.md)
-* [Deploy an agent on Windows](../../agents/v2-windows.md)
-* [Deploy an agent on macOS](../../agents/v2-osx.md)
-* [Deploy an agent on Linux](../../agents/v2-linux.md)
+- [Run on machine group job](../../process/deployment-group-phases.md)
+- [Deploy an agent on Windows](../../agents/v2-windows.md)
+- [Deploy an agent on macOS](../../agents/v2-osx.md)
+- [Deploy an agent on Linux](../../agents/v2-linux.md)
 
 [!INCLUDE [rm-help-support-shared](../../includes/rm-help-support-shared.md)]
-

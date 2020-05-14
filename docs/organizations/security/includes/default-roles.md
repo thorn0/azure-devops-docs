@@ -1,6 +1,5 @@
-
-Stakeholders have no role 
-Agent pools - no default roles 
+Stakeholders have no role
+Agent pools - no default roles
 Agent queues - Hosted - Contributors - User
 
 <table>
@@ -135,7 +134,3 @@ Agent queues - Hosted - Contributors - User
 </tr>
 </tbody>
 </table>
-
-
-
-

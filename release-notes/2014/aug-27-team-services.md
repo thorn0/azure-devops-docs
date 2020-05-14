@@ -21,13 +21,13 @@ Stakeholders have access to the project home page and most of the "work" related
 
 ![Stakeholder view of the project](media/8_27_02.png)
 
-*(click to zoom)*
+_(click to zoom)_
 
 This includes the ability to view the backlog, add and edit items, run work item queries and more.
 
 ![Stakeholder adding a project backlog item](media/8_27_03.png)
 
-*(click to zoom)*
+_(click to zoom)_
 
 I hope and expect that enabling this will eliminate a lot of the friction in enabling the entire organization to participate in projects. Learn more about what you can do with a [stakeholder license](/azure/devops/organizations/security/get-started-stakeholder?view=azure-devops).
 

@@ -13,18 +13,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `gitObjectType`: [GitObjectType](../../../TFS/VersionControl/Contracts/GitObjectType.md). Blob or tree
+- `gitObjectType`: [GitObjectType](../../../TFS/VersionControl/Contracts/GitObjectType.md). Blob or tree
 
-* `mode`: string. Mode represented as octal string
+- `mode`: string. Mode represented as octal string
 
-* `objectId`: string. SHA1 hash of git object
+- `objectId`: string. SHA1 hash of git object
 
-* `relativePath`: string. Path relative to parent tree object
+- `relativePath`: string. Path relative to parent tree object
 
-* `size`: number. Size of content
+- `size`: number. Size of content
 
-* `url`: string. url to retrieve tree or blob
-
+- `url`: string. url to retrieve tree or blob

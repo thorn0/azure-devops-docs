@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Understand lock types
 
@@ -20,7 +19,7 @@ You can use the lock command to temporarily prevent changes to a particular file
 
 ## Lock Types
 
-Team Foundation provides two types of locks: *check-in locks* and *check-out locks*.
+Team Foundation provides two types of locks: _check-in locks_ and _check-out locks_.
 
 ### Check-in lock
 
@@ -30,11 +29,11 @@ A check-in lock is less restrictive than a check-out lock. When you apply a chec
 
 In Visual Studio Team Foundation Server 2012, check-out locks are generally not effective because of local workspaces (see [Decide between using a local or a server workspace](decide-between-using-local-server-workspace.md)). Specifically, check-out locks are:
 
--   Not enforceable because other users might be using local workspaces.
+- Not enforceable because other users might be using local workspaces.
 
--   Not available if you are using a local workspace.
+- Not available if you are using a local workspace.
 
--   Disabled if a member of the Administrators security group of your project collection has enabled asynchronous checkout for your team's server workspaces.
+- Disabled if a member of the Administrators security group of your project collection has enabled asynchronous checkout for your team's server workspaces.
 
 A check-out lock prevents users who are using server workspaces from checking out and making changes to the locked item in their workspaces. You cannot apply a check-out lock to an item for which any [pending changes](develop-code-manage-pending-changes.md) exist, in any workspace other than your own.
 
@@ -61,8 +60,8 @@ You can unlock an item explicitly by using the unlock command or implicitly when
 
 #### Other Resources
 
- [Work with version control locks](work-version-control-locks.md) 
+[Work with version control locks](work-version-control-locks.md)
 
- [Create and work with workspaces](create-work-workspaces.md) 
+[Create and work with workspaces](create-work-workspaces.md)
 
- [Resolve Team Foundation Version Control conflicts](resolve-team-foundation-version-control-conflicts.md) 
+[Resolve Team Foundation Version Control conflicts](resolve-team-foundation-version-control-conflicts.md)

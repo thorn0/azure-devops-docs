@@ -1,8 +1,8 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Work Item Fields | REST API Reference for Team Foundation Server
-description: Work with work item fields programmatically using the REST APIs for Team Foundation Server. 
+description: Work with work item fields programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: A2365AB4-482A-46A5-A235-2D3C94C2ED96
 ms.topic: article
 ms.author: chcomley
@@ -24,12 +24,14 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/_apis/wit/fields?api-version={version}
 ```
 
-| Property  	| Type 		| Description 
-|:--------------|:----------|:----------------------------
+| Property | Type | Description |
+| :------- | :--- | :---------- |
+
+
 | URL
-| instance      | string    | TFS server name ({server:port}).
+| instance | string | TFS server name ({server:port}).
 | Query
-| api-version   | string    | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -7652,10 +7654,9 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/fields?api-version=1.0
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetReadonlyWorkItemFields method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/FieldsSample.cs#L40)
+- [C# (GetReadonlyWorkItemFields method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/FieldsSample.cs#L40)
 
 ## Get a work item field
 
@@ -7663,12 +7664,13 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/fields?api-version=1.0
 GET https://{instance}/DefaultCollection/_apis/wit/fields/{fieldName}?api-version={version}
 ```
 
-| Property  	| Type 		| Description 
-|:--------------|:----------|:----------------------------
-| instance      | string    | TFS server name ({server:port}).
-| fieldName     | string    | Reference name of the field
+| Property  | Type   | Description                      |
+| :-------- | :----- | :------------------------------- |
+| instance  | string | TFS server name ({server:port}). |
+| fieldName | string | Reference name of the field      |
+
 | Query
-| api-version   | string    | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -7710,7 +7712,6 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/fields/System.IterationPath?
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetFieldDetails method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/FieldsSample.cs#L40)
+- [C# (GetFieldDetails method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/FieldsSample.cs#L40)

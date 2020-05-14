@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # View file changes using annotate
 
@@ -32,48 +31,48 @@ To perform these procedures, you must have the **Read** permission set to **Allo
 
     Each annotation appears to the left of the text that was changed and displays:
 
-    -   Changeset number, or **Local** if you have pending changes in your local workspace. To get more information about the changeset, choose the changeset number.
+    - Changeset number, or **Local** if you have pending changes in your local workspace. To get more information about the changeset, choose the changeset number.
 
-    -   The name of the person who made the change.
+    - The name of the person who made the change.
 
-    -   Date.
+    - Date.
 
     When you move the pointer over an annotation, the following information appears:
 
-    -   **Path**: The path of the changeset.
+    - **Path**: The path of the changeset.
 
-    -   **Changeset**: The changeset number.
+    - **Changeset**: The changeset number.
 
-    -   **Owner**: The name of the person who made the change.
+    - **Owner**: The name of the person who made the change.
 
-    -   **Change**: The type of change.
+    - **Change**: The type of change.
 
-    -   **Date**: The date of the changeset.
+    - **Date**: The date of the changeset.
 
-    -   **Lines**: The line numbers where the changes were made.
+    - **Lines**: The line numbers where the changes were made.
 
-    -   **Comment**: The changeset check-in comment.
+    - **Comment**: The changeset check-in comment.
 
 3.  You can open the shortcut menu for an annotation, and then choose:
 
-    -   **Changeset Details** to display, in **Team Explorer** the **Changeset Details** page.
+    - **Changeset Details** to display, in **Team Explorer** the **Changeset Details** page.
 
-    -   **View History** to open the **History** window.
+    - **View History** to open the **History** window.
 
-    -   **Compare With Previous Version** to compare, in the [Diff window](compare-files.md), the version you are examining with the previous version.
+    - **Compare With Previous Version** to compare, in the [Diff window](compare-files.md), the version you are examining with the previous version.
 
-        If you have pending changes in your local workspace you can open the shortcut menu for the **Local** annotation information and choose **Compare With Workspace Version (\<server name\>)** to compare, in the [Diff window](compare-files.md), the version you are examining with the version you checked out from the server.
+      If you have pending changes in your local workspace you can open the shortcut menu for the **Local** annotation information and choose **Compare With Workspace Version (\<server name\>)** to compare, in the [Diff window](compare-files.md), the version you are examining with the version you checked out from the server.
 
-    -   **Annotate This Version** to open a new **Annotate** window that displays annotation information for the selected version and all earlier versions of the file.
+    - **Annotate This Version** to open a new **Annotate** window that displays annotation information for the selected version and all earlier versions of the file.
 
-    -   **Track Changeset**: to see to which branches the changeset has been merged. For more information, see [View where and when changesets have been merged](view-where-when-changesets-have-been-merged.md).
+    - **Track Changeset**: to see to which branches the changeset has been merged. For more information, see [View where and when changesets have been merged](view-where-when-changesets-have-been-merged.md).
 
-    -   **Get This Version** to download the selected version of the file to your local workspace.
+    - **Get This Version** to download the selected version of the file to your local workspace.
 
 ## See Also
 
 #### Other Resources
 
- [Compare files](compare-files.md) 
+[Compare files](compare-files.md)
 
- [Resolve Team Foundation Version Control conflicts](resolve-team-foundation-version-control-conflicts.md) 
+[Resolve Team Foundation Version Control conflicts](resolve-team-foundation-version-control-conflicts.md)

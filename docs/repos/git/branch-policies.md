@@ -3,12 +3,12 @@ title: Protect your Git branches with policies
 titleSuffix: Azure Repos
 description: Branch policies provide teams with the means to protect their important branches.
 ms.assetid: 5D76697E-16A0-4048-91D1-806FE24C92A3
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 11/15/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Improve code quality with branch policies
@@ -34,7 +34,7 @@ Policies enforce your team's code quality and change management standards.
 
 1. Configure your policies in the **Policies** page. See the following sections for descriptions of each policy type. Select **Save changes** to apply your new policy configuration.
 
-   ![Policies tab](media/branch-policies/save-policy-changes.png)  
+   ![Policies tab](media/branch-policies/save-policy-changes.png)
 
 <a name="require_reviewers"></a>
 
@@ -45,7 +45,7 @@ To require teams to review their changes before completing a pull request, selec
 
 The basic policy requires that a certain number of reviewers approve the code with no rejections.
 
-![Check the Require Code Reviews box](media/branch-policies/require-minimum-number-of-pr-reviews.png)  
+![Check the Require Code Reviews box](media/branch-policies/require-minimum-number-of-pr-reviews.png)
 
 - If **Requestors can approve their own changes** isn't selected, the creator of the pull request can still vote **Approve** on their pull request, but their vote won't count toward the **Minimum number of reviewers**.
 - If any reviewer rejects the changes, the pull request can't finish unless you select **Allow completion even if some reviewers vote to wait or reject**.
@@ -53,14 +53,14 @@ The basic policy requires that a certain number of reviewers approve the code wi
 
 When the required number of reviewers approve the pull request, it can finish.
 
->[!NOTE]
+> [!NOTE]
 > The **Requestors can approve their own changes** setting only applies to the **Require a minimum number of reviewers** policy. It doesn't affect other policies such as [Automatically include code reviewers](#automatically-include-code-reviewers). For example, Jamal Hartnett creates a pull request with the following policies configured:
 >
 > - **Minimum number of reviewers** requires two reviewers.
 > - **Requestors can approve their own changes** isn't set.
 > - The **Fabrikam Team** group is a required reviewer, and Jamal is a member of that group.
 >
->In this example, since Jamal is part of the **Fabrikam Team** group, his **Approve** vote satisfies the required reviewer policy. The pull request still requires two additional **Approve** votes to satisfy the **Minimum number of reviewers** policy, since his vote doesn't count toward that policy.
+> In this example, since Jamal is part of the **Fabrikam Team** group, his **Approve** vote satisfies the required reviewer policy. The pull request still requires two additional **Approve** votes to satisfy the **Minimum number of reviewers** policy, since his vote doesn't count toward that policy.
 
 ## Check for linked work items
 
@@ -69,7 +69,7 @@ Linking work items provides additional context for your changes and ensures that
 
 ![Require linked work items in your pull requests](media/branch-policies/work_item_linking.png)
 
-::: moniker range=">= tfs-2017" 
+::: moniker range=">= tfs-2017"
 
 ## Check for comment resolution
 
@@ -91,10 +91,10 @@ Select **Enforce a merge strategy** and pick an option to require that pull requ
 
 <a name="build"></a>
 <a name="require-the-pull-request-to-build"></a>
-  
-::: moniker-end 
- 
-::: moniker range=">= tfs-2015" 
+
+::: moniker-end
+
+::: moniker range=">= tfs-2015"
 
 ## Build validation
 
@@ -103,8 +103,8 @@ Build policies reduce breaks and keep your test results passing. Build policies 
 
 If a build validation policy is enabled, a new build is queued when either a new pull request is created, or if changes are pushed to an existing pull request targeting the branch. The build policy then evaluates the results of the build to determine whether the pull request can be completed.
 
->[!IMPORTANT]
->Before specifying a build validation policy, you must have a build definition. If you don't have one, see [Create a build definition](../../pipelines/apps/index.md) and choose the type of build that matches your project type.
+> [!IMPORTANT]
+> Before specifying a build validation policy, you must have a build definition. If you don't have one, see [Create a build definition](../../pipelines/apps/index.md) and choose the type of build that matches your project type.
 
 ![Add build policy](media/branch-policies/add-build-policy.png)
 
@@ -117,18 +117,18 @@ Choose **Add build policy** and configure your options in **Add build policy**.
 1. Select the **Policy requirement**. If you choose **Required**, builds must complete successfully to complete pull requests. Choose **Optional** to provide a notification of the build failure but still allow pull requests to complete.
 1. Set a build expiration to make sure that updates to your protected branch don't break changes for open pull requests.
 
-   - **Immediately when `branch name` is updated**: This option sets the build policy status in a pull request to *failed* when the protected branch is updated. Requeue a build to refresh the build status. This setting ensures that the changes in pull requests build successfully even as the protected branch changes. This option is best for teams that have important branches with a lower volume of changes. Teams working in busy development branches may find it disruptive to wait for a build to complete every time the protected branch is updated.
+   - **Immediately when `branch name` is updated**: This option sets the build policy status in a pull request to _failed_ when the protected branch is updated. Requeue a build to refresh the build status. This setting ensures that the changes in pull requests build successfully even as the protected branch changes. This option is best for teams that have important branches with a lower volume of changes. Teams working in busy development branches may find it disruptive to wait for a build to complete every time the protected branch is updated.
    - **After `n` hours if `branch name` has been updated**: This option expires the current policy status when the protected branch updates if the passing build is older than the threshold entered. This option is a compromise between always requiring a build when the protected branch updates and never requiring one. This choice is excellent for reducing the number of builds when your protected branch has frequent updates.
    - **Never**: Updates to the protected branch don't change the policy status. This value reduces the number of builds for your branch. It can cause problems when closing pull requests that haven't updated recently.
-  
+
 1. Enter an optional **Display name** for this build policy. This name identifies the policy on the **Branch policies** page. If you don't specify a display name, the policy uses the build definition name.
 1. Select **Save**.
 
 When the owner pushes changes that build successfully, the policy status is updated. If you have an **Immediately when `branch name` is updated** or **After `n` hours if `branch name` has been updated** build policy chosen, the policy status updates when the protected branch is updated if the most recent build is no longer valid.
 
-::: moniker-end 
+::: moniker-end
 
-::: moniker range="azure-devops" 
+::: moniker range="azure-devops"
 
 ## <a name="require-approval-from-external-services"></a>Require approval from additional services
 
@@ -138,7 +138,7 @@ External services can use the PR [Status API](https://go.microsoft.com/fwlink/?l
 
 For instructions on configuring this policy, see [Configure a branch policy for an external service](pr-status-policy.md).
 
-::: moniker-end 
+::: moniker-end
 
 ## Automatically include code reviewers
 
@@ -165,34 +165,34 @@ When the required reviewers approve the code, you can complete the pull request.
 
 ![Pull request status shows that reviewers have approved](media/branch-policies/RequiredReviewerApproved.png)
 
-::: moniker range=">= tfs-2015" 
+::: moniker range=">= tfs-2015"
 
 ## Bypass branch policies
 
->[!NOTE]
->There are several permissions that allow users to bypass branch policy. In TFS 2015 through TFS 2018 Update 2, the **Exempt from policy enforcement** permission allows users with this permission to perform the following actions:
+> [!NOTE]
+> There are several permissions that allow users to bypass branch policy. In TFS 2015 through TFS 2018 Update 2, the **Exempt from policy enforcement** permission allows users with this permission to perform the following actions:
 >
->- When completing a pull request, opt-in to override policies and complete a pull request even if the current set of branch policies is not satisfied.
->- Push directly to a branch even if that branch has branch policies set. Note that when a user with this permission makes a push that would override branch policy, the push automatically bypasses branch policy with no opt-in step or warning.
+> - When completing a pull request, opt-in to override policies and complete a pull request even if the current set of branch policies is not satisfied.
+> - Push directly to a branch even if that branch has branch policies set. Note that when a user with this permission makes a push that would override branch policy, the push automatically bypasses branch policy with no opt-in step or warning.
 >
->[In Azure DevOps Services](/azure/devops/release-notes/2018/jul-10-vsts#allow-bypassing-branch-policies-without-giving-up-push-protection), the **Exempt from policy enforcement** permission does not exist. Instead, there are two new permissions:
+> [In Azure DevOps Services](/azure/devops/release-notes/2018/jul-10-vsts#allow-bypassing-branch-policies-without-giving-up-push-protection), the **Exempt from policy enforcement** permission does not exist. Instead, there are two new permissions:
 >
->- **Bypass policies when completing pull requests**
->- **Bypass policies when pushing**
+> - **Bypass policies when completing pull requests**
+> - **Bypass policies when pushing**
 >
->Users that previously had **Exempt from policy enforcement** enabled now have the two new permissions enabled instead.
+> Users that previously had **Exempt from policy enforcement** enabled now have the two new permissions enabled instead.
 
-In some cases, you need to bypass policy requirements. Bypassing lets you push changes to the branch directly or complete a pull request even if branch policies aren't satisfied. You can grant a permission from the previous list to a user or group. You can scope this permission to an entire project, a repo, or a single branch. Manage this permission along with other [Git permissions](../../organizations/security/permissions.md#git-repository-permissions-object-level).  
+In some cases, you need to bypass policy requirements. Bypassing lets you push changes to the branch directly or complete a pull request even if branch policies aren't satisfied. You can grant a permission from the previous list to a user or group. You can scope this permission to an entire project, a repo, or a single branch. Manage this permission along with other [Git permissions](../../organizations/security/permissions.md#git-repository-permissions-object-level).
 
 ![Exempt from policy enforcement permission](media/branch-policies/PolicyExemptPermission.png)
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Use caution when granting these permissions, especially
 > at the repo and project level.
 
-::: moniker-end 
+::: moniker-end
 
-::: moniker range=">= tfs-2015" 
+::: moniker range=">= tfs-2015"
 
 ## Q & A
 
@@ -210,13 +210,14 @@ In some cases, you need to bypass policy requirements. Bypassing lets you push c
 
 No. After you set up a required branch policy, you can't directly push changes to the branch. Changes to the branch are only made through [pull requests](pull-requests-overview.md).
 
->[!NOTE]
->* If you have permissions that allow you to [bypass branch policies](#bypass-branch-policies) you can push directly to a branch after a required branch policy is configured.
->* If you configured optional branch policies, but no required branch policies, you can push changes directly to a branch.
+> [!NOTE]
+>
+> - If you have permissions that allow you to [bypass branch policies](#bypass-branch-policies) you can push directly to a branch after a required branch policy is configured.
+> - If you configured optional branch policies, but no required branch policies, you can push changes directly to a branch.
 
 #### What is auto-complete?
 
-When you  make a pull request into a branch with branch policies configured, it enables the **Set auto-complete** button for the pull request. Use this option to [automatically complete](pull-requests.md#complete-the-pull-request) if you don't expect any problems with your changes. Your pull request finished once it meets all policies.
+When you make a pull request into a branch with branch policies configured, it enables the **Set auto-complete** button for the pull request. Use this option to [automatically complete](pull-requests.md#complete-the-pull-request) if you don't expect any problems with your changes. Your pull request finished once it meets all policies.
 
 <a name="how_works"></a>
 
@@ -231,14 +232,14 @@ You can't use XAML build definitions in branch policies.
 
 #### What wildcard characters can you use for required code reviewers?
 
-Single asterisks (`*`) and match any number of characters, including both forward-slashes (`/`) and back-slashes (`\`).  Question marks (`?`) match any single character.  
+Single asterisks (`*`) and match any number of characters, including both forward-slashes (`/`) and back-slashes (`\`). Question marks (`?`) match any single character.
 
 Examples:
 
-* `*.sql` match all files with the *.sql* extension
-* `/ConsoleApplication/*` match all files under the folder named *ConsoleApplication*
-* `/.gitattributes` match the *.gitattributes* file in the root of the repo
-* `*/.gitignore` match any *.gitignore* file in the repo
+- `*.sql` match all files with the _.sql_ extension
+- `/ConsoleApplication/*` match all files under the folder named _ConsoleApplication_
+- `/.gitattributes` match the _.gitattributes_ file in the root of the repo
+- `*/.gitignore` match any _.gitignore_ file in the repo
 
 #### Are the required code reviewer paths case-sensitive?
 
@@ -246,7 +247,7 @@ No, branch policies aren't case-sensitive at this time.
 
 #### How can I configure multiple users as required reviewers, but only require that one of them approve?
 
-You can [add the users to a group](../../organizations/accounts/add-team-members.md), and then add the group as a reviewer.  Any member of the group can then approve for the group to meet the policy requirement.
+You can [add the users to a group](../../organizations/accounts/add-team-members.md), and then add the group as a reviewer. Any member of the group can then approve for the group to meet the policy requirement.
 
 #### I have the exempt from policy permission set, why am I still seeing policy failures in the pull request status?
 
@@ -256,4 +257,4 @@ The configured policies are still evaluated when you add changes to a pull reque
 
 Check out the [REST API documentation](https://go.microsoft.com/fwlink/?LinkId=526702) for more details.
 
-::: moniker-end 
+::: moniker-end

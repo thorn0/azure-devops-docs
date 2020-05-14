@@ -4,7 +4,7 @@ description: Use the pivot filter control to apply filtering on your list in you
 ms.assetid: 36F80097-4DB7-4C63-8E0E-8C031CF07FCE
 ms.technology: devops-ecosystem
 ms.topic: conceptual
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.author: chcomley
 author: chcomley
 ms.date: 10/31/2019
@@ -22,20 +22,20 @@ This page shows how to use a pivot filter control.
 
 This sample shows basic usage of a pivot filter. Please try to use html markup below since it picks up necessary styles from `hub-pivot` and `filters` classes.
 
-``` html
-  <div class="hub-pivot">
-    <div class="filters filter-container"></div>
-  </div>
-  
-  <div class="log"></div>
-```  
+```html
+<div class="hub-pivot">
+  <div class="filters filter-container"></div>
+</div>
 
-``` javascript
+<div class="log"></div>
+```
+
+```javascript
   import Controls = require("VSS/Controls");
   import Navigation = require("VSS/Controls/Navigation");
-  
+
   var container = $(".filter-container");
-  
+
   Controls.create(Navigation.PivotFilter, container, {
     behavior: "dropdown",
     text: "My Filter",
@@ -45,7 +45,7 @@ This sample shows basic usage of a pivot filter. Please try to use html markup b
       { id: "v-3", text: "Value 3", value: "v3" }
     ],
     change: function(item) {
-      var $log = $(".log"); 
+      var $log = $(".log");
       $log.html(`${$log.html()}<p>Filter changed to ${item.text} (${item.value})</p>`);
     }
   });

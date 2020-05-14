@@ -1,12 +1,12 @@
 ---
-title: Build and test Go projects 
+title: Build and test Go projects
 description: Build and test Go projects with Azure Pipelines & Azure DevOps
 ms.topic: quickstart
 ms.assetid: a72557df-6df4-4fb6-b437-be0730624e3c
 ms.reviewer: azooinmyluggage
 ms.custom: seodec18
 ms.date: 01/28/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Build and test Go projects
@@ -35,11 +35,11 @@ https://github.com/MicrosoftDocs/pipelines-go
 
 [!INCLUDE [include](includes/create-pipeline-before-template-selected.md)]
 
-> When the **Configure** tab appears, select **Go**. 
+> When the **Configure** tab appears, select **Go**.
 
 7. When your new pipeline appears, take a look at the YAML to see what it does. When you're ready, select **Save and run**.
 
-   > [!div class="mx-imgBorder"] 
+   > [!div class="mx-imgBorder"]
    > ![Save and run button in a new YAML pipeline](media/save-and-run-button-new-yaml-pipeline.png)
 
 8. You're prompted to commit a new _azure-pipelines.yml_ file to your repository. After you're happy with the message, select **Save and run** again.
@@ -54,7 +54,6 @@ https://github.com/MicrosoftDocs/pipelines-go
 
 See the sections below to learn some of the more common ways to customize your pipeline.
 
-
 > [!Tip]
 > To make changes to the YAML file as described in this topic, select the pipeline in **Pipelines** page, and then select **Edit** to open an editor for the `azure-pipelines.yml` file.
 
@@ -66,87 +65,86 @@ Update the following snippet in your `azure-pipelines.yml` file to select the ap
 
 ```yaml
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: "ubuntu-latest"
 ```
 
 Modern versions of Go are pre-installed on [Microsoft-hosted agents](../agents/hosted.md) in Azure Pipelines. For the exact versions of Go that are pre-installed, refer to [Microsoft-hosted agents](../agents/hosted.md#software).
 
 ## Set up Go
 
-
 #### [Go 1.11+](#tab/go-current)
 
-Starting with Go 1.11, you no longer need to define a `$GOPATH` environment, set up a workspace layout, or use the `dep` module. Dependency management is now built-in. 
+Starting with Go 1.11, you no longer need to define a `$GOPATH` environment, set up a workspace layout, or use the `dep` module. Dependency management is now built-in.
 
-This YAML implements the `go get` command to download Go packages and their dependencies. It then uses `go build` to generate the content that is published with `PublishBuildArtifacts@1` task. 
+This YAML implements the `go get` command to download Go packages and their dependencies. It then uses `go build` to generate the content that is published with `PublishBuildArtifacts@1` task.
 
 ```yaml
-trigger: 
- - master
+trigger:
+  - master
 
 pool:
-   vmImage: 'ubuntu-latest'
+  vmImage: "ubuntu-latest"
 
-steps: 
-- task: GoTool@0
-  inputs:
-    version: '1.13.5'
-- task: Go@0
-  inputs:
-    command: 'get'
-    arguments: '-d'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
-- task: Go@0
-  inputs:
-    command: 'build'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
-- task: CopyFiles@2
-  inputs:
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-- task: PublishBuildArtifacts@1
-  inputs:
-     artifactName: drop
+steps:
+  - task: GoTool@0
+    inputs:
+      version: "1.13.5"
+  - task: Go@0
+    inputs:
+      command: "get"
+      arguments: "-d"
+      workingDirectory: "$(System.DefaultWorkingDirectory)"
+  - task: Go@0
+    inputs:
+      command: "build"
+      workingDirectory: "$(System.DefaultWorkingDirectory)"
+  - task: CopyFiles@2
+    inputs:
+      TargetFolder: "$(Build.ArtifactStagingDirectory)"
+  - task: PublishBuildArtifacts@1
+    inputs:
+      artifactName: drop
 ```
 
 #### [Go < 1.11](#tab/go-older)
 
 As the Go documentation [describes](https://golang.org/doc/code.html#Workspaces), a Go workspace consists of a root directory to which the `$GOPATH` environment variable points. Within that directory are standard subdirectories:
 
-* `bin` to contain executable commands
-* `pkg` to contain compiled packages (`.a` files)
-* `src` to contain Go source files (`.go`, `.c`, `.g`, `.s`)
+- `bin` to contain executable commands
+- `pkg` to contain compiled packages (`.a` files)
+- `src` to contain Go source files (`.go`, `.c`, `.g`, `.s`)
 
 When an Azure Pipelines build fetches code from a remote repository, it places the code in the default working directory of the build. This doesn't match the expected structure of a Go workspace. To address this, add the following snippet to your `azure-pipelines.yml` file. Note: this script runs in bash on Linux and macOS agents, but must be modified for Windows.
 
 ```yaml
 variables:
-  GOBIN:  '$(GOPATH)/bin' # Go binaries path
-  GOROOT: '/usr/local/go1.13' # Go installation path
-  GOPATH: '$(system.defaultWorkingDirectory)/gopath' # Go workspace path
-  modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
+  GOBIN: "$(GOPATH)/bin" # Go binaries path
+  GOROOT: "/usr/local/go1.13" # Go installation path
+  GOPATH: "$(system.defaultWorkingDirectory)/gopath" # Go workspace path
+  modulePath: "$(GOPATH)/src/github.com/$(build.repository.name)" # Path to the module's code
 
 steps:
-- script: |
-    mkdir -p '$(GOBIN)'
-    mkdir -p '$(GOPATH)/pkg'
-    mkdir -p '$(modulePath)'
-    shopt -s extglob
-    shopt -s dotglob
-    mv !(gopath) '$(modulePath)'
-    echo '##vso[task.prependpath]$(GOBIN)'
-    echo '##vso[task.prependpath]$(GOROOT)/bin'
-  displayName: 'Set up the Go workspace'
+  - script: |
+      mkdir -p '$(GOBIN)'
+      mkdir -p '$(GOPATH)/pkg'
+      mkdir -p '$(modulePath)'
+      shopt -s extglob
+      shopt -s dotglob
+      mv !(gopath) '$(modulePath)'
+      echo '##vso[task.prependpath]$(GOBIN)'
+      echo '##vso[task.prependpath]$(GOROOT)/bin'
+    displayName: "Set up the Go workspace"
 
-- script: |
-    go version
-    go get -v -t -d ./...
-    if [ -f Gopkg.toml ]; then
-        curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-        dep ensure
-    fi
-    go build -v .
-  workingDirectory: '$(modulePath)'
-  displayName: 'Get dependencies, then build'
+  - script: |
+      go version
+      go get -v -t -d ./...
+      if [ -f Gopkg.toml ]; then
+          curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+          dep ensure
+      fi
+      go build -v .
+    workingDirectory: "$(modulePath)"
+    displayName: "Get dependencies, then build"
 ```
 
 If your code is not in GitHub, change the `modulePath` variable's use of `github.com` to an appropriate value for your module.
@@ -167,8 +165,8 @@ Use `go get` to download the source code for a Go project or to install a tool i
 
 ```yaml
 - script: go get -v -t -d ./...
-  workingDirectory: '$(modulePath)'
-  displayName: 'go get dependencies'
+  workingDirectory: "$(modulePath)"
+  displayName: "go get dependencies"
 ```
 
 #### dep ensure
@@ -181,11 +179,11 @@ Use `dep ensure` if your project uses dep to download dependencies imported in y
         curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
         dep ensure
     fi
-  workingDirectory: '$(modulePath)'
-  displayName: 'Download dep and run `dep ensure`'
+  workingDirectory: "$(modulePath)"
+  displayName: "Download dep and run `dep ensure`"
 ```
 
---- 
+---
 
 ## Build
 
@@ -194,8 +192,8 @@ Use `go build` to build your Go project. Add the following snippet to your `azur
 ```yaml
 - task: Go@0
   inputs:
-    command: 'build'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
+    command: "build"
+    workingDirectory: "$(System.DefaultWorkingDirectory)"
 ```
 
 ## Test
@@ -205,9 +203,9 @@ Use `go test` to test your go module and its subdirectories (`./...`). Add the f
 ```yaml
 - task: Go@0
   inputs:
-    command: 'test'
-    arguments: '-v'
-    workingDirectory: '$(modulePath)'
+    command: "test"
+    arguments: "-v"
+    workingDirectory: "$(modulePath)"
 ```
 
 ## Build an image and push to container registry
@@ -216,4 +214,4 @@ For your Go app, you can also [build an image](containers/build-image.md) and [p
 
 ## Related extensions
 
-[Go extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go) (Microsoft)  
+[Go extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go) (Microsoft)

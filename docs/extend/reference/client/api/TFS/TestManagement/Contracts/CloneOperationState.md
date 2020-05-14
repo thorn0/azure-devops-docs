@@ -16,7 +16,7 @@ Module path: `TFS/TestManagement/Contracts`
 
 ### Values
 
-* `Failed` 
-* `InProgress` 
-* `Queued` 
-* `Succeeded` 
+- `Failed`
+- `InProgress`
+- `Queued`
+- `Succeeded`

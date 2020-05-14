@@ -6,7 +6,7 @@ ms.technology: devops-ecosystem
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -17,7 +17,8 @@ See [Use grid](../../../develop/ui-controls/grido.md) for basic usage and advanc
 ## Create a grid
 
 ### TypeScript
-``` javascript
+
+```javascript
 import Controls = require("VSS/Controls");
 import Grids = require("VSS/Controls/Grids");
 
@@ -26,10 +27,11 @@ var grid = Controls.create<Grids.Grid, Grids.IGridOptions>(Grids.Grid, container
 ```
 
 ### JavaScript
-``` javascript
-require(["VSS/Controls", "VSS/Controls/Grids"], function(Controls, Grids) {
-    // Create the grid in a container element
-    var grid = Controls.create(Grids.Grid, container, options);
+
+```javascript
+require(["VSS/Controls", "VSS/Controls/Grids"], function (Controls, Grids) {
+  // Create the grid in a container element
+  var grid = Controls.create(Grids.Grid, container, options);
 });
 ```
 
@@ -39,7 +41,7 @@ require(["VSS/Controls", "VSS/Controls/Grids"], function(Controls, Grids) {
 
 #### Q: How is the performance with huge data?
 
-A: Grid uses UI virtualization which performs great on tens of thousands of rows. 
+A: Grid uses UI virtualization which performs great on tens of thousands of rows.
 
 #### Q: Can I have variable height rows?
 

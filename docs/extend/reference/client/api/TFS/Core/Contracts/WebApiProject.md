@@ -18,9 +18,8 @@ Extends: [TeamProjectReference](../../../TFS/DistributedTask/Contracts/TeamProje
 
 ### Members
 
-* `capabilities`: {[key: string]: {[key: string]: string}}. Set of capabilities this project has
+- `capabilities`: {[key: string]: {[key: string]: string}}. Set of capabilities this project has
 
-* `collection`: [WebApiProjectCollectionRef](../../../TFS/Core/Contracts/WebApiProjectCollectionRef.md). Reference to collection which contains this project
+- `collection`: [WebApiProjectCollectionRef](../../../TFS/Core/Contracts/WebApiProjectCollectionRef.md). Reference to collection which contains this project
 
-* `defaultTeam`: [WebApiTeamRef](../../../TFS/Core/Contracts/WebApiTeamRef.md). Default team for this project
-
+- `defaultTeam`: [WebApiTeamRef](../../../TFS/Core/Contracts/WebApiTeamRef.md). Default team for this project

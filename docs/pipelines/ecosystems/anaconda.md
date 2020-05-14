@@ -23,9 +23,9 @@ Follow these instructions to set up a pipeline for a sample Python app with Anac
 
 1. The code in the following repository is a simple Python app. To get started, fork this repo to your GitHub account.
 
-    ```
-    https://github.com/MicrosoftDocs/pipelines-anaconda
-    ```
+   ```
+   https://github.com/MicrosoftDocs/pipelines-anaconda
+   ```
 
 1. Sign in to your Azure DevOps organization and navigate to your project.
 
@@ -109,7 +109,6 @@ The `conda create` command will create an environment with the arguments you pas
 > To add specific conda channels, you need to add an extra line for conda config:
 > `conda config --add channels conda-forge`
 
-
 ---
 
 ### From YAML
@@ -176,7 +175,7 @@ The following YAML installs the `scipy` package in the conda environment named `
 
 - task: PublishTestResults@2
   inputs:
-    testResultsFiles: 'junit/*.xml'
+    testResultsFiles: "junit/*.xml"
   condition: succeededOrFailed()
 ```
 
@@ -190,7 +189,7 @@ The following YAML installs the `scipy` package in the conda environment named `
 
 - task: PublishTestResults@2
   inputs:
-    testResultsFiles: 'junit/*.xml'
+    testResultsFiles: "junit/*.xml"
   condition: succeededOrFailed()
 ```
 
@@ -204,7 +203,7 @@ The following YAML installs the `scipy` package in the conda environment named `
 
 - task: PublishTestResults@2
   inputs:
-    testResultsFiles: 'junit/*.xml'
+    testResultsFiles: "junit/*.xml"
   condition: succeededOrFailed()
 ```
 
@@ -213,15 +212,19 @@ The following YAML installs the `scipy` package in the conda environment named `
 ## FAQs
 
 ### Why am I getting a "Permission denied" error?
+
 On Hosted macOS, the agent user doesn't have ownership of the directory where Miniconda is installed.
 For a fix, see the "Hosted macOS" tab under [Add conda to your system path](#add-conda-to-your-system-path).
 
 ### Why is my build hanging on a `conda create` or `conda install` step?
+
 If you forget to pass `--yes`, conda will stop and wait for user interaction.
 
 ### Why is my script on Windows stopping after it activates the environment?
+
 On Windows, `activate` is a Batch script. You must use the [`call`](https://docs.microsoft.com/windows-server/administration/windows-commands/call) command to resume running your script after activating.
 See examples of using `call` [above](#run-pipeline-steps-in-an-anaconda-environment).
 
 ### How can I run my tests with multiple versions of Python?
+
 See [Build Python apps in Azure Pipelines](./python.md).

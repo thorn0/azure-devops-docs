@@ -14,16 +14,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `_links`: any. Gets or sets the reference links of the Git media object.
+- `_links`: any. Gets or sets the reference links of the Git media object.
 
-* `id`: string. Gets or sets the Git media object identifier. This property duplicates the Oid property, but is required by the Azure DevOps Services REST specification.
+- `id`: string. Gets or sets the Git media object identifier. This property duplicates the Oid property, but is required by the Azure DevOps Services REST specification.
 
-* `oid`: string. Gets or sets the Git media object identifier. This property exists for adherence to the GitHub Git Media contract.
+- `oid`: string. Gets or sets the Git media object identifier. This property exists for adherence to the GitHub Git Media contract.
 
-* `size`: number. Gets or sets the size of the Git media object in bytes. This property exists for adherence to the GitHub Git Media contract.
+- `size`: number. Gets or sets the size of the Git media object in bytes. This property exists for adherence to the GitHub Git Media contract.
 
-* `url`: string. Gets or sets the URL for the Git media object.
-
+- `url`: string. Gets or sets the URL for the Git media object.

@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `deployment`: [BuildSummary](./BuildSummary.md). 
+- `deployment`: [BuildSummary](./BuildSummary.md).
 
-* `sourceBuild`: [ShallowReference](./ShallowReference.md). 
-
+- `sourceBuild`: [ShallowReference](./ShallowReference.md).

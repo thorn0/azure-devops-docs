@@ -13,20 +13,18 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `context`: [GitStatusContext](../../../TFS/VersionControl/Contracts/GitStatusContext.md). 
+- `context`: [GitStatusContext](../../../TFS/VersionControl/Contracts/GitStatusContext.md).
 
-* `createdBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `createdBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `creationDate`: Date. 
+- `creationDate`: Date.
 
-* `description`: string. 
+- `description`: string.
 
-* `state`: [GitStatusState](../../../TFS/VersionControl/Contracts/GitStatusState.md). 
+- `state`: [GitStatusState](../../../TFS/VersionControl/Contracts/GitStatusState.md).
 
-* `targetUrl`: string. 
-
+- `targetUrl`: string.

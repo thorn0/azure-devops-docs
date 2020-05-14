@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `agent`: [TaskAgentReference](../../../TFS/DistributedTask/Contracts/TaskAgentReference.md). 
+- `agent`: [TaskAgentReference](../../../TFS/DistributedTask/Contracts/TaskAgentReference.md).
 
-* `ownerName`: string. 
+- `ownerName`: string.
 
-* `sessionId`: string. 
+- `sessionId`: string.
 
-* `systemCapabilities`: {[key: string]: string}. 
-
+- `systemCapabilities`: {[key: string]: string}.

@@ -17,13 +17,12 @@ Extends: [ItemModel](../../../TFS/VersionControl/Contracts/ItemModel.md)
 
 ### Members
 
-* `commitId`: string. SHA1 of commit item was fetched at
+- `commitId`: string. SHA1 of commit item was fetched at
 
-* `gitObjectType`: [GitObjectType](../../../TFS/VersionControl/Contracts/GitObjectType.md). Type of object (Commit, Tree, Blob, Tag, ...)
+- `gitObjectType`: [GitObjectType](../../../TFS/VersionControl/Contracts/GitObjectType.md). Type of object (Commit, Tree, Blob, Tag, ...)
 
-* `latestProcessedChange`: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md). Shallow ref to commit that last changed this item Only populated if latestProcessedChange is requested May not be accurate if latest change is not yet cached
+- `latestProcessedChange`: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md). Shallow ref to commit that last changed this item Only populated if latestProcessedChange is requested May not be accurate if latest change is not yet cached
 
-* `objectId`: string. Git object ID
+- `objectId`: string. Git object ID
 
-* `originalObjectId`: string. Git object ID
-
+- `originalObjectId`: string. Git object ID

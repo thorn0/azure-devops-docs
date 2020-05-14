@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Core/Contracts`
 
-
 ### Members
 
-* `project`: [ProjectInfo](../../../TFS/Core/Contracts/ProjectInfo.md). 
+- `project`: [ProjectInfo](../../../TFS/Core/Contracts/ProjectInfo.md).
 
-* `projectChangeType`: [ProjectChangeType](../../../TFS/Core/Contracts/ProjectChangeType.md). 
-
+- `projectChangeType`: [ProjectChangeType](../../../TFS/Core/Contracts/ProjectChangeType.md).

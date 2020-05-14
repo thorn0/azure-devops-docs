@@ -1,13 +1,13 @@
 ---
 title: Configure for UI testing
-description: Continuous testing. Things to consider when running UI tests and FAQ. 
+description: Continuous testing. Things to consider when running UI tests and FAQ.
 ms.assetid: 1B7C890E-FB67-4BEF-A48E-20C9453BD54A
-ms.topic: conceptual 
+ms.topic: conceptual
 ms.custom: "continuous-test, seodec18"
 ms.author: pbora
 author: pboraMSFT
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # UI testing considerations
@@ -16,11 +16,11 @@ monikerRange: '>= tfs-2017'
 
 When running automated tests in the CI/CD pipeline, you may need a special configuration
 in order to run UI tests such as Selenium, Appium or Coded UI tests. This topic describes
-the typical considerations for running UI tests. 
+the typical considerations for running UI tests.
 
 ::: moniker range="<= tfs-2018"
 
-> [!NOTE] 
+> [!NOTE]
 > Applies only to TFS 2017 Update 1 and later.
 
 [!INCLUDE [temp](../includes/concept-rename-note.md)]
@@ -29,7 +29,7 @@ the typical considerations for running UI tests.
 
 ## Prerequisites
 
-Familiarize yourself with [agents](../agents/agents.md) and [deploying an agent on Windows](../agents/v2-windows.md). 
+Familiarize yourself with [agents](../agents/agents.md) and [deploying an agent on Windows](../agents/v2-windows.md).
 
 ## Headless mode or visible UI mode?
 
@@ -40,17 +40,16 @@ When running Selenium tests for a web app, you can launch the browser in two way
    it is useful for running automated tests in an unattended manner in a CI/CD pipeline.
    [Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
    and [Firefox](https://developer.mozilla.org/docs/Mozilla/Firefox/Headless_mode) browsers can be run in headless mode.
-	
    This mode generally consumes less resources on the machine because the UI is not
    rendered and tests run faster. As a result, potentially more tests can be run in
-   parallel on the same machine to reduce the total test execution time. 
+   parallel on the same machine to reduce the total test execution time.
 
    [Screenshots can be captured](#capture-screenshot) in this mode and used for troubleshooting failures.
 
-   > [!NOTE] 
+   > [!NOTE]
    > Microsoft Edge browser currently cannot be run in the headless mode.
    > To follow developments in this space, see this user voice item.
-	
+
 1. **Visible UI mode**. In this mode, the browser runs normally and the UI components are visible.
    When running tests in this mode on Windows, [special configuration of the agents](#visible-ui-mode) is required.
 
@@ -100,12 +99,12 @@ If you use Remote Desktop to access the computer on which an agent is running
 with auto-logon, simply disconnecting the Remote Desktop causes the computer
 to be locked and any UI tests that run on this agent may fail.
 To avoid this, use the [tscon](https://docs.microsoft.com/windows-server/administration/windows-commands/tscon)
-command on the remote computer to disconnect from Remote Desktop. For example: 
+command on the remote computer to disconnect from Remote Desktop. For example:
 
 `%windir%\System32\tscon.exe 1 /dest:console`
 
 In this example, the number '1' is the ID of the remote desktop session.
-This number may change between remote sessions, but can be viewed in Task Manager. 
+This number may change between remote sessions, but can be viewed in Task Manager.
 Alternatively, to automate finding the current session ID, create a batch file
 containing the following code:
 
@@ -118,7 +117,7 @@ for /f "skip=1 tokens=3" %%s in ('query user %USERNAME%') do (
 Save the batch file and create a desktop shortcut to it, then change the shortcut properties to 'Run as administrator'.
 Running the batch file from this shortcut disconnects from the remote desktop but preserves the UI session and allows UI tests to run.
 
-## Provisioning agents in Azure VMs for UI testing 
+## Provisioning agents in Azure VMs for UI testing
 
 If you are provisioning virtual machines (VMs) on Azure, agent configuration for UI testing is available
 through the [Agent artifact for DevTest Labs](https://github.com/Azure/azure-devtestlab/tree/master/Artifacts/windows-vsts-build-agent).
@@ -145,7 +144,7 @@ the **tscon** command as described above.
 
 When you run UI tests in an unattended manner, capturing diagnostic data such as
 [screenshots](#capture-screenshot) or [video](#capture-video) is useful for discovering the state
-of the application when the failure was encountered. 
+of the application when the failure was encountered.
 
 <a name="capture-screenshot"></a>
 
@@ -153,7 +152,7 @@ of the application when the failure was encountered.
 
 Most UI testing frameworks provide the ability to capture screenshots.
 The screenshots collected are available as an attachment to the test results
-when these results are published to the server. 
+when these results are published to the server.
 
 If you use the [Visual Studio test task](../tasks/test/vstest.md) to run tests,
 captured screenshots must be added as a result file in order to be available
@@ -176,17 +175,17 @@ Use the `TestContext.AddTestAttachment()` method available in NUnit 3.7 or highe
 If you use the [Publish Test Results task](../tasks/test/publish-test-results.md)
 to publish results, test result attachments can only be published if you are using
 the VSTest (TRX) results format or the [NUnit 3.0 results](https://github.com/nunit/docs/wiki/Test-Result-XML-Format)
-format. 
+format.
 
 Result attachments cannot be published if you use JUnit or xUnit test results. This is because these test result formats do not have a formal definition for attachments in the results schema. You can use one of the below approaches to publish test attachments instead.
 
-* If you are running tests in the build (CI) pipeline, you can use the
+- If you are running tests in the build (CI) pipeline, you can use the
   [Copy and Publish Build Artifacts](../tasks/utility/copy-and-publish-build-artifacts.md) task to publish any additional files created in your tests.
-  These will appear in the **Artifacts** page of your build summary. 
+  These will appear in the **Artifacts** page of your build summary.
 
-* Use the REST APIs to publish the necessary attachments. Code samples can be found
+- Use the REST APIs to publish the necessary attachments. Code samples can be found
   in [this GitHub repository](https://github.com/ManojBableshwar/VstsTestRestApiSamples/blob/master/PublishResultsFromCsvWithAttachments/PublishResultsFromCsvWithAttachments.cs).
-  
+
 <a name="capture-video"></a>
 
 ### Capture video

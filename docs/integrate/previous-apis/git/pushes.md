@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Git Pushes | REST API Reference for Team Foundation Server
 description: Work with Git pushes programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 20422F1A-30A6-405F-AAE2-BABDA6371E40
@@ -20,28 +20,29 @@ ms.date: 08/04/2016
 
 There are [code samples](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/Git/PushesSample.cs) available for this endpoint.
 
-
 ## Get a list of pushes
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pushes?api-version={version}[&fromDate={dateTime}&toDate={dateTime}&pusherId={guid}&$skip={integer}&$top={integer}]
 ```
 
-| Parameter  | Type     | Default | Notes
-|:-----------|:---------|:--------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance   | string   |         | TFS server name ({server:port}).
-| project    | string   |         | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository | string   |         | ID or name of the [repository](./repositories.md).
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | | ID or name of the [repository](./repositories.md).
 | Query
-| api-version| string   |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| fromDate   | [DateTime](https://msdn.microsoft.com/library/az4se3k1.aspx) |         | Start date to search from.
-| toDate     | [DateTime](https://msdn.microsoft.com/library/az4se3k1.aspx) |         | End date to search to.
-| pusherId   | guid     |         | Identity of the person who submitted the push.
-| refName    | string   |         | Branch name to consider.
-| includeRefUpdates| bool	| false		| If `true`, include the list of refs that were updated by the push.
+| api-version| string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| fromDate | [DateTime](https://msdn.microsoft.com/library/az4se3k1.aspx) | | Start date to search from.
+| toDate | [DateTime](https://msdn.microsoft.com/library/az4se3k1.aspx) | | End date to search to.
+| pusherId | guid | | Identity of the person who submitted the push.
+| refName | string | | Branch name to consider.
+| includeRefUpdates| bool | false | If `true`, include the list of refs that were updated by the push.
 | $skip      | integer  | 0       | Number of pushes to skip.
-| $top       | integer  | 100     | Number of pushes to return.
+| $top | integer | 100 | Number of pushes to return.
 
 [!INCLUDE [ID_vs_Name](_data/id_or_name.md)]
 
@@ -613,7 +614,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ### In a date range
 
 #### Sample request
@@ -706,7 +706,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
   ]
 }
 ```
-
 
 ### By who submitted the pushes
 
@@ -801,7 +800,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ### A page at a time
 
 #### Sample request
@@ -869,7 +867,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
   ]
 }
 ```
-
 
 ### For a particular branch, including ref updates
 
@@ -953,24 +950,24 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
-
 ## Get a push
 
 ```
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pushes/{pushId}?api-version={version}[&includeRefUpdates={bool}]
 ```
 
-| Parameter         | Type     | Default | Notes
-|:------------------|:---------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance          | string   |         | TFS server name ({server:port}).
-| project           | string   |         | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository        | string   |         | ID of the [repository](./repositories.md).
-| pushId            | integer  |         | ID of the push.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | | ID of the [repository](./repositories.md).
+| pushId | integer | | ID of the push.
 | Query
-| api-version       | string   |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| includeRefUpdates | bool     | false   | If `true`, include the list of refs that were updated by the push.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| includeRefUpdates | bool | false | If `true`, include the list of refs that were updated by the push.
 
 ### Just the push
 
@@ -1012,8 +1009,8 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ### With references
+
 <a name="withreferences" />
 
 Include the [references](./refs.md) that were updated with the push.
@@ -1067,22 +1064,23 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ## Create a push
 
 Use this API to add, edit, rename, move, and delete files in a Git repository.
 You can either make changes in an existing branch or create a new branch.
 Each new push is limited to 1 commit, but this commit can contain 1 or more changes.
 
-| Parameter         | Type     | Default | Notes
-|:------------------|:---------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance          | string   |         | TFS server name ({server:port}).
-| project           | string   |         | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository        | string   |         | ID of the [repository](./repositories.md).
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | | ID of the [repository](./repositories.md).
 | Body
-| refUpdates        | array    |         | The name of the branch to update or create with the new commit. ```name```: the name of the new or existing branch (value should start with ```refs/heads```). ```oldObjectId```: SHA1 of the commit this new commit is based on (i.e. the previous HEAD for existing branches). This value should be omitted when a new branch is specified by ```name```. 
-| commits           | array    |         | Commit to create. Must be an array of 1 item. See examples below.
+| refUpdates | array | | The name of the branch to update or create with the new commit. `name`: the name of the new or existing branch (value should start with `refs/heads`). `oldObjectId`: SHA1 of the commit this new commit is based on (i.e. the previous HEAD for existing branches). This value should be omitted when a new branch is specified by `name`.
+| commits | array | | Commit to create. Must be an array of 1 item. See examples below.
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pushes?api-version={version}
@@ -1095,6 +1093,7 @@ POST https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/pushes?api-version=2.0-preview
 ```
+
 ```json
 {
   "refUpdates": [
@@ -1184,7 +1183,6 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 }
 ```
 
-
 ### Add a text file
 
 #### Sample request
@@ -1192,6 +1190,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/pushes?api-version=2.0-preview
 ```
+
 ```json
 {
   "refUpdates": [
@@ -1239,9 +1238,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
         "date": "2014-12-16T20:41:49Z"
       },
       "comment": "Added task markdown file.\n",
-      "parents": [
-        "8b67126d2500e28c771f82c9ddc292679978197c"
-      ],
+      "parents": ["8b67126d2500e28c771f82c9ddc292679978197c"],
       "url": "https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/commits/1380164a8118686087e38ce91f36b24b58c2df02"
     }
   ],
@@ -1283,16 +1280,16 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 }
 ```
 
-
 ### Add a binary file
 
-*Keep in mind that [Git isn't designed to store large or frequently-changing binaries](https://visualstudio.com/docs/repos/git/manage-large-files).*
+_Keep in mind that [Git isn't designed to store large or frequently-changing binaries](https://visualstudio.com/docs/repos/git/manage-large-files)._
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/pushes?api-version=2.0-preview
 ```
+
 ```json
 {
   "refUpdates": [
@@ -1340,9 +1337,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
         "date": "2014-12-16T20:41:50Z"
       },
       "comment": "Added new image file.\n",
-      "parents": [
-        "1380164a8118686087e38ce91f36b24b58c2df02"
-      ],
+      "parents": ["1380164a8118686087e38ce91f36b24b58c2df02"],
       "url": "https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/commits/fd1062428e0567cfbfcc28ac59d4bea077ce81c1"
     }
   ],
@@ -1384,7 +1379,6 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 }
 ```
 
-
 ### Update a file
 
 #### Sample request
@@ -1392,6 +1386,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/pushes?api-version=2.0-preview
 ```
+
 ```json
 {
   "refUpdates": [
@@ -1439,9 +1434,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
         "date": "2014-12-16T20:41:50Z"
       },
       "comment": "Added a few more items to the task list.\n",
-      "parents": [
-        "fd1062428e0567cfbfcc28ac59d4bea077ce81c1"
-      ],
+      "parents": ["fd1062428e0567cfbfcc28ac59d4bea077ce81c1"],
       "url": "https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/commits/fef9b2407969c5921a6ef4f7771a919e1a85de19"
     }
   ],
@@ -1483,7 +1476,6 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 }
 ```
 
-
 ### Delete a file
 
 #### Sample request
@@ -1491,6 +1483,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/pushes?api-version=2.0-preview
 ```
+
 ```json
 {
   "refUpdates": [
@@ -1534,9 +1527,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
         "date": "2014-12-16T20:41:51Z"
       },
       "comment": "Removed default image file.\n",
-      "parents": [
-        "fef9b2407969c5921a6ef4f7771a919e1a85de19"
-      ],
+      "parents": ["fef9b2407969c5921a6ef4f7771a919e1a85de19"],
       "url": "https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/commits/7f4fa8e454c196078e1ffca5cd6934515e605c96"
     }
   ],
@@ -1578,7 +1569,6 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 }
 ```
 
-
 ### Rename a file
 
 #### Sample request
@@ -1586,6 +1576,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/pushes?api-version=2.0-preview
 ```
+
 ```json
 {
   "refUpdates": [
@@ -1630,9 +1621,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
         "date": "2014-12-16T20:41:52Z"
       },
       "comment": "Renaming tasks.md to activetasks.md\n",
-      "parents": [
-        "7f4fa8e454c196078e1ffca5cd6934515e605c96"
-      ],
+      "parents": ["7f4fa8e454c196078e1ffca5cd6934515e605c96"],
       "url": "https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/commits/6e3c1f07d12eaf805a16db1352771816148c24b5"
     }
   ],
@@ -1674,7 +1663,6 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 }
 ```
 
-
 ### Move a file
 
 #### Sample request
@@ -1682,6 +1670,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/pushes?api-version=2.0-preview
 ```
+
 ```json
 {
   "refUpdates": [
@@ -1726,9 +1715,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
         "date": "2014-12-16T20:41:53Z"
       },
       "comment": "Moving activetasks.md to a new folder.\n",
-      "parents": [
-        "6e3c1f07d12eaf805a16db1352771816148c24b5"
-      ],
+      "parents": ["6e3c1f07d12eaf805a16db1352771816148c24b5"],
       "url": "https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/commits/b92a68a4cd54506d0d8e264ddddbfe5076dca910"
     }
   ],
@@ -1770,7 +1757,6 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 }
 ```
 
-
 ### Update a file in a new branch
 
 #### Sample request
@@ -1778,6 +1764,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/pushes?api-version=2.0-preview
 ```
+
 ```json
 {
   "refUpdates": [
@@ -1825,9 +1812,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
         "date": "2014-12-16T20:41:54Z"
       },
       "comment": "Updating active tasks, but saving in a new branch.\n",
-      "parents": [
-        "b92a68a4cd54506d0d8e264ddddbfe5076dca910"
-      ],
+      "parents": ["b92a68a4cd54506d0d8e264ddddbfe5076dca910"],
       "url": "https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/commits/bee67802b97da2a274df88855065b110f232973f"
     }
   ],
@@ -1869,8 +1854,6 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 }
 ```
 
-
-
 ### Multiple changes
 
 #### Sample request
@@ -1878,6 +1861,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/pushes?api-version=2.0-preview
 ```
+
 ```json
 {
   "refUpdates": [
@@ -1945,9 +1929,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
         "date": "2014-12-16T20:41:54Z"
       },
       "comment": "Updating active tasks and adding a few new files.\n",
-      "parents": [
-        "b92a68a4cd54506d0d8e264ddddbfe5076dca910"
-      ],
+      "parents": ["b92a68a4cd54506d0d8e264ddddbfe5076dca910"],
       "url": "https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-4633-9bb2-b5ac74855a46/commits/2b269bd10e6bd25ec459a0344e8641db395b3219"
     }
   ],
@@ -1988,5 +1970,3 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/8ee9091d-0f54-
   }
 }
 ```
-
-

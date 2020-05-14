@@ -1,72 +1,69 @@
 ---
 title: Implement Scrum, track work in sprints
-titleSuffix: Azure Boards 
-description: Implement Scrum, track work, monitor progress and trends in Azure Boards, Azure DevOps, & Team Foundation Server  
+titleSuffix: Azure Boards
+description: Implement Scrum, track work, monitor progress and trends in Azure Boards, Azure DevOps, & Team Foundation Server
 ms.custom: boards-sprints
 ms.technology: devops-agile
-ms.assetid:  
+ms.assetid:
 ms.author: kaelli
 author: KathrynEE
 ms.topic: overview
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 04/23/2020
 ---
 
-# About Sprints, Scrum and project management 
+# About Sprints, Scrum and project management
 
-[!INCLUDE [temp](../includes/version-vsts-tfs-all-versions.md)] 
+[!INCLUDE [temp](../includes/version-vsts-tfs-all-versions.md)]
 
-Your Sprints tools includes a filtered backlog based on an Iteration Path, and a similarly filtered Taskboard. These tools are useful for implementing Scrum practices. With Scrum, you can schedule and plan sprints, update your taskboard, and monitor your sprint burndown. 
+Your Sprints tools includes a filtered backlog based on an Iteration Path, and a similarly filtered Taskboard. These tools are useful for implementing Scrum practices. With Scrum, you can schedule and plan sprints, update your taskboard, and monitor your sprint burndown.
 
-Scrum methods use Iteration Paths, also referred to as sprints, to plan work to be performed by a team within a specific time period and cadence. To get started, several sprints are predefined for your team. If you're new to Scrum, get an overview from [What is Scrum?](/azure/devops/learn/agile/what-is-scrum).  
-
+Scrum methods use Iteration Paths, also referred to as sprints, to plan work to be performed by a team within a specific time period and cadence. To get started, several sprints are predefined for your team. If you're new to Scrum, get an overview from [What is Scrum?](/azure/devops/learn/agile/what-is-scrum).
 
 [!INCLUDE [temp](../includes/setup-backlogs-boards.md)]
 
+## Implement Scrum using Azure Boards
 
-## Implement Scrum using Azure Boards 
-
-The general sequence of steps for implementing Scrum using Azure Boards is as follows: 
+The general sequence of steps for implementing Scrum using Azure Boards is as follows:
 
 ### Configure teams and sprints
 
 1. [Define project-level Iteration Paths and set dates](../../organizations/settings/set-iteration-paths-sprints.md)
-1. (Optional) [Add project-level Area Paths](../../organizations/settings/set-area-paths.md) (Or,  add an area path when you configure each team) 
-1. [Add teams](../../organizations/settings/add-teams.md) 
+1. (Optional) [Add project-level Area Paths](../../organizations/settings/set-area-paths.md) (Or, add an area path when you configure each team)
+1. [Add teams](../../organizations/settings/add-teams.md)
 1. [Select team-level Iteration Paths](../../organizations/settings/set-iteration-paths-sprints.md#activate).
 
-### Create team backlog 
+### Create team backlog
 
 1. [Create and prioritize your team backlog](../backlogs/create-your-backlog.md).
 1. (Optional) [Forecast your team backlog](forecast.md).
 
-### Implement a sprint 
+### Implement a sprint
 
-You can quickly assign work items to a sprint by dragging and dropping them from the product backlog to the sprint. 
+You can quickly assign work items to a sprint by dragging and dropping them from the product backlog to the sprint.
 
-1. [Assign backlog items to a sprint](assign-work-sprint.md)  
-2. [Add tasks to backlog items](add-tasks.md)  
-3. [Set sprint capacity](set-capacity.md)  
-4. [Adjust work to fit sprint capacity](adjust-work.md)  
-5. (Optional) [Share your sprint plan](share-plan.md)  
-6. [Update the Taskboard](task-board.md) 
-7. [Monitor your sprint burndown](../../report/dashboards/configure-sprint-burndown.md) 
-
+1. [Assign backlog items to a sprint](assign-work-sprint.md)
+2. [Add tasks to backlog items](add-tasks.md)
+3. [Set sprint capacity](set-capacity.md)
+4. [Adjust work to fit sprint capacity](adjust-work.md)
+5. (Optional) [Share your sprint plan](share-plan.md)
+6. [Update the Taskboard](task-board.md)
+7. [Monitor your sprint burndown](../../report/dashboards/configure-sprint-burndown.md)
 
 ## Sprint backlogs and taskboards
 
-Sprint backlogs and taskboards provide a filtered view of work items a team has assigned to a specific iteration path, or sprint. Sprints are defined for a project and then selected by teams. From your backlog, you can map work to an iteration path using drag-and-drop, and then view that work in a separate **sprint backlog**. 
+Sprint backlogs and taskboards provide a filtered view of work items a team has assigned to a specific iteration path, or sprint. Sprints are defined for a project and then selected by teams. From your backlog, you can map work to an iteration path using drag-and-drop, and then view that work in a separate **sprint backlog**.
 
 ::: moniker range=">= azure-devops-2019"
+
 > [!div class="mx-imgBorder"]  
-> ![Boards>Sprints>Backlog](../work-items/media/view-add/view-sprint-backlogs.png)    
+> ![Boards>Sprints>Backlog](../work-items/media/view-add/view-sprint-backlogs.png)
 
 ::: moniker-end
 
-
 ::: moniker range=">= tfs-2017 <= tfs-2018"
-> [!div class="mx-imgBorder"]  
-> ["Web portal, choose Boards>Backlogs, Sprint](../work-items/media/view-add/view-sprint-backlog.png)
+
+> [!div class="mx-imgBorder"]["web portal, choose boards>backlogs, sprint](../work-items/media/view-add/view-sprint-backlog.png)
 
 ::: moniker-end
 
@@ -75,54 +72,51 @@ Sprint backlogs and taskboards provide a filtered view of work items a team has 
 ::: moniker-end
 
 ## How selected sprints show up on the backlog
- 
-Each sprint that you select for your team provides access to a sprint backlog, taskboard, and other Agile tools for planning and tracking work. 
 
-<a id="ts-sprints" /> 
+Each sprint that you select for your team provides access to a sprint backlog, taskboard, and other Agile tools for planning and tracking work.
+
+<a id="ts-sprints" />
 
 ::: moniker range=">= azure-devops-2019"
 
 1. You can gain an overview of your sprint planning by turning the **Planning** view option on. From the product backlog or any sprint backlog, choose the ![ ](../../media/icons/view-options-icon.png) view options icon and select **Planning**.
 
-	> [!div class="mx-imgBorder"]
-	> ![Boards>Backlogs>Planning pane](media/overview/sprints-new-nav.png)
+   > [!div class="mx-imgBorder"] > ![Boards>Backlogs>Planning pane](media/overview/sprints-new-nav.png)
 
-	> [!NOTE]   
-	> The Planning pane will only show the current sprint and the next 10 future sprints in the list, even if more have been selected for the team. 
+   > [!NOTE]  
+   > The Planning pane will only show the current sprint and the next 10 future sprints in the list, even if more have been selected for the team.
 
-	The set of sprints selected for your team appears. If you don't see any sprints listed, you can add sprints or select existing sprints for your team's use. To learn how, see [Define sprints](define-sprints.md). 
+   The set of sprints selected for your team appears. If you don't see any sprints listed, you can add sprints or select existing sprints for your team's use. To learn how, see [Define sprints](define-sprints.md).
 
-1. To select a sprint backlog, you can choose one of the sprint links from the **Planning** pane, or from a Sprint backlog, choose a sprint from the sprint selector.  
+1. To select a sprint backlog, you can choose one of the sprint links from the **Planning** pane, or from a Sprint backlog, choose a sprint from the sprint selector.
 
-	> [!div class="mx-imgBorder"]
-	> ![Boards>Sprints>Sprint selector](media/overview/select-a-sprint-new-nav.png)
+   > [!div class="mx-imgBorder"] > ![Boards>Sprints>Sprint selector](media/overview/select-a-sprint-new-nav.png)
 
 ::: moniker-end
 
-::: moniker range=">= tfs-2017 <= tfs-2018"  
+::: moniker range=">= tfs-2017 <= tfs-2018"
 
-For example, by selecting Sprints 1 thru 6, the Fabrikam Fiber team gets access to six sprint backlogs. They also get access to capacity planning tools and a taskboard for each sprint.  
+For example, by selecting Sprints 1 thru 6, the Fabrikam Fiber team gets access to six sprint backlogs. They also get access to capacity planning tools and a taskboard for each sprint.
 
 <img src="media/define-sprints/selected-team-iterations-vsts.png" alt="Azure Boards and TFS 2017, Selected iterations generate sprint backlogs" style="border: 2px solid #C3C3C3;" />
 
-::: moniker-end  
+::: moniker-end
 
-::: moniker range="<= tfs-2015"  
+::: moniker range="<= tfs-2015"
 
 <a id="tfs2015-sprints" />
 
-For example, by selecting Sprints 1 thru 4, the Fabrikam Fiber team gets access to four sprint backlogs. They also get access to capacity planning tools and a taskboard for each sprint.  
+For example, by selecting Sprints 1 thru 4, the Fabrikam Fiber team gets access to four sprint backlogs. They also get access to capacity planning tools and a taskboard for each sprint.
 
 <img src="media/selected-iterations-generate-sprint-backlogs.png" alt="TFS 2015 and TFS 2013, Selected iterations generate sprint backlogs" style="border: 2px solid #C3C3C3;" />
 
-::: moniker-end  
-
+::: moniker-end
 
 ## Track team capacity
 
-Once you've [defined iteration (sprint) paths and configured team iterations](../../organizations/settings/set-iteration-paths-sprints.md), you can start using the following tools to plan your sprint.  
+Once you've [defined iteration (sprint) paths and configured team iterations](../../organizations/settings/set-iteration-paths-sprints.md), you can start using the following tools to plan your sprint.
 
-At the start of each sprint, you'll want to plan the work that your team can commit to. The three Agile tools that support this work include the sprint backlog, capacity planning, and capacity bars. The sprint backlog contains a filtered subset of backlog items whose iteration path corresponds to the current sprint. 
+At the start of each sprint, you'll want to plan the work that your team can commit to. The three Agile tools that support this work include the sprint backlog, capacity planning, and capacity bars. The sprint backlog contains a filtered subset of backlog items whose iteration path corresponds to the current sprint.
 
 <table valign="top" > 
 <tr valign="top" > 
@@ -164,11 +158,10 @@ At the start of each sprint, you'll want to plan the work that your team can com
 </tr>
 </table>
 
+## Update tasks, monitor burndown
 
-##  Update tasks, monitor burndown 
+During a sprint, your team can use the taskboard and sprint burndown chart to track their progress. Your sprint burndown chart provides you with an at-a-glance visual to determine if your team is on track to meet their sprint plan.
 
-During a sprint, your team can use the taskboard and sprint burndown chart to track their progress. Your sprint burndown chart provides you with an at-a-glance visual to determine if your team is on track to meet their sprint plan.  
- 
 <table valign="top">
 <tr valign="top" > 
 <td width="35%">
@@ -196,10 +189,9 @@ During a sprint, your team can use the taskboard and sprint burndown chart to tr
 </tr>
 </table>
 
+<a id="velocity-forecast"> </a>
 
-<a id="velocity-forecast">  </a>
-
-##  Velocity and forecast 
+## Velocity and forecast
 
 <p>While you use sprint planning and tracking tools for each sprint, you use the velocity and forecast tools to estimate work that can be completed in future sprints. </p>
 <p>Velocity provides a useful metric for gaining insight into how much work your team can complete during a sprint cycle. And, the forecast tool provides a means for determining how much work your team can complete within a sprint based on a specified team velocity. </p>
@@ -231,26 +223,19 @@ During a sprint, your team can use the taskboard and sprint burndown chart to tr
 <img src="media/forecast-tool.png" alt="Forecast tool"/>
 </td>
 </tr>
-</table>  
-
-
-
+</table>
 
 ## Try this next
 
-> [!div class="nextstepaction"]
-> [Schedule sprints](define-sprints.md) 
+> [!div class="nextstepaction"][schedule sprints](define-sprints.md)
 
-## Related articles 
+## Related articles
 
-If you work with several teams, and each team wants their own backlog view, you can [create additional teams](../../organizations/settings/add-teams.md). Each team then gets access to their own set of Agile tools. Each Agile tool filters work items to only include those assigned values under the team's default area path and iteration path. 
+If you work with several teams, and each team wants their own backlog view, you can [create additional teams](../../organizations/settings/add-teams.md). Each team then gets access to their own set of Agile tools. Each Agile tool filters work items to only include those assigned values under the team's default area path and iteration path.
 
-- [Scrum concepts](scrum-key-concepts.md) 
-- [Web portal navigation](../../project/navigation/index.md) 
-- [Backlogs, portfolios, and Agile project management](../backlogs/backlogs-overview.md) 
-- [About work items](../work-items/about-work-items.md)  
+- [Scrum concepts](scrum-key-concepts.md)
+- [Web portal navigation](../../project/navigation/index.md)
+- [Backlogs, portfolios, and Agile project management](../backlogs/backlogs-overview.md)
+- [About work items](../work-items/about-work-items.md)
 - [What is Scrum?](/azure/devops/learn/agile/what-is-scrum)
-- [What is Agile development?](/azure/devops/learn/agile/what-is-agile-development) 
- 
-
-
+- [What is Agile development?](/azure/devops/learn/agile/what-is-agile-development)

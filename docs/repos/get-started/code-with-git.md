@@ -1,14 +1,14 @@
 ---
 title: Code with Git
 titleSuffix: Azure Repos
-description: Share code in a Git repo and a new team project 
-ms.assetid: 
+description: Share code in a Git repo and a new team project
+ms.assetid:
 ms.technology: devops-new-user
 ms.author: apawast
 author: apawast
 ms.date: 09/10/2018
 ms.topic: quickstart
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Code with Git
@@ -18,18 +18,19 @@ After you create a new organization and team project in Azure DevOps Services, y
 In this article, we'll show you how to start working with your code in Azure Repos with a simple walkthrough that covers:
 
 > [!div class="checklist"]
-> * Installing Git command line tools
-> * Cloning a Git repository
-> * Working in a branch
-> * Sharing your changes
-> * Creating a pull request
+>
+> - Installing Git command line tools
+> - Cloning a Git repository
+> - Working in a branch
+> - Sharing your changes
+> - Creating a pull request
 
-## Install Git command-line tools 
+## Install Git command-line tools
 
 Install one of the following Git command-line tools:
 
-  - To install Git for Windows, including Git Credential Manager, see [Install Git Credential Manager for Windows](../git/set-up-credential-managers.md#windows).
-  - To install on macOS or Linux, check out the [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) chapter in the open-source _Pro Git_ book. For macOS and Linux, we recommend [configuring SSH authentication](../git/use-ssh-keys-to-authenticate.md)
+- To install Git for Windows, including Git Credential Manager, see [Install Git Credential Manager for Windows](../git/set-up-credential-managers.md#windows).
+- To install on macOS or Linux, check out the [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) chapter in the open-source _Pro Git_ book. For macOS and Linux, we recommend [configuring SSH authentication](../git/use-ssh-keys-to-authenticate.md)
 
 ## Get your code
 
@@ -71,7 +72,7 @@ To work with a Git repo, you clone it to your computer. Cloning a repo creates a
 
 ::: moniker range=">= azure-devops-2019"
 
-1. From your web browser, open the team project for your organization and select **Repos** > **Files**. If you don't have a team project, [create one now](sign-up-invite-teammates.md). 
+1. From your web browser, open the team project for your organization and select **Repos** > **Files**. If you don't have a team project, [create one now](sign-up-invite-teammates.md).
 
    ![Repos files](media/clone-repo/repos-files.png)
 
@@ -99,7 +100,7 @@ To work with a Git repo, you clone it to your computer. Cloning a repo creates a
 
 ::: moniker range="<= tfs-2018"
 
-1. From your web browser, open the team project for your organization and select the **Code** page. If you don't have a team project, [create one now](sign-up-invite-teammates.md). 
+1. From your web browser, open the team project for your organization and select the **Code** page. If you don't have a team project, [create one now](sign-up-invite-teammates.md).
 
 2. Select **Clone** in the upper-right corner of the **Code** page and copy the **Clone URL**.
 
@@ -129,7 +130,7 @@ Git [branches](../git/branches.md) isolate your changes from other work being do
 
 Create branches by using the `branch` command. This command creates a reference in Git for the new branch and a pointer back to the parent commit so Git can keep a history of changes as you add commits to the branch.
 
-Git always adds new commits to the current local branch. Check what branch you're working on before you commit so that you don't commit changes to the wrong branch. 
+Git always adds new commits to the current local branch. Check what branch you're working on before you commit so that you don't commit changes to the wrong branch.
 
 Switch between local branches by using the `checkout` command. Git will change the files on your computer to match the latest commit on the checked-out branch.
 
@@ -160,7 +161,7 @@ git pull origin master:users/jamal/feature1
 ```
 
 Switch back to the Git Bash window that you used in the previous section. Run the following commands to create and check out a new branch based on the master branch.
- 
+
 ```
 git pull origin master:users/jamal/feature1
 git checkout feature1
@@ -225,14 +226,14 @@ This example shows the basic steps of creating and completing a pull request.
 
    ![Complete pull request](media/complete-pull-request.png)
 
->[!NOTE]
->This example shows the basic steps of creating and completing a pull request. To learn more about pull requests, including voting and reviewing, commenting, autocomplete, and more, see [Pull requests overview](../git/pull-requests-overview.md).
+> [!NOTE]
+> This example shows the basic steps of creating and completing a pull request. To learn more about pull requests, including voting and reviewing, commenting, autocomplete, and more, see [Pull requests overview](../git/pull-requests-overview.md).
 
 ::: moniker-end
 
 ::: moniker range="<= tfs-2018"
 
-1. From your web browser, open the team project for your organization and select the **Code** page. If you don't have a team project, [create one now](sign-up-invite-teammates.md). 
+1. From your web browser, open the team project for your organization and select the **Code** page. If you don't have a team project, [create one now](sign-up-invite-teammates.md).
 
 2. Select **Clone** in the upper-right corner of the **Code** page and copy the **Clone URL**.
 
@@ -268,9 +269,8 @@ The `git checkout master` command switches you to the `master` branch. The `git 
 
 Now you're ready to create a new branch, write some code, and do it again.
 
-## Try this next  
+## Try this next
 
-> [!div class="nextstepaction"]
-> [Set up continuous integration and delivery](../../pipelines/get-started-designer.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json)
+> [!div class="nextstepaction"][set up continuous integration and delivery](../../pipelines/get-started-designer.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json)
 > or
 > [learn more about working with a Git repo](../git/index.yml).

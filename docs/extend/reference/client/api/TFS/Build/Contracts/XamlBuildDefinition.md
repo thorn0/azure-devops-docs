@@ -18,27 +18,26 @@ Extends: [DefinitionReference](./DefinitionReference.md)
 
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `batchSize`: number. Batch size of the definition
+- `batchSize`: number. Batch size of the definition
 
-* `buildArgs`: string. 
+- `buildArgs`: string.
 
-* `continuousIntegrationQuietPeriod`: number. The continuous integration quiet period
+- `continuousIntegrationQuietPeriod`: number. The continuous integration quiet period
 
-* `controller`: [BuildController](./BuildController.md). The build controller
+- `controller`: [BuildController](./BuildController.md). The build controller
 
-* `createdOn`: Date. The date this definition was created
+- `createdOn`: Date. The date this definition was created
 
-* `defaultDropLocation`: string. Default drop location for builds from this definition
+- `defaultDropLocation`: string. Default drop location for builds from this definition
 
-* `description`: string. Description of the definition
+- `description`: string. Description of the definition
 
-* `lastBuild`: [ShallowReference](./ShallowReference.md). The last build on this definition
+- `lastBuild`: [ShallowReference](./ShallowReference.md). The last build on this definition
 
-* `repository`: [BuildRepository](./BuildRepository.md). The repository
+- `repository`: [BuildRepository](./BuildRepository.md). The repository
 
-* `supportedReasons`: [BuildReason](./BuildReason.md). The reasons supported by the template
+- `supportedReasons`: [BuildReason](./BuildReason.md). The reasons supported by the template
 
-* `triggerType`: [DefinitionTriggerType](./DefinitionTriggerType.md). How builds are triggered from this definition
-
+- `triggerType`: [DefinitionTriggerType](./DefinitionTriggerType.md). How builds are triggered from this definition

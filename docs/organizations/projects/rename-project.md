@@ -9,7 +9,7 @@ toc: show
 ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ms.date: 11/20/2019
 ---
 
@@ -17,7 +17,7 @@ ms.date: 11/20/2019
 
 [!INCLUDE [temp](../../includes/version-ts-tfs-2015-2016.md)]
 
-In this article, learn how to rename a project. When you rename a project, it updates all of your version control paths, work items, queries, and other project artifacts to reflect the new name. Projects can be renamed multiple times and older names can be reused. 
+In this article, learn how to rename a project. When you rename a project, it updates all of your version control paths, work items, queries, and other project artifacts to reflect the new name. Projects can be renamed multiple times and older names can be reused.
 Post rename, there might be some [actions](#more-work) required from team members. We recommend performing this action during off-hours to minimize any impact.
 
 > [!WARNING]
@@ -27,60 +27,59 @@ Post rename, there might be some [actions](#more-work) required from team member
 
 ::: moniker range=">= azure-devops-2019"
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```), and then open the project that you want to rename.
+1.  Sign in to your organization (`https://dev.azure.com/{yourorganization}`), and then open the project that you want to rename.
 
-2. Select **Project settings** > **Overview**, and then enter a new name and select **Save**. 
+2.  Select **Project settings** > **Overview**, and then enter a new name and select **Save**.
 
-   ![Enter a new name, and then select Save to rename your project](media/rename-project/rename-project-azure-devops.png)
+    ![Enter a new name, and then select Save to rename your project](media/rename-project/rename-project-azure-devops.png)
 
-3. To confirm the rename, enter the new project name, check the box next to, "I understand the consequences of renaming this project," and then select **Save**.
+3.  To confirm the rename, enter the new project name, check the box next to, "I understand the consequences of renaming this project," and then select **Save**.
 
-   ![Enter new project name, check the box, and then save](media/rename-project/rename-project-confirm.png)
+    ![Enter new project name, check the box, and then save](media/rename-project/rename-project-confirm.png)
 
-	Your project is renamed.
+        	Your project is renamed.
 
-::: moniker-end  
+::: moniker-end
 
 ::: moniker range=">= tfs-2017 <= tfs-2018"
 
 1. Sign in to your organization.
 2. From the Projects page, open the ![](../../media/icons/actions-icon.png) actions icon menu for the project that you want to rename and choose **Rename**.
 
-	> [!div class="mx-imgBorder"]  
-	> ![Enter a new project name](media/rename-project/choose-rename-menu-option.png)
+   > [!div class="mx-imgBorder"]  
+   > ![Enter a new project name](media/rename-project/choose-rename-menu-option.png)
 
-3. Edit the name. 
+3. Edit the name.
 
-	> [!div class="mx-imgBorder"]  
-	> ![Enter a new project name](media/rename-project/rename-project-dialog.png)
-	
-	If the Rename Project dialog doesn't appear, then you're not a member of the Project Administrators group for that particular project. Learn how to [get added](../security/set-project-collection-level-permissions.md) to the Project Administrators group.
+   > [!div class="mx-imgBorder"]  
+   > ![Enter a new project name](media/rename-project/rename-project-dialog.png)
 
-::: moniker-end  
+   If the Rename Project dialog doesn't appear, then you're not a member of the Project Administrators group for that particular project. Learn how to [get added](../security/set-project-collection-level-permissions.md) to the Project Administrators group.
+
+::: moniker-end
 
 ::: moniker range="tfs-2015"
 
 1. Sign in to your organization.
 2. From the **Overview** tab, open the ![](../../media/icons/context-menu.png) context icon menu for the project that you want to rename and choose **Rename**.
 
-	![Enter a new project name](media/rename-project/collection-rename.png)
+   ![Enter a new project name](media/rename-project/collection-rename.png)
 
-3. Edit the name. 
+3. Edit the name.
 
-	> [!div class="mx-imgBorder"]  
-	> ![Enter a new project name](media/rename-project/rename-project-dialog.png)
-	
-	If the Rename Project dialog doesn't appear, then you're not a member of the Project Administrators group for that particular project. Learn how to [get added](../security/set-project-collection-level-permissions.md) to the Project Administrators group.
+   > [!div class="mx-imgBorder"]  
+   > ![Enter a new project name](media/rename-project/rename-project-dialog.png)
+
+   If the Rename Project dialog doesn't appear, then you're not a member of the Project Administrators group for that particular project. Learn how to [get added](../security/set-project-collection-level-permissions.md) to the Project Administrators group.
 
 ::: moniker-end
-
 
 <a id="more-work"></a>
 
 ## Let your team know what they have to do
 
 Now that you've renamed your project,
-your team must restart their clients and perform additional actions based on the features they use. 
+your team must restart their clients and perform additional actions based on the features they use.
 
 <a id="restarting-clients"></a>
 
@@ -97,7 +96,7 @@ For the following clients, save your work in each and restart:
 - Eclipse, if your team uses the Team Foundation Server plugin (Team Explorer Everywhere)
 
 - Microsoft Excel, PowerPoint, or Project, if your team uses the Team Foundation Server Extension for these Office products
- 
+
 - Any additional clients which use the .NET Team Foundation Server Client Object Model
 
 <a id="git"></a>
@@ -119,20 +118,20 @@ Copy the repository URL to your clipboard.
 #### Update your remote in Visual Studio 2015
 
 1. Connect to the repo.
-	
-	 ![Connect to the repository](media/rename-project/repoconnect.png)
- 
+
+   ![Connect to the repository](media/rename-project/repoconnect.png)
+
 2. Open the project settings.
-	 
-	 ![Project settings](media/rename-project/projectsettings.png)
+
+   ![Project settings](media/rename-project/projectsettings.png)
 
 3. Open the repo settings.
-	
-	 ![Repository settings](media/rename-project/reposettings.png)
+
+   ![Repository settings](media/rename-project/reposettings.png)
 
 4. Edit the fetch and push remote references and paste the URL that you [copied from the remote repo](#copy_remote_repo_url).
 
-	![Edit remote](media/rename-project/editreposettings.png)
+   ![Edit remote](media/rename-project/editreposettings.png)
 
 #### Update your remote in older versions of Visual Studio from the command prompt
 
@@ -142,9 +141,9 @@ If you use an older version of Visual Studio or work with Git from the command p
 
 2. Go to the local repository and update the remote to the URL you [copied from the remote repo](#copy_remote_repo_url).
 
-    ```
-	git remote set-url origin {URL_you_copied_from_the_remote_repo}
-    ```
+   ```
+   git remote set-url origin {URL_you_copied_from_the_remote_repo}
+   ```
 
 #### Refresh Team Explorer
 
@@ -156,7 +155,6 @@ If you use an older version of Visual Studio or work with Git from the command p
 
    ![Team Explorer Updated](media/rename-project/result.png)
 
-
 <a id="tfvc-server"></a>
 
 ### Update your TFVC server workspaces
@@ -164,11 +162,11 @@ If you use an older version of Visual Studio or work with Git from the command p
 If your project uses TFVC with [server workspaces](../../repos/tfvc/decide-between-using-local-server-workspace.md), these workspaces need to be updated with the new project name.
 For the following clients, execute a get or check-in and the workspace mapping is corrected to use the new project name:
 
-- Visual Studio 2015 (RC or newer)  
-- Visual Studio 2013  
-- Visual Studio 2012  
-- Visual Studio 2010 (Only supports server workspaces)  
-- Team Explorer Everywhere (2012 or later versions)  
+- Visual Studio 2015 (RC or newer)
+- Visual Studio 2013
+- Visual Studio 2012
+- Visual Studio 2010 (Only supports server workspaces)
+- Team Explorer Everywhere (2012 or later versions)
 
 ![Source control explorer, get latest version](media/rename-project/tfvc-get.png)
 
@@ -179,13 +177,13 @@ For the following clients, execute a get or check-in and the workspace mapping i
 If your team uses TFVC with [local workspaces](../../repos/tfvc/decide-between-using-local-server-workspace.md), these workspaces need to be updated with the new project name.
 For the following clients, execute a get or check-in and the workspace mapping is corrected to use the new project name:
 
-- Visual Studio 2015 (RC or later versions)  
-- Visual Studio 2012 with [Update 5](https://go.microsoft.com/fwlink/?LinkId=615776) (RC or later versions)  
+- Visual Studio 2015 (RC or later versions)
+- Visual Studio 2012 with [Update 5](https://go.microsoft.com/fwlink/?LinkId=615776) (RC or later versions)
 - Team Foundation Server plugin [Team Explorer Everywhere 2015](https://go.microsoft.com/fwlink/?LinkID=617042)
 
-We recommend that you update your clients to the latest update or release, if possible. For all other supported Visual Studio versions, 
+We recommend that you update your clients to the latest update or release, if possible. For all other supported Visual Studio versions,
 except for Visual Studio 2010 which only supports server workspaces,
-and Team Foundation Server plugin for Eclipse, 
+and Team Foundation Server plugin for Eclipse,
 you must create a new local workspace mapped to the new project name.
 
 1.  [Shelve your changes](../../repos/tfvc/suspend-your-work-manage-your-shelvesets.md).
@@ -194,8 +192,8 @@ you must create a new local workspace mapped to the new project name.
 
 3.  Unshelve your changes.
 
-Since local workspaces are managed locally and not on the server, older clients without the updated rename logic are unable to update local workspaces to the new project name on the next get or check-in. 
- 
+Since local workspaces are managed locally and not on the server, older clients without the updated rename logic are unable to update local workspaces to the new project name on the next get or check-in.
+
 ::: moniker range=">= tfs-2015 <= tfs-2018"
 
 <a id="tfs-onprem"></a>
@@ -203,7 +201,7 @@ Since local workspaces are managed locally and not on the server, older clients 
 ## Update your Team Foundation Server SharePoint and Reporting Integrations (on-premises)
 
 Both SharePoint and Reporting Services integrations continue to work, but some reports don't work as expected until the new project name is populated.
-The old project name is still present until caches are updated with the new name. 
+The old project name is still present until caches are updated with the new name.
 The reporting and SharePoint server administrator can manually run these jobs to immediately populate the new name.
 
 - If your team uses reports, they reflect the new names after the next incremental analysis job runs for the data warehouse. By default it runs every two hours. To expedite the process,[manually run the warehouse jobs and incremental analysis job](../../report/admin/manually-process-data-warehouse-and-cube.md), so the new name is synced to warehouse and reports start using the new name. Reports don't work as expected until the jobs have run.
@@ -236,4 +234,3 @@ The reporting and SharePoint server administrator can manually run these jobs to
      ```
 
 ::: moniker-end
-

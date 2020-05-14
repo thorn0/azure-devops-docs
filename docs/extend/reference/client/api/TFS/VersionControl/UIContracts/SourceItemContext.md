@@ -13,12 +13,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/UIContracts`
 
-
 ### Members
 
-* `item`: [ISourceItem](../../../TFS/VersionControl/UIContracts/ISourceItem.md). 
+- `item`: [ISourceItem](../../../TFS/VersionControl/UIContracts/ISourceItem.md).
 
-* `version`: string. 
+- `version`: string.
 
-* `gitRepository`: [VCContracts.GitRepository](../../../TFS/VersionControl/Contracts/GitRepository.md). Optional. 
-
+- `gitRepository`: [VCContracts.GitRepository](../../../TFS/VersionControl/Contracts/GitRepository.md). Optional.

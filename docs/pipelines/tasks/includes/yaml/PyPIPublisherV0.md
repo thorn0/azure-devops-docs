@@ -12,7 +12,7 @@ ms.technology: devops-cicd-tasks
 # Create and upload an sdist or wheel to a PyPI-compatible index using Twine
 - task: PyPIPublisher@0
   inputs:
-    pypiConnection: 
-    packageDirectory: 
+    pypiConnection:
+    packageDirectory:
     #alsoPublishWheel: false # Optional
 ```

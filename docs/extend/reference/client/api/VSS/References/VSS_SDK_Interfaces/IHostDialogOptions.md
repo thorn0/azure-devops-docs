@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,35 +15,32 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-
 ### Members
 
-* `height`: number. Optional. 
+- `height`: number. Optional.
 
-* `width`: number. Optional. 
+- `width`: number. Optional.
 
-* `draggable`: boolean. Optional. 
+- `draggable`: boolean. Optional.
 
-* `resizable`: boolean. Optional. 
+- `resizable`: boolean. Optional.
 
-* `title`: string. Optional. 
+- `title`: string. Optional.
 
-* `modal`: boolean. Optional. 
+- `modal`: boolean. Optional.
 
-* `buttons`: IDictionaryStringTo&lt;any&gt;. Optional. 
+- `buttons`: IDictionaryStringTo&lt;any&gt;. Optional.
 
-* `open`: Function. Optional. 
+- `open`: Function. Optional.
 
-* `close`: Function. Optional. 
+- `close`: Function. Optional.
 
-* `getDialogResult`: (): any. Optional. 
+- `getDialogResult`: (): any. Optional.
 
-* `okCallback`: (result: any): void. Optional. 
+- `okCallback`: (result: any): void. Optional.
 
-* `cancelCallback`: Function. Optional. 
+- `cancelCallback`: Function. Optional.
 
-* `okText`: string. Optional. 
+- `okText`: string. Optional.
 
-* `cancelText`: string. Optional. 
-
+- `cancelText`: string. Optional.

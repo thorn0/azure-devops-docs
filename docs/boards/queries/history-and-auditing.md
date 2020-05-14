@@ -1,56 +1,56 @@
 ---
-title: Query by history  
+title: Query by history
 titleSuffix: Azure Boards
-description: Track changes and use tools to support audit requirements when working in Azure Boards and Team Foundation Server (TFS) 
+description: Track changes and use tools to support audit requirements when working in Azure Boards and Team Foundation Server (TFS)
 ms.technology: devops-agile
 ms.assetid: A5AC271A-8DF0-40AD-9867-1B1E9E5B1FE9
 ms.author: kaelli
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= tfs-2013'
-ms.date: 11/19/2018  
+monikerRange: ">= tfs-2013"
+ms.date: 11/19/2018
 ---
 
-# Query by history   
+# Query by history
 
 [!INCLUDE [temp](../includes/version-vsts-tfs-all-versions.md)]
 
-The history of a work item tells you who opened the item, what changed, and why. This information helps you track how an item changes over time. When you enter information in the history field, provide as much information as possible to help the next work item owner understand what has happened and what they have to do.  
+The history of a work item tells you who opened the item, what changed, and why. This information helps you track how an item changes over time. When you enter information in the history field, provide as much information as possible to help the next work item owner understand what has happened and what they have to do.
 
+## Supported operators and macros
 
-## Supported operators and macros 
+Query clauses that specify the **History** field can use the **Contains Words** and **Does Not Contain Words** operators. Search against an exact phrase or to use the wildcard character, <b>\*</b>. You can only use the wildcard character at the end of a partial word or phrase.
 
-Query clauses that specify the **History** field can use the **Contains Words** and **Does Not Contain Words** operators. Search against an exact phrase or to use the wildcard character, <b>*</b>. You can only use the wildcard character at the end of a partial word or phrase.
+The **History** field is automatically indexed for full-text search when full-text search is available. See Full-Text and partial word searches
 
-The **History** field is automatically indexed for full-text search when full-text search is available. See Full-Text and partial word searches 
+## View the History of a work item
 
-
-## View the History of a work item 
-
-You can use either the web portal or Team Explorer to view the history of a work item or find work items based on the contents of the **History** field. When you perform a search on the contents of the **History**  field, it returns only work items that have changes recorded in that field. That is, it doesn't register changes that were made to text in other fields.  
+You can use either the web portal or Team Explorer to view the history of a work item or find work items based on the contents of the **History** field. When you perform a search on the contents of the **History** field, it returns only work items that have changes recorded in that field. That is, it doesn't register changes that were made to text in other fields.
 
 #### [Browser](#tab/browser/)
-<a id="team-services" /> 
+
+<a id="team-services" />
 
 ::: moniker range=">= tfs-2017"
-<img src="media/hist-audit-query-ts-bt.png" alt="Search for items based on words contained in the History field" style="border: 1px solid #C3C3C3;" /> 
+<img src="media/hist-audit-query-ts-bt.png" alt="Search for items based on words contained in the History field" style="border: 1px solid #C3C3C3;" />
 ::: moniker-end
 
 ::: moniker range=">= tfs-2013 <= tfs-2015"
-<img src="media/ALM_HA_HistoryQuery.png" alt="Search for items based on words contained in the History field" style="border: 1px solid #C3C3C3;" /> 
+<img src="media/ALM_HA_HistoryQuery.png" alt="Search for items based on words contained in the History field" style="border: 1px solid #C3C3C3;" />
 ::: moniker-end
 
-
 #### [Visual Studio 2015](#tab/visual-studio/)
+
 <a id="tee-query-history" />
 <a id="team-explorer" />
 
 <strong>Visual Studio 2015/Team Explorer and Team Explorer Everywhere</strong>
 
-![Search for items based on words contained in the History field](media/hist-audit-query-team-explorer.png) 
+![Search for items based on words contained in the History field](media/hist-audit-query-team-explorer.png)
 
-* * *
-## List items based on the contents of the History field  
+---
+
+## List items based on the contents of the History field
 
 ::: moniker range=">= tfs-2017"
 You use the query editor to add the **History** field to a [query clause](using-queries.md). Comments entered into the **Discussion** area are queryable. Change history entries, such as which fields were changed, aren't queryable. To quickly find items based on words entered into the Discussion area, or **Description** or other rich-text fields, consider using [work item search](../../project/search/work-item-search.md).
@@ -60,7 +60,7 @@ You use the query editor to add the **History** field to a [query clause](using-
 You use the query editor to add the **History** field to a [query clause](using-queries.md). Comments entered into the **History** field are queryable. Change history entries, such as which fields were changed, aren't queryable.
 ::: moniker-end
 
-You can filter for work items by the date on which they were changed or for a specific time period. If you limit the scope of your query, it can help with performance by only returning those results that fit the date range that you want to include. 
+You can filter for work items by the date on which they were changed or for a specific time period. If you limit the scope of your query, it can help with performance by only returning those results that fit the date range that you want to include.
 
 <table width="100%">
 <tbody valign="top">
@@ -102,7 +102,7 @@ Items I&#39;ve been associated with
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>History <em> Contains Words </em> MyName</code><br/><code>Or <em> Assigned To </em> Was Ever _ <xref href="Me" data-throw-if-not-resolved="False" data-raw-source="@Me"></xref></code><br/></td>
 </tr>
 </tbody>
-</table>  
+</table>
 
 ### Tips for using the query editor
 
@@ -112,24 +112,23 @@ Items I&#39;ve been associated with
 <li>The query editor ignores common words or stop words as defined in <a href="https://msdn.microsoft.com/library/ms142551.aspx" data-raw-source="[Configure and Manage Stopwords and Stoplists for Full-Text Search](https://msdn.microsoft.com/library/ms142551.aspx)">Configure and Manage Stopwords and Stoplists for Full-Text Search</a>.</li>
 <li>On the query editor toolbar, choose <img src="../media/icons/run_query.png" alt="Run query"/> or <img src="../media/icons/run_query_te.png" alt="Run query"/> icon and confirm that your query returns expected results.</li>
 <li>If you don&#39;t receive the results you expect, adjust the word or phrase that you entered, and run the query again.</li> 
-</ul> 
+</ul>
 
+## View the history of work items
 
-
-## View the history of work items  
-
-An entry is made to the **History** field each time a work item is saved. To view the history of changes, open an existing work item, and then choose the ![history tab icon](../media/icons/icon-history-tab-wi.png) or **History** tab, or for some work item types, choose the **Details** tab. 
+An entry is made to the **History** field each time a work item is saved. To view the history of changes, open an existing work item, and then choose the ![history tab icon](../media/icons/icon-history-tab-wi.png) or **History** tab, or for some work item types, choose the **Details** tab.
 
 <a id="web-portal-explorer-tab" /> 
-The history details shown depend on the platform, version, and client you user. 
+The history details shown depend on the platform, version, and client you user.
 
 #### [Browser](#tab/browser/)
+
 <a id="team-services-tab" /> 
-<a id="team-services-view" /> 
+<a id="team-services-view" />
 
 ::: moniker range=">= tfs-2017"
 
-![View History tab](media/hist-audit-wi-form-vsts-tab.png)  
+![View History tab](media/hist-audit-wi-form-vsts-tab.png)
 
 The state change history diagram appears first. To see the entire history of state changes, choose **Show all**.
 
@@ -137,35 +136,35 @@ The state change history diagram appears first. To see the entire history of sta
 
 Choose an entry in the left pane to view the details of changes made.
 
-![Work item form, History tab](media/hist-audit-wi-form.png)  
+![Work item form, History tab](media/hist-audit-wi-form.png)
 
 ::: moniker-end
 
 ::: moniker range="tfs-2017"
-> [!NOTE]  
-> With TFS 2017 and later versions, the **History** field is no longer a rich-text field. To annotate the work item history, add to the **Description** or **Discussion** fields. 
-::: moniker-end
 
+> [!NOTE]  
+> With TFS 2017 and later versions, the **History** field is no longer a rich-text field. To annotate the work item history, add to the **Description** or **Discussion** fields.
+> ::: moniker-end
 
 ::: moniker range=">= tfs-2013 <= tfs-2015"
 
-To view only the comments that were added to the log, choose the **Discussion Only** tab. To view all changes made to the item, choose the **All Changes** tab, and then choose the **show all changes** link for a specific date and time.  
+To view only the comments that were added to the log, choose the **Discussion Only** tab. To view all changes made to the item, choose the **All Changes** tab, and then choose the **show all changes** link for a specific date and time.
 
-![Work item form, History tab, TFS Web portal, Team Explorer](media/hist-audit-choose-history-tab-tfs.png) 
+![Work item form, History tab, TFS Web portal, Team Explorer](media/hist-audit-choose-history-tab-tfs.png)
 
 ::: moniker-end
 
-
 #### [Visual Studio](#tab/visual-studio/)
-To view only the comments that were added to the log, choose the **Discussion Only** tab. To view all changes made to the item, choose the **All Changes** tab, and then choose the **show all changes** link for a specific date and time.  
 
-![Work item form, History tab, TFS Web portal, Team Explorer](media/ALM_HA_AllChanges.png) 
+To view only the comments that were added to the log, choose the **Discussion Only** tab. To view all changes made to the item, choose the **All Changes** tab, and then choose the **show all changes** link for a specific date and time.
 
-* * *
-## Fields that support history, auditing, and revision tracking 
+![Work item form, History tab, TFS Web portal, Team Explorer](media/ALM_HA_AllChanges.png)
 
-You can use the following fields to filter queries and create reports. Several of these fields are populated with information as a work item progresses from one state to another. Other fields update when the work item is modified. Some fields don't appear on the work item form, but they are tracked for the WITs listed.  
+---
 
+## Fields that support history, auditing, and revision tracking
+
+You can use the following fields to filter queries and create reports. Several of these fields are populated with information as a work item progresses from one state to another. Other fields update when the work item is modified. Some fields don't appear on the work item form, but they are tracked for the WITs listed.
 
 <table width="100%">
 <tbody valign="top">
@@ -250,7 +249,6 @@ All
 <td>All</td>
 </tr>
 
-
 <tr>
   <td>
     <p>State Change Date</p>
@@ -293,27 +291,26 @@ All
 </tbody>
 </table>
 
-#### Notes: 
-1. For these fields to be defined for a WIT, they must be included in the ```WORKFLOW``` section of the WIT definition. For example, this syntax is included within the ```FIELDS``` definition when transitioning to a Resolved state:  
+#### Notes:
 
-    ```xml
-    <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">  
-       <SERVERDEFAULT from="clock" />  
-    </FIELD>  
-    ```
+1. For these fields to be defined for a WIT, they must be included in the `WORKFLOW` section of the WIT definition. For example, this syntax is included within the `FIELDS` definition when transitioning to a Resolved state:
+
+   ```xml
+   <FIELD refname="Microsoft.VSTS.Common.ResolvedDate">
+      <SERVERDEFAULT from="clock" />
+   </FIELD>
+   ```
 
 ## Related articles
-To learn more about creating and saving queries, see also: 
+
+To learn more about creating and saving queries, see also:
 
 - [Query editor](using-queries.md)
-- [Query fields, operators, and macros](query-operators-variables.md)   
+- [Query fields, operators, and macros](query-operators-variables.md)
 - [Query by date or current iteration](query-by-date-or-current-iteration.md)
 
-
 ### Get history programmatically
-See [Work item tracking](/rest/api/azure/devops/wit/)  for ways to extract history information programmatically.  
+
+See [Work item tracking](/rest/api/azure/devops/wit/) for ways to extract history information programmatically.
 
 [!INCLUDE [temp](../includes/rest-apis-queries.md)]
-
-
-

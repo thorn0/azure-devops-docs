@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `localPath`: string. 
+- `localPath`: string.
 
-* `mappingType`: string. 
+- `mappingType`: string.
 
-* `serverPath`: string. 
-
+- `serverPath`: string.

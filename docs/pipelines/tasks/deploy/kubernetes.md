@@ -7,7 +7,7 @@ ms.assetid: CBC316A2-586F-4DEF-BE79-488A1F503564
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 02/28/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Kubectl task
@@ -96,7 +96,8 @@ This YAML example demonstrates the **apply** command:
     command: apply
     arguments: -f mhc-aks.yaml
 ```
-This YAML example demonstrates the use of a configuration file with the **apply** command: 
+
+This YAML example demonstrates the use of a configuration file with the **apply** command:
 
 ```YAML
 - task: Kubernetes@1
@@ -172,7 +173,7 @@ This YAML example creates generic secrets from literal values specified for the 
         secretName: mysecretkey
 ```
 
-Pipeline variables can be used to pass arguments for specifying literal values, as shown here: 
+Pipeline variables can be used to pass arguments for specifying literal values, as shown here:
 
 ```YAML
     - task: Kubernetes@1
@@ -190,7 +191,7 @@ Pipeline variables can be used to pass arguments for specifying literal values, 
 
 ## ConfigMap
 
-ConfigMaps allow you to decouple configuration artifacts from image content to maintain portability for containerized applications. 
+ConfigMaps allow you to decouple configuration artifacts from image content to maintain portability for containerized applications.
 
 <table><thead><tr><th>Parameters</th><th>Description</th></tr></thead>
 <tr><td><code>configMapName</code><br/>ConfigMapName</td><td>(Optional) Name of the ConfigMap.</td></tr>

@@ -5,7 +5,7 @@ ms.custom: seodec18
 description: Publish symbols to a symbol server for debugging using Azure Pipelines and Team Foundation Server (TFS)
 ms.assetid: 8794A5F8-B646-4E2F-A426-47CC62ABFF5D
 ms.date: 04/23/2020
-monikerRange: '> tfs-2015'
+monikerRange: "> tfs-2015"
 ---
 
 # Publish symbols for debugging
@@ -21,38 +21,40 @@ monikerRange: '> tfs-2015'
 Symbol servers enable debuggers to automatically retrieve the correct symbol files without knowing product names, build numbers, or package names. To learn more about symbols, read the [concept page](/azure/devops/artifacts/concepts/symbols). To consume symbols, see [this page for Visual Studio](/azure/devops/artifacts/symbols/debug-with-symbols-visual-studio) or [this page for WinDbg](/azure/devops/artifacts/symbols/debug-with-symbols-windbg).
 
 ## Publish symbols
+
 To publish symbols to the symbol server in Azure Artifacts, include the [Index Sources and Publish Symbols](../tasks/build/index-sources-publish-symbols.md) task in your build pipeline. Configure the task as follows:
 ::: moniker range=">= tfs-2018"
 
-* For **Version**, select **2.\\***.
+- For **Version**, select **2.\\\***.
 
 ::: moniker-end
 ::: moniker range="<= tfs-2017"
 
-* For **Version**, select **1.\\***.
+- For **Version**, select **1.\\\***.
 
 ::: moniker-end
 
-* For **Symbol Server Type**, select **Symbol Server in this organization/collection (requires Azure Artifacts)**.
-* Use the **Path to symbols folder** argument to specify the root directory that contains the .pdb files to be published.
-* Use the **Search pattern** argument to specify search criteria to find the .pdb files in the folder that you specify in **Path to symbols folder**. You can use a single-folder wildcard (```*```) and recursive wildcards (```**```).
-For example, ```**\bin\**\*.pdb``` searches for all .pdb files in all subdirectories named *bin*.
+- For **Symbol Server Type**, select **Symbol Server in this organization/collection (requires Azure Artifacts)**.
+- Use the **Path to symbols folder** argument to specify the root directory that contains the .pdb files to be published.
+- Use the **Search pattern** argument to specify search criteria to find the .pdb files in the folder that you specify in **Path to symbols folder**. You can use a single-folder wildcard (`*`) and recursive wildcards (`**`).
+  For example, `**\bin\**\*.pdb` searches for all .pdb files in all subdirectories named _bin_.
 
 ### Publish symbols for NuGet packages
+
 To publish symbols for NuGet packages, include the preceding task in the build pipeline that produces the NuGet packages. Then the symbols will be available to all users in the Azure DevOps organization.
 
 ## Publish symbols to a file share
 
-You can also publish symbols to a file share by using the [Index Sources and Publish Symbols](../tasks/build/index-sources-publish-symbols.md) task. When you use this method, the task will copy the .pdb files over and put them into a specific layout. When Visual Studio is pointed to the UNC share, it can find the symbols related to the binaries that are currently loaded. 
+You can also publish symbols to a file share by using the [Index Sources and Publish Symbols](../tasks/build/index-sources-publish-symbols.md) task. When you use this method, the task will copy the .pdb files over and put them into a specific layout. When Visual Studio is pointed to the UNC share, it can find the symbols related to the binaries that are currently loaded.
 
 Add the task to your build pipeline and configure it as follows:
 
-* For **Version**, select **2.\\***. 
-* For **Symbol Server Type**, select **File share**.
-    * When you select **File share** as **Symbol Server Type**, you get the **Compress Symbols** option. This option compresses your symbols to save space. 
-* Use the **Path to symbols folder** argument to specify the root directory that contains the .pdb files to be published.
-* Use the **Search pattern** argument to specify search criteria to find the .pdb files in the folder that you specify in **Path to symbols folder**. You can use a single-folder wildcard (```*```) and recursive wildcards (```**```).
-  For example, ```**\bin\**\*.pdb``` searches for all .pdb files in all subdirectories named *bin*.
+- For **Version**, select **2.\\\***.
+- For **Symbol Server Type**, select **File share**.
+  - When you select **File share** as **Symbol Server Type**, you get the **Compress Symbols** option. This option compresses your symbols to save space.
+- Use the **Path to symbols folder** argument to specify the root directory that contains the .pdb files to be published.
+- Use the **Search pattern** argument to specify search criteria to find the .pdb files in the folder that you specify in **Path to symbols folder**. You can use a single-folder wildcard (`*`) and recursive wildcards (`**`).
+  For example, `**\bin\**\*.pdb` searches for all .pdb files in all subdirectories named _bin_.
 
 ## Portable PDBs
 
@@ -66,16 +68,16 @@ You can use your indexed symbols to debug an app on a different machine from whe
 
 In Visual Studio, you might need to enable the following two options in **Debug** > **Options** > **Debugging** > **General**:
 
-* **Enable source server support**
-* **Allow source server for partial trust assemblies (Managed only)**
+- **Enable source server support**
+- **Allow source server for partial trust assemblies (Managed only)**
 
 ### Advanced usage: overriding at debug time
 
 The mapping information injected into the .pdb files contains variables that can be overridden at debugging time. Overriding the variables might be required if the collection URL has changed. When you're overriding the mapping information, the goals are to construct:
 
-* A command (SRCSRVCMD) that the debugger can use to retrieve the source file from the server.
+- A command (SRCSRVCMD) that the debugger can use to retrieve the source file from the server.
 
-* A location (SRCSRVTRG) where the debugger can find the retrieved source file.
+- A location (SRCSRVTRG) where the debugger can find the retrieved source file.
 
   The mapping information might look something like the following:
 
@@ -99,9 +101,9 @@ C:\BuildAgent\_work\1\src\MyApp\Program.cs*TFS_COLLECTION*TFS_TEAM_PROJECT*TFS_R
 C:\BuildAgent\_work\1\src\MyApp\SomeHelper.cs*TFS_COLLECTION*TFS_TEAM_PROJECT*TFS_REPO*TFS_COMMIT*TFS_SHORT_COMMIT*/MyApp/SomeHelper.cs*TFS_APPLY_FILTERS
 ```
 
- The preceding example contains two sections: the variables section and the source files section. The information in the variables section can be overridden. The variables can use other variables, and can use information from the source files section.
+The preceding example contains two sections: the variables section and the source files section. The information in the variables section can be overridden. The variables can use other variables, and can use information from the source files section.
 
- To override one or more of the variables while debugging with Visual Studio, create an .ini file ```%LOCALAPPDATA%\SourceServer\srcsrv.ini```. Set the content of the .ini file to override the variables. For example:
+To override one or more of the variables while debugging with Visual Studio, create an .ini file `%LOCALAPPDATA%\SourceServer\srcsrv.ini`. Set the content of the .ini file to override the variables. For example:
 
 ```ini
 [variables]

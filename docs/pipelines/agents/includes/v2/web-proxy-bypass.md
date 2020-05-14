@@ -15,7 +15,7 @@ If you want the agent to bypass your proxy and connect to Azure Pipelines direct
 
 ```
 https://login.microsoftonline.com
-https://app.vssps.visualstudio.com 
+https://app.vssps.visualstudio.com
 https://{organization_name}.visualstudio.com
 https://{organization_name}.vsrm.visualstudio.com
 https://{organization_name}.vstmr.visualstudio.com
@@ -36,21 +36,19 @@ To ensure your organization works with any existing firewall or IP restrictions,
 
 **IPv4 ranges**
 
-* `13.107.6.0/24`
-* `13.107.9.0/24`
-* `13.107.42.0/24`
-* `13.107.43.0/24`
+- `13.107.6.0/24`
+- `13.107.9.0/24`
+- `13.107.42.0/24`
+- `13.107.43.0/24`
 
 **IPv6 ranges**
 
-* `2620:1ec:4::/48`
-* `2620:1ec:a92::/48`
-* `2620:1ec:21::/48`
-* `2620:1ec:22::/48`
+- `2620:1ec:4::/48`
+- `2620:1ec:a92::/48`
+- `2620:1ec:21::/48`
+- `2620:1ec:22::/48`
 
 > [!NOTE]
 > This procedure enables the agent to bypass a web proxy. Your build pipeline and scripts must still handle bypassing your web proxy for each task and tool you run in your build.
 >
 > For example, if you are using a NuGet task, you must configure your web proxy to support bypassing the URL for the server that hosts the NuGet feed you're using.
-
-

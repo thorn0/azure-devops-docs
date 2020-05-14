@@ -17,7 +17,6 @@ Extends: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md)
 
 ### Members
 
-* `push`: [GitPushRef](../../../TFS/VersionControl/Contracts/GitPushRef.md). 
+- `push`: [GitPushRef](../../../TFS/VersionControl/Contracts/GitPushRef.md).
 
-* `treeId`: string. 
-
+- `treeId`: string.

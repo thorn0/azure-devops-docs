@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Test Cases | REST API Reference for Team Foundation Server
 description: Work with test cases programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 17A2D523-0FEA-47EE-9C61-98D016F4F91D
@@ -24,13 +24,15 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/suites/{suite}/testcases?api-version={version}
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:-----------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
-| project   | string | Name or ID of the project.
-| plan      | int    | ID of the test plan that contains the suites.
-| suite     | int    | ID of the suite to get.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| plan | int | ID of the test plan that contains the suites.
+| suite | int | ID of the suite to get.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -94,21 +96,22 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
 }
 ```
 
-
 ## Get a test case
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/suites/{suite}/testcases/{case}?api-version={version}
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:-----------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
-| project   | string | Name or ID of the project.
-| plan      | int    | ID of the test plan that contains the suites.
-| suite     | int    | ID of the suite that contains the test case.
-| case      | int    | ID of the test case to get.       
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| plan | int | ID of the test plan that contains the suites.
+| suite | int | ID of the suite that contains the test case.
+| case | int | ID of the test case to get.  
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -145,20 +148,22 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
 }
 ```
 
-
 ## Delete a test case
+
 > This API is supported as of [!INCLUDE [API_version](../_data/version3-preview.md)].
 
 ```no-highlight
 DELETE https://{instance}/DefaultCollection/{project}/_apis/test/testcases/{caseId}?api-version={version}
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:-----------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
-| project   | string | Name or ID of the project.
-| caseId    | int    | ID of the test case to delete.       
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| caseId | int | ID of the test case to delete.  
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -167,5 +172,3 @@ DELETE https://{instance}/DefaultCollection/{project}/_apis/test/testcases/{case
 ```
 DELETE https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/testcases/5?api-version=3.0-preview
 ```
-
-

@@ -13,19 +13,19 @@ ms.date: 12/2/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-*Note: This list of permissions reflects TFS 2017 RTM and earlier. For users of later versions, see
-the [current list of permissions](GitRepositoryPermissions.md).*
+_Note: This list of permissions reflects TFS 2017 RTM and earlier. For users of later versions, see
+the [current list of permissions](GitRepositoryPermissions.md)._
 
 ### Values
 
-* `None` 
-* `Administer` 
-* `GenericRead` 
-* `GenericContribute` 
-* `ForcePush` 
-* `CreateBranch` 
-* `CreateTag` 
-* `ManageNote` 
-* `PolicyExempt` 
-* `All` This defines the set of bits that are valid for the git permission space. When reading or writing git permissions, these are the only bits paid attention too.
-* `BranchLevelPermissions` 
+- `None`
+- `Administer`
+- `GenericRead`
+- `GenericContribute`
+- `ForcePush`
+- `CreateBranch`
+- `CreateTag`
+- `ManageNote`
+- `PolicyExempt`
+- `All` This defines the set of bits that are valid for the git permission space. When reading or writing git permissions, these are the only bits paid attention too.
+- `BranchLevelPermissions`

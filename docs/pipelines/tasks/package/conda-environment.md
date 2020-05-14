@@ -43,8 +43,8 @@ None
 
 ## Prerequisites
 
-* A Microsoft-hosted agent, or a self-hosted agent with Anaconda or Miniconda installed.
-* If using a self-hosted agent, you must either add the `conda` executable to `PATH` or set the `CONDA` environment variable to the root of the Conda installation.
+- A Microsoft-hosted agent, or a self-hosted agent with Anaconda or Miniconda installed.
+- If using a self-hosted agent, you must either add the `conda` executable to `PATH` or set the `CONDA` environment variable to the root of the Conda installation.
 
 ::: moniker range="> tfs-2018"
 
@@ -56,21 +56,22 @@ None
 
 ## Arguments
 
-| Argument | Description |
-|----------|-------------|
-|`createCustomEnvironment`<br/>Create custom environment | (Optional) Setting this to `true` [creates](https://docs.conda.io/projects/conda/en/latest/commands/create.html) or reactivates a Conda environment instead of using the `base` environment. This is recommended for self-hosted agents. <br/>Default value: `false`|
-|`environmentName`<br/>Environment name |(Required) Name of the Conda environment to create and activate. |
-|`packageSpecs` <br/>Package specs | (Optional) Space-delimited list of packages to install when creating the environment. <br/>Default value: `python=3`|
-|`updateConda` <br/>Update to the latest Conda | (Optional) Update Conda to the latest version. This applies to the Conda installation found in `PATH` or at the path specified by the `CONDA` environment variable. <br/>Default value: `true`|
-|`installOptions` <br/>Other options for `conda install` | (Optional) Space-delimited list of additional arguments to pass to the `conda install` command. |
-|`createOptions` <br/>Other options for `conda create` | (Optional) Space-delimited list of other options to pass to the `conda create` command. |
-|`cleanEnvironment` <br/>Clean the environment | (Optional) Delete the environment and recreate it if it already exists. If not selected, the task will reactivate an existing environment. <br/>Default value: `false`|
+| Argument                                                | Description                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `createCustomEnvironment`<br/>Create custom environment | (Optional) Setting this to `true` [creates](https://docs.conda.io/projects/conda/en/latest/commands/create.html) or reactivates a Conda environment instead of using the `base` environment. This is recommended for self-hosted agents. <br/>Default value: `false` |
+| `environmentName`<br/>Environment name                  | (Required) Name of the Conda environment to create and activate.                                                                                                                                                                                                     |
+| `packageSpecs` <br/>Package specs                       | (Optional) Space-delimited list of packages to install when creating the environment. <br/>Default value: `python=3`                                                                                                                                                 |
+| `updateConda` <br/>Update to the latest Conda           | (Optional) Update Conda to the latest version. This applies to the Conda installation found in `PATH` or at the path specified by the `CONDA` environment variable. <br/>Default value: `true`                                                                       |
+| `installOptions` <br/>Other options for `conda install` | (Optional) Space-delimited list of additional arguments to pass to the `conda install` command.                                                                                                                                                                      |
+| `createOptions` <br/>Other options for `conda create`   | (Optional) Space-delimited list of other options to pass to the `conda create` command.                                                                                                                                                                              |
+| `cleanEnvironment` <br/>Clean the environment           | (Optional) Delete the environment and recreate it if it already exists. If not selected, the task will reactivate an existing environment. <br/>Default value: `false`                                                                                               |
 
 ## Open source
 
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 [!INCLUDE [temp](../../includes/qa-agents.md)]

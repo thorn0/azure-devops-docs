@@ -16,4 +16,3 @@ Module path: `TFS/WorkItemTracking/Contracts`
 Extends: [Link](../../../TFS/WorkItemTracking/Contracts/Link.md)
 
 ### Members
-

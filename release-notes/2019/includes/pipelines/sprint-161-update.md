@@ -4,9 +4,9 @@ ms.topic: include
 
 ### Checkout multiple repositories in Azure Pipelines
 
-Pipelines often rely on multiple repositories. You can have different repositories with source, tools, scripts, or other items that you need to build your code. Previously, you had to add these repositories as submodules or as manual scripts to run **git checkout**. Now you can fetch and check out other repositories, in addition to the one you use to store your YAML pipeline. 
+Pipelines often rely on multiple repositories. You can have different repositories with source, tools, scripts, or other items that you need to build your code. Previously, you had to add these repositories as submodules or as manual scripts to run **git checkout**. Now you can fetch and check out other repositories, in addition to the one you use to store your YAML pipeline.
 
-For example, if you have a repository called *MyCode* with a YAML pipeline and a second repository called *Tools*, your YAML pipeline will look like this:
+For example, if you have a repository called _MyCode_ with a YAML pipeline and a second repository called _Tools_, your YAML pipeline will look like this:
 
 ```yaml
 resources:
@@ -16,12 +16,12 @@ repositories:
     type: git
 
 steps:
-- checkout: self
-- checkout: tools
-- script: dir $(Build.SourcesDirectory)
+  - checkout: self
+  - checkout: tools
+  - script: dir $(Build.SourcesDirectory)
 ```
 
-The third step will show two directories, *MyCode* and *Tools* in the sources directory.
+The third step will show two directories, _MyCode_ and _Tools_ in the sources directory.
 
 Azure Repos Git, GitHub, and Bitbucket Cloud repositories are supported. For more information, see [Multi-repo checkout](/azure/devops/pipelines/repos/multi-repo-checkout).
 
@@ -43,10 +43,9 @@ The [Azure Pipelines app for ServiceNow](https://store.servicenow.com/sn_appstor
 
 The VSTest task discovers and runs tests using user inputs (test files, filter criteria, and so forth) as well as a test adapter specific to the test framework being used. Changes to either user inputs or the test adapter can lead to cases where tests are not discovered and only a subset of the expected tests are run. This can lead to situations where pipelines succeed because tests are skipped rather than because the code is of sufficiently high quality. To help avoid this situation, we've added a new option in the VSTest task that allows you to specify the minimum number of tests that must be run for the task to pass.
 
-> [!div class="mx-imgBorder"]
-> ![Badge](../../media/161_01.png)
+> [!div class="mx-imgBorder"] > ![Badge](../../media/161_01.png)
 
-### UCS-4 support for Python 2.7 
+### UCS-4 support for Python 2.7
 
 Python 2.7 is available on most of the hosted build agents. Previously, we were shipping Python 2.7 built with UCS-2 (2-octet universal character set) support. UCS-2 does not represent all Unicode characters. Because of this, we switched our Python 2.7 implementation to UCS-4 to represent all the characters available in Unicode. We expect that this won't affect you because most packages are independent of the Unicode support built into Python.
 
@@ -60,8 +59,7 @@ Slash command: /azpipelines subscribe [project url] ​
 
 Example: /azpipelines subscribe `https://dev.azure.com/myorg/myproject​`
 
-> [!div class="mx-imgBorder"]
-> ![Badge](../../media/161_02.png)
+> [!div class="mx-imgBorder"] > ![Badge](../../media/161_02.png)
 
 Microsoft Teams:
 
@@ -69,5 +67,4 @@ Command: @Azure Pipelines subscribe [project url] ​
 
 Example: @Azure Pipelines subscribe `https://dev.azure.com/myorg/myproject​`
 
-> [!div class="mx-imgBorder"]
-> ![Badge](../../media/161_03.png)
+> [!div class="mx-imgBorder"] > ![Badge](../../media/161_03.png)

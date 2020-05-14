@@ -1,14 +1,14 @@
 ﻿---
 title: Rollup child work item values to sample report
 titleSuffix: Azure DevOps
-description:  Sample Power BI queries to display rollup of child work item values to the parent 
+description: Sample Power BI queries to display rollup of child work item values to the parent
 ms.technology: devops-analytics
 ms.reviewer: greggboe
 ms.author: kaelli
 ms.custom: powerbisample
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ms.date: 08/07/2019
 ---
 
@@ -16,13 +16,12 @@ ms.date: 08/07/2019
 
 [!INCLUDE [temp](../includes/version-azure-devops.md)]
 
-This article shows you how to generate the rollup count of User Stories and total Story Points for a given set of Features. An example is shown in the following image. 
+This article shows you how to generate the rollup count of User Stories and total Story Points for a given set of Features. An example is shown in the following image.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample - Boards - Rollup - Report](media/odatapowerbi-featurerollup-report.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
-
 
 ## Sample queries
 
@@ -36,14 +35,14 @@ let
             &"$filter=WorkItemType eq 'Feature'"
             &" and State ne 'Cut'"
             &" and startswith(Area/AreaPath,'{areapath}')"
-            &" and Descendants/any()"    
+            &" and Descendants/any()"
         &"& $select=WorkItemId,Title,WorkItemType,State,AreaSK"
-        &"& $expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath),"        
+        &"& $expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath),"
             &"Descendants("
                 &"$apply=filter(WorkItemType eq 'User Story')"
                 &"/aggregate($count as CountOfUserStories, StoryPoints with sum as TotalStoryPoints)"
-            &")", 
-        null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])  
+            &")",
+        null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -66,16 +65,15 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-***
+---
 
 ### Substitution strings
 
 [!INCLUDE [temp](includes/sample-query-substitutions.md)]
+
 - {areapath} - Your Area Path. Example format: Project\Level1\Level2
 
-
 ### Query breakdown
-
 
 The following table describes each part of the query.
 
@@ -95,7 +93,6 @@ The following table describes each part of the query.
 </tbody>
 </table>
 
-
 ## Power BI transforms
 
 [!INCLUDE [temp](includes/sample-expandcolumns.md)]
@@ -104,18 +101,18 @@ The following table describes each part of the query.
 
 1. Choose the expand button, and select the columns to report on:
 
-    > [!div class="mx-imgBorder"] 
-    > ![Power BI + OData - expanding an entity column](media/odatapowerbi-expanddescendants.png)
+   > [!div class="mx-imgBorder"]
+   > ![Power BI + OData - expanding an entity column](media/odatapowerbi-expanddescendants.png)
 
 2. Check all the columns and choose **OK**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Power BI + OData - expanding Descendants](media/odatapowerbi-expandrollup.png)
+   > [!div class="mx-imgBorder"]
+   > ![Power BI + OData - expanding Descendants](media/odatapowerbi-expandrollup.png)
 
 3. The Descendants entity is flattened to the selected columns:
 
-    > [!div class="mx-imgBorder"] 
-    > ![Power BI + OData - expanded Descendants](media/odatapowerbi-expandedrollup.png)
+   > [!div class="mx-imgBorder"]
+   > ![Power BI + OData - expanded Descendants](media/odatapowerbi-expandedrollup.png)
 
 ### Replace null values in rollup fields
 
@@ -129,31 +126,30 @@ Repeat for all the rollup columns.
 
 [!INCLUDE [temp](includes/sample-finish-query.md)]
 
-
 ## Create the report
 
-Power BI shows you the fields you can report on. 
+Power BI shows you the fields you can report on.
 
-> [!NOTE]   
-> The example below assumes that no one renamed any columns. 
+> [!NOTE]  
+> The example below assumes that no one renamed any columns.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample - Boards - Rollup - Fields](media/odatapowerbi-featurerollup-fields.png)
 
 For a simple report, do the following steps:
 
-1. Choose the Power BI Visualization **Table**. 
+1. Choose the Power BI Visualization **Table**.
 1. Add the following fields to **Values**
-    - WorkItemId
-    - WorkItemType
-    - Title
-    - State
-    - Descendants.CountOfUserStories
-    - Descendants.TotalStoryPoints
+   - WorkItemId
+   - WorkItemType
+   - Title
+   - State
+   - Descendants.CountOfUserStories
+   - Descendants.TotalStoryPoints
 
 The example report displays:
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample - Boards - Rollup - Report](media/odatapowerbi-featurerollup-report.png)
 
 [!INCLUDE [temp](includes/sample-multipleteams.md)]
@@ -164,7 +160,7 @@ You can use the following additional queries to create different but similar rep
 
 ### Filter by Teams, rather than Area Path
 
-You can generate rollup reports filtering by Team Name rather than Area Path.  
+You can generate rollup reports filtering by Team Name rather than Area Path.
 
 #### [Power BI query](#tab/powerbi/)
 
@@ -176,14 +172,14 @@ let
             &"$filter=WorkItemType eq 'Feature'"
             &" and State ne 'Cut'"
             &" and (Teams/any(x:x/TeamName eq '{teamname}) or Teams/any(x:x/TeamName eq '{teamname}) or Teams/any(x:x/TeamName eq '{teamname})"
-            &" and Descendants/any()"    
+            &" and Descendants/any()"
         &"& $select=WorkItemId,Title,WorkItemType,State,AreaSK"
-        &"& $expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath),"        
+        &"& $expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath),"
             &"Descendants("
                 &"$apply=filter(WorkItemType eq 'User Story')"
                 &"/aggregate($count as CountOfUserStories, StoryPoints with sum as TotalStoryPoints)"
-            &")", 
-        null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])  
+            &")",
+        null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -206,11 +202,11 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-***
+---
 
 ### Rollup Story Points to Epics
 
-You can rollup story points to Epics using the following query.  
+You can rollup story points to Epics using the following query.
 
 #### [Power BI](#tab/powerbi/)
 
@@ -222,14 +218,14 @@ let
             &"$filter=WorkItemType eq 'Epic'"
             &" and State ne 'Cut'"
             &" and startswith(Area/AreaPath,'{areapath}')"
-            &" and Descendants/any(d:d/WorkItemType eq 'User Story')"    
+            &" and Descendants/any(d:d/WorkItemType eq 'User Story')"
         &"& $select=WorkItemId,Title,WorkItemType,State,AreaSK"
-        &"& $expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath),"        
+        &"& $expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath),"
             &"Descendants("
                 &"$apply=filter(WorkItemType eq 'User Story')"
                 &"/aggregate(StoryPoints with sum as TotalStoryPoints)"
-            &")", 
-        null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])  
+            &")",
+        null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -252,9 +248,9 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-***
+---
 
-### Rollup Tasks Remaining Work to Features 
+### Rollup Tasks Remaining Work to Features
 
 #### [Power BI](#tab/powerbi/)
 
@@ -266,14 +262,14 @@ let
             &"$filter=WorkItemType eq 'Feature'"
             &" and State ne 'Cut'"
             &" and startswith(Area/AreaPath,'{areapath}')"
-            &" and Descendants/any()"    
+            &" and Descendants/any()"
         &"& $select=WorkItemId,Title,WorkItemType,State,AreaSK"
-        &"& $expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath),"        
+        &"& $expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath),"
             &"Descendants("
                 &"$apply=filter(WorkItemType eq 'Task')"
                 &"/aggregate(RemainingWork with sum as TotalRemainingWork)"
-            &")", 
-        null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])  
+            &")",
+        null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -296,7 +292,7 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-***
+---
 
 ### Rollup Bug count to Features
 
@@ -310,14 +306,14 @@ let
             &"$filter=WorkItemType eq 'Feature'"
             &" and State ne 'Cut'"
             &" and startswith(Area/AreaPath,'{areapath}')"
-            &" and Descendants/any()"    
+            &" and Descendants/any()"
         &"& $select=WorkItemId,Title,WorkItemType,State,AreaSK"
-        &"& $expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath),"        
+        &"& $expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath),"
             &"Descendants("
                 &"$apply=filter(WorkItemType eq 'Bug')"
                 &"/aggregate($count as CountOfBugs)"
-            &")", 
-        null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])  
+            &")",
+        null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -340,7 +336,7 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-***
+---
 
 ## Full list of sample reports
 

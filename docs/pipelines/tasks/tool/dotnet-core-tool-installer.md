@@ -6,7 +6,7 @@ ms.assetid: B0CE7256-7898-45D3-9CB5-176B752BFEA6
 ms.author: puagarw
 author: pulkitaggarwl
 ms.date: 10/21/2019
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ---
 
 # Use .NET Core task
@@ -14,7 +14,7 @@ monikerRange: '>= azure-devops-2019'
 **Azure Pipelines**
 
 Use this task to acquire a specific version of .NET Core from the Internet or the tools cache
-and add it to the PATH. 
+and add it to the PATH.
 
 You can also use this task to change the version of .NET Core used in subsequent tasks like [.NET Core cli task](https://github.com/Microsoft/azure-pipelines-tasks/tree/master/Tasks/DotNetCoreCLIV2).
 

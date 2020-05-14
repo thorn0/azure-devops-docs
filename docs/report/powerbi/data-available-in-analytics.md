@@ -1,13 +1,13 @@
 ---
 title: Data available from Analytics
 titleSuffix: Azure DevOps
-description: Data available for reporting purposes using Analytics for Azure DevOps 
+description: Data available for reporting purposes using Analytics for Azure DevOps
 ms.technology: devops-analytics
-ms.reviewer: greggboe   
+ms.reviewer: greggboe
 ms.author: kaelli
 author: KathrynEE
 ms.topic: conceptual
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ms.date: 10/24/2019
 ---
 
@@ -15,17 +15,16 @@ ms.date: 10/24/2019
 
 [!INCLUDE [temp](../includes/version-azure-devops.md)]
 
-Analytics provides the reporting platform for Azure DevOps. Analytics is generally available for Azure DevOps Service and in preview for Azure DevOps Server 2019. 
-
+Analytics provides the reporting platform for Azure DevOps. Analytics is generally available for Azure DevOps Service and in preview for Azure DevOps Server 2019.
 
 ::: moniker range="azure-devops-2019"
 
-> [!NOTE]   
-> For Azure DevOps Server 2019, you can use Analytics in place of SQL Server Reporting Services or along side it. However, if you plan to use the Inheritance process model to customize work tracking, you can only use Analytics for reporting, the project collection must not be configured to support reporting. To learn more about the Inheritance process model, see [About process customization and inherited processes](/azure/devops/organizations/settings/work/inheritance-process-model). 
+> [!NOTE]  
+> For Azure DevOps Server 2019, you can use Analytics in place of SQL Server Reporting Services or along side it. However, if you plan to use the Inheritance process model to customize work tracking, you can only use Analytics for reporting, the project collection must not be configured to support reporting. To learn more about the Inheritance process model, see [About process customization and inherited processes](/azure/devops/organizations/settings/work/inheritance-process-model).
 
 ::: moniker-end
 
-Currently, you can access the following data from Analytics. This information was last updated on August 6, 2019 
+Currently, you can access the following data from Analytics. This information was last updated on August 6, 2019
 
 <table>
 <tr valign="bottom">
@@ -74,16 +73,14 @@ Currently, you can access the following data from Analytics. This information wa
 </tbody>
 </table>
 
-> [!NOTE]   
-> Analytics doesn't support reporting on plain text and HTML fields at this time. 
+> [!NOTE]  
+> Analytics doesn't support reporting on plain text and HTML fields at this time.
 
 As more data types come online, we will update this page. Look for announcements on the [Microsoft DevOps Blog](https://devblogs.microsoft.com/devops/tag/reporting/).
 
-
 ## Try this next
 
-> [!div class="nextstepaction"]
-> [Dataset design for the Power BI Azure DevOps Connector](data-connector-dataset.md)
+> [!div class="nextstepaction"][dataset design for the power bi azure devops connector](data-connector-dataset.md)
 
 ## Related articles
 

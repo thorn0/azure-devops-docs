@@ -1,15 +1,15 @@
 ---
 title: About projects and scaling your organization
 titleSuffix: Azure DevOps
-ms.custom: seodec18  
+ms.custom: seodec18
 description: Understand how to structure your project to support collaboration on building software solutions.
-ms.technology: devops-new-user 
-ms.assetid:  
+ms.technology: devops-new-user
+ms.assetid:
 ms.author: chcomley
 author: chcomley
 ms.date: 11/20/2019
 ms.topic: conceptual
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # About projects and scaling your organization
@@ -31,6 +31,7 @@ When you create your project, a team of the same name is automatically created. 
 
 <strong>Multiple projects and teams defined within organization or collection</strong>
 <img src="media/about-projects/multiple-projects-concept.png" alt="Scaled collection-project-team conceptual image"/><br/>
+
 </td>
 </tr>
 </tbody>
@@ -38,12 +39,12 @@ When you create your project, a team of the same name is automatically created. 
 
 The collection-project-team structure provides teams a high-level of autonomy to configure their tools in ways that work for them. It also supports administrative tasks to occur at the appropriate level. As your organization grows, your tools can grow to support a [culture of team autonomy as well as organizational alignment](../../boards/plans/agile-culture.md).
 
-<a id="scale">  </a>
-<a id="collection-project-team-structure">  </a>
+<a id="scale"> </a>
+<a id="collection-project-team-structure"> </a>
 
 ## How do you manage work across the enterprise?
 
-*How do you scale your DevOps and Agile tools to support your growing enterprise?*  
+_How do you scale your DevOps and Agile tools to support your growing enterprise?_
 
 When you connect to Azure DevOps, you connect to an organization or project collection. Within that container, one or more projects may be defined. At a minimum, at least one project must be created in order to use the system.
 
@@ -80,8 +81,8 @@ You can view the projects defined for your organization by opening the **Project
 
 1. Choose the ![](../../media/icons/project-icon.png) Azure DevOps logo to open **Projects**.
 
-    > [!div class="mx-imgBorder"]  
-    > ![Open Projects](media/about-projects/projects-hub-vert.png)  
+   > [!div class="mx-imgBorder"]  
+   > ![Open Projects](media/about-projects/projects-hub-vert.png)
 
 2. From there, you can choose a project from the set of projects listed.
 
@@ -91,13 +92,13 @@ You can view the projects defined for your organization by opening the **Project
 
 1. Choose the ![](../../media/icons/project-icon.png) Azure DevOps logo to open **Projects**.
 
-    > [!div class="mx-imgBorder"]  
-    > ![Open Projects, horizontal nav](../../media/settings/open-project-hub-horz.png)
+   > [!div class="mx-imgBorder"]  
+   > ![Open Projects, horizontal nav](../../media/settings/open-project-hub-horz.png)
 
 2. From there, you can choose a project from the set of projects listed.
 
-    > [!div class="mx-imgBorder"]  
-    > ![Open Projects, horizontal nav](media/about-projects/projects-hub-horz.png)
+   > [!div class="mx-imgBorder"]  
+   > ![Open Projects, horizontal nav](media/about-projects/projects-hub-horz.png)
 
 ::: moniker-end
 
@@ -105,8 +106,8 @@ You can view the projects defined for your organization by opening the **Project
 
 1. Choose the name of the server.
 
-    > [!div class="mx-imgBorder"]  
-    > ![Open Projects, horizontal nav](media/about-projects/open-projects-tfs-15.png)
+   > [!div class="mx-imgBorder"]  
+   > ![Open Projects, horizontal nav](media/about-projects/open-projects-tfs-15.png)
 
 2. From there, you can choose a project from the set of projects listed.
 
@@ -114,7 +115,7 @@ You can view the projects defined for your organization by opening the **Project
 
 ## When to add another project
 
-In general, we recommend that you use a single project to support your organization or enterprise. A single project minimizes the maintenance of administrative tasks and supports the most optimized / full-flexibility [cross-link object](../../boards/queries/link-work-items-support-traceability.md) experience.  
+In general, we recommend that you use a single project to support your organization or enterprise. A single project minimizes the maintenance of administrative tasks and supports the most optimized / full-flexibility [cross-link object](../../boards/queries/link-work-items-support-traceability.md) experience.
 
 Even if you have many teams working on hundreds of different applications and software projects, you can most easily manage them within a single project. A project serves to isolate data stored within it; you can't easily move data from one project to another. When you move data from one project to another, you typically lose the history associated with that data.
 
@@ -124,8 +125,8 @@ Even if you have many teams working on hundreds of different applications and so
 Instances where you may want to add another project include the following:
 
 - To prohibit or manage access to the information contained within a project to select groups
-- To support custom work tracking processes for specific business units within your organization  
-- To support entirely separate business units that have their own administrative policies and administrators  
+- To support custom work tracking processes for specific business units within your organization
+- To support entirely separate business units that have their own administrative policies and administrators
 - To support testing customization activities or adding extensions prior to rolling out changes to the working project
 - To support an Open Source Software (OSS) project
 
@@ -135,7 +136,7 @@ Instances where you may want to add another project include the following:
 Instances where you may want to add another project include the following:
 
 - To prohibit or manage access to the information contained within a project
-- To support custom work tracking processes for specific business units within your organization  
+- To support custom work tracking processes for specific business units within your organization
 - To support entirely separate business units that have their own administrative policies and administrators
 - To support testing customization activities or adding extensions prior to rolling out changes to the working project
 
@@ -149,17 +150,17 @@ You can add either public or private projects to your organization. You can also
 
 Private projects require that you add and manage user access. Users must sign-in to gain access to a project, even if it is read-only access. All users added to a project gain access to information contained with the project and organization. For details, see [Resources granted to project members](resources-granted-to-project-members.md).
 
-A public project, on the other hand, doesn't require users  to sign in to gain read-only access to many of the services. Public projects provide support to share code with others and to support continuous integration/continuous deployment (CI/CD) of open source software. To learn more about public projects, see [What is a public project?](../public/about-public-projects.md).
+A public project, on the other hand, doesn't require users to sign in to gain read-only access to many of the services. Public projects provide support to share code with others and to support continuous integration/continuous deployment (CI/CD) of open source software. To learn more about public projects, see [What is a public project?](../public/about-public-projects.md).
 
 ::: moniker-end
 
-<a id="project-structure">  </a>
+<a id="project-structure"> </a>
 
 ## Structure your project
 
 When you add a project, look at using the following elements to structure it to support your business needs:
 
-- [Create a Git repository](../../repos/git/creatingrepo.md) for each sub-project or application, or [create root folders within a TFVC repository](../../repos/tfvc/branch-folders-files.md) for each sub-project. If you're using TFVC and heading toward a consolidated project model, create root folders for different teams and projects, just as you would create separate repos in Git. Folders can be secured as needed and workspace mappings can control what segments of the repo you're actively using. 
+- [Create a Git repository](../../repos/git/creatingrepo.md) for each sub-project or application, or [create root folders within a TFVC repository](../../repos/tfvc/branch-folders-files.md) for each sub-project. If you're using TFVC and heading toward a consolidated project model, create root folders for different teams and projects, just as you would create separate repos in Git. Folders can be secured as needed and workspace mappings can control what segments of the repo you're actively using.
 - [Define area paths](../settings/set-area-paths.md) to support different sub-projects, products, features, or teams.
 - [Define iteration paths (aka sprints)](../settings/set-iteration-paths-sprints.md) that can be shared across teams.
 - [Add a team](../../organizations/settings/add-teams.md) for each product team that develops a set of features for a product. Note that each team you create automatically creates a security group for that team which you can use to manage permissions for a team. See also, [Portfolio management](../../boards/plans/portfolio-management.md).
@@ -176,7 +177,7 @@ You can configure and customize most services and applications to support your b
 - **Dashboards**: Each team can [configure their set of dashboards](../../report/dashboards/dashboards.md) to share information and monitor their progress.
 - **Source control**: For each [Git repository](../../repos/git/index.yml), you can apply branch policies and define branch permissions. For TFVC repositories, you can [set check-in policies](../../repos/tfvc/add-check-policies.md).
 - **Work tracking**: You can add fields, change the workflow, add custom rules, and add custom pages to the work item form of most work item types. You can also add custom work item types. For details, see [Customize an inheritance process](../settings/work/inheritance-process-model.md).
-- **Azure Pipelines**: You can fully customize your build and release pipelines, define build steps, release environments, and deployment schedule. For details, see [Build and Release](../../pipelines/index.yml).  
+- **Azure Pipelines**: You can fully customize your build and release pipelines, define build steps, release environments, and deployment schedule. For details, see [Build and Release](../../pipelines/index.yml).
 - **Azure Test Plans**: You can define and configure test plans, test suites, and test cases as well as configure test environments; additionally you can add test steps within your build pipelines. For details, see [Exploratory & Manual Testing](../../test/index.yml) and [continuous testing for your builds](../../pipelines/ecosystems/dotnet-core.md#run-your-tests).
 
 ::: moniker-end
@@ -186,7 +187,7 @@ You can configure and customize most services and applications to support your b
 - **Dashboards**: Each team can [configure their set of dashboards](../../report/dashboards/dashboards.md) to share information and monitor their progress.
 - **Source control**: For each [Git repository](../../repos/git/index.yml), you can apply branch policies and define branch permissions. For TFVC repositories, you can [set check-in policies](../../repos/tfvc/add-check-policies.md).
 - **Work tracking**: You can add fields, change the workflow, add custom rules, and add custom pages to the work item form of most work item types. You can also add custom work item types. For details, see [Customize the On-premises XML process model](../../reference/on-premises-xml-process-model.md).
-- **Build and Release**: You can fully customize your build and release pipelines, define build steps, release environments, and deployment schedule. For details, see [Build and Release](../../pipelines/index.yml).  
+- **Build and Release**: You can fully customize your build and release pipelines, define build steps, release environments, and deployment schedule. For details, see [Build and Release](../../pipelines/index.yml).
 - **Test**: You can define and configure test plans, test suites, and test cases as well as configure test environments; additionally you can add test steps within your build pipelines. For details, see [Exploratory & Manual Testing](../../test/index.yml) and [continuous testing for your builds](../../pipelines/ecosystems/dotnet-core.md#run-your-tests).
 
 ::: moniker-end
@@ -195,18 +196,18 @@ You can configure and customize most services and applications to support your b
 
 ## When to add a team, scaling Agile tools across the enterprise
 
-As your organization grows, you'll want to add teams to provide them the Agile tools that each team can configure to meet their workflow. To learn more, see the following articles.  
+As your organization grows, you'll want to add teams to provide them the Agile tools that each team can configure to meet their workflow. To learn more, see the following articles.
 
 - [Scale Agile to large teams](/azure/devops/learn/agile/scale-agile-large-teams)
 - [About teams and Agile tools](../settings/about-teams-and-settings.md)
-- Manage a [portfolio of backlogs](../../boards/plans/portfolio-management.md) and gain insight into each team's progress as well as the progress of all programs.  
+- Manage a [portfolio of backlogs](../../boards/plans/portfolio-management.md) and gain insight into each team's progress as well as the progress of all programs.
 - Use [Delivery plans](../../boards/plans/review-team-plans.md) to review the schedule of stories or features your teams plan to deliver. Delivery plans show the scheduled work items by sprint (iteration path) of selected teams against a calendar view.
 - Incrementally adopt [practices that scale](../../boards/plans/practices-that-scale.md) to create greater rhythm and flow within your organization, engage customers, improve project visibility, and develop a productive workforce.
 - Structure projects to gain [visibility across teams](../../boards/plans/visibility-across-teams.md) or to support [epics, release trains, and multiple backlogs to support the Scaled Agile Framework](../../boards/plans/scaled-agile-framework.md).
 
-To review  stories and short videos on how Microsoft transitioned from waterfall to Agile, see Scaling Agile Across the Enterprise.
+To review stories and short videos on how Microsoft transitioned from waterfall to Agile, see Scaling Agile Across the Enterprise.
 
-<a id="clients">  </a>
+<a id="clients"> </a>
 
 ## Clients that support connection to a project
 
@@ -242,10 +243,9 @@ See also, [Compatibility with Azure DevOps Server versions](/azure/devops/server
 
 ## Q & A
 
-### Q: Can I move or transfer a project to another organization or collection? 
+### Q: Can I move or transfer a project to another organization or collection?
 
-**A:** Not without losing data. You can't move a project from one collection/organization to another collection/organization without losing data. You can either manually copy resources and leave some behind, or some third party tool, such as [Opshub Visual Studio Migration Utility](https://www.opshub.com/products/opshub-visual-studio-migration-utility/) that copies data using the REST APIs. 
- 
+**A:** Not without losing data. You can't move a project from one collection/organization to another collection/organization without losing data. You can either manually copy resources and leave some behind, or some third party tool, such as [Opshub Visual Studio Migration Utility](https://www.opshub.com/products/opshub-visual-studio-migration-utility/) that copies data using the REST APIs.
 
 ## Related articles
 
@@ -254,10 +254,10 @@ See also, [Compatibility with Azure DevOps Server versions](/azure/devops/server
 - [What do I get with a project?](../../user-guide/services.md?toc=/azure/devops/organizations/projects/toc.json&bc=/azure/devops/organizations/projects/breadcrumb/toc.json)
 - [Understand differences between Azure DevOps](../../user-guide/about-azure-devops-services-tfs.md?toc=/azure/devops/organizations/projects/toc.json&bc=/azure/devops/organizations/projects/breadcrumb/toc.json)
 
-<!--- Various blog resources 
+<!--- Various blog resources
 
-- [](http://geekswithblogs.net/Optikal/archive/2013/09/05/153944.aspx](http://geekswithblogs.net/Optikal/archive/2013/09/05/153944.aspx)  
-- [One project to rule them out](https://nkdagility.com/one-team-project/)  
+- [](http://geekswithblogs.net/Optikal/archive/2013/09/05/153944.aspx](http://geekswithblogs.net/Optikal/archive/2013/09/05/153944.aspx)
+- [One project to rule them out](https://nkdagility.com/one-team-project/)
 - [Working within a single Project with Team Foundation Server 2012](https://nkdagility.com/working-within-a-single-team-project-with-team-foundation-server-2012/)
 
 -->

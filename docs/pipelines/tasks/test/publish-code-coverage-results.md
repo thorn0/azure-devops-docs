@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: pbora
 author: pboraMSFT
 ms.date: 04/20/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Publish Code Coverage Results task
@@ -37,29 +37,31 @@ To generate the HTML code coverage report you need dotnet 2.0.0 or later on the 
 
 [!INCLUDE [temp](../includes/yaml/PublishCodeCoverageResultsV1.md)]
 
-The **codeCoverageTool** and **summaryFileLocation** parameters are mandatory. 
+The **codeCoverageTool** and **summaryFileLocation** parameters are mandatory.
 
-To publish code coverage results for Javascript with istanbul using YAML, see [JavaScript](../../ecosystems/javascript.md) in the Ecosystems section of these topics, which also includes examples for other languages. 
+To publish code coverage results for Javascript with istanbul using YAML, see [JavaScript](../../ecosystems/javascript.md) in the Ecosystems section of these topics, which also includes examples for other languages.
 
 ::: moniker-end
 
 ## Arguments
 
-|Argument|Description|
-|--- |--- |
-|`summaryFileLocation` <br/>Path to summary files|(Required) Path of the summary file containing code coverage statistics, such as line, method, and class coverage. The value may contain minimatch patterns. <br/>For example: `$(System.DefaultWorkingDirectory)/MyApp/**/site/cobertura/coverage.xml`|
-|`pathToSources` <br/>Path to Source files|(Optional) Path to source files is required when coverage XML reports do not contain absolute path to source files. <br/>For example, JaCoCo reports do not use absolute paths and when publishing JaCoCo coverage for Java apps, the pattern would be similar to `$(System.DefaultWorkingDirectory)/MyApp/src/main/java/`. <br/>This input is also needed if tests are run in a docker container. This input should point to absolute path to source files on the host. <br/>For example, `$(System.DefaultWorkingDirectory)/MyApp/`|
-|`failIfCoverageEmpty`<br/>Fail if code coverage results are missing|(Optional) Fail the task if code coverage did not produce any results to publish.|
+| Argument                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `summaryFileLocation` <br/>Path to summary files                    | (Required) Path of the summary file containing code coverage statistics, such as line, method, and class coverage. The value may contain minimatch patterns. <br/>For example: `$(System.DefaultWorkingDirectory)/MyApp/**/site/cobertura/coverage.xml`                                                                                                                                                                                                                                                                               |
+| `pathToSources` <br/>Path to Source files                           | (Optional) Path to source files is required when coverage XML reports do not contain absolute path to source files. <br/>For example, JaCoCo reports do not use absolute paths and when publishing JaCoCo coverage for Java apps, the pattern would be similar to `$(System.DefaultWorkingDirectory)/MyApp/src/main/java/`. <br/>This input is also needed if tests are run in a docker container. This input should point to absolute path to source files on the host. <br/>For example, `$(System.DefaultWorkingDirectory)/MyApp/` |
+| `failIfCoverageEmpty`<br/>Fail if code coverage results are missing | (Optional) Fail the task if code coverage did not produce any results to publish.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 ## Docker
-For apps using docker, build and tests may run inside the container, generating code coverage results within the container. In order to publish the results to  the pipeline, the resulting artifacts should be to be made available to the **Publish Code Coverage Results** task. For reference you can see a similar example for publishing test results under [Build, test, and publish results with a Docker file](publish-test-results.md) section for **Docker**.
+
+For apps using docker, build and tests may run inside the container, generating code coverage results within the container. In order to publish the results to the pipeline, the resulting artifacts should be to be made available to the **Publish Code Coverage Results** task. For reference you can see a similar example for publishing test results under [Build, test, and publish results with a Docker file](publish-test-results.md) section for **Docker**.
 
 ## View results
+
 In order to view the code coverage results in the pipeline, see [Review code coverage results](../../test/review-code-coverage-results.md)
 
 ## Related tasks
 
-* [Publish Test Results](publish-test-results.md)
+- [Publish Test Results](publish-test-results.md)
 
 ## Open source
 
@@ -67,9 +69,9 @@ This task is open source [on GitHub](https://github.com/Microsoft/azure-pipeline
 
 ## Q & A
 
-### Is code coverage data merged when multiple files are provided as input to the task or multiple tasks are used in the pipeline? 
-At present, the code coverage reporting functionality provided by this task is limited and it does not merge coverage data. If you provide multiple files as input to the task, only the first match is considered. 
+### Is code coverage data merged when multiple files are provided as input to the task or multiple tasks are used in the pipeline?
+
+At present, the code coverage reporting functionality provided by this task is limited and it does not merge coverage data. If you provide multiple files as input to the task, only the first match is considered.
 If you use multiple publish code coverage tasks in the pipeline, the summary and report is shown for the last task. Any previously uploaded data is ignored.
 
 [!INCLUDE [test-help-support-shared](../../includes/test-help-support-shared.md)]
-

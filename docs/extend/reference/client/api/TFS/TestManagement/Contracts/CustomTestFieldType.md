@@ -16,9 +16,9 @@ Module path: `TFS/TestManagement/Contracts`
 
 ### Values
 
-* `Bit` 
-* `DateTime` 
-* `Int` 
-* `Float` 
-* `String` 
-* `Guid` 
+- `Bit`
+- `DateTime`
+- `Int`
+- `Float`
+- `String`
+- `Guid`

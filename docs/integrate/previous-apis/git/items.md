@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Git Items | REST API Reference for Team Foundation Server
 description: Work with Git items (files and folders) programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: B9F8F05A-1852-49CE-8B3E-75A30D41487A
@@ -30,82 +30,125 @@ There are [code samples](https://github.com/microsoft/azure-devops-dotnet-sample
 
 This API does content negotiation based on the `Accept` header you send.
 
-| `Accept` header value      | API behavior
-|:---------------------------|:------------
-| `application/zip`          | Returns zipped contents of the item requested
-| `application/json`         | Returns metadata about the item
-| `text/plain` or other      | Return contents of the item requested; ignores requests for recursion
+| `Accept` header value | API behavior                                                          |
+| :-------------------- | :-------------------------------------------------------------------- |
+| `application/zip`     | Returns zipped contents of the item requested                         |
+| `application/json`    | Returns metadata about the item                                       |
+| `text/plain` or other | Return contents of the item requested; ignores requests for recursion |
 
 ## Get a file
+
 <a name="afile" />
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/items?api-version={version}&scopePath={filePath}[&includeContentMetadata={bool}&lastProcessedChange={bool}]
 ```
 
-| Parameter              | Type    | Default | Notes
-|:-----------------------|:--------|:--------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance               | string  |         | [VS Team Services account](../../get-started/rest/basics.md) ({account}.visualstudio.com) or [TFS server](/azure/devops/integrate/get-started/rest/basics) ({server:port}).
-| project                | string  |         | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository             | string  |         | ID or name of the [repository](./repositories.md).
+| instance | string | | [VS Team Services account](../../get-started/rest/basics.md) ({account}.visualstudio.com) or [TFS server](/azure/devops/integrate/get-started/rest/basics) ({server:port}).
+| project | string | | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | | ID or name of the [repository](./repositories.md).
 | Query
-| api-version            | string  |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| scopePath              | string  | /       | Path to the item in the repository. `/WebSite/WebSite/Views/Home/_Home.cshtml`
-| includeContentMetadata | bool    | false   | Use `true` to include additional metadata about the item content, like the file type.
-| latestProcessedChange  | bool    | false   | `true` gets the [commit](./commits.md) that contains the previous change to the retrieved version of the item. Of course, the root item ("/") has no commits associated with it, so there will not be a commit returned with the root item.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| scopePath | string | / | Path to the item in the repository. `/WebSite/WebSite/Views/Home/_Home.cshtml`
+| includeContentMetadata | bool | false | Use `true` to include additional metadata about the item content, like the file type.
+| latestProcessedChange | bool | false | `true` gets the [commit](./commits.md) that contains the previous change to the retrieved version of the item. Of course, the root item ("/") has no commits associated with it, so there will not be a commit returned with the root item.
 
 [!INCLUDE [ID_vs_Name](_data/id_or_name.md)]
 
 ### Stream a file
+
 <a name="streamafile" />
 
-When you get an item that is a file, the response is a stream (`application/octet-stream`) that contains the contents of the file. You can also get a [specific version](#getaspecificversion) of an item. 
+When you get an item that is a file, the response is a stream (`application/octet-stream`) that contains the contents of the file. You can also get a [specific version](#getaspecificversion) of an item.
 
 #### Sample request
+
 ```no-highlight
 GET http://fabrikam-fiber-inc:8080/DefaultCollection/Fabrikam-Fiber-Git/_apis/repos/git/repositories/Fabrikam-Fiber-Git/items?scopePath=/WebSite/WebSite/Views/Home/_Home.cshtml&api-version=1.0
 ```
+
 #### Sample response
 
 ```html
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+  <h1>ASP.NET</h1>
+  <p class="lead">
+    ASP.NET is a free web framework for building great Web sites and Web
+    applications using HTML, CSS, and JavaScript.
+  </p>
+  <p>
+    <a href="https://asp.net" class="btn btn-primary btn-large"
+      >Learn more &raquo;</a
+    >
+  </p>
 </div>
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET Single Page Application (SPA) helps you build applications that include significant client-side interactions using HTML, CSS, and JavaScript.
-            It's now easier than ever before to getting started writing highly interactive web applications.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=273732">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+  <div class="col-md-4">
+    <h2>Getting started</h2>
+    <p>
+      ASP.NET Single Page Application (SPA) helps you build applications that
+      include significant client-side interactions using HTML, CSS, and
+      JavaScript. It's now easier than ever before to getting started writing
+      highly interactive web applications.
+    </p>
+    <p>
+      <a
+        class="btn btn-default"
+        href="https://go.microsoft.com/fwlink/?LinkId=273732"
+        >Learn more &raquo;</a
+      >
+    </p>
+  </div>
+  <div class="col-md-4">
+    <h2>Get more libraries</h2>
+    <p>
+      NuGet is a free Visual Studio extension that makes it easy to add, remove,
+      and update libraries and tools in Visual Studio projects.
+    </p>
+    <p>
+      <a
+        class="btn btn-default"
+        href="https://go.microsoft.com/fwlink/?LinkId=301866"
+        >Learn more &raquo;</a
+      >
+    </p>
+  </div>
+  <div class="col-md-4">
+    <h2>Web Hosting</h2>
+    <p>
+      You can easily find a web hosting company that offers the right mix of
+      features and price for your applications.
+    </p>
+    <p>
+      <a
+        class="btn btn-default"
+        href="https://go.microsoft.com/fwlink/?LinkId=301867"
+        >Learn more &raquo;</a
+      >
+    </p>
+  </div>
 </div>
 ```
+
 ##### Status code: 200
 
 ### Zip a folder
+
 <a name="zipafolder" />
 
 Set `scopePath` to the folder that you want to get in a zipped format and include the request header `Accept: application/zip`.
 
 #### Sample request
+
 ```http
 Accept: application/zip
 ```
+
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/items?api-version={version}&scopePath={folderPath}
 ```
@@ -123,14 +166,17 @@ Set the accept header to `application/json` to get the metadata for a file, or f
 ```http
 Accept: application/json
 ```
+
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/items?api-version={version}&scopepath=/mywebsite/mywebsite/views/home/_home.cshtml
 ```
 
 #### Response
+
 The objectId in the metadata is the SHA1 hash of the item.
 
 ##### Status code: 200
+
 ```json
 {
   "count": 1,
@@ -144,7 +190,9 @@ The objectId in the metadata is the SHA1 hash of the item.
   ]
 }
 ```
+
 ### A folder
+
 <a name="afolder" />
 
 When you get an item that is a folder, the default response is the metadata (`application/json`).
@@ -174,8 +222,8 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ### A folder and its children
+
 <a name="afolderanditschildren" />
 
 Use `recursionLevel` (and an appropriate `Accept` header) to include the contents of the folder in the response.
@@ -294,8 +342,8 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ### Multiple items
+
 To get more than one item in a single batch, specify the path of each item in an array of item descriptors in the post body.
 You can specify the [version](#getaspecificversion) and [recursion level](#afolderanditschildren) for each item, too.
 
@@ -304,6 +352,7 @@ You can specify the [version](#getaspecificversion) and [recursion level](#afold
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4b63-824a-2ba458937249/itemsBatch?api-version=1.0
 ```
+
 ```json
 {
   "itemDescriptors": [
@@ -456,37 +505,38 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-
 }
 ```
 
-
 ## Get a specific version
+
 <a name="getaspecificversion" />
 
 You can indicate which version to get when you get a file, zip a folder, or get item metadata.
 
-| Parameter      | Type                                       | Default
-|:---------------|:-------------------------------------------|:---------|
+| Parameter | Type | Default |
+| :-------- | :--- | :------ |
+
+
 | URL
-| versionType    | enum { branch, commit, tag }               | branch
-| version        | string                                     | master
+| versionType | enum { branch, commit, tag } | branch
+| version | string | master
 | versionOptions | enum { firstParent, previousChange, None } | None
 | Query
-| api-version    | string                                     | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 Use the `versionType` and `version` parameters together.
 For example, to get an item from "mybranch", use `versionType=branch&version=mybranch`.
 
-| If `versionType` is... | `Version` is interpreted as...
-|:-----------------------|:--------------------------------
-| Branch                 | The name of a branch.
-| Tag                    | The name of a tag.
-| Commit                 | The ID of a commit.
+| If `versionType` is... | `Version` is interpreted as... |
+| :--------------------- | :----------------------------- |
+| Branch                 | The name of a branch.          |
+| Tag                    | The name of a tag.             |
+| Commit                 | The ID of a commit.            |
 
 You can also modify the version with the `versionOptions` parameter.
 
-| Value          | Effect
-|:---------------|:----------------------------------------------------------------------------------------------------------------------------
-| firstParent    | The parent branch to the version specified by the `versionType` and `version` parameters.
-| previousChange | The last version of the item that was changed prior to the version specified by the `versionType` and `version` parameters.
-| None           | No modification to the version specified by the `versionType` and `version` parameters.
+| Value          | Effect                                                                                                                      |
+| :------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| firstParent    | The parent branch to the version specified by the `versionType` and `version` parameters.                                   |
+| previousChange | The last version of the item that was changed prior to the version specified by the `versionType` and `version` parameters. |
+| None           | No modification to the version specified by the `versionType` and `version` parameters.                                     |
 
 When you specify a version with [recursion](#afolderanditschildren), the version is applied to the item and its children.
-

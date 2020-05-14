@@ -11,6 +11,6 @@ ms.date: 11/12/2019
 
 # ArtifactUriQueryResult
 
-| Field        | Type
-| :----------- | :--------
-| <code>artifactUrisQueryResult</code> | dictionary (string, array ([WorkItemReference](WorkItemReference.md)))
+| Field                                | Type                                                                   |
+| :----------------------------------- | :--------------------------------------------------------------------- |
+| <code>artifactUrisQueryResult</code> | dictionary (string, array ([WorkItemReference](WorkItemReference.md))) |

@@ -1,31 +1,28 @@
 ---
 title: Review team activities to support useful reports
 titleSuffix: TFS
-description: Ensure basic operations are performed by team members to generate useful SQL Server reports when working in Team Foundation Server    
-ms.assetid: 46456FBF-EECC-4096-9A98-3A9457F97EB2  
+description: Ensure basic operations are performed by team members to generate useful SQL Server reports when working in Team Foundation Server
+ms.assetid: 46456FBF-EECC-4096-9A98-3A9457F97EB2
 ms.technology: devops-analytics
 ms.topic: conceptual
 ms.author: kaelli
 author: KathrynEE
-monikerRange: "<= azure-devops-2019" 
+monikerRange: "<= azure-devops-2019"
 ms.date: 11/19/2018
 ---
 
-# Review team activities to support useful reports 
+# Review team activities to support useful reports
 
 [!INCLUDE [temp](../includes/tfs-report-platform-version.md)]
 
+> [!IMPORTANT] >**Feature availability**: You can only add a report server to an on-premises TFS. If you're using Azure DevOps, adding a report server isn't a supported option, instead, you can use [PowerBI](../powerbi/overview.md).
 
-> [!IMPORTANT]
->**Feature availability**: You can only add a report server to an on-premises TFS.  If you're using Azure DevOps, adding a report server isn't a supported option, instead, you can use [PowerBI](../powerbi/overview.md).
-
-This is the fourth task in the four-task sequence to add reports to your team project. To generate useful reports, team members must perform certain tasks. this article summarizes those tasks.     
+This is the fourth task in the four-task sequence to add reports to your team project. To generate useful reports, team members must perform certain tasks. this article summarizes those tasks.
 
 [![Add a report server](media/step-1-add-a-report-server.png)](add-a-report-server.md)
 [![Upload reports](media/step-2-upload-reports.png)](upload-reports.md)
-[![Grant permissions](media/step-3-grant-permissions.png)](grant-permissions-to-reports.md) 
+[![Grant permissions](media/step-3-grant-permissions.png)](grant-permissions-to-reports.md)
 [![Review team activities](media/step-4-review-team-activities.png)](review-team-activities-for-useful-reports.md)
-
 
 Now that you've uploaded reports, how do you use them to track progress, gain insight, and improve processes?
 
@@ -34,7 +31,8 @@ First, make sure your team is performing the activities that create the data tha
 Here's a summary of the reports that TFS provides and the team activities that are associated with them. Over time, you can use these reports to see trends and identify which practices and processes require more attention to deliver desired results.
 
 ## Monitor code quality
-Build reports track the quality of software under development. By defining tests to run automatically as part of each build definition and instrumenting tests to gather code coverage data, you can gain insight about the quality of the builds, tests, and code. 
+
+Build reports track the quality of software under development. By defining tests to run automatically as part of each build definition and instrumenting tests to gather code coverage data, you can gain insight about the quality of the builds, tests, and code.
 
 <table>
 <tr valign="top">
@@ -59,15 +57,15 @@ Build reports track the quality of software under development. By defining tests
 </table>
 
 > [!IMPORTANT]  
-> Build reports are only applicable for XAML builds, which are deprecated for TFS 2018 and later versions. If your build process isn't based on XAML builds, this report and the TFS Warehouse for builds won't yield any meaningful data.  
+> Build reports are only applicable for XAML builds, which are deprecated for TFS 2018 and later versions. If your build process isn't based on XAML builds, this report and the TFS Warehouse for builds won't yield any meaningful data.
 
+**Sample build success over time report**
 
-**Sample build success over time report**  
-
-![Sample build summary report](media/IC665009.png)  
+![Sample build summary report](media/IC665009.png)
 
 ## Monitor progress
-Project management reports provide insight into how much work the team is tackling within a sprint or release, and the rate of their progress. By linking work items and updating specific fields as work is performed, you can track the progress of individual stories and be able to more accurately estimate future activities. 
+
+Project management reports provide insight into how much work the team is tackling within a sprint or release, and the rate of their progress. By linking work items and updating specific fields as work is performed, you can track the progress of individual stories and be able to more accurately estimate future activities.
 
 <table width="100%">
 <tr valign="top">
@@ -116,10 +114,10 @@ Project management reports provide insight into how much work the team is tackli
 </table>
 
 **Sample stories overview report**  
-![Sample stories overview report](media/IC665011.png)  
-
+![Sample stories overview report](media/IC665011.png)
 
 ## Monitor test plans and bug tracking
+
 Test planning reports support monitoring the test progress and coverage of backlog items or user stories. Bug tracking reports illustrate the team's capacity to find and resolve bugs.
 
 <table width="100%">
@@ -146,29 +144,35 @@ Test planning reports support monitoring the test progress and coverage of backl
 </tr>
 </table>
 
-**Sample test plan progress report**   
-![Sample test plan progress report](media/IC665012.png)  
+**Sample test plan progress report**  
+![Sample test plan progress report](media/IC665012.png)
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
-
 ### Q: Do reports handle stories and substories or tasks and subtasks?
-**A:**  Yes, you can subdivide stories or backlog items as well as tasks, creating a nested hierarchy of both backlog items and tasks. You can nest items several levels deep. If you subdivide a task into subtasks, specify hours only for the subtasks. These hours are rolled up as summary values for the parent task and their parent backlog item. To correct reports you believe are in error, see [Address inaccuracies published for summary values](../sql-reports/address-inaccuracies-published-for-summary-values.md).
+
+**A:** Yes, you can subdivide stories or backlog items as well as tasks, creating a nested hierarchy of both backlog items and tasks. You can nest items several levels deep. If you subdivide a task into subtasks, specify hours only for the subtasks. These hours are rolled up as summary values for the parent task and their parent backlog item. To correct reports you believe are in error, see [Address inaccuracies published for summary values](../sql-reports/address-inaccuracies-published-for-summary-values.md).
 
 ### Q: Which reports depend on linking work items?
-**A:**  The overview and progress reports depend on linking tasks, test cases, and bugs to backlog items. You must link these items using the parent-child link for tasks and bugs and the Tested By link for test cases.
+
+**A:** The overview and progress reports depend on linking tasks, test cases, and bugs to backlog items. You must link these items using the parent-child link for tasks and bugs and the Tested By link for test cases.
 
 ### Q: Are these reports the same as the charts that appear in the web portal?
- **A:**  While some reports do display similar information, such as sprint burndown and velocity or status on all iterations, these reports are formatted differently and support additional filters. 
+
+**A:** While some reports do display similar information, such as sprint burndown and velocity or status on all iterations, these reports are formatted differently and support additional filters.
 
 ### Q: Do you want to create additional product areas or release milestones?
-**A:**  See [Modify areas or iterations](../../organizations/settings/set-area-paths.md).
+
+**A:** See [Modify areas or iterations](../../organizations/settings/set-area-paths.md).
 
 ### Q: Do you want to bulk edit work items to assign them to an area, iteration, team member, or priority?
-**A:**  See [Bulk modify work items](../../boards/backlogs/bulk-modify-work-items.md).
+
+**A:** See [Bulk modify work items](../../boards/backlogs/bulk-modify-work-items.md).
 
 ### Q: Do you want to add a field to track additional data?
-**A:**  See [Add or modify a work item field to support reporting](../../reference/xml/add-or-modify-work-item-fields-to-support-reporting.md).  
+
+**A:** See [Add or modify a work item field to support reporting](../../reference/xml/add-or-modify-work-item-fields-to-support-reporting.md).
 
 <!-- ENDSECTION -->

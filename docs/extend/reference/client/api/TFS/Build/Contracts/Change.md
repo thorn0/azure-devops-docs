@@ -14,22 +14,20 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `author`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). The author of the change.
+- `author`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). The author of the change.
 
-* `displayUri`: string. The location of a user-friendly representation of the resource.
+- `displayUri`: string. The location of a user-friendly representation of the resource.
 
-* `id`: string. Something that identifies the change. For a commit, this would be the SHA1. For a TFVC changeset, this would be the changeset id.
+- `id`: string. Something that identifies the change. For a commit, this would be the SHA1. For a TFVC changeset, this would be the changeset id.
 
-* `location`: string. The location of the full representation of the resource.
+- `location`: string. The location of the full representation of the resource.
 
-* `message`: string. A description of the change. This might be a commit message or changeset description.
+- `message`: string. A description of the change. This might be a commit message or changeset description.
 
-* `messageTruncated`: boolean. Indicates whether the message was truncated
+- `messageTruncated`: boolean. Indicates whether the message was truncated
 
-* `timestamp`: Date. A timestamp for the change.
+- `timestamp`: Date. A timestamp for the change.
 
-* `type`: string. The type of change. &quot;commit&quot;, &quot;changeset&quot;, etc.
-
+- `type`: string. The type of change. &quot;commit&quot;, &quot;changeset&quot;, etc.

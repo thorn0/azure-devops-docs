@@ -5,7 +5,7 @@ ms.technology: devops-artifacts
 ms.topic: quickstart
 ms.assetid: C5112218-DA7E-4016-986D-2D0F70DAFA44
 ms.date: 03/06/2020
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Get started with NuGet packages in Azure DevOps Services and TFS
@@ -29,26 +29,30 @@ This quickstart assumes you've already set up Azure Artifacts. You can check out
 ::: moniker-end
 
 <a name="create-a-feed"></a>
+
 ## Create a feed
 
-*Already have a feed? [Skip to the next step](#publish-a-package).*
+_Already have a feed? [Skip to the next step](#publish-a-package)._
 
 [!INCLUDE [](includes/create-feed.md)]
 
 <a name="publish-a-package"></a>
+
 ## Publish a package
 
 [!INCLUDE [](includes/nuget/publish.md)]
 
 <a name="consume-in-visual-studio"></a>
+
 ## Consume your package in Visual Studio
 
 [!INCLUDE [](includes/nuget/consume.md)]
 
 <a name="automate-with-continuous-integration"></a>
+
 ## Automate the process with continuous integration
 
-You can use continuous integration systems like Team Build to automate the packing and publishing of your packages. 
+You can use continuous integration systems like Team Build to automate the packing and publishing of your packages.
 To get started with continuous integration, see the [NuGet in Team Build guidance](/azure/devops/pipelines/artifacts/nuget).
 
 ## What's next?

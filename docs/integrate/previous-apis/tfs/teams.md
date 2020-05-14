@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Teams | REST API Reference for Team Foundation Server
 description: Work with teams programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 5DF98D4C-7E59-4C44-B495-D664AC2AC71B
@@ -19,6 +19,7 @@ ms.date: 08/04/2016
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get a list of teams
+
 <a id="GetTeams"></a>
 Get all teams within the project that the authenticated user has access to.
 
@@ -26,15 +27,17 @@ Get all teams within the project that the authenticated user has access to.
 GET https://{instance}/DefaultCollection/_apis/projects/{project}/teams?api-version={version}[&$top={integer}&$skip={integer}]
 ```
 
-| Parameter  | Type    | Default | Notes
-|:-----------|:--------|:--------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance    | string  |         | [VS Team Services account](/azure/devops/integrate/get-started/rest/basics) ({instance}.visualstudio.com) or [TFS server](/azure/devops/integrate/get-started/rest/basics) ({server:port}).
-| project    | string  |         | Name or ID of the project.
+| instance | string | | [VS Team Services account](/azure/devops/integrate/get-started/rest/basics) ({instance}.visualstudio.com) or [TFS server](/azure/devops/integrate/get-started/rest/basics) ({server:port}).
+| project | string | | Name or ID of the project.
 | Query
-| api-version | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | $top       | integer | 100     | Maximum number of teams to return.
-| $skip      | integer | 0       | Number of teams to skip.
+| $skip | integer | 0 | Number of teams to skip.
 
 #### Sample request
 
@@ -66,12 +69,12 @@ GET https://mytfsserver/DefaultCollection/_apis/projects/eb6e4656-77fc-42a1-9181
 }
 ```
 
-
 #### Sample code
-* [C# (ListOrderedTeams method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/ProjectsAndTeams/TeamsSample.cs#L13)
 
+- [C# (ListOrderedTeams method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/ProjectsAndTeams/TeamsSample.cs#L13)
 
 <a id="GetTeamsPageAtATime"></a>
+
 ### A page at a time
 
 #### Sample request
@@ -97,23 +100,24 @@ GET https://mytfsserver/DefaultCollection/_apis/projects/eb6e4656-77fc-42a1-9181
 }
 ```
 
-
 ## Get a team
+
 <a id="GetTeam"></a>
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/projects/{project}/teams/{team}?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:----------------------------------------------------------------------------------------------------------------------------
-| URL
-| instance   | string   | [VS Team Services account](/azure/devops/integrate/get-started/rest/basics) ({instance}.visualstudio.com) or [TFS server](/azure/devops/integrate/get-started/rest/basics) ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team. 
-| Query
-| api-version | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
 
+
+| URL
+| instance | string | [VS Team Services account](/azure/devops/integrate/get-started/rest/basics) ({instance}.visualstudio.com) or [TFS server](/azure/devops/integrate/get-started/rest/basics) ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
+| Query
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -133,28 +137,31 @@ GET https://mytfsserver/DefaultCollection/_apis/projects/eb6e4656-77fc-42a1-9181
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetTeam method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/ProjectsAndTeams/TeamsSample.cs#L42)
+- [C# (GetTeam method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/ProjectsAndTeams/TeamsSample.cs#L42)
 
 ## Get a team's members
+
 <a id="GetaTeamMembers"></a>
 Append `/members` to the end of the URL to get a list of identity references for the team's members.
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/projects/{project}/teams/{team}/members?api-version={version}[&$top={integer}&$skip={integer}]
 ```
-| Parameter  | Type     | Default | Notes
-|:-----------|:---------|:--------|:-----------------------------------------------------
+
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance   | string   |         | [VS Team Services account](/azure/devops/integrate/get-started/rest/basics) ({instance}.visualstudio.com) or [TFS server](/azure/devops/integrate/get-started/rest/basics) ({server:port}).
-| project    | string   |         | Name or ID of the project.
-| team       | string   |         | Name or ID of the team. 
+| instance | string | | [VS Team Services account](/azure/devops/integrate/get-started/rest/basics) ({instance}.visualstudio.com) or [TFS server](/azure/devops/integrate/get-started/rest/basics) ({server:port}).
+| project | string | | Name or ID of the project.
+| team | string | | Name or ID of the team.
 | Query
-| api-version| string   |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| $top       | integer  | `100`   | Maximum number of teams to return.
-| $skip      | integer  | `0`     | Number of teams to skip.
+| api-version| string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| \$top | integer | `100` | Maximum number of teams to return.
+| \$skip | integer | `0` | Number of teams to skip.
 
 #### Sample request
 
@@ -193,10 +200,9 @@ GET https://mytfsserver/DefaultCollection/_apis/projects/eb6e4656-77fc-42a1-9181
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetTeamMembers method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/ProjectsAndTeams/TeamsSample.cs#L63)
+- [C# (GetTeamMembers method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/ProjectsAndTeams/TeamsSample.cs#L63)
 
 ### A page at a time
 
@@ -223,8 +229,8 @@ GET https://mytfsserver/DefaultCollection/_apis/projects/eb6e4656-77fc-42a1-9181
 }
 ```
 
-         
 ## Create a team
+
 <a id="Create"></a>
 Create a team in a project
 
@@ -238,27 +244,30 @@ Content-Type: application/json
 
 ```json
 {
-    "name": {string},
-    "description": {string}
+  "name": { string },
+  "description": { string }
 }
 ```
 
-| Parameter    | Type   | Notes
-|:-------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account      | string | VS Team Services account ({account}.visualstudio.com) or TFS server ({server:port}).
-| project      | string | Name or ID of the project.
+| account | string | VS Team Services account ({account}.visualstudio.com) or TFS server ({server:port}).
+| project | string | Name or ID of the project.
 | Query
-| api-version  | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name         | string | Name of the team.
-| description  | string | Description of the team.
+| name | string | Name of the team.
+| description | string | Description of the team.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/_apis/projects/8e5a3cfb-fed3-46f3-8657-e3b175cd0305/teams?api-version=2.2
 ```
+
 ```json
 {
   "name": "My new team"
@@ -277,12 +286,12 @@ POST https://mytfsserver/DefaultCollection/_apis/projects/8e5a3cfb-fed3-46f3-865
 }
 ```
 
-
 #### Sample code
 
-* [C# (CreateTeam method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/ProjectsAndTeams/TeamsSample.cs#L90)
+- [C# (CreateTeam method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/ProjectsAndTeams/TeamsSample.cs#L90)
 
 ## Update a team
+
 <a id="Update"></a>
 Rename a team or change a team's description
 
@@ -296,28 +305,31 @@ Content-Type: application/json
 
 ```json
 {
-  "name": {string},
-  "description": {string}
+  "name": { string },
+  "description": { string }
 }
 ```
 
-| Parameter    | Type   | Notes
-|:-------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account      | string | Your Visual Studio Online account.
-| project      | string   | Name or ID of the project.
-| team         | string   | Name or ID of the team.
+| account | string | Your Visual Studio Online account.
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
 | Query
-| api-version  | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name         | string | New name of the team.
-| description  | string | New description of the team.
+| name | string | New name of the team.
+| description | string | New description of the team.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/_apis/projects/8e5a3cfb-fed3-46f3-8657-e3b175cd0305/teams?api-version=2.2
 ```
+
 ```json
 {
   "name": "My new team",
@@ -337,12 +349,12 @@ POST https://mytfsserver/DefaultCollection/_apis/projects/8e5a3cfb-fed3-46f3-865
 }
 ```
 
-
 #### Sample code
 
-* [C# (RenameTeam method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/ProjectsAndTeams/TeamsSample.cs#L121)
+- [C# (RenameTeam method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/ProjectsAndTeams/TeamsSample.cs#L121)
 
 ## Delete a team
+
 <a id="Delete"></a>
 Permanently delete a team.
 
@@ -350,16 +362,19 @@ Permanently delete a team.
 DELETE https://{instance}.VisualStudio.com/DefaultCollection/_apis/projects/{project}/teams/{team}?api-version={version}
 ```
 
-| Parameter  | Type   | Notes
-|:-----------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account    | string | VS Team Services account ({account}.visualstudio.com) or TFS server ({server:port}).
-| project    | string | Name or ID of the project.
-| team       | string | Name or ID of the team.
+| account | string | VS Team Services account ({account}.visualstudio.com) or TFS server ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
+
 ```no-highlight
 DELETE https://fabrikam.VisualStudio.com/DefaultCollection/_apis/projects/fabrikam-fiber/teams/2ddc9d25-b0fe-45ed-97d1-d94c5a562c0b?api-version=2.2
 ```
@@ -370,7 +385,6 @@ DELETE https://fabrikam.VisualStudio.com/DefaultCollection/_apis/projects/fabrik
 DELETE https://mytfsserver/DefaultCollection/_apis/projects/8e5a3cfb-fed3-46f3-8657-e3b175cd0305/teams/8e8aa4ff-848a-474a-9033-93190137c8e4?api-version=2.2
 ```
 
-
 #### Sample code
 
-* [C# (DeleteTeam method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/ProjectsAndTeams/TeamsSample.cs#L148)
+- [C# (DeleteTeam method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/ProjectsAndTeams/TeamsSample.cs#L148)

@@ -16,6 +16,6 @@ Module path: `TFS/TestManagement/Contracts`
 
 ### Values
 
-* `Pass` 
-* `Fail` 
-* `Pending` 
+- `Pass`
+- `Fail`
+- `Pending`

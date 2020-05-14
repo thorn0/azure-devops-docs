@@ -6,7 +6,7 @@ ms.assetid: 1394E182-B515-4CC0-890B-9A2378DBEA68
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 02/12/2019
-monikerRange: '> tfs-2018'
+monikerRange: "> tfs-2018"
 ---
 
 # Docker Installer task

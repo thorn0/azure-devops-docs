@@ -7,7 +7,7 @@ ms.assetid: A7C38A15-C9FE-4353-8680-21BAC0F6C873
 ms.author: jukullam
 author: juliakm
 ms.date: 02/12/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Pipeline permissions and security roles
@@ -28,48 +28,47 @@ Once you have been added as a team member, you are a member of the Contributors 
 
 ::: moniker range="azure-devops"
 
-> [!NOTE]   
+> [!NOTE]  
 >  When the **Free access to Pipelines for Stakeholders** preview feature is enabled for the organization, Stakeholders get access to all **Build** and **Release** features. This is indicated by the ![ ](/azure/devops/media/icons/preview.png) preview icon shown in the following table. Without this feature enabled, stakeholders can only view and approve releases. To learn more, see [Provide Stakeholders access to edit build and release pipelines](../../organizations/security/provide-stakeholder-pipeline-access.md).
-
 
 [!INCLUDE [temp](../../organizations/security/includes/pipelines-cloud.md)]
 
-::: moniker-end 
+::: moniker-end
 
 ::: moniker range="azure-devops-2019"
 
-### Build  
+### Build
 
 [!INCLUDE [temp](../../organizations/security/includes/pipelines-build.md)]
 
-### Release 
+### Release
 
-[!INCLUDE [temp](../../organizations/security/includes/pipelines-release.md)] 
+[!INCLUDE [temp](../../organizations/security/includes/pipelines-release.md)]
 
-### Task groups  
+### Task groups
 
 [!INCLUDE [temp](../../organizations/security/includes/task-groups.md)]
 
-::: moniker-end 
+::: moniker-end
 
 ::: moniker range=">= tfs-2015 <= tfs-2018"
 
-### Build  
+### Build
 
 [!INCLUDE [temp](../../organizations/security/includes/build.md)]
 
-### Release  
+### Release
 
 [!INCLUDE [temp](../../organizations/security/includes/release.md)]
 
-::: moniker-end    
+::: moniker-end
 
 ## Security of agents and library entities
 
 You use pre-defined roles and manage membership in those roles to
 configure [security on agent pools](../agents/pools-queues.md#security).
 You can configure this in a hierarchical manner either for all
-pools, or for an individual pool.  
+pools, or for an individual pool.
 
 Roles are also defined to help you configure security on shared
 [library entities](../library/index.md) such as [variable groups](../library/index.md#security)
@@ -99,13 +98,12 @@ The following permissions are defined for pipelines. All of these can be set at 
 > | **Edit build quality** | Can add tags to a build. |
 > | **Override check-in validation by build** | Applies to [TFVC gated check-in builds](../repos/tfvc.md#gated). This does not apply to PR builds. |
 > | **Retain indefinitely** | Can toggle the retain indefinitely flag on a build. |
-> | **Stop builds** | Can stop builds queued by other team members or by the system.  |
+> | **Stop builds** | Can stop builds queued by other team members or by the system. |
 > | **View build pipeline** | Can view build pipeline(s). |
 > | **View builds** | Can view builds belonging to build pipeline(s). |
 > | **Update build information** | It is recommended to leave this alone. It's intended to enable service accounts, not team members. |
 > | **Manage build qualities** | _Only applies to XAML builds_ |
 > | **Manage build queue** | _Only applies to XAML builds_ |
-
 
 Default values for all of these permissions are set for team
 project collections and project groups. For example,
@@ -115,11 +113,11 @@ default.
 
 When it comes to security, there are different best practices and levels of permissiveness. While there's no one right way to handle permissions, we hope these examples help you empower your team to work securely with builds.
 
-* In many cases you probably also want to set **Delete build pipeline** to _Allow_. Otherwise these team members can't delete even their own build pipelines.
+- In many cases you probably also want to set **Delete build pipeline** to _Allow_. Otherwise these team members can't delete even their own build pipelines.
 
-* Without **Delete builds** permission, users cannot delete even their own completed builds. However, keep in mind that they can automatically delete old unneeded builds using [retention policies](retention.md).
+- Without **Delete builds** permission, users cannot delete even their own completed builds. However, keep in mind that they can automatically delete old unneeded builds using [retention policies](retention.md).
 
-* We recommend that you do not grant these permissions directly to a person. A better practice is to add the person to the build administrator group or another group, and manage permissions on that group.
+- We recommend that you do not grant these permissions directly to a person. A better practice is to add the person to the build administrator group or another group, and manage permissions on that group.
 
 ## Release permissions
 
@@ -157,7 +155,7 @@ The following permissions are defined for releases. The scope column explains wh
 > | **Delete releases** | Can delete releases for a pipeline. | Project, Release pipeline |
 > | **Edit release pipeline** | Can save any changes to a release pipeline, including configuration variables, triggers, artifacts, and retention policy as well as configuration within a stage of the release pipeline. To make changes to a specific stage in a release pipeline, the user also needs **Edit release stage** permission. | Project, Release pipeline |
 > | **Edit release stage** | Can edit stage(s) in release pipeline(s). To save the changes to the release pipeline, the user also needs **Edit release pipeline** permission. This permission also controls whether a user can edit the configuration inside the stage of a specific release instance. The user also needs **Manage releases** permission to save the modified release. | Project, Release pipeline, Stage |
-> | **Manage deployments** | Can initiate a deployment of a release to a stage. This permission is only for deployments that are manually initiated by selecting the **Deploy** or **Redeploy** actions in a release. If the condition on a stage is set to any type of automatic deployment, the system automatically initiates deployment without checking the permission of the user that created the release. If the condition is set to start after some stage, manually initiated deployments do not wait for those stages to be successful.  | Project, Release pipeline, Stage |
+> | **Manage deployments** | Can initiate a deployment of a release to a stage. This permission is only for deployments that are manually initiated by selecting the **Deploy** or **Redeploy** actions in a release. If the condition on a stage is set to any type of automatic deployment, the system automatically initiates deployment without checking the permission of the user that created the release. If the condition is set to start after some stage, manually initiated deployments do not wait for those stages to be successful. | Project, Release pipeline, Stage |
 > | **Manage release approvers** | Can add or edit approvers for stage(s) in release pipeline(s). This permissions also controls whether a user can edit the approvers inside the stage of a specific release instance. | Project, Release pipeline, Stage |
 > | **Manage releases** | Can edit the configuration in releases. To edit the configuration of a specific stage in a release instance (including variables marked as `settable at release time`), the user also needs **Edit release stage** permission. | Project, Release pipeline |
 > | **View release pipeline** | Can view release pipeline(s). | Project, Release pipeline |
@@ -182,12 +180,11 @@ level and can be overridden on an individual task group pipeline.
 You use task groups to encapsulate a sequence of tasks already defined in a build or a release pipeline into a single reusable task. You [define and manage task groups](../library/task-groups.md) in the **Task groups** tab in **Azure Pipelines**.
 
 > [!div class="mx-tdCol2BreakAll"]
-> | Permission | Description | 
-> |------------|-------------| 
+> | Permission | Description |
+> |------------|-------------|
 > | **Administer task group permissions** | Can add and remove users or groups to task group security. |
-> | **Delete task group** | Can delete a task group. | 
-> | **Edit task group** | Can create, modify, or delete a task group. | 
-
+> | **Delete task group** | Can delete a task group. |
+> | **Edit task group** | Can create, modify, or delete a task group. |
 
 ## Library roles and permissions
 
@@ -197,19 +194,18 @@ Permissions for library artifacts, such as variable groups and secure files, are
 
 ## Service connection security roles
 
-You [add users to the following roles](set-permissions.md) from the project-level admin context, **Services** page. To create and manage these resources, see [Service connections for build and release](../library/service-endpoints.md).   
+You [add users to the following roles](set-permissions.md) from the project-level admin context, **Services** page. To create and manage these resources, see [Service connections for build and release](../library/service-endpoints.md).
 
 [!INCLUDE [temp](../../organizations/security/includes/service-endpoint-roles.md)]
 
 ## Deployment pool security roles
 
-You [add users to the following roles](set-permissions.md) from the collection-level admin context, **Deployment Pools** page. To create and manage deployment pools, see [Deployment groups](../release/deployment-groups/index.md).   
+You [add users to the following roles](set-permissions.md) from the collection-level admin context, **Deployment Pools** page. To create and manage deployment pools, see [Deployment groups](../release/deployment-groups/index.md).
 
 [!INCLUDE [temp](../../organizations/security/includes/deployment-pool-roles.md)]
 
-
-## Related notes 
+## Related notes
 
 - [Set build and release permissions](set-permissions.md)
-- [Default permissions and access](../../organizations/security/permissions-access.md) 
-- [Permissions and groups reference](../../organizations/security/permissions.md) 
+- [Default permissions and access](../../organizations/security/permissions-access.md)
+- [Permissions and groups reference](../../organizations/security/permissions.md)

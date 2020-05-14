@@ -15,7 +15,7 @@ Module path: `TFS/VersionControl/Contracts`
 
 ### Values
 
-* `Branch` Interpret the version as a branch name
-* `Tag` Interpret the version as a tag name
-* `Commit` Interpret the version as a commit ID (SHA1)
-* `Index` Interpret the version as an index name
+- `Branch` Interpret the version as a branch name
+- `Tag` Interpret the version as a tag name
+- `Commit` Interpret the version as a commit ID (SHA1)
+- `Index` Interpret the version as an index name

@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Build Requests (XAML Build) | REST API Reference for Team Foundation Server
 description: Submit and access build requests programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 40A7EF31-7303-4A6E-ADB5-69BCF7830A2A
@@ -24,20 +24,22 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/{project}/_apis/build/requests[?requestedFor={string}&definitionId={int}&controllerId={int}&maxCompletedAge={int}&status={string}&$top={int}&$skip={int}]
 ```
 
-| Parameter       | Type   | Notes
-|:----------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance        | string | TFS server name ({server:port}).
-| project         | string | [Project](../tfs/projects.md) ID or name.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
 | Query
-| api-version     | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| requestedFor    | string | Person who submitted the build request.<br/>Wildcards (*) are supported.
-| definitionId    | int    | Build definition used to create the build request.
-| queueId         | int    | Build requests that are handled by a build queue (controller).
-| maxCompletedAge | int    | Build requests that completed in the previous time span (in seconds).
-| status          | enum {<br/>&nbsp;&nbsp;All,<br/>&nbsp;&nbsp;Cancelled,<br/>&nbsp;&nbsp;Completed,<br/>&nbsp;&nbsp;InProgress,<br/>&nbsp;&nbsp;None,<br/>&nbsp;&nbsp;Postponed,<br/>&nbsp;&nbsp;Queued,<br/>&nbsp;&nbsp;Retry<br/>} | Status of the build requests.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| requestedFor | string | Person who submitted the build request.<br/>Wildcards (\*) are supported.
+| definitionId | int | Build definition used to create the build request.
+| queueId | int | Build requests that are handled by a build queue (controller).
+| maxCompletedAge | int | Build requests that completed in the previous time span (in seconds).
+| status | enum {<br/>&nbsp;&nbsp;All,<br/>&nbsp;&nbsp;Cancelled,<br/>&nbsp;&nbsp;Completed,<br/>&nbsp;&nbsp;InProgress,<br/>&nbsp;&nbsp;None,<br/>&nbsp;&nbsp;Postponed,<br/>&nbsp;&nbsp;Queued,<br/>&nbsp;&nbsp;Retry<br/>} | Status of the build requests.
 | $top            | int    | Number of requests to return.
-| $skip           | int    | Number of requests to skip.
+| $skip | int | Number of requests to skip.
 
 #### Sample request
 
@@ -300,8 +302,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/request
 }
 ```
 
-
 ### Requested by
+
 #### Sample request
 
 ```
@@ -563,8 +565,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/request
 }
 ```
 
-
 ### For a build definition
+
 #### Sample request
 
 ```
@@ -826,8 +828,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/request
 }
 ```
 
-
 ### In a queue
+
 #### Sample request
 
 ```
@@ -1089,8 +1091,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/request
 }
 ```
 
-
 ### Completed since
+
 #### Sample request
 
 ```
@@ -1334,8 +1336,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/request
 }
 ```
 
-
 ### By status
+
 #### Sample request
 
 ```
@@ -1597,8 +1599,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/request
 }
 ```
 
-
 ### A page at a time
+
 #### Sample request
 
 ```
@@ -1713,16 +1715,18 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/request
 }
 ```
 
-
 ## Request a build
+
 <a name="requestabuild" />
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/_apis/build/requests?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
 	definition: {
@@ -1730,28 +1734,31 @@ Content-Type: application/json
 	},
 	reason: {reason},
 	priority: {priority},
-	[queue: { 
+	[queue: {
 		id: {queueId}
 	}]
 }
 ```
 
-| Parameter       | Type   | Required | Notes
-|:----------------|:-------|:---------|:------------
+| Parameter | Type | Required | Notes |
+| :-------- | :--- | :------- | :---- |
+
+
 | URL
-| instance        | string | yes      | TFS server name ({server:port}).
-| project         | string | yes      | [Project](../tfs/projects.md) ID or name containing the build definition.
+| instance | string | yes | TFS server name ({server:port}).
+| project | string | yes | [Project](../tfs/projects.md) ID or name containing the build definition.
 | Request body
-| buildDefinition | int    | yes      | ID of the build definition to use.
-| reason          | enum {<br/>&nbsp;&nbsp;BatchedCI,<br/>&nbsp;&nbsp;CheckInShelveset,<br/>&nbsp;&nbsp;IndividualCI,<br/>&nbsp;&nbsp;Manual,<br/>&nbsp;&nbsp;None,<br/>&nbsp;&nbsp;Schedule,<br/>&nbsp;&nbsp;ScheduleForced,<br/>&nbsp;&nbsp;Triggered,<br/>&nbsp;&nbsp;UserCreated,<br/>&nbsp;&nbsp;ValidateShelveset<br/>} | yes | Reason for the request.
-| priority        | enum {<br/>&nbsp;&nbsp;Normal,<br/>&nbsp;&nbsp;AboveNormal,<br/>&nbsp;&nbsp;BelowNormal,<br/>&nbsp;&nbsp;High,<br/>&nbsp;&nbsp;Low<br/>} | yes | Priority of the request.
-| queueId         | int    | no       | ID of the queue in which to request the build.<br/>If not specified the build system will choose a queue.
+| buildDefinition | int | yes | ID of the build definition to use.
+| reason | enum {<br/>&nbsp;&nbsp;BatchedCI,<br/>&nbsp;&nbsp;CheckInShelveset,<br/>&nbsp;&nbsp;IndividualCI,<br/>&nbsp;&nbsp;Manual,<br/>&nbsp;&nbsp;None,<br/>&nbsp;&nbsp;Schedule,<br/>&nbsp;&nbsp;ScheduleForced,<br/>&nbsp;&nbsp;Triggered,<br/>&nbsp;&nbsp;UserCreated,<br/>&nbsp;&nbsp;ValidateShelveset<br/>} | yes | Reason for the request.
+| priority | enum {<br/>&nbsp;&nbsp;Normal,<br/>&nbsp;&nbsp;AboveNormal,<br/>&nbsp;&nbsp;BelowNormal,<br/>&nbsp;&nbsp;High,<br/>&nbsp;&nbsp;Low<br/>} | yes | Priority of the request.
+| queueId | int | no | ID of the queue in which to request the build.<br/>If not specified the build system will choose a queue.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/requests?api-version=1.0
 ```
+
 ```json
 {
   "definition": {
@@ -1809,46 +1816,51 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/reques
 }
 ```
 
-
 ## Update the status of a request
+
 <a name="updatethestatusofabuildrequest" />
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/_apis/build/requests/{request}?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
-	status: {status}
+  "status": { status }
 }
 ```
- 
-| Parameter | Type   | Notes
-|:----------|:-------|:------------
+
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
-| project   | string | [Project](../tfs/projects.md) ID or name.
-| request   | int    | ID of the build request to update.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| request | int | ID of the build request to update.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Request body
-| status    | enum {<br/>&nbsp;&nbsp;Postponed,<br/>&nbsp;&nbsp;Queued,<br/>&nbsp;&nbsp;InProgress<br/>} | The new status.
+| status | enum {<br/>&nbsp;&nbsp;Postponed,<br/>&nbsp;&nbsp;Queued,<br/>&nbsp;&nbsp;InProgress<br/>} | The new status.
 
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/requests/398?api-version=1.0
 ```
+
 ```json
 {
   "status": "Stopped"
 }
 ```
 
-
 ## Cancel a build request
+
 <a name="cancelabuildrequest" />
 
 A build request can only be deleted before the build has started.
@@ -1857,12 +1869,14 @@ A build request can only be deleted before the build has started.
 DELETE https://{instance}/DefaultCollection/{project}/_apis/build/requests/{request}?api-version={version}
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
-| project   | string | [Project](../tfs/projects.md) ID or name.
-| request   | int    | ID of the build request to delete.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| request | int | ID of the build request to delete.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -1871,4 +1885,3 @@ DELETE https://{instance}/DefaultCollection/{project}/_apis/build/requests/{requ
 ```
 DELETE https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/requests/433?api-version=1.0
 ```
-

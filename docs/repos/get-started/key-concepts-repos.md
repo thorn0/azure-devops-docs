@@ -1,13 +1,13 @@
 ﻿---
 title: Key concepts and terminology used for Azure Repos
-titleSuffix: Azure Repos  
+titleSuffix: Azure Repos
 description: Key definitions for objects and items used to code with Azure Repos
-ms.technology: devops-new-user 
+ms.technology: devops-new-user
 ms.author: apawast
 author: apawast
 ms.topic: reference
-monikerRange: 'azure-devops'
-ms.date: 09/10/2018  
+monikerRange: "azure-devops"
+ms.date: 09/10/2018
 ---
 
 # Key concepts
@@ -26,18 +26,18 @@ Learn more: [branches](../git/branches.md), [branch organization](../git/git-bra
 
 Branch policies are an important part of the Git workflow. You use them to help protect the important branches in your development, like `master`. Branch policies enable you to:
 
-* Isolate work in progress from the completed work in your master branch.
-* Guarantee that changes build before they get to master.
-* Limit who can contribute to specific branches.
-* Enforce who can create branches and the naming guidelines for the branches.
-* Automatically include the right reviewers for every code change.
-* Enforce best practices with required code reviewers.
+- Isolate work in progress from the completed work in your master branch.
+- Guarantee that changes build before they get to master.
+- Limit who can contribute to specific branches.
+- Enforce who can create branches and the naming guidelines for the branches.
+- Automatically include the right reviewers for every code change.
+- Enforce best practices with required code reviewers.
 
 Learn more: [branch policies](../git/branch-policies-overview.md).
 
 ## Clone
 
-Create a complete local copy of an existing Git repo by cloning it. 
+Create a complete local copy of an existing Git repo by cloning it.
 Cloning a repo downloads all [commits](#commit) and [branches](#branch) in the repo and sets up a named relationship with the existing repo that you cloned. Use this relationship to interact with the existing repo, [pushing](#push) and [pulling](#pull) changes to share code with your team.
 
 Learn more: [cloning](../git/clone.md).
@@ -75,7 +75,7 @@ Git has a version of this workflow that uses terminology and commands such as re
 
 1. [Create a branch](#branch) for the changes you plan to make and give it a name, such as `users/jamal/fix-bug-3214` or `features/cool-feature`.
 1. [Commit changes](#commit) to your branch. People often have multiple commits for a bug fix or feature.
-1. [Push your branch](#push) to the remote repository. 
+1. [Push your branch](#push) to the remote repository.
 1. [Create a pull request](#pull-request) so other people can review your changes. To incorporate feedback, you might need to make more commits and push more changes. When the code is ready, complete the pull request and merge your code into the target branch, such as `master`.
 
 Use this workflow if you're new to Git. As your team gets more experienced and confident with Git, extend it to suit your team's needs.
@@ -107,7 +107,7 @@ Learn more: [pull](../git/pulling.md).
 
 ## Push
 
-Share changes made in commits and branches by using the `push` command. 
+Share changes made in commits and branches by using the `push` command.
 
 When you push, Git uploads the saved commits in your checked branch to the remote repository. If the branch exists on the remote repository, Git takes the [commits](#commit) and adds them to that branch on the remote repository. If that branch doesn't exist, Git creates a new branch with the same commits as your local branch.
 

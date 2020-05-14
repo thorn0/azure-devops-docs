@@ -13,22 +13,20 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `customMessage`: string. Custom message for the result object For instance, Reason for failing.
+- `customMessage`: string. Custom message for the result object For instance, Reason for failing.
 
-* `name`: string. Ref name
+- `name`: string. Ref name
 
-* `newObjectId`: string. New object ID
+- `newObjectId`: string. New object ID
 
-* `oldObjectId`: string. Old object ID
+- `oldObjectId`: string. Old object ID
 
-* `rejectedBy`: string. Name of the plugin that rejected the updated.
+- `rejectedBy`: string. Name of the plugin that rejected the updated.
 
-* `repositoryId`: string. Repository ID
+- `repositoryId`: string. Repository ID
 
-* `success`: boolean. True if the ref update succeeded, false otherwise
+- `success`: boolean. True if the ref update succeeded, false otherwise
 
-* `updateStatus`: [GitRefUpdateStatus](../../../TFS/VersionControl/Contracts/GitRefUpdateStatus.md). Status of the update from the TFS server.
-
+- `updateStatus`: [GitRefUpdateStatus](../../../TFS/VersionControl/Contracts/GitRefUpdateStatus.md). Status of the update from the TFS server.

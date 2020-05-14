@@ -6,7 +6,7 @@ ms.assetid: A9AC68EB-E013-4F86-8604-E69BB330817B
 ms.author: jukullam
 author: juliakm
 ms.date: 12/04/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Build and release retention policies
@@ -19,14 +19,14 @@ monikerRange: '>= tfs-2015'
 
 ::: moniker-end
 
-Retention policies are used to configure how long runs and releases are to be retained by the system. 
-The primary reasons to delete older runs and releases are to conserve storage and reduce clutter. 
+Retention policies are used to configure how long runs and releases are to be retained by the system.
+The primary reasons to delete older runs and releases are to conserve storage and reduce clutter.
 The main reasons to keep runs and releases are for audit and tracking.
 
 ## Run retention
 
-In most cases you don't need to retain completed runs longer than a certain number of days. 
-Using run retention policies, you can control **how many days** you want to keep each run before deleting it. 
+In most cases you don't need to retain completed runs longer than a certain number of days.
+Using run retention policies, you can control **how many days** you want to keep each run before deleting it.
 
 ::: moniker range="<= tfs-2018"
 
@@ -36,7 +36,7 @@ Along with defining how many days to retain runs, you can also decide the minimu
 
 As an author of a run pipeline, you can customize retention policies on the **Settings** tab of your project's settings.
 
-You can use the [Copy Files task](../tasks/utility/copy-files.md) to save your build and artifact data for longer than what is set in the retention policies. The **Copy Files task** is preferable to the [Publish Build Artifacts task](../tasks/utility/publish-build-artifacts.md) because data saved with the **Publish Build Artifacts task** will get periodically cleaned up and deleted. 
+You can use the [Copy Files task](../tasks/utility/copy-files.md) to save your build and artifact data for longer than what is set in the retention policies. The **Copy Files task** is preferable to the [Publish Build Artifacts task](../tasks/utility/publish-build-artifacts.md) because data saved with the **Publish Build Artifacts task** will get periodically cleaned up and deleted.
 
 # [YAML](#tab/yaml)
 
@@ -44,21 +44,20 @@ You can use the [Copy Files task](../tasks/utility/copy-files.md) to save your b
 - task: CopyFiles@2
   displayName: 'Copy Files to: \\mypath\storage\$(Build.BuildNumber)'
   inputs:
-    SourceFolder: '$(Build.SourcesDirectory)'
-    Contents: '_buildOutput/**'
+    SourceFolder: "$(Build.SourcesDirectory)"
+    Contents: "_buildOutput/**"
     TargetFolder: '\\mypath\storage\$(Build.BuildNumber)'
 ```
 
 # [Classic](#tab/classic)
 
 1. Add the **Copy Files task** to your Pipeline.  
-![copy files](media/copy_files_classic_task.png)
+   ![copy files](media/copy_files_classic_task.png)
 
-2. Configure the **Copy Files task**. 
-![configure Copy Files](media/copy_files_classic_config.png)
+2. Configure the **Copy Files task**.
+   ![configure Copy Files](media/copy_files_classic_config.png)
+
 ---
-
-
 
 ::: moniker range="<= tfs-2018"
 
@@ -72,15 +71,15 @@ You can specify build retention policy defaults and maximums for a project colle
 
 ::: moniker range=">= tfs-2017 <= tfs-2018"
 
-* TFS 2017 and newer: `https://{your_server}/tfs/DefaultCollection/_admin/_buildQueue`
+- TFS 2017 and newer: `https://{your_server}/tfs/DefaultCollection/_admin/_buildQueue`
 
 ::: moniker-end
 
 ::: moniker range="tfs-2015"
 
-* TFS 2015.3: `http://{your_server}:8080/tfs/DefaultCollection/_admin/_buildQueue`
+- TFS 2015.3: `http://{your_server}:8080/tfs/DefaultCollection/_admin/_buildQueue`
 
-* TFS 2015 RTM: `http://{your_server}:8080/tfs/DefaultCollection/_admin/_buildQueue#_a=settings`
+- TFS 2015 RTM: `http://{your_server}:8080/tfs/DefaultCollection/_admin/_buildQueue#_a=settings`
 
 ::: moniker-end
 
@@ -97,15 +96,15 @@ The **Permanently destroy releases** helps you keep the runs for a certain perio
 
 If your [repository type](../repos/index.md) is one of the following, you can define multiple retention policies with branch filters:
 
-* Azure Repos Git or TFS Git
-* GitHub
-* Other/external Git
+- Azure Repos Git or TFS Git
+- GitHub
+- Other/external Git
 
 For example, your team may want to keep:
 
-* User branch builds for five days, with a minimum of a single successful or partially successful build for each branch.
-* Master and feature branch builds for 10 days, with a minimum of three successful or partially successful builds for each of these branches. You exclude a special feature branch that you want to keep for a longer period of time.
-* Builds from the special feature branch and all other branches for 15 days, with a minimum of a single successful or partially successful build for each branch.
+- User branch builds for five days, with a minimum of a single successful or partially successful build for each branch.
+- Master and feature branch builds for 10 days, with a minimum of three successful or partially successful builds for each of these branches. You exclude a special feature branch that you want to keep for a longer period of time.
+- Builds from the special feature branch and all other branches for 15 days, with a minimum of a single successful or partially successful build for each branch.
 
 The following example retention policy for a build pipeline
 meets the above requirements:
@@ -144,15 +143,15 @@ The "All" branches policy is automatically added as the last policy in the evalu
 
 When the retention policies mark a build for deletion, you can control which information related to the build is deleted:
 
-* Build record: You can choose to delete the entire build record or keep basic information about the build even after the build is deleted.
-* Source label: If you label sources as part of the build, then you can choose to delete the tag (for Git) or the label (for TFVC) created by a build.
-* Automated test results: You can choose to delete the automated test results associated with the build (for example, results published by the Publish Test Results build task).
+- Build record: You can choose to delete the entire build record or keep basic information about the build even after the build is deleted.
+- Source label: If you label sources as part of the build, then you can choose to delete the tag (for Git) or the label (for TFVC) created by a build.
+- Automated test results: You can choose to delete the automated test results associated with the build (for example, results published by the Publish Test Results build task).
 
 The following information is deleted when a build is deleted:
 
-* Logs
-* [Published artifacts](../tasks/utility/publish-build-artifacts.md)
-* [Published symbols](../tasks/build/index-sources-publish-symbols.md)
+- Logs
+- [Published artifacts](../tasks/utility/publish-build-artifacts.md)
+- [Published symbols](../tasks/build/index-sources-publish-symbols.md)
 
 ::: moniker-end
 
@@ -160,15 +159,14 @@ The following information is deleted when a build is deleted:
 
 The following information is deleted when a run is deleted:
 
-* Logs
-* [All artifacts](../tasks/utility/publish-build-artifacts.md)
-* [All symbols](../tasks/build/index-sources-publish-symbols.md)
-* Binaries
-* Test results
-* Run metadata
+- Logs
+- [All artifacts](../tasks/utility/publish-build-artifacts.md)
+- [All symbols](../tasks/build/index-sources-publish-symbols.md)
+- Binaries
+- Test results
+- Run metadata
 
 ::: moniker-end
-
 
 ### When are runs deleted
 
@@ -188,13 +186,12 @@ Your retention policies run every day at 3:00 A.M. UTC. There is no option to ch
 
 ### Delete a run
 
-You can delete runs using the [context menu](../get-started/multi-stage-pipelines-experience.md#pipeline-run-context-menu) on the [Pipeline run details](../get-started/multi-stage-pipelines-experience.md#view-pipeline-run-details) page. 
+You can delete runs using the [context menu](../get-started/multi-stage-pipelines-experience.md#pipeline-run-context-menu) on the [Pipeline run details](../get-started/multi-stage-pipelines-experience.md#view-pipeline-run-details) page.
 
 > [!NOTE]
 > If any retention policies currently apply to the run, they must be removed before the run can be deleted. For instructions, see [Pipe run details - delete a run](../get-started/multi-stage-pipelines-experience.md#pipeline-run-context-menu).
 
 ::: moniker-end
-
 
 <h2 id="release">Release retention</h2>
 
@@ -216,8 +213,8 @@ If you are using Azure Pipelines, you can view but not change these settings for
 
 Global release retention policy settings can be managed from the **Release** settings of your project:
 
-* Azure Pipelines: `https://dev.azure.com/{organization}/{project}/_settings/release?app=ms.vss-build-web.build-release-hub-group`
-* On-premises: `https://{your_server}/tfs/{collection_name}/{project}/_admin/_apps/hub/ms.vss-releaseManagement-web.release-project-admin-hub`
+- Azure Pipelines: `https://dev.azure.com/{organization}/{project}/_settings/release?app=ms.vss-build-web.build-release-hub-group`
+- On-premises: `https://{your_server}/tfs/{collection_name}/{project}/_admin/_apps/hub/ms.vss-releaseManagement-web.release-project-admin-hub`
 
 The **maximum retention policy** sets the upper limit for how long releases can be retained
 for all release pipelines. Authors of release pipelines cannot
@@ -236,10 +233,10 @@ The **destruction policy** helps you keep the releases for a certain period of t
 You may want to retain more releases that have been deployed to specific stages.
 For example, your team may want to keep:
 
-* Releases deployed to Production stage for 60 days, with a minimum of three last deployed releases.
-* Releases deployed to Pre-production stage for 15 days, with a minimum of one last deployed release.
-* Releases deployed to QA stage for 30 days, with a minimum of two last deployed releases.
-* Releases deployed to Dev stage for 10 days, with a minimum of one last deployed release.
+- Releases deployed to Production stage for 60 days, with a minimum of three last deployed releases.
+- Releases deployed to Pre-production stage for 15 days, with a minimum of one last deployed release.
+- Releases deployed to QA stage for 30 days, with a minimum of two last deployed releases.
+- Releases deployed to Dev stage for 10 days, with a minimum of one last deployed release.
 
 The following example retention policy for a release pipeline meets the above requirements:
 
@@ -272,11 +269,10 @@ for the associated build will determine when that build is deleted.
 
 > In TFS, interaction between build and release retention is available in TFS 2017 and newer.
 
-
 ## Artifact retention
 
 Setting a `Build.Cleanup` capability on agents will cause the pool's cleanup jobs to be directed to just those agents, leaving the rest free to do regular work. When a pipeline run is deleted, artifacts stored outside of Azure DevOps are cleaned up through a job run on the agents. When the agent pool gets saturated with cleanup jobs, this can cause a problem. The solution to that is to designate a subset of agents in the pool that are the cleanup agents. If any agents have `Build.Cleanup` set, only those agents will run the cleanup jobs, leaving the rest of the agents free to continue running pipeline jobs.
- 
+
 ::: moniker-end
 
 ## Q&A

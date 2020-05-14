@@ -7,7 +7,7 @@ ms.assetid: F9D118B6-BA56-406C-8223-6934F6BCBEA1
 ms.author: vijayma
 author: vijayma
 ms.date: 12/23/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Xamarin.Android task
@@ -166,6 +166,7 @@ AndroidSDK, MSBuild, Xamarin.Android
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 [!INCLUDE [temp](../../includes/qa-agents.md)]

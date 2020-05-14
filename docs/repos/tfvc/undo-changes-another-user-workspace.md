@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 09/11/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Undo Changes in Another User's Workspace
 
@@ -49,7 +48,9 @@ For more information, see [Undo Command](undo-command.md).
 #### Other Resources
 
 [Working with Version Control Locks](work-version-control-locks.md)
+
 ## Change History<table>
+
 <thead>
 <tr>
 <th><p>Date</p></th>

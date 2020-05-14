@@ -14,16 +14,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `duration`: any. 
+- `duration`: any.
 
-* `previousBuild`: [BuildReference](../../../TFS/TestManagement/Contracts/BuildReference.md). 
+- `previousBuild`: [BuildReference](../../../TFS/TestManagement/Contracts/BuildReference.md).
 
-* `resultsByOutcome`: {[key: number]: [AggregatedResultsByOutcome](../../../TFS/TestManagement/Contracts/AggregatedResultsByOutcome.md)}. 
+- `resultsByOutcome`: {[key: number]: [AggregatedResultsByOutcome](../../../TFS/TestManagement/Contracts/AggregatedResultsByOutcome.md)}.
 
-* `resultsDifference`: [AggregatedResultsDifference](../../../TFS/TestManagement/Contracts/AggregatedResultsDifference.md). 
+- `resultsDifference`: [AggregatedResultsDifference](../../../TFS/TestManagement/Contracts/AggregatedResultsDifference.md).
 
-* `totalTests`: number. 
-
+- `totalTests`: number.

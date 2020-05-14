@@ -5,7 +5,7 @@ description: Run pipeline jobs inside of a container
 ms.assetid: 8d35f78a-f386-4699-9280-7bd933de9e7b
 ms.topic: conceptual
 ms.date: 01/21/2020
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ---
 
 # Define container jobs (YAML)
@@ -17,8 +17,7 @@ is installed.
 This is convenient and typically well-suited for projects that are just beginning to adopt Azure Pipelines.
 Over time, you may find that you want more control over the context where your tasks run.
 
-
-> [!NOTE] 
+> [!NOTE]
 > The Classic editor doesn't support container jobs at this time.
 
 [!INCLUDE [container-vs-host](./includes/container-vs-host.md)]
@@ -38,6 +37,7 @@ If you need fine-grained control at the individual step level, [step targets](ta
 ### Linux-based containers
 
 The Azure Pipelines system requires a few things in Linux-based containers:
+
 - Bash
 - glibc-based
 - Can run Node.js (which the agent provides)
@@ -45,6 +45,7 @@ The Azure Pipelines system requires a few things in Linux-based containers:
 - `USER` has access to `groupadd` and other privileges commands without `sudo`
 
 And on your agent host:
+
 - Ensure Docker is installed
 - The agent must have permission to access the Docker daemon
 
@@ -78,12 +79,12 @@ A simple example:
 
 ```yaml
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: "ubuntu-16.04"
 
 container: ubuntu:16.04
 
 steps:
-- script: printenv
+  - script: printenv
 ```
 
 This tells the system to fetch the `ubuntu` image tagged `16.04` from
@@ -98,12 +99,12 @@ A Windows example:
 
 ```yaml
 pool:
-  vmImage: 'windows-2019'
+  vmImage: "windows-2019"
 
 container: mcr.microsoft.com/windows/servercore:ltsc2019
 
 steps:
-- script: set
+  - script: set
 ```
 
 > [!Note]
@@ -119,7 +120,7 @@ In the following example, the same steps run in multiple versions of Ubuntu Linu
 
 ```yaml
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: "ubuntu-16.04"
 
 strategy:
   matrix:
@@ -133,7 +134,7 @@ strategy:
 container: $[ variables['containerImage'] ]
 
 steps:
-- script: printenv
+  - script: printenv
 ```
 
 ## Endpoints
@@ -150,7 +151,7 @@ container:
   endpoint: private_dockerhub_connection
 
 steps:
-- script: echo hello
+  - script: echo hello
 ```
 
 or
@@ -161,7 +162,7 @@ container:
   endpoint: my_acr_connection
 
 steps:
-- script: echo hello
+  - script: echo hello
 ```
 
 Other container registries may also work.
@@ -177,7 +178,7 @@ container:
   options: --hostname container-test --ip 192.168.0.1
 
 steps:
-- script: echo hello
+  - script: echo hello
 ```
 
 Running `docker create --help` will give you the list of supported options.
@@ -191,33 +192,33 @@ Each container is then referenced later, by referring to its assigned alias.
 ```yaml
 resources:
   containers:
-  - container: u14
-    image: ubuntu:14.04
+    - container: u14
+      image: ubuntu:14.04
 
-  - container: u16
-    image: ubuntu:16.04
+    - container: u16
+      image: ubuntu:16.04
 
-  - container: u18
-    image: ubuntu:18.04
+    - container: u18
+      image: ubuntu:18.04
 
 jobs:
-- job: RunInContainer
-  pool:
-    vmImage: 'ubuntu-16.04'
+  - job: RunInContainer
+    pool:
+      vmImage: "ubuntu-16.04"
 
-  strategy:
-    matrix:
-      ubuntu14:
-        containerResource: u14
-      ubuntu16:
-        containerResource: u16
-      ubuntu18:
-        containerResource: u18
+    strategy:
+      matrix:
+        ubuntu14:
+          containerResource: u14
+        ubuntu16:
+          containerResource: u16
+        ubuntu18:
+          containerResource: u18
 
-  container: $[ variables['containerResource'] ]
+    container: $[ variables['containerResource'] ]
 
-  steps:
-  - script: printenv
+    steps:
+      - script: printenv
 ```
 
 ## Non glibc-based containers
@@ -234,22 +235,27 @@ Finally, stock Alpine doesn't come with other dependencies that Azure Pipelines 
 bash, sudo, which, and groupadd.
 
 ### Bring your own Node.js
+
 You are responsible for adding a Node LTS binary to your container.
 Node 10 LTS is a safe choice.
 You can start from the `node:10-alpine` image.
 
 ### Tell the agent about Node.js
+
 The agent will read a container label "com.azure.dev.pipelines.handler.node.path".
 If this label exists, it must be the path to the Node.js binary.
 For example, in an image based on `node:10-alpine`, add this line to your Dockerfile:
+
 ```
 LABEL "com.azure.dev.pipelines.agent.handler.node.path"="/usr/local/bin/node"
 ```
 
 ### Add requirements
+
 Azure Pipelines assumes a Bash-based system with common administration packages installed.
 Alpine Linux in particular doesn't come with several of the packages needed.
 Installing `bash`, `sudo`, and `shadow` will cover the basic needs.
+
 ```
 RUN apk add bash sudo shadow
 ```

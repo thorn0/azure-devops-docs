@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,14 +15,12 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Contains lists of script and css references that need to be included on the page in order for the controls used by the page to work. 
+Contains lists of script and css references that need to be included on the page in order for the controls used by the page to work.
 
 ### Members
 
-* `coreScriptsBundle`: [JavascriptFileReference](../../../VSS/References/SDK_Interfaces/JavascriptFileReference.md). Core javascript bundle
+- `coreScriptsBundle`: [JavascriptFileReference](../../../VSS/References/SDK_Interfaces/JavascriptFileReference.md). Core javascript bundle
 
-* `scripts`: [JavascriptFileReference](../../../VSS/References/SDK_Interfaces/JavascriptFileReference.md)[]. Core javascript files referenced on a page
+- `scripts`: [JavascriptFileReference](../../../VSS/References/SDK_Interfaces/JavascriptFileReference.md)[]. Core javascript files referenced on a page
 
-* `stylesheets`: [StylesheetReference](../../../VSS/References/SDK_Interfaces/StylesheetReference.md)[]. Core CSS files referenced on a page
-
+- `stylesheets`: [StylesheetReference](../../../VSS/References/SDK_Interfaces/StylesheetReference.md)[]. Core CSS files referenced on a page

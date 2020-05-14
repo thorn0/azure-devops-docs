@@ -16,8 +16,8 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `None` No result
-* `Succeeded` The build completed successfully.
-* `PartiallySucceeded` The build completed compilation successfully but had other errors.
-* `Failed` The build completed unsuccessfully.
-* `Canceled` The build was canceled before starting.
+- `None` No result
+- `Succeeded` The build completed successfully.
+- `PartiallySucceeded` The build completed compilation successfully but had other errors.
+- `Failed` The build completed unsuccessfully.
+- `Canceled` The build was canceled before starting.

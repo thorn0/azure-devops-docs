@@ -13,30 +13,28 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `allChangesIncluded`: boolean. 
+- `allChangesIncluded`: boolean.
 
-* `changeCounts`: {[key: number]: number}. 
+- `changeCounts`: {[key: number]: number}.
 
-* `changes`: [Change](../../../TFS/VersionControl/Contracts/Change.md)&lt;T&gt;[]. 
+- `changes`: [Change](../../../TFS/VersionControl/Contracts/Change.md)&lt;T&gt;[].
 
-* `comment`: string. 
+- `comment`: string.
 
-* `commentTruncated`: boolean. 
+- `commentTruncated`: boolean.
 
-* `creationDate`: Date. 
+- `creationDate`: Date.
 
-* `notes`: [CheckinNote](../../../TFS/VersionControl/Contracts/CheckinNote.md)[]. 
+- `notes`: [CheckinNote](../../../TFS/VersionControl/Contracts/CheckinNote.md)[].
 
-* `owner`: string. 
+- `owner`: string.
 
-* `ownerDisplayName`: string. 
+- `ownerDisplayName`: string.
 
-* `ownerId`: string. 
+- `ownerId`: string.
 
-* `sortDate`: Date. 
+- `sortDate`: Date.
 
-* `version`: string. 
-
+- `version`: string.

@@ -14,24 +14,22 @@ ms.date: 08/04/2016
 
 Module path: `VSS/WebApi/Contracts`
 
-
 ### Members
 
-* `customProperties`: {[key: string]: any}. 
+- `customProperties`: {[key: string]: any}.
 
-* `errorCode`: number. 
+- `errorCode`: number.
 
-* `eventId`: number. 
+- `eventId`: number.
 
-* `helpLink`: string. 
+- `helpLink`: string.
 
-* `innerException`: [WrappedException](../../../VSS/WebApi/Contracts/WrappedException.md). 
+- `innerException`: [WrappedException](../../../VSS/WebApi/Contracts/WrappedException.md).
 
-* `message`: string. 
+- `message`: string.
 
-* `stackTrace`: string. 
+- `stackTrace`: string.
 
-* `typeKey`: string. 
+- `typeKey`: string.
 
-* `typeName`: string. 
-
+- `typeName`: string.

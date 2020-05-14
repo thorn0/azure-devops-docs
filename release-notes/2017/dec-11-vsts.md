@@ -16,10 +16,10 @@ In the **Sprint 127 Update** of Visual Studio Team Services (VSTS), you’ll fin
 
 Other key feature highlights include:
 
-* [Generate YAML templates from existing build definitions](#generate-yaml-templates-from-existing-build-definitions) - Generate the corresponding YAML build logic from builds in the build definition editor.
-* [Enhancements to multi-phase builds](#enhancements-to-multi-phase-builds) - Different agents, parallel tests, and conditional execution for better builds.
-* [Skip scheduled builds if nothing has changed in the repo](#skip-scheduled-builds-if-nothing-has-changed-in-the-repo) - Conserve resources and avoid noise of extra builds.
-* [Cloud Solution Provider (CSP) purchasing now generally available](#cloud-solution-provider-purchasing-now-generally-available) - Enable the deeper engagement that comes by working through the CSP program.
+- [Generate YAML templates from existing build definitions](#generate-yaml-templates-from-existing-build-definitions) - Generate the corresponding YAML build logic from builds in the build definition editor.
+- [Enhancements to multi-phase builds](#enhancements-to-multi-phase-builds) - Different agents, parallel tests, and conditional execution for better builds.
+- [Skip scheduled builds if nothing has changed in the repo](#skip-scheduled-builds-if-nothing-has-changed-in-the-repo) - Conserve resources and avoid noise of extra builds.
+- [Cloud Solution Provider (CSP) purchasing now generally available](#cloud-solution-provider-purchasing-now-generally-available) - Enable the deeper engagement that comes by working through the CSP program.
 
 ## What’s new in VSTS
 
@@ -31,15 +31,13 @@ Other key feature highlights include:
 
 Now you can view the build and release status of merge commits in the **Pushes** page. By clicking the status next to the push, you’ll find the specific build or release that the push is included in so that you can verify success or investigate failure.
 
-> [!div class="mx-imgBorder"]
-> ![Pushes ci-cd status](media/127_05.png)
+> [!div class="mx-imgBorder"] > ![Pushes ci-cd status](media/127_05.png)
 
 ### Blame now has history
 
-The **Blame** view is great for identifying the last person to change a line of code. However, sometimes you need to know who made the *previous* change to a line of code. The newest improvement in blame can help - **View blame prior to this commit**. As the name suggests, this feature allows you to jump back in time to the version of the file prior to the version which changed a particular line, and view the blame info for that version. You can continue to drill back in time looking at each version of the file that changed the selected line of code.
+The **Blame** view is great for identifying the last person to change a line of code. However, sometimes you need to know who made the _previous_ change to a line of code. The newest improvement in blame can help - **View blame prior to this commit**. As the name suggests, this feature allows you to jump back in time to the version of the file prior to the version which changed a particular line, and view the blame info for that version. You can continue to drill back in time looking at each version of the file that changed the selected line of code.
 
-> [!div class="mx-imgBorder"]
-> ![Blame history](media/127_13.png)
+> [!div class="mx-imgBorder"] > ![Blame history](media/127_13.png)
 
 ### SSH URLs are changing
 
@@ -63,15 +61,16 @@ This can also be used as a good way to learn YAML quickly. You can create a new 
 
 A few weeks ago, we added phases to build definitions. You’ve been able to use phases to organize your build steps and to target different agents using different demands for each phase. In this Update, we’ve added several capabilities to build phases so that you can now:
 
-* Specify a different agent queue for each phase. This means you can, for example:
-  * Run one phase of a build on a macOS agent and another phase on a Windows agent. To see a cool example of how useful this can be, see this Connect(); 2017 video: [CI/CD DevOps Pipeline for mobile apps and services](https://channel9.msdn.com/events/Connect/2017/B102).
-  * Run build steps on a build agent pool and test steps on a test agent pool.
+- Specify a different agent queue for each phase. This means you can, for example:
 
-* Run tests faster by running them in parallel. Any phase that has parallelism configured as “Multi-agent” and contains a “VSTest” task will now automatically parallelize test execution across the configured agent count.
+  - Run one phase of a build on a macOS agent and another phase on a Windows agent. To see a cool example of how useful this can be, see this Connect(); 2017 video: [CI/CD DevOps Pipeline for mobile apps and services](https://channel9.msdn.com/events/Connect/2017/B102).
+  - Run build steps on a build agent pool and test steps on a test agent pool.
 
-* Permit or deny scripts to access the OAuth token each phase. This means, for example, you can now allow scripts running in your build phase to communicate with VSTS over REST APIs, and in the same build definition block the scripts running in your test phase.
+- Run tests faster by running them in parallel. Any phase that has parallelism configured as “Multi-agent” and contains a “VSTest” task will now automatically parallelize test execution across the configured agent count.
 
-* Run a phase only under specific conditions. For example, you can configure a phase to run only when previous phases succeed, or only when you are building code in the master branch.
+- Permit or deny scripts to access the OAuth token each phase. This means, for example, you can now allow scripts running in your build phase to communicate with VSTS over REST APIs, and in the same build definition block the scripts running in your test phase.
+
+- Run a phase only under specific conditions. For example, you can configure a phase to run only when previous phases succeed, or only when you are building code in the master branch.
 
 To learn more, see [Phases in Build and Release Management](/azure/devops/pipelines/process/phases).
 
@@ -91,7 +90,7 @@ If you’re using the **Hosted VS2017** queue, your build and release tasks now 
 
 ### ASP.NET Core 2.0 agents
 
-Agents of version 125 or newer are based on ASP.NET Core 2.0. Previously you could install a private agent only on Ubuntu and Red Hat/CentOS machines. Now you can also run your builds and releases on Oracle Linux 7, Fedora, Debian, and other distributions. See [Linux System Prerequisites]( https://github.com/Microsoft/vsts-agent/blob/master/docs/start/envlinux.md) for more information.
+Agents of version 125 or newer are based on ASP.NET Core 2.0. Previously you could install a private agent only on Ubuntu and Red Hat/CentOS machines. Now you can also run your builds and releases on Oracle Linux 7, Fedora, Debian, and other distributions. See [Linux System Prerequisites](https://github.com/Microsoft/vsts-agent/blob/master/docs/start/envlinux.md) for more information.
 
 ### Release trigger for a Package Management artifact
 
@@ -101,15 +100,13 @@ Now you can set a trigger on a **Package Management** artifact in a Release defi
 
 There are now several default version options when linking version control artifacts to a release definition. You can configure a specific commit/changeset or simply configure the latest version to be picked from the default branch. Normally you configure it to pick up the latest version, but this is especially useful in some environments where a golden artifact version needs to be specified for all future continuous deployments.
 
-> [!div class="mx-imgBorder"]
-> ![Default artifact versions](media/127_11.png)
+> [!div class="mx-imgBorder"] > ![Default artifact versions](media/127_11.png)
 
 ### Release triggers branch enhancements
 
 You can now configure a release trigger filter based on the default branch specified in the build definition. This is particularly helpful if your default build branch changes every sprint and the release trigger filters needs to be updated across all the release definitions. Now you just need to change the default branch in build definition and all the release definitions automatically use this branch. For example, if your team is creating release branches for each sprint release payload, you update it in the build definition to point to a new sprint release branch and release will pick this up automatically.
 
-> [!div class="mx-imgBorder"]
-> ![Release triggers](media/127_12.png)
+> [!div class="mx-imgBorder"] > ![Release triggers](media/127_12.png)
 
 ## Test
 
@@ -117,13 +114,11 @@ You can now configure a release trigger filter based on the default branch speci
 
 Over time test assets accrue and, for large applications, can easily grow to 10’s of thousands of tests. For these large applications with lots of tests, it can be hard to manage all of the test results - identifying test failures, associated root cause or ownership of issues. To improve this, we have added 2 new filters to the test results view - Container (DLLs) and Owner (Container Owner), under **Tests** tab in **Build and Release**. This makes it easy to filter the test results to the portion that is relevant to you.
 
-> [!div class="mx-imgBorder"]
-> ![Test result filters](media/127_06.png)
+> [!div class="mx-imgBorder"] > ![Test result filters](media/127_06.png)
 
 Additionally, the existing Outcome filter will now provide the ability to filter for multiple outcomes. As a user when I want to see the outcome of my tests for a change I just committed, I can filter on the Container (DLL name) or Owner (DLL owner) or both to get to the results relevant to me. We also plan to add a filter based on Test Name.
 
-> [!div class="mx-imgBorder"]
-> ![Test result status filter](media/127_07.png)
+> [!div class="mx-imgBorder"] > ![Test result status filter](media/127_07.png)
 
 ### Identify flaky tests
 
@@ -131,24 +126,22 @@ Sometimes tests are flaky - they fail on one run and pass on another without any
 
 The **Visual Studio Test** task can be configured to control the maximum number of attempts to re-run failed tests and a threshold percentage for failures (e.g. only re-run tests if less than 20% of all tests failed) to avoid re-running tests in event of wide spread failures.
 
-> [!div class="mx-imgBorder"]
-> ![Re-run failed test section](media/127_08.png)
+> [!div class="mx-imgBorder"] > ![Re-run failed test section](media/127_08.png)
 
 In the **Tests** tab under **Build and Release**, you can filter the test results with Outcome as “Passed on rerun” to identify the tests that had an unreliable behavior during the run. This will currently show the last attempt for each test that passed on re-run. The Summary view is also modified to show “Passed on rerun (n/m)” under Total tests, where n is the count of tests passed on re-run and m is total passed tests. A hierarchical view of all attempts is coming in next few sprints.
 
-> [!div class="mx-imgBorder"]
-> ![Re-run failed test results](media/127_09.png)
+> [!div class="mx-imgBorder"] > ![Re-run failed test results](media/127_09.png)
 
 ### Pass parameters to your test run using .testsettings file
 
-When running automated tests using a .testsettings file, you can now pass parameters to the test, such as appURL. This information can be accessed via the TestContext object in the test code. 
+When running automated tests using a .testsettings file, you can now pass parameters to the test, such as appURL. This information can be accessed via the TestContext object in the test code.
 You can also override these parameters in the CI/CD pipeline using the test tasks.
 To use this, you need Visual Studio 2017.5 or higher.
 
 1. In Visual Studio, open your .testsettings file using the XML editor and add the parameters you need in the “Properties” node as follows:
-`<Properties><Property name="appURL" value="http://www.bing.com"/><Property name="browser" value="Edge"/></Properties>`
+   `<Properties><Property name="appURL" value="http://www.bing.com"/><Property name="browser" value="Edge"/></Properties>`
 2. Access the parameters using the TestContext object. For e.g.
-`string appURL = TestContext.Properties["appURL"].ToString();`
+   `string appURL = TestContext.Properties["appURL"].ToString();`
 
 ### Access information pertinent to test cases in your automated tests when running in the CI/CD pipeline
 
@@ -156,13 +149,13 @@ When running automated tests in the CI/CD pipeline using Test Plan/Test Suite or
 To use this, you need Visual Studio 2017.5 or higher.
 This includes:
 
-- \_\_Tfs_TestPlanId__
-- \_\_Tfs_TestCaseId__
-- \_\_Tfs_TestPointId__
-- \_\_Tfs_TestConfigurationId__
-- \_\_Tfs_TestConfigurationName__
-- \_\_Tfs_TfsServerCollectionUrl__
-- \_\_Tfs_TeamProject__
+- \_\_Tfs_TestPlanId\_\_
+- \_\_Tfs_TestCaseId\_\_
+- \_\_Tfs_TestPointId\_\_
+- \_\_Tfs_TestConfigurationId\_\_
+- \_\_Tfs_TestConfigurationName\_\_
+- \_\_Tfs_TfsServerCollectionUrl\_\_
+- \_\_Tfs_TeamProject\_\_
 
 ### Automated tests that use TestCase as a data source can now be run using the VSTest task
 
@@ -180,28 +173,24 @@ Note that tests that use TestCase as a data source cannot be used with the **Run
 
 We have enabled tabs on extension description pages in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/azuredevops) to make it easier to find the information you want. Now, getting to Pricing, Q&A, or Rating & Review information is easier. Even when you scroll down the page, the tabs and single call to action are always within view.
 
-> [!div class="mx-imgBorder"]
-> ![Marketplace tabs](media/127_04.png)
+> [!div class="mx-imgBorder"] > ![Marketplace tabs](media/127_04.png)
 
 We have also revamped how you acquire (or purchase) VSTS extensions and Visual Studio Subscriptions from the Marketplace.
 
-* The install/purchase wizard now better adjusts the actions available to you as you progress - login, select a VSTS account, etc. We believe this will make acquiring extensions easier and more intuitive.
+- The install/purchase wizard now better adjusts the actions available to you as you progress - login, select a VSTS account, etc. We believe this will make acquiring extensions easier and more intuitive.
 
-> [!div class="mx-imgBorder"]
-> ![Already installed](media/127_02.png)
+> [!div class="mx-imgBorder"] > ![Already installed](media/127_02.png)
 
-* All relevant information required to change paid quantity and its billing implication is presented within the flow to make an informed purchase.
+- All relevant information required to change paid quantity and its billing implication is presented within the flow to make an informed purchase.
 
-> [!div class="mx-imgBorder"]
-> ![User summary](media/127_03.png)
+> [!div class="mx-imgBorder"] > ![User summary](media/127_03.png)
 
-* A progress bar displays acquisition progress and allows navigation across steps.
-* We’ve made it easier for people who don’t have permission to purchase by submitting a request that will go to the account administrator.
+- A progress bar displays acquisition progress and allows navigation across steps.
+- We’ve made it easier for people who don’t have permission to purchase by submitting a request that will go to the account administrator.
 
-> [!div class="mx-imgBorder"]
-> ![Request](media/127_10.png)
+> [!div class="mx-imgBorder"] > ![Request](media/127_10.png)
 
-* An Account Administrator can now change the Azure subscription associated with a VSTS account when they do not have required permissions on the existing associated Azure subscription.
+- An Account Administrator can now change the Azure subscription associated with a VSTS account when they do not have required permissions on the existing associated Azure subscription.
 
 ### Refreshed publisher management portal
 
@@ -209,8 +198,7 @@ The publisher management portal is being refreshed on the Marketplace, making it
 
 As a first step in improving the publisher onboarding experience, publishers can now choose which directory/tenant the publisher is created in.
 
-> [!div class="mx-imgBorder"]
-> ![Publisher Portal](media/127_publisher.png)
+> [!div class="mx-imgBorder"] > ![Publisher Portal](media/127_publisher.png)
 
 ### Virus scan of all public extensions on Marketplace
 
@@ -228,13 +216,11 @@ Purchasing from Visual Studio Marketplace via the Cloud Solution Provider (CSP) 
 
 ## Next steps and Feedback
 
-> [!div class="nextstepaction"]
-> [Go to VSTS](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
+> [!div class="nextstepaction"][go to vsts](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
 
 We would love to hear what you think about these features. Report a problem or provide a suggestion if you have ideas on things you’d like to see us prioritize, through the feedback menu.
 
-> [!div class="mx-imgBorder"]
-> ![Feedback menu](media/125_00.png)
+> [!div class="mx-imgBorder"] > ![Feedback menu](media/125_00.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/vsts).
 

@@ -9,9 +9,8 @@ ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 04/20/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
-
 
 # Access with Azure Active Directory groups
 
@@ -28,25 +27,25 @@ and differences in how you [control organization access with Microsoft accounts 
 
 ## Prerequisites
 
-* Your organization must be connected to Azure Active Directory. [My organization uses Microsoft accounts only. Can I switch to Azure AD?](faq-azure-access.md#ChangeMSA). Learn how to [connect your organization to Azure AD](connect-organization-to-azure-ad.md).
-* You must be a Project Administrator, Project Collection Administrator, or organization Owner. You must also have at least Basic access, not Stakeholder.
-* To create and manage Azure AD groups, you need Azure AD administrator permissions or have the directory administrator delegate those permissions to you in the [Azure portal](https://portal.azure.com).
-* Azure AD changes might take up to 1 hour to be visible in Azure DevOps.
+- Your organization must be connected to Azure Active Directory. [My organization uses Microsoft accounts only. Can I switch to Azure AD?](faq-azure-access.md#ChangeMSA). Learn how to [connect your organization to Azure AD](connect-organization-to-azure-ad.md).
+- You must be a Project Administrator, Project Collection Administrator, or organization Owner. You must also have at least Basic access, not Stakeholder.
+- To create and manage Azure AD groups, you need Azure AD administrator permissions or have the directory administrator delegate those permissions to you in the [Azure portal](https://portal.azure.com).
+- Azure AD changes might take up to 1 hour to be visible in Azure DevOps.
 
 ## Add an Azure AD group to an Azure DevOps group
 
-> [!NOTE]   
+> [!NOTE]  
 > To enable the new user interface for the New user hub, see [Enable preview features](../../project/navigation/preview-features.md).
 
-#### [Preview page](#tab/preview-page) 
+#### [Preview page](#tab/preview-page)
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
-    [Why am I asked to choose between my work or school account and my personal account?](faq-user-and-permissions-management.md#ChooseOrgAcctMSAcct)
+   [Why am I asked to choose between my work or school account and my personal account?](faq-user-and-permissions-management.md#ChooseOrgAcctMSAcct)
 
-2.  Go to **Organization settings**.
+2. Go to **Organization settings**.
 
-    ![Open Organization settings](../../media/settings/open-admin-settings-vert.png)
+   ![Open Organization settings](../../media/settings/open-admin-settings-vert.png)
 
 3. Choose **Permissions**, and then select the group you want to add a member to.
 
@@ -54,9 +53,9 @@ and differences in how you [control organization access with Microsoft accounts 
 
 4. Select **Members**, and then select **Add**.
 
-    ![Select Members, and then Add](media/user-hub/select-members-add.png)
+   ![Select Members, and then Add](media/user-hub/select-members-add.png)
 
-    You [invite guests into Azure AD](https://devblogs.microsoft.com/devops/inviting-directory-guests-to-aad-backed-vsts-accounts/) and into your Azure AD-backed organizations, without waiting for them to accept. This invitation allows you to add those guests to your organization, grant access to projects, assign extensions, and more.
+   You [invite guests into Azure AD](https://devblogs.microsoft.com/devops/inviting-directory-guests-to-aad-backed-vsts-accounts/) and into your Azure AD-backed organizations, without waiting for them to accept. This invitation allows you to add those guests to your organization, grant access to projects, assign extensions, and more.
 
 5. Add users or groups, and then choose **Save** when you're done.
 
@@ -64,26 +63,27 @@ and differences in how you [control organization access with Microsoft accounts 
 
 #### [Current page](#tab/current-page)
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
-    [Why am I asked to choose between my work or school account and my personal account?](faq-user-and-permissions-management.md#ChooseOrgAcctMSAcct)
+   [Why am I asked to choose between my work or school account and my personal account?](faq-user-and-permissions-management.md#ChooseOrgAcctMSAcct)
 
-2.  Go to **Organization settings**.
+2. Go to **Organization settings**.
 
-    ![Open Organization settings](../../media/settings/open-admin-settings-vert.png)
+   ![Open Organization settings](../../media/settings/open-admin-settings-vert.png)
 
 3. Choose **Security**, select the group you want to add a member to, select **Members**, and then select **Add**.
 
    ![Add a member to your selected group](media/manage-azure-ad-groups/admin-settings-security-choose-group-add-member.png)
+
 4. Add groups, and then save your changes.
 
-    ![Bulk adds members to a group](media/manage-azure-ad-groups/bulk-add-groups.png)
+   ![Bulk adds members to a group](media/manage-azure-ad-groups/bulk-add-groups.png)
 
-    You [invite guests into Azure AD](https://devblogs.microsoft.com/devops/inviting-directory-guests-to-aad-backed-vsts-accounts/) and into your Azure AD-backed organizations, without waiting for them to accept. This invitation allows you to add those guests to your organization, grant access to projects, assign extensions, and more.
+   You [invite guests into Azure AD](https://devblogs.microsoft.com/devops/inviting-directory-guests-to-aad-backed-vsts-accounts/) and into your Azure AD-backed organizations, without waiting for them to accept. This invitation allows you to add those guests to your organization, grant access to projects, assign extensions, and more.
 
 5. Add more users or groups, or save your changes if you're done.
 
-* * *
+---
 
 ## Related articles
 

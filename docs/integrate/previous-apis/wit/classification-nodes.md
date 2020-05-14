@@ -1,8 +1,8 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Work Item Areas and Iterations | REST API Reference for Team Foundation Server
-description: Work with work item areas and iterations programmatically using the REST APIs for Team Foundation Server. 
+description: Work with work item areas and iterations programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 8AD3C764-692D-440D-8133-311CD6A0FC94
 ms.topic: article
 ms.author: chcomley
@@ -16,8 +16,8 @@ ms.date: 08/04/2016
 
 [!INCLUDE [API_version](../_data/version.md)]
 
-All work items have an area and an iteration field. 
-The values that these fields can have are defined in the [classification hierarchies](https://msdn.microsoft.com/library/ms181692.aspx). 
+All work items have an area and an iteration field.
+The values that these fields can have are defined in the [classification hierarchies](https://msdn.microsoft.com/library/ms181692.aspx).
 
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
@@ -27,18 +27,21 @@ The values that these fields can have are defined in the [classification hierarc
 GET https://{instance}/DefaultCollection/{project}/_apis/wit/classificationnodes/{nodeType}/[{nodePath}]?api-version={version}[&$depth={int}]
 ```
 
-| Property  	| Type 		| Description |
-|:--------------|:----------|:------------
+| Property | Type | Description |
+| :------- | :--- | :---------- |
+
+
 | URL
-| instance      | string    | TFS server name ({server:port}).
-| project 		| string 	| Name or ID of a project that contains the classification nodes. |
-| nodeType		| enum {areas, iterations} | The type of classification node you are trying access. |
-| nodePath      | string    | Path of the classification node. |
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of a project that contains the classification nodes. |
+| nodeType | enum {areas, iterations} | The type of classification node you are trying access. |
+| nodePath | string | Path of the classification node. |
 | Query
-| api-version   | string    | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| $depth		| int		| Depth of children to retrieve.  
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| \$depth | int | Depth of children to retrieve.
 
 ### Get the root area tree
+
 #### Sample request
 
 ```
@@ -65,6 +68,7 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classific
 <a name="gettheareatreeroot" />
 
 ### Get the area tree with 2 levels of children
+
 <a name="gettheareatreewith2levelsofchildren" />
 #### Sample request
 
@@ -151,12 +155,12 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classific
 }
 ```
 
-
 #### Sample code
 
-* [C# (ListAreas method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L20)
+- [C# (ListAreas method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L20)
 
 ### Get the root iteration tree
+
 <a name="gettheiterationroot" />
 #### Sample request
 
@@ -181,8 +185,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classific
 }
 ```
 
-
 ### Get the iteration tree with 2 levels of children
+
 <a name="gettheiterationtreewith2levelsofchildren" />
 #### Sample request
 
@@ -289,10 +293,9 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classific
 }
 ```
 
-
 #### Sample code
 
-* [C# (ListIterations method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L40)
+- [C# (ListIterations method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L40)
 
 ## Get a classification node
 
@@ -300,18 +303,21 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classific
 GET https://{instance}/DefaultCollection/{project}/_apis/wit/classificationnodes/{nodeType}/{nodePath}?api-version={version}[&$depth={int}]
 ```
 
-| Parameter Name| Type 		| Description 	|
-|:--------------|:----------|:------------
+| Parameter Name | Type | Description |
+| :------------- | :--- | :---------- |
+
+
 | URL
-| instance      | string    | TFS server name ({server:port}).
-| project 		| string 	| Name or ID of a project that contains the classification nodes. |
-| nodeType		| enum {areas, iterations} | The type of classification node you are trying access. |
-| nodePath      | string 	| Path of the classification node. |
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of a project that contains the classification nodes. |
+| nodeType | enum {areas, iterations} | The type of classification node you are trying access. |
+| nodePath | string | Path of the classification node. |
 | Query
-| api-version   | string    | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| $depth		| int		| Depth of children to retrieve.  
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| \$depth | int | Depth of children to retrieve.
 
 ### Get an area
+
 #### Sample request
 
 ```
@@ -339,12 +345,12 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classific
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetArea method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L266)
+- [C# (GetArea method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L266)
 
 ### Get an iteration
+
 #### Sample request
 
 ```
@@ -375,10 +381,9 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classific
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetIteration method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L291)
+- [C# (GetIteration method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L291)
 
 ## Create a classification node
 
@@ -386,18 +391,20 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classific
 POST https://{instance}/DefaultCollection/{project}/_apis/wit/classificationnodes/{nodeType}/{nodePath}?api-version={version}[&$depth={int}]
 ```
 
-| Parameter Name| Type          		| Description 	|
-|:--------------|:--------------------|:------------
+| Parameter Name | Type | Description |
+| :------------- | :--- | :---------- |
+
+
 | URL
-| instance      | string              | TFS server name ({server:port}).
-| project 		| string			  | Name or ID of a project that contains the classification nodes. |
-| nodeType		| enum {areas, iterations} | The type of classification node you are trying access. |
-| nodePath      | string 			  | Path of the classification nodes. |
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of a project that contains the classification nodes. |
+| nodeType | enum {areas, iterations} | The type of classification node you are trying access. |
+| nodePath | string | Path of the classification nodes. |
 | Query
-| api-version   | string              | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name          | string              | Name of the classification node. |
-| attributes    | array of name/value pairs | Additional attributes of the node. E.g. startDate and finishDate for iterations.
+| name | string | Name of the classification node. |
+| attributes | array of name/value pairs | Additional attributes of the node. E.g. startDate and finishDate for iterations.
 
 ### Create an area
 
@@ -406,6 +413,7 @@ POST https://{instance}/DefaultCollection/{project}/_apis/wit/classificationnode
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classificationNodes/areas?api-version=1.0
 ```
+
 ```json
 {
   "name": "Web"
@@ -432,10 +440,9 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classifi
 }
 ```
 
-
 #### Sample code
 
-* [C# (CreateArea method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L74)
+- [C# (CreateArea method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L74)
 
 ### Create an iteration
 
@@ -444,6 +451,7 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classifi
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classificationNodes/iterations?api-version=1.0
 ```
+
 ```json
 {
   "name": "Final Iteration",
@@ -478,10 +486,9 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classifi
 }
 ```
 
-
 #### Sample code
 
-* [C# (CreateIteration method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L118)
+- [C# (CreateIteration method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L118)
 
 ## Update a classification node
 
@@ -489,20 +496,23 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classifi
 PATCH https://{instance}/DefaultCollection/{project}/_apis/wit/classificationnodes/{nodeType}/{nodePath}?api-version={version}
 ```
 
-| Parameter Name| Type          		| Description 	|
-|:--------------|:--------------------|:------------
+| Parameter Name | Type | Description |
+| :------------- | :--- | :---------- |
+
+
 | URL
-| instance      | string              | TFS server name ({server:port}).
-| project 		| string              | Name or ID of a project that contains the classification nodes. |
-| nodeType		| enum {areas, iterations} | The type of classification node you are trying access. |
-| nodePath      | string 	          | Path of the classification nodes. |
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of a project that contains the classification nodes. |
+| nodeType | enum {areas, iterations} | The type of classification node you are trying access. |
+| nodePath | string | Path of the classification nodes. |
 | Query
-| api-version   | string              | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name          | string              | Name of the classification node. |
-| attributes    | array of name/value pairs | Additional attributes of the node. E.g. startDate and finishDate for iterations.
+| name | string | Name of the classification node. |
+| attributes | array of name/value pairs | Additional attributes of the node. E.g. startDate and finishDate for iterations.
 
 <a name="updateIteration"></a>
+
 ### Update iteration dates
 
 Start and end dates for iterations can be accessed and set through the startDate and finishDate attributes on iteration nodes.
@@ -512,6 +522,7 @@ Start and end dates for iterations can be accessed and set through the startDate
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classificationNodes/iterations/Ultimate%20iteration?api-version=1.0
 ```
+
 ```json
 {
   "attributes": {
@@ -545,10 +556,9 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classif
 }
 ```
 
-
 #### Sample code
 
-* [C# (UpdateIterationDates method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L227)
+- [C# (UpdateIterationDates method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L227)
 
 ### Rename a classification node
 
@@ -557,6 +567,7 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classif
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classificationNodes/areas/Web?api-version=1.0
 ```
+
 ```json
 {
   "name": "Website team"
@@ -583,11 +594,10 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classif
 }
 ```
 
-
 #### Sample code
 
-* [C# (RenameArea method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L154)
-* [C# (RenameIteration method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L191)
+- [C# (RenameArea method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L154)
+- [C# (RenameIteration method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L191)
 
 ## Move a classification node
 
@@ -595,17 +605,19 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classif
 POST https://{instance}/DefaultCollection/{project}/_apis/wit/classificationnodes/{nodeType}/{targetNodeName}?api-version={version}
 ```
 
-| Parameter Name| Type          		| Description 	|
-|:--------------|:--------------------|:------------
+| Parameter Name | Type | Description |
+| :------------- | :--- | :---------- |
+
+
 | URL
-| instance      | string              | TFS server name ({server:port}).
-| project 	| string                  | Name or ID of a project that contains the classification nodes. |
-| nodeType	| enum {areas, iterations} | The type of classification node you are trying access. |
-| targetNodePath| string 	          | Path of the target parent classification node.  |
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of a project that contains the classification nodes. |
+| nodeType | enum {areas, iterations} | The type of classification node you are trying access. |
+| targetNodePath| string | Path of the target parent classification node. |
 | Query
-| api-version   | string              | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| id            | int                 | ID of the node being moved.
+| id | int | ID of the node being moved.
 
 ### Move an area node
 
@@ -614,6 +626,7 @@ POST https://{instance}/DefaultCollection/{project}/_apis/wit/classificationnode
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classificationNodes/areas/Parent%20Area?api-version=1.0
 ```
+
 ```json
 {
   "id": 126391
@@ -640,10 +653,9 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classifi
 }
 ```
 
-
 #### Sample code
 
-* [C# (MoveArea method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L315)
+- [C# (MoveArea method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L315)
 
 ### Move an iteration node
 
@@ -652,6 +664,7 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classifi
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classificationNodes/iterations/Parent%20Iteration?api-version=1.0
 ```
+
 ```json
 {
   "id": 126392
@@ -678,23 +691,24 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classifi
 }
 ```
 
-
 ## Delete a classification node
 
 ```no-highlight
 DELETE https://{instance}/DefaultCollection/{project}/_apis/wit/classificationnodes/{nodeType}/{nodePath}?api-version={version}[?$reclassifyId={reclassifyId}]
 ```
 
-| Parameter Name       | Type          		      | Description 	|
-|:--------------       |:--------------------     |:------------
+| Parameter Name | Type | Description |
+| :------------- | :--- | :---------- |
+
+
 | URL
-| instance             | string                   | TFS server name ({server:port}).
-| project              | string                   | Name or ID of a project that contains the classification nodes. |
-| nodeType		       | enum {areas, iterations} | The type of classification node you are trying access. |
-| nodePath             | string 	              | Path of the classification nodes.|
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of a project that contains the classification nodes. |
+| nodeType | enum {areas, iterations} | The type of classification node you are trying access. |
+| nodePath | string | Path of the classification nodes.|
 | Query
-| api-version		   | string                   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| reclassifyId         | string                   | ID of the node where work items of the deleted node are moved. 
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| reclassifyId | string | ID of the node where work items of the deleted node are moved.
 
 ### Delete an area node
 
@@ -704,10 +718,9 @@ DELETE https://{instance}/DefaultCollection/{project}/_apis/wit/classificationno
 DELETE https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classificationNodes/areas/Parent%20Area?$reclassifyId=3568&api-version=1.0
 ```
 
-
 #### Sample code
 
-* [C# (DeleteArea method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L339)
+- [C# (DeleteArea method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L339)
 
 ### Delete an iteration node
 
@@ -717,22 +730,24 @@ DELETE https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classi
 DELETE https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/classificationNodes/iterations/Parent%20Iteration?$reclassifyId=3569&api-version=1.0
 ```
 
-
 #### Sample code
-* [C# (DeleteIteration method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L339)
+
+- [C# (DeleteIteration method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L339)
 
 ## Samples
 
 ### Getting Started
+
 <a name="samples-getting-started" />
 
 If this is your first time using the REST API's or .NET Libraries, check out the [getting started sample](../../get-started/rest/samples.md) first.
 
->All sample source code can be found in [our GitHub repo](https://github.com/Microsoft/vsts-restapi-samplecode).
+> All sample source code can be found in [our GitHub repo](https://github.com/Microsoft/vsts-restapi-samplecode).
 
 ### Get Full Area or Iteration Tree
+
 <a name="samples-get-tree" />
 
-Get the full tree of area paths. You can do the same with iterations by changing the type to ```Iterations```.
+Get the full tree of area paths. You can do the same with iterations by changing the type to `Iterations`.
 
-* [C# (GetFullTree method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L391)
+- [C# (GetFullTree method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/ClassificationNodesSample.cs#L391)

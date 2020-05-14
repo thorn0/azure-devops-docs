@@ -5,9 +5,8 @@ description: Build and Deploy your Java application to an Azure Web App
 ms.topic: conceptual
 ms.assetid: E6A051F3-8B84-4724-9110-F84DB1F3DCD5
 ms.date: 08/04/2016
-monikerRange: 'tfs-2017'
+monikerRange: "tfs-2017"
 ---
-
 
 # Build and Deploy your Java app to an Azure Web App
 
@@ -34,7 +33,6 @@ Upload your code to Azure Pipelines or your on-premises Team Foundation Server. 
 ## Create the pipeline
 
 <ol>
-
 
 <li><p><a data-toggle="collapse" href="#expando-begin-create-build-definition-open-team-project">Open your project in your web browser &#x25BC;</a></p>
 <div class="collapse" id="expando-begin-create-build-definition-open-team-project">
@@ -63,9 +61,9 @@ Upload your code to Azure Pipelines or your on-premises Team Foundation Server. 
 
 On the Variables tab, store the data needed to copy files to Azure via FTP. Copy this data from the [Azure portal](https://portal.azure.com/). There is nothing special about the variable names we suggest below, so you can make them whatever you prefer.
 
-| Name | Notes |
-|---|---|---|
-| azure.ftp.userName | Take this value from your Azure Web App essentials. For example if the name of your Azure Web App is FabrikamJava, then the value would be : ```FabrikamJava\YourUserName``` |
+| Name               | Notes                                                                                                                                                                                                                                                                                                |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| azure.ftp.userName | Take this value from your Azure Web App essentials. For example if the name of your Azure Web App is FabrikamJava, then the value would be : `FabrikamJava\YourUserName`                                                                                                                             |
 | azure.ftp.password | Take this value from your Azure subscription deployment settings. In your build pipeline variables, make sure to click secret to avoid exposing this password value. [I don't want to use my Azure subscription FTP credentials. Can I use credentials scoped to my Azure Web App?](#azure_site_ftp) |
 
 ![Java deployment build variables](media/maven-to-azure/azure-java-deployment-variables.png)
@@ -113,7 +111,7 @@ On the Build tab, add these tasks:
 
 [!INCLUDE [temp](../includes/definition-finish-and-test.md)]
 
-After a successful build, check your site: ```http://{web_app_name}.azurewebsites.net/{war_file_name}```
+After a successful build, check your site: `http://{web_app_name}.azurewebsites.net/{war_file_name}`
 
 ## Q & A
 
@@ -122,6 +120,7 @@ After a successful build, check your site: ```http://{web_app_name}.azurewebsite
 [!INCLUDE [temp](includes/java-web-app-sample-qa.md)]
 
 <a name="azure_site_ftp"></a>
+
 ### I don't want to use my Azure subscription FTP credentials. Can I use credentials scoped to my Azure Web App?
 
 A: Yes.
@@ -130,18 +129,16 @@ A: Yes.
 
 2. Open your web app and download the publish profile.
 
-3. Open your .PublishSettings file and copy some of the data from the ```publishMethod="FTP"``` section into your build variables.
+3. Open your .PublishSettings file and copy some of the data from the `publishMethod="FTP"` section into your build variables.
 
-| Name | Value from .PublishSettings file attribute| Notes |
-|---|---|---|
-| azure.ftp.userName | userName   |  For example, ```YourAppName\$YourAppName```  |
-| azure.ftp.password | userPWD| In your build pipeline variables, make sure to click secret to avoid exposing this password value. |
-
+| Name               | Value from .PublishSettings file attribute | Notes                                                                                              |
+| ------------------ | ------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| azure.ftp.userName | userName                                   | For example, `YourAppName\$YourAppName`                                                            |
+| azure.ftp.password | userPWD                                    | In your build pipeline variables, make sure to click secret to avoid exposing this password value. |
 
 ### How do I continually deliver my app and manage my releases?
 
 [Learn about Azure Pipelines](../../../release/index.md)
-
 
 [!INCLUDE [temp](../../../includes/qa-definition-common-all-platforms.md)]
 

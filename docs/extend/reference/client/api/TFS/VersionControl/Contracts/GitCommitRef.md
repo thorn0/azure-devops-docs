@@ -13,28 +13,26 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `author`: [GitUserDate](../../../TFS/VersionControl/Contracts/GitUserDate.md). 
+- `author`: [GitUserDate](../../../TFS/VersionControl/Contracts/GitUserDate.md).
 
-* `changeCounts`: [ChangeCountDictionary](../../../TFS/VersionControl/Contracts/ChangeCountDictionary.md). 
+- `changeCounts`: [ChangeCountDictionary](../../../TFS/VersionControl/Contracts/ChangeCountDictionary.md).
 
-* `changes`: [GitChange](../../../TFS/VersionControl/Contracts/GitChange.md)[]. 
+- `changes`: [GitChange](../../../TFS/VersionControl/Contracts/GitChange.md)[].
 
-* `comment`: string. 
+- `comment`: string.
 
-* `commentTruncated`: boolean. 
+- `commentTruncated`: boolean.
 
-* `commitId`: string. 
+- `commitId`: string.
 
-* `committer`: [GitUserDate](../../../TFS/VersionControl/Contracts/GitUserDate.md). 
+- `committer`: [GitUserDate](../../../TFS/VersionControl/Contracts/GitUserDate.md).
 
-* `parents`: string[]. 
+- `parents`: string[].
 
-* `remoteUrl`: string. 
+- `remoteUrl`: string.
 
-* `url`: string. 
-
+- `url`: string.

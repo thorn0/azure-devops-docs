@@ -1,13 +1,13 @@
 ---
-title:  User assignment based billing, default access level and daily billing - Sprint 158 Update
+title: User assignment based billing, default access level and daily billing - Sprint 158 Update
 author: gloridelmorales
 ms.author: glmorale
 ms.technology: devops-release-notes
 ms.date: 09/23/2019
-description: In the **Sprint 158 Update** of Azure DevOps, we've added user assignment based billing. With this feature, the number of Basic or Basic + Test Plan licenses will change as you add or remove users. 
+description: In the **Sprint 158 Update** of Azure DevOps, we've added user assignment based billing. With this feature, the number of Basic or Basic + Test Plan licenses will change as you add or remove users.
 ---
 
-#  User assignment based billing, default access level and daily billing - Sprint 158 Update
+# User assignment based billing, default access level and daily billing - Sprint 158 Update
 
 In the **Sprint 158 Update** of Azure DevOps, we've added user assignment-based billing. With this feature, the number of **Basic** or **Basic + Test Plan** licenses will change as you add or remove users. This means that you will only pay for the licenses that you are using. We’ve also added a new setting that lets you choose whether you want new users added to your organization to get full Basic access or limited/free Stakeholder access.
 
@@ -84,15 +84,13 @@ Check out the [Features](#features) list below for more.
 
 Head over to Azure DevOps and take a look.
 
-> [!div class="nextstepaction"]
-> [Go to Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
+> [!div class="nextstepaction"][go to azure devops](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
 
 ## Feedback
 
 We would love to hear what you think about these features. Use the feedback menu to report a problem or provide a suggestion.
 
-> [!div class="mx-imgBorder"]
-> ![Make a suggestion](../media/make-a-suggestion.png)
+> [!div class="mx-imgBorder"] > ![Make a suggestion](../media/make-a-suggestion.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-devops).
 

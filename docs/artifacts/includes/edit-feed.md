@@ -11,9 +11,8 @@ With your feed selected, select the gear icon (on the right side of the page).
 
 ::: moniker range=">= azure-devops-2019"
 
-> [!div class="mx-imgBorder"] 
->![Edit feed button](../media/editfeed-azure-devops-newnav.png)
-> 
+> [!div class="mx-imgBorder"]
+> ![Edit feed button](../media/editfeed-azure-devops-newnav.png)
 
 ::: moniker-end
 

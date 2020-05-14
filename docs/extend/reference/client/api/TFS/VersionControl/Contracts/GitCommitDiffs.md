@@ -13,22 +13,20 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `aheadCount`: number. 
+- `aheadCount`: number.
 
-* `allChangesIncluded`: boolean. 
+- `allChangesIncluded`: boolean.
 
-* `baseCommit`: string. 
+- `baseCommit`: string.
 
-* `behindCount`: number. 
+- `behindCount`: number.
 
-* `changeCounts`: {[key: number]: number}. 
+- `changeCounts`: {[key: number]: number}.
 
-* `changes`: [GitChange](../../../TFS/VersionControl/Contracts/GitChange.md)[]. 
+- `changes`: [GitChange](../../../TFS/VersionControl/Contracts/GitChange.md)[].
 
-* `commonCommit`: string. 
+- `commonCommit`: string.
 
-* `targetCommit`: string. 
-
+- `targetCommit`: string.

@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Build an Azure virtual machine using an Azure RM template
@@ -29,7 +29,7 @@ VMs must be checked into a version control repository
 along with the rest of the application code, and it
 must be published as part of the build output.
 
-## Create the template 
+## Create the template
 
 Before you can build the solution, you must create an Azure RM template.
 Follow these steps to create and check-in a new Resource Manager template.
@@ -40,19 +40,19 @@ Follow these steps to create and check-in a new Resource Manager template.
 1. When prompted for an Azure template, select **Windows Virtual Machine**.
 
    > The **Windows Virtual Machine** template is a simple example of
-   provisioning a single virtual machine in Azure.
-   For provisioning other types of resources, you can either edit the
-   **WindowsVirtualMachine.json** file, select other
-   templates in the project creation wizard, or download one
-   of the many templates available at
-   [https://github.com/Azure/azure-quickstart-templates](https://github.com/Azure/azure-quickstart-templates).
+   > provisioning a single virtual machine in Azure.
+   > For provisioning other types of resources, you can either edit the
+   > **WindowsVirtualMachine.json** file, select other
+   > templates in the project creation wizard, or download one
+   > of the many templates available at
+   > [https://github.com/Azure/azure-quickstart-templates](https://github.com/Azure/azure-quickstart-templates).
 
 1. Add a project for your app to the solution. This could be
    a project for an existing app, or a new project created from the
    Visual Studio **File | Add | New project** menu.
 
-1. Save the entire solution (not just the project) and 
-   commit the changes into a [Team Foundation Server](../../../../repos/tfvc/index.md) or 
+1. Save the entire solution (not just the project) and
+   commit the changes into a [Team Foundation Server](../../../../repos/tfvc/index.md) or
    [Azure Repos Git](../../../../repos/git/index.yml) repository.
 
 ## Create the build pipeline
@@ -86,4 +86,3 @@ After you've run the build, you're ready to create a release pipeline to provisi
 <!-- ENDSECTION -->
 
 [!INCLUDE [rm-help-support-shared](../../../includes/rm-help-support-shared.md)]
-

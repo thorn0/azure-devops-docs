@@ -2,17 +2,16 @@
 title: Version Control - Map TFVC actions to Git
 titleSuffix: Azure Repos
 description: Learn to map Team Foundation Version Control (TFVC) commands and workflows to Git version control
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.assetid: 88493ec3-0687-44f6-b7e3-36d72be7aa60
 ms.author: apawast
 author: wpschaub
 ms.topic: conceptual
 ms.date: 04/25/2018
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
-
-# Learn to map your familiar Team Foundation Version Control (TFVC) commands and workflows to Git 
+# Learn to map your familiar Team Foundation Version Control (TFVC) commands and workflows to Git
 
 Do you plan to adopt Git, are familiar with [TFVC](../tfvc/index.md) actions, and wondering how they map to [Git](index.yml)? Both are powerful and mature source control systems. However, mapping common actions you have grown accustomed to in the one to the other can be a confusing experience.
 
@@ -24,7 +23,7 @@ Each Project can host [TFVC and Git repositories in the same project](https://de
 
 ![Create a new Git repo in Azure Repos](./media/mapping-my-tfvc-actions-to-git/ActionMap-NewRepo.png)
 
-Once the repo is created, you are presented with step-by-step instructions to quickly get started. 
+Once the repo is created, you are presented with step-by-step instructions to quickly get started.
 
 ![Get Started with a new Git repo in Azure Repos](./media/mapping-my-tfvc-actions-to-git/actionmap-newrepoinfo.png)
 
@@ -50,7 +49,7 @@ git clone https://dev.azure.com/demo-fabrikam/Fabrikam/_git/Mapping-TFVC-actions
 
 ---
 
-You only need to clone once per repo, but like TFVC workspaces, you can have multiple clones to isolate in-progress work.  However, branching is typically a better way to isolate changes.
+You only need to clone once per repo, but like TFVC workspaces, you can have multiple clones to isolate in-progress work. However, branching is typically a better way to isolate changes.
 
 ## Create a branch
 
@@ -60,14 +59,14 @@ Consider branching if you need to work in isolation, need to suspend your work, 
 
 As a TFVC user, repeat a few times:
 
-* Branching is recommended!
-* Git branching is **inexpensive**, **fast**, and **powerful**!
-* Git encourages you to use **local** branches.
-* Publish local branches to your centralized repository as needed.
-* Always verify your branch context before making changes.
-* Name the branch using a common convention such as users/alias/branchname for example: users/doris/newfeature
+- Branching is recommended!
+- Git branching is **inexpensive**, **fast**, and **powerful**!
+- Git encourages you to use **local** branches.
+- Publish local branches to your centralized repository as needed.
+- Always verify your branch context before making changes.
+- Name the branch using a common convention such as users/alias/branchname for example: users/doris/newfeature
 
-Create and switch to a local topic branch, named *francis/demo-feature*. It is good practice to run a `git status` first, to verify that you are on the right branch to start with.
+Create and switch to a local topic branch, named _francis/demo-feature_. It is good practice to run a `git status` first, to verify that you are on the right branch to start with.
 
 # [Command Line](#tab/command-line)
 
@@ -76,7 +75,6 @@ git checkout -b francis/demo-feature
 ```
 
 ![Creating a new Git branch from the Windows command line](./media/mapping-my-tfvc-actions-to-git/actionmap-createtopicbranch2.png)
-
 
 # [Visual Studio](#tab/visual-studio)
 
@@ -96,14 +94,13 @@ Here's a [sample](https://vsarguidance.codeplex.com/downloads/get/739947) projec
 
 ```
 git add <file>
-``` 
+```
 
-or  
+or
 
 ```
 git add --all
 ```
-
 
 # [Visual Studio](#tab/visual-studio)
 
@@ -113,12 +110,11 @@ In Visual Studio, choose **Team Explorer > Changes > Untracked Files > add indiv
 
 ---
 
-
 Using the pre-baked sample, you will have 13 new files that have been included and staged in the local repository.
 
 ## View pending changes
 
-Wondering what changes are now sitting in your working environment? As before, the Git `status` command or the `Changes` view in the Visual Studio IDE will show changes in your working tree. 
+Wondering what changes are now sitting in your working environment? As before, the Git `status` command or the `Changes` view in the Visual Studio IDE will show changes in your working tree.
 
 # [Command Line](#tab/command-line)
 
@@ -138,9 +134,9 @@ In Visual Studio, choose **Team Explorer > Changes > Included Changes**
 
 ## Checkin changes and commit locally
 
-In TFVC, you share your changes with a Check In, which sends your pending changes to the server.  The Git process is a bit different.  First, you commit to the local repository, creating a commit object (like a changeset), then you push to send those changes with the server.
+In TFVC, you share your changes with a Check In, which sends your pending changes to the server. The Git process is a bit different. First, you commit to the local repository, creating a commit object (like a changeset), then you push to send those changes with the server.
 
-You commit the changes to your local repository using `git commit`, which feels like doing a `Checkin Pending Changes` in TFVC. A key difference is that the `git commit` commits your changes to the **local**, not the **remote** repository. 
+You commit the changes to your local repository using `git commit`, which feels like doing a `Checkin Pending Changes` in TFVC. A key difference is that the `git commit` commits your changes to the **local**, not the **remote** repository.
 
 # [Command Line](#tab/command-line)
 
@@ -148,11 +144,10 @@ You commit the changes to your local repository using `git commit`, which feels 
 git commit
 ```
 
-
 # [Visual Studio](#tab/visual-studio)
 
 In Visual Studio, choose **Team Explorer > Changes > Commit**
- 
+
 ![Creating a Git commit in Team Explorer](./media/mapping-my-tfvc-actions-to-git/actionmap-commit.png)
 
 ---
@@ -167,7 +162,6 @@ First you need to publish your local francis/demo-feature branch to the remote s
 git push --set-upstream origin francis/demo-feature
 ```
 
-
 # [Visual Studio](#tab/visual-studio)
 
 In Visual Studio, choose **Team Explorer > Branches > right-click on local branch > Publish Branch**
@@ -178,9 +172,9 @@ In Visual Studio, choose **Team Explorer > Branches > right-click on local branc
 
 To synchronize further updates in your local with the remote repository, you need to push your changes using `git push`. The recommended practice using the git command or the Visual Studio IDE is to:
 
-* `fetch` to download content and preview incoming changes from others.
-* `pull` to download and then merge changes from others.
-* `push` to share your local changes.
+- `fetch` to download content and preview incoming changes from others.
+- `pull` to download and then merge changes from others.
+- `push` to share your local changes.
 
 ## View history
 
@@ -202,7 +196,7 @@ git log
 
 ![Using Git log to review branch history](./media/mapping-my-tfvc-actions-to-git/actionmap-history2.png)
 
-As shown above, `git log` lists the author, email, date written, and the commit SHA-1 checksum. As a TFVC user you may want to use the `--stat` option to include more information, such as file name and change statistics. 
+As shown above, `git log` lists the author, email, date written, and the commit SHA-1 checksum. As a TFVC user you may want to use the `--stat` option to include more information, such as file name and change statistics.
 
 # [Visual Studio](#tab/visual-studio)
 
@@ -220,7 +214,7 @@ In the Azure DevOps Services web portal, choose **CODE > History** or **CODE > E
 
 ![Viewing Branch history in Azure Repos](./media/mapping-my-tfvc-actions-to-git/ActionMap-History-Web.png)
 
-At this point, you have successfully explored the create -> clone -> branch -> change -> commit -> push [workflow](https://www.git-scm.com/book/en/v2/Git-Branching-Branching-Workflows), based on common TFVC actions. 
+At this point, you have successfully explored the create -> clone -> branch -> change -> commit -> push [workflow](https://www.git-scm.com/book/en/v2/Git-Branching-Branching-Workflows), based on common TFVC actions.
 
 You also have the option of issuing a [pull request](pull-requests.md), to publish and stage your changes on the server/remote repo at this point.
 
@@ -250,13 +244,13 @@ There are lots of reasons to want to get updates. For example, when you need to 
 git pull
 ```
 
-or 
+or
 
 ```
 git fetch
-``` 
+```
 
-followed by 
+followed by
 
 ```
 git merge FETCH_HEAD
@@ -266,7 +260,7 @@ Always get the latest version and resolve merge conflicts locally.
 
 ### Undo local changes
 
-There may be a valid reason to revert all revisions you made in your local repository and reset your working environment to the latest version from the remote repository. 
+There may be a valid reason to revert all revisions you made in your local repository and reset your working environment to the latest version from the remote repository.
 
 ### Command line
 
@@ -274,16 +268,17 @@ There may be a valid reason to revert all revisions you made in your local repos
 git reset --hard HEAD
 ```
 
-followed by 
+followed by
+
 ```
 git pull origin
-``` 
+```
 
-followed by 
+followed by
+
 ```
 git clean -xdf
 ```
-
 
 The scenario is synonymous to doing a `Get > Latest Version` with the `Overwrite writable files that are not checked out` and `Overwrite all files if the local version matches the specified version` options in TFVC.
 
@@ -291,15 +286,15 @@ Alternatively you can manually delete your local repo - after making a validated
 
 There are a lot more actions and options available to Git users. Here are some useful reference sites for further reading:
 
-* Git commands covered herein, refer to [git documentation](https://git-scm.com/documentation)
-* [Think like (a) Git](http://think-like-a-git.net), a Guide for the Perplexed.
-* [How to undo (almost) anything with Git](https://github.com/blog/2019-how-to-undo-almost-anything-with-git), by Joshua Wehner
+- Git commands covered herein, refer to [git documentation](https://git-scm.com/documentation)
+- [Think like (a) Git](http://think-like-a-git.net), a Guide for the Perplexed.
+- [How to undo (almost) anything with Git](https://github.com/blog/2019-how-to-undo-almost-anything-with-git), by Joshua Wehner
 
 ## Q&A
 
 ### What about sync?
 
-"*Does the Visual Studio IDE `Commit and Sync` not magically do all this?*", you may be asking yourself.
+"_Does the Visual Studio IDE `Commit and Sync` not magically do all this?_", you may be asking yourself.
 
 ![Commit and sync in Team Explorer](./media/mapping-my-tfvc-actions-to-git/actionmap-sync.png)
 
@@ -307,11 +302,11 @@ With magic comes responsibility! Many users dislike the `sync` as it can sometim
 
 Authors: Jesse Houwing, Martin Hinshelwood, Mike Fourie, and Willy Schaub from the ALM | DevOps Rangers. Connect with them [here](https://github.com/ALM-Rangers/Guidance/blob/master/README.md).
 
-*(c) 2015 Microsoft Corporation. All rights reserved. This document is
+_(c) 2015 Microsoft Corporation. All rights reserved. This document is
 provided "as-is." Information and views expressed in this document,
 including URL and other Internet Web site references, may change without
-notice. You bear the risk of using it.*
+notice. You bear the risk of using it._
 
-*This document does not provide you with any legal rights to any
+_This document does not provide you with any legal rights to any
 intellectual property in any Microsoft product. You may copy and use
-this document for your internal, reference purposes.*
+this document for your internal, reference purposes._

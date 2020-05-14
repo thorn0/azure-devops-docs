@@ -10,7 +10,7 @@ author: chcomley
 ms.date: 08/23/2016
 ---
 
-# Integrate applications  
+# Integrate applications
 
 You can build custom applications or services that integrate with your Azure DevOps Services and Team Foundation Server (TFS) accounts by using the **REST APIs** to make direct HTTP calls, or utilize our **.NET Client Libraries**.
 

@@ -1,9 +1,9 @@
 ---
-title: Widgets | REST API Reference for Team Foundation Server 
+title: Widgets | REST API Reference for Team Foundation Server
 description: Work with widgets programmatically using the REST APIs for Visual Studio Online.
 ms.assetid: 8dbe828d-e90b-40c8-bd7b-2becaf7f7752
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 ms.topic: article
 ms.author: chcomley
 author: chcomley
@@ -14,60 +14,62 @@ ms.date: 08/04/2016
 
 [!INCLUDE [azure-devops](../_data/azure-devops-message.md)]
 
-
 **Team Services**
 
 [!INCLUDE [temp](../_data/disclaimer.md)]
 
 [!INCLUDE [API_version](../_data/version3-preview2.md)]
 
-## Widget 
+## Widget
+
 <a id="WidgetDefinition"></a>
 Each widget will have the following fields.
 
-| Field                       | Type                | Notes
-| :-----------                | :--------           | :--------
-| id                          | string              | The unique identifier of the widget.
-| name                        | string              | The name of the widget.
-| position                    | WidgetPosition      | The position of the widget in the dashboard.
-| size                        | WidgetSize          | The size of the widget in the dashboard.
-| settings                    | string              | The configuration settings for the widget.
-| settingsVersion             | SemanticVersion     | The version of configuration settings for the widget.
-| contributionId              | string              | The contribution ID of the widget.
-| eTag                        | string              | The concurrency eTag of the widget settings
-| dashboard                   | Dashboard           | Optional: for updates, partial payload of parent dashboard, with only eTag field filled out
+| Field           | Type            | Notes                                                                                       |
+| :-------------- | :-------------- | :------------------------------------------------------------------------------------------ |
+| id              | string          | The unique identifier of the widget.                                                        |
+| name            | string          | The name of the widget.                                                                     |
+| position        | WidgetPosition  | The position of the widget in the dashboard.                                                |
+| size            | WidgetSize      | The size of the widget in the dashboard.                                                    |
+| settings        | string          | The configuration settings for the widget.                                                  |
+| settingsVersion | SemanticVersion | The version of configuration settings for the widget.                                       |
+| contributionId  | string          | The contribution ID of the widget.                                                          |
+| eTag            | string          | The concurrency eTag of the widget settings                                                 |
+| dashboard       | Dashboard       | Optional: for updates, partial payload of parent dashboard, with only eTag field filled out |
 
+## WidgetPosition
 
-## WidgetPosition 
 <a id="WidgetPosition"></a>
 Position of a widget
 
-| Field                       | Type                | Notes
-| :-----------                | :--------           | :--------
-| row                         | number              | 1-based row position of the widget
-| column                      | number              | 1-based column position of the widget
+| Field  | Type   | Notes                                 |
+| :----- | :----- | :------------------------------------ |
+| row    | number | 1-based row position of the widget    |
+| column | number | 1-based column position of the widget |
 
-## WidgetSize 
+## WidgetSize
+
 <a id="WidgetSize"></a>
 Size of a widget
 
-| Field                       | Type                | Notes
-| :-----------                | :--------           | :--------
-| rowSpan                     | number              | Height of the widget expressed in grid cells
-| columnSpan                  | number              | Width of the widget expressed in grid cells
+| Field      | Type   | Notes                                        |
+| :--------- | :----- | :------------------------------------------- |
+| rowSpan    | number | Height of the widget expressed in grid cells |
+| columnSpan | number | Width of the widget expressed in grid cells  |
 
-## SemanticVersion 
+## SemanticVersion
+
 <a id="SemanticVersion"></a>
 Version of widget settings
 
-| Field                  | Type                | Notes
-| :-----------           | :--------           | :--------
-| major                  | number              | Major version when you make incompatible API changes
-| minor                  | number              | Minor version when you add functionality in a backwards-compatible manner
-| patch                  | number              | Patch version when you make backwards-compatible bug fixes
-
+| Field | Type   | Notes                                                                     |
+| :---- | :----- | :------------------------------------------------------------------------ |
+| major | number | Major version when you make incompatible API changes                      |
+| minor | number | Minor version when you add functionality in a backwards-compatible manner |
+| patch | number | Patch version when you make backwards-compatible bug fixes                |
 
 ## Add a widget to the dashboard
+
 <a id="AddNewWidget"></a>
 Note that you must populate **dashboard** property of **Widget** with **eTag** field to participate in dashboard versioning.
 See [data versioning](./overview.md#dataversioning).
@@ -76,21 +78,24 @@ See [data versioning](./overview.md#dataversioning).
 POST https://{account}.VisualStudio.com/DefaultCollection/{project}/{teamId}/_apis/dashboard/dashboards/{dashboardId}/widgets?api-version={version}
 ```
 
-| Parameter    | Type       | Default   | Notes
-| :----------- | :--------- | :-------- | :-----------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| account      | string     |           | Your [VS Team Services account](../../get-started/rest/basics.md).
-| project      | string     |           | Your Visual Studio Project.
-| teamId       | string     |           | Your Team ID.
-| dashboardId  | string     |           | ID of the dashboard to add this widget.
+| account | string | | Your [VS Team Services account](../../get-started/rest/basics.md).
+| project | string | | Your Visual Studio Project.
+| teamId | string | | Your Team ID.
+| dashboardId | string | | ID of the dashboard to add this widget.
 | Query
-| api-version  | string     |           | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 POST http://localhost:8080/tfs/DefaultCollection/6c9633e5-5633-4b1d-8081-02b35e39258e/8b69d2eb-2e18-4c75-a1ca-4c1820800e2e/_apis/Dashboard/Dashboards/e17c2ae9-c35c-4ddd-9d4b-6aa47aa4d01a/Widgets?api-version=3.0-preview.2
 ```
+
 ```json
 {
   "name": "Other Links",
@@ -155,24 +160,26 @@ POST http://localhost:8080/tfs/DefaultCollection/6c9633e5-5633-4b1d-8081-02b35e3
 }
 ```
 
-
 ## Get a widget
+
 <a id="GetWidget"></a>
 
 ```no-highlight
 GET https://{account}.VisualStudio.com/DefaultCollection/{project}/{teamId}/_apis/dashboard/dashboards/{dashboardId}/widgets/{id}?api-version={version}
 ```
 
-| Parameter    | Type       | Default    | Notes
-| :----------- | :--------- | :--------- | :--------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| account      | string     |            | Your [VS Team Services account](../../get-started/rest/basics.md).
-| project      | string     |            | Your Visual Studio Project.
-| teamId       | string     |            | Your Team ID.
-| dashboardId  | string     |            | ID of the dashboard.
-| id           | string     |            | ID of the widget.
+| account | string | | Your [VS Team Services account](../../get-started/rest/basics.md).
+| project | string | | Your Visual Studio Project.
+| teamId | string | | Your Team ID.
+| dashboardId | string | | ID of the dashboard.
+| id | string | | ID of the widget.
 | Query
-| api-version  | string     |            | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -220,16 +227,16 @@ GET http://localhost:8080/tfs/DefaultCollection/6c9633e5-5633-4b1d-8081-02b35e39
 }
 ```
 
-
 ## Update a widget
+
 <a id="UpdateWidget"></a>
-Update the widget. 
+Update the widget.
 
-Note the following: 
+Note the following:
 
-* You must populate the eTag field of the **Widget** to participate in widget settings versioning.
-* You must populate **dashboard** property of **Widget** with **eTag** field to participate in dashboard versioning.
-* This is not compliant with the JSON PATCH standard, and as such, nulling of the fields is not supported (null/missing value is considered no change).
+- You must populate the eTag field of the **Widget** to participate in widget settings versioning.
+- You must populate **dashboard** property of **Widget** with **eTag** field to participate in dashboard versioning.
+- This is not compliant with the JSON PATCH standard, and as such, nulling of the fields is not supported (null/missing value is considered no change).
 
 See [data versioning](./overview.md#dataversioning).
 
@@ -237,22 +244,25 @@ See [data versioning](./overview.md#dataversioning).
 PATCH https://{account}.VisualStudio.com/DefaultCollection/{project}/{teamId}/_apis/dashboard/dashboards/{dashboardId}/widgets/{id}?api-version={version}
 ```
 
-| Parameter    | Type         | Default    | Notes
-| :----------- | :----------- | :--------- | :---------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| account      | string       |            | Your [VS Team Services account](../../get-started/rest/basics.md).
-| project      | string       |            | Your Visual Studio Project.
-| teamId       | string       |            | Your Team ID.
-| dashboardId  | string       |            | ID of the dashboard.
-| id           | string       |            | ID of the widget.
+| account | string | | Your [VS Team Services account](../../get-started/rest/basics.md).
+| project | string | | Your Visual Studio Project.
+| teamId | string | | Your Team ID.
+| dashboardId | string | | ID of the dashboard.
+| id | string | | ID of the widget.
 | Query
-| api-version  | string       |            | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 PATCH http://localhost:8080/tfs/DefaultCollection/6c9633e5-5633-4b1d-8081-02b35e39258e/8b69d2eb-2e18-4c75-a1ca-4c1820800e2e/_apis/Dashboard/Dashboards/e17c2ae9-c35c-4ddd-9d4b-6aa47aa4d01a/widgets/69f6c5b7-0eb0-4067-b75f-6edff74d0fcf?api-version=3.0-preview.2
 ```
+
 ```json
 {
   "id": "456afb86-ecf6-49cf-bbcc-1ab7d0fc14b2",
@@ -319,14 +329,15 @@ PATCH http://localhost:8080/tfs/DefaultCollection/6c9633e5-5633-4b1d-8081-02b35e
 }
 ```
 
-
 ## Replace a widget
+
 <a id="ReplaceWidget"></a>
 Replace the widget.
 
-Note the following: 
-* You must populate the eTag field of the **Widget** to participate in widget settings versioning.
-* You must populate **dashboard** property of **Widget** with **eTag** field to participate in dashboard versioning.
+Note the following:
+
+- You must populate the eTag field of the **Widget** to participate in widget settings versioning.
+- You must populate **dashboard** property of **Widget** with **eTag** field to participate in dashboard versioning.
 
 See [data versioning](./overview.md#dataversioning).
 
@@ -334,24 +345,25 @@ See [data versioning](./overview.md#dataversioning).
 PUT https://{account}.VisualStudio.com/DefaultCollection/{project}/{teamId}/_apis/dashboard/dashboards/{dashboardId}/widgets/{id}?api-version={version}
 ```
 
-| Parameter    | Type         | Default    | Notes
-| :----------- | :----------- | :--------- | :---------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| account      | string       |            | Your [VS Team Services account](../../get-started/rest/basics.md).
-| project      | string       |            | Your Visual Studio Project.
-| teamId       | string       |            | Your Team ID.
-| dashboardId  | string       |            | ID of the dashboard.
-| id           | string       |            | ID of the widget.
+| account | string | | Your [VS Team Services account](../../get-started/rest/basics.md).
+| project | string | | Your Visual Studio Project.
+| teamId | string | | Your Team ID.
+| dashboardId | string | | ID of the dashboard.
+| id | string | | ID of the widget.
 | Query
-| api-version  | string       |            | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-
-
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 PUT http://localhost:8080/tfs/DefaultCollection/6c9633e5-5633-4b1d-8081-02b35e39258e/8b69d2eb-2e18-4c75-a1ca-4c1820800e2e/_apis/Dashboard/Dashboards/e17c2ae9-c35c-4ddd-9d4b-6aa47aa4d01a/widgets/69f6c5b7-0eb0-4067-b75f-6edff74d0fcf?api-version=3.0-preview.2
 ```
+
 ```json
 {
   "id": "69f6c5b7-0eb0-4067-b75f-6edff74d0fcf",
@@ -418,8 +430,8 @@ PUT http://localhost:8080/tfs/DefaultCollection/6c9633e5-5633-4b1d-8081-02b35e39
 }
 ```
 
-
 ## Delete a widget
+
 <a id="DeleteWidget"></a>
 Delete a widget given its ID.
 
@@ -427,32 +439,36 @@ Delete a widget given its ID.
 DELETE https://{account}.VisualStudio.com/DefaultCollection/{project}/{teamId}/_apis/dashboard/dashboards/{dashboardId}/widgets/{id}?api-version={version}
 ```
 
-| Parameter    | Type         | Default    | Notes
-| :----------- | :----------- | :--------- | :-----------------------------------------------------
-| URL
-| account      | string       |            | Your [VS Team Services account](../../get-started/rest/basics.md).
-| project      | string       |            | Your Visual Studio Project.
-| teamId       | string       |            | Your Team ID.
-| dashboardId  | string       |            | ID of the dashboard.
-| id           | string       |            | ID of the widget.
-| Query
-| api-version  | string       |            | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
 
+
+| URL
+| account | string | | Your [VS Team Services account](../../get-started/rest/basics.md).
+| project | string | | Your Visual Studio Project.
+| teamId | string | | Your Team ID.
+| dashboardId | string | | ID of the dashboard.
+| id | string | | ID of the widget.
+| Query
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 ## Widgets List
+
 <a id="WidgetsDefinition"></a>
 List of widgets.
 
 Note that list versioning is communicated via an ETag header present in all methods operating on a list of widgets. See [data versioning](./overview.md#dataversioning).
 
-| Field                       | Type                | Notes
-| :-----------                | :--------           | :--------
-| count                       | number              | Number of widgets in the list
-| value                       | Widget[]            | Array of widgets
+| Field | Type     | Notes                         |
+| :---- | :------- | :---------------------------- |
+| count | number   | Number of widgets in the list |
+| value | Widget[] | Array of widgets              |
+
 | **Headers**
-| ETag                        | string              | Concurrency eTag of widget list
+| ETag | string | Concurrency eTag of widget list
 
 ## Get widgets List
+
 <a id="GetWidgets"></a>
 Get the list of widgets for a dashboard.
 
@@ -460,17 +476,19 @@ Get the list of widgets for a dashboard.
 GET https://{account}.VisualStudio.com/DefaultCollection/{project}/{teamId}/_apis/dashboard/dashboards/{dashboardId}/widgets/?api-version={version}
 ```
 
-| Parameter    | Type       | Default    | Notes
-| :----------- | :--------- | :--------- | :--------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| account      | string     |            | Your [VS Team Services account](../../get-started/rest/basics.md).
-| project      | string     |            | Your Visual Studio Project.
-| teamId       | string     |            | Your Team ID.
-| dashboardId  | string     |            | ID of the dashboard.
+| account | string | | Your [VS Team Services account](../../get-started/rest/basics.md).
+| project | string | | Your Visual Studio Project.
+| teamId | string | | Your Team ID.
+| dashboardId | string | | ID of the dashboard.
 | Query
-| api-version  | string     |            | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | **Headers**
-| ETag         | string     |            | (out) Concurrency eTag of the dashboard
+| ETag | string | | (out) Concurrency eTag of the dashboard
 
 #### Sample request
 
@@ -744,38 +762,41 @@ GET http://localhost:8080/tfs/DefaultCollection/6c9633e5-5633-4b1d-8081-02b35e39
 }
 ```
 
-
 ## Update widgets list
+
 <a id="UpdateWidgets"></a>
 Update the provided list of widgets. Partial array of widgets can be provided, and only those will be updated.
 If any of provided widgets doesn't already exist in the dashboard an exception will be thrown.
 
-Note the following: 
-* You must provide ETag header when updating the list. See [data versioning](./overview.md#dataversioning).
-* This is not compliant with JSON PATCH standard, and as such adding/removing widgets is not supported.
+Note the following:
+
+- You must provide ETag header when updating the list. See [data versioning](./overview.md#dataversioning).
+- This is not compliant with JSON PATCH standard, and as such adding/removing widgets is not supported.
 
 ```no-highlight
 PATCH https://{account}.VisualStudio.com/DefaultCollection/{project}/{teamId}/_apis/dashboard/dashboards/{dashboardId}/widgets/?api-version={version}
 ```
 
-| Parameter    | Type       | Default    | Notes
-| :----------- | :--------- | :--------- | :--------------------------------------
-| URL
-| account      | string     |            | Your [VS Team Services account](../../get-started/rest/basics.md).
-| project      | string     |            | Your Visual Studio Project.
-| teamId       | string     |            | Your Team ID.
-| dashboardId  | string     |            | ID of the dashboard.
-| Query
-| api-version  | string     |            | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| **Headers**
-| ETag         | string     |            | (in/out) Concurrency eTag of the dashboard
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
 
+
+| URL
+| account | string | | Your [VS Team Services account](../../get-started/rest/basics.md).
+| project | string | | Your Visual Studio Project.
+| teamId | string | | Your Team ID.
+| dashboardId | string | | ID of the dashboard.
+| Query
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| **Headers**
+| ETag | string | | (in/out) Concurrency eTag of the dashboard
 
 #### Sample request
 
 ```
 PATCH http://localhost:8080/tfs/DefaultCollection/6c9633e5-5633-4b1d-8081-02b35e39258e/8b69d2eb-2e18-4c75-a1ca-4c1820800e2e/_apis/Dashboard/dashboards/e17c2ae9-c35c-4ddd-9d4b-6aa47aa4d01a/widgets?api-version=3.0-preview.2
 ```
+
 ```json
 [
   {
@@ -843,9 +864,8 @@ PATCH http://localhost:8080/tfs/DefaultCollection/6c9633e5-5633-4b1d-8081-02b35e
 }
 ```
 
-
-
 ## Replace widgets list
+
 <a id="ReplaceWidgets"></a>
 Replace all widgets with a new list.
 
@@ -855,23 +875,26 @@ Note that you must provide ETag header when updating the list. See [data version
 PUT https://{account}.VisualStudio.com/DefaultCollection/{project}/{teamId}/_apis/dashboard/dashboards/{dashboardId}/widgets/?api-version={version}
 ```
 
-| Parameter    | Type       | Default    | Notes
-| :----------- | :--------- | :--------- | :--------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| account      | string     |            | Your [VS Team Services account](../../get-started/rest/basics.md).
-| project      | string     |            | Your Visual Studio Project.
-| teamId       | string     |            | Your Team ID.
-| dashboardId  | string     |            | ID of the dashboard.
+| account | string | | Your [VS Team Services account](../../get-started/rest/basics.md).
+| project | string | | Your Visual Studio Project.
+| teamId | string | | Your Team ID.
+| dashboardId | string | | ID of the dashboard.
 | Query
-| api-version  | string     |            | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | **Headers**
-| ETag         | string     |            | (in/out) Concurrency eTag of the dashboard
+| ETag | string | | (in/out) Concurrency eTag of the dashboard
 
 #### Sample request
 
 ```
 PUT http://localhost:8080/tfs/DefaultCollection/6c9633e5-5633-4b1d-8081-02b35e39258e/8b69d2eb-2e18-4c75-a1ca-4c1820800e2e/_apis/Dashboard/dashboards/e17c2ae9-c35c-4ddd-9d4b-6aa47aa4d01a/widgets?api-version=3.0-preview.2
 ```
+
 ```json
 [
   {
@@ -938,4 +961,3 @@ PUT http://localhost:8080/tfs/DefaultCollection/6c9633e5-5633-4b1d-8081-02b35e39
   ]
 }
 ```
-

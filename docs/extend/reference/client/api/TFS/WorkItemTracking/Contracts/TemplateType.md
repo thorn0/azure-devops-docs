@@ -15,5 +15,5 @@ Module path: `TFS/WorkItemTracking/Contracts`
 
 ### Values
 
-* `WorkItemType` 
-* `GlobalWorkflow` 
+- `WorkItemType`
+- `GlobalWorkflow`

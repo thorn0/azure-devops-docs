@@ -11,7 +11,7 @@ ms.date: 02/14/2020
 
 1. Sign into Azure at [https://portal.azure.com](https://portal.azure.com).
 
-1. In the Azure Portal, choose **Create a resource**, **Web**, then choose **Web App for Containers**.    
+1. In the Azure Portal, choose **Create a resource**, **Web**, then choose **Web App for Containers**.
 
 1. Enter a name for your new web app, and select or create a new Resource Group. For the **OS**, choose **Linux**.
 
@@ -25,7 +25,7 @@ The **Docker** tasks you used in the build pipeline when you created the
 build artifacts push the Docker image back into your Azure Container Registry.
 The web app you created here will host an instance of that image and expose it as a website.
 
-*****
+---
 
 **Why use a separate release pipeline instead of the automatic deployment feature available in Web App for Containers?**
 
@@ -34,12 +34,12 @@ CI/CD pipeline so that the web app is automatically updated when a new image is 
 registry (this feature uses a [webhook](/azure/container-registry/container-registry-webhook)).
 However, by using a separate release pipeline in Azure Pipelines or TFS you gain extra flexibility and traceability. You can:
 
-* Specify an appropriate tag that is used to select the deployment target for multi-stage deployments.
-* Use separate container registries for different stages.
-* Use parameterized start-up commands to, for example, set the values of variables based on the target stage.
-* Avoid using the same tag for all the deployments. The default CD pipeline for Web App for Containers
+- Specify an appropriate tag that is used to select the deployment target for multi-stage deployments.
+- Use separate container registries for different stages.
+- Use parameterized start-up commands to, for example, set the values of variables based on the target stage.
+- Avoid using the same tag for all the deployments. The default CD pipeline for Web App for Containers
   uses the same tag for every deployment. While this may be appropriate for a tag such as **latest**,
   you can achieve end-to-end traceability from code to deployment by using a build-specific tag for each deployment.
   For example, the Docker build tasks let you tag your images with the **Build.ID** for each deployment.
 
-*****
+---

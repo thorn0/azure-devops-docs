@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Associate a file type with a merge tool
 
@@ -54,4 +53,4 @@ To perform this procedure, you must be a member of the **Administrators** or **U
 
 #### Other Resources
 
- [Merge folders and files](merge-folders-files.md) 
+[Merge folders and files](merge-folders-files.md)

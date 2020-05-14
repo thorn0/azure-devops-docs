@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Destroy Command (Team Foundation Version Control)
 
@@ -29,7 +28,7 @@ After you delete the files you can synchronize the Team Foundation warehouse. Ot
 To use the **destroy** command, you must belong to the **Team Foundation Administrators** security group. For more information, see [Permissions and groups reference](../../organizations/security/permissions.md).
 
 ```
-tf destroy [/keephistory] <itemspec1>[;<versionspec>][<itemspec2>...<itemspecN>] 
+tf destroy [/keephistory] <itemspec1>[;<versionspec>][<itemspec2>...<itemspecN>]
 [/stopat:<versionspec>] [/preview] [/startcleanup] [/noprompt] [/silent] [/login:username,[password]] [/collection:TeamProjectCollectionUrl]]
 ```
 
@@ -81,11 +80,12 @@ tf destroy [/keephistory] <itemspec1>[;<versionspec>][<itemspec2>...<itemspecN>]
 </table>
 
 ## Remarks
+
 When you use **tf destroy** to destroy version-control files, the application tier of Team Foundation Server receives the destroy request and checks to see whether you are a member of the **Team Foundation Administrators** security group. If you are not a member, the system displays an error-message dialog box that tells you that you do not have sufficient permissions to perform the operation.
 
 After the system verifies your permissions, it runs the destroy command. This command deletes all file references, shelvesets, and pending changes. The actual destruction of files, which is a permanent deletion, happens the next time that the content that is no longer referenced by Team Foundation Server is cleaned up. You can also specify the **/startcleanup** option to clean up the files immediately after **tf destroy** runs.
 
-If you run **tf destroy** without specifying **/i** and **/preview**, the system displays a console **Yes** or **No** prompt for each *filespec* value. Otherwise, you can specify **Yes to all**. If you do not specify **/keephistory**, you are prompted by an interactive text that warns of pending changes, if they exist. The interactive text points to **/preview** if you want more information about the changes. If you specify **/keephistory**, you are also prompted by **Yes**, **No**, or **All** text. If you select **Yes** or **All**, the destruction process starts, and the server paths to the destroyed items appear in the Command Prompt window.
+If you run **tf destroy** without specifying **/i** and **/preview**, the system displays a console **Yes** or **No** prompt for each _filespec_ value. Otherwise, you can specify **Yes to all**. If you do not specify **/keephistory**, you are prompted by an interactive text that warns of pending changes, if they exist. The interactive text points to **/preview** if you want more information about the changes. If you specify **/keephistory**, you are also prompted by **Yes**, **No**, or **All** text. If you select **Yes** or **All**, the destruction process starts, and the server paths to the destroyed items appear in the Command Prompt window.
 
 ```
 Destroyed: <serverItem1>
@@ -93,24 +93,23 @@ Destroyed: <serverItem2>
 Destroyed: ...
 ```
 
-If you specified the *versionspec* value as a tip, the server paths displayed in the Command Prompt window include deletion IDs. For example, X123 might appear in the Command Prompt window.
+If you specified the _versionspec_ value as a tip, the server paths displayed in the Command Prompt window include deletion IDs. For example, X123 might appear in the Command Prompt window.
 
-If you use the **/preview** option, the files are not destroyed, but the command-line text displays the files that would be destroyed. For example, if, at the command-line, you type **tf destroy /preview $/Test1/MyProject/MyProject/Program.cs**, the command window displays this text:
+If you use the **/preview** option, the files are not destroyed, but the command-line text displays the files that would be destroyed. For example, if, at the command-line, you type **tf destroy /preview \$/Test1/MyProject/MyProject/Program.cs**, the command window displays this text:
 
-Destroyed: $/Test1/MyProject/MyProject/Program.cs
+Destroyed: \$/Test1/MyProject/MyProject/Program.cs
 
 However, the file is actually not destroyed because you used the **/preview** option.
 
 For more information about how to find the **tf** command-line utility, see [Tf Command-Line Utility Commands](https://msdn.microsoft.com/library/z51z7zy0).
 
-
 ### Effects of /keephistory on Other Version Control Operations
 
 If you specify the **/keephistory** option to retain the history of destroyed files, the files are treated as destroyed by the following Team Foundation version control operations:
 
--   **Change content   **If you try to change the content of a destroyed file, for example edit or branch, the system issues an error message that states the content has been destroyed.
+- **Change content **If you try to change the content of a destroyed file, for example edit or branch, the system issues an error message that states the content has been destroyed.
 
--   **Branch, merge, or unshelve   **If you try to branch, merge, or unshelve destroyed items, the system issues an error message that states the content of the items has been destroyed.
+- **Branch, merge, or unshelve **If you try to branch, merge, or unshelve destroyed items, the system issues an error message that states the content of the items has been destroyed.
 
 ### Destroying Previously Deleted Items
 
@@ -119,9 +118,10 @@ If an item has already been deleted, a deletion ID is attached to it and results
 ### Effects of TF DESTROY on TFVC repo Code Search
 
 Code Search does not handle TF DESTROY notifications and so using TF DESTROY for TFVC repos will not automatically delete files in the Search index.
-As a result, these files appear in the code search results. To avoid these ghost files scenario, users are recommended to delete files before TF DESTROY operation. 
+As a result, these files appear in the code search results. To avoid these ghost files scenario, users are recommended to delete files before TF DESTROY operation.
 
 ## Examples
+
 ### Description
 
 The following example permanently deletes the file a.cs.
@@ -134,7 +134,7 @@ C:\pi\ws1>tf destroy $/proj/pi/a.cs
 
 ### Description
 
-The following example deletes a folder, *aFolder*, type at the command line:
+The following example deletes a folder, _aFolder_, type at the command line:
 
 ### Code
 
@@ -144,7 +144,7 @@ C:\tf delete $/MyTeamProject/aFolder
 
 ### Description
 
-To destroy the deleted item, *aFolder*, you must type at the command line:
+To destroy the deleted item, _aFolder_, you must type at the command line:
 
 ### Code
 

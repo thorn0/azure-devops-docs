@@ -14,18 +14,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `enabled`: boolean. Gets or sets a value indicating whether or not this agent should be enabled for job execution.
+- `enabled`: boolean. Gets or sets a value indicating whether or not this agent should be enabled for job execution.
 
-* `id`: number. Gets the identifier of the agent.
+- `id`: number. Gets the identifier of the agent.
 
-* `name`: string. Gets the name of the agent.
+- `name`: string. Gets the name of the agent.
 
-* `status`: [TaskAgentStatus](../../../TFS/DistributedTask/Contracts/TaskAgentStatus.md). Gets the current connectivity status of the agent.
+- `status`: [TaskAgentStatus](../../../TFS/DistributedTask/Contracts/TaskAgentStatus.md). Gets the current connectivity status of the agent.
 
-* `version`: string. Gets the version of the agent.
-
+- `version`: string. Gets the version of the agent.

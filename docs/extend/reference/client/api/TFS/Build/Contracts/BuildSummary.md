@@ -14,22 +14,20 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `build`: [ShallowReference](./ShallowReference.md). 
+- `build`: [ShallowReference](./ShallowReference.md).
 
-* `finishTime`: Date. 
+- `finishTime`: Date.
 
-* `keepForever`: boolean. 
+- `keepForever`: boolean.
 
-* `quality`: string. 
+- `quality`: string.
 
-* `reason`: [BuildReason](./BuildReason.md). 
+- `reason`: [BuildReason](./BuildReason.md).
 
-* `requestedFor`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `requestedFor`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `startTime`: Date. 
+- `startTime`: Date.
 
-* `status`: [BuildStatus](./BuildStatus.md). 
-
+- `status`: [BuildStatus](./BuildStatus.md).

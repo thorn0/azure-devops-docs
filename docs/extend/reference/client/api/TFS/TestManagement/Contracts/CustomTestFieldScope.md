@@ -16,8 +16,8 @@ Module path: `TFS/TestManagement/Contracts`
 
 ### Values
 
-* `None` 
-* `TestRun` 
-* `TestResult` 
-* `System` 
-* `All` 
+- `None`
+- `TestRun`
+- `TestResult`
+- `System`
+- `All`

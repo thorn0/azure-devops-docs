@@ -1,5 +1,3 @@
-
-
 ::: moniker range="azure-devops"
 
 <table>
@@ -61,10 +59,10 @@
 </table>
 
 **Notes:**
-1. Public project Stakeholders have full access to all features. 
 
-::: moniker-end  
+1. Public project Stakeholders have full access to all features.
 
+::: moniker-end
 
 ::: moniker range=">= tfs-2015 <= azure-devops-2019"
 
@@ -107,8 +105,7 @@
 </tbody>
 </table>
 
-::: moniker-end  
-
+::: moniker-end
 
 ::: moniker range="tfs-2013"
 
@@ -143,4 +140,4 @@
 </tbody>
 </table>
 
-::: moniker-end 
+::: moniker-end

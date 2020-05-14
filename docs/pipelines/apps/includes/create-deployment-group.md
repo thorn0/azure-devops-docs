@@ -15,7 +15,7 @@ Deployment groups in Azure Pipelines make it easier to organize the servers that
 
 1. Click **Add Deployment group** (or **New** if there are already deployment groups in place).
 
-1. Enter a name for the group, such as *myIIS*, and then click **Create**.
+1. Enter a name for the group, such as _myIIS_, and then click **Create**.
 
 1. In the **Register machine** section, make sure that **Windows** is selected, and that **Use a personal access token in the script for authentication** is also selected. Click **Copy script to clipboard**.
 
@@ -28,10 +28,10 @@ Deployment groups in Azure Pipelines make it easier to organize the servers that
 1. When you're prompted for the user account, press Enter to accept the defaults.
 
    > The account under which the agent runs needs **Manage** permissions for the C:\Windows\system32\inetsrv\ directory.
-   Adding non-admin users to this directory is not recommended. In addition, if you have a custom user identity for the application pools,
-   the identity needs permission to read the crypto-keys. Local service accounts and user accounts must be given read access for this.
-   For more details, see [Keyset does not exist error message](https://support.microsoft.com/help/977754/-keyset-does-not-exist-error-message-when-you-try-to-change-the-identi).
+   > Adding non-admin users to this directory is not recommended. In addition, if you have a custom user identity for the application pools,
+   > the identity needs permission to read the crypto-keys. Local service accounts and user accounts must be given read access for this.
+   > For more details, see [Keyset does not exist error message](https://support.microsoft.com/help/977754/-keyset-does-not-exist-error-message-when-you-try-to-change-the-identi).
 
-1. When the script is done, it displays the message *Service vstsagent.account.computername started successfully*.
+1. When the script is done, it displays the message _Service vstsagent.account.computername started successfully_.
 
-1. On the **Deployment groups** page in Azure Pipelines, open the *myIIS* deployment group. On the **Targets** tab, verify that your VM is listed.
+1. On the **Deployment groups** page in Azure Pipelines, open the _myIIS_ deployment group. On the **Targets** tab, verify that your VM is listed.

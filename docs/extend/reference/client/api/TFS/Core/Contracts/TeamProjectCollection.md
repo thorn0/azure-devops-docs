@@ -18,9 +18,8 @@ Extends: [TeamProjectCollectionReference](../../../TFS/Core/Contracts/TeamProjec
 
 ### Members
 
-* `_links`: any. The links to other objects related to this object.
+- `_links`: any. The links to other objects related to this object.
 
-* `description`: string. Project collection description.
+- `description`: string. Project collection description.
 
-* `state`: string. Project collection state.
-
+- `state`: string. Project collection state.

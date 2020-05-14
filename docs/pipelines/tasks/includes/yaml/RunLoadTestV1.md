@@ -13,8 +13,8 @@ ms.technology: devops-cicd-tasks
 - task: CloudLoadTest@1
   inputs:
     #connectedServiceName: # Optional
-    #testDrop: '$(System.DefaultWorkingDirectory)' 
-    loadTest: 
+    #testDrop: '$(System.DefaultWorkingDirectory)'
+    loadTest:
     #activeRunSettings: 'useFile' # Optional. Options: useFile, changeActive
     #runSettingName: # Required when activeRunSettings == ChangeActive
     #testContextParameters: # Optional

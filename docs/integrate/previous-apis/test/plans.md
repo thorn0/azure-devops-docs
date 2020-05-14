@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Test Plans | REST API Reference for Team Foundation Server
 description: Work with test plans programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: B07716A0-0420-49F8-95B9-880105FADDA3
@@ -24,18 +24,20 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/{project}/_apis/test/plans?api-version={version}[&owner={string}&includePlanDetails={bool}&filterActivePlans={bool}&$skip={int}&$top={int}]
 ```
 
-| Parameter          | Type    | Default | Notes
-|:-------------------|:--------|:--------|:---------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance           | string  |         | TFS server name ({server:port}).
-| project            | string  |         | Name or ID of the project.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
 | Query
-| api-version        | string  |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| owner              | string  |         | Filter for test plan by owner ID or name.
-| includePlanDetails | bool    | false   | Get all properties of the test plan.
-| filterActivePlans  | bool    | false   | Get just the active plans.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| owner | string | | Filter for test plan by owner ID or name.
+| includePlanDetails | bool | false | Get all properties of the test plan.
+| filterActivePlans | bool | false | Get just the active plans.
 | $skip				 | int     |         | Number of test plans to skip.
-| $top               | int     |         | Number of test plans to return.
+| $top | int | | Number of test plans to return.
 
 #### Sample request
 
@@ -393,7 +395,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?a
 }
 ```
 
-
 ### With details
 
 #### Sample request
@@ -617,7 +618,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?i
 }
 ```
 
-
 ### Just active plans
 
 #### Sample request
@@ -836,7 +836,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?f
 }
 ```
 
-
 ### A page at a time
 
 #### Sample request
@@ -915,21 +914,22 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?$
 }
 ```
 
-
 ## Get a test plan
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}?api-version={version}
 ```
 
-| Parameter          | Type    | Notes
-|:-------------------|:--------|:---------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance           | string  | TFS server name ({server:port}).
-| project            | string  | Name or ID of the project.
-| plan               | int     | ID of the test plan to get.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| plan | int | ID of the test plan to get.
 | Query
-| api-version        | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -983,47 +983,52 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
 }
 ```
 
-
 ## Create a testplan
+
 <a name="createatestplan" />
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/_apis/test/plans?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
-  "name": {string},
-  "description": {string},
-  "area": {"name" : string},
-  "iteration": {string},
-  "startDate": {DateTime},
-  "endDate": {DateTime}
+  "name": { string },
+  "description": { string },
+  "area": { "name": string },
+  "iteration": { string },
+  "startDate": { DateTime },
+  "endDate": { DateTime }
 }
 ```
 
-| Parameter   | Type     | Default                     | Notes
-|:------------|:---------|:----------------------------|:---------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance    | string   |                             | TFS server name ({server:port}).
-| project     | string   |                             | Name or ID of the project.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
 | Query
-| api-version | string   |                             | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name        | string   |                             | Name of the new test plan.
-| description | string   |                             | Description of the new test plan.
-| area.name   | string   | Project root area      | Name of the area in which to create the test plan.
-| iteration   | string   | Project root iteration | Name of the iteration in which to create the test plan.
-| startDate   | DateTime | Current date                | Start date for test plan.
-| endDate     | DateTime | Start date + 7 days         | End date for test plan.
+| name | string | | Name of the new test plan.
+| description | string | | Description of the new test plan.
+| area.name | string | Project root area | Name of the area in which to create the test plan.
+| iteration | string | Project root iteration | Name of the iteration in which to create the test plan.
+| startDate | DateTime | Current date | Start date for test plan.
+| endDate | DateTime | Start date + 7 days | End date for test plan.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?api-version=1.0
 ```
+
 ```json
 {
   "name": "newCreatedPlan"
@@ -1075,7 +1080,6 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?
 }
 ```
 
-
 ### With a description
 
 #### Sample request
@@ -1083,6 +1087,7 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?api-version=1.0
 ```
+
 ```json
 {
   "name": "newCreatedPlan",
@@ -1136,13 +1141,14 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?
 }
 ```
 
-
 ### In an area and iteration
+
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?api-version=1.0
 ```
+
 ```json
 {
   "name": "ANewPlan",
@@ -1198,13 +1204,14 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?
 }
 ```
 
-
 ### To start on a date and finish on a date
+
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?api-version=1.0
 ```
+
 ```json
 {
   "name": "ANewPlan",
@@ -1258,15 +1265,16 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans?
 }
 ```
 
-
 ## Update a testplan
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
   "name": {string},
@@ -1282,22 +1290,24 @@ Content-Type: application/json
 }
 ```
 
-| Parameter   | Type     | Default                     | Notes
-|:------------|:---------|:----------------------------|:---------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance    | string   |                             | TFS server name ({server:port}).
-| project     | string   |                             | Name or ID of the project.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
 | Query
-| api-version | string   |                             | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name        | string   |                             | Name of the new test plan.
-| description | string   |                             | Description of the new test plan.
-| area.name   | string   | Project root area      | Name of the area in which to create the test plan.
-| iteration   | string   | Project root iteration | Name of the iteration in which to create the test plan.
-| startDate   | DateTime | Current date                | Start date for test plan.
-| endDate     | DateTime | Start date + 7 days         | End date for test plan.
-| build       | int      |                             | ID of the build to test.
-| state       | enum { Active, Inactive } |            | State of the test plan.
+| name | string | | Name of the new test plan.
+| description | string | | Description of the new test plan.
+| area.name | string | Project root area | Name of the area in which to create the test plan.
+| iteration | string | Project root iteration | Name of the iteration in which to create the test plan.
+| startDate | DateTime | Current date | Start date for test plan.
+| endDate | DateTime | Start date + 7 days | End date for test plan.
+| build | int | | ID of the build to test.
+| state | enum { Active, Inactive } | | State of the test plan.
 
 ### Name
 
@@ -1306,6 +1316,7 @@ Content-Type: application/json
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/3?api-version=1.0
 ```
+
 ```json
 {
   "name": "newCreatedPlan2"
@@ -1358,7 +1369,6 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 }
 ```
 
-
 ### Description
 
 #### Sample request
@@ -1366,6 +1376,7 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/17?api-version=1.0
 ```
+
 ```json
 {
   "name": "newCreatedPlan2",
@@ -1419,13 +1430,14 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 }
 ```
 
-
 ### Area and iteration
+
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/17?api-version=1.0
 ```
+
 ```json
 {
   "area": {
@@ -1481,7 +1493,6 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 }
 ```
 
-
 ### State
 
 #### Sample request
@@ -1489,6 +1500,7 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/17?api-version=1.0
 ```
+
 ```json
 {
   "state": "Inactive"
@@ -1541,21 +1553,22 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 }
 ```
 
-
 ## Delete a testplan
 
 ```no-highlight
 DELETE https://{instance}/DefaultCollection/{project}/_apis/test/plans/{planId}?api-version={version}
 ```
 
-| Parameter   | Type     | Default                     | Notes
-|:------------|:---------|:----------------------------|:---------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance    | string   |                             | TFS server name ({server:port}).
-| project     | string   |                             | Name or ID of the project.
-| planId      | int      |                             | ID of the test plan to delete.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
+| planId | int | | ID of the test plan to delete.
 | Query
-| api-version | string   |                             | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 

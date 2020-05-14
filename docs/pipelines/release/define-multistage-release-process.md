@@ -7,7 +7,7 @@ ms.topic: tutorial
 ms.author: ronai
 author: RoopeshNair
 ms.date: 08/24/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Define your multi-stage continuous deployment (CD) pipeline
@@ -28,24 +28,25 @@ requiring approvals at specific stages.
 In this tutorial, you learn about:
 
 > [!div class="checklist"]
-> * Configuring triggers within the release pipeline
-> * Extending a release pipeline by adding stages
-> * Configuring the stages as a multi-stage release pipeline
-> * Adding approvals to your release pipeline
-> * Creating a release and monitoring the deployment to each stage
+>
+> - Configuring triggers within the release pipeline
+> - Extending a release pipeline by adding stages
+> - Configuring the stages as a multi-stage release pipeline
+> - Adding approvals to your release pipeline
+> - Creating a release and monitoring the deployment to each stage
 
 ## Prerequisites
 
 You'll need:
 
-* A release pipeline that contains at least one stage. If you don't already have one,
+- A release pipeline that contains at least one stage. If you don't already have one,
   you can create it by working through any of the following quickstarts and tutorials:
 
   - [Deploy to an Azure Web App](../apps/cd/deploy-webdeploy-webapps.md)
   - [Azure DevOps Project](../get-started-azure-devops-project.md)
   - [Deploy to IIS web server on Windows](../apps/cd/deploy-webdeploy-iis-deploygroups.md)
 
-* Two separate targets where you will deploy the app. These could be virtual machines,
+- Two separate targets where you will deploy the app. These could be virtual machines,
   web servers, on-premises physical deployment groups, or other types of deployment target.
   In this example, we are using Azure App Services website instances.
   If you decide to do the same, you will have to choose names that are unique, but it's a good idea to include
@@ -70,7 +71,7 @@ In this section, you will check that the triggers you need for continuous deploy
 
 1. Choose the **Pre-deployment conditions** icon in the **Stages** section to open the conditions panel.
    Make sure that the trigger for deployment to this stage is set to **After release**.
-   This means that a deployment will be initiated automatically when a new release is created from this release pipeline.   
+   This means that a deployment will be initiated automatically when a new release is created from this release pipeline.
 
    ![Choosing the pre-deployment conditions icon for your release stage and setting the trigger to After release](media/define-multistage-release-process/environment-trigger.png)
 
@@ -122,7 +123,7 @@ a groups of servers, or any other legitimate physical or virtual deployment targ
    Notice that you can specify deployment to start when a deployment to the previous stage is _partially_ successful.
    Usually, this means the deployment tasks were set to continue the deployment even if a specific non-critical task failed
    (the default is that all tasks must succeed). You're most likely to set this option if you create a pipeline containing
-   [fork and join deployments](triggers.md) that deploy to different stages in parallel.  
+   [fork and join deployments](triggers.md) that deploy to different stages in parallel.
 
 1. Open the **Tasks** drop-down list and choose the **QA** stage.
    Recall that this stage is a clone of the original **Production** stage in the release pipeline.
@@ -157,7 +158,7 @@ you deploy to production. In this section, you will add an approval step to the 
    ![Viewing the pre-deployment approvers settings from the Stages panel](media/define-multistage-release-process/open-approvers.png)
 
 1. In the **Approvers** section, choose your user(s) from the list. You
-   can type part of a name to search for matches. Also make sure you clear (untick) the checkbox 
+   can type part of a name to search for matches. Also make sure you clear (untick) the checkbox
    **User requesting a release...** so that you can approve your own releases.
 
    ![Adding approvers from the Pre-deployment condition panel](media/define-multistage-release-process/select-approvers.png)
@@ -200,7 +201,7 @@ the source code will start a new build and, from that, a new release. However, i
 
    Other views, such as the list of releases, also display an icon that indicates approval is pending.
    The icon shows a pop-up containing the stage name and more details when you point to it.
-   This makes it easy for an administrator to see which releases are awaiting approval, as well as the overall progress of all releases.    
+   This makes it easy for an administrator to see which releases are awaiting approval, as well as the overall progress of all releases.
 
    ![Viewing a list of individual release statuses for your app's release pipeline](media/define-multistage-release-process/list-approval-waiting.png)
 
@@ -226,7 +227,7 @@ from the release you created in the previous section.
 
    While the deployment is taking place, the logs page shows the live log from the agent.
    After the deployment is complete, links to the logs for each task step are displayed in the right pane.
-   
+
 1. Select any of the pipeline steps to show just the log file contents for that step.
    This makes it easier to trace and debug individual parts of the overall deployment. Alternatively, download
    the individual log files, or a zip of all the log files, from the icons and links in the page.
@@ -238,5 +239,4 @@ from the release you created in the previous section.
 
 ## Next step
 
-> [!div class="nextstepaction"]
-> [Use approvals and gates to control your deployment](deploy-using-approvals.md)
+> [!div class="nextstepaction"][use approvals and gates to control your deployment](deploy-using-approvals.md)

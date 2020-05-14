@@ -5,9 +5,8 @@ ms.topic: conceptual
 ms.assetid: 6728CA49-5D44-4603-96E1-3BC3CF8D9793
 ms.date: 06/27/2017
 ms.custom: "mvc, seodec18"
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Implement a CI/CD pipeline to build and deploy your ASP.NET app to Azure
 
@@ -60,11 +59,11 @@ In the **Create release pipeline** wizard, select the **IIS Website and SQL Data
 
 Click **Tasks**, and then select the **SQL Deployment** phase. Click 'X' to delete this phase. We won't be deploying a database in this quickstart.
 
-Select **IIS Deployment** phase. For the **Deployment Group**, select the deployment group you created earlier, such as *myIIS*. In the **Machine tags** box, select **Add** and choose the *Web* tag.
+Select **IIS Deployment** phase. For the **Deployment Group**, select the deployment group you created earlier, such as _myIIS_. In the **Machine tags** box, select **Add** and choose the _Web_ tag.
 
 Select the **IIS Web App Manage** task; click 'X' to delete this task. We will not create a new website for this quickstart. Instead, we will deploy to the **default web site**.
 
-Select the **IIS Web App Deploy** task to configure your IIS instance settings as follows. For **Website Name**, enter *default web site*. Leave all the other default settings.
+Select the **IIS Web App Deploy** task to configure your IIS instance settings as follows. For **Website Name**, enter _default web site_. Leave all the other default settings.
 
 ![Screenshot showing release pipeline](media/aspnet-from-vsts-to-windows-vm/cicd-get-started-release-definition.png)
 
@@ -77,6 +76,7 @@ Navigate to the **Code** hub in the Azure Repos portal. Navigate to **Views/Home
 ![Screenshot showing update to code](./media/aspnet-from-vsts-to-windows-vm/cicd-get-started-aspnet-update-code.png)
 
 Add the following line of text as indicated in the image above:
+
 ```html
 <h1>Demo of CI/CD!!</h1>
 ```

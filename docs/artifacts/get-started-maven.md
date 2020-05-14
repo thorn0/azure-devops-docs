@@ -7,7 +7,7 @@ ms.assetid: C5112218-DA7E-4016-986D-2D0F70DAFA44
 ms.manager: jenp
 ms.reviewer: dastahel
 ms.date: 03/06/2020
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Get started with Maven packages in Azure DevOps Services and TFS
@@ -32,7 +32,7 @@ This quickstart assumes you've already set up Azure Artifacts. You can check out
 
 ## Create a feed
 
-*Already have a feed? [Skip to the next step](#setup-your-POM-and-settings-.xml).*
+_Already have a feed? [Skip to the next step](#setup-your-POM-and-settings-.xml)._
 
 [!INCLUDE [](includes/create-feed.md)]
 
@@ -58,7 +58,7 @@ This quickstart assumes you've already set up Azure Artifacts. You can check out
 
 ## Automate the process with continuous integration
 
-You can use continuous integration systems such as Team Build to automate the installation and publishing of your Maven artifacts. 
+You can use continuous integration systems such as Team Build to automate the installation and publishing of your Maven artifacts.
 To get started with continuous integration, see the [Maven in Team Build guidance](/azure/devops/pipelines/packages/maven).
 
 ## What's next?

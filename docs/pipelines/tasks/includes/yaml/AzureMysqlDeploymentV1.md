@@ -12,11 +12,11 @@ ms.technology: devops-cicd-tasks
 # Run your scripts and make changes to your Azure Database for MySQL
 - task: AzureMysqlDeployment@1
   inputs:
-    azureSubscription: 
-    serverName: 
+    azureSubscription:
+    serverName:
     #databaseName: # Optional
-    sqlUsername: 
-    sqlPassword: 
+    sqlUsername:
+    sqlPassword:
     #taskNameSelector: 'SqlTaskFile' # Optional. Options: sqlTaskFile, inlineSqlTask
     #sqlFile: # Required when taskNameSelector == SqlTaskFile
     #sqlInline: # Required when taskNameSelector == InlineSqlTask

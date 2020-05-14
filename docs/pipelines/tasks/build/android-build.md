@@ -7,7 +7,7 @@ ms.assetid: 21C3DC47-7D67-4427-8386-ACE3A6279995
 ms.author: vijayma
 author: vijayma
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Android build task (deprecated; use Gradle)
@@ -17,14 +17,15 @@ monikerRange: '>= tfs-2015'
 Use this task to build an Android app using Gradle and optionally start the emulator for unit tests.
 
 ## Deprecated
+
 **The Android Build task has been deprecated. Use the [Gradle](gradle.md) task instead.**
 
 ## Demands
 
 The build agent must have the following capabilities:
 
-* Android SDK (with the version number you will build against)
-* Android Support Repository (if referenced by Gradle file)
+- Android SDK (with the version number you will build against)
+- Android Support Repository (if referenced by Gradle file)
 
   ## Arguments
 
@@ -131,7 +132,6 @@ Check if you want to start the emulator with no GUI (headless mode).
 Check if you want the AVD to be deleted upon completion.
 </td>
 </tr>
-
 
 <tr>
 <th style="text-align: center" colspan="2"><a href="~/pipelines/process/tasks.md#controloptions" data-raw-source="[Control options](../../process/tasks.md#controloptions)">Control options</a></th>

@@ -14,8 +14,6 @@ ms.date: 08/04/2016
 
 Module path: `VSS/Common/Contracts/FormInput`
 
-
 ### Members
 
-* `conditions`: [InputFilterCondition](../../../../VSS/Common/Contracts/FormInput/InputFilterCondition.md)[]. Groups of input filter expressions. This filter matches a set of inputs if any (one or more) of the groups evaluates to true.
-
+- `conditions`: [InputFilterCondition](../../../../VSS/Common/Contracts/FormInput/InputFilterCondition.md)[]. Groups of input filter expressions. This filter matches a set of inputs if any (one or more) of the groups evaluates to true.

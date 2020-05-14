@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -17,25 +17,24 @@ Defined in vss.d.ts
 
 ### Values
 
-* `Unknown` Contribution type is unknown (value may be anything)
+- `Unknown` Contribution type is unknown (value may be anything)
 
-* `String` Value is a string
+- `String` Value is a string
 
-* `Uri` Value is a Uri
+- `Uri` Value is a Uri
 
-* `Guid` Value is a GUID
+- `Guid` Value is a GUID
 
-* `Boolean` Value is True or False
+- `Boolean` Value is True or False
 
-* `Integer` Value is an integer
+- `Integer` Value is an integer
 
-* `Double` Value is a double
+- `Double` Value is a double
 
-* `DateTime` Value is a DateTime object
+- `DateTime` Value is a DateTime object
 
-* `Dictionary` Value is a generic Dictionary/JObject/property bag
+- `Dictionary` Value is a generic Dictionary/JObject/property bag
 
-* `Array` Value is an array
+- `Array` Value is an array
 
-* `Object` Value is an arbitrary/custom object
-
+- `Object` Value is an arbitrary/custom object

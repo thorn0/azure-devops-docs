@@ -14,16 +14,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `definitionUri`: string. Uri of the associated definition
+- `definitionUri`: string. Uri of the associated definition
 
-* `lastModifiedBy`: string. The identity that last modified this template
+- `lastModifiedBy`: string. The identity that last modified this template
 
-* `lastModifiedDate`: Date. The last time this template was modified
+- `lastModifiedDate`: Date. The last time this template was modified
 
-* `mappings`: [WorkspaceMapping](./WorkspaceMapping.md)[]. List of workspace mappings
+- `mappings`: [WorkspaceMapping](./WorkspaceMapping.md)[]. List of workspace mappings
 
-* `workspaceId`: number. ID of the workspace for this template
-
+- `workspaceId`: number. ID of the workspace for this template

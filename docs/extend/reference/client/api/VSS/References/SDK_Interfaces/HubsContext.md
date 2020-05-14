@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,18 +15,16 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Context information containing the relevant hubs and hub groups for a given context 
+Context information containing the relevant hubs and hub groups for a given context
 
 ### Members
 
-* `hubGroups`: [HubGroup](../../../VSS/References/SDK_Interfaces/HubGroup.md)[]. 
+- `hubGroups`: [HubGroup](../../../VSS/References/SDK_Interfaces/HubGroup.md)[].
 
-* `hubGroupsCollectionContributionId`: string. 
+- `hubGroupsCollectionContributionId`: string.
 
-* `hubs`: [Hub](../../../VSS/References/SDK_Interfaces/Hub.md)[]. 
+- `hubs`: [Hub](../../../VSS/References/SDK_Interfaces/Hub.md)[].
 
-* `selectedHubGroupId`: string. 
+- `selectedHubGroupId`: string.
 
-* `selectedHubId`: string. 
-
+- `selectedHubId`: string.

@@ -18,5 +18,4 @@ Extends: [BuildTrigger](./BuildTrigger.md)
 
 ### Members
 
-* `schedules`: [Schedule](./Schedule.md)[]. 
-
+- `schedules`: [Schedule](./Schedule.md)[].

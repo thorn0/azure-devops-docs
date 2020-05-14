@@ -17,17 +17,16 @@ Extends: [WorkItemTrackingResourceReference](../../../TFS/WorkItemTracking/Contr
 
 ### Members
 
-* `fields`: {[key: string]: [WorkItemFieldUpdate](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldUpdate.md)}. 
+- `fields`: {[key: string]: [WorkItemFieldUpdate](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldUpdate.md)}.
 
-* `id`: number. 
+- `id`: number.
 
-* `relations`: [WorkItemRelationUpdates](../../../TFS/WorkItemTracking/Contracts/WorkItemRelationUpdates.md). 
+- `relations`: [WorkItemRelationUpdates](../../../TFS/WorkItemTracking/Contracts/WorkItemRelationUpdates.md).
 
-* `rev`: number. 
+- `rev`: number.
 
-* `revisedBy`: [IdentityReference](../../../TFS/WorkItemTracking/Contracts/IdentityReference.md). 
+- `revisedBy`: [IdentityReference](../../../TFS/WorkItemTracking/Contracts/IdentityReference.md).
 
-* `revisedDate`: Date. 
+- `revisedDate`: Date.
 
-* `workItemId`: number. 
-
+- `workItemId`: number.

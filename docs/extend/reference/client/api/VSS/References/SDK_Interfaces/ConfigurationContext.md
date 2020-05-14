@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,18 +15,16 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Web Access configuration data. This information is used to process requests on the server.  This data is also placed in a json island on each page in order for JavaScript to know key configuration data required to things like construct proper urls 
+Web Access configuration data. This information is used to process requests on the server. This data is also placed in a json island on each page in order for JavaScript to know key configuration data required to things like construct proper urls
 
 ### Members
 
-* `api`: [ConfigurationContextApis](../../../VSS/References/SDK_Interfaces/ConfigurationContextApis.md). MVC api configuration
+- `api`: [ConfigurationContextApis](../../../VSS/References/SDK_Interfaces/ConfigurationContextApis.md). MVC api configuration
 
-* `clientHost`: string. Optional name of the client (e.g. TEE) hosting the page
+- `clientHost`: string. Optional name of the client (e.g. TEE) hosting the page
 
-* `isHosted`: boolean. 
+- `isHosted`: boolean.
 
-* `mailSettings`: [TfsMailSettings](../../../VSS/References/SDK_Interfaces/TfsMailSettings.md). Current mail settings for TFS
+- `mailSettings`: [TfsMailSettings](../../../VSS/References/SDK_Interfaces/TfsMailSettings.md). Current mail settings for TFS
 
-* `paths`: [ConfigurationContextPaths](../../../VSS/References/SDK_Interfaces/ConfigurationContextPaths.md). Server resource paths
-
+- `paths`: [ConfigurationContextPaths](../../../VSS/References/SDK_Interfaces/ConfigurationContextPaths.md). Server resource paths

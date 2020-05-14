@@ -1,5 +1,5 @@
 ---
-title: Delete or restore files and folders using TFVC 
+title: Delete or restore files and folders using TFVC
 titleSuffix: Azure Repos
 description: Delete or restore files and folders using Team Foundation Version control
 ms.assetid: 8891c77c-490c-489c-99c7-860b4a92737c
@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 12/05/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Delete or restore files and folders in Team Foundation Version Control (TFVC)
 
@@ -26,11 +25,11 @@ See [Permissions and groups reference](../../organizations/security/permissions.
 
 Before you delete an item:
 
--   ![Delete item](media/delete-restore-files-folders/IC572373.png) Before you delete a file, look for a check mark icon ![Delete item](media/delete-restore-files-folders/IC51402.gif), which indicates pending edits in the file . If there are pending edits, you should view them (open the context menu by right-clicking the file and choosing **Compare**) and make sure that you do not need them. If you think you might need the edits in the future, consider checking in the file before you delete it.
+- ![Delete item](media/delete-restore-files-folders/IC572373.png) Before you delete a file, look for a check mark icon ![Delete item](media/delete-restore-files-folders/IC51402.gif), which indicates pending edits in the file . If there are pending edits, you should view them (open the context menu by right-clicking the file and choosing **Compare**) and make sure that you do not need them. If you think you might need the edits in the future, consider checking in the file before you delete it.
 
--   ![Delete item](media/delete-restore-files-folders/important.png) If you delete a folder, the system will pend delete actions for any folders and files that it contains.
+- ![Delete item](media/delete-restore-files-folders/important.png) If you delete a folder, the system will pend delete actions for any folders and files that it contains.
 
--   ![Delete item](media/delete-restore-files-folders/important.png) If you delete a file on which other files have dependencies, the system will automatically pend delete actions for those files. For example, if you delete a form file, the code and resource file will also be pended for deletion.
+- ![Delete item](media/delete-restore-files-folders/important.png) If you delete a file on which other files have dependencies, the system will automatically pend delete actions for those files. For example, if you delete a form file, the code and resource file will also be pended for deletion.
 
 ### To delete an item
 
@@ -38,23 +37,23 @@ Before you delete an item:
 
 2.  Select the items that you want to delete, open their context menu (right-click), and choose **Delete**.
 
-	> [!TIP]  
-	> If you are deleting a file from Solution Explorer, the following warning message may appear: &lt;*file name*&gt; **will be deleted permanently**. The file deletion will not be implemented on the server until you check in this change. 
-	> If the file was checked in to version control before the delete, then you can recover the file. Choose **OK** if you want to proceed with deleting the file.
+    > [!TIP]  
+    > If you are deleting a file from Solution Explorer, the following warning message may appear: &lt;_file name_&gt; **will be deleted permanently**. The file deletion will not be implemented on the server until you check in this change.
+    > If the file was checked in to version control before the delete, then you can recover the file. Choose **OK** if you want to proceed with deleting the file.
 
 3.  When you are ready, [check in your changes](check-your-work-team-codebase.md).
 
 ## Restore items deleted from Visual Studio
 
-> [!NOTE] 
+> [!NOTE]
 > If you're already checked in the delete of an item in TFVC, you can restore the deleted item from the server long as no one on your team has [destroyed](destroy-command-team-foundation-version-control.md) it.  
-> If you're not using TFVC, use [Solution Explorer](/visualstudio/ide/solutions-and-projects-in-visual-studio#solution-explorer) to delete items and files in your Visual Studio solution. 
+> If you're not using TFVC, use [Solution Explorer](/visualstudio/ide/solutions-and-projects-in-visual-studio#solution-explorer) to delete items and files in your Visual Studio solution.
 > Files deleted through Solution Explorer are moved to the Recycle Bin on your computer, where they can be restored.
 > Once restored from the Recycle Bin, right-click your solution in Solution Explorer and select **Add..** and then **Existing item...** to restore the file into your solution.
 
 ### From Team Explorer
 
-Open the [Pending Changes](develop-code-manage-pending-changes.md) page in Team Explorer (**View**, then **Team Explorer**, then select **Pending Changes**). 
+Open the [Pending Changes](develop-code-manage-pending-changes.md) page in Team Explorer (**View**, then **Team Explorer**, then select **Pending Changes**).
 Right-click the deleted items in the **Included Changes** area and choose **Undo...**.
 
 ### From Source Control Explorer
@@ -94,7 +93,7 @@ When you use a local workspace, Visual Studio detects and enables you to resolve
 
 ### Use a server workspace to restore an item you deleted outside Visual Studio
 
-When you accidentally delete an item outside Visual Studio and you are using a server workspace, when you try to open the item in Visual Studio you may see an error message such as: **TF10187: Could not open document** *file name* **The system cannot find the file specified.**. You can restore the item by getting it from the server.
+When you accidentally delete an item outside Visual Studio and you are using a server workspace, when you try to open the item in Visual Studio you may see an error message such as: **TF10187: Could not open document** _file name_ **The system cannot find the file specified.**. You can restore the item by getting it from the server.
 
 ### To use a server workspace to restore an item you deleted outside Visual Studio
 
@@ -111,12 +110,12 @@ When you accidentally delete an item outside Visual Studio and you are using a s
 
 ## Work from the command prompt
 
--    [Delete Command (Team Foundation Version Control)](delete-command-team-foundation-version-control.md)  Delete a file from the server.
+- [Delete Command (Team Foundation Version Control)](delete-command-team-foundation-version-control.md) Delete a file from the server.
 
--    [Destroy Command (Team Foundation Version Control)](destroy-command-team-foundation-version-control.md)  Permanently destroy an item.
+- [Destroy Command (Team Foundation Version Control)](destroy-command-team-foundation-version-control.md) Permanently destroy an item.
 
--    [Undelete Command](undelete-command.md)  Restore a file deleted from the server.
+- [Undelete Command](undelete-command.md) Restore a file deleted from the server.
 
--    [Undo command](undo-command.md)  Undo pending changes.
+- [Undo command](undo-command.md) Undo pending changes.
 
--    [Get command](get-command.md)  Get files from the server.
+- [Get command](get-command.md) Get files from the server.

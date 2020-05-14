@@ -12,7 +12,7 @@ ms.technology: devops-cicd-tasks
 # Run scripts with Knife commands on your Chef workstation
 - task: ChefKnife@1
   inputs:
-    connectedServiceName: 
-    scriptPath: 
+    connectedServiceName:
+    scriptPath:
     #scriptArguments: # Optional
 ```

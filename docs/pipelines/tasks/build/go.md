@@ -7,7 +7,7 @@ ms.assetid: 34B37FDD-BBF7-4EF1-B37C-9652CA7BB355
 ms.author: shasb
 author: shashankbarsin
 ms.date: 12/17/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Go task
@@ -55,35 +55,35 @@ Use this task to get, build, or test a go application, or run a custom go comman
 
 ```yml
 variables:
-  GOBIN:  '$(GOPATH)/bin' # Go binaries path
-  GOROOT: '/usr/local/go1.11' # Go installation path
-  GOPATH: '$(system.defaultWorkingDirectory)/gopath' # Go workspace path
-  modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
+  GOBIN: "$(GOPATH)/bin" # Go binaries path
+  GOROOT: "/usr/local/go1.11" # Go installation path
+  GOPATH: "$(system.defaultWorkingDirectory)/gopath" # Go workspace path
+  modulePath: "$(GOPATH)/src/github.com/$(build.repository.name)" # Path to the module's code
 
 steps:
-- task: GoTool@0
-  displayName: 'Use Go 1.10'
+  - task: GoTool@0
+    displayName: "Use Go 1.10"
 
-- task: Go@0
-  displayName: 'go get'
-  inputs:
-    arguments: '-d'
+  - task: Go@0
+    displayName: "go get"
+    inputs:
+      arguments: "-d"
 
-- task: Go@0
-  displayName: 'go build'
-  inputs:
-    command: build
-    arguments: '-o "$(System.TeamProject).exe"'
+  - task: Go@0
+    displayName: "go build"
+    inputs:
+      command: build
+      arguments: '-o "$(System.TeamProject).exe"'
 
-- task: ArchiveFiles@2
-  displayName: 'Archive files'
-  inputs:
-    rootFolderOrFile: '$(Build.Repository.LocalPath)'
-    includeRootFolder: False
+  - task: ArchiveFiles@2
+    displayName: "Archive files"
+    inputs:
+      rootFolderOrFile: "$(Build.Repository.LocalPath)"
+      includeRootFolder: False
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish artifact'
-  condition: succeededOrFailed()
+  - task: PublishBuildArtifacts@1
+    displayName: "Publish artifact"
+    condition: succeededOrFailed()
 ```
 
 ## Open source

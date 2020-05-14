@@ -12,9 +12,9 @@ ms.technology: devops-cicd-tasks
 # Deploy a Docker Compose application to an Azure Service Fabric cluster
 - task: ServiceFabricComposeDeploy@0
   inputs:
-    clusterConnection: 
-    #composeFilePath: '**/docker-compose.yml' 
-    #applicationName: 'fabric:/Application1' 
+    clusterConnection:
+    #composeFilePath: '**/docker-compose.yml'
+    #applicationName: 'fabric:/Application1'
     #registryCredentials: 'AzureResourceManagerEndpoint' # Options: azureResourceManagerEndpoint, containerRegistryEndpoint, usernamePassword, none
     #dockerRegistryConnection: # Optional
     #azureSubscription: # Required when registryCredentials == AzureResourceManagerEndpoint

@@ -1,29 +1,27 @@
 ---
-title: Open bugs sample Power BI report 
+title: Open bugs sample Power BI report
 titleSuffix: Azure DevOps
-description: How-to guide to generate an open bugs Power BI report  
+description: How-to guide to generate an open bugs Power BI report
 ms.technology: devops-analytics
 ms.reviewer: greggboe
 ms.author: kaelli
 ms.custom: powerbisample
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ms.date: 08/07/2019
 ---
 
-# Open bugs sample report 
+# Open bugs sample report
 
 [!INCLUDE [temp](../includes/version-azure-devops.md)]
 
-This article shows you how to display, for a given set of open Bugs, a breakdown by State and Assigned To fields. An example is shown in the following image. 
+This article shows you how to display, for a given set of open Bugs, a breakdown by State and Assigned To fields. An example is shown in the following image.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample - Boards Open Bugs - Report](media/odatapowerbi-openbugs-report.png)
 
-
 [!INCLUDE [temp](includes/sample-required-reading.md)]
-
 
 ## Sample queries
 
@@ -39,7 +37,7 @@ let
             &"and startswith(Area/AreaPath,'{areapath}') "
         &"&$select=WorkItemId,Title,WorkItemType,State,Priority,Severity,TagNames,AreaSK "
         &"&$expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath) "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -57,13 +55,13 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         &$expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath)
 ```
 
-***
+---
 
 ### Substitution strings
 
 [!INCLUDE [temp](includes/sample-query-substitutions.md)]
-- {areapath} - Your Area Path. Example format: Project\Level1\Level2
 
+- {areapath} - Your Area Path. Example format: Project\Level1\Level2
 
 ### Query breakdown
 
@@ -91,35 +89,33 @@ The following table describes each part of the query.
 </tbody>
 </table>
 
-
 ## Power BI transforms
 
 [!INCLUDE [temp](includes/sample-expandcolumns.md)]
 
 [!INCLUDE [temp](includes/sample-finish-query.md)]
 
-
 ## Create the report
 
-Power BI shows you the fields you can report on. 
+Power BI shows you the fields you can report on.
 
-> [!NOTE]   
-> The example below assumes that no one renamed any columns. 
+> [!NOTE]  
+> The example below assumes that no one renamed any columns.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample - Boards Open Bugs - Fields](media/odatapowerbi-openbugs-fields.png)
 
 For a simple report, do the following steps:
 
-1. Select Power BI Visualization **Matrix**. 
+1. Select Power BI Visualization **Matrix**.
 1. Add the field "State" to **Columns**.
 1. Add the field "AssignedTo.UserName" to **Rows**.
 1. Add the field "WorkItemId" to **Values**.
-    - Right-click "WorkItemId" field and ensure **Count** is selected.
+   - Right-click "WorkItemId" field and ensure **Count** is selected.
 
-The example report displays. 
+The example report displays.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Sample - Boards Open Bugs - Report](media/odatapowerbi-openbugs-report.png)
 
 [!INCLUDE [temp](includes/sample-multipleteams.md)]
@@ -130,7 +126,7 @@ You can use the following additional queries to create different but similar rep
 
 ### Filter by Teams, rather than Area Path
 
-You can query for open bugs by Team Name rather than Area Path.  
+You can query for open bugs by Team Name rather than Area Path.
 
 #### [Power BI query](#tab/powerbi/)
 
@@ -144,7 +140,7 @@ let
             &"and (Teams/any(x:x/TeamName eq '{teamname}) or Teams/any(x:x/TeamName eq '{teamname}) or Teams/any(x:x/TeamName eq '{teamname}) "
         &"&$select=WorkItemId,Title,WorkItemType,State,Priority,Severity,TagNames,AreaSK "
         &"&$expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath) "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -162,7 +158,7 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         &$expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath)
 ```
 
-***
+---
 
 ### User Stories in a specific Iteration
 
@@ -180,7 +176,7 @@ let
             &"and startswith(Iteration/IterationPath,'{iterationpath}') "
         &"&$select=WorkItemId,Title,WorkItemType,State,Priority,Severity,TagNames,AreaSK "
         &"&$expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath) "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -198,7 +194,7 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         &$expand=AssignedTo($select=UserName),Iteration($select=IterationPath),Area($select=AreaPath)
 ```
 
-***
+---
 
 ## Full list of sample reports
 

@@ -13,14 +13,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/WorkItemTracking/Contracts`
 
-
 ### Members
 
-* `isLastBatch`: boolean. 
+- `isLastBatch`: boolean.
 
-* `nextLink`: string. 
+- `nextLink`: string.
 
-* `nextWatermark`: number. 
+- `nextWatermark`: number.
 
-* `values`: T[]. 
-
+- `values`: T[].

@@ -14,24 +14,22 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `defaultValue`: string. 
+- `defaultValue`: string.
 
-* `groupName`: string. 
+- `groupName`: string.
 
-* `help`: {[key: string]: string}. 
+- `help`: {[key: string]: string}.
 
-* `label`: string. 
+- `label`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `options`: {[key: string]: string}. 
+- `options`: {[key: string]: string}.
 
-* `required`: boolean. 
+- `required`: boolean.
 
-* `type`: [BuildOptionInputType](./BuildOptionInputType.md). 
+- `type`: [BuildOptionInputType](./BuildOptionInputType.md).
 
-* `visibleRule`: string. 
-
+- `visibleRule`: string.

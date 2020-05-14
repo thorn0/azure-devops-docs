@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Git Repositories | REST API Reference for Team Foundation Server
 description: Work with Git repositories programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: BCB55CB9-4E2B-4D8B-ABC8-A503254F2FE9
@@ -20,20 +20,21 @@ ms.date: 08/04/2016
 
 There are [code samples](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/Git/RepositoriesSample.cs) available for this endpoint.
 
-
 ## Get a list of repositories
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories?api-version={version}
 ```
 
-| Parameter         | Type   | Notes
-|:------------------|:-------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance          | string | TFS server name ({server:port}).
-| project           | string | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.*
+| instance | string | TFS server name ({server:port}).
+| project | string | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._
 | Query
-| api-version       | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 ### In your account
 
@@ -93,24 +94,27 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories?api-version=1.0
 }
 ```
 
-
 ## Get a repository
+
 <a name="inateamproject" />
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}?api-version={version}
 ```
 
-| Parameter  | Type   | Notes
-|:-----------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance   | string | TFS server name ({server:port}).
-| project    | string | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.*
+| instance | string | TFS server name ({server:port}).
+| project | string | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._
 | repository | string | ID or name of the repository.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 ### By ID
+
 When you get a repository by it's ID, you don't need to specify the project.
 
 #### Sample request
@@ -164,8 +168,8 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/5febef5a-833d-4
 }
 ```
 
-
 ### By remote URL
+
 <a name="byremoteurl" />
 You can also get a repository with only the clone URL of the repo:
 
@@ -205,8 +209,8 @@ GET https://mytfsserver/DefaultCollection/_git/FabrikamCloud/vsts/info
 }
 ```
 
-
 ## Create a repository
+
 <a name="createarepository" />
 
 Create a Git repository in a project.
@@ -214,34 +218,39 @@ Create a Git repository in a project.
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
-  "name": {string},
+  "name": { string },
   "project": {
-    "id": {guid}
+    "id": { guid }
   }
 }
 ```
 
-| Parameter    | Type   | Notes
-|:-------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance     | string | TFS server name ({server:port}).
-| project        | string | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID in the body.*
+| instance | string | TFS server name ({server:port}).
+| project | string | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID in the body._
 | Query
-| api-version  | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name         | string | Name of the repository.
-| project      | string | Name or ID project. *Do not include if project specified in the URL.*
+| name | string | Name of the repository.
+| project | string | Name or ID project. _Do not include if project specified in the URL._
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories?api-version=1.0
 ```
+
 ```json
 {
   "name": "AnotherRepository",
@@ -268,15 +277,16 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories?api-version=1.
 }
 ```
 
-
 ## Modify a repository
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
   "name": {string},
@@ -284,23 +294,26 @@ Content-Type: application/json
 }
 ```
 
-| Parameter      | Type   | Notes
-|:---------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance       | string | TFS server name ({server:port}).
-| project        | string | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository     | string | ID of the repository.
+| instance | string | TFS server name ({server:port}).
+| project | string | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | ID of the repository.
 | Query
-| api-version    | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name           | string | New name of the repository.
-| defaultBranch  | string | New default branch of the repository.
+| name | string | New name of the repository.
+| defaultBranch | string | New default branch of the repository.
 
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/5febef5a-833d-4e14-b9c0-14cb638f91e6?api-version=1.0
 ```
+
 ```json
 {
   "name": "RenamedRepository",
@@ -327,23 +340,23 @@ PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/5febef5a-833d
 }
 ```
 
-
 ## Delete a repository
+
 <a name="deletearepository" />
 
-Permanently delete a repository. 
+Permanently delete a repository.
 
 ```no-highlight
 DELETE https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}?api-version={version}
 ```
 
-| Parameter  | Type   | Notes
-|:-----------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance   | string | TFS server name ({server:port}).
-| project    | string | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.*
+| instance | string | TFS server name ({server:port}).
+| project | string | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._
 | repository | string | ID of the repository.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-
-

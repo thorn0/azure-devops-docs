@@ -6,7 +6,7 @@ ms.custom: seodec18
 ms.author: vijayma
 author: vijayma
 ms.date: 03/29/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Access repositories, artifacts, and other resources
@@ -18,6 +18,7 @@ monikerRange: '>= tfs-2015'
 ::: moniker-end
 
 At run-time, each job in a pipeline may access other resources in Azure DevOps. For example, a job may:
+
 - Check out source code from a Git repository
 - Add a tag to the repository
 - Access a feed in Azure Artifacts
@@ -37,7 +38,7 @@ You can set the job authorization scope to be **collection** or **project**. By 
 
 ::: moniker range="azure-devops"
 
-Job authorization scope can be set for the entire Azure DevOps organization or for a specific project. 
+Job authorization scope can be set for the entire Azure DevOps organization or for a specific project.
 
 To set job authorization scope for the organization:
 
@@ -51,10 +52,10 @@ To set job authorization scope for a specific project:
 - Select **Settings** under **Pipelines**.
 - Turn on the toggle **Limit job authorization scope to current project** to limit the scope to project. This is the recommended setting, as it enhances security for your pipelines.
 
->[!NOTE]
->If the scope is set to **project** at the organization level, you cannot change the scope in each project.
+> [!NOTE]
+> If the scope is set to **project** at the organization level, you cannot change the scope in each project.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > If the scope is not restricted at either the organization level or project level, then every job in your YAML pipeline gets a collection scoped job access token. In other words, your pipeline has access to any repository in any project of your organization. If an adversary is able to gain access to a single pipeline in a single project, he or she will be able to gain access to any repository in your organization. This is why, it is recommended that you restrict the scope at the highest level (organization settings) in order to contain the attack to a single project.
 
 ::: moniker-end
@@ -71,7 +72,7 @@ YAML pipelines are not available in TFS.
 
 ::: moniker range="azure-devops"
 
-Job authorization scope can be set for the entire Azure DevOps organization, for a specific project, or for a specific pipeline. 
+Job authorization scope can be set for the entire Azure DevOps organization, for a specific project, or for a specific pipeline.
 
 To set job authorization scope for the organization:
 
@@ -85,8 +86,8 @@ To set job authorization scope for a specific project:
 - Select **Settings** under **Pipelines**.
 - Turn on the toggle **Limit job authorization scope to current project** to limit the scope to project. This is the recommended setting, as it enhances security for your pipelines.
 
->[!NOTE]
->If the scope is set to **project** at the organization level, you cannot change the scope in each project.
+> [!NOTE]
+> If the scope is set to **project** at the organization level, you cannot change the scope in each project.
 
 To set job authorization scope for a specific pipeline:
 
@@ -95,11 +96,11 @@ To set job authorization scope for a specific pipeline:
 - In the **Options** tab, select **Project collection** or **Current project** for **Build job authorization scope**.
 - Save the build pipeline.
 
->[!NOTE]
->If the scope if restricted to **project** in the organization or project level settings, then the pipeline-level job authorization scope is ignored. The project or organization level setting prevails.
+> [!NOTE]
+> If the scope if restricted to **project** in the organization or project level settings, then the pipeline-level job authorization scope is ignored. The project or organization level setting prevails.
 
->[!IMPORTANT]
->If the scopes are not restricted at either the organization level or project level, then you are allowing the pipeline authors to determine the access they need to repositories. If an adversary is able to create or edit a pipeline in one project, he or she will be able to gain access to any repository in your organization. This is why, it is recommended that you restrict the scope at the highest level (organization settings) in order to contain the attack to a single project.
+> [!IMPORTANT]
+> If the scopes are not restricted at either the organization level or project level, then you are allowing the pipeline authors to determine the access they need to repositories. If an adversary is able to create or edit a pipeline in one project, he or she will be able to gain access to any repository in your organization. This is why, it is recommended that you restrict the scope at the highest level (organization settings) in order to contain the attack to a single project.
 
 ::: moniker-end
 
@@ -116,7 +117,7 @@ Job authorization scope can be set for each pipeline. To set this scope:
 
 ---
 
->[!NOTE]
+> [!NOTE]
 > If your pipeline is in a **pubic project**, then the job authorization scope is automatically restricted to **project** no matter what you configure in any setting. Jobs in a public project can access resources such as build artifacts or test results only within the project and not from other projects of the organization.
 
 ## Build service account
@@ -132,6 +133,7 @@ To update the permissions of job access token:
 - First, determine the job authorization scope for your pipeline. See the section above to understand job authorization scope. If the job authorization scope is **collection**, then the corresponding build service account to manage permissions on is **Project Collection Build Service (your-collection-name)**. If the job authorization scope is **project**, then the build service account to manage permissions on is **Your-project-name Build Service (your-collection-name)**.
 
 - To restrict or grant additional access to **Project Collection Build Service (your-collection-name)**:
+
   - Select **Manage security** in the overflow menu on **Pipelines** page.
   - Under **Users**, select **Project Collection Build Service (your-collection-name)**.
   - Make any changes to the pipelines-related permissions for this account.
@@ -153,24 +155,25 @@ To update the permissions of job access token:
   - Since **Your-project-name Build Service (your-collection-name)** is a user in your organization or collection, you can add this account explicitly to any resource - for e.g., to a feed in Azure Artifacts.
 
 <a name="q-a"></a>
+
 ## Q & A
 
 ### How do I determine the job authorization scope of my YAML pipeline?
 
-* If the pipeline is in a public project, then the job authorization scope is **project**.
-* If the pipeline is in a private project, check the Pipeline settings under your Azure DevOps **organization settings**:
-  * If the toggle for "Limit job authorization scope to current project" is enabled, then the scope is **project**.
-  * If the toggle is not enabled, then check the Pipeline settings under your **project settings** in Azure DevOps:
-    * If the toggle for "Limit job authorization scope to current project" is enabled, then the scope is **project**.
-    * Or else, the scope is **collection**.
+- If the pipeline is in a public project, then the job authorization scope is **project**.
+- If the pipeline is in a private project, check the Pipeline settings under your Azure DevOps **organization settings**:
+  - If the toggle for "Limit job authorization scope to current project" is enabled, then the scope is **project**.
+  - If the toggle is not enabled, then check the Pipeline settings under your **project settings** in Azure DevOps:
+    - If the toggle for "Limit job authorization scope to current project" is enabled, then the scope is **project**.
+    - Or else, the scope is **collection**.
 
 ### How do I determine the job authorization scope of my classic build pipeline?
 
-* If the pipeline is in a public project, then the job authorization scope is **project**.
-* If the pipeline is in a private project, check the Pipeline settings under your Azure DevOps **organization settings**:
-  * If the toggle for "Limit job authorization scope to current project" is enabled, then the scope is **project**.
-  * If the toggle is not enabled, then check the Pipeline settings under your **project settings** in Azure DevOps:
-    * If the toggle for "Limit job authorization scope to current project" is enabled, then the scope is **project**.
-    * If the toggle is not enabled, open the editor for the pipeline, and navigate to the **Options** tab.
-      * If the **Build job authorization scope** is **Current project**, then scope is **project**.
-      * Or else, scope is **collection**.
+- If the pipeline is in a public project, then the job authorization scope is **project**.
+- If the pipeline is in a private project, check the Pipeline settings under your Azure DevOps **organization settings**:
+  - If the toggle for "Limit job authorization scope to current project" is enabled, then the scope is **project**.
+  - If the toggle is not enabled, then check the Pipeline settings under your **project settings** in Azure DevOps:
+    - If the toggle for "Limit job authorization scope to current project" is enabled, then the scope is **project**.
+    - If the toggle is not enabled, open the editor for the pipeline, and navigate to the **Options** tab.
+      - If the **Build job authorization scope** is **Current project**, then scope is **project**.
+      - Or else, scope is **collection**.

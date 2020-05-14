@@ -13,3 +13,4 @@ ms.technology: devops-cicd-tasks
   #inputs:
     #artifactsFeeds: MyFeedInOrg1, MyFeedInOrg2 # Optional
     #mavenServiceConnections: serviceConnection1, serviceConnection2 # Optional
+```

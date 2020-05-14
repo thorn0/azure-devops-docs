@@ -15,5 +15,5 @@ Module path: `TFS/WorkItemTracking/Contracts`
 
 ### Values
 
-* `Import` 
-* `Validate` 
+- `Import`
+- `Validate`

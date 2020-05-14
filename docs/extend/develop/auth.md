@@ -4,7 +4,7 @@ title: Auth and Security | Extensions for Azure DevOps Services
 description: Auth and security for Azure DevOps Services Extensions
 ms.assetid: c1704b14-66d2-4950-8633-a63fc8f88508
 ms.topic: conceptual
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.author: chcomley
 author: chcomley
 ms.date: 08/29/2016
@@ -19,25 +19,27 @@ ms.date: 08/29/2016
 
 ## Calling REST APIs from your extension
 
-Most extensions have a need to call Azure DevOps Services REST APIs on behalf of the current user. 
-* If you are using the provided `JavaScript REST clients`, authentication is automatically handled for you. These clients automatically request an access token from the core SDK and set it in the Authorization header of the request.
-* If you are not using the provided clients, you need to request a token from the `Core SDK` and set it in the Authorization header of your request:
+Most extensions have a need to call Azure DevOps Services REST APIs on behalf of the current user.
 
-    ```javascript
-    VSS.require(["VSS/Authentication/Services"],
-        function (VSS_Auth_Service) {
-            VSS.getAccessToken().then(function(token){
-                // Format the auth header
-                var authHeader = VSS_Auth_Service.authTokenManager.getAuthorizationHeader(token);
-                
-                // Add token as an Authorization header to your request
-            });
-        });
-    ```
+- If you are using the provided `JavaScript REST clients`, authentication is automatically handled for you. These clients automatically request an access token from the core SDK and set it in the Authorization header of the request.
+- If you are not using the provided clients, you need to request a token from the `Core SDK` and set it in the Authorization header of your request:
+
+  ```javascript
+  VSS.require(["VSS/Authentication/Services"], function (VSS_Auth_Service) {
+    VSS.getAccessToken().then(function (token) {
+      // Format the auth header
+      var authHeader = VSS_Auth_Service.authTokenManager.getAuthorizationHeader(
+        token
+      );
+
+      // Add token as an Authorization header to your request
+    });
+  });
+  ```
 
 ## Authenticating requests to your service
 
-A common scenario is to make calls to a back-end service from an extension. To verify these calls are coming from your extension running in Azure DevOps Services and to verify the authenticity of the current user (and other context information), a special type of token is made available to your extension. This token contains information about who is making the call and also a signature that you can validate to know that the request came from your extension. 
+A common scenario is to make calls to a back-end service from an extension. To verify these calls are coming from your extension running in Azure DevOps Services and to verify the authenticity of the current user (and other context information), a special type of token is made available to your extension. This token contains information about who is making the call and also a signature that you can validate to know that the request came from your extension.
 
 ### Get your extension's key
 
@@ -54,23 +56,23 @@ To get this key, right-click a [published extension](../publish/overview.md) and
 
 1. The Core SDK `getAppToken` method return a promise that, when resolved, contains a token signed with your extension's certificate.
 
-    ```javascript
-    VSS.getAppToken().then(function(token){
-        // Add token to your request
-    });
-    ```
+   ```javascript
+   VSS.getAppToken().then(function (token) {
+     // Add token to your request
+   });
+   ```
 
 2. Pass this token to your service as a query parameter or request header.
 
 ### Parse and validate the token
 
-Here is a sample of parsing the token.  First download and store the secret for your extension.  You can get this from your publisher page.  This secret needs to be available to your application.
+Here is a sample of parsing the token. First download and store the secret for your extension. You can get this from your publisher page. This secret needs to be available to your application.
 
 #### .NET Framework
 
 You must add 1 reference to get this sample to compile.
 
-1. Open the NuGet Package Manager and add a reference to *System.IdentityModel.Tokens.Jwt*. This sample was built with version 5.2.2 of this package.
+1. Open the NuGet Package Manager and add a reference to _System.IdentityModel.Tokens.Jwt_. This sample was built with version 5.2.2 of this package.
 
 ```csharp
 using System.Collections.Generic;
@@ -85,7 +87,7 @@ namespace TokenSample
 		{
 			string secret = ""; // Load your extension's secret
 			string issuedToken = ""; // Token you are validating
-				
+
 			var validationParameters = new TokenValidationParameters()
 			{
 				IssuerSigningKey = new SymmetricSecurityKey(System.Text.UTF8Encoding.UTF8.GetBytes(secret)),
@@ -109,7 +111,7 @@ namespace TokenSample
 
 You must add 1 reference to get this sample to compile.
 
-1. Open the NuGet Package Manager and add a reference to *System.IdentityModel.Tokens.Jwt*. This sample was built with version 5.1.4 of this package.
+1. Open the NuGet Package Manager and add a reference to _System.IdentityModel.Tokens.Jwt_. This sample was built with version 5.1.4 of this package.
 
 **Startup.cs**
 
@@ -137,7 +139,7 @@ namespace TokenSample.Core.API
             services.AddMvc();
 
             string _secret = "ey9asfasdmax..<the secret key downloaded from the Azure DevOps Services publisher page>.9faf7eh";
-	    
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer((o) =>
                     {
@@ -150,7 +152,7 @@ namespace TokenSample.Core.API
                             RequireSignedTokens = true,
                             RequireExpirationTime = true,
                             ValidateLifetime = true
-                        };    
+                        };
                     });
         }
 
@@ -167,11 +169,10 @@ namespace TokenSample.Core.API
 **Your API Controllers:**
 
 ```csharp
-[Route("api/[controller]"), 
+[Route("api/[controller]"),
  Authorize()]
 public class SampleLogicController : Controller
 {
    // ...
 }
 ```
-

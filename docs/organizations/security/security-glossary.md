@@ -3,12 +3,12 @@ title: Security terms and acronyms defined
 titleSuffix: Azure DevOps
 description: Key definitions for objects and items used to authenticate and manage users and groups in Azure DevOps
 ms.technology: devops-security
-ms.assetid: 
-ms.topic: conceptual 
+ms.assetid:
+ms.topic: conceptual
 ms.custom: has-adal-ref
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 12/04/2018
 ---
 
@@ -17,7 +17,7 @@ ms.date: 12/04/2018
 [!INCLUDE [temp](../../includes/version-vsts-tfs-all-versions.md)]
 
 This article provides definitions for select terms used to manage authentication and permissions for Azure DevOps.
- 
+
 ## Access control entries (ACE)
 
 An access control entry is an entry in an access control list (ACL) that grants or denies a user or group access to an Azure DevOps resource. You can manage ACLs and ACEs with the [TFSSecurity command line tool](/azure/devops/server/command-line/tfssecurity-cmd#permission-namespaces-and-actions).
@@ -53,7 +53,7 @@ Authorization refers to the operations performed to verify that the identity whi
 
 ## Azure Active Directory Authentication Libraries
 
-The Azure Active Directory Authentication Library (ADAL) v1.0 enables application developers to authenticate users to cloud or on-premises Active Directory (AD), and obtain tokens for securing API calls. To learn more about its usage with Azure DevOps, see [Choose the right authentication mechanism](../../integrate/get-started/authentication/authentication-guidance.md). 
+The Azure Active Directory Authentication Library (ADAL) v1.0 enables application developers to authenticate users to cloud or on-premises Active Directory (AD), and obtain tokens for securing API calls. To learn more about its usage with Azure DevOps, see [Choose the right authentication mechanism](../../integrate/get-started/authentication/authentication-guidance.md).
 
 ## Basic member
 
@@ -67,28 +67,24 @@ Conditional access provides support for securing Azure DevOps resources backed b
 
 ## Inheritance
 
-Permissions that aren't directly allowed or denied for a user, may be inherited. To learn more, see [About permissions and groups](about-permissions.md).   
+Permissions that aren't directly allowed or denied for a user, may be inherited. To learn more, see [About permissions and groups](about-permissions.md).
 
 <!---
-## Membership 
+## Membership
 
 -->
 
+## Namespace
 
-## Namespace 
+Each family of Azure DevOps resources (work items, Git repositories, an so on) is secured using a different namespace. Each security namespace contains zero or more ACLs. Each ACL contains a token, an inherit flag and a set of zero or more ACEs. Each ACE contains an identity descriptor, an allowed permissions bitmask and a denied permissions bitmask.
 
-Each family of Azure DevOps resources (work items, Git repositories, an so on) is secured using a different namespace. Each security namespace contains zero or more ACLs. Each ACL contains a token, an inherit flag and a set of zero or more ACEs. Each ACE contains an identity descriptor, an allowed permissions bitmask and a denied permissions bitmask. 
-
-For a list of AzureDevOps namespaces, see [Use TFSSecurity to manage groups and permissions for Azure DevOps](/azure/devops/server/command-line/tfssecurity-cmd#permission-namespaces-and-actions). 
+For a list of AzureDevOps namespaces, see [Use TFSSecurity to manage groups and permissions for Azure DevOps](/azure/devops/server/command-line/tfssecurity-cmd#permission-namespaces-and-actions).
 
 For Azure DevOps Services, you can list the namespaces using **az devops security permission namespace list** command. For details, see [Manage tokens and namespaces](manage-tokens-namespaces.md).
 
+## OAuth
 
-
-## OAuth 
-
-OAuth 2.0 is an industry-standard protocol for authorization. OAuth 2.0 is supported for Azure DevOps Services to authenticate REST APIs. To learn more, see [Authorize access to REST APIs with OAuth 2.0](../../integrate/get-started/authentication/oauth.md). 
-
+OAuth 2.0 is an industry-standard protocol for authorization. OAuth 2.0 is supported for Azure DevOps Services to authenticate REST APIs. To learn more, see [Authorize access to REST APIs with OAuth 2.0](../../integrate/get-started/authentication/oauth.md).
 
 <!---
 
@@ -109,8 +105,7 @@ The person who created the organization or was later assigned as the organizatio
 
 ## Personal Access Token (PAT)
 
-Personal access tokens (PATs) are alternate passwords that you can use to authenticate into Azure DevOps. To learn how to create and revoke PATs, see [Authenticate access with personal access tokens](../accounts/use-personal-access-tokens-to-authenticate.md). 
-
+Personal access tokens (PATs) are alternate passwords that you can use to authenticate into Azure DevOps. To learn how to create and revoke PATs, see [Authenticate access with personal access tokens](../accounts/use-personal-access-tokens-to-authenticate.md).
 
 ## Permission
 
@@ -122,7 +117,7 @@ The state assigned to a feature or function to a user's or group's permission. U
 
 ## Security group
 
-A method by which you can organize users and other domain objects to simplify administration of permissions and access. Azure DevOps  support a number of default security groups as well as the ability to create custom groups. To learn more, see [About permissions and groups](about-permissions.md).
+A method by which you can organize users and other domain objects to simplify administration of permissions and access. Azure DevOps support a number of default security groups as well as the ability to create custom groups. To learn more, see [About permissions and groups](about-permissions.md).
 
 ## Security role
 
@@ -156,16 +151,15 @@ An Azure Active Directory used to manage access or billing. To learn more, see [
 
 ::: moniker-end
 
-## Token  
+## Token
 
-Tokens are arbitrary strings representing resources in Azure DevOps. Token format differs per resource type, however hierarchy and separator characters are common between all tokens. For details, see [REST API Security](/rest/api/azure/devops/security). 
+Tokens are arbitrary strings representing resources in Azure DevOps. Token format differs per resource type, however hierarchy and separator characters are common between all tokens. For details, see [REST API Security](/rest/api/azure/devops/security).
 
-> *Each family of Azure DevOps resources (work items, Git repositories, an so on) is secured using a different namespace. Each security namespace contains zero or more ACLs. Each ACL contains a token, an inherit flag and a set of zero or more ACEs. Each ACE contains an identity descriptor, an allowed permissions bitmask and a denied permissions bitmask*. 
+> _Each family of Azure DevOps resources (work items, Git repositories, an so on) is secured using a different namespace. Each security namespace contains zero or more ACLs. Each ACL contains a token, an inherit flag and a set of zero or more ACEs. Each ACE contains an identity descriptor, an allowed permissions bitmask and a denied permissions bitmask_.
 
 For Azure DevOps Services, you can manage tokens and namespaces using the **az devops security permission** commands. For details, see [Manage tokens and namespaces](manage-tokens-namespaces.md).
 
-For Azure DevOps Server, see [Use TFSSecurity to manage groups and permissions for Azure DevOps](/azure/devops/server/command-line/tfssecurity-cmd). 
-
+For Azure DevOps Server, see [Use TFSSecurity to manage groups and permissions for Azure DevOps](/azure/devops/server/command-line/tfssecurity-cmd).
 
 <!---
 ## Trace permission
@@ -175,12 +169,7 @@ For Azure DevOps Server, see [Use TFSSecurity to manage groups and permissions f
 
 Valid users are users that are recognized by Azure DevOps as being able to connect to the account or a project. When you add accounts of users directly to a built-in group or through a Windows, Active Directory, or Azure Active Directory group, they are automatically added to one of the valid user groups. To learn more, see [About permissions and groups](about-permissions.md).
 
-
-
 ## Related articles
 
 - [Permissions lookup guide](permissions-lookup-guide.md)
 - [REST API Security](/rest/api/azure/devops/security)
-
-
-

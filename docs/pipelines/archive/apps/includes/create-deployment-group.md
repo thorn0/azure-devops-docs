@@ -15,7 +15,7 @@ Deployment groups in Azure Pipelines make it easier to organize the servers that
 
 2. Click **Add Deployment group** (or **New** if there are already deployment groups in place.
 
-3. Enter a name for the group, such as *myIIS*, and then click **Create**.
+3. Enter a name for the group, such as _myIIS_, and then click **Create**.
 
 4. In the **Register machine** section, make sure that **Windows** is selected, and that **Use a personal access token in the script for authentication** is also selected. Click **Copy script to clipboard**.
 
@@ -29,8 +29,8 @@ Deployment groups in Azure Pipelines make it easier to organize the servers that
 
 7. When you're prompted for the user account, press Enter to accept the defaults.
 
-8. When the script is done, it displays the message *Service vstsagent.account.computername started successfully*.
+8. When the script is done, it displays the message _Service vstsagent.account.computername started successfully_.
 
-9. On the **Deployment groups** page of Azure Pipelines, open the *myIIS* deployment group. On the **Machines** tab, verify that your VM is listed.
+9. On the **Deployment groups** page of Azure Pipelines, open the _myIIS_ deployment group. On the **Machines** tab, verify that your VM is listed.
 
    ![Screenshot showing update to code](../../../apps/media/windows-deployment-group.png)

@@ -2,15 +2,15 @@
 title: Link work items to deployments
 titleSuffix: Azure Boards
 description: Link your work item to releases to visualize which deployments include your work items
-ms.custom: boards-work-items  
+ms.custom: boards-work-items
 ms.technology: devops-agile
-ms.assetid: 
+ms.assetid:
 ms.topic: conceptual
 ms.author: kaelli
 author: KathrynEE
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ms.date: 10/14/2018
---- 
+---
 
 # Link work items to deployments
 
@@ -23,7 +23,7 @@ The release deployments control shows release information for those work items t
 
 ## Configure release
 
-First thing you must do is configure the release definition to post deployment information back to Azure Boards. 
+First thing you must do is configure the release definition to post deployment information back to Azure Boards.
 
 1. Open Release definition, Options and Integrations
 
@@ -47,9 +47,7 @@ When opening the work item, you can see the stages the release is being deployed
 > [!div class="mx-imgBorder"]  
 > ![Release Settings Stages](media/deployments-control/deployments-control-1.png)
 
-## Related articles  
+## Related articles
 
 - [Create a release](../../pipelines/release/define-multistage-release-process.md)
 - [Associate work items to commits](../backlogs/connect-work-items-to-git-dev-ops.md)
-
-

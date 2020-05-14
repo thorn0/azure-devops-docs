@@ -14,48 +14,46 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `componentId`: string. 
+- `componentId`: string.
 
-* `custom`: any. 
+- `custom`: any.
 
-* `endTime`: Date. 
+- `endTime`: Date.
 
-* `exceptionStack`: string. 
+- `exceptionStack`: string.
 
-* `externalArtifacts`: string[]. 
+- `externalArtifacts`: string[].
 
-* `externalRunId`: string. 
+- `externalRunId`: string.
 
-* `externalSystem`: string. 
+- `externalSystem`: string.
 
-* `externalTestId`: string. 
+- `externalTestId`: string.
 
-* `failureReasons`: string[]. 
+- `failureReasons`: string[].
 
-* `failureSummary`: string. 
+- `failureSummary`: string.
 
-* `investigationNotes`: string. 
+- `investigationNotes`: string.
 
-* `isSuperseded`: boolean. 
+- `isSuperseded`: boolean.
 
-* `isValid`: boolean. 
+- `isValid`: boolean.
 
-* `outcome`: [ResultOutcome](../../../TFS/TestManagement/Contracts/ResultOutcome.md). 
+- `outcome`: [ResultOutcome](../../../TFS/TestManagement/Contracts/ResultOutcome.md).
 
-* `resultCustomPropertiesTypeName`: string. 
+- `resultCustomPropertiesTypeName`: string.
 
-* `resultId`: string. 
+- `resultId`: string.
 
-* `resultName`: string. 
+- `resultName`: string.
 
-* `runId`: string. 
+- `runId`: string.
 
-* `startTime`: Date. 
+- `startTime`: Date.
 
-* `testId`: string. 
+- `testId`: string.
 
-* `tfsSecurityKey`: string. 
-
+- `tfsSecurityKey`: string.

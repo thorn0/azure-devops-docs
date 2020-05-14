@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.author: ronai
 author: RoopeshNair
 ms.date: 08/24/2018
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Deploy apps to Azure Government Cloud
 
-**Azure Pipelines | TFS 2017  | TFS 2018**
+**Azure Pipelines | TFS 2017 | TFS 2018**
 
 ::: moniker range="<= tfs-2018"
 [!INCLUDE [temp](../includes/concept-rename-note.md)]
@@ -35,7 +35,7 @@ You can then use the service connection in your [build and release pipeline task
 
 ### Next
 
-* [Deploy an Azure Web App](../apps/cd/deploy-webdeploy-webapps.md)
-* [Troubleshoot Azure Resource Manager service connections](../release/azure-rm-endpoint.md)
+- [Deploy an Azure Web App](../apps/cd/deploy-webdeploy-webapps.md)
+- [Troubleshoot Azure Resource Manager service connections](../release/azure-rm-endpoint.md)
 
 [!INCLUDE [rm-help-support-shared](../includes/rm-help-support-shared.md)]

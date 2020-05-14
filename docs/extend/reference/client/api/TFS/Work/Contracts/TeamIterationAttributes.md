@@ -13,10 +13,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Work/Contracts`
 
-
 ### Members
 
-* `finishDate`: Date. 
+- `finishDate`: Date.
 
-* `startDate`: Date. 
-
+- `startDate`: Date.

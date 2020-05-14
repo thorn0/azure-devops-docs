@@ -11,8 +11,8 @@ ms.date: 02/13/2020
 
 Create a suitable service connection:
 
-* [Azure Government Cloud deployment](../../../library/government-cloud.md)
-* [Azure Stack deployment](../../../library/connect-to-azure.md#connect-stack)
+- [Azure Government Cloud deployment](../../../library/government-cloud.md)
+- [Azure Stack deployment](../../../library/connect-to-azure.md#connect-stack)
 
 ## Deployment mechanisms
 
@@ -33,6 +33,6 @@ You can use the [File Transform task](../../../tasks/utility/file-transform.md) 
 If the built-in tasks don't meet your needs, you can use other methods to script your deployment.
 View the YAML snippets in each of the following tasks for some examples:
 
-* [Azure PowerShell task](../../../tasks/deploy/azure-powershell.md)
-* [Azure CLI task](../../../tasks/deploy/azure-cli.md)
-* [FTP task](../../../tasks/utility/ftp-upload.md)
+- [Azure PowerShell task](../../../tasks/deploy/azure-powershell.md)
+- [Azure CLI task](../../../tasks/deploy/azure-cli.md)
+- [FTP task](../../../tasks/utility/ftp-upload.md)

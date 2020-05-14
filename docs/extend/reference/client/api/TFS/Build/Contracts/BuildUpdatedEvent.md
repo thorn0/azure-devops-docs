@@ -18,5 +18,4 @@ Extends: [RealtimeBuildEvent](./RealtimeBuildEvent.md)
 
 ### Members
 
-* `build`: [Build](./Build.md). 
-
+- `build`: [Build](./Build.md).

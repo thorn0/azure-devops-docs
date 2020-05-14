@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,14 +15,12 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Information about the extension 
+Information about the extension
 
 ### Members
 
-* `extension`: string. Unique Identifier for this extension
+- `extension`: string. Unique Identifier for this extension
 
-* `publisher`: string. Unique Identifier for this publisher
+- `publisher`: string. Unique Identifier for this publisher
 
-* `version`: string. Supported version for this extension
-
+- `version`: string. Supported version for this extension

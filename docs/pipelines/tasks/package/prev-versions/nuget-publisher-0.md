@@ -7,7 +7,7 @@ ms.assetid: E592A505-C253-4190-86D2-E4F679F5FCBE
 ms.date: 08/10/2016
 ---
 
-# Package: NuGet Publisher task version 0.*
+# Package: NuGet Publisher task version 0.\*
 
 **Azure Pipelines (deprecated) | TFS 2017 Update 2 and below (deprecated in TFS 2018)**
 

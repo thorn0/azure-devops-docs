@@ -17,5 +17,4 @@ Extends: [WorkItemTrackingResourceReference](../../../TFS/WorkItemTracking/Contr
 
 ### Members
 
-* `name`: string. 
-
+- `name`: string.

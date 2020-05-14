@@ -16,6 +16,6 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `ExcludeDeleted` Include only non-deleted builds.
-* `IncludeDeleted` Include deleted and non-deleted builds.
-* `OnlyDeleted` Include only deleted builds.
+- `ExcludeDeleted` Include only non-deleted builds.
+- `IncludeDeleted` Include deleted and non-deleted builds.
+- `OnlyDeleted` Include only deleted builds.

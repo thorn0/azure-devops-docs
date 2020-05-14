@@ -2,22 +2,22 @@
 title: Features and services included
 titleSuffix: Azure DevOps
 ms.custom: seodec18
-description: Understand the services provided by in Azure DevOps Services and Team Foundation Server 
-ms.technology: devops-new-user 
+description: Understand the services provided by in Azure DevOps Services and Team Foundation Server
+ms.technology: devops-new-user
 ms.topic: overview
 ms.assetid: D861983F-CC66-4314-A3C6-E2F30A37923D
 ms.manager: chcomley
 ms.author: chcomley
 author: chcomley
 ms.date: 04/05/2019
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # What features and services do I get with Azure DevOps?
 
 [!INCLUDE [temp](../includes/version-vsts-tfs-all-versions.md)]
 
-With Azure DevOps, you gain an integrated set of services and tools to manage your software projects, from planning and development through testing and deployment. Services are delivered through a client/server model. Many of them are delivered through an easy-to-use web interface that you can access from all major browsers. Some services, such as source control, build pipelines, and work tracking, can also be managed through a client.  
+With Azure DevOps, you gain an integrated set of services and tools to manage your software projects, from planning and development through testing and deployment. Services are delivered through a client/server model. Many of them are delivered through an easy-to-use web interface that you can access from all major browsers. Some services, such as source control, build pipelines, and work tracking, can also be managed through a client.
 
 Access web services through the following areas, as shown in the following image.
 
@@ -29,11 +29,11 @@ Access web services through the following areas, as shown in the following image
 
 ::: moniker range="<= tfs-2018"
 
-![Azure DevOps Services, main](../media/services-hubs.png)  
+![Azure DevOps Services, main](../media/services-hubs.png)
 
 ::: moniker-end
 
-Many of our services are either free for small teams or available through a subscription model or per-use model. You can do a hybrid approach where you use an on-premises deployment to manage your code and work. Then,  you purchase cloud build or testing services on an as-needed basis.  
+Many of our services are either free for small teams or available through a subscription model or per-use model. You can do a hybrid approach where you use an on-premises deployment to manage your code and work. Then, you purchase cloud build or testing services on an as-needed basis.
 
 For information about client tools, see [Tools](tools.md).
 
@@ -99,9 +99,9 @@ From **Code**, you gain access to your source control Git-based or TFVC reposito
 
 From Azure Repos for Git, you can do the following tasks:
 
-- Review, download, and edit files, and review the change history for a file  
+- Review, download, and edit files, and review the change history for a file
 - Review and manage commits that have been pushed
-- Review, create, approve, comment on, and complete pull requests  
+- Review, create, approve, comment on, and complete pull requests
 - Add and manage Git tags
 
 To learn more, see the overviews for [Git](../repos/git/index.yml) or [TFVC](../repos/tfvc/overview.md).
@@ -149,7 +149,7 @@ Specifically, you can do the following tasks:
 
 See [Backlogs, boards, and plans](../boards/backlogs/backlogs-boards-plans.md) for an overview of each.
 
-## Continuous integration and deployment  
+## Continuous integration and deployment
 
 The rapid and reliable release of software comes from automating as many processes as possible. Our systems support build, test, and release automation.
 
@@ -180,9 +180,9 @@ Use pipelines to implement continuous integration and continuous delivery.
 
 To learn more, see [Continuous integration on any platform](../pipelines/overview.md).
 
-## Manual and exploratory testing  
+## Manual and exploratory testing
 
-Test features support manual and exploratory testing, and continuous testing.  
+Test features support manual and exploratory testing, and continuous testing.
 
 ::: moniker range=">= azure-devops-2019"
 
@@ -202,13 +202,13 @@ Test features support manual and exploratory testing, and continuous testing.
 
 With test features, you gain access to the following features:
 
-- Customization of workflows with test plan, test suite, and test case work items  
-- End-to-end traceability from requirements to test cases and bugs with requirement-based test suites  
+- Customization of workflows with test plan, test suite, and test case work items
+- End-to-end traceability from requirements to test cases and bugs with requirement-based test suites
 - Criteria-based test selection with query-based test suites
-- Excel-like interface with the grid for easy creation of test cases  
+- Excel-like interface with the grid for easy creation of test cases
 - Reusable test steps and test data with shared steps and shared parameters
-- Sharable test plans, test suites, and test cases for reviewing with Stakeholders  
-- Browser-based test execution on any platform  
+- Sharable test plans, test suites, and test cases for reviewing with Stakeholders
+- Browser-based test execution on any platform
 - Real-time charts for tracking test activity
 
 To learn more, see [Testing overview](../test/index.yml).
@@ -231,7 +231,7 @@ The following services work across the previously mentioned services to support:
 
 ::: moniker range="tfs-2018"
 
-- Dashboards 
+- Dashboards
 - Project wiki
 - Discussion within work item forms
 - Linking of work items, commits, pull requests, and other artifacts to support traceability
@@ -246,20 +246,20 @@ The following services work across the previously mentioned services to support:
 - Dashboards
 - Discussion within work item forms
 - Linking of work items, commits, pull requests and other artifacts to support traceability
-- Alerts and change notifications managed per user, team, project, or project collection  
+- Alerts and change notifications managed per user, team, project, or project collection
 - Ability to request and manage feedback
 - Team (chat) rooms
 - SQL Server Reporting
 
 > [!NOTE]  
 > Team rooms are deprecated for TFS 2017.2. Instead, we recommend that you [use service hooks to integrate with Microsoft Teams](../service-hooks/services/teams.md).
-::: moniker-end
+> ::: moniker-end
 
 ::: moniker range="tfs-2015"
 
 - Dashboards
 - Linking of work items, commits, pull requests, and other artifacts to support traceability
-- Alerts and change notifications managed per user or for teams  
+- Alerts and change notifications managed per user or for teams
 - Ability to request and manage feedback
 - Team (chat) rooms
 - SQL Server Reporting
@@ -268,9 +268,9 @@ The following services work across the previously mentioned services to support:
 
 ::: moniker range="tfs-2013"
 
-- Team home page  
+- Team home page
 - Linking of work items, commits, pull requests, and other artifacts to support traceability
-- Alerts and change notifications managed per user or for teams  
+- Alerts and change notifications managed per user or for teams
 - Ability to request and manage feedback
 - Team (chat) rooms
 - SQL Server Reporting
@@ -289,8 +289,8 @@ For the latest set of supported services, see [Integrate with service hooks](../
 
 The following services support your DevOps operations:
 
-- Cloud-based, Microsoft-hosted build and deployment agents  
-- On-premises self-hosted agents to support build and deployment  
+- Cloud-based, Microsoft-hosted build and deployment agents
+- On-premises self-hosted agents to support build and deployment
 
 To learn more, see [Pricing](https://visualstudio.microsoft.com/team-services/pricing/).
 
@@ -298,7 +298,7 @@ To learn more, see [Pricing](https://visualstudio.microsoft.com/team-services/pr
 
 Azure provides cloud-hosted services to support application development and deployment. You can make use of these services solely or in combination with Azure DevOps.
 
-To browse the directory of integrated services, features, and bundled suites, see [Azure products](https://azure.microsoft.com/services/).  
+To browse the directory of integrated services, features, and bundled suites, see [Azure products](https://azure.microsoft.com/services/).
 
 For continuous delivery to Azure from Azure DevOps Services, see [Automatically build and deploy to Azure web apps or cloud services](https://azure.microsoft.com/documentation/articles/cloud-services-continuous-delivery-use-vso/).
 
@@ -322,10 +322,10 @@ There are features and tasks associated with administering a collaborative softw
 
 - [Understand differences between Azure DevOps Services and Azure DevOps Server](about-azure-devops-services-tfs.md)
 - [Client-server tools](tools.md)
-- [Software development roles](roles.md)  
+- [Software development roles](roles.md)
 - [Azure DevOps pricing](https://visualstudio.microsoft.com/team-services/pricing/)
 - [Azure DevOps data protection overview](../organizations/security/data-protection.md)
 
 <!---
-**System Center integration**: Enables a release pipeline to connect to a System Center Virtual Machine Manager (SCVMM) server to easily provision virtual machines and perform actions on them such as managing checkpoints, starting and **VMware Resource Deployment**: Connect to a VMware vCenter Server from Azure DevOps Services or Azure DevOps Server to provision, start, stop, or snapshot VMware virtual machines. 
+**System Center integration**: Enables a release pipeline to connect to a System Center Virtual Machine Manager (SCVMM) server to easily provision virtual machines and perform actions on them such as managing checkpoints, starting and **VMware Resource Deployment**: Connect to a VMware vCenter Server from Azure DevOps Services or Azure DevOps Server to provision, start, stop, or snapshot VMware virtual machines.
 -->

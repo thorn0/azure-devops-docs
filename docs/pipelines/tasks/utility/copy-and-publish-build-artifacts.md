@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: vijayma
 author: vijayma
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Copy and Publish Build Artifacts task
@@ -20,7 +20,7 @@ Files are copied to the `$(Build.ArtifactStagingDirectory)` staging folder and t
 ::: moniker range="> tfs-2015"
 
 > [!IMPORTANT]
-> 
+>
 > If you're using Azure Pipelines, or Team Foundation Server (TFS) 2017 or newer, we recommend that you do NOT use this deprecated task.
 > Instead, use the **Copy Files** and **Publish Build Artifacts** tasks. See [Artifacts in Azure Pipelines](../../artifacts/build-artifacts.md).
 
@@ -29,7 +29,7 @@ Files are copied to the `$(Build.ArtifactStagingDirectory)` staging folder and t
 ::: moniker range="tfs-2015"
 
 > [!IMPORTANT]
-> 
+>
 > Are you using Team Foundation Server (TFS) 2015.4? If so, we recommend that you do NOT use this deprecated task.
 > Instead, use the **Copy Files** and **Publish Build Artifacts** tasks. See [Artifacts in Azure Pipelines](../../artifacts/build-artifacts.md).
 >
@@ -78,7 +78,6 @@ None
 </td>
 </tr>
 
-
 <tr>
 <th style="text-align: center" colspan="2"><a href="~/pipelines/process/tasks.md#controloptions" data-raw-source="[Control options](../../process/tasks.md#controloptions)">Control options</a></th>
 </tr>
@@ -93,9 +92,9 @@ None
 
 This task has a couple of known issues:
 
-* Some minimatch patterns don't work.
+- Some minimatch patterns don't work.
 
-* It eliminates the most common root path for all paths matched.
+- It eliminates the most common root path for all paths matched.
 
 You can avoid these issues by instead using the [Copy Files task](copy-files.md) and the [Publish Build Artifacts task](publish-build-artifacts.md).
 

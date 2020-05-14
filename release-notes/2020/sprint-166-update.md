@@ -7,11 +7,9 @@ ms.date: 03/16/2020
 description: In the **Sprint 166 Update** of Azure DevOps, you can now pay for users once across multiple organizations.
 ---
 
-
-
 # Pay for users once across organizations
 
-With this update we have enhanced the billing experience to let you pay for users once across multiple organizations. This new billing option will allow you to pay for each **Basic** or **Basic + Test Plan** user once, for all organizations under the same billing Azure subscription.  
+With this update we have enhanced the billing experience to let you pay for users once across multiple organizations. This new billing option will allow you to pay for each **Basic** or **Basic + Test Plan** user once, for all organizations under the same billing Azure subscription.
 
 Check out the [Features](#features) list below for details.
 
@@ -40,15 +38,13 @@ Check out the [Features](#features) list below for details.
 
 Head over to Azure DevOps and take a look.
 
-> [!div class="nextstepaction"]
-> [Go to Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
+> [!div class="nextstepaction"][go to azure devops](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
 
 ## Feedback
 
 We would love to hear what you think about these features. Use the help menu to report a problem or provide a suggestion.
 
-> [!div class="mx-imgBorder"]
-> ![Make a suggestion](../media/make-a-suggestion.png)
+> [!div class="mx-imgBorder"] > ![Make a suggestion](../media/make-a-suggestion.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-devops).
 

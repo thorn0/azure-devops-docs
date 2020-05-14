@@ -13,10 +13,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `moreResultsAvailable`: boolean. True if there are more results available to fetch (we&#x27;re returning the max # of items requested) A more RESTy solution would be to include a Link header
+- `moreResultsAvailable`: boolean. True if there are more results available to fetch (we&#x27;re returning the max # of items requested) A more RESTy solution would be to include a Link header
 
-* `results`: [HistoryEntry](../../../TFS/VersionControl/Contracts/HistoryEntry.md)&lt;T&gt;[]. The history entries (results) from this query
-
+- `results`: [HistoryEntry](../../../TFS/VersionControl/Contracts/HistoryEntry.md)&lt;T&gt;[]. The history entries (results) from this query

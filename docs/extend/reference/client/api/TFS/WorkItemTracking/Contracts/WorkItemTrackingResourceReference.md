@@ -13,8 +13,6 @@ ms.date: 08/04/2016
 
 Module path: `TFS/WorkItemTracking/Contracts`
 
-
 ### Members
 
-* `url`: string. 
-
+- `url`: string.

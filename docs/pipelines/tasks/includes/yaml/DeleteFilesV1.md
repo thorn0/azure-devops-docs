@@ -13,6 +13,6 @@ ms.technology: devops-cicd-tasks
 - task: DeleteFiles@1
   inputs:
     #SourceFolder: # Optional
-    #Contents: 'myFileShare' 
+    #Contents: 'myFileShare'
     #RemoveSourceFolder: # Optional
 ```

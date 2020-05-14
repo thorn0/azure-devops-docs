@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Work/Contracts`
 
-
 ### Members
 
-* `backlogIteration`: string. 
+- `backlogIteration`: string.
 
-* `backlogVisibilities`: {[key: string]: boolean}. 
+- `backlogVisibilities`: {[key: string]: boolean}.
 
-* `bugsBehavior`: [BugsBehavior](../../../TFS/Work/Contracts/BugsBehavior.md). 
+- `bugsBehavior`: [BugsBehavior](../../../TFS/Work/Contracts/BugsBehavior.md).
 
-* `workingDays`: [System_Contracts.DayOfWeek](../../../VSS/Common/Contracts/System/DayOfWeek.md)[]. 
-
+- `workingDays`: [System_Contracts.DayOfWeek](../../../VSS/Common/Contracts/System/DayOfWeek.md)[].

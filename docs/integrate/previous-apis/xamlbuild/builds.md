@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: XAML Builds | REST API Reference for Team Foundation Server
 description: Get builds programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 0B7A8B2D-8901-46FB-8F15-CF6101B24218
@@ -24,19 +24,21 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/{project}/_apis/build/builds?api-version={version}[&definitionId={string}&requestedFor={string}&minFinishTime={DateTime}&status={string}&quality={quality}&$skip={int}&$top={int}]
 ```
 
-| Parameter     | Type     | Notes
-|:--------------|:---------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string   | TFS server name ({server:port}).
-| project       | string   | [Project](../tfs/projects.md) ID or name.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
 | Query
-| definition    | string   | Builds that have this definition.
-| requestedFor  | string   | Builds requested by this user<br/>Alias of the user. `fabrikamfiber4@hotmail.com`, for example.
+| definition | string | Builds that have this definition.
+| requestedFor | string | Builds requested by this user<br/>Alias of the user. `fabrikamfiber4@hotmail.com`, for example.
 | minFinishTime | [DateTime](https://msdn.microsoft.com/library/az4se3k1.aspx) | Builds that finished after this time.
-| quality       | string   | Builds that have this [quality](./qualities.md).
-| status        | enum {<br/>&nbsp;&nbsp;All<br/>&nbsp;&nbsp;Failed<br/>&nbsp;&nbsp;InProgress<br/>&nbsp;&nbsp;None<br/>&nbsp;&nbsp;NotStarted<br/>&nbsp;&nbsp;PartiallySucceeded<br/>&nbsp;&nbsp;Stopped<br/>&nbsp;&nbsp;Succeeded<br/>} | Builds that have this status. Combine flags with a comma, e.g. `InProgress,NotStarted` to list builds that haven't finished yet.
+| quality | string | Builds that have this [quality](./qualities.md).
+| status | enum {<br/>&nbsp;&nbsp;All<br/>&nbsp;&nbsp;Failed<br/>&nbsp;&nbsp;InProgress<br/>&nbsp;&nbsp;None<br/>&nbsp;&nbsp;NotStarted<br/>&nbsp;&nbsp;PartiallySucceeded<br/>&nbsp;&nbsp;Stopped<br/>&nbsp;&nbsp;Succeeded<br/>} | Builds that have this status. Combine flags with a comma, e.g. `InProgress,NotStarted` to list builds that haven't finished yet.
 | $skip         | int      | Number of builds to skip.
-| $top          | int      | Number of builds to return.
+| $top | int | Number of builds to return.
 
 #### Sample request
 
@@ -226,8 +228,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds?
 }
 ```
 
-
 ### For a build definition
+
 #### Sample request
 
 ```
@@ -416,8 +418,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds?
 }
 ```
 
-
 ### Requested by
+
 #### Sample request
 
 ```
@@ -606,8 +608,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds?
 }
 ```
 
-
 ### After this time
+
 #### Sample request
 
 ```
@@ -796,8 +798,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds?
 }
 ```
 
-
 ### By quality
+
 #### Sample request
 
 ```
@@ -988,8 +990,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds?
 }
 ```
 
-
 ### By status
+
 #### Sample request
 
 ```
@@ -1178,8 +1180,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds?
 }
 ```
 
-
 ### A page at a time
+
 #### Sample request
 
 ```
@@ -1254,21 +1256,22 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds?
 }
 ```
 
-
 ## Get a build
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/build/builds/{buildId}?api-version={version}
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
-| project   | string | [Project](../tfs/projects.md) ID or name.
-| buildId   | int    | ID of the build.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| buildId | int | ID of the build.
 | Query
-| version   | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -1338,23 +1341,25 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds/
 }
 ```
 
-
 ## Get build details
+
 <a name="getbuilddetails" />
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/build/builds/{buildId}/details?api-version={version}[&types={string}&types={string}]
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
-| project   | string | [Project](../tfs/projects.md) ID or name.
-| buildId   | int    | ID of the build.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| buildId | int | ID of the build.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| types     | enum {<br/>&nbsp;&nbsp;ActivityProperties,<br/>&nbsp;&nbsp;ActivityTracking,<br/>&nbsp;&nbsp;AgentScopeActivityTracking,<br/>&nbsp;&nbsp;AssociatedChangeset,<br/>&nbsp;&nbsp;AssociatedCommit,<br/>&nbsp;&nbsp;AssociatedWorkItem,<br/>&nbsp;&nbsp;BuildError,<br/>&nbsp;&nbsp;BuildMessage,<br/>&nbsp;&nbsp;BuildProject,<br/>&nbsp;&nbsp;BuildStep,<br/>&nbsp;&nbsp;BuildWarning,<br/>&nbsp;&nbsp;CheckInOutcome,<br/>&nbsp;&nbsp;CompilationSummary,<br/>&nbsp;&nbsp;ConfigurationSummary,<br/>&nbsp;&nbsp;CustomSummaryInformation,<br/>&nbsp;&nbsp;DeploymentInformation,<br/>&nbsp;&nbsp;ExternalLink,<br/>&nbsp;&nbsp;GetStatus,<br/>&nbsp;&nbsp;OpenedWorkItem<br/>} | Types of details to include.<br/>Specify this parameter multiple times to include multiple types.
+| types | enum {<br/>&nbsp;&nbsp;ActivityProperties,<br/>&nbsp;&nbsp;ActivityTracking,<br/>&nbsp;&nbsp;AgentScopeActivityTracking,<br/>&nbsp;&nbsp;AssociatedChangeset,<br/>&nbsp;&nbsp;AssociatedCommit,<br/>&nbsp;&nbsp;AssociatedWorkItem,<br/>&nbsp;&nbsp;BuildError,<br/>&nbsp;&nbsp;BuildMessage,<br/>&nbsp;&nbsp;BuildProject,<br/>&nbsp;&nbsp;BuildStep,<br/>&nbsp;&nbsp;BuildWarning,<br/>&nbsp;&nbsp;CheckInOutcome,<br/>&nbsp;&nbsp;CompilationSummary,<br/>&nbsp;&nbsp;ConfigurationSummary,<br/>&nbsp;&nbsp;CustomSummaryInformation,<br/>&nbsp;&nbsp;DeploymentInformation,<br/>&nbsp;&nbsp;ExternalLink,<br/>&nbsp;&nbsp;GetStatus,<br/>&nbsp;&nbsp;OpenedWorkItem<br/>} | Types of details to include.<br/>Specify this parameter multiple times to include multiple types.
 
 #### Sample request
 
@@ -1539,44 +1544,49 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds/
 }
 ```
 
-
 ## Modify a build
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/_apis/build/builds/{buildId}?api-version={versions}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
-	status: {string},
-	quality: {string},
-	retainIndefinitely: {boolean}
+  "status": { string },
+  "quality": { string },
+  "retainIndefinitely": { boolean }
 }
 ```
 
 Modifies the build.
 
-| Parameter   | Type    | Notes
-|:------------|:--------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string  | TFS server name ({server:port}).
-| project     | string  | [Project](../tfs/projects.md) ID or name.
-| buildId     | int     | ID of the build.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| buildId | int | ID of the build.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Request body
-| status      | string  | Stop the build by updating its status to `Stopped`.
-| quality     | string  | Set the build quality.
+| status | string | Stop the build by updating its status to `Stopped`.
+| quality | string | Set the build quality.
 | retainIndefinitely | boolean | When 'true', the build will be maintained regardless of the retention rules used by the build definition.
 
 ### Stop a build
+
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds/348?api-version=1.0
 ```
+
 ```json
 {
   "status": "Stopped"
@@ -1645,14 +1655,15 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/build
 }
 ```
 
-
 ### Set the build quality
+
 <a name="setthebuildquality" />
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds/347?api-version=1.0
 ```
+
 ```json
 {
   "quality": "Rejected"
@@ -1722,13 +1733,14 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/build
 }
 ```
 
-
 ### Retain indefinitely
+
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds/345?api-version=1.0
 ```
+
 ```json
 {
   "retainIndefinitely": "true"
@@ -1797,8 +1809,8 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/build
 }
 ```
 
-
 <a id="deletebuild"></a>
+
 ## Delete a build
 
 Deletes the build and all of its output resources, including drops, test results, the version control label, symbols and content.
@@ -1807,12 +1819,14 @@ Deletes the build and all of its output resources, including drops, test results
 DELETE https://{instance}/DefaultCollection/{project}/_apis/build/builds/{buildId}?api_version={version}
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
-| project   | string | [Project](../tfs/projects.md) ID or name.
-| buildId   | int    | ID of the build.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| buildId | int | ID of the build.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -1821,4 +1835,3 @@ DELETE https://{instance}/DefaultCollection/{project}/_apis/build/builds/{buildI
 ```
 DELETE https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/builds/345?api-version=1.0
 ```
-

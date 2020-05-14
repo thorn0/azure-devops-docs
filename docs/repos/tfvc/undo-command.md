@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Undo command
 
@@ -27,7 +26,6 @@ tf undo [/workspace:workspacename[;workspaceowner]]
 ```
 
 ## Parameters
-
 
 <table><thead>
 <tr><th><p>Parameter</p></th><th><p>Description</p></th></tr></thead><tbody>
@@ -89,11 +87,11 @@ Removes all pending changes to program.cs in the specified collection and worksp
 
 ## Work in Visual Studio
 
--    [Develop code and manage pending changes](develop-code-manage-pending-changes.md)  Use Visual Studio to undo pending changes.
+- [Develop code and manage pending changes](develop-code-manage-pending-changes.md) Use Visual Studio to undo pending changes.
 
 ## Tips
 
--   To view a list of pending changes in the current or in a remote workspace, use the [Status command](status-command.md).  
--   You can use the **/workspace** option (and as needed, the **/collection** option) to undo changes on a remote dev machine. This capability is especially useful in cases when, for example, a file has been checked out and possibly locked on a dev machine that you cannot access. See the above explanation of the **/workspace** for information about how this works.  
--   If you need to clean your workspace (for example, because your work is interrupted by a more urgent task) and want to preserve the pending changes instead of undoing them, you can suspend them. See [Shelve Command](shelve-command.md). You can also preserve the position of your open windows, breakpoints, and other important cues. See [Suspend your work and manage your shelvesets](suspend-your-work-manage-your-shelvesets.md).  
--   You can also discard changes that have already been checked in. See [Undelete Command](undelete-command.md) and [Rollback Command (Team Foundation Version Control)](rollback-command-team-foundation-version-control.md).
+- To view a list of pending changes in the current or in a remote workspace, use the [Status command](status-command.md).
+- You can use the **/workspace** option (and as needed, the **/collection** option) to undo changes on a remote dev machine. This capability is especially useful in cases when, for example, a file has been checked out and possibly locked on a dev machine that you cannot access. See the above explanation of the **/workspace** for information about how this works.
+- If you need to clean your workspace (for example, because your work is interrupted by a more urgent task) and want to preserve the pending changes instead of undoing them, you can suspend them. See [Shelve Command](shelve-command.md). You can also preserve the position of your open windows, breakpoints, and other important cues. See [Suspend your work and manage your shelvesets](suspend-your-work-manage-your-shelvesets.md).
+- You can also discard changes that have already been checked in. See [Undelete Command](undelete-command.md) and [Rollback Command (Team Foundation Version Control)](rollback-command-team-foundation-version-control.md).

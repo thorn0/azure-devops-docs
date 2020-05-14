@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `isTest`: boolean. 
+- `isTest`: boolean.
 
-* `major`: number. 
+- `major`: number.
 
-* `minor`: number. 
+- `minor`: number.
 
-* `patch`: number. 
-
+- `patch`: number.

@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Test Results (Version 1.0) | REST API Reference for Team Foundation Server
 description: Work with test results programmatically using the REST APIs for Team Foundation Server. This is for Version 1.0 of this API.
 ms.assetid: FCBFFCFB-E57E-492F-9984-BD9C77EA4153
@@ -10,7 +10,7 @@ author: chcomley
 ms.date: 08/25/2016
 ---
 
-# Test results  (Version 1.0)
+# Test results (Version 1.0)
 
 [!INCLUDE [azure-devops](../_data/azure-devops-message.md)]
 
@@ -18,7 +18,7 @@ ms.date: 08/25/2016
 
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
-While there is complete support to add/get automated test results, there is limited support for manual test results. You can get all manual test results, test iterations and test steps (action results), but cannot create manual test iterations or test steps (action results). 
+While there is complete support to add/get automated test results, there is limited support for manual test results. You can get all manual test results, test iterations and test steps (action results), but cannot create manual test iterations or test steps (action results).
 
 ## Get a list of test results
 
@@ -26,15 +26,17 @@ While there is complete support to add/get automated test results, there is limi
 GET https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}/results?api-version={version}[&includeIterationDetails={bool}]
 ```
 
-| Parameter               | Type     | Default | Notes
-|:------------------------|:---------|:--------|:-----------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance                | string   |         | TFS server name ({server:port}).
-| project                 | string   |         | Name or ID of the project.
-| run                     | int      |         | ID of the test run that contains the results.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
+| run | int | | ID of the test run that contains the results.
 | Query
-| version                 | string   |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| includeIterationDetails | bool     | false   | For iterative tests, get the details for each iteration in the result.
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| includeIterationDetails | bool | false | For iterative tests, get the details for each iteration in the result.
 
 #### Sample request
 
@@ -158,23 +160,24 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/4/
 }
 ```
 
-
-## Get a test result 
+## Get a test result
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}/results/{result}?api-version={version}[&includeIterationDetails={bool}]
 ```
 
-| Parameter               | Type     | Default | Notes
-|:------------------------|:---------|:--------|:-----------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance                | string   |         | TFS server name ({server:port}).
-| project                 | string   |         | Name or ID of the project.
-| run                     | int      |         | ID of the test run that contains the result.
-| result                  | int      |         | ID of the test result to get.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
+| run | int | | ID of the test run that contains the result.
+| result | int | | ID of the test result to get.
 | Query
-| version                 | string   |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| includeIterationDetails | bool     | false   | For iterative tests, get the details for each iteration in the result.
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| includeIterationDetails | bool | false | For iterative tests, get the details for each iteration in the result.
 
 #### Sample request
 
@@ -239,7 +242,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/4/
   "url": "https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/Runs/4/Results/100000"
 }
 ```
-
 
 ### With iteration details
 
@@ -413,24 +415,25 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/4/
 }
 ```
 
-
 ## Get iterations for a result
 
 ```
 GET https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}/results/{result}/iterations?api-version={version}[&id={int}&includeActionResults={bool}]
 ```
 
-| Parameter               | Type     | Default | Notes
-|:------------------------|:---------|:--------|:-----------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance                | string   |         | TFS server name ({server:port}).
-| project                 | string   |         | Name or ID of the project.
-| run                     | int      |         | ID of the test run that contains the result.
-| result                  | int      |         | ID of the test result that contains the iterations.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
+| run | int | | ID of the test run that contains the result.
+| result | int | | ID of the test result that contains the iterations.
 | Query
-| version                 | string   |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| id                      | int      |         | ID of a specific iteration, used to get just that iteration. If not specified, all iterations in the result are returned.
-| includeActionResults    | bool     | false   | Include result details for each action performed in the test iteration. ActionResults refer to outcome (pass/fail) of test steps that are executed as part of a running a manual test. Including the ActionResults flag gets the outcome of test steps in the actionResults section and test parameters in the parameters section for each test iteration.
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| id | int | | ID of a specific iteration, used to get just that iteration. If not specified, all iterations in the result are returned.
+| includeActionResults | bool | false | Include result details for each action performed in the test iteration. ActionResults refer to outcome (pass/fail) of test steps that are executed as part of a running a manual test. Including the ActionResults flag gets the outcome of test steps in the actionResults section and test parameters in the parameters section for each test iteration.
 
 #### Sample request
 
@@ -466,7 +469,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/4/
 }
 ```
 
-
 ### For a specific iteration
 
 #### Sample request
@@ -488,7 +490,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/4/
   "url": "https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/Runs/4/Results/100000?iterationId=1"
 }
 ```
-
 
 ### With action results
 
@@ -555,7 +556,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/4/
 }
 ```
 
-
 ## Get a list of action results
 
 Gets the action results for an iteration in a test result.
@@ -564,17 +564,19 @@ Gets the action results for an iteration in a test result.
 GET https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}/results/{result}/iterations/{iteration}/actionResults?api-version={version}[&actionPath={int}]
 ```
 
-| Parameter               | Type     | Default | Notes
-|:------------------------|:---------|:--------|:-----------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance                | string   |         | TFS server name ({server:port}).
-| project                 | string   |         | Name or ID of the project.
-| run                     | int      |         | ID of the test run that contains the result.
-| result                  | int      |         | ID of the test result that contains the iterations.
-| iteration               | int      |         | ID of the iteration that contains the actions.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
+| run | int | | ID of the test run that contains the result.
+| result | int | | ID of the test result that contains the iterations.
+| iteration | int | | ID of the iteration that contains the actions.
 | Query
-| version                 | string   |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| actionPath              | string   |         | Path of a specific action, used to get just that action.
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| actionPath | string | | Path of a specific action, used to get just that action.
 
 #### Sample request
 
@@ -616,7 +618,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/4/
 }
 ```
 
-
 ### For a specific action result
 
 #### Sample request
@@ -643,25 +644,27 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/4/
 }
 ```
 
-
 ## Get a list of parameterized results
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}/results/{result}/iterations/{iteration}/parameterresults?api-version={version}[&paramName={string}]
 ```
+
 In a parameterized test, gets results for each parameter value.
 
-| Parameter               | Type     | Default | Notes
-|:------------------------|:---------|:--------|:-----------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance                | string   |         | TFS server name ({server:port}).
-| project                 | string   |         | Name or ID of the project.
-| run                     | int      |         | ID of the test run that contains the result.
-| result                  | int      |         | ID of the test result that contains the iterations.
-| iteration               | int      |         | ID of the iteration that contains the parameterized results.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
+| run | int | | ID of the test run that contains the result.
+| result | int | | ID of the test result that contains the iterations.
+| iteration | int | | ID of the iteration that contains the parameterized results.
 | Query
-| version                 | string   |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| paramName               | string   |         | Name of the parameter.
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| paramName | string | | Name of the parameter.
 
 #### Sample request
 
@@ -693,7 +696,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/4/
 }
 ```
 
-
 ### For a specific parameter
 
 #### Sample request
@@ -719,8 +721,8 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/runs/4/
 }
 ```
 
-
 ## Get test results by query (deprecated)
+
 > This API is deprecated as of [!INCLUDE [API_version](../_data/version3-preview.md)].
 
 ```no-highlight
@@ -737,26 +739,28 @@ Content-Type: application/json
 }
 ```
 
-| Parameter               | Type   | Default | Notes
-|:------------------------|:-------|:--------|:------------------------
-| URL
-| instance                | string |         | TFS server name ({server:port}).
-| project                 | string |         | Name or ID of the project.
-| Query
-| version                 | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| includeResultDetails    | bool   | false   | If true, include all the properties of the test result.
-| includeIterationDetails | bool   | false   | For iterative tests, get the details for each iteration in the result.
-| $skip                   | int    |         | Number of test results to skip.
-| $top                    | int    |         | Number of test results to return.
-| Body
-| query                   | string |         | Query string
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
 
+
+| URL
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
+| Query
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| includeResultDetails | bool | false | If true, include all the properties of the test result.
+| includeIterationDetails | bool | false | For iterative tests, get the details for each iteration in the result.
+| $skip                   | int    |         | Number of test results to skip.
+| $top | int | | Number of test results to return.
+| Body
+| query | string | | Query string
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/results/query?includeResultDetails=true&$top=2&api-version=2.0-preview
 ```
+
 ```json
 {
   "query": "Select * From TestResult Where TestRunId = 45"
@@ -851,15 +855,16 @@ POST https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/results/query?inc
 }
 ```
 
-
-## Add test results to a test run 
+## Add test results to a test run
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}/results?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
   "index": {int},
@@ -903,52 +908,55 @@ Content-Type: application/json
   "startedDate": { DateTime },
   "completedDate": { DateTime },
   "durationInMs": { long },
-  "associatedWorkItems": [ 
-    { int } 
+  "associatedWorkItems": [
+    { int }
   ]
 }
 ```
 
-| Parameter            | Type     | Default | Notes
-|:---------------------|:---------|:--------|:------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance             | string   |         | TFS server name ({server:port}).
-| project              | string   |         | Name or ID of the project.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
 | Query
-| version              | string   |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| index                | int      |         | Index can be used by client to identify the result being published.<br/>Index value will be returned as is along with corresponding publish result object details and can help identify the correct result ID for subsequent operations on the result.
-| testCaseTitle        | string   |	    | Title of the test case.
-| testCase.id          | int      |         | ID of the test case to use.
-| configuration.id     | int      |         | ID of the test configuration to use.
-| configuration.name   | string   |         | Name of the test configuration to use.
-| testPoint.Id         | int      |         | ID of the test point to use.
-| state                | enum { Pending, Queued, InProgress, Paused, Completed } | Pending | State of the test result
-| computerName         | string   |         | Name of the computer used for test execution.
-| resolutionState      | string   |         | Resolution state of the test result.
-| testCasePriority     | int      |         | Priority of the test case.
-| failureType          | string   | None    | Failure type of the test result.
-| automatedTestName    | string   |         | Title of automated test case.
-| automatedTestStorage | string   |         | Automated test storage.
-| automatedTestType    | string   |         | Automated test type.
-| automatedTestTypeId  | string   |         | Automated test type Id.
-| automatedTestId      | string   |         | Automated test Id.
-| area.name            | string   |         | Area Path of the test result.
-| owner.displayName    | string   |         | Name of the result owner
-| runBy.displayName    | string   |         | Name of the person who executed the test case.
-| outcome              | enum { None, Passed, Failed, Inconclusive, Timeout, Aborted, Blocked, NotExecuted, Warning, Error, NotApplicable, Paused, InProgress } | None | Outcome of the test result.
-| errorMessage         | string   |         | Error message
-| comment              | string   |         | Comments entered by person who analyzed the result.
-| startedDate          | DateTime |         | Start date of test result
-| completedDate        | DateTime |         | Completed date of test result
-| durationInMs         | long     |         | Execution time of the test case in milliseconds                               
-| associatedWorkItems  | int[]    |         | IDs of the bugs associated with test result.
+| index | int | | Index can be used by client to identify the result being published.<br/>Index value will be returned as is along with corresponding publish result object details and can help identify the correct result ID for subsequent operations on the result.
+| testCaseTitle | string | | Title of the test case.
+| testCase.id | int | | ID of the test case to use.
+| configuration.id | int | | ID of the test configuration to use.
+| configuration.name | string | | Name of the test configuration to use.
+| testPoint.Id | int | | ID of the test point to use.
+| state | enum { Pending, Queued, InProgress, Paused, Completed } | Pending | State of the test result
+| computerName | string | | Name of the computer used for test execution.
+| resolutionState | string | | Resolution state of the test result.
+| testCasePriority | int | | Priority of the test case.
+| failureType | string | None | Failure type of the test result.
+| automatedTestName | string | | Title of automated test case.
+| automatedTestStorage | string | | Automated test storage.
+| automatedTestType | string | | Automated test type.
+| automatedTestTypeId | string | | Automated test type Id.
+| automatedTestId | string | | Automated test Id.
+| area.name | string | | Area Path of the test result.
+| owner.displayName | string | | Name of the result owner
+| runBy.displayName | string | | Name of the person who executed the test case.
+| outcome | enum { None, Passed, Failed, Inconclusive, Timeout, Aborted, Blocked, NotExecuted, Warning, Error, NotApplicable, Paused, InProgress } | None | Outcome of the test result.
+| errorMessage | string | | Error message
+| comment | string | | Comments entered by person who analyzed the result.
+| startedDate | DateTime | | Start date of test result
+| completedDate | DateTime | | Completed date of test result
+| durationInMs | long | | Execution time of the test case in milliseconds  
+| associatedWorkItems | int[] | | IDs of the bugs associated with test result.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/runs/46/results?api-version=2.0-preview
 ```
+
 ```json
 [
   {
@@ -994,30 +1002,30 @@ POST https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/runs/46/results?a
 }
 ```
 
-
-
-## Update test results for a test run 
+## Update test results for a test run
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}/results?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 [
-  {  
+  {
     "testResult": {
        "id": { int }
     },
     "state": {
 	enum { Pending, Queued, InProgress, Paused, Completed }
     },
-    "computerName": { string },    
+    "computerName": { string },
     "resolutionState": { string },
     "testCasePriority": { string },
-    "failureType": { string },  
-    "automatedTestTypeId": { string },  
+    "failureType": { string },
+    "automatedTestTypeId": { string },
     "owner": {
        "DisplayName": {string}
     },
@@ -1032,43 +1040,46 @@ Content-Type: application/json
     "startedDate": { DateTime },
     "completedDate": { DateTime },
     "durationInMs": { long },
-    "associatedWorkItems": [ 
-         { int } 
+    "associatedWorkItems": [
+         { int }
     ]
   }
 ]
 ```
 
-| Parameter           | Type     | Default | Notes
-|:--------------------|:---------|:--------|:------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance            | string   |         | TFS server name ({server:port}).
-| project             | string   |         | Name or ID of the project.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
 | Query
-| version             | string   |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| testResult.Id       | int      |         | ID of the test result which has to be updated.
-| state               | enum { Pending, Queued, InProgress, Paused, Completed } |    | State of the test result
-| computerName        | string   |         | Name of the computer used for test execution.
-| resolutionState     | string   |         | Resolution state of the test result.
-| testCasePriority    | int      |         | Priority of the test case.
-| failureType         | string   |         | Failure type of the test result.
-| automatedTestTypeId | string   |         | Automated test type Id.
-| owner.displayName   | string   |         | Name of the result owner
-| runBy.displayName   | string   |         | Name of the person who executed the test case.
-| outcome             | enum { None, Passed, Failed, Inconclusive, Timeout, Aborted, Blocked, NotExecuted, Warning, Error, NotApplicable, Paused, InProgress } |    | Outcome of the test result.
-| errorMessage        | string   |         | Error message
-| comment             | string   |         | Comments entered by person who analyzed the result.
-| startedDate         | DateTime |         | Started date for test result
-| completedDate       | DateTime |         | Completed date for test result
-| durationInMs        | long     |         | Execution time of the test case in milliseconds                               
-| associatedWorkItems | int[]    |         | IDs of the bugs associated with test result.
+| testResult.Id | int | | ID of the test result which has to be updated.
+| state | enum { Pending, Queued, InProgress, Paused, Completed } | | State of the test result
+| computerName | string | | Name of the computer used for test execution.
+| resolutionState | string | | Resolution state of the test result.
+| testCasePriority | int | | Priority of the test case.
+| failureType | string | | Failure type of the test result.
+| automatedTestTypeId | string | | Automated test type Id.
+| owner.displayName | string | | Name of the result owner
+| runBy.displayName | string | | Name of the person who executed the test case.
+| outcome | enum { None, Passed, Failed, Inconclusive, Timeout, Aborted, Blocked, NotExecuted, Warning, Error, NotApplicable, Paused, InProgress } | | Outcome of the test result.
+| errorMessage | string | | Error message
+| comment | string | | Comments entered by person who analyzed the result.
+| startedDate | DateTime | | Started date for test result
+| completedDate | DateTime | | Completed date for test result
+| durationInMs | long | | Execution time of the test case in milliseconds  
+| associatedWorkItems | int[] | | IDs of the bugs associated with test result.
 
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/runs/45/results?api-version=2.0-preview
 ```
+
 ```json
 [
   {
@@ -1117,31 +1128,32 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/runs/45/results?
 }
 ```
 
-
-
 ## Update same set of properties for multiple test results in a test run (deprecated)
+
 > This API is deprecated as of [!INCLUDE [API_version](../_data/version3-preview.md)].
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/_apis/test/runs/{run}/results?api-version={version}[&resultIds={string}]
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 
-{  
+{
   "testResult": {
      "id": { int }
   },
   "state": {
      enum { Pending, Queued, InProgress, Paused, Completed }
   },
-  "computerName": { string },    
+  "computerName": { string },
   "resolutionState": { string },
   "testCasePriority": { string },
-  "failureType": { string },  
-  "automatedTestTypeId": { string },  
+  "failureType": { string },
+  "automatedTestTypeId": { string },
   "owner": {
      "DisplayName": {string}
   },
@@ -1156,43 +1168,46 @@ Content-Type: application/json
   "startedDate": { DateTime },
   "completedDate": { DateTime },
   "durationInMs": { long },
-  "associatedWorkItems": [ 
-       { int } 
+  "associatedWorkItems": [
+       { int }
   ]
 }
 ```
 
-| Parameter            | Type     | Default | Notes
-|:---------------------|:---------|:--------|:------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance             | string   |         | TFS server name ({server:port}).
-| project              | string   |         | Name or ID of the project.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
 | Query
-| version              | string   |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| resultIds            | string   |         | A comma-separated list of up to 200 IDs of test results to update.
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| resultIds | string | | A comma-separated list of up to 200 IDs of test results to update.
 | Body
-| testResult.Id        | int      |		    | ID of the test result which has to be updated.
-| state                | enum { Pending, Queued, InProgress, Paused, Completed } |     | State of the test result
-| computerName         | string   |         | Name of the computer used for test execution.
-| resolutionState      | string   |         | Resolution state of the test result.
-| testCasePriority     | int      |         | Priority of the test case.
-| failureType          | string   |         | Failure type of the test result.
-| automatedTestTypeId  | string   |         | Automated test type Id.
-| owner.displayName    | string   |         | Name of the result owner
-| runBy.displayName    | string   |         | Name of the person who executed the test case.
-| outcome              | enum { None, Passed, Failed, Inconclusive, Timeout, Aborted, Blocked, NotExecuted, Warning, Error, NotApplicable, Paused, InProgress } |     | Outcome of the test result.
-| errorMessage         | string   |         | Error message
-| comment              | string   |         | Comments entered by person who analyzed the result.
-| startedDate          | DateTime |         | Started date for test result
-| completedDate        | DateTime |         | Completed date for test result
-| durationInMs         | long     |         | Execution time of the test case in milliseconds                               
-| associatedWorkItems  | int[]    |         | IDs of the bugs associated with test result.
+| testResult.Id | int | | ID of the test result which has to be updated.
+| state | enum { Pending, Queued, InProgress, Paused, Completed } | | State of the test result
+| computerName | string | | Name of the computer used for test execution.
+| resolutionState | string | | Resolution state of the test result.
+| testCasePriority | int | | Priority of the test case.
+| failureType | string | | Failure type of the test result.
+| automatedTestTypeId | string | | Automated test type Id.
+| owner.displayName | string | | Name of the result owner
+| runBy.displayName | string | | Name of the person who executed the test case.
+| outcome | enum { None, Passed, Failed, Inconclusive, Timeout, Aborted, Blocked, NotExecuted, Warning, Error, NotApplicable, Paused, InProgress } | | Outcome of the test result.
+| errorMessage | string | | Error message
+| comment | string | | Comments entered by person who analyzed the result.
+| startedDate | DateTime | | Started date for test result
+| completedDate | DateTime | | Completed date for test result
+| durationInMs | long | | Execution time of the test case in milliseconds  
+| associatedWorkItems | int[] | | IDs of the bugs associated with test result.
 
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/runs/45/results?resultIds=100000,100001&api-version=2.0-preview
 ```
+
 ```json
 {
   "state": "Completed",
@@ -1227,6 +1242,3 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/runs/45/results?
   ]
 }
 ```
-
-
-

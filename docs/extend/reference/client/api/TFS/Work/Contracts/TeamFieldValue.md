@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Work/Contracts`
 
-
 ### Members
 
-* `includeChildren`: boolean. 
+- `includeChildren`: boolean.
 
-* `value`: string. 
-
+- `value`: string.

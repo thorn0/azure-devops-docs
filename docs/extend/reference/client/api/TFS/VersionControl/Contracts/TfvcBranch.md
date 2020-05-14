@@ -17,11 +17,10 @@ Extends: [TfvcBranchRef](../../../TFS/VersionControl/Contracts/TfvcBranchRef.md)
 
 ### Members
 
-* `children`: [TfvcBranch](../../../TFS/VersionControl/Contracts/TfvcBranch.md)[]. 
+- `children`: [TfvcBranch](../../../TFS/VersionControl/Contracts/TfvcBranch.md)[].
 
-* `mappings`: [TfvcBranchMapping](../../../TFS/VersionControl/Contracts/TfvcBranchMapping.md)[]. 
+- `mappings`: [TfvcBranchMapping](../../../TFS/VersionControl/Contracts/TfvcBranchMapping.md)[].
 
-* `parent`: [TfvcShallowBranchRef](../../../TFS/VersionControl/Contracts/TfvcShallowBranchRef.md). 
+- `parent`: [TfvcShallowBranchRef](../../../TFS/VersionControl/Contracts/TfvcShallowBranchRef.md).
 
-* `relatedBranches`: [TfvcShallowBranchRef](../../../TFS/VersionControl/Contracts/TfvcShallowBranchRef.md)[]. 
-
+- `relatedBranches`: [TfvcShallowBranchRef](../../../TFS/VersionControl/Contracts/TfvcShallowBranchRef.md)[].

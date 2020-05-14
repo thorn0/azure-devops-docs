@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `includeContentMetadata`: boolean. If true, include metadata about the file type
+- `includeContentMetadata`: boolean. If true, include metadata about the file type
 
-* `recursionLevel`: [VersionControlRecursionType](../../../TFS/VersionControl/Contracts/VersionControlRecursionType.md). Specifies whether to include children (OneLevel), all descendants (Full) or None for folder items
-
+- `recursionLevel`: [VersionControlRecursionType](../../../TFS/VersionControl/Contracts/VersionControlRecursionType.md). Specifies whether to include children (OneLevel), all descendants (Full) or None for folder items

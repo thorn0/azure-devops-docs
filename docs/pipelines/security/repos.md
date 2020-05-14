@@ -4,7 +4,7 @@ description: Securing repos and forks.
 ms.assetid: c1cfe88b-96aa-4804-998c-027a287e5696
 ms.reviewer: macoope
 ms.date: 05/14/2020
-monikerRange: '> azure-devops-2019'
+monikerRange: "> azure-devops-2019"
 ---
 
 # Repository protection
@@ -16,7 +16,7 @@ Also, you should review [default access control](../../organizations/security/de
 Because of Git's design, protection at a branch level will only carry you so far.
 Users with push access to a repo can usually create new branches.
 If you use GitHub open-source projects, anyone with a GitHub account can fork your repository and propose contributions back.
-Since pipelines are associated with a repository and not with specific branches, you must assume the code and YAML files are untrusted. 
+Since pipelines are associated with a repository and not with specific branches, you must assume the code and YAML files are untrusted.
 
 ## Forks
 

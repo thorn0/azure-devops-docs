@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Unshelve Command
 
@@ -23,11 +22,12 @@ Restores shelved file revisions, check-in notes, comments, and work item associa
 To use the **unshelve** command, you must have the **Read** permission set to **Allow**, and you must have the **Check out** permission for the items in the shelveset set to **Allow**. Additionally, to delete a shelveset, you must be its owner or have the **Administer shelved changes** global permission set to **Allow**. For more information, see [Permissions and groups reference](../../organizations/security/permissions.md).
 
 ```
-tf unshelve [/move] [shelvesetname[;username]] itemspec 
+tf unshelve [/move] [shelvesetname[;username]] itemspec
 [/recursive] [/noprompt][/login:username,[password]]
 ```
 
 ## Parameters<table>
+
 <thead>
 <tr>
 <th><p>Argument</p></th>
@@ -86,6 +86,7 @@ tf unshelve [/move] [shelvesetname[;username]] itemspec
 </table>
 
 ## Remarks
+
 The **unshelve** command of the **tf** command-line utility retrieves either all shelved file revisions or a defined subset of all shelved file revisions from the Team Foundation server into the current workspace.
 
 To unshelve an item, there must be no pending revisions against it in the destination workspace.
@@ -104,9 +105,9 @@ If you want to integrate shelved revisions into your current workspace in order 
 
 You can also unshelve a shelveset in order to review changes from another user's workspace. To unshelve for this reason, you have two options.
 
--   If the shelved items and the items with which they are related have not been revised, or have only been revised lightly since the shelveset was created, you can retrieve the base version of all related items from the shelveset owner's workspace. To do this, use some variation of the following command: `tf get \* /version;Wworkspacename`, where *workspacename* is the name of the workspace from which the other user created the shelveset.
+- If the shelved items and the items with which they are related have not been revised, or have only been revised lightly since the shelveset was created, you can retrieve the base version of all related items from the shelveset owner's workspace. To do this, use some variation of the following command: `tf get \* /version;Wworkspacename`, where _workspacename_ is the name of the workspace from which the other user created the shelveset.
 
--   If a significant amount of time has passed or if multiple revisions have been in the workspace since the shelveset was created, retrieve the version of all related items from the server as of the date and time when the shelveset was created.
+- If a significant amount of time has passed or if multiple revisions have been in the workspace since the shelveset was created, retrieve the version of all related items from the server as of the date and time when the shelveset was created.
 
 You can unshelve another user's shelved change by appending the username to the shelveset name. However, you can only remove a shelveset from the Team Foundation Server that was created by another user if you have the AdminShelvedChangesets permission.
 
@@ -115,13 +116,14 @@ If you attempt to unshelve an item for which a pending change exists in the dest
 You can delete a shelveset by using `tf shelve /delete`. For more information, see [Shelve Command](shelve-command.md). In order to automatically delete a shelveset after unshelving the entire shelveset, use `tf unshelve /move`.
 
 ## Examples
+
 The following example opens the **Unshelve** dialog box so that you can find and unshelve a shelveset into the current workspace. You also have an option in the dialog box to have the shelveset deleted when the unshelve operation completes.
 
 ```
 c:\>tf unshelve
 ```
 
-The following example unshelves the shelveset buddytest\_1256 into the current workspace and removes it from Team Foundation Server.
+The following example unshelves the shelveset buddytest_1256 into the current workspace and removes it from Team Foundation Server.
 
 ```
 c:\>tf unshelve /move buddytest_1256

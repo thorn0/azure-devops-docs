@@ -26,13 +26,13 @@ Use this task to decrypt files using OpenSSL.
 
 ## Arguments
 
-|Argument|Description|
-|--- |--- |
-|`cipher`<br/>Cypher|(Required) Encryption cypher to use. See [cypher suite names](https://go.microsoft.com/fwlink/?LinkID=627129) for a complete list of possible values <br/>Default value: `des3`|
-|`inFile`<br/>Encrypted file|(Required) Relative path of file to decrypt.|
-|`passphrase`<br/>Passphrase|(Required) Passphrase to use for decryption. Use a Variable to encrypt the passphrase.|
-|`outFile`<br/>Decrypted file path|(Optional) Optional filename for decrypted file. Defaults to the Encrypted File with a ".out" extension|
-|`cwd`<br/>Working directory|(Optional) Working directory for decryption. Defaults to the root of the repository <br/>Argument aliases: `workingDirectory`|
+| Argument                          | Description                                                                                                                                                                     |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cipher`<br/>Cypher               | (Required) Encryption cypher to use. See [cypher suite names](https://go.microsoft.com/fwlink/?LinkID=627129) for a complete list of possible values <br/>Default value: `des3` |
+| `inFile`<br/>Encrypted file       | (Required) Relative path of file to decrypt.                                                                                                                                    |
+| `passphrase`<br/>Passphrase       | (Required) Passphrase to use for decryption. Use a Variable to encrypt the passphrase.                                                                                          |
+| `outFile`<br/>Decrypted file path | (Optional) Optional filename for decrypted file. Defaults to the Encrypted File with a ".out" extension                                                                         |
+| `cwd`<br/>Working directory       | (Optional) Working directory for decryption. Defaults to the root of the repository <br/>Argument aliases: `workingDirectory`                                                   |
 
 ## Open source
 

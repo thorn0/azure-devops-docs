@@ -11,4 +11,4 @@ ms.date: 02/13/2020
 
 [Define and modify your build variables in a script](/azure/devops/pipelines/process/variables#set-a-multi-job-output-variable)
 
-[Define and modify your release variables in a script](../release/variables.md#using-custom-variables) 
+[Define and modify your release variables in a script](../release/variables.md#using-custom-variables)

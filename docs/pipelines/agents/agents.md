@@ -5,7 +5,7 @@ ms.custom: seodec18
 description: Learn about building your code or deploying your software using agents in Azure Pipelines and Team Foundation Server
 ms.assetid: 5C14A166-CA77-4484-8074-9E0AA060DE58
 ms.date: 04/07/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Azure Pipelines agents
@@ -55,10 +55,10 @@ Also, machine-level caches and configuration persist from run to run, which can 
 
 You can install the agent on Linux, macOS, or Windows machines. You can also install an agent on a Docker container. For more information about installing a self-hosted agent, see:
 
-* [macOS agent](v2-osx.md)
-* [Linux agent](v2-linux.md) (x64, ARM, RHEL6)
-* [Windows agent](v2-windows.md) (x64, x86)
-* [Docker agent](docker.md)
+- [macOS agent](v2-osx.md)
+- [Linux agent](v2-linux.md) (x64, ARM, RHEL6)
+- [Windows agent](v2-windows.md) (x64, x86)
+- [Docker agent](docker.md)
 
 ::: moniker-end
 
@@ -66,11 +66,11 @@ You can install the agent on Linux, macOS, or Windows machines. You can also ins
 
 You can install the agent on Linux, macOS, or Windows machines. For more information about installing a self-hosted agent, see:
 
-* [macOS agent](v2-osx.md)
-* [Red Hat agent](v2-linux.md)
-* [Ubuntu 14.04 agent](v2-linux.md)
-* [Ubuntu 16.04 agent](v2-linux.md)
-* [Windows agent v1](v1-windows.md)
+- [macOS agent](v2-osx.md)
+- [Red Hat agent](v2-linux.md)
+- [Ubuntu 14.04 agent](v2-linux.md)
+- [Ubuntu 16.04 agent](v2-linux.md)
+- [Windows agent v1](v1-windows.md)
 
 ::: moniker-end
 
@@ -95,7 +95,7 @@ For more information, see [Azure virtual machine scale set agents](scale-set-age
 
 ## Parallel jobs
 
-You can use a parallel job in Azure Pipelines to run a single job at a time in your organization. In Azure Pipelines, you can run parallel jobs on Microsoft-hosted infrastructure or on your own (self-hosted) infrastructure. 
+You can use a parallel job in Azure Pipelines to run a single job at a time in your organization. In Azure Pipelines, you can run parallel jobs on Microsoft-hosted infrastructure or on your own (self-hosted) infrastructure.
 
 Microsoft provides a free tier of service by default in every organization that includes at least one parallel job. Depending on the number of concurrent pipelines you need to run, you might need more parallel jobs to use multiple Microsoft-hosted or self-hosted agents at the same time. For more information on parallel jobs and different free tiers of service, see [Parallel jobs in Azure Pipelines](../licensing/concurrent-jobs.md).
 
@@ -107,7 +107,7 @@ Microsoft provides a free tier of service by default in every organization that 
 
 You might need more parallel jobs to use multiple agents at the same time:
 
-* [Parallel jobs in TFS](../licensing/concurrent-pipelines-tfs.md)
+- [Parallel jobs in TFS](../licensing/concurrent-pipelines-tfs.md)
 
 ::: moniker-end
 
@@ -128,7 +128,7 @@ When you author a pipeline you specify certain **demands** of the agent. The sys
 
 > [!NOTE]
 >
-> Demands and capabilities apply only to self-hosted agents. When using Microsoft-hosted agents, you select an image for the hosted agent. 
+> Demands and capabilities apply only to self-hosted agents. When using Microsoft-hosted agents, you select an image for the hosted agent.
 > You cannot use capabilities with hosted agents.
 
 ### View agent details
@@ -142,7 +142,7 @@ You can view the details of an agent, including its version and system capabilit
    [!INCLUDE [agent-pools-tab](includes/agent-pools-tab.md)]
 
 1. Navigate to the capabilities tab:
- 
+
    [!INCLUDE [agent-capabilities](includes/agent-capabilities-tab.md)]
 
 #### [Azure DevOps CLI](#tab/azure-devops-cli/)
@@ -232,7 +232,7 @@ This command group is in preview. It may be changed/removed in a future release.
 {
   "accessPoint": null,
   "assignedAgentCloudRequest": null,
- 
+
   <Some properties omitted for space>
 
   "status": "offline",
@@ -268,9 +268,9 @@ ID    Name                             Is Hosted    Pool Type
 
 ::: moniker-end
 
-[!INCLUDE [temp](../../includes/note-cli-not-supported.md)] 
+[!INCLUDE [temp](../../includes/note-cli-not-supported.md)]
 
-* * *
+---
 
 > [!TIP]
 >
@@ -322,9 +322,9 @@ The payload of the messages exchanged between the agent and Azure Pipelines/TFS 
 
 Here is a common communication pattern between the agent and TFS.
 
-* An agent pool administrator joins the agent to an agent pool, and the credentials of the service account (for Windows) or the saved user name and password (for Linux and macOS) are used to initiate communication with TFS. The agent uses these credentials to listen to the job queue.
+- An agent pool administrator joins the agent to an agent pool, and the credentials of the service account (for Windows) or the saved user name and password (for Linux and macOS) are used to initiate communication with TFS. The agent uses these credentials to listen to the job queue.
 
-* The agent does not use asymmetric key encryption while communicating with the server. However, you can [use HTTPS to secure the communication](/azure/devops/server/admin/websitesettings) between the agent and TFS.
+- The agent does not use asymmetric key encryption while communicating with the server. However, you can [use HTTPS to secure the communication](/azure/devops/server/admin/websitesettings) between the agent and TFS.
 
 ::: moniker-end
 
@@ -337,8 +337,8 @@ connectivity to those servers. The Microsoft-hosted agent pools, by default, hav
 connectivity to Azure websites and servers running in Azure.
 
 > [!NOTE]
-> If your Azure resources are running in an Azure Virtual Network, you can get the 
-> [Agent IP ranges](hosted.md#agent-ip-ranges) where Microsoft-hosted agents are deployed 
+> If your Azure resources are running in an Azure Virtual Network, you can get the
+> [Agent IP ranges](hosted.md#agent-ip-ranges) where Microsoft-hosted agents are deployed
 > so you can configure the firewall rules for your Azure VNet to allow access by the agent.
 
 If your on-premises environments do not have connectivity to a Microsoft-hosted agent pool
@@ -351,9 +351,10 @@ as shown in the following schematic.
 ::: moniker-end
 
 <a name="configure-tfs-authentication"></a>
+
 ## Authentication
 
-To register an agent, you need to be a member of the [administrator role](pools-queues.md#security) in the agent pool. The identity of agent pool administrator is needed only at the time of registration and is not persisted on the agent, and is not used in any subsequent communication between the agent and Azure Pipelines or TFS. In addition, you must be a local administrator on the server in order to configure the agent. 
+To register an agent, you need to be a member of the [administrator role](pools-queues.md#security) in the agent pool. The identity of agent pool administrator is needed only at the time of registration and is not persisted on the agent, and is not used in any subsequent communication between the agent and Azure Pipelines or TFS. In addition, you must be a local administrator on the server in order to configure the agent.
 
 ::: moniker range="azure-devops"
 
@@ -367,10 +368,10 @@ Your agent can authenticate to Azure DevOps Server or TFS using one of the follo
 
 ::: moniker-end
 
-
 ::: moniker range=">= tfs-2017"
 
-### Personal Access Token (PAT): 
+### Personal Access Token (PAT):
+
 [Generate](../../organizations/accounts/use-personal-access-tokens-to-authenticate.md) and use a PAT to connect an agent with Azure Pipelines or TFS 2017 and newer. PAT is the only scheme that works with Azure Pipelines. Also, as explained above, this PAT is used only at the time of registering the agent, and not for subsequent communication.
 
 To use a PAT with TFS, your server must be configured with HTTPS. See [Web site settings and security](/azure/devops/server/admin/websitesettings).
@@ -407,8 +408,8 @@ To use this method of authentication, you must first configure your TFS server.
 
 ![IIS TFS windows authentication with negotiate and ntlm provider](media/configure-tfs-authentication/iis-tfs-authentication-windows-negotiate-and-ntlm-providers.png)
 
-
 ### Alternate
+
 Connect to TFS using Basic authentication. To use this method, you must first [configure HTTPS on TFS](/azure/devops/server/admin/websitesettings).
 
 To use this method of authentication, you must configure your TFS server as follows:
@@ -493,19 +494,19 @@ Your pipelines won't run until they can target a compatible agent.
 
 1. Navigate to **Project settings**, **Agent pools**.
 
-    ![Project settings, Agent pools](media/agent-queues-tab/agent-queues.png)
+   ![Project settings, Agent pools](media/agent-queues-tab/agent-queues.png)
 
 2. Select your agent pool and choose **Update all agents**.
 
-    ![Update all agents](media/agents/update-all-agents.png)
+   ![Update all agents](media/agents/update-all-agents.png)
 
-    You can also update agents individually by choosing **Update agent** from the **...** menu.
+   You can also update agents individually by choosing **Update agent** from the **...** menu.
 
-    ![Update agent](media/agents/update-agent.png)
+   ![Update agent](media/agents/update-agent.png)
 
 3. Select **Update** to confirm the update.
 
-    ![Update all agents confirmation](media/agents/update-all-agents-confirmation.png)
+   ![Update all agents confirmation](media/agents/update-all-agents-confirmation.png)
 
 4. An update request is queued for each agent in the pool, that runs when any currently running jobs complete. Upgrading typically only takes a few moments - long enough to download the latest version of the agent software (approximately 200 MB), unzip it, and restart the agent with the new version. You can monitor the status of your agents on the **Agents** tab.
 
@@ -538,9 +539,9 @@ You can view the version of an agent by navigating to **Agent pools** and select
 
 In many cases, yes. Specifically:
 
-* If you use a self-hosted agent, you can run incremental builds. For example, if you define a pipeline that does not clean the repo and does not perform a clean build, your builds will typically run faster. When you use a Microsoft-hosted agent, you don't get these benefits because the agent is destroyed after the build or release pipeline is completed.
+- If you use a self-hosted agent, you can run incremental builds. For example, if you define a pipeline that does not clean the repo and does not perform a clean build, your builds will typically run faster. When you use a Microsoft-hosted agent, you don't get these benefits because the agent is destroyed after the build or release pipeline is completed.
 
-* A Microsoft-hosted agent can take longer to start your build. While it often takes just a few seconds for your job to be assigned to a Microsoft-hosted agent, it can sometimes take several minutes for an agent to be allocated depending on the load on our system.
+- A Microsoft-hosted agent can take longer to start your build. While it often takes just a few seconds for your job to be assigned to a Microsoft-hosted agent, it can sometimes take several minutes for an agent to be allocated depending on the load on our system.
 
 ### Can I install multiple self-hosted agents on the same machine?
 
@@ -555,7 +556,8 @@ You might also run into problems if parallel build jobs are using the same singl
 ## Learn more
 
 For more information about agents, see the following modules from the [Build applications with Azure DevOps](/learn/paths/build-applications-with-azure-devops/) learning path.
-* [Choose a Microsoft-hosted or self-hosted build agent](/learn/modules/host-build-agent/2-choose-a-build-agent)
-* [Host your own build agent in Azure Pipelines](/learn/modules/host-build-agent/)
+
+- [Choose a Microsoft-hosted or self-hosted build agent](/learn/modules/host-build-agent/2-choose-a-build-agent)
+- [Host your own build agent in Azure Pipelines](/learn/modules/host-build-agent/)
 
 ::: moniker-end

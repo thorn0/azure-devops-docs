@@ -2,7 +2,6 @@
 ms.topic: include
 ---
 
-
 ::: moniker range=">= azure-devops-2019"
 
 <table>
@@ -89,15 +88,14 @@ ms.topic: include
 </tbody>
 </table>
 
-::: moniker-end    
+::: moniker-end
 
 ::: moniker range="azure-devops-2019"
 
-> [!NOTE]   
+> [!NOTE]  
 > You can change the work item type or move work items to another project within a project collection. These features require that the data warehouse is disabled. With the data warehouse disabled, you can use the [Analytics Service](/azure/devops/report/powerbi/what-is-analytics) to support your reporting needs. To learn more about disabling the data warehouse, see [Disable the data warehouse and cube](/azure/devops/report/admin/disable-data-warehouse).
 
-::: moniker-end    
-
+::: moniker-end
 
 ::: moniker range=">= tfs-2017 <= tfs-2018"
 
@@ -171,10 +169,10 @@ ms.topic: include
 </tbody>
 </table>
 
-::: moniker-end    
-
+::: moniker-end
 
 ::: moniker range="tfs-2015"
+
 <table>
 <tr valign="bottom">
 <th width="41%">Task</th>
@@ -238,10 +236,10 @@ ms.topic: include
 </tbody>
 </table>
 
-::: moniker-end    
-
+::: moniker-end
 
 ::: moniker range="tfs-2013"
+
 <table>
 <tr valign="bottom">
 <th width="41%">Task</th>
@@ -297,7 +295,4 @@ ms.topic: include
 </tbody>
 </table>
 
-::: moniker-end    
-
-
-
+::: moniker-end

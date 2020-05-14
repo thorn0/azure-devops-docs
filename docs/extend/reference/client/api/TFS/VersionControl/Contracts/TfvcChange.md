@@ -17,7 +17,6 @@ Extends: [Change](../../../TFS/VersionControl/Contracts/Change.md)&lt;[TfvcItem]
 
 ### Members
 
-* `mergeSources`: [TfvcMergeSource](../../../TFS/VersionControl/Contracts/TfvcMergeSource.md)[]. List of merge sources in case of rename or branch creation.
+- `mergeSources`: [TfvcMergeSource](../../../TFS/VersionControl/Contracts/TfvcMergeSource.md)[]. List of merge sources in case of rename or branch creation.
 
-* `pendingVersion`: number. Version at which a (shelved) change was pended against
-
+- `pendingVersion`: number. Version at which a (shelved) change was pended against

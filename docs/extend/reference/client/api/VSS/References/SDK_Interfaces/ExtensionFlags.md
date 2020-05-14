@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -17,7 +17,6 @@ Defined in vss.d.ts
 
 ### Values
 
-* `BuiltIn` A built-in extension is installed for all Azure DevOps Services organizations by default
+- `BuiltIn` A built-in extension is installed for all Azure DevOps Services organizations by default
 
-* `Trusted` The extension comes from a fully-trusted publisher
-
+- `Trusted` The extension comes from a fully-trusted publisher

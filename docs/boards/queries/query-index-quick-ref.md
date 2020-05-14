@@ -1,28 +1,28 @@
 ---
-title: Look up definitions and sample queries 
+title: Look up definitions and sample queries
 titleSuffix: Azure Boards
-description: Index to query operators, macros, and sample queries used to list work items for Azure Boards, Azure DevOps, & Team Foundation Server 
+description: Index to query operators, macros, and sample queries used to list work items for Azure Boards, Azure DevOps, & Team Foundation Server
 ms.custom: boards-queries
 ms.technology: devops-agile
-ms.assetid:  
-ms.topic: reference  
+ms.assetid:
+ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 10/02/2019
 ---
 
-# Query quick reference 
+# Query quick reference
 
 [!INCLUDE [temp](../includes/version-vsts-tfs-all-versions.md)]
 
-Use this index to quickly access information on query editor tasks, operators available based on data type, and access sample queries. 
+Use this index to quickly access information on query editor tasks, operators available based on data type, and access sample queries.
 
-For the mechanics of constructing and saving queries, see [Use the query editor to list and manage queries](using-queries.md). If you find that your queries take too long to return results, review the [Guidance to create high-performing queries](high-performing-queries.md).  
+For the mechanics of constructing and saving queries, see [Use the query editor to list and manage queries](using-queries.md). If you find that your queries take too long to return results, review the [Guidance to create high-performing queries](high-performing-queries.md).
 
-For specific examples, choose one of the following articles listed under [Query samples for select fields](#samples).  
+For specific examples, choose one of the following articles listed under [Query samples for select fields](#samples).
 
-## Query tasks 
+## Query tasks
 
 <table valign="top">
 <tbody valign="top">
@@ -154,26 +154,24 @@ The following table indicates the operators and macros available for the differe
 </tbody>
 </table>
 
- 
-#### Notes:  
+#### Notes:
 
-1. The **Boolean** data type field is supported for TFS 2017 and later versions.  
-2. The **picklist...** data types are only assigned to custom fields defined for an inherited process. The Inherited process model is only supported for Azure DevOps Services and Azure DevOps Server 2019. 
+1. The **Boolean** data type field is supported for TFS 2017 and later versions.
+2. The **picklist...** data types are only assigned to custom fields defined for an inherited process. The Inherited process model is only supported for Azure DevOps Services and Azure DevOps Server 2019.
 3. The **Is Empty** and **Is Not Empty** operators are supported for Azure DevOps Server 2019 RC2 and later versions.
 4. The <strong>@Follows</strong> macro is supported for TFS 2017 and later versions.
 5. The <strong>@MyRecentActivity</strong>, <strong>@RecentMentions</strong>, <strong>@RecentProjectActivity</strong> macros are supported for Azure Boards and TFS 2018.2 and later versions.
 6. The <strong>@RecentProjectActivity</strong> macro is supported for Azure Boards only at this time.
-7. The <strong>@Project</strong> macro is supported for TFS 2015.1 and later versions. The system automatically defaults to filtering based on the current project. To learn more, see [Query across projects](using-queries.md#across-projects). 
+7. The <strong>@Project</strong> macro is supported for TFS 2015.1 and later versions. The system automatically defaults to filtering based on the current project. To learn more, see [Query across projects](using-queries.md#across-projects).
 8. The <strong>@TeamAreas</strong> macro is supported for Azure Boards and Azure DevOps Server 2019 and later versions.
-9. The <strong>@CurrentIteration</strong> macro is supported for TFS 2015 and later versions, and only when run from the web portal. 
-11. The **@CurrentIteration +/- n** macro is supported for Azure Boards and Azure DevOps Server 2019 and later versions, and only when run from the web portal. 
-
+9. The <strong>@CurrentIteration</strong> macro is supported for TFS 2015 and later versions, and only when run from the web portal.
+10. The **@CurrentIteration +/- n** macro is supported for Azure Boards and Azure DevOps Server 2019 and later versions, and only when run from the web portal.
 
 <a id="samples" />
 
-## Query samples for select fields 
+## Query samples for select fields
 
-The following table lists common query fields and their data type for which sample queries are provided. To determine the data type of a field, see [Work item fields and attributes, List field attributes](../work-items/work-item-fields.md).  
+The following table lists common query fields and their data type for which sample queries are provided. To determine the data type of a field, see [Work item fields and attributes, List field attributes](../work-items/work-item-fields.md).
 
 <table>
 <tbody valign="top">
@@ -282,16 +280,14 @@ The following table lists common query fields and their data type for which samp
 </tbody>
 </table>
 
-
 **Notes:**
 
-1. The <strong>Comment Count</strong> field is supported for TFS 2017 and later versions. 
-
+1. The <strong>Comment Count</strong> field is supported for TFS 2017 and later versions.
 
 ## Related articles
 
-- [Query by field value comparisons](query-field-value.md) 
+- [Query by field value comparisons](query-field-value.md)
 - [Guidance to create high-performing queries](high-performing-queries.md)
-- [Use categories to group work item types](../../reference/xml/use-categories-to-group-work-item-types.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json)  
-- [Define a managed query](using-queries.md) 
-- [Work item field index](../work-items/guidance/work-item-field.md) 
+- [Use categories to group work item types](../../reference/xml/use-categories-to-group-work-item-types.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json)
+- [Define a managed query](using-queries.md)
+- [Work item field index](../work-items/guidance/work-item-field.md)

@@ -35,13 +35,13 @@ You can configure the `path` setting in the [Checkout](../../yaml-schema.md#chec
 
 ```yaml
 steps:
-- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
-  clean: boolean  # whether to fetch clean each time
-  fetchDepth: number  # the depth of commits to ask Git to fetch
-  lfs: boolean  # whether to download Git-LFS files
-  submodules: true | recursive  # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
-  path: string  # path to check out source code, relative to the agent's build directory (e.g. \_work\1)
-  persistCredentials: boolean  # set to 'true' to leave the OAuth token in the Git config after the initial fetch
+  - checkout: self # self represents the repo where the initial Pipelines YAML file was found
+    clean: boolean # whether to fetch clean each time
+    fetchDepth: number # the depth of commits to ask Git to fetch
+    lfs: boolean # whether to download Git-LFS files
+    submodules: true | recursive # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
+    path: string # path to check out source code, relative to the agent's build directory (e.g. \_work\1)
+    persistCredentials: boolean # set to 'true' to leave the OAuth token in the Git config after the initial fetch
 ```
 
 # [Classic](#tab/classic/)
@@ -58,13 +58,13 @@ You can configure the `submodules` setting in the [Checkout](../../yaml-schema.m
 
 ```yaml
 steps:
-- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
-  clean: boolean  # whether to fetch clean each time
-  fetchDepth: number  # the depth of commits to ask Git to fetch
-  lfs: boolean  # whether to download Git-LFS files
-  submodules: true | recursive  # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
-  path: string  # path to check out source code, relative to the agent's build directory (e.g. \_work\1)
-  persistCredentials: boolean  # set to 'true' to leave the OAuth token in the Git config after the initial fetch
+  - checkout: self # self represents the repo where the initial Pipelines YAML file was found
+    clean: boolean # whether to fetch clean each time
+    fetchDepth: number # the depth of commits to ask Git to fetch
+    lfs: boolean # whether to download Git-LFS files
+    submodules: true | recursive # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
+    path: string # path to check out source code, relative to the agent's build directory (e.g. \_work\1)
+    persistCredentials: boolean # set to 'true' to leave the OAuth token in the Git config after the initial fetch
 ```
 
 # [Classic](#tab/classic/)
@@ -77,20 +77,21 @@ You can configure the **Submodules** setting from the properties of the **Get so
 
 The build pipeline will check out your Git submodules as long as they are:
 
-* **Unauthenticated:**  A public, unauthenticated repo with no credentials required to clone or fetch.
+- **Unauthenticated:** A public, unauthenticated repo with no credentials required to clone or fetch.
 
-* **Authenticated:** 
+- **Authenticated:**
 
-  - Contained in the same project as the Azure Repos Git repo specified above.  The same credentials that are used by the agent to get the sources from the main repository are also used to get the sources for submodules.
+  - Contained in the same project as the Azure Repos Git repo specified above. The same credentials that are used by the agent to get the sources from the main repository are also used to get the sources for submodules.
 
   - Added by using a URL relative to the main repository. For example
-    - This one would be checked out:
-     `git submodule add ../../../FabrikamFiberProject/_git/FabrikamFiber FabrikamFiber` 
 
-      In this example the submodule refers to a repo (FabrikamFiber) in the same Azure DevOps organization, but in a different project (FabrikamFiberProject).  The same credentials that are used by the agent to get the sources from the main repository are also used to get the sources for submodules. This requires that the job access token has access to the repository in the second project. If you restricted the job access token as explained in the section above, then you won't be able to do this.
+    - This one would be checked out:
+      `git submodule add ../../../FabrikamFiberProject/_git/FabrikamFiber FabrikamFiber`
+
+      In this example the submodule refers to a repo (FabrikamFiber) in the same Azure DevOps organization, but in a different project (FabrikamFiberProject). The same credentials that are used by the agent to get the sources from the main repository are also used to get the sources for submodules. This requires that the job access token has access to the repository in the second project. If you restricted the job access token as explained in the section above, then you won't be able to do this.
 
     - This one would not be checked out:
-     `git submodule add https://fabrikam-fiber@dev.azure.com/fabrikam-fiber/FabrikamFiberProject/_git/FabrikamFiber FabrikamFiber`
+      `git submodule add https://fabrikam-fiber@dev.azure.com/fabrikam-fiber/FabrikamFiberProject/_git/FabrikamFiber FabrikamFiber`
 
 #### Alternative to using the Checkout submodules option
 
@@ -112,8 +113,7 @@ Be sure to replace "<BASIC_AUTH_TOKEN>" with your Base64-encoded token.
 Use a secret variable in your project or build pipeline to store the basic auth token that you generated.
 Use that variable to populate the secret in the above Git command.
 
-> [!NOTE]
-> **Q: Why can't I use a Git credential manager on the agent?** **A:** Storing the submodule credentials in a Git credential manager installed on your private build agent is usually not effective as the credential manager may prompt you to re-enter the credentials whenever the submodule is updated. This isn't desirable during automated builds when user interaction isn't possible.
+> [!NOTE] > **Q: Why can't I use a Git credential manager on the agent?** **A:** Storing the submodule credentials in a Git credential manager installed on your private build agent is usually not effective as the credential manager may prompt you to re-enter the credentials whenever the submodule is updated. This isn't desirable during automated builds when user interaction isn't possible.
 
 ### Shallow fetch
 
@@ -125,13 +125,13 @@ You can configure the `fetchDepth` setting in the [Checkout](../../yaml-schema.m
 
 ```yaml
 steps:
-- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
-  clean: boolean  # whether to fetch clean each time
-  fetchDepth: number  # the depth of commits to ask Git to fetch
-  lfs: boolean  # whether to download Git-LFS files
-  submodules: true | recursive  # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
-  path: string  # path to check out source code, relative to the agent's build directory (e.g. \_work\1)
-  persistCredentials: boolean  # set to 'true' to leave the OAuth token in the Git config after the initial fetch
+  - checkout: self # self represents the repo where the initial Pipelines YAML file was found
+    clean: boolean # whether to fetch clean each time
+    fetchDepth: number # the depth of commits to ask Git to fetch
+    lfs: boolean # whether to download Git-LFS files
+    submodules: true | recursive # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
+    path: string # path to check out source code, relative to the agent's build directory (e.g. \_work\1)
+    persistCredentials: boolean # set to 'true' to leave the OAuth token in the Git config after the initial fetch
 ```
 
 # [Classic](#tab/classic/)
@@ -155,9 +155,9 @@ In these cases this option can help you conserve network and storage resources. 
 
 You may want to skip fetching new commits. This option can be useful in cases when you want to:
 
-* Git init, config, and fetch using your own custom options.
+- Git init, config, and fetch using your own custom options.
 
-* Use a build pipeline to just run automation (for example some scripts) that do not depend on code in version control.
+- Use a build pipeline to just run automation (for example some scripts) that do not depend on code in version control.
 
 # [YAML](#tab/yaml/)
 
@@ -165,7 +165,7 @@ You can configure the **Don't sync sources** setting in the [Checkout](../../yam
 
 ```yaml
 steps:
-- checkout: none  # Don't sync sources
+  - checkout: none # Don't sync sources
 ```
 
 # [Classic](#tab/classic/)
@@ -192,23 +192,23 @@ You can configure the `clean` setting in the [Checkout](../../yaml-schema.md#che
 
 ```yaml
 steps:
-- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
-  clean: boolean  # whether to fetch clean each time
-  fetchDepth: number  # the depth of commits to ask Git to fetch
-  lfs: boolean  # whether to download Git-LFS files
-  submodules: true | recursive  # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
-  path: string  # path to check out source code, relative to the agent's build directory (e.g. \_work\1)
-  persistCredentials: boolean  # set to 'true' to leave the OAuth token in the Git config after the initial fetch
+  - checkout: self # self represents the repo where the initial Pipelines YAML file was found
+    clean: boolean # whether to fetch clean each time
+    fetchDepth: number # the depth of commits to ask Git to fetch
+    lfs: boolean # whether to download Git-LFS files
+    submodules: true | recursive # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
+    path: string # path to check out source code, relative to the agent's build directory (e.g. \_work\1)
+    persistCredentials: boolean # set to 'true' to leave the OAuth token in the Git config after the initial fetch
 ```
 
 When `clean` is set to `true` the build pipeline performs an undo of any changes in `$(Build.SourcesDirectory)`. More specifically, the following Git commands are executed prior to fetching the source.
 
- ```
- git clean -ffdx
- git reset --hard HEAD
- ```
+```
+git clean -ffdx
+git reset --hard HEAD
+```
 
-For more options, you can configure the `workspace` setting of a [Job](../../yaml-schema.md#job). 
+For more options, you can configure the `workspace` setting of a [Job](../../yaml-schema.md#job).
 
 ```yaml
 jobs:
@@ -220,11 +220,11 @@ jobs:
 
 This gives the following clean options.
 
-* **outputs**: Same operation as the clean setting described in the previous the checkout task, plus: Deletes and recreates `$(Build.BinariesDirectory)`. Note that the `$(Build.ArtifactStagingDirectory)` and `$(Common.TestResultsDirectory)` are always deleted and recreated prior to every build regardless of any of these settings.
+- **outputs**: Same operation as the clean setting described in the previous the checkout task, plus: Deletes and recreates `$(Build.BinariesDirectory)`. Note that the `$(Build.ArtifactStagingDirectory)` and `$(Common.TestResultsDirectory)` are always deleted and recreated prior to every build regardless of any of these settings.
 
-* **resources**: Deletes and recreates `$(Build.SourcesDirectory)`. This results in initializing a new, local Git repository for every build.
+- **resources**: Deletes and recreates `$(Build.SourcesDirectory)`. This results in initializing a new, local Git repository for every build.
 
-* **all**: Deletes and recreates `$(Agent.BuildDirectory)`. This results in initializing a new, local Git repository for every build.
+- **all**: Deletes and recreates `$(Agent.BuildDirectory)`. This results in initializing a new, local Git repository for every build.
 
 # [Classic](#tab/classic/)
 
@@ -232,17 +232,18 @@ Select the **Clean** setting from the properties of the **Get sources** task in 
 
 ![GitHub options](../media/github/github-clean-sources.png)
 
-* **Sources**: The build pipeline performs an undo of any changes in `$(Build.SourcesDirectory)`. More specifically, the following Git commands are executed prior to fetching the source.
+- **Sources**: The build pipeline performs an undo of any changes in `$(Build.SourcesDirectory)`. More specifically, the following Git commands are executed prior to fetching the source.
+
   ```
   git clean -ffdx
   git reset --hard HEAD
   ```
 
-* **Sources and output directory**: Same operation as **Sources** option above, plus: Deletes and recreates `$(Build.BinariesDirectory)`. Note that the `$(Build.ArtifactStagingDirectory)` and `$(Common.TestResultsDirectory)` are always deleted and recreated prior to every build regardless of any of these settings.
+- **Sources and output directory**: Same operation as **Sources** option above, plus: Deletes and recreates `$(Build.BinariesDirectory)`. Note that the `$(Build.ArtifactStagingDirectory)` and `$(Common.TestResultsDirectory)` are always deleted and recreated prior to every build regardless of any of these settings.
 
-* **Sources directory**: Deletes and recreates `$(Build.SourcesDirectory)`. This results in initializing a new, local Git repository for every build.
+- **Sources directory**: Deletes and recreates `$(Build.SourcesDirectory)`. This results in initializing a new, local Git repository for every build.
 
-* **All build directories**: Deletes and recreates `$(Agent.BuildDirectory)`. This results in initializing a new, local Git repository for every build.
+- **All build directories**: Deletes and recreates `$(Agent.BuildDirectory)`. This results in initializing a new, local Git repository for every build.
 
 ---
 

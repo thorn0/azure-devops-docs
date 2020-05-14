@@ -18,9 +18,8 @@ Extends: [BuildLogReference](./BuildLogReference.md)
 
 ### Members
 
-* `createdOn`: Date. The date the log was created.
+- `createdOn`: Date. The date the log was created.
 
-* `lastChangedOn`: Date. The date the log was last changed.
+- `lastChangedOn`: Date. The date the log was last changed.
 
-* `lineCount`: number. The number of lines in the log.
-
+- `lineCount`: number. The number of lines in the log.

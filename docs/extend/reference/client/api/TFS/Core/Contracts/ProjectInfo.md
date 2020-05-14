@@ -14,26 +14,24 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Core/Contracts`
 
-
 ### Members
 
-* `abbreviation`: string. 
+- `abbreviation`: string.
 
-* `description`: string. 
+- `description`: string.
 
-* `id`: string. 
+- `id`: string.
 
-* `lastUpdateTime`: Date. 
+- `lastUpdateTime`: Date.
 
-* `name`: string. 
+- `name`: string.
 
-* `properties`: [ProjectProperty](../../../TFS/Core/Contracts/ProjectProperty.md)[]. 
+- `properties`: [ProjectProperty](../../../TFS/Core/Contracts/ProjectProperty.md)[].
 
-* `revision`: number. Current revision of the project
+- `revision`: number. Current revision of the project
 
-* `state`: any. 
+- `state`: any.
 
-* `uri`: string. 
+- `uri`: string.
 
-* `version`: number. 
-
+- `version`: number.

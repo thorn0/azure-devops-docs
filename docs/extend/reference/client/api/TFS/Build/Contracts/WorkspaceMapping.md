@@ -14,18 +14,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `definitionUri`: string. Uri of the associated definition
+- `definitionUri`: string. Uri of the associated definition
 
-* `depth`: number. Depth of this mapping
+- `depth`: number. Depth of this mapping
 
-* `localItem`: string. local location of the definition
+- `localItem`: string. local location of the definition
 
-* `mappingType`: [WorkspaceMappingType](./WorkspaceMappingType.md). type of workspace mapping
+- `mappingType`: [WorkspaceMappingType](./WorkspaceMappingType.md). type of workspace mapping
 
-* `serverItem`: string. Server location of the definition
+- `serverItem`: string. Server location of the definition
 
-* `workspaceId`: number. ID of the workspace
-
+- `workspaceId`: number. ID of the workspace

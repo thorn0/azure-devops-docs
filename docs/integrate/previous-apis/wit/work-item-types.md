@@ -1,8 +1,8 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Work Item Types | REST API Reference for Team Foundation Server
-description: Work with work item types programmatically using the REST APIs for Team Foundation Server. 
+description: Work with work item types programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: C58D078F-9310-4BE9-95A5-715CB70370FD
 ms.topic: article
 ms.author: chcomley
@@ -19,19 +19,22 @@ ms.date: 08/04/2016
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get a list of work item types
+
 <a name="getalistofworkitemtypes" />
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/wit/workItemTypes?api-version={version}
 ```
 
-| Property  	| Type 		| Description 
-|:--------------|:----------|:---------------------------
+| Property | Type | Description |
+| :------- | :--- | :---------- |
+
+
 | URL
-| instance      | string    | TFS server name ({server:port}).
-| project 		| string 	| Name or ID of a project that contains the work item types
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of a project that contains the work item types
 | Query
-| api-version   | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -236,15 +239,11 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workItemT
           },
           {
             "to": "Done",
-            "actions": [
-              "Microsoft.VSTS.Actions.Checkin"
-            ]
+            "actions": ["Microsoft.VSTS.Actions.Checkin"]
           },
           {
             "to": "To Do",
-            "actions": [
-              "Microsoft.VSTS.Actions.StopWork"
-            ]
+            "actions": ["Microsoft.VSTS.Actions.StopWork"]
           }
         ],
         "To Do": [
@@ -256,15 +255,11 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workItemT
           },
           {
             "to": "Done",
-            "actions": [
-              "Microsoft.VSTS.Actions.Checkin"
-            ]
+            "actions": ["Microsoft.VSTS.Actions.Checkin"]
           },
           {
             "to": "In Progress",
-            "actions": [
-              "Microsoft.VSTS.Actions.StartWork"
-            ]
+            "actions": ["Microsoft.VSTS.Actions.StartWork"]
           }
         ],
         "Done": [
@@ -1004,9 +999,7 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workItemT
           },
           {
             "to": "Accepted",
-            "actions": [
-              "Microsoft.VSTS.CodeReview.Accept"
-            ]
+            "actions": ["Microsoft.VSTS.CodeReview.Accept"]
           },
           {
             "to": "Closed",
@@ -1035,9 +1028,7 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workItemT
           },
           {
             "to": "Requested",
-            "actions": [
-              "Microsoft.VSTS.CodeReview.Reassign"
-            ]
+            "actions": ["Microsoft.VSTS.CodeReview.Reassign"]
           }
         ],
         "": [
@@ -3308,20 +3299,22 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workItemT
 }
 ```
 
-
 ## Get a work item type
+
 <a name="getaworkitemtype" />
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/wit/workItemTypes/{name}?api-version={version}
 ```
 
-| Property | Type   | Description |
-|:---------|:-------|:---------------------------
+| Property | Type | Description |
+| :------- | :--- | :---------- |
+
+
 | URL
-| instance | string	| TFS server name ({server:port}).
-| project  | string | Name or ID of a project that contains the work item types
-| name 	   | string | Name of the work item type
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of a project that contains the work item types
+| name | string | Name of the work item type
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -3615,4 +3608,3 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workItemT
   "url": "https://mytfsserver/DefaultCollection/6ce954b1-ce1f-45d1-b94d-e6bf2464ba2c/_apis/wit/workItemTypes/Bug"
 }
 ```
-

@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Git Pull Request Iterations | REST API Reference for Team Foundation Server
 description: Work with Git pull requests programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: EF349F15-C2BD-4338-9DB8-3FF7DECC5801
@@ -20,8 +20,8 @@ ms.date: 11/3/2016
 
 [!INCLUDE [GET_STARTED](../../_data/get-started.md)]
 
-Iterations contain the history of the pull request.  Every time commits are pushed to the source branch and when the pull
-request is created, an iteration is created.  Each iteration can contain more than one commit.
+Iterations contain the history of the pull request. Every time commits are pushed to the source branch and when the pull
+request is created, an iteration is created. Each iteration can contain more than one commit.
 
 ## Get a list of iterations
 
@@ -29,15 +29,17 @@ request is created, an iteration is created.  Each iteration can contain more th
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pullRequests/{pullRequest}/iterations?api-version={version}
 ```
 
-| Parameter   | Type    | Notes
-|:------------|:--------|:---------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string  | TFS server name ({server:port}).
-| project     | string  | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository  | string  | ID of the [repository](../repositories.md).
+| instance | string | TFS server name ({server:port}).
+| project | string | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | ID of the [repository](../repositories.md).
 | pullRequest | integer | ID of the pull request.
 | Query
-| api-version | string  | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
 
 [!INCLUDE [ID_vs_Name](../_data/id_or_name.md)]
 
@@ -106,24 +108,24 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-4
 }
 ```
 
-
 ## Get a specific iteration
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pullRequests/{pullRequest}/iterations/{iterationId}?api-version={version}
 ```
 
-| Parameter   | Type    | Notes
-|:------------|:--------|:---------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string  | TFS server name ({server:port}).
-| project     | string  | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository  | string  | ID of the [repository](../repositories.md).
+| instance | string | TFS server name ({server:port}).
+| project | string | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | ID of the [repository](../repositories.md).
 | pullRequest | integer | ID of the pull request.
 | iterationId | integer | ID of the iteration.
 | Query
-| api-version | string  | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
-
+| api-version | string | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -170,23 +172,24 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-4
 }
 ```
 
-
 ## Get the commits for an iteration
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pullRequests/{pullRequest}/iterations/{iterationId}/commits?api-version={version}
 ```
 
-| Parameter   | Type    | Notes
-|:------------|:--------|:---------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string  | TFS server name ({server:port}).
-| project     | string  | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository  | string  | ID of the [repository](../repositories.md).
+| instance | string | TFS server name ({server:port}).
+| project | string | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | ID of the [repository](../repositories.md).
 | pullRequest | integer | ID of the pull request.
 | iterationId | integer | ID of the iteration.
 | Query
-| api-version | string  | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -249,26 +252,27 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-4
 }
 ```
 
-
 ## Get the changes in the pull request at an iteration
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pullRequests/{pullRequest}/iterations/{iterationId}/changes?$top={top};$skip={skip};$compareTo={compareTo};api-version={version}
 ```
 
-| Parameter   | Type    | Notes
-|:------------|:--------|:---------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string  | TFS server name ({server:port}).
-| project     | string  | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository  | string  | ID of the [repository](../repositories.md).
+| instance | string | TFS server name ({server:port}).
+| project | string | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | ID of the [repository](../repositories.md).
 | pullRequest | integer | ID of the pull request.
 | iterationId | integer | ID of the iteration.
 | Query
-| top         | integer | the number of changes to retrieve
-| skip        | integer | the number of changes to ignore
-| compareTo   | integer | ID of an iteration to compare against.  If not specified, the iteration is compared against the common commit with the target branch of the pull request.
-| api-version | string  | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
+| top | integer | the number of changes to retrieve
+| skip | integer | the number of changes to ignore
+| compareTo | integer | ID of an iteration to compare against. If not specified, the iteration is compared against the common commit with the target branch of the pull request.
+| api-version | string | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -303,7 +307,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-4
 }
 ```
 
-
 ### Get the changes in an iteration compared to another iteration
 
 #### Sample request
@@ -330,4 +333,3 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-4
   ]
 }
 ```
-

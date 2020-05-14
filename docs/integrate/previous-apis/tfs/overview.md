@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Projects and Teams Overview | REST API Reference for Team Foundation Server
 description: Work with teams, projects, and project collections programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 2FFBCD08-28E6-4EB4-86E4-557E416E4380
@@ -14,21 +14,20 @@ ms.date: 08/04/2016
 
 [!INCLUDE [azure-devops](../_data/azure-devops-message.md)]
 
-
 A VSTS organization has one or more [projects](./projects.md). Each project has one or more [teams](./teams.md) that contribute to that project.
 
 ![Project and team resources](./media/projects-and-teams.png)
 
-* [Project Collections](./project-collections.md)
-* [Projects](./projects.md)
-* [Teams](./teams.md)
-* [Processes](./processes.md)
+- [Project Collections](./project-collections.md)
+- [Projects](./projects.md)
+- [Teams](./teams.md)
+- [Processes](./processes.md)
 
 ## Common tasks
 
 ### Get a list of projects
 
-Get the [projects](./projects.md) in the organization. 
+Get the [projects](./projects.md) in the organization.
 
 ### Get a project's source control provider
 
@@ -55,14 +54,13 @@ Projects can be updated:
 
 1. Update the project [description](./projects.md#UpdateDescription) or [name](./projects.md#UpdateName)
 2. The update is asynchronous, so use the returned [operation](./projects.md#GetOperation)
-to get the status of the update.
+   to get the status of the update.
 
 An operation can be in one of the following states:
 
-| State Name    | Explanation
-|:--------------|:-----------------
-| Queued           | Project update has been queued to run. 
-| InProgress | Project update currently being executed. 
-| Succeeded      | Project update was successfully completed. 
-| Failed    | Project updated did not succeed. 
-
+| State Name | Explanation                                |
+| :--------- | :----------------------------------------- |
+| Queued     | Project update has been queued to run.     |
+| InProgress | Project update currently being executed.   |
+| Succeeded  | Project update was successfully completed. |
+| Failed     | Project updated did not succeed.           |

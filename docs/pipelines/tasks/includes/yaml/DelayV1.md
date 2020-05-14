@@ -16,5 +16,5 @@ jobs:
   steps:
   - task: Delay@1
     inputs:
-      #delayForMinutes: '0' 
+      #delayForMinutes: '0'
 ```

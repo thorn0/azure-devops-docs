@@ -2,12 +2,11 @@
 ms.topic: include
 ---
 
-
-::: moniker range="azure-devops"  
+::: moniker range="azure-devops"
 
 ### Add work item
 
-You can add a new work item with the [az boards work-item create](/cli/azure/ext/azure-devops/boards/work-item#ext-azure-devops-az-boards-work-item-create) command. To get started, see [Get started with Azure DevOps CLI](/azure/devops/cli/index). 
+You can add a new work item with the [az boards work-item create](/cli/azure/ext/azure-devops/boards/work-item#ext-azure-devops-az-boards-work-item-create) command. To get started, see [Get started with Azure DevOps CLI](/azure/devops/cli/index).
 
 ```CLI
 az boards work-item create --title
@@ -27,16 +26,16 @@ az boards work-item create --title
 #### Parameters
 
 - **title**: Title of the work item.
-- **type**: Type of work item (for example, *Bug*).
+- **type**: Type of work item (for example, _Bug_).
 
 #### Optional parameters
 
-- **area**: Area the work item is assigned to (for example, *Demos*).
-- **assigned-to**: Name of the person the work item is assigned-to (for example, *fabrikam*).
+- **area**: Area the work item is assigned to (for example, _Demos_).
+- **assigned-to**: Name of the person the work item is assigned-to (for example, _fabrikam_).
 - **description**: Description of the work item.
 - **discussion**: Comment to add to a discussion in a work item.
 - **fields**: Space separated `field=value` pairs for custom fields you would like to set.
-- **iteration**: Iteration path of the work item (for example, *DemosIteration 1*).
+- **iteration**: Iteration path of the work item (for example, _DemosIteration 1_).
 - **open**: Open the work item in the default web browser.
 - **org**: Azure DevOps organization URL. You can configure the default organization using `az devops configure -d organization=ORG_URL`. Required if not configured as default or picked up using `git config`. Example: `--org https://dev.azure.com/MyOrganizationName/`.
 - **project**: Name or ID of the project. You can configure the default project using `az devops configure -d project=NAME_OR_ID`. Required if not configured as default or picked up using `git config`.

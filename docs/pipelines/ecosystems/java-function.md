@@ -4,7 +4,7 @@ description: Learn about continuous integration and deployment (CI/CD) to a Java
 ms.topic: tutorial
 ms.assetid: 3156B628-1DEA-4F92-84E5-6C3E18B4DAC1
 ms.date: 1/8/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Build and deploy Java to Azure Functions
@@ -78,13 +78,13 @@ After the pipeline has run, select the vertical ellipses in the upper-right corn
   displayName: Copy Files
   inputs:
     SourceFolder: $(system.defaultworkingdirectory)/target/azure-functions/
-    Contents: '**'
-    TargetFolder: $(build.artifactstagingdirectory)   
+    Contents: "**"
+    TargetFolder: $(build.artifactstagingdirectory)
 
 - task: PublishBuildArtifacts@1
   displayName: Publish Artifact
   inputs:
-    PathtoPublish: $(build.artifactstagingdirectory)    
+    PathtoPublish: $(build.artifactstagingdirectory)
 
 - task: AzureFunctionApp@1
   displayName: Azure Function App deploy

@@ -1,7 +1,7 @@
 ---
 title: All WITD XML elements reference
 titleSuffix: Azure DevOps & TFS
-description: Index to XML syntax elements and main attributes for work item tracking for Team Foundation Server 
+description: Index to XML syntax elements and main attributes for work item tracking for Team Foundation Server
 ms.technology: devops-agile
 ms.assetid: d125917c-9e67-49e6-8274-8b169e76639a
 ms.author: kaelli
@@ -12,39 +12,39 @@ ms.date: 02/14/2017
 
 # All WITD XML elements reference
 
-[!INCLUDE [temp](../../includes/customization-phase-0-and-1-plus-version-header.md)] 
+[!INCLUDE [temp](../../includes/customization-phase-0-and-1-plus-version-header.md)]
 
-You can customize an existing work item type (WIT) or create a WIT to meet your project tracking requirements. A WIT defines the fields, rules, and workflow states and transitions for an item of work that will be tracked for a project, such as a bug, requirement, or risk. You [create a project](../../organizations/projects/create-project.md) either in Azure DevOps Services or an on-premises Team Foundation Server (TFS).  
+You can customize an existing work item type (WIT) or create a WIT to meet your project tracking requirements. A WIT defines the fields, rules, and workflow states and transitions for an item of work that will be tracked for a project, such as a bug, requirement, or risk. You [create a project](../../organizations/projects/create-project.md) either in Azure DevOps Services or an on-premises Team Foundation Server (TFS).
 
- The root element in each definition of a WIT is the `WITD` element, which must have only one `WORKITEMTYPE` element defined. The name of each WIT must be unique in a project, and each type name must be no more than 128 Unicode characters long.  
+The root element in each definition of a WIT is the `WITD` element, which must have only one `WORKITEMTYPE` element defined. The name of each WIT must be unique in a project, and each type name must be no more than 128 Unicode characters long.
 
- To customize or create a WIT definition, you modify the type definition XML file. WITs are scoped to a project within a project collection.  
+To customize or create a WIT definition, you modify the type definition XML file. WITs are scoped to a project within a project collection.
 
-<a name="SyntaxStructure"></a> 
+<a name="SyntaxStructure"></a>
 
-##  WITD syntax structure  
+## WITD syntax structure
 
- The following example shows the high-level structure of a WIT definition.  
+The following example shows the high-level structure of a WIT definition.
 
 > [!div class="tabbedCodeSnippets"]
-> ```XML 
-> <witd:WITD application="Work item type editor" version="1.0" xmlns:witd="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typedef">  
->        <WORKITEMTYPE name="bug" refname="Microsoft.VSTS.WorkItemTypes.Bug">  
->           <DESCRIPTION> Describes a divergence between required and actual behavior, and tracks the work done to correct the defect and verify the correction.</DESCRIPTION>  
->           <GLOBALLISTS> . . . </GLOBALLISTS>  
->           <FIELDS> . . . </FIELDS>  
->           <WORKFLOW> . . . </WORKFLOW>  
->           <FORM> . . . </FORM>  
->        </WORKITEMTYPE>  
-> </witd:WITD>  
-> ```  
+>
+> ```XML
+> <witd:WITD application="Work item type editor" version="1.0" xmlns:witd="http://schemas.microsoft.com/VisualStudio/2008/workitemtracking/typedef">
+>        <WORKITEMTYPE name="bug" refname="Microsoft.VSTS.WorkItemTypes.Bug">
+>           <DESCRIPTION> Describes a divergence between required and actual behavior, and tracks the work done to correct the defect and verify the correction.</DESCRIPTION>
+>           <GLOBALLISTS> . . . </GLOBALLISTS>
+>           <FIELDS> . . . </FIELDS>
+>           <WORKFLOW> . . . </WORKFLOW>
+>           <FORM> . . . </FORM>
+>        </WORKITEMTYPE>
+> </witd:WITD>
+> ```
 
-<a name="ChildElements"></a> 
+<a name="ChildElements"></a>
 
-## WITD child elements  
+## WITD child elements
 
-The structural elements used in the previous example are described in the following table:  
-
+The structural elements used in the previous example are described in the following table:
 
 <table Responsive="true" summary="table">
 <tr Responsive="true">
@@ -126,29 +126,30 @@ The structural elements used in the previous example are described in the follow
 </tr>
 </table>
 
+<a name="PredefinedWITs"></a>
 
-<a name="PredefinedWITs"></a> 
+## Process template work item types
 
-## Process template work item types  
+Upon installing or upgrading an instance of an on-premises TFS, the [default process templates](../../boards/work-items/guidance/choose-process.md) are downloaded to the following directory:
 
-Upon installing or upgrading an instance of an on-premises TFS, the [default process templates](../../boards/work-items/guidance/choose-process.md) are downloaded to the following directory:  
+**For TFS 2017**:
 
-**For TFS 2017**: 
-```  
+```
 %programfiles%/TFS 15.0/Tools/Deploy/ProcessTemplateManagerFiles/1033
-```  
+```
 
-**For TFS 2015**: 
-```  
+**For TFS 2015**:
+
+```
 %programfiles%/TFS 14.0/Tools/Deploy/ProcessTemplateManagerFiles/1033
-```  
+```
 
-WIT definition files are stored in the WorkItem Tracking\TypeDefinitions folder.  
+WIT definition files are stored in the WorkItem Tracking\TypeDefinitions folder.
 
-To learn how to create or customize a WIT, see [Modify or add a custom work item type](../add-modify-wit.md).  
+To learn how to create or customize a WIT, see [Modify or add a custom work item type](../add-modify-wit.md).
 
-## Related articles 
+## Related articles
 
--  [Customize the work tracking experience](../customize-work.md)  
--  [witAdmin: Customize and manage objects for tracking work](../witadmin/witadmin-customize-and-manage-objects-for-tracking-work.md)  
--  [Naming restrictions, Work item tracking objects](../../organizations/settings/naming-restrictions.md)
+- [Customize the work tracking experience](../customize-work.md)
+- [witAdmin: Customize and manage objects for tracking work](../witadmin/witadmin-customize-and-manage-objects-for-tracking-work.md)
+- [Naming restrictions, Work item tracking objects](../../organizations/settings/naming-restrictions.md)

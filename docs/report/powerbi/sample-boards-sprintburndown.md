@@ -1,5 +1,5 @@
 ---
-title: Sprint Burndown sample Power BI report 
+title: Sprint Burndown sample Power BI report
 titleSuffix: Azure DevOps
 description: Sample Power BI queries to generate a Sprint Burndown report
 ms.technology: devops-analytics
@@ -8,7 +8,7 @@ ms.author: kaelli
 ms.custom: powerbisample
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ms.date: 08/07/2019
 ---
 
@@ -18,7 +18,7 @@ ms.date: 08/07/2019
 
 This article shows you how to display the current sprint's burndown of User Stories. The following example shows a burndown of both a sum of Story Points and a count of User Stories.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![sprint burndown by total story points and count of user stories](media/odatapowerbi-sprintburndown-report.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
@@ -49,7 +49,7 @@ let
             &"(DateValue,State,WorkItemType,Priority,Area/AreaPath,Iteration/IterationPath), "
             &"aggregate($count as Count, StoryPoints with sum as TotalStoryPoints) "
         &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -59,14 +59,14 @@ in
 [!INCLUDE [temp](includes/sample-odata-query.md)]
 
 ```
-https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot? 
+https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot?
         $apply=filter(
             WorkItemType eq 'User Story'
             and startswith(Area/AreaPath,'{areapath}')
             and StateCategory ne 'Completed'
             and DateValue ge Iteration/StartDate
             and DateValue le Iteration/EndDate
-            and Iteration/StartDate le now() 
+            and Iteration/StartDate le now()
             and Iteration/EndDate ge now()
         )
         /groupby(
@@ -75,16 +75,15 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-***
+---
 
 ### Substitution strings
 
 [!INCLUDE [temp](includes/sample-query-substitutions.md)]
-* {areapath} - Your Area Path. Example format: Project\Level1\Level2 
 
+- {areapath} - Your Area Path. Example format: Project\Level1\Level2
 
 ### Query breakdown
-
 
 The following table describes each part of the query.
 
@@ -107,35 +106,33 @@ The following table describes each part of the query.
 </tbody>
 </table>
 
-
 ## Power BI transforms
 
 [!INCLUDE [temp](includes/sample-expandcolumns.md)]
 
 [!INCLUDE [temp](includes/sample-finish-query.md)]
 
-
 ## Create the report
 
-Power BI shows you the fields you can report on. 
+Power BI shows you the fields you can report on.
 
-> [!NOTE]   
-> The example below assumes that no one renamed any columns. 
+> [!NOTE]  
+> The example below assumes that no one renamed any columns.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![Power BI + OData - expanding an entity column](media/odatapowerbi-sprintburndown-fields.png)
 
 For a simple report, do the following steps:
 
-1. Select Power BI Visualization **Clustered column chart**. 
+1. Select Power BI Visualization **Clustered column chart**.
 1. Add the field "DateValue" to **Axis**
-    - Right-click "DateValue" and select "DateValue", rather than Date Hierarchy
+   - Right-click "DateValue" and select "DateValue", rather than Date Hierarchy
 1. Add the field "TotalStoryPoints" to **Values**
 1. Add the field "Count" to **Values**
 
 The example report, which displays burndown on both Story Points and Count of Stories.
 
-> [!div class="mx-imgBorder"] 
+> [!div class="mx-imgBorder"]
 > ![sprint burndown by total story points and count of user stories](media/odatapowerbi-sprintburndown-report.png)
 
 [!INCLUDE [temp](includes/sample-multipleteams.md)]
@@ -146,7 +143,7 @@ You can use the following additional queries to create different but similar rep
 
 ### Filter by Teams, rather than Area Path
 
-This query is the same as the one used above, except it filters by Team Name rather than Area Path. 
+This query is the same as the one used above, except it filters by Team Name rather than Area Path.
 
 #### [Power BI query](#tab/powerbi/)
 
@@ -168,7 +165,7 @@ let
             &"(DateValue,State,WorkItemType,Priority,Area/AreaPath,Iteration/IterationPath), "
             &"aggregate($count as Count, StoryPoints with sum as TotalStoryPoints) "
         &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -178,14 +175,14 @@ in
 [!INCLUDE [temp](includes/sample-odata-query.md)]
 
 ```
-https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot? 
+https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot?
         $apply=filter(
             WorkItemType eq 'User Story'
             and (Teams/any(x:x/TeamName eq '{teamname}) or Teams/any(x:x/TeamName eq '{teamname}) or Teams/any(x:x/TeamName eq '{teamname})
             and StateCategory ne 'Completed'
             and DateValue ge Iteration/StartDate
             and DateValue le Iteration/EndDate
-            and Iteration/StartDate le now() 
+            and Iteration/StartDate le now()
             and Iteration/EndDate ge now()
         )
         /groupby(
@@ -194,7 +191,7 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-* * *
+---
 
 ### All Sprints since the beginning of the year
 
@@ -219,7 +216,7 @@ let
             &"(DateValue,Iteration/EndDate,Area/AreaPath,Iteration/IterationPath,State,WorkItemType,Priority,AreaSK), "
             &"aggregate($count as Count, StoryPoints with sum as TotalStoryPoints) "
         &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -229,7 +226,7 @@ in
 [!INCLUDE [temp](includes/sample-odata-query.md)]
 
 ```
-https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot? 
+https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot?
         $apply=filter(
             WorkItemType eq 'User Story'
             and startswith(Area/AreaPath,'{areapath}')
@@ -244,10 +241,9 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-* * *
+---
 
 <a id="remaining-work" />
-
 
 ### Burndown by Tasks' Remaining Work
 
@@ -272,7 +268,7 @@ let
             &"(DateValue,State,WorkItemType,Activity,Priority,Area/AreaPath,Iteration/IterationPath,AreaSK), "
             &"aggregate($count as Count, RemainingWork with sum as TotalRemainingWork) "
         &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -282,13 +278,13 @@ in
 [!INCLUDE [temp](includes/sample-odata-query.md)]
 
 ```
-https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot? 
+https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot?
         $apply=filter(
             startswith(Area/AreaPath,'{project}')
             and StateCategory ne 'Completed'
             and DateValue ge Iteration/StartDate
             and DateValue le Iteration/EndDate
-            and Iteration/StartDate le now() 
+            and Iteration/StartDate le now()
             and Iteration/EndDate ge now()
             and WorkItemType eq 'Task'
         )
@@ -298,7 +294,7 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-***
+---
 
 ## Full list of sample reports
 

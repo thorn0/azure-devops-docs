@@ -9,14 +9,15 @@ ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 03/11/2020
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Create and configure organization FAQs
 
 [!INCLUDE [temp](../../includes/version-vsts-tfs-all-versions.md)]
 
-In this article, learn the answers to frequently asked questions (FAQs) about creating and configuring an organization in Azure DevOps. FAQs are grouped by the following subjects: 
+In this article, learn the answers to frequently asked questions (FAQs) about creating and configuring an organization in Azure DevOps. FAQs are grouped by the following subjects:
+
 - [General](#general-organization-faqs)
 - [Create an organization](#create-organization-faqs)
 - [Configure an organization](#configure-organization-faqs)
@@ -34,13 +35,13 @@ For more information about user and permissions management, see [User and permis
 
 A: Azure DevOps is free for these users to join:
 
-* Five users who get [Basic features](https://visualstudio.microsoft.com/team-services/compare-features/), like version control and tools for Agile, Java, and build and release management. 
+- Five users who get [Basic features](https://visualstudio.microsoft.com/team-services/compare-features/), like version control and tools for Agile, Java, and build and release management.
 
-* Unlimited users who get [Stakeholder features](https://visualstudio.microsoft.com/team-services/compare-features/), like working with your backlog, work items, and queries.
+- Unlimited users who get [Stakeholder features](https://visualstudio.microsoft.com/team-services/compare-features/), like working with your backlog, work items, and queries.
 
-* Unlimited [Visual Studio subscribers](https://visualstudio.microsoft.com/team-services/compare-features/) who also get Basic features.
+- Unlimited [Visual Studio subscribers](https://visualstudio.microsoft.com/team-services/compare-features/) who also get Basic features.
 
-    [Learn what else you get with Azure DevOps](https://visualstudio.microsoft.com/team-services/pricing/).
+  [Learn what else you get with Azure DevOps](https://visualstudio.microsoft.com/team-services/pricing/).
 
 <a name="browser-problems"></a>
 
@@ -48,7 +49,7 @@ A: Azure DevOps is free for these users to join:
 
 A: This might happen if you're using an unsupported browser. For the best experience, make sure that you're using a [supported browser](/azure/devops/server/compatibility#supported-browsers).
 
-### Q:  Which Visual Studio subscriptions can I use with Azure DevOps?
+### Q: Which Visual Studio subscriptions can I use with Azure DevOps?
 
 A: [Find Visual Studio subscriptions that include Azure DevOps](faq-user-and-permissions-management.md#EligibleMSDNSubscriptions).
 
@@ -56,27 +57,29 @@ A: [Find Visual Studio subscriptions that include Azure DevOps](faq-user-and-per
 
 A: If you're a new user, you can change your profile details. Change your profile details only once.
 
-1.    Confirm your profile details.
+1.  Confirm your profile details.
+
 
     ![Confirm profile details](media/sign-up-visual-studio-team-services/create-profile-msa.png)
 
-2.    Continue creating your organization.
+2.  Continue creating your organization.
+
 
     ![Create your organization](media/sign-up-visual-studio-team-services/my-info-new-organization.png)
 
 <a name="organization-location"></a>
 
-### Q: How do I find the region where my organization is located? 
+### Q: How do I find the region where my organization is located?
 
 A: [Find your organization's region](/azure/devops/organizations/accounts/change-organization-location).
 
-### Q: How do I change my project name, organization location, or process? 
+### Q: How do I change my project name, organization location, or process?
 
-A: Change these when you sign up for your organization. 
+A: Change these when you sign up for your organization.
 
 ![Change organization details](/azure/devops/media/change-details-standard1.png)
 
-Azure DevOps uses Agile as the default [process](/azure/devops/boards/work-items/guidance/choose-process) to organize your work. Your organization's default location is based on the closest [Microsoft Azure region](https://azure.microsoft.com/regions) where Azure DevOps is available. For a better experience, select a location that's closest to most users in your organization. 
+Azure DevOps uses Agile as the default [process](/azure/devops/boards/work-items/guidance/choose-process) to organize your work. Your organization's default location is based on the closest [Microsoft Azure region](https://azure.microsoft.com/regions) where Azure DevOps is available. For a better experience, select a location that's closest to most users in your organization.
 
 If a new region or location opens later, you can [change your organization location or region](/azure/devops/organizations/accounts/change-organization-location). You can also select another process, like Scrum, if that works best for you.
 
@@ -90,13 +93,13 @@ If you connected your organization to Azure Active Directory but you belong to m
 
 ## Create an organization
 
-For more information, see [Plan your Azure DevOps organization structure](../../user-guide/plan-your-azure-devops-org-structure.md). 
+For more information, see [Plan your Azure DevOps organization structure](../../user-guide/plan-your-azure-devops-org-structure.md).
 
 ### Q: How many organizations can I create?
 
 A: You can [create multiple organizations](#create-another-organization). But instead of creating another organization, you might consider [creating another project](#another-team-project). Your organization can have unlimited private projects by using Git or Microsoft Team Foundation Version Control.
 
-There's no limit to the number of organizations that you can join.  
+There's no limit to the number of organizations that you can join.
 
 ### Q: Why are some features not available in my organization?
 
@@ -128,7 +131,7 @@ A: Yes, you can [delete a project](/azure/devops/organizations/projects/delete-p
 
 A: [Sign in to your Visual Studio profile](https://go.microsoft.com/fwlink/?LinkId=309329) to find your organization list.
 
-### Q: Can I delete an organization that I don't need anymore? 
+### Q: Can I delete an organization that I don't need anymore?
 
 A: Yes. See [Delete or recover your organization](/azure/devops/organizations/accounts/delete-your-organization).
 
@@ -140,15 +143,15 @@ A: Your choice of account type affects how you control access and authenticate u
 
 When you sign up with a Microsoft account:
 
-* You're solely responsible for managing access to your organization.
-* All users must sign in with Microsoft accounts.
+- You're solely responsible for managing access to your organization.
+- All users must sign in with Microsoft accounts.
 
 When you sign up with a work or school account:
 
-* Your organization is automatically connected to your directory in Azure Active Directory.
-* All users must be members in the connected directory to get access to your organization.
-* The directory administrator has control over who can join the directory.
-* You sign in with work or school accounts, or with Microsoft accounts if your company allows that.
+- Your organization is automatically connected to your directory in Azure Active Directory.
+- All users must be members in the connected directory to get access to your organization.
+- The directory administrator has control over who can join the directory.
+- You sign in with work or school accounts, or with Microsoft accounts if your company allows that.
 
 To [add users to the directory](/azure/active-directory/active-directory-create-users), you must be a directory administrator. If you can't access, work with your directory administrator to add users. Learn more about [work or school accounts for your organization](/azure/active-directory/sign-up-organization).
 
@@ -156,15 +159,15 @@ To [add users to the directory](/azure/active-directory/active-directory-create-
 
 ### Q: Can I change the directory after sign-in?
 
-A: Yes, see [Disconnect your organization from Azure Active Directory](disconnect-organization-from-azure-ad.md) and  [Connect your organization to Azure AD](connect-organization-to-azure-ad.md).
+A: Yes, see [Disconnect your organization from Azure Active Directory](disconnect-organization-from-azure-ad.md) and [Connect your organization to Azure AD](connect-organization-to-azure-ad.md).
 
 <a name="ChooseOrgAcctMSAcct"></a>
 
 [!INCLUDE [choose-msa-azuread-account](../../includes/qa-choose-msa-azuread-account.md)]
 
-* Choose **Work or school account** if you want to use your directory to authenticate users and control organization access. This option limits access to members in your organization's directory. In this case, all other users also must sign in with work or school accounts. 
+- Choose **Work or school account** if you want to use your directory to authenticate users and control organization access. This option limits access to members in your organization's directory. In this case, all other users also must sign in with work or school accounts.
 
-* Choose **Personal account** if you want to use your Microsoft account with Azure DevOps. In this case, all other users also must sign in with Microsoft accounts.
+- Choose **Personal account** if you want to use your Microsoft account with Azure DevOps. In this case, all other users also must sign in with Microsoft accounts.
 
 [!INCLUDE [why-cant-sign-in-msa-azuread-account](../../includes/qa-why-cant-sign-in-msa-azuread-account.md)]
 
@@ -184,7 +187,7 @@ A: You can find it here: [Azure DevOps SLA](https://azure.microsoft.com/support/
 
 ### Q: I'm having problems with my Visual Studio subscription. How can I get help?
 
-A: You can try [Subscription Support](https://visualstudio.microsoft.com/support/subscription-support-vs) or for more information, see [Set up Visual Studio FAQs](faq-set-up-vs.md). 
+A: You can try [Subscription Support](https://visualstudio.microsoft.com/support/subscription-support-vs) or for more information, see [Set up Visual Studio FAQs](faq-set-up-vs.md).
 
 ::: moniker range="azure-devops"
 
@@ -198,17 +201,17 @@ A: You can try [Subscription Support](https://visualstudio.microsoft.com/support
 
 A: You may not find the user for one of the following reasons:
 
-* The user isn't in your organization, or the user doesn't have organization access. Learn how to [add a user to your organization](add-organization-users.md).  
-* The user hasn't created a Visual Studio profile and agreed to the Terms of Service.  
-* If you recently added this person to your organization, you might experience a delay before the user appears in the possible organization owners list.  
-* If your organization uses Azure Active Directory to control access, directory members don't appear in the possible organization owners list until they meet the requirements. For more information, see [Access Azure AD FAQs](faq-azure-access.md).
+- The user isn't in your organization, or the user doesn't have organization access. Learn how to [add a user to your organization](add-organization-users.md).
+- The user hasn't created a Visual Studio profile and agreed to the Terms of Service.
+- If you recently added this person to your organization, you might experience a delay before the user appears in the possible organization owners list.
+- If your organization uses Azure Active Directory to control access, directory members don't appear in the possible organization owners list until they meet the requirements. For more information, see [Access Azure AD FAQs](faq-azure-access.md).
 
 ### Q: What if the owner of my organization has left the company/isn't active?
 
 A: Azure DevOps Administrators can claim ownership of organizations where the current owner and any members of the Project Collection Administrators group are inactive in the Azure AD tenant that's connected to your organization. For more information, see [Resolve inactive organization owner](resolve-orphaned-organization.md).
 
 ### Q: Can I change my organization Owner?
- 
+
 A: Yes. If you have at least Basic access, you can change the organization Owner in your organization settings. For more information, see [Change the organization owner](/azure/devops/organizations/accounts/change-organization-ownership-vs).
 
 ### Q: Can I change the organization name (URL), too?
@@ -239,14 +242,14 @@ A: No, this behavior isn't a bug and is how it has been implemented. We hope to 
 
 ### Q: What makes the organization Owner different from other organization users?
 
-A: The organization Owner manages payments and access for organization users. The organization Owner also manages billing for the organization through the [Azure classic portal](https://manage.windowsazure.com/) or the [Azure portal](https://portal.azure.com). 
+A: The organization Owner manages payments and access for organization users. The organization Owner also manages billing for the organization through the [Azure classic portal](https://manage.windowsazure.com/) or the [Azure portal](https://portal.azure.com).
 
 Organization Owners also have permissions to do the following tasks:
 
-* Pay for users to access the organization
-* Pay for additional organization services
-* Rename the organization URL
-* Change the organization Owner
+- Pay for users to access the organization
+- Pay for additional organization services
+- Rename the organization URL
+- Change the organization Owner
 
 Project collection administrators can manage user access and change the organization Owner, but they can't rename the organization URL.
 
@@ -262,11 +265,11 @@ Closing your browser doesn't always sign you out completely. Here's how you can 
 
 1. Close all browsers, including browsers that aren't running Azure DevOps.
 
-2. Open a private or incognito browsing session. 
+2. Open a private or incognito browsing session.
 
 3. Go to this URL: `https://aka.ms/vssignout`.
 
-   You see the message "Sign out in progress." After you sign out, you're redirected to the Visual Studio page @visualstudio.microsoft.com. 
+   You see the message "Sign out in progress." After you sign out, you're redirected to the Visual Studio page @visualstudio.microsoft.com.
 
    > [!Tip]
    > If the sign-out page takes more than a minute to sign you out, close the browser and continue.

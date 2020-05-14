@@ -19,9 +19,9 @@ ms.technology: devops-cicd-tasks
     #includeNuGetOrg: true # Required when feedsToUse == Select
     #nugetConfigPath: # Required when feedsToUse == Config
     #externalFeedCredentials: # Optional
-    #noCache: false 
-    #disableParallelProcessing: false 
-    restoreDirectory: 
+    #noCache: false
+    #disableParallelProcessing: false
+    restoreDirectory:
     #verbosityRestore: 'Detailed' # Options: quiet, normal, detailed
     #packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg' # Required when command == Push
     #nuGetFeedType: 'internal' # Required when command == Push# Options: internal, external

@@ -14,22 +14,20 @@ ms.date: 08/04/2016
 
 Module path: `VSS/WebApi/Contracts`
 
-
 ### Members
 
-* `area`: string. Area name for this resource
+- `area`: string. Area name for this resource
 
-* `id`: string. Unique Identifier for this location
+- `id`: string. Unique Identifier for this location
 
-* `maxVersion`: string. Maximum api version that this resource supports (current server version for this resource)
+- `maxVersion`: string. Maximum api version that this resource supports (current server version for this resource)
 
-* `minVersion`: string. Minimum api version that this resource supports
+- `minVersion`: string. Minimum api version that this resource supports
 
-* `releasedVersion`: string. The latest version of this resource location that is in &quot;Release&quot; (non-preview) mode
+- `releasedVersion`: string. The latest version of this resource location that is in &quot;Release&quot; (non-preview) mode
 
-* `resourceName`: string. Resource name
+- `resourceName`: string. Resource name
 
-* `resourceVersion`: number. The current resource version supported by this resource location
+- `resourceVersion`: number. The current resource version supported by this resource location
 
-* `routeTemplate`: string. This location&#x27;s route template (templated relative path)
-
+- `routeTemplate`: string. This location&#x27;s route template (templated relative path)

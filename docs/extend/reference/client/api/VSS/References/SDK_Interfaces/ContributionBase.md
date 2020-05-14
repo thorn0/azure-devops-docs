@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,12 +15,10 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Base class shared by contributions and contribution types 
+Base class shared by contributions and contribution types
 
 ### Members
 
-* `description`: string. Description of the contribution/type
+- `description`: string. Description of the contribution/type
 
-* `id`: string. Extension-relative identifier of the contribution/type
-
+- `id`: string. Extension-relative identifier of the contribution/type

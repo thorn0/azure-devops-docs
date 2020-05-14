@@ -5,7 +5,7 @@ ms.assetid: 604822a1-a46b-49d3-ad30-8152e9420758
 ms.reviewer: dastahel
 ms.topic: quickstart
 ms.date: 08/30/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Build Java apps
@@ -13,10 +13,11 @@ monikerRange: '>= tfs-2017'
 [!INCLUDE [version-tfs-2017-rtm](../includes/version-tfs-2017-rtm.md)]
 
 ::: moniker range="<= tfs-2018"
+
 > [!NOTE]
-> 
+>
 > This guidance uses YAML-based pipelines available in Azure Pipelines. For TFS, use tasks that correspond to those used in the YAML below.
-::: moniker-end
+> ::: moniker-end
 
 This guidance explains how to automatically build Java projects. (If you're working on an Android project, see [Build, test, and deploy Android apps](android.md).)
 
@@ -72,7 +73,7 @@ https://github.com/MicrosoftDocs/pipelines-java
 
 1. When your new pipeline appears, take a look at the YAML to see what it does. When you're ready, select **Save and run**.
 
-   > [!div class="mx-imgBorder"] 
+   > [!div class="mx-imgBorder"]
    > ![Save and run button in a new YAML pipeline](media/save-and-run-button-new-yaml-pipeline.png)
 
 2. You're prompted to commit a new _azure-pipelines.yml_ file to your repository. After you're happy with the message, select **Save and run** again.
@@ -113,7 +114,7 @@ Update the following snippet in your `azure-pipelines.yml` file to select the ap
 
 ```yaml
 pool:
-  vmImage: 'ubuntu-16.04' # other options: 'macOS-10.14', 'vs2017-win2016'
+  vmImage: "ubuntu-16.04" # other options: 'macOS-10.14', 'vs2017-win2016'
 ```
 
 See [Microsoft-hosted agents](../agents/hosted.md) for a complete list of images.
@@ -138,16 +139,16 @@ To build with Maven, add the following snippet to your `azure-pipelines.yml` fil
 
 ```yaml
 steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
-    goals: 'package'
+  - task: Maven@3
+    inputs:
+      mavenPomFile: "pom.xml"
+      mavenOptions: "-Xmx3072m"
+      javaHomeOption: "JDKVersion"
+      jdkVersionOption: "1.11"
+      jdkArchitectureOption: "x64"
+      publishJUnitResults: false
+      testResultsFiles: "**/TEST-*.xml"
+      goals: "package"
 ```
 
 #### Customize the build path
@@ -166,17 +167,17 @@ To build with Gradle, add the following snippet to your `azure-pipelines.yml` fi
 
 ```yaml
 steps:
-- task: Gradle@2
-  inputs:
-    workingDirectory: ''
-    gradleWrapperFile: 'gradlew'
-    gradleOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
-    tasks: 'build'
+  - task: Gradle@2
+    inputs:
+      workingDirectory: ""
+      gradleWrapperFile: "gradlew"
+      gradleOptions: "-Xmx3072m"
+      javaHomeOption: "JDKVersion"
+      jdkVersionOption: "1.11"
+      jdkArchitectureOption: "x64"
+      publishJUnitResults: false
+      testResultsFiles: "**/TEST-*.xml"
+      tasks: "build"
 ```
 
 #### Choose the version of Gradle
@@ -202,15 +203,15 @@ To build with Ant, add the following snippet to your `azure-pipelines.yml` file.
 
 ```yaml
 steps:
-- task: Ant@1
-  inputs:
-    workingDirectory: ''
-    buildFile: 'build.xml'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
+  - task: Ant@1
+    inputs:
+      workingDirectory: ""
+      buildFile: "build.xml"
+      javaHomeOption: "JDKVersion"
+      jdkVersionOption: "1.11"
+      jdkArchitectureOption: "x64"
+      publishJUnitResults: false
+      testResultsFiles: "**/TEST-*.xml"
 ```
 
 ### Script
@@ -223,10 +224,10 @@ The `script:` step runs an inline script using Bash on Linux and macOS and Comma
 
 ```yaml
 steps:
-- script: |
-    echo Starting the build
-    mvn package
-  displayName: 'Build with Maven'
+  - script: |
+      echo Starting the build
+      mvn package
+    displayName: "Build with Maven"
 ```
 
 #### Script file
@@ -242,7 +243,7 @@ steps:
 
 ## Next Steps
 
-After you've built and tested your app, you can upload the build output to Azure Pipelines or TFS, create and publish a Maven package, 
+After you've built and tested your app, you can upload the build output to Azure Pipelines or TFS, create and publish a Maven package,
 or package the build output into a .war/jar file to be deployed to a web application.
 
 ::: moniker-end
@@ -251,9 +252,9 @@ or package the build output into a .war/jar file to be deployed to a web applica
 
 Next we recommend that you learn more about creating a CI/CD pipeline for the deployment target you choose:
 
-* [Build and deploy to a Java web app](java-webapp.md)
-* [Build and deploy Java to Azure Functions](java-function.md)
-* [Build and deploy Java to Azure Kubernetes service](kubernetes/aks-template.md)
+- [Build and deploy to a Java web app](java-webapp.md)
+- [Build and deploy Java to Azure Functions](java-function.md)
+- [Build and deploy Java to Azure Kubernetes service](kubernetes/aks-template.md)
 
 ::: moniker-end
 

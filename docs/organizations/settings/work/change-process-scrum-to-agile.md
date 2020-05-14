@@ -17,16 +17,16 @@ ms.date: 04/17/2020
 
 [!INCLUDE [temp](../../../includes/version-vsts-only.md)]
 
-You can change a project based on the Scrum process to use to use an inherited Agile process. This article provides the steps needed to make this change. 
+You can change a project based on the Scrum process to use to use an inherited Agile process. This article provides the steps needed to make this change.
 
 [!INCLUDE [temp](../includes/cloud-only-feature.md)]
 
 Prior to making this change, we recommend you familiarize yourself with the process you are changing to. The Task, Bug, Feature, and Epic work item types are the same for both Scrum and Agile processes. Some State and Reason field values, however, are different.
 
-| Process | Work item types | Workflow |
-|------|---------|---------|
-|**Scrum** | ![Scrum work item types](media/scrum-to-agile/scrum-process-plan-wits.png)|![Scrum workflow](../../..//boards/work-items/guidance/media/alm_pt_scrum_wf_pbi.png)|
-|**Agile** | ![Agile work item types](media/scrum-to-agile/agile-process-plan-wits.png)|![Agile workflow](../../../boards/get-started/media/about-boards/agile-process-workflow.png)|
+|  Process  | Work item types                                                            | Workflow                                                                                     |
+| --------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **Scrum** | ![Scrum work item types](media/scrum-to-agile/scrum-process-plan-wits.png) | ![Scrum workflow](../../..//boards/work-items/guidance/media/alm_pt_scrum_wf_pbi.png)        |
+| **Agile** | ![Agile work item types](media/scrum-to-agile/agile-process-plan-wits.png) | ![Agile workflow](../../../boards/get-started/media/about-boards/agile-process-workflow.png) |
 
 For an overview of all processes and workflows for all work item types, see [Choose a process](../../../boards/work-items/guidance/choose-process.md).
 
@@ -86,13 +86,14 @@ Reasons you might want to change your process from Scrum to Agile:
 
 1. Upon successful completion, the wizard displays the following information. Make a note of the steps to follow and then choose **Close**.
 
-    > [!div class="mx-imgBorder"]  
-    > ![Step 3 of 3 of change process dialog](media/scrum-to-agile/change-process-scrum-to-agile-wizard-complete.png)
+   > [!div class="mx-imgBorder"]  
+   > ![Step 3 of 3 of change process dialog](media/scrum-to-agile/change-process-scrum-to-agile-wizard-complete.png)
 
-    Steps to manually update your work items and board settings:
-    - Update the column to state mapping for each team Kanban board.
-    - Update existing work items using the work item types set by the target process.
-    - Update existing work items using the correct state model of the target process.
+   Steps to manually update your work items and board settings:
+
+   - Update the column to state mapping for each team Kanban board.
+   - Update existing work items using the work item types set by the target process.
+   - Update existing work items using the correct state model of the target process.
 
 ## Update Kanban board column-to-state settings
 

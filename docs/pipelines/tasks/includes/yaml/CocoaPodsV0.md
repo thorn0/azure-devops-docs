@@ -13,6 +13,6 @@ ms.technology: devops-cicd-tasks
 - task: CocoaPods@0
   inputs:
     #workingDirectory: # Optional
-    forceRepoUpdate: 
+    forceRepoUpdate:
     #projectDirectory: # Optional
 ```

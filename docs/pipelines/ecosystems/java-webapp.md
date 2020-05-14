@@ -4,14 +4,14 @@ description: Continuous integration and deployment (CI/CD) to a Java web app on 
 ms.topic: tutorial
 ms.assetid: 49253EA0-9CD6-4082-A303-95F78C7599C2
 ms.date: 02/24/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Build and deploy to a Java web app
 
 [!INCLUDE [include](../includes/version-team-services.md)]
 
-A web app is a lightweight way to host a web application. In this step-by-step guide you'll learn how to  create a pipeline that continuously builds and deploys a your Java app. Your team can then automatically build each commit in GitHub, and if you want, automatically deploy the change to an Azure App Service. You can use whatever runtime your prefer: Tomcat, or Java SE.
+A web app is a lightweight way to host a web application. In this step-by-step guide you'll learn how to create a pipeline that continuously builds and deploys a your Java app. Your team can then automatically build each commit in GitHub, and if you want, automatically deploy the change to an Azure App Service. You can use whatever runtime your prefer: Tomcat, or Java SE.
 
 ## Prerequisites
 

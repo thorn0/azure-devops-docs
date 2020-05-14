@@ -12,9 +12,9 @@ ms.technology: devops-cicd-tasks
 # Deploy an Azure Resource Manager (ARM) template to a resource group and manage virtual machines
 - task: AzureResourceGroupDeployment@2
   inputs:
-    azureSubscription: 
+    azureSubscription:
     #action: 'Create Or Update Resource Group' # Options: create Or Update Resource Group, select Resource Group, start, stop, stopWithDeallocate, restart, delete, deleteRG
-    resourceGroupName: 
+    resourceGroupName:
     #location: # Required when action == Create Or Update Resource Group
     #templateLocation: 'Linked artifact' # Options: linked Artifact, uRL Of The File
     #csmFileLink: # Required when templateLocation == URL Of The File

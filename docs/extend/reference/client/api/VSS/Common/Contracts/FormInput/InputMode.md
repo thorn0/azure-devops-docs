@@ -15,17 +15,16 @@ Module path: `VSS/Common/Contracts/FormInput`
 
 ### Values
 
-* `None` This input should not be shown in the UI
+- `None` This input should not be shown in the UI
 
-* `TextBox` An input text box should be shown
+- `TextBox` An input text box should be shown
 
-* `PasswordBox` An password input box should be shown
+- `PasswordBox` An password input box should be shown
 
-* `Combo` A select/combo control should be shown
+- `Combo` A select/combo control should be shown
 
-* `RadioButtons` Radio buttons should be shown
+- `RadioButtons` Radio buttons should be shown
 
-* `CheckBox` Checkbox should be shown(for true/false values)
+- `CheckBox` Checkbox should be shown(for true/false values)
 
-* `TextArea` A multi-line text area should be shown
-
+- `TextArea` A multi-line text area should be shown

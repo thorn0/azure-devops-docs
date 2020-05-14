@@ -17,5 +17,4 @@ Extends: [TfvcLabelRef](../../../TFS/VersionControl/Contracts/TfvcLabelRef.md)
 
 ### Members
 
-* `items`: [TfvcItem](../../../TFS/VersionControl/Contracts/TfvcItem.md)[]. 
-
+- `items`: [TfvcItem](../../../TFS/VersionControl/Contracts/TfvcItem.md)[].

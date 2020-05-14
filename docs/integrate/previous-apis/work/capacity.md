@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Capacity | REST API Reference for Team Foundation Server
 description: Work with capacity programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: bfcad439-f8a2-4a73-9276-485fdf01aaaf
@@ -19,21 +19,24 @@ ms.date: 08/04/2016
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get a team's capacity
+
 <a id="GetTeamMembersCapacity"></a>
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/{team}/_apis/work/TeamSettings/Iterations/{iterationid}/Capacities?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:-----------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team. 
-| iterationid| string   | ID of the iteration.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
+| iterationid| string | ID of the iteration.
 | Query
-| api-version| string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version| string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -67,24 +70,26 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsettings
 }
 ```
 
-
 ## Get a team member's capacity
+
 <a id="GetTeamMemberCapacity"></a>
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/{team}/_apis/work/TeamSettings/Iterations/{iterationid}/capacities/{member}?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:-----------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team. 
-| iterationid| string   | ID of the iteration.
-| member     | string   | ID of the team member.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
+| iterationid| string | ID of the iteration.
+| member | string | ID of the team member.
 | Query
-| api-version| string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version| string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -137,34 +142,37 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsettings
 }
 ```
 
-
 ## Update a team member's capacity
+
 <a id="UpdateTeamMemberCapacity"></a>
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/{team}/_apis/Work/TeamSettings/Iterations/{iterationid}/capacities/{member}?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:-----------------------------------------------------
-| URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team. 
-| iterationid| string   | ID of the iteration.
-| member     | string   | ID of the team member.
-| Query
-| api-version| string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
 
-| Parameter  	| Allowed Values     
-|:-----------	|:---------
-| activity name	| Deployment, Design, Development, Documentation, Localization, Program Management, Testing (localized)
+
+| URL
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
+| iterationid| string | ID of the iteration.
+| member | string | ID of the team member.
+| Query
+| api-version| string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+
+| Parameter     | Allowed Values                                                                                        |
+| :------------ | :---------------------------------------------------------------------------------------------------- |
+| activity name | Deployment, Design, Development, Documentation, Localization, Program Management, Testing (localized) |
 
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsettings/iterations/2ec76bfe-ba74-4060-970d-4567a3e997ee/capacities/8c8c7d32-6b1b-47f4-b2e9-30b477b5ab3d?api-version=2.0-preview.1
 ```
+
 ```json
 {
   "activities": [

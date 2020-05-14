@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `parameters`: {[key: string]: string}. 
+- `parameters`: {[key: string]: string}.
 
-* `scheme`: string. 
-
+- `scheme`: string.

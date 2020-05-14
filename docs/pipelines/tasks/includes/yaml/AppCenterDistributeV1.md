@@ -12,9 +12,9 @@ ms.technology: devops-cicd-tasks
 # Distribute app builds to testers and users via Visual Studio App Center
 - task: AppCenterDistribute@1
   inputs:
-    serverEndpoint: 
-    appSlug: 
-    appFile: 
+    serverEndpoint:
+    appSlug:
+    appFile:
     #symbolsOption: 'Apple' # Optional. Options: apple
     #symbolsPath: # Optional
     #symbolsPdbFiles: '**/*.pdb' # Optional

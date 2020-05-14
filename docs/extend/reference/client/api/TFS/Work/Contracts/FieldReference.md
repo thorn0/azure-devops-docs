@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Work/Contracts`
 
-
 ### Members
 
-* `referenceName`: string. fieldRefName for the field
+- `referenceName`: string. fieldRefName for the field
 
-* `url`: string. Full http link to more information about the field
-
+- `url`: string. Full http link to more information about the field

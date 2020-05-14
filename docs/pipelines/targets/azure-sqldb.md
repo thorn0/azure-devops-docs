@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 04/27/2020
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Azure SQL database deployment
@@ -23,6 +23,7 @@ You can automatically deploy your database updates to Azure SQL database after e
 The simplest way to deploy a database is to create [data-tier package or DACPAC](/sql/relational-databases/data-tier-applications/data-tier-applications). DACPACs can be used to package and deploy schema changes as well as data. You can create a DACPAC using the **SQL database project** in Visual Studio.
 
 #### [YAML](#tab/yaml/)
+
 ::: moniker range=">= azure-devops-2019"
 
 To deploy a DACPAC to an Azure SQL database, add the following snippet to your azure-pipelines.yml file.
@@ -48,11 +49,13 @@ YAML pipelines aren't available in TFS.
 ::: moniker-end
 
 #### [Classic](#tab/classic/)
+
 When setting up a build pipeline for your Visual Studio database project, use the **.NET desktop** template. This template automatically adds the tasks to build the project and publish artifacts, including the DACPAC.
 
 When setting up a release pipeline, choose **Start with an empty pipeline**, link the artifacts from build, and then add an [Azure SQL Database Deployment](../tasks/deploy/sql-azure-dacpac-deployment.md) task.
 
-* * *
+---
+
 See also [authentication information when using the Azure SQL Database Deployment task](../tasks/deploy/sql-azure-dacpac-deployment.md#arguments).
 
 ## SQL scripts
@@ -152,6 +155,7 @@ If ((Get-AzureSqlDatabaseServerFirewallRule -ServerName $ServerName -FirewallRul
 ```
 
 #### [YAML](#tab/yaml/)
+
 ::: moniker range=">= azure-devops-2019"
 
 Add the following to your azure-pipelines.yml file to run a SQL script.
@@ -198,6 +202,7 @@ YAML pipelines aren't available in TFS.
 ::: moniker-end
 
 #### [Classic](#tab/classic/)
+
 When you set up a build pipeline, make sure that the SQL script to deploy the database and the Azure powershell scripts to configure firewall rules are part of the build artifact.
 
 When you set up a release pipeline, choose **Start with an Empty process**, link the artifacts from build, and then use the following tasks:
@@ -206,7 +211,8 @@ When you set up a release pipeline, choose **Start with an Empty process**, link
 - Second, use a [Command line](../tasks/utility/command-line.md) task to run the SQL script using the **SQLCMD** tool. The arguments to this tool are `-S {database-server-name}.database.windows.net -U {username}@{database-server-name} -P {password} -d {database-name} -i {SQL file}` For example, when the SQL script is coming from an artifact source, **{SQL file}** will be of the form: `$(System.DefaultWorkingDirectory)/contoso-repo/DatabaseExample.sql`.
 - Third, use another [Azure Powershell](../tasks/deploy/azure-powershell.md) task to remove the firewall rule in Azure.
 
-* * *
+---
+
 ## Azure service connection
 
 The **Azure SQL Database Deployment** task is the primary mechanism to deploy a database to Azure. This task, as with other built-in Azure tasks, requires an Azure service connection as an input. The Azure service connection stores the credentials to connect from Azure Pipelines or TFS to Azure.
@@ -230,12 +236,13 @@ To learn how to create an Azure service connection, see [Create an Azure service
 You may choose to deploy only certain builds to your Azure database.
 
 #### [YAML](#tab/yaml/)
+
 ::: moniker range=">= azure-devops-2019"
 
 To do this in YAML, you can use one of these techniques:
 
-* Isolate the deployment steps into a separate job, and add a condition to that job.
-* Add a condition to the step.
+- Isolate the deployment steps into a separate job, and add a condition to that job.
+- Add a condition to the step.
 
 The following example shows how to use step conditions to deploy only those builds that originate from master branch.
 
@@ -243,12 +250,12 @@ The following example shows how to use step conditions to deploy only those buil
 - task: SqlAzureDacpacDeployment@1
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   inputs:
-    azureSubscription: '<Azure service connection>'
-    ServerName: '<Database server name>'
-    DatabaseName: '<Database name>'
-    SqlUsername: '<SQL user name>'
-    SqlPassword: '<SQL user password>'
-    DacpacFile: '<Location of Dacpac file in $(Build.SourcesDirectory) after compilation>'
+    azureSubscription: "<Azure service connection>"
+    ServerName: "<Database server name>"
+    DatabaseName: "<Database name>"
+    SqlUsername: "<SQL user name>"
+    SqlPassword: "<SQL user password>"
+    DacpacFile: "<Location of Dacpac file in $(Build.SourcesDirectory) after compilation>"
 ```
 
 To learn more about conditions, see [Specify conditions](../process/conditions.md).
@@ -262,16 +269,18 @@ YAML pipelines aren't available in TFS.
 ::: moniker-end
 
 #### [Classic](#tab/classic/)
+
 In your release pipeline you can implement various checks and conditions to control the deployment.
 
-* Set **branch filters** to configure the **continuous deployment trigger** on the artifact of the release pipeline.
-* Set **pre-deployment approvals** as a pre-condition for deployment to a stage.
-* Configure **gates** as a pre-condition for deployment to a stage.
-* Specify conditions for a task to run.
+- Set **branch filters** to configure the **continuous deployment trigger** on the artifact of the release pipeline.
+- Set **pre-deployment approvals** as a pre-condition for deployment to a stage.
+- Configure **gates** as a pre-condition for deployment to a stage.
+- Specify conditions for a task to run.
 
 To learn more, see [Release, branch, and stage triggers](../release/triggers.md), [Release deployment control using approvals](../release/approvals/approvals.md), [Release deployment control using gates](../release/approvals/gates.md), and [Specify conditions for running a task](../process/conditions.md).
 
-* * *
+---
+
 ## Additional SQL actions
 
 **SQL Azure Dacpac Deployment** may not support all SQL server actions
@@ -282,7 +291,7 @@ As a prerequisite to running this tool, you must use a self-hosted agent and hav
 > [!NOTE]
 > If you execute **SQLPackage** from the folder where it is installed, you must prefix the path with `&` and wrap it in double-quotes.
 
-### Basic Syntax 
+### Basic Syntax
 
 `<Path of SQLPackage.exe> <Arguments to SQLPackage.exe>`
 
@@ -372,7 +381,7 @@ sqlpackage.exe /Action:Export /?
 
 Imports the schema and table data from a BACPAC package into a new user database in an instance of SQL Server or Microsoft Azure SQL Database.
 
-**Command Syntax:** 
+**Command Syntax:**
 
 ```command
 SqlPackage.exe /SourceFile:"<Bacpac file location>" /Action:Import /TargetServerName:"<ServerName>.database.windows.net"
@@ -396,7 +405,7 @@ sqlpackage.exe /Action:Import /?
 
 Creates an XML report of the changes that would be made by a publish action.
 
-**Command Syntax:** 
+**Command Syntax:**
 
 ```command
 SqlPackage.exe /SourceFile:"<Dacpac file location>" /Action:DeployReport /TargetServerName:"<ServerName>.database.windows.net"
@@ -407,7 +416,7 @@ SqlPackage.exe /SourceFile:"<Dacpac file location>" /Action:DeployReport /Target
 
 ```command
 SqlPackage.exe /SourceFile:"E: \dacpac\ajyadb.dacpac" /Action:DeployReport /TargetServerName:"DemoSqlServer.database.windows.net"
-/TargetDatabaseName:"Testdb" /TargetUser:"ajay" /TargetPassword:"SQLPassword" /OutputPath:"C:\temp\deployReport.xml" 
+/TargetDatabaseName:"Testdb" /TargetUser:"ajay" /TargetPassword:"SQLPassword" /OutputPath:"C:\temp\deployReport.xml"
 ```
 
 **Help:**
@@ -420,7 +429,7 @@ sqlpackage.exe /Action:DeployReport /?
 
 Creates an XML report of the changes that have been made to a registered database since it was last registered.
 
-**Command Syntax:** 
+**Command Syntax:**
 
 ```command
 SqlPackage.exe /Action:DriftReport /TargetServerName:"<ServerName>.database.windows.net" /TargetDatabaseName:"<DatabaseName>"

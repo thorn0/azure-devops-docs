@@ -12,10 +12,10 @@ ms.technology: devops-cicd-tasks
 # Build, test, and deploy with Apache Maven
 - task: Maven@3
   inputs:
-    #mavenPomFile: 'pom.xml' 
+    #mavenPomFile: 'pom.xml'
     #goals: 'package' # Optional
     #options: # Optional
-    #publishJUnitResults: true 
+    #publishJUnitResults: true
     #testResultsFiles: '**/surefire-reports/TEST-*.xml' # Required when publishJUnitResults == True
     #testRunTitle: # Optional
     #codeCoverageToolOption: 'None' # Optional. Options: none, cobertura, jaCoCo. Enabling code coverage inserts the `clean` goal into the Maven goals list when Maven runs.
@@ -31,9 +31,9 @@ ms.technology: devops-cicd-tasks
     #mavenDirectory: # Required when mavenVersionOption == Path
     #mavenSetM2Home: false # Required when mavenVersionOption == Path
     #mavenOptions: '-Xmx1024m' # Optional
-    #mavenAuthenticateFeed: false 
-    #effectivePomSkip: false 
-    #sonarQubeRunAnalysis: false 
+    #mavenAuthenticateFeed: false
+    #effectivePomSkip: false
+    #sonarQubeRunAnalysis: false
     #sqMavenPluginVersionChoice: 'latest' # Required when sonarQubeRunAnalysis == True# Options: latest, pom
     #checkStyleRunAnalysis: false # Optional
     #pmdRunAnalysis: false # Optional

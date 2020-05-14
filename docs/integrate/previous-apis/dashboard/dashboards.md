@@ -3,7 +3,7 @@ title: Dashboards | REST API Reference for Team Foundation Server
 description: Work with dashboard programmatically using the REST APIs for VSTS.
 ms.assetid: EE46001A-8B9C-4E09-B99B-4F104013DFAD
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 ms.topic: article
 ms.author: chcomley
 author: chcomley
@@ -14,28 +14,27 @@ ms.date: 08/04/2016
 
 [!INCLUDE [azure-devops](../_data/azure-devops-message.md)]
 
-
 **Team Services**
 
 [!INCLUDE [temp](../_data/disclaimer.md)]
 
 [!INCLUDE [API_version](../_data/version3-preview2.md)]
 
-
 ## Dashboard
+
 <a id="Dashboard"></a>
 Each dashboard entry has the following fields.
 
-| Field            | Type             | Notes                                            
-| :-----------     | :--------        | :--------                                        
-| id               | string           | The ID of the dashboard.
-| name             | string           | The name of the dashboard.
-| position         | int              | The unique position of the dashboard in the group of dashboards for the team.
-| eTag             | string           | The concurrency eTag of the dashboard
-| widgets          | Widget[]         | Array of widgets in the dashboard      
-
+| Field    | Type     | Notes                                                                         |
+| :------- | :------- | :---------------------------------------------------------------------------- |
+| id       | string   | The ID of the dashboard.                                                      |
+| name     | string   | The name of the dashboard.                                                    |
+| position | int      | The unique position of the dashboard in the group of dashboards for the team. |
+| eTag     | string   | The concurrency eTag of the dashboard                                         |
+| widgets  | Widget[] | Array of widgets in the dashboard                                             |
 
 ## Get a dashboard list
+
 <a id="GetDashboards"></a>
 Get list of dashboards in the given team.
 
@@ -43,15 +42,16 @@ Get list of dashboards in the given team.
 GET https://{account}.VisualStudio.com/DefaultCollection/{project}/{teamId}/_apis/dashboard/dashboards/?api-version={version}
 ```
 
-| Parameter    | Type         | Default    | Notes
-| :----------- | :----------- | :--------- | :-----------------
-| URL
-| account      | string       |            | Your [VS Team Services account](../../get-started/rest/basics.md).
-| project      | string       |            | Your Visual Studio Project.
-| teamId       | string       |            | Your Team ID.
-| Query
-| api-version  | string       |            | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
 
+
+| URL
+| account | string | | Your [VS Team Services account](../../get-started/rest/basics.md).
+| project | string | | Your Visual Studio Project.
+| teamId | string | | Your Team ID.
+| Query
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -96,8 +96,8 @@ GET http://localhost:8080/tfs/DefaultCollection/83e53972-81cd-434e-b15a-6fafcf40
 }
 ```
 
-
 ## Adding a dashboard to the team
+
 <a id="AddDashboard"></a>
 <a name="addingadashboardtotheteam" />
 
@@ -105,20 +105,23 @@ GET http://localhost:8080/tfs/DefaultCollection/83e53972-81cd-434e-b15a-6fafcf40
 POST https://{account}.VisualStudio.com/DefaultCollection/{project}/{teamId}/_apis/dashboard/dashboards/?api-version={version}
 ```
 
-| Parameter    | Type       | Default   | Notes
-| :----------- | :--------- | :-------- | :-----------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| account      | string     |           | Your [VS Team Services account](../../get-started/rest/basics.md).
-| project      | string     |           | Your Visual Studio Project.
-| teamId       | string     |           | Your Team ID.
+| account | string | | Your [VS Team Services account](../../get-started/rest/basics.md).
+| project | string | | Your Visual Studio Project.
+| teamId | string | | Your Team ID.
 | Query
-| api-version  | string     |           | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 POST http://localhost:8080/tfs/DefaultCollection/83e53972-81cd-434e-b15a-6fafcf405ac7/ac3cf153-3ae1-44ea-8663-e75006873f81/_apis/Dashboard/Dashboards/?api-version=3.0-preview.2
 ```
+
 ```json
 {
   "name": "test",
@@ -191,8 +194,8 @@ POST http://localhost:8080/tfs/DefaultCollection/83e53972-81cd-434e-b15a-6fafcf4
 }
 ```
 
-
 ## Get a dashboard
+
 <a id="GetDashboard"></a>
 Get a specified dashboard in the given team.
 
@@ -200,15 +203,17 @@ Get a specified dashboard in the given team.
 GET https://{account}.VisualStudio.com/DefaultCollection/{project}/{teamId}/_apis/dashboard/dashboards/{id}?api-version={version}
 ```
 
-| Parameter    | Type         | Default    | Notes
-| :----------- | :----------- | :--------- | :-----------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| account      | string       |            | Your [VS Team Services account](../../get-started/rest/basics.md).
-| project      | string       |            | Your Visual Studio Project.
-| teamId       | string       |            | Your Team ID.
-| id           | string       |            | ID of the dashboard.
+| account | string | | Your [VS Team Services account](../../get-started/rest/basics.md).
+| project | string | | Your Visual Studio Project.
+| teamId | string | | Your Team ID.
+| id | string | | ID of the dashboard.
 | Query
-| api-version  | string       |            | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -561,8 +566,8 @@ GET http://localhost:8080/tfs/DefaultCollection/83e53972-81cd-434e-b15a-6fafcf40
 }
 ```
 
-
 ## Delete a dashboard
+
 <a id="DeleteDashboard"></a>
 Delete a dashboard given its ID. This also deletes the widgets associated with this dashboard.
 
@@ -570,12 +575,14 @@ Delete a dashboard given its ID. This also deletes the widgets associated with t
 DELETE https://{account}.VisualStudio.com/DefaultCollection/{project}/{teamId}/_apis/dashboard/dashboards/{id}?api-version={version}
 ```
 
-| Parameter    | Type       | Default    | Notes
-| :----------- | :--------- | :--------- | :-----------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| account      | string     |            | Your [VS Team Services account](../../get-started/rest/basics.md).
-| project      | string     |            | Your Visual Studio Project.
-| teamId       | string     |            | Your Team ID.
-| id           | string     |            | ID of the dashboard.
+| account | string | | Your [VS Team Services account](../../get-started/rest/basics.md).
+| project | string | | Your Visual Studio Project.
+| teamId | string | | Your Team ID.
+| id | string | | ID of the dashboard.
 | Query
-| api-version  | string     |            | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.

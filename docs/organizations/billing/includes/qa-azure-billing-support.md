@@ -1,4 +1,3 @@
-
 ### Q: How do I get other help or support for Azure subscriptions and billing?
 
 A: See the following resources:

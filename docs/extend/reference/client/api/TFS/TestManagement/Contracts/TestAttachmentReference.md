@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `id`: number. 
+- `id`: number.
 
-* `url`: string. 
-
+- `url`: string.

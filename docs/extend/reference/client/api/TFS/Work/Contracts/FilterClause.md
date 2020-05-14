@@ -13,16 +13,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Work/Contracts`
 
-
 ### Members
 
-* `fieldName`: string. 
+- `fieldName`: string.
 
-* `index`: number. 
+- `index`: number.
 
-* `logicalOperator`: string. 
+- `logicalOperator`: string.
 
-* `operator`: string. 
+- `operator`: string.
 
-* `value`: string. 
-
+- `value`: string.

@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: AFA7D54D-537B-4DC8-B60A-E0EEEA2C9A87
 ms.author: atulmal
 ms.date: 02/28/2020
-monikerRange: '> tfs-2018'
+monikerRange: "> tfs-2018"
 ---
 
 # Package and Deploy Helm Charts task
@@ -15,22 +15,22 @@ monikerRange: '> tfs-2018'
 Use this task to deploy, configure, or update a Kubernetes cluster in Azure Container Service by running Helm commands.
 Helm is a tool that streamlines deploying and managing Kubernetes apps using a packaging format called
 charts.
-You can define, version, share, install, and upgrade even the most complex Kubernetes app by using Helm. 
+You can define, version, share, install, and upgrade even the most complex Kubernetes app by using Helm.
 
-* Helm helps you combine multiple Kubernetes manifests (yaml) such as service, deployments, configmaps, and more into a single unit called Helm Charts.
+- Helm helps you combine multiple Kubernetes manifests (yaml) such as service, deployments, configmaps, and more into a single unit called Helm Charts.
   You don't need to either invent or use a tokenization or a templating tool.
-* Helm Charts help you manage application dependencies and deploy as well as rollback as a unit.
+- Helm Charts help you manage application dependencies and deploy as well as rollback as a unit.
   They are also easy to create, version, publish, and share with other partner teams.
 
 Azure Pipelines has built-in support for Helm charts:
 
-* The [Helm Tool installer task](../tool/helm-installer.md) can be used to install the correct version of Helm onto the agents.
-* The Helm package and deploy task can be used to package the app and deploy it to a Kubernetes cluster. 
+- The [Helm Tool installer task](../tool/helm-installer.md) can be used to install the correct version of Helm onto the agents.
+- The Helm package and deploy task can be used to package the app and deploy it to a Kubernetes cluster.
   You can use the task to install or update Tiller to a Kubernetes namespace, to securely connect to Tiller over TLS for deploying charts,
   or to run any Helm command such as **lint**.
-* The Helm task supports connecting to an Azure Kubernetes Service by using an Azure service connection.
+- The Helm task supports connecting to an Azure Kubernetes Service by using an Azure service connection.
   You can connect to any Kubernetes cluster by using **kubeconfig** or a service account.
-* Helm deployments can be supplemented by using the **Kubectl** task; for example, create/update, imagepullsecret, and others.
+- Helm deployments can be supplemented by using the **Kubectl** task; for example, create/update, imagepullsecret, and others.
 
 ::: moniker range="> tfs-2018"
 
@@ -86,6 +86,7 @@ This is used with one of the helm [commands](#commands) and the appropriate valu
 ```
 
 <a name="commands"></a>
+
 ## Command values
 
 The command input accepts one of the following [helm commands](https://v2-14-0.helm.sh/docs/helm/): create/delete/expose/get/init/install/login/logout/ls/package/rollback/upgrade.

@@ -1,14 +1,14 @@
 ---
 title: Ignore files in your Git repo
 titleSuffix: Azure Repos
-description: Use gitignore, git update-index, and repo management to ignore and exclude files from Git version control  
+description: Use gitignore, git update-index, and repo management to ignore and exclude files from Git version control
 ms.assetid: 60982d10-67f1-416f-94ec-eba8d655f601
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: tutorial
 ms.date: 11/15/2019
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Ignore file changes with Git
@@ -17,31 +17,32 @@ monikerRange: '>= tfs-2013'
 
 Not every file created or updated in your code should be committed to Git.
 Temporary files from your development environment, test outputs, and logs are all examples of files that you create but aren't part of your codebase.
-Customize which files Git tracks through the *gitignore* feature.
+Customize which files Git tracks through the _gitignore_ feature.
 
 In this tutorial you learn how to:
 
 > [!div class="checklist"]
-> * Use gitignore to prevent tracking of files
-> * Ignore files only on your system
-> * Ignore files across all repos on your system
-> * Ignore changes to committed files
+>
+> - Use gitignore to prevent tracking of files
+> - Ignore files only on your system
+> - Ignore files across all repos on your system
+> - Ignore changes to committed files
 
 ## Use gitignore to prevent tracking of files
 
-Create a *.gitignore* file in your Git repo to prevent Git from staging unwanted files.
-Share *.gitignore* in the default branch in your repo. You and your team can update the file to change which types of files to ignore.
+Create a _.gitignore_ file in your Git repo to prevent Git from staging unwanted files.
+Share _.gitignore_ in the default branch in your repo. You and your team can update the file to change which types of files to ignore.
 
 ### Create a .gitignore
 
 # [Visual Studio](#tab/visual-studio)
 
-Visual Studio automatically creates a *.gitignore* file in your repo when you [create new repo for your project](creatingrepo.md).
+Visual Studio automatically creates a _.gitignore_ file in your repo when you [create new repo for your project](creatingrepo.md).
 
 # [Command Line](#tab/command-line)
 
-Download a [template](https://github.com/github/gitignore) *.gitignore* file for your project type and customize it to meet your needs.
-If your project doesn't fit a template, you can create an empty *.gitignore* from the command line.
+Download a [template](https://github.com/github/gitignore) _.gitignore_ file for your project type and customize it to meet your needs.
+If your project doesn't fit a template, you can create an empty _.gitignore_ from the command line.
 Go to your Git repo and run one of the following commands, using your repository information:
 
 ### Windows
@@ -58,16 +59,16 @@ touch /home/frank/myrepo/.gitignore
 
 ---
 
-Git applies *.gitignore* to the folder and any child folders where it's located. We recommend you place your *.gitignore* in the root folder of your repo to prevent confusion.
+Git applies _.gitignore_ to the folder and any child folders where it's located. We recommend you place your _.gitignore_ in the root folder of your repo to prevent confusion.
 
 ### Customize your .gitignore
 
-Modify your *.gitignore* to include files types, paths, and file patterns in your repo.
-Git starts ignoring these files as soon as you update *.gitignore*. If others on your team need the same set of ignored files, be sure to commit your changes.
+Modify your _.gitignore_ to include files types, paths, and file patterns in your repo.
+Git starts ignoring these files as soon as you update _.gitignore_. If others on your team need the same set of ignored files, be sure to commit your changes.
 
 # [Visual Studio](#tab/visual-studio)
 
-You can edit your *.gitignore* file for your repo by going to the **Settings** view in Team Explorer, then selecting **Repository Settings**. Select **Edit** for your *.gitignore*.
+You can edit your _.gitignore_ file for your repo by going to the **Settings** view in Team Explorer, then selecting **Repository Settings**. Select **Edit** for your _.gitignore_.
 
 ![Find and open your .gitignore file for your repo in Visual Studio](media/vs_ignore.png)
 
@@ -81,7 +82,7 @@ vim /home/frank/myrepo/.gitignore
 
 ---
 
-Each line in the *.gitignore* excludes a file or set of files that match a pattern.
+Each line in the _.gitignore_ excludes a file or set of files that match a pattern.
 The [full gitignore syntax](https://git-scm.com/docs/gitignore) is very flexible.
 Here are some examples of the most common entries:
 
@@ -100,19 +101,19 @@ mycode.class
 ```
 
 > [!NOTE]
-> Windows users: All file paths in the *.gitignore* file use a forward slash separator, not a backslash.
+> Windows users: All file paths in the _.gitignore_ file use a forward slash separator, not a backslash.
 
 ## Ignore files only on your system
 
-Your *.gitignore* is shared across team members as a file committed and pushed to the Git repo.
-To exclude files only on your system, edit the *.git/info/exclude* file in your local repo.
+Your _.gitignore_ is shared across team members as a file committed and pushed to the Git repo.
+To exclude files only on your system, edit the _.git/info/exclude_ file in your local repo.
 Changes to this file aren't shared with others.
 They apply only to the files in that repo.
 The [syntax](https://git-scm.com/docs/gitignore) for this file is the same as the one used in .gitignore.
 
 ## Ignore files across all repos on your system
 
-Set up a global *.gitignore* for use across all repos on your system using the command line `git config` tool, as in the following example:
+Set up a global _.gitignore_ for use across all repos on your system using the command line `git config` tool, as in the following example:
 
 ```bash
 git config core.excludesfile C:\Users\frank\.gitignore_global
@@ -153,13 +154,13 @@ git update-index --no-assume-unchanged <file>
 
 #### Permanently ignore changes to a file
 
-If a file is already tracked by Git, adding that file to your *.gitignore* isn't enough to ignore changes to the file.
+If a file is already tracked by Git, adding that file to your _.gitignore_ isn't enough to ignore changes to the file.
 You also need to remove the information about the file from Git's index.
 
 > [!NOTE]
 > These steps don't delete the file from your system. They just tell Git to ignore future updates to the file.
 
-1. Add the file in your *.gitignore*.
+1. Add the file in your _.gitignore_.
 
 1. Run the following command:
 
@@ -167,9 +168,8 @@ You also need to remove the information about the file from Git's index.
    git rm --cached  <file>
    ```
 
-1. Commit the removal of the file and the updated *.gitignore* to your repo.
+1. Commit the removal of the file and the updated _.gitignore_ to your repo.
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Review history](review-history.md)
+> [!div class="nextstepaction"][review history](review-history.md)

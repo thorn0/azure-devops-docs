@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,10 +15,8 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Base class for an event callback for an extension 
+Base class for an event callback for an extension
 
 ### Members
 
-* `uri`: string. The uri of the endpoint that is hit when an event occurs
-
+- `uri`: string. The uri of the endpoint that is hit when an event occurs

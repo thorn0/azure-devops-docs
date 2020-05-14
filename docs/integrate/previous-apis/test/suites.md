@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Test Suites | REST API Reference for Team Foundation Server
 description: Work with test suites programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: AC2CE3FA-0BBF-4919-A850-383FEE4364B3
@@ -24,18 +24,20 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/suites?api-version={version}[&$skip={int}&$top={int}&$asTreeView={bool}]
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:-----------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}). 
-| instance  | string | TFS server name ({server:port}). 
-| project   | string | Name or ID of the project.
-| plan      | int    | ID of the test plan that contains the suites.
+| instance | string | TFS server name ({server:port}).
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| plan | int | ID of the test plan that contains the suites.
 | Query
-| api-version | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | $skip     | int    | Number of test suites to skip.
-| $top      | int    | Number of test suites to return.
-| $asTreeView | bool    | If the suites returned should be in a tree structure.
+| $top | int | Number of test suites to return.
+| \$asTreeView | bool | If the suites returned should be in a tree structure.
 
 #### Sample request
 
@@ -194,7 +196,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
 }
 ```
 
-
 ### A page at a time
 
 #### Sample request
@@ -330,7 +331,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
 }
 ```
 
-
 ### In tree structure
 
 #### Sample request
@@ -459,21 +459,22 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/6
 }
 ```
 
-
 ### By test case
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/test/suites/?api-version={version}[&testCaseId={int}]
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-----------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string | TFS server name ({server:port}).
-| project     | string | Name or ID of the project.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| testCaseId  | int    | ID of the test case for which suites need to be fetched.
+| testCaseId | int | ID of the test case for which suites need to be fetched.
 
 #### Sample request
 
@@ -559,23 +560,24 @@ GET https://mytfsserver/DefaultCollection/_apis/test/suites?testCaseId=341&api-v
 }
 ```
 
-
 ## Get a test suite
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/suites/{suite}?api-version={version}[&includeChildSuites={bool}]
 ```
 
-| Parameter          | Type   | Default | Notes
-|:-------------------|:-------|:--------|:----------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance           | string |         | TFS server name ({server:port}).
-| project            | string |         | Name or ID of the project.
-| plan               | int    |         | ID of the test plan that contains the suites.
-| suite              | int    |         | ID of the suite to get.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
+| plan | int | | ID of the test plan that contains the suites.
+| suite | int | | ID of the suite to get.
 | Query
-| api-version        | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| includeChildSuites | bool   | false   | Return the children of the suite. 
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| includeChildSuites | bool | false | Return the children of the suite.
 
 #### Sample request
 
@@ -622,7 +624,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
   "lastUpdatedDate": "2014-05-04T11:54:29.827Z"
 }
 ```
-
 
 ### With children
 
@@ -692,16 +693,18 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
 }
 ```
 
-
 ## Create a test suite
+
 <a name="createatestsuite" />
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/suites/{parent}?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
   "suiteType": {
@@ -715,26 +718,29 @@ Content-Type: application/json
 }
 ```
 
-| Parameter      | Type   | Notes
-|:---------------|:-------|:-----------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance       | string | TFS server name ({server:port}).
-| project        | string | Name or ID of the project.
-| plan           | int    | ID of the test plan that contains the suite.
-| parent         | int    | ID of the parent suite.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| plan | int | ID of the test plan that contains the suite.
+| parent | int | ID of the parent suite.
 | Query
-| api-version    | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| suiteType      | enum { DynamicTestSuite, StaticTestSuite, RequirementTestSuite } | Type of test suite to create.
-| name           | string | Name of test suite.
-| queryString    | string | For dynamic test suites, the query string that defines the suite.
-| requirementIds | int[]  | For requirements test suites, the IDs of the requirements to test. Supported categories of requirement type are:  Epic, Feature, Requirement, and Bug.
+| suiteType | enum { DynamicTestSuite, StaticTestSuite, RequirementTestSuite } | Type of test suite to create.
+| name | string | Name of test suite.
+| queryString | string | For dynamic test suites, the query string that defines the suite.
+| requirementIds | int[] | For requirements test suites, the IDs of the requirements to test. Supported categories of requirement type are: Epic, Feature, Requirement, and Bug.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/1?api-version=1.0
 ```
+
 ```json
 {
   "suiteType": "StaticTestSuite",
@@ -786,13 +792,14 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/
 }
 ```
 
-
 ### Based on a query
+
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/1?api-version=1.0
 ```
+
 ```json
 {
   "suiteType": "DynamicTestSuite",
@@ -847,19 +854,18 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/
 }
 ```
 
-
 ### Based on requirements
+
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/1?api-version=1.0
 ```
+
 ```json
 {
   "suiteType": "RequirementTestSuite",
-  "requirementIds": [
-    2
-  ]
+  "requirementIds": [2]
 }
 ```
 
@@ -911,30 +917,33 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/
 }
 ```
 
-
 ## Add test cases to a suite
+
 <a name="addtestcasestoasuite" />
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/suites/{suite}/testcases/{testcases}?api-version={version}
 ```
 
-| Parameter          | Type    | Notes
-|:-------------------|:--------|:----------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance           | string  | TFS server name ({server:port}).
-| project            | string  | Name or ID of the project.
-| plan               | int     | ID of the test plan that contains the suite.
-| suite              | int     | ID of the suite to get.
-| testcases			 | int,int | IDs of the test cases to add to the suite.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| plan | int | ID of the test plan that contains the suite.
+| suite | int | ID of the suite to get.
+| testcases | int,int | IDs of the test cases to add to the suite.
 | Query
-| api-version        | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/1/testcases/39,40?api-version=1.0
 ```
+
 ```json
 {}
 ```
@@ -993,23 +1002,24 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/
 }
 ```
 
-
 ## Remove test cases from a suite
 
 ```no-highlight
 DELETE https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/suites/{suite}/testcases/{testcases}?api-version={version}
 ```
 
-| Parameter          | Type    | Notes
-|:-------------------|:--------|:----------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance           | string  | TFS server name ({server:port}).
-| project            | string  | Name or ID of the project.
-| plan               | int     | ID of the test plan that contains the suite.
-| suite              | int     | ID of the suite to get.
-| testcases			 | int,int | IDs of the test cases to remove from the suite.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| plan | int | ID of the test plan that contains the suite.
+| suite | int | ID of the suite to get.
+| testcases | int,int | IDs of the test cases to remove from the suite.
 | Query
-| api-version        | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -1017,15 +1027,16 @@ DELETE https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/su
 DELETE https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/1/testcases/39?api-version=1.0
 ```
 
-
 ## Update a test suite
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/suites/{suite}?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
   "name": { string },
@@ -1038,28 +1049,32 @@ Content-Type: application/json
 }
 ```
 
-| Parameter                    | Type   | Notes
-|:-----------------------------|:-------|:-----------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance                     | string | TFS server name ({server:port}).
-| project                      | string | Name or ID of the project.
-| plan                         | int    | ID of the test plan that contains the suite.
-| suite                        | int    | ID of the test suite to update.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| plan | int | ID of the test plan that contains the suite.
+| suite | int | ID of the test suite to update.
 | Query
-| api-version                  | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name                         | string | New name of the test suite.
-| parent.id                    | int    | ID of the new parent suite.
-| queryString                  | string | For dynamic suites, the new query string.
-| inheritDefaultConfigurations | bool   | If true, inherit the default configurations from the parent suite.
-| defaultConfigurations        | int[]  | IDs of the default configurations for the suite.
+| name | string | New name of the test suite.
+| parent.id | int | ID of the new parent suite.
+| queryString | string | For dynamic suites, the new query string.
+| inheritDefaultConfigurations | bool | If true, inherit the default configurations from the parent suite.
+| defaultConfigurations | int[] | IDs of the default configurations for the suite.
 
 ### Name
+
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/8?api-version=1.0
 ```
+
 ```json
 {
   "name": "RenamedTestSuite"
@@ -1105,13 +1120,14 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 }
 ```
 
-
 ### Parent suite
+
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/9?api-version=1.0
 ```
+
 ```json
 {
   "parent": {
@@ -1161,7 +1177,6 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 }
 ```
 
-
 ### Query string
 
 #### Sample request
@@ -1169,6 +1184,7 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/40?api-version=1.0
 ```
+
 ```json
 {
   "queryString": "SELECT [System.Id],[System.WorkItemType],[System.Title],[Microsoft.VSTS.Common.Priority],[System.AssignedTo],[System.AreaPath] FROM WorkItems WHERE [System.TeamProject] = @project AND [System.WorkItemType] IN GROUP 'Microsoft.TestCaseCategory' AND [System.AreaPath] UNDER 'Fabrikam-Fiber-TFVC\\Quality assurance'"
@@ -1216,7 +1232,6 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 }
 ```
 
-
 ### Configurations
 
 #### Sample request
@@ -1224,6 +1239,7 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/20?api-version=1.0
 ```
+
 ```json
 {
   "inheritDefaultConfigurations": "false",
@@ -1294,28 +1310,26 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 }
 ```
 
-
 ## Delete a test suite
 
 ```
 DELETE https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/suites/{suite}?api-version={version}
 ```
 
-| Parameter                    | Type   | Notes
-|:-----------------------------|:-------|:-----------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance                     | string | TFS server name ({server:port}).
-| project                      | string | Name or ID of the project.
-| plan                         | int    | ID of the test plan that contains the suite.
-| suite                        | int    | ID of the test suite to delete.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| plan | int | ID of the test plan that contains the suite.
+| suite | int | ID of the test suite to delete.
 | Query
-| api-version                  | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 DELETE https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/8?api-version=1.0
 ```
-
-
-

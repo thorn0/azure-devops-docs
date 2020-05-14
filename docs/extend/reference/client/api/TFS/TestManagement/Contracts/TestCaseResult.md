@@ -14,88 +14,86 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `afnStripId`: number. 
+- `afnStripId`: number.
 
-* `area`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `area`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `associatedBugs`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md)[]. 
+- `associatedBugs`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md)[].
 
-* `automatedTestId`: string. 
+- `automatedTestId`: string.
 
-* `automatedTestName`: string. 
+- `automatedTestName`: string.
 
-* `automatedTestStorage`: string. 
+- `automatedTestStorage`: string.
 
-* `automatedTestType`: string. 
+- `automatedTestType`: string.
 
-* `automatedTestTypeId`: string. 
+- `automatedTestTypeId`: string.
 
-* `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `buildReference`: [BuildReference](../../../TFS/TestManagement/Contracts/BuildReference.md). 
+- `buildReference`: [BuildReference](../../../TFS/TestManagement/Contracts/BuildReference.md).
 
-* `comment`: string. 
+- `comment`: string.
 
-* `completedDate`: Date. 
+- `completedDate`: Date.
 
-* `computerName`: string. 
+- `computerName`: string.
 
-* `configuration`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `configuration`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `createdDate`: Date. 
+- `createdDate`: Date.
 
-* `customFields`: [CustomTestField](../../../TFS/TestManagement/Contracts/CustomTestField.md)[]. 
+- `customFields`: [CustomTestField](../../../TFS/TestManagement/Contracts/CustomTestField.md)[].
 
-* `durationInMs`: number. 
+- `durationInMs`: number.
 
-* `errorMessage`: string. 
+- `errorMessage`: string.
 
-* `failingSince`: [FailingSince](../../../TFS/TestManagement/Contracts/FailingSince.md). 
+- `failingSince`: [FailingSince](../../../TFS/TestManagement/Contracts/FailingSince.md).
 
-* `failureType`: string. 
+- `failureType`: string.
 
-* `id`: number. 
+- `id`: number.
 
-* `iterationDetails`: [TestIterationDetailsModel](../../../TFS/TestManagement/Contracts/TestIterationDetailsModel.md)[]. 
+- `iterationDetails`: [TestIterationDetailsModel](../../../TFS/TestManagement/Contracts/TestIterationDetailsModel.md)[].
 
-* `lastUpdatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `lastUpdatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `lastUpdatedDate`: Date. 
+- `lastUpdatedDate`: Date.
 
-* `outcome`: string. 
+- `outcome`: string.
 
-* `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `priority`: number. 
+- `priority`: number.
 
-* `project`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `project`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `resetCount`: number. 
+- `resetCount`: number.
 
-* `resolutionState`: string. 
+- `resolutionState`: string.
 
-* `resolutionStateId`: number. 
+- `resolutionStateId`: number.
 
-* `revision`: number. 
+- `revision`: number.
 
-* `runBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `runBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `stackTrace`: string. 
+- `stackTrace`: string.
 
-* `startedDate`: Date. 
+- `startedDate`: Date.
 
-* `state`: string. 
+- `state`: string.
 
-* `testCase`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `testCase`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `testCaseTitle`: string. 
+- `testCaseTitle`: string.
 
-* `testPoint`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `testPoint`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `testRun`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `testRun`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `url`: string. 
-
+- `url`: string.

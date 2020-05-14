@@ -4,7 +4,7 @@ author: RoopeshNair
 ms.author: ronai
 ms.date: 12/07/2018
 ms.prod: devops
-ms.technology: devops-cicd 
+ms.technology: devops-cicd
 ---
 
 ```YAML
@@ -12,9 +12,9 @@ ms.technology: devops-cicd
 # Copy files or build artifacts to a remote machine over SSH
 - task: CopyFilesOverSSH@0
   inputs:
-    sshEndpoint: 
+    sshEndpoint:
     #sourceFolder: # Optional
-    #contents: '**' 
+    #contents: '**'
     #targetFolder: # Optional
     #cleanTargetFolder: false # Optional
     #overwrite: true # Optional

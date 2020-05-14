@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Deploy to a Windows Virtual Machine
@@ -25,11 +25,11 @@ After you commit and push a code change, it is automatically built and then depl
 
 You'll need a continuous integration (CI) build pipeline that publishes your web deployment package. To set up a CI build pipeline, see:
 
-* [Build ASP.NET 4 apps](../aspnet/build-aspnet-4.md)
+- [Build ASP.NET 4 apps](../aspnet/build-aspnet-4.md)
 
-* [Build ASP.NET Core apps](../../ecosystems/dotnet-core.md)
+- [Build ASP.NET Core apps](../../ecosystems/dotnet-core.md)
 
-* [Build JavaScript and Node.js apps](../../ecosystems/javascript.md)
+- [Build JavaScript and Node.js apps](../../ecosystems/javascript.md)
 
 ## Prerequisites
 
@@ -60,10 +60,10 @@ Your CD release pipeline picks up the artifacts published by your CI build and t
 
 1. Do one of the following:
 
-   * If you've just completed a CI build then, in the build's **Summary** tab choose **Release**.
+   - If you've just completed a CI build then, in the build's **Summary** tab choose **Release**.
      This creates a new release pipeline that's automatically linked to the build pipeline.
 
-   * Open the **Releases** tab of **Azure Pipelines**, open the **+** drop-down
+   - Open the **Releases** tab of **Azure Pipelines**, open the **+** drop-down
      in the list of release pipelines, and choose **Create release pipeline**.
 
 1. Select the **IIS Website Deployment** template and choose **Apply**.
@@ -75,7 +75,7 @@ Your CD release pipeline picks up the artifacts published by your CI build and t
 1. Choose the **Continuous deployment** icon in the **Artifacts** section, check that the continuous deployment trigger is enabled,
    and add a filter to include the **master** branch.
 
-1. Open the **Tasks** tab and select the **IIS Deployment** job. For the **Deployment Group**, select the deployment group you created earlier (such as *myIIS*).
+1. Open the **Tasks** tab and select the **IIS Deployment** job. For the **Deployment Group**, select the deployment group you created earlier (such as _myIIS_).
 
 1. Save the release pipeline.
 
@@ -87,7 +87,7 @@ You're now ready to create a release, which means to run the release pipeline wi
 
 ## Next steps
 
-* [Dynamically create and remove a deployment group](howto-webdeploy-iis-deploygroups.md#depgroup)
-* [Apply stage-specific configurations](howto-webdeploy-iis-deploygroups.md#envirconfig)
-* [Perform a safe rolling deployment](howto-webdeploy-iis-deploygroups.md#rolling)
-* [Deploy a database with your app](howto-webdeploy-iis-deploygroups.md#database)
+- [Dynamically create and remove a deployment group](howto-webdeploy-iis-deploygroups.md#depgroup)
+- [Apply stage-specific configurations](howto-webdeploy-iis-deploygroups.md#envirconfig)
+- [Perform a safe rolling deployment](howto-webdeploy-iis-deploygroups.md#rolling)
+- [Deploy a database with your app](howto-webdeploy-iis-deploygroups.md#database)

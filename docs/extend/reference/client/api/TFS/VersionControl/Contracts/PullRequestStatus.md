@@ -15,8 +15,8 @@ Module path: `TFS/VersionControl/Contracts`
 
 ### Values
 
-* `NotSet` 
-* `Active` 
-* `Abandoned` 
-* `Completed` 
-* `All` 
+- `NotSet`
+- `Active`
+- `Abandoned`
+- `Completed`
+- `All`

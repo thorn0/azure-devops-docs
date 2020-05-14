@@ -14,18 +14,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `alwaysRun`: boolean. 
+- `alwaysRun`: boolean.
 
-* `continueOnError`: boolean. 
+- `continueOnError`: boolean.
 
-* `displayName`: string. 
+- `displayName`: string.
 
-* `enabled`: boolean. 
+- `enabled`: boolean.
 
-* `inputs`: {[key: string]: string}. 
+- `inputs`: {[key: string]: string}.
 
-* `task`: [TaskDefinitionReference](./TaskDefinitionReference.md). 
-
+- `task`: [TaskDefinitionReference](./TaskDefinitionReference.md).

@@ -5,7 +5,7 @@ ms.assetid: 318323C4-5B2F-45DE-A834-CCE03C670F8C
 ms.technology: devops-artifacts
 ms.topic: conceptual
 ms.date: 10/18/2017
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Debug with symbols in Visual Studio
@@ -20,7 +20,7 @@ To debug with symbols, select and add the Azure DevOps Services symbol server to
 
 ![Add Azure DevOps Services Symbol Server in VS Debugger](media/vsdebugger1.jpg)
 
-In the **Connect to Azure DevOps Services Symbol Server** dialog, select the organization to which the symbols have been published and the corresponding user identity that has access to this organization. 
+In the **Connect to Azure DevOps Services Symbol Server** dialog, select the organization to which the symbols have been published and the corresponding user identity that has access to this organization.
 
 ![Connect to Azure DevOps Services Symbol Server](media/connectsymbolserver.png)
 
@@ -33,6 +33,7 @@ Click **Connect** in the above dialog. The Azure DevOps Services Symbol Server i
 If you're debugging an optimized module (e.g. something that was built with the `Release` configuration) and you haven't changed the default "Enable Just My Code" setting in Options, Visual Studio will not automatically fetch symbols for the optimized module. If this is the case, the Modules window will have a warning message.
 
 To debug the module, you can either:
+
 - Open the Modules window, right-click the module, and choose "Load Symbols" (recommended)
 - In Options > Debugging > General, uncheck "Enable Just My Code"
 

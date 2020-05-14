@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Workfold Command
 
@@ -36,17 +35,17 @@ serverfolder
 ```
 
 ```
-tf workfold [/map serverfolder localfolder] [/collection:TeamProjectCollectionUrl] 
+tf workfold [/map serverfolder localfolder] [/collection:TeamProjectCollectionUrl]
 [/workspace:workspacename][/login:username,[password]
 ```
 
 ```
-tf workfold /unmap [/collection:TeamProjectCollectionUrl] [/workspace:workspacename] 
+tf workfold /unmap [/collection:TeamProjectCollectionUrl] [/workspace:workspacename]
 [/recursive] (serverfolder|localfolder) [/login:username,[password]]
 ```
 
 ```
-tf workfold /cloak 
+tf workfold /cloak
 serverfolder [/workspace:workspacename] [/collection:TeamProjectCollectionUrl] [/login:username,[password]]
 ```
 
@@ -56,6 +55,7 @@ tf workfold /decloak serverfolder
 ```
 
 ## Parameters<table>
+
 <thead>
 <tr>
 <th><p><strong>Argument</strong></p></th>
@@ -126,7 +126,8 @@ tf workfold /decloak serverfolder
 </table>
 
 ## Remarks
-You can use the **workfold** command of the **tf** command-line utility to create and edit *workspace mappings*. A workspace mapping creates a client-side folder into which all files and subfolders in the Team Foundation version control server folder are retrieved when you execute a **tf** **get** operation. This **get** will not work if the client-side folder is cloaked.
+
+You can use the **workfold** command of the **tf** command-line utility to create and edit _workspace mappings_. A workspace mapping creates a client-side folder into which all files and subfolders in the Team Foundation version control server folder are retrieved when you execute a **tf** **get** operation. This **get** will not work if the client-side folder is cloaked.
 
 You can also specify an asterisk (\*) wildcard to map a Team Foundation Server folder and its immediate items to your local workspace. This is often referred to as single folder mapping.
 
@@ -142,7 +143,7 @@ You can use the **/unmap** and **/decloak** options to selectively delete mapped
 
 ### How Workspace Mappings are Applied
 
-By default, workspace mappings are applied recursively. When you map a local folder to a Team Foundation version control server folder, the system implicitly creates a mapping between all its current and future subfolders. For example, if you map $/projects to c:\\projects, subsequently add a project called $/projects/project\_one, and then run a **get** of the workspace, Team Foundation automatically creates a local working folder named project\_one in the C:\\projects directory.
+By default, workspace mappings are applied recursively. When you map a local folder to a Team Foundation version control server folder, the system implicitly creates a mapping between all its current and future subfolders. For example, if you map $/projects to c:\\projects, subsequently add a project called $/projects/project_one, and then run a **get** of the workspace, Team Foundation automatically creates a local working folder named project_one in the C:\\projects directory.
 
 In this example, you can use a wildcard, "\*", to map a server folder and its immediate items to your local workspace:
 
@@ -150,7 +151,7 @@ In this example, you can use a wildcard, "\*", to map a server folder and its im
 tf workfold $/projects/MyTeamProject/* C:\MyLocalWorkfold\MyTeamProject
 ```
 
-In this example, you can override the automatically-created mapping between $/projects/project\_one and C:\\projects\\project\_one by using the **workfold** command as follows:
+In this example, you can override the automatically-created mapping between \$/projects/project_one and C:\\projects\\project_one by using the **workfold** command as follows:
 
 ```
 tf workfold $/projects/project_one C:\DifferentWorkfold
@@ -161,6 +162,7 @@ tf workfold $/projects/project_one C:\DifferentWorkfold
 Mappings of uncloaked folders that are located beneath a cloaked folder in the version control hierarchy can be mapped to your local workspace.
 
 ## Examples
+
 The following example displays the mappings for the workspace in which c:\\projects resides.
 
 ```
@@ -179,7 +181,7 @@ The following example displays the mapping for the local file word.cs.
 c:\projects>tf workfold word.cs
 ```
 
-The following example maps the folder C:\\DifferentWorkfold to the Team Foundation version control server folder $/projects/project\_one and replaces the previous workspace mapping for the $/projects/project\_one Team Foundation version control server folder.
+The following example maps the folder C:\\DifferentWorkfold to the Team Foundation version control server folder $/projects/project\_one and replaces the previous workspace mapping for the $/projects/project_one Team Foundation version control server folder.
 
 ```
 c:\projects>tf workfold $/projects/project_one C:\DifferentWorkfold

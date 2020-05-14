@@ -7,9 +7,8 @@ ms.assetid: A5B82F26-1053-47E4-B264-6E01B37C215F
 ms.author: vijayma
 author: vijayma
 ms.date: 12/17/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Maven task
 
@@ -21,7 +20,7 @@ Use this task to build your Java code.
 
 The build agent must have the following capability:
 
- * Maven
+- Maven
 
 ::: moniker range="> tfs-2018"
 
@@ -158,8 +157,8 @@ The build agent must have the following capability:
     </tr>
 </table>
 
->[!IMPORTANT]
->When using the `-q` option in your MAVEN_OPTS, an effective pom won't be generated correctly and Azure Artifacts feeds may not be able to be authenticated. 
+> [!IMPORTANT]
+> When using the `-q` option in your MAVEN_OPTS, an effective pom won't be generated correctly and Azure Artifacts feeds may not be able to be authenticated.
 
 ## Example
 
@@ -170,6 +169,7 @@ The build agent must have the following capability:
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q&A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 [!INCLUDE [temp](../../includes/qa-agents.md)]

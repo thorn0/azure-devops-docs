@@ -14,22 +14,20 @@ ms.date: 08/04/2016
 
 Module path: `VSS/WebApi/Contracts`
 
-
 ### Members
 
-* `displayName`: string. 
+- `displayName`: string.
 
-* `id`: string. 
+- `id`: string.
 
-* `imageUrl`: string. 
+- `imageUrl`: string.
 
-* `isAadIdentity`: boolean. 
+- `isAadIdentity`: boolean.
 
-* `isContainer`: boolean. 
+- `isContainer`: boolean.
 
-* `profileUrl`: string. 
+- `profileUrl`: string.
 
-* `uniqueName`: string. 
+- `uniqueName`: string.
 
-* `url`: string. 
-
+- `url`: string.

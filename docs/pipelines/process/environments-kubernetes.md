@@ -9,21 +9,22 @@ monikerRange: azure-devops
 ---
 
 # Environment - Kubernetes resource
+
 [!INCLUDE [include](../includes/version-team-services.md)]
 
 Kubernetes resource view within environments provides a glimpse of the status of objects within the namespace mapped to the resource. It also overlays pipeline traceability on top of these objects so that one can trace back from a Kubernetes object to the pipeline and then back to the commit.
 
 ## Overview
 
-The advantages of using Kubernetes resource views within environments include - 
+The advantages of using Kubernetes resource views within environments include -
+
 - **Pipeline traceability** - The [Kubernetes manifest task](../tasks/deploy/kubernetes-manifest.md) used for deployments adds additional annotations to portray pipeline traceability in resource views. This can help in identifying the originating Azure DevOps organization, project and pipeline responsible for updates made to an object within the namespace.
 
-  > [!div class="mx-imgBorder"]
-  > ![Pipeline traceability](media/k8s-pipeline-traceability.png)
+  > [!div class="mx-imgBorder"] > ![Pipeline traceability](media/k8s-pipeline-traceability.png)
 
-- **Diagnose resource health** - Workload status can be useful in quickly debugging potential mistakes or regressions that could have been introduced by a new deployment. For example, in the case of unconfigured *imagePullSecrets* resulting in ImagePullBackOff errors, pod status information can help identify the root cause for this issue.
-  > [!div class="mx-imgBorder"]
-  > ![ImagePullBackOff](media/k8s-imagepullbackoff.png)
+- **Diagnose resource health** - Workload status can be useful in quickly debugging potential mistakes or regressions that could have been introduced by a new deployment. For example, in the case of unconfigured _imagePullSecrets_ resulting in ImagePullBackOff errors, pod status information can help identify the root cause for this issue.
+
+  > [!div class="mx-imgBorder"] > ![ImagePullBackOff](media/k8s-imagepullbackoff.png)
 
 - **Review App** - Review app works by deploying every pull request from Git repository to a dynamic Kubernetes resource under the environment. Reviewers can see how those changes look as well as work with other dependent services before they're merged into the target branch and deployed to production.
 
@@ -53,13 +54,14 @@ While the Azure Provider option creates a new ServiceAccount, the generic provid
    ```
    kubectl config view --minify -o 'jsonpath={.clusters[0].cluster.server}'
    ```
+
 5. For fetching Secret object required to connect and authenticate with the cluster, the following sequence of commands need to be run:
 
    ```
    kubectl get serviceAccounts <service-account-name> -n <namespace> -o 'jsonpath={.secrets[*].name}'
-   ```   
+   ```
 
-   The above command fetches the name of the secret associated with a ServiceAccount. The output of the above command is to be substituted in the following command for fetching Secret object: 
+   The above command fetches the name of the secret associated with a ServiceAccount. The output of the above command is to be substituted in the following command for fetching Secret object:
 
    ```
    kubectl get secret <service-account-secret-name> -n <namespace> -o json
@@ -95,7 +97,7 @@ Below is an example YAML snippet for adding Review App to an **existing** pipeli
               action: createSecret
               secretName: $(imagePullSecret)
               dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
-              
+
           - task: KubernetesManifest@0
             displayName: Deploy to Kubernetes cluster
             inputs:
@@ -113,7 +115,7 @@ Below is an example YAML snippet for adding Review App to an **existing** pipeli
     condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/pull/'))
     pool:
       vmImage: $(vmImageName)
-      
+
     environment: '$(envName).$(k8sNamespaceForPR)'
     strategy:
       runOnce:
@@ -135,7 +137,7 @@ Below is an example YAML snippet for adding Review App to an **existing** pipeli
               secretName: $(imagePullSecret)
               namespace: $(k8sNamespaceForPR)
               dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
-          
+
           - task: KubernetesManifest@0
             displayName: Deploy to the new namespace in the Kubernetes cluster
             inputs:

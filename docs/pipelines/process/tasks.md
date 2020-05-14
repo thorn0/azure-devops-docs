@@ -5,7 +5,7 @@ description: Understand Build and Release tasks in Azure Pipelines and Team Foun
 ms.topic: conceptual
 ms.assetid: 3293E200-6B8C-479D-9EA0-B3E82CE1450F
 ms.date: 12/06/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Task types & usage
@@ -17,7 +17,7 @@ monikerRange: '>= tfs-2015'
 A **task** is the building block for defining automation in a
 pipeline.
 A task is simply a packaged script or procedure that has been
-abstracted with a set of inputs. 
+abstracted with a set of inputs.
 
 When you add a task to your pipeline, it may also add a set of **demands** to the pipeline. The demands define the prerequisites that must be installed on the [agent](../agents/agents.md) for the task to run. When you run the build or deployment, an agent that meets these demands will be chosen.
 
@@ -39,7 +39,7 @@ When you run a [job](phases.md), all the tasks are run in sequence, one after th
 
 ## Custom tasks
 
-We provide some [built-in tasks](../tasks/index.md) 
+We provide some [built-in tasks](../tasks/index.md)
 to enable fundamental build and deployment scenarios. We have also
 provided guidance for [creating your own custom task](../../extend/develop/add-build-task.md).
 
@@ -57,12 +57,13 @@ name for the custom task to avoid this risk:
 
 ```yaml
 steps:
-- task: myPublisherId.myExtensionId.myContributionId.myTaskName@1
+  - task: myPublisherId.myExtensionId.myContributionId.myTaskName@1
 ```
 
 ::: moniker-end
 
 <a name="taskversions"></a>
+
 ## Task versions
 
 Tasks are versioned, and you must specify the major version of the task used in your
@@ -77,6 +78,7 @@ until you edit the pipeline and manually change to the new major version.
 The build or release log will include an alert that a new major version is available.
 
 #### [YAML](#tab/yaml/)
+
 ::: moniker range=">= azure-devops-2019"
 
 In YAML, you specify the major version using `@` in the task name.
@@ -84,7 +86,7 @@ For example, to pin to version 2 of the `PublishTestResults` task:
 
 ```yaml
 steps:
-- task: PublishTestResults@2
+  - task: PublishTestResults@2
 ```
 
 ::: moniker-end
@@ -96,6 +98,7 @@ YAML pipelines aren't available in TFS.
 ::: moniker-end
 
 #### [Classic](#tab/classic/)
+
 Each task in a pipeline has a **Version** selector to let you choose the version you want.
 
 If you select a preview version (such as **1.\* Preview**), be aware that this
@@ -106,7 +109,7 @@ The ability to restore to an older version of a release pipeline is not currentl
 
 Consider cloning the pipeline and testing the cloned pipeline with the new major task version.
 
-* * *
+---
 
 <a name="controloptions"></a>
 
@@ -121,12 +124,12 @@ Each task offers you some **Control Options**.
 Control options are available as keys on the `task` section.
 
 ```yaml
-- task: string  # reference to a task and version, e.g. "VSBuild@1"
-  condition: expression     # see below
-  continueOnError: boolean  # 'true' if future steps should run even if this step fails; defaults to 'false'
-  enabled: boolean          # whether or not to run this step; defaults to 'true'
-  timeoutInMinutes: number  # how long to wait before timing out the task
-  target: string            # 'host' or the name of a container resource to target
+- task: string # reference to a task and version, e.g. "VSBuild@1"
+  condition: expression # see below
+  continueOnError: boolean # 'true' if future steps should run even if this step fails; defaults to 'false'
+  enabled: boolean # whether or not to run this step; defaults to 'true'
+  timeoutInMinutes: number # how long to wait before timing out the task
+  target: string # 'host' or the name of a container resource to target
 ```
 
 The timeout period begins when the task starts running. It does not include the
@@ -136,24 +139,24 @@ In this YAML, `PublishTestResults@2` will run even if the previous step fails be
 
 ```yaml
 steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.7'
-    architecture: 'x64'
-- task: PublishTestResults@2
-  inputs:
-    testResultsFiles: "**/TEST-*.xml"
-  condition: succeededOrFailed()
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: "3.7"
+      architecture: "x64"
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFiles: "**/TEST-*.xml"
+    condition: succeededOrFailed()
 ```
 
 > [!NOTE]
 > For the full schema, see [YAML schema for `task`](../yaml-schema.md#task).
 
-
 ### Conditions
 
 [!INCLUDE [include](includes/task-run-built-in-conditions.md)]
-* [Custom conditions](conditions.md) which are composed of [expressions](expressions.md)
+
+- [Custom conditions](conditions.md) which are composed of [expressions](expressions.md)
 
 ### Step target
 
@@ -165,14 +168,14 @@ For example:
 ```yaml
 resources:
   containers:
-  - container: pycontainer
-    image: python:3.8
+    - container: pycontainer
+      image: python:3.8
 
 steps:
-- task: SampleTask@1
-  target: host
-- task: AnotherTask@1
-  target: pycontainer
+  - task: SampleTask@1
+    target: host
+  - task: AnotherTask@1
+    target: pycontainer
 ```
 
 Here, the `SampleTask` runs on the host and `AnotherTask` runs in a container.
@@ -213,7 +216,8 @@ Select this option if you want subsequent tasks in the same job to possibly run 
 Select the condition for running this task:
 
 [!INCLUDE [include](includes/task-run-built-in-conditions.md)]
-* [Custom conditions](conditions.md) which are composed of [expressions](expressions.md)
+
+- [Custom conditions](conditions.md) which are composed of [expressions](expressions.md)
 
 > [!NOTE]
 > If you're running tasks in cases when the build is canceled, then make sure you specify sufficient time for these tasks to run the [pipeline options](../process/phases.md#timeouts).
@@ -228,14 +232,15 @@ Select this option if you want subsequent tasks in the same job to run even if t
 
 Select this check box if you want the task to run even if the build or deployment is failing.
 
-* * *
+---
+
 <h2 id="tool-installers">Build tool installers (Azure Pipelines)</h2>
 
 Tool installers enable your build pipeline to install and control your dependencies. Specifically, you can:
 
-* Install a tool or runtime on the fly (even on [Microsoft-hosted agents](../agents/hosted.md)) just in time for your CI build.
+- Install a tool or runtime on the fly (even on [Microsoft-hosted agents](../agents/hosted.md)) just in time for your CI build.
 
-* Validate your app or library against multiple versions of a dependency such as Node.js.
+- Validate your app or library against multiple versions of a dependency such as Node.js.
 
 For example, you can set up your build pipeline to run and validate your app for multiple versions of Node.js.
 
@@ -245,22 +250,23 @@ For example, you can set up your build pipeline to run and validate your app for
 > Want a visual walkthrough? See [our April 19 news release](../archive/news/2017.md#april-19).
 
 #### [YAML](#tab/yaml/)
+
 ::: moniker range=">= azure-devops-2019"
 
 Create an azure-pipelines.yml file in your project's base directory with the following contents.
 
 ```yaml
 pool:
-  vmImage: 'Ubuntu 16.04'
+  vmImage: "Ubuntu 16.04"
 
 steps:
-# Node install
-- task: NodeTool@0
-  displayName: Node install
-  inputs:
-    versionSpec: '6.x' # The version we're installing
-# Write the installed version to the command line
-- script: which node
+  # Node install
+  - task: NodeTool@0
+    displayName: Node install
+    inputs:
+      versionSpec: "6.x" # The version we're installing
+  # Write the installed version to the command line
+  - script: which node
 ```
 
 [Create a new build pipeline](../create-first-pipeline.md) and run it. Observe how the build is run.
@@ -296,7 +302,7 @@ Add these tasks:
 
 ![icon](../tasks/tool/media/node.png) Tool: Node.js Installer
 
-* Version Spec: 
+- Version Spec:
 
   ```
   $(NodeVersionSpec)
@@ -304,12 +310,13 @@ Add these tasks:
 
 ![icon](../tasks/utility/media/command-line.png) Utility: Command Line
 
-* Script (if you're running on a Windows agent)
+- Script (if you're running on a Windows agent)
+
   ```
   where node
   ```
 
-* Script (if you're running on a macOS or Linux agent)
+- Script (if you're running on a macOS or Linux agent)
   ```
   which node
   ```
@@ -318,15 +325,15 @@ Add these tasks:
 
 On the [Variables tab](../build/variables.md) define this variable:
 
-|Name|Value|Settable at queue time|
-|-|-|-|
-|```NodeVersionSpec```|```6.x, 7.x```|Selected|
+| Name              | Value      | Settable at queue time |
+| ----------------- | ---------- | ---------------------- |
+| `NodeVersionSpec` | `6.x, 7.x` | Selected               |
 
 #### Save & queue
 
 Click **Save & queue**. Observe how two builds are run. The [Node.js Tool Installer](../tasks/tool/node-js.md) downloads each of the Node.js versions if they are not already on the agent. The [Command Line](../tasks/utility/command-line.md) task logs the location of the Node.js version on disk.
 
-* * *
+---
 
 ### Tool installer tasks
 
@@ -334,8 +341,8 @@ For a list of our tool installer tasks, see [Tool installer tasks](../tasks/inde
 
 ## Related articles
 
-* [Jobs](phases.md)
-* [Task groups](../library/task-groups.md)
-* [Built-in task catalog](../tasks/index.md)
+- [Jobs](phases.md)
+- [Task groups](../library/task-groups.md)
+- [Built-in task catalog](../tasks/index.md)
 
 [!INCLUDE [rm-help-support-shared](../includes/rm-help-support-shared.md)]

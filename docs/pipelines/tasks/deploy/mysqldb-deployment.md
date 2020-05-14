@@ -6,7 +6,7 @@ ms.assetid: 6D557DD5-9373-47AD-AA2E-72B6DE264F66
 ms.author: ronai
 author: RoopeshNair
 ms.date: 05/2/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # MySql Database Deployment on Machine Group task
@@ -57,4 +57,3 @@ steps:
 ## Open source
 
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
-

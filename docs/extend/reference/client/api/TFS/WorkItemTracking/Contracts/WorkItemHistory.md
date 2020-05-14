@@ -17,11 +17,10 @@ Extends: [WorkItemTrackingResource](../../../TFS/WorkItemTracking/Contracts/Work
 
 ### Members
 
-* `rev`: number. 
+- `rev`: number.
 
-* `revisedBy`: [IdentityReference](../../../TFS/WorkItemTracking/Contracts/IdentityReference.md). 
+- `revisedBy`: [IdentityReference](../../../TFS/WorkItemTracking/Contracts/IdentityReference.md).
 
-* `revisedDate`: Date. 
+- `revisedDate`: Date.
 
-* `value`: string. 
-
+- `value`: string.

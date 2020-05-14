@@ -1,15 +1,15 @@
 ---
 title: Sign up, sign in, invite teammates
 titleSuffix: Azure DevOps Services
-ms.custom: seodec18  
+ms.custom: seodec18
 description: Quickstart guide to signing up and inviting others to join a project in Azure DevOps
-ms.technology: devops-new-user 
+ms.technology: devops-new-user
 ms.topic: quickstart
-ms.assetid: 
+ms.assetid:
 ms.author: chcomley
 author: chcomley
 ms.date: 05/15/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Quickstart: Sign up, sign in to Azure DevOps
@@ -38,11 +38,8 @@ In this quickstart, you learn how to sign up for Azure DevOps for free, sign in 
 
 For more information about managing users and organization access, see [Add organization users for Azure DevOps](../organizations/accounts/add-organization-users.md).
 
-## Next steps  
- 
-> [!div class="nextstepaction"]
-> [Add code to your Git repository](code-with-git.md)
+## Next steps
+
+> [!div class="nextstepaction"][add code to your git repository](code-with-git.md)
 >
 > [Plan and track work](plan-track-work.md)
-
-

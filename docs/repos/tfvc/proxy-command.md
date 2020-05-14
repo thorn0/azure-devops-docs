@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Proxy Command
 
@@ -28,18 +27,18 @@ tf proxy ([/configure [Url]) [/collection:TeamProjectCollectionUrl]
 ```
 
 ```
-tf proxy /add Url [/name:Name] [/site:SiteName] 
-[/description:Description] [/default:(global|site|all)] 
-[/collection:TeamProjectCollectionUrl] [/login:UserName,[Password]] 
+tf proxy /add Url [/name:Name] [/site:SiteName]
+[/description:Description] [/default:(global|site|all)]
+[/collection:TeamProjectCollectionUrl] [/login:UserName,[Password]]
 ```
 
 ```
 tf proxy /delete Url [/collection:TeamProjectCollectionUrl]
-[/login:UserName,[Password]] 
+[/login:UserName,[Password]]
 ```
 
 ```
-tf proxy /list [Url1 Yrl2 ...] 
+tf proxy /list [Url1 Yrl2 ...]
 [/collection:TeamProjectCollectionUrl] [/login:UserName,[Password]]
 ```
 
@@ -103,6 +102,7 @@ tf proxy /enabled:(true|false)
 </table>
 
 ## Remarks
+
 The proxy command has two purposes, and each purpose is aimed at a different type of user.
 
 As a developer, you can use the proxy command to configure your client to use a proxy server or to override the network defaults for a proxy server. This task is similar to configuring Team Explorer to use a proxy.
@@ -110,7 +110,9 @@ As a developer, you can use the proxy command to configure your client to use a 
 As a network administrator, you can use the proxy command to add and manage records about the location of various proxy servers within your deployment of Team Foundation Server. You can use these records to help developers configure their workstations to use a proxy. If you define a global proxy, Team Foundation Server can automatically redirect developers to use it. If you have a complex network topology with multiple Active Directory domains in various geographic locations, you can set up multiple records and associate each record with a particular domain. These records can then help you automatically direct developers from each geographical location to the appropriate proxy for their location.
 
 For more information about how to find the **tf** command-line utility, see [Tf Command-Line Utility Commands](https://msdn.microsoft.com/library/z51z7zy0).
+
 ## Examples
+
 The following example automatically detects and configures a client computer to use a proxy, if a proxy record has been established:
 
 ```

@@ -1,22 +1,22 @@
 ---
-title: Rate and service limits 
+title: Rate and service limits
 titleSuffix: Azure DevOps Services Public Project
-description: Terms of service  
+description: Terms of service
 ms.technology: devops-public-projects
 ms.assetid:
-ms.reviewer: 
+ms.reviewer:
 ms.author: chcomley
 author: chcomley
 ms.topic: quickstart
 ms.date: 07/02/2018
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
-# Quickstart: Review rate and service limits 
+# Quickstart: Review rate and service limits
 
-[!INCLUDE [temp](includes/version-public-projects.md)]  
+[!INCLUDE [temp](includes/version-public-projects.md)]
 
-In this quickstart, you learn which service limits and rate that your public projects are subject to. 
+In this quickstart, you learn which service limits and rate that your public projects are subject to.
 
 <!---
 ## Pipelines
@@ -26,42 +26,40 @@ TBD
 -->
 
 ## Work items
+
 - A long text field can contain 1M characters.
 - You can't assign more than 100 tags to a work item.
 - You can't add more than 1,000 links to a work item.
 - You can't add more than 100 attachments to a work item.
 - You can't add an attachment size larger than 60 MB to a work item.
 
-
-## Custom work tracking 
+## Custom work tracking
 
 You can customize work tracking objects subject to the limits summarized in the following table. You define these objects through an inheritance process. To learn more, see [Customize a project using an inherited process](../settings/work/customize-process.md).
 
-
 > [!div class="mx-tdCol2BreakAll"]
-> |Object | Inheritance | 
+> |Object | Inheritance |
 > |-------|------------:|
-> | Work item types defined for a process | 64  |
-> | Fields defined for an account | 4096  | 
-> | Fields defined for a process | 512  | 
-> | Fields defined for a work item type | 512  |
-> | Pick lists defined for an account or collection | 512  | 
-> | Pick list items defined for a list | 512  | 
-> | Pick list item character length | 256  | 
-> | Workflow states defined for a work item type | 32  |
-> | Rules defined for a work item type | 1024  |
-> | Portfolio backlog levels defined for a process| 5  |
+> | Work item types defined for a process | 64 |
+> | Fields defined for an account | 4096 |
+> | Fields defined for a process | 512 |
+> | Fields defined for a work item type | 512 |
+> | Pick lists defined for an account or collection | 512 |
+> | Pick list items defined for a list | 512 |
+> | Pick list item character length | 256 |
+> | Workflow states defined for a work item type | 32 |
+> | Rules defined for a work item type | 1024 |
+> | Portfolio backlog levels defined for a process| 5 |
 
- 
 ## Wiki
 
-Wikis defined for a project are limited to 1 GB per git repository. 
+Wikis defined for a project are limited to 1 GB per git repository.
 
-> [!TIP]    
-> To derive the size of a wiki/git repository, download the repo to your local computer, unzip the file, and then open the **Properties** for the corresponding folder.  
+> [!TIP]  
+> To derive the size of a wiki/git repository, download the repo to your local computer, unzip the file, and then open the **Properties** for the corresponding folder.
 
-
-## Next steps 
+## Next steps
 
 > [!div class="nextstepaction"]
+>
 > - [Review work tracking object limits](../settings/work/object-limits.md)

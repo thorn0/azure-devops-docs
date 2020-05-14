@@ -9,10 +9,8 @@ author: ramiMSFT
 ms.topic: conceptual
 ms.reviewer: dastahel
 ms.date: 01/31/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
-
- 
 
 # Install Maven artifacts using Azure DevOps Services and TFS
 
@@ -20,8 +18,8 @@ monikerRange: '>= tfs-2018'
 
 [!INCLUDE [](../includes/maven/install.md)]
 
-	
 **Sample `pom.xml`:**
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">

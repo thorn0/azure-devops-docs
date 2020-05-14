@@ -15,6 +15,6 @@ Module path: `TFS/Work/Contracts`
 
 ### Values
 
-* `Incoming` 
-* `InProgress` 
-* `Outgoing` 
+- `Incoming`
+- `InProgress`
+- `Outgoing`

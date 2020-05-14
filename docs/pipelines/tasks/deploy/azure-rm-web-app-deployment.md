@@ -8,7 +8,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 04/22/2020
-monikerRange: '> tfs-2018'
+monikerRange: "> tfs-2018"
 ---
 
 # Azure App Service Deploy task
@@ -16,7 +16,7 @@ monikerRange: '> tfs-2018'
 **Azure Pipelines**
 
 Use this task to deploy to a range of App Services on Azure.
-The task works on cross-platform agents running Windows, Linux, or Mac 
+The task works on cross-platform agents running Windows, Linux, or Mac
 and uses several different [underlying deployment technologies](#deploy-methods).
 
 The task works for [ASP.NET](../../apps/aspnet/build-aspnet-4.md),
@@ -29,24 +29,24 @@ The task works for [ASP.NET](../../apps/aspnet/build-aspnet-4.md),
 
 The task can be used to deploy to a range of Azure App Services such as:
 
-* [Web Apps on both Windows and Linux](https://azure.microsoft.com/documentation/articles/app-service-web-overview/)
-* [Web Apps for Containers](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro)
-* [Function Apps on both Windows and Linux](https://docs.microsoft.com/azure/azure-functions/)
-* [Function Apps for Containers](https://docs.microsoft.com/azure/azure-functions/)
-* [WebJobs](https://azure.microsoft.com/blog/webjobs-goes-into-full-production/)
-* Apps configured under [Azure App Service Environments](https://docs.microsoft.com/azure/app-service/environment/intro)
+- [Web Apps on both Windows and Linux](https://azure.microsoft.com/documentation/articles/app-service-web-overview/)
+- [Web Apps for Containers](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro)
+- [Function Apps on both Windows and Linux](https://docs.microsoft.com/azure/azure-functions/)
+- [Function Apps for Containers](https://docs.microsoft.com/azure/azure-functions/)
+- [WebJobs](https://azure.microsoft.com/blog/webjobs-goes-into-full-production/)
+- Apps configured under [Azure App Service Environments](https://docs.microsoft.com/azure/app-service/environment/intro)
 
 ## Prerequisites for the task
 
 The following prerequisites must be set up in the target machine(s) for the task to work correctly.
 
-* **App Service instance**. The task is used to deploy a Web App project or Azure Function project to an existing Azure App Service instance, which must exist before the task runs.
+- **App Service instance**. The task is used to deploy a Web App project or Azure Function project to an existing Azure App Service instance, which must exist before the task runs.
   The App Service instance can be created from the [Azure portal](https://azure.microsoft.com/documentation/videos/azure-app-service-web-apps-with-yochay-kiriaty/)
   and [configured](https://azure.microsoft.com/documentation/articles/web-sites-configure/) there.
   Alternatively, the [Azure PowerShell task](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzurePowerShellV2) can be used to run
   [AzureRM PowerShell scripts](/powershell/module/azurerm.websites) to provision and configure the Web App.
 
-* **Azure Subscription**. To deploy to Azure, an Azure subscription must be [linked to the pipeline](../../library/connect-to-azure.md).
+- **Azure Subscription**. To deploy to Azure, an Azure subscription must be [linked to the pipeline](../../library/connect-to-azure.md).
   The task does not work with the Azure Classic service connection, and it will not list these connections in the settings of the task.
 
 <table><thead><tr><th>Parameters</th><th>Description</th></tr></thead>
@@ -110,11 +110,12 @@ steps:
     DockerRepository: $(DockerRepository)
     DockerImageTag: $(Build.BuildId)
 ```
-* To deploy to a specific app type, set <code>appType</code> to any of the following accepted values:  <code>webApp</code> (Web App on Windows), <code>webAppLinux</code> (Web App on Linux), <code>webAppContainer</code> (Web App for Containers - Linux), <code>functionApp</code> (Function App on Windows), 
-<code>functionAppLinux</code> (Function App on Linux), <code>functionAppContainer</code> (Function App for Containers - Linux), <code>apiApp</code> (API App), <code>mobileApp</code> (Mobile App).
-If not mentioned, <code>webApp</code> is taken as the default value.
 
-* To enable any advance deployment options, add the parameter <code>enableCustomDeployment: true</code> and include the below parameters as needed.
+- To deploy to a specific app type, set <code>appType</code> to any of the following accepted values: <code>webApp</code> (Web App on Windows), <code>webAppLinux</code> (Web App on Linux), <code>webAppContainer</code> (Web App for Containers - Linux), <code>functionApp</code> (Function App on Windows),
+  <code>functionAppLinux</code> (Function App on Linux), <code>functionAppContainer</code> (Function App for Containers - Linux), <code>apiApp</code> (API App), <code>mobileApp</code> (Mobile App).
+  If not mentioned, <code>webApp</code> is taken as the default value.
+
+- To enable any advance deployment options, add the parameter <code>enableCustomDeployment: true</code> and include the below parameters as needed.
 
   ```YAML
       # deploymentMethod: 'runFromPackage' # supports zipDeploy as well
@@ -126,20 +127,19 @@ If not mentioned, <code>webApp</code> is taken as the default value.
 
 ## Output Variables
 
-* **Web App Hosted URL:** Provide a name, such as `FabrikamWebAppURL`, for the variable populated with the Azure App Service Hosted URL.
-  The variable can be used as **$(_variableName_.AppServiceApplicationUrl)**, for example `$(FabrikamWebAppURL.AppServiceApplicationUrl)`, to refer to the hosted URL of the Azure App Service
+- **Web App Hosted URL:** Provide a name, such as `FabrikamWebAppURL`, for the variable populated with the Azure App Service Hosted URL.
+  The variable can be used as **\$(_variableName_.AppServiceApplicationUrl)**, for example `$(FabrikamWebAppURL.AppServiceApplicationUrl)`, to refer to the hosted URL of the Azure App Service
   in subsequent tasks.
 
 ## Usage notes
 
-
-* The task works with the [Azure Resource Manager APIs](https://msdn.microsoft.com/library/azure/dn790568.aspx) only.
-* To ignore SSL errors, define a variable named `VSTS_ARM_REST_IGNORE_SSL_ERRORS` with value `true` in the release pipeline.
-* For .NET apps targeting Web App on Windows, avoid deployment failure with the error `ERROR_FILE_IN_USE` by ensuring that
+- The task works with the [Azure Resource Manager APIs](https://msdn.microsoft.com/library/azure/dn790568.aspx) only.
+- To ignore SSL errors, define a variable named `VSTS_ARM_REST_IGNORE_SSL_ERRORS` with value `true` in the release pipeline.
+- For .NET apps targeting Web App on Windows, avoid deployment failure with the error `ERROR_FILE_IN_USE` by ensuring that
   **Rename locked files** and **Take App Offline** settings are enabled. For zero downtime deployment, use the slot swap option.
-* When deploying to an App Service that has Application Insights configured, and you have enabled **Remove additional files at destination**,
-  ensure you also enable **Exclude files from the App\_Data folder** in order to maintain the Application insights extension in
-  a safe state. This is required because the Application Insights continuous web job is installed into the App\_Data folder. 
+- When deploying to an App Service that has Application Insights configured, and you have enabled **Remove additional files at destination**,
+  ensure you also enable **Exclude files from the App_Data folder** in order to maintain the Application insights extension in
+  a safe state. This is required because the Application Insights continuous web job is installed into the App_Data folder.
 
 <a name="sample-dep-script"></a>
 
@@ -192,12 +192,12 @@ to choose from additional package-based deployment options.
 
 Based on the type of Azure App Service and agent, the task chooses a suitable deployment technology. The different deployment technologies used by the task are:
 
-* [Web Deploy](#web-deploy-notes) 
-* [Kudu REST APIs](#kudu-notes)
-* [Container Registry](#acr-notes)
-* [Zip Deploy](#zip-deploy-notes)
-* [Run From Package](#runfromzip-notes)
-* [War Deploy](#wardeploy-notes)
+- [Web Deploy](#web-deploy-notes)
+- [Kudu REST APIs](#kudu-notes)
+- [Container Registry](#acr-notes)
+- [Zip Deploy](#zip-deploy-notes)
+- [Run From Package](#runfromzip-notes)
+- [War Deploy](#wardeploy-notes)
 
 By default, the task tries to select the appropriate deployment technology
 based on the input package type, App Service type, and agent operating system.
@@ -223,17 +223,17 @@ On non-Windows agents (for any App Service type), the task relies on
 or a Function App to the Azure App Service using a Windows agent.
 Web Deploy is feature-rich and offers options such as:
 
-* **Rename locked files:** Rename any file that is still in use by the web server by enabling the msdeploy flag
-  MSDEPLOY\_RENAME\_LOCKED\_FILES=1 in the Azure App Service settings.
+- **Rename locked files:** Rename any file that is still in use by the web server by enabling the msdeploy flag
+  MSDEPLOY_RENAME_LOCKED_FILES=1 in the Azure App Service settings.
   This option, if set, enables msdeploy to rename files that are locked during app deployment.
 
-* **Remove additional files at destination:** Deletes files in the Azure App Service that have no matching files
+- **Remove additional files at destination:** Deletes files in the Azure App Service that have no matching files
   in the App Service artifact package or folder being deployed.
 
-* **Exclude files from the App\_Data folder:** Prevent files in the App\_Data folder (in the artifact package/folder being deployed)
+- **Exclude files from the App_Data folder:** Prevent files in the App_Data folder (in the artifact package/folder being deployed)
   being deployed to the Azure App Service
 
-* **Additional Web Deploy arguments:** Arguments that will be applied when deploying the Azure App Service.
+- **Additional Web Deploy arguments:** Arguments that will be applied when deploying the Azure App Service.
   Example: `-disableLink:AppPoolExtension -disableLink:ContentExtension`.
   For more examples of Web Deploy operation settings, see [Web Deploy Operation Settings](https://go.microsoft.com/fwlink/?linkid=838471).
 
@@ -287,33 +287,34 @@ Expects a .war deployment package and deploys the file content to the **wwwroot*
 
 This may be because web.config is not present in your app. You can either add a web.config file to your source or auto-generate one using the File Transforms and Variable Substitution Options of the task.
 
-* Click on the task and go to Generate web.config parameters for Python, Node.js, Go and Java apps.
+- Click on the task and go to Generate web.config parameters for Python, Node.js, Go and Java apps.
 
-    ![Generate web.config parameters Dialog](media/azure-rm-web-app-deployment-01.png)
+  ![Generate web.config parameters Dialog](media/azure-rm-web-app-deployment-01.png)
 
-* Click on the more button Generate web.config parameters for Python, Node.js, Go and Java apps to edit the parameters.
+- Click on the more button Generate web.config parameters for Python, Node.js, Go and Java apps to edit the parameters.
 
-    ![Drop Down Dialog](media/azure-rm-web-app-deployment-02.png)
+  ![Drop Down Dialog](media/azure-rm-web-app-deployment-02.png)
 
-* Select your application type from the drop down.
-* Click on OK. This will populate web.config parameters required to generate web.config.
+- Select your application type from the drop down.
+- Click on OK. This will populate web.config parameters required to generate web.config.
 
 ### ERROR_FILE_IN_USE
 
-When deploying .NET apps to Web App on Windows, deployment may fail with error code *ERROR_FILE_IN_USE*. To resolve the error, ensure *Rename locked files* and *Take App Offline* options are enabled in the task. For zero downtime deployments, use slot swap.
+When deploying .NET apps to Web App on Windows, deployment may fail with error code _ERROR_FILE_IN_USE_. To resolve the error, ensure _Rename locked files_ and _Take App Offline_ options are enabled in the task. For zero downtime deployments, use slot swap.
 
-You can also use *Run From Package deployment* method to avoid resource locking.
+You can also use _Run From Package deployment_ method to avoid resource locking.
 
 ### Web Deploy Error
 
 If you are using web deploy to deploy your app, in some error scenarios Web Deploy will show an error code in the log. To troubleshoot a web deploy error see [this](https://docs.microsoft.com/iis/publish/troubleshooting-web-deploy/web-deploy-error-codes).
 
 ### Web app deployment on App Service Environment (ASE) is not working
-* Ensure that the Azure DevOps build agent is on the same VNET (subnet can be different) as the Internal Load Balancer (ILB) of  ASE. This will enable the agent to pull code from Azure DevOps and deploy to ASE. 
-* If you are using Azure DevOps, the agent neednt be accessible from internet but needs only outbound access to connect to Azure DevOps Service. 
-* If you are using TFS/Azure DevOps Server deployed in a Virtual Network, the agent can be completely isolated.
-* Build agent must be configured with the DNS configuration of the Web App it needs to deploy to. Since the private resources in the Virtual Network don't have entries in Azure DNS, this needs to be added to the hosts file on the agent machine.
-* If a self-signed certificate is used for the ASE configuration, "-allowUntrusted" option needs to be set in the deploy task for MSDeploy.It is also recommended to set the variable VSTS_ARM_REST_IGNORE_SSL_ERRORS to true. If a certificate from a certificate authority is used for ASE configuration, this should not be necessary.
+
+- Ensure that the Azure DevOps build agent is on the same VNET (subnet can be different) as the Internal Load Balancer (ILB) of ASE. This will enable the agent to pull code from Azure DevOps and deploy to ASE.
+- If you are using Azure DevOps, the agent neednt be accessible from internet but needs only outbound access to connect to Azure DevOps Service.
+- If you are using TFS/Azure DevOps Server deployed in a Virtual Network, the agent can be completely isolated.
+- Build agent must be configured with the DNS configuration of the Web App it needs to deploy to. Since the private resources in the Virtual Network don't have entries in Azure DNS, this needs to be added to the hosts file on the agent machine.
+- If a self-signed certificate is used for the ASE configuration, "-allowUntrusted" option needs to be set in the deploy task for MSDeploy.It is also recommended to set the variable VSTS_ARM_REST_IGNORE_SSL_ERRORS to true. If a certificate from a certificate authority is used for ASE configuration, this should not be necessary.
 
 ## FAQs
 

@@ -9,7 +9,7 @@ description: In the **Sprint 163 Update** of Azure DevOps, we've added release a
 
 # Release and pipelines events available in the audit logs - Sprint 163 Update
 
-In the **Sprint 163 Update** of Azure DevOps, we've added release and pipelines events to the audit logs. In addition, you can now use service connections to reference repositories in another organization in a YAML pipeline. 
+In the **Sprint 163 Update** of Azure DevOps, we've added release and pipelines events to the audit logs. In addition, you can now use service connections to reference repositories in another organization in a YAML pipeline.
 
 Check out the [Features](#features) list below for more.
 
@@ -41,15 +41,13 @@ Check out the [Features](#features) list below for more.
 
 Head over to Azure DevOps and take a look.
 
-> [!div class="nextstepaction"]
-> [Go to Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
+> [!div class="nextstepaction"][go to azure devops](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
 
 ## Feedback
 
 We would love to hear what you think about these features. Use the help menu to report a problem or provide a suggestion.
 
-> [!div class="mx-imgBorder"]
-> ![Make a suggestion](../media/make-a-suggestion.png)
+> [!div class="mx-imgBorder"] > ![Make a suggestion](../media/make-a-suggestion.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-devops).
 

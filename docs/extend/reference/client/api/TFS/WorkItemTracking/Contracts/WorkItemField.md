@@ -17,13 +17,12 @@ Extends: [WorkItemTrackingResource](../../../TFS/WorkItemTracking/Contracts/Work
 
 ### Members
 
-* `name`: string. 
+- `name`: string.
 
-* `readOnly`: boolean. 
+- `readOnly`: boolean.
 
-* `referenceName`: string. 
+- `referenceName`: string.
 
-* `supportedOperations`: [WorkItemFieldOperation](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldOperation.md)[]. 
+- `supportedOperations`: [WorkItemFieldOperation](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldOperation.md)[].
 
-* `type`: [FieldType](../../../TFS/WorkItemTracking/Contracts/FieldType.md). 
-
+- `type`: [FieldType](../../../TFS/WorkItemTracking/Contracts/FieldType.md).

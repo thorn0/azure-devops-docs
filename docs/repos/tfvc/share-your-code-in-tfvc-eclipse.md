@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: quickstart
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Share your code in TFVC using Eclipse
 
@@ -23,6 +22,7 @@ Share your code with your team with Azure DevOps Services and Eclipse.
 If your project uses TFVC in your Azure DevOps organization, read on. However, if your project uses Git in your Azure DevOps organization,then read [Share your code in Git using Eclipse](../../repos/git/share-your-code-in-git-eclipse.md)
 
 <a name="tfvc"></a>
+
 ## Share using TFVC
 
 1. If you haven't yet, [Connect to Azure DevOps Services using Eclipse](../../organizations/projects/connect-to-projects.md).
@@ -47,7 +47,4 @@ Your code is in TFVC, so now your teammates can contribute.
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Build your Eclipse projects](../../pipelines/apps/java/build-maven.md)
-
-
+> [!div class="nextstepaction"][build your eclipse projects](../../pipelines/apps/java/build-maven.md)

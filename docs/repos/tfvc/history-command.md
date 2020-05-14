@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # History command
 
@@ -21,8 +20,8 @@ Displays the revision history of one or more files or folders. The data is displ
 **Requirements:** See [Permissions and groups reference](../../organizations/security/permissions.md).
 
 ```
-tf hist[ory] itemspec [/version:versionspec] 
-[/stopafter:number] [/recursive] [/user:username] 
+tf hist[ory] itemspec [/version:versionspec]
+[/stopafter:number] [/recursive] [/user:username]
 [/format:(brief|detailed)] [/slotmode] [/itemmode] [/noprompt]
 [/login:username,[password]] [/sort:ascending,descending]
 [/collection:TeamProjectCollectionUrl]
@@ -128,9 +127,9 @@ Displays all changes made to program.cs in the command prompt window. For exampl
 
 ```
 Changeset Change                     User              Date       Comment
---------- -------------------------- ----------------- ---------- -------- 
+--------- -------------------------- ----------------- ---------- --------
 29        edit                       Jamal Hartnett    4/23/2012  Fix bug
-20        add                        Raisa Pokrovskaya 4/12/2012  Add new  
+20        add                        Raisa Pokrovskaya 4/12/2012  Add new
 ```
 
 ### Get history of all items in a folder
@@ -210,7 +209,7 @@ Changeset User              Date       Comment
 --------- ----------------- ---------- ----------------------------------------
 30        Raisa Pokrovskaya 4/23/2012
 29        Jamal Hartnett    4/23/2012  Fix bug in new method
-20        Raisa Pokrovskaya 4/12/2012  Add new method, add program2.cs to 
+20        Raisa Pokrovskaya 4/12/2012  Add new method, add program2.cs to
 ```
 
 ### Get detailed history
@@ -285,20 +284,20 @@ Displays the most recent change to the SolutionA folder in the command prompt wi
 
 ## Work in Visual Studio
 
--    [Get the history of an item](get-history-item.md)  Use Visual Studio to get revision history.
+- [Get the history of an item](get-history-item.md) Use Visual Studio to get revision history.
 
 ## Tips
 
--   ![Tip](media/history-command/IC572374.png) For information about how to use the **History** window, see [Get the history of an item](get-history-item.md).
+- ![Tip](media/history-command/IC572374.png) For information about how to use the **History** window, see [Get the history of an item](get-history-item.md).
 
--   ![Tip](media/history-command/IC572374.png) To get more detailed information about a changeset (for example, you want to see associated work items):
+- ![Tip](media/history-command/IC572374.png) To get more detailed information about a changeset (for example, you want to see associated work items):
 
-    -   In the History window, double-click the changeset or open its context menu and choose **Changeset Details**.
+  - In the History window, double-click the changeset or open its context menu and choose **Changeset Details**.
 
-    -   From the command prompt, use the [Changeset Command](changeset-command.md).
+  - From the command prompt, use the [Changeset Command](changeset-command.md).
 
--   ![Tip](media/history-command/IC572374.png) For more information about changesets, see [Find and view changesets](find-view-changesets.md).
+- ![Tip](media/history-command/IC572374.png) For more information about changesets, see [Find and view changesets](find-view-changesets.md).
 
--   ![Tip](media/history-command/IC572374.png) The **/collection** option is useful for running this command from a machine and user account that does not have a workspace mapped to the Project Collection that contains the items.
+- ![Tip](media/history-command/IC572374.png) The **/collection** option is useful for running this command from a machine and user account that does not have a workspace mapped to the Project Collection that contains the items.
 
--   ![Tip](media/history-command/IC572374.png) See [View and manage past versions](view-manage-past-versions.md).
+- ![Tip](media/history-command/IC572374.png) See [View and manage past versions](view-manage-past-versions.md).

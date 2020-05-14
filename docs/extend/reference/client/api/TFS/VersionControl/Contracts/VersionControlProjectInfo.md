@@ -13,14 +13,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `defaultSourceControlType`: [TFS_Core_Contracts.SourceControlTypes](../../../TFS/Core/Contracts/SourceControlTypes.md). 
+- `defaultSourceControlType`: [TFS_Core_Contracts.SourceControlTypes](../../../TFS/Core/Contracts/SourceControlTypes.md).
 
-* `project`: [TFS_Core_Contracts.TeamProjectReference](../../../TFS/DistributedTask/Contracts/TeamProjectReference.md). 
+- `project`: [TFS_Core_Contracts.TeamProjectReference](../../../TFS/DistributedTask/Contracts/TeamProjectReference.md).
 
-* `supportsGit`: boolean. 
+- `supportsGit`: boolean.
 
-* `supportsTFVC`: boolean. 
-
+- `supportsTFVC`: boolean.

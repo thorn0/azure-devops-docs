@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Get command
 
@@ -108,7 +107,7 @@ c:\code\SiteApp\Main\SolutionA\Project1>tf get *.cs /recursive
 
 Gets the latest version of all C\# (.cs) files in `c:\\code\\SiteApp\\Main\\SolutionA\\Project1`.
 
-###  Get the latest version of a file
+### Get the latest version of a file
 
 ```
 c:\code\SiteApp\Main\SolutionA\Project1>tf get program.cs
@@ -140,11 +139,11 @@ c:\code\SiteApp\Main>tf get /v:15
 
 Synchronizes the workspace to match the codebase as it existed when changeset 15 was created:
 
--   The name and content of every item in the workspace is changed to match the state it was in on the server.
+- The name and content of every item in the workspace is changed to match the state it was in on the server.
 
--   Items that were deleted after that changeset are restored to the workspace.
+- Items that were deleted after that changeset are restored to the workspace.
 
--   Items that were added after that changeset are deleted from the workspace.
+- Items that were added after that changeset are deleted from the workspace.
 
 ### Synchronize a workspace to match a labeled version of the team's codebase
 
@@ -154,24 +153,24 @@ c:\code\SiteApp\Main>tf get /v:LLastKnownGood
 
 Synchronizes the workspace to match the items in the codebase that are [labeled](use-labels-take-snapshot-your-files.md) **LastKnownGood**:
 
--   The name and content of every labeled item in the workspace is changed to match the state it was in on the server.
+- The name and content of every labeled item in the workspace is changed to match the state it was in on the server.
 
--   Labeled items that were deleted are restored to the workspace.
+- Labeled items that were deleted are restored to the workspace.
 
--   Items that are not labeled on the server are deleted from the workspace.
+- Items that are not labeled on the server are deleted from the workspace.
 
 ## Work in Visual Studio
 
--    [Download (get) files from the Server](download-get-files-from-server.md)  Use Visual Studio to get files and folders.
+- [Download (get) files from the Server](download-get-files-from-server.md) Use Visual Studio to get files and folders.
 
 ## Tips
 
--   ![Tip](media/get-command/IC572374.png) If you are beginning a new task, it's probably a good idea for you to run `tf get` (you can do so from any directory in your workspace) to download the latest files from the server before you check out files and begin your work.
+- ![Tip](media/get-command/IC572374.png) If you are beginning a new task, it's probably a good idea for you to run `tf get` (you can do so from any directory in your workspace) to download the latest files from the server before you check out files and begin your work.
 
--   ![Tip](media/get-command/IC572374.png) As needed, this command creates folders on disk to contain the child items that the command is downloading.
+- ![Tip](media/get-command/IC572374.png) As needed, this command creates folders on disk to contain the child items that the command is downloading.
 
--   ![Tip](media/get-command/IC572374.png) You can view information about the history of an item using the [History command](history-command.md) and the [Changeset Command](changeset-command.md).
+- ![Tip](media/get-command/IC572374.png) You can view information about the history of an item using the [History command](history-command.md) and the [Changeset Command](changeset-command.md).
 
--   ![Tip](media/get-command/IC572374.png) If you are concerned about what changes might occur to the files in the workspace, you can use the **/preview** option to see the changes that would occur without actually implementing them.
+- ![Tip](media/get-command/IC572374.png) If you are concerned about what changes might occur to the files in the workspace, you can use the **/preview** option to see the changes that would occur without actually implementing them.
 
--   ![Tip](media/get-command/IC572374.png) Conflicts could block your get. A typical cause of conflicts is trying to get an item on which you have pending changes. You can use the [Resolve Command](resolve-command.md) to resolve these conflicts.
+- ![Tip](media/get-command/IC572374.png) Conflicts could block your get. A typical cause of conflicts is trying to get an item on which you have pending changes. You can use the [Resolve Command](resolve-command.md) to resolve these conflicts.

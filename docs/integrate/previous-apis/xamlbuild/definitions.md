@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Build Definitions (XAML Build) | REST API Reference for Team Foundation Server
 description: Get build definitions programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: d0424288-2fbd-4a65-8a60-0d272a42eca7
@@ -24,14 +24,16 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/{project}/_apis/build/definitions?api-version={version}[&projectName={string}]
 ```
 
-| Parameter     | Type   | Notes
-|:--------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string | TFS server name ({server:port}).
-| project       | string | [Project](../tfs/projects.md) ID or name.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
 | Query
-| api-version   | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| projectName   | string | Name of the project that contains the build definitions.<br/>Wildcards (*) are supported.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| projectName | string | Name of the project that contains the build definitions.<br/>Wildcards (\*) are supported.
 
 #### Sample request
 
@@ -95,21 +97,22 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
 }
 ```
 
-
 ## Get a build definition
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/build/definitions/{definitionId}?api-version={version}
 ```
 
-| Parameter    | Type   | Notes
-|:-------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance     | string | TFS server name ({server:port}).
-| project      | string | [Project](../tfs/projects.md) ID or name.
-| definitionId | int    | ID of the build definition.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| definitionId | int | ID of the build definition.
 | Query
-| api-version  | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -144,6 +147,3 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
   "url": "https://mytfsserver/DefaultCollection/6ce954b1-ce1f-45d1-b94d-e6bf2464ba2c/_apis/build/Definitions/3"
 }
 ```
-
-
-

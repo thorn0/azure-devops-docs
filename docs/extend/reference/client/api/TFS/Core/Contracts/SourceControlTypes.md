@@ -16,5 +16,5 @@ Module path: `TFS/Core/Contracts`
 
 ### Values
 
-* `Tfvc` 
-* `Git` 
+- `Tfvc`
+- `Git`

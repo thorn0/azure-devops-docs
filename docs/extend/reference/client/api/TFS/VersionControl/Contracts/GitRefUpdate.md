@@ -13,14 +13,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `name`: string. 
+- `name`: string.
 
-* `newObjectId`: string. 
+- `newObjectId`: string.
 
-* `oldObjectId`: string. 
+- `oldObjectId`: string.
 
-* `repositoryId`: string. 
-
+- `repositoryId`: string.

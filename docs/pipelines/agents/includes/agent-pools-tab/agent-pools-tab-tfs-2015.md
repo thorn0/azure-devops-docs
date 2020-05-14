@@ -7,7 +7,7 @@ author: steved0x
 ms.date: 02/12/2020
 ---
 
-1. Navigate to your project and choose **Manage project** (gear icon). 
+1. Navigate to your project and choose **Manage project** (gear icon).
 
    ![Manage project](../../media/agent-pools-tab/manage-project-2015.png)
 

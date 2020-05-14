@@ -12,7 +12,7 @@ ms.technology: devops-cicd-tasks
 # Download Azure Key Vault secrets
 - task: AzureKeyVault@1
   inputs:
-    azureSubscription: 
-    keyVaultName: 
+    azureSubscription:
+    keyVaultName:
     secretsFilter: '*'
 ```

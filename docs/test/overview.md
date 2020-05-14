@@ -7,38 +7,38 @@ ms.topic: overview
 ms.author: sdanie
 author: steved0x
 ms.date: 09/26/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Exploratory and manual testing scenarios and capabilities
 
 [!INCLUDE [version-header](includes/version-header.md)]
 
-Quality is a vital aspect of software systems, and manual testing 
+Quality is a vital aspect of software systems, and manual testing
 and exploratory testing continue to be an important techniques for maximizing this.
 In today's software development processes,
-everybody in the team owns quality - including developers, managers, 
+everybody in the team owns quality - including developers, managers,
 product owners, user experience advocates, and more.
 
 Azure DevOps and TFS provide rich and powerful
 tools everyone in the team can use to drive quality and collaboration
-throughout the development process. The easy-to-use, browser-based 
-test management solution provides all the capabilities required for 
+throughout the development process. The easy-to-use, browser-based
+test management solution provides all the capabilities required for
 planned manual testing, user acceptance testing, exploratory testing,
 and gathering feedback from stakeholders.
 
-* **[Planned manual testing](#manual-testing)**. Manual testing by organizing tests into test plans and test suites by designated testers and test leads.
+- **[Planned manual testing](#manual-testing)**. Manual testing by organizing tests into test plans and test suites by designated testers and test leads.
 
-* **[User acceptance testing](#user-acceptance)**. Testing carried out by designated user acceptance testers to verify the value delivered meets customer requirements, while reusing the test artifacts created by engineering teams. 
+- **[User acceptance testing](#user-acceptance)**. Testing carried out by designated user acceptance testers to verify the value delivered meets customer requirements, while reusing the test artifacts created by engineering teams.
 
-* **[Exploratory testing](#exploratory-testing)**. Testing carried out by development teams, including developers, testers, UX teams, product owners and more, by exploring the software systems without using test plans or test suites. 
+- **[Exploratory testing](#exploratory-testing)**. Testing carried out by development teams, including developers, testers, UX teams, product owners and more, by exploring the software systems without using test plans or test suites.
 
-* **[Stakeholder feedback](#stakeholder-feedback)**. Testing carried out by stakeholders outside the development team, such as users from marketing and sales divisions.  
+- **[Stakeholder feedback](#stakeholder-feedback)**. Testing carried out by stakeholders outside the development team, such as users from marketing and sales divisions.
 
 ![Holistic approach to manual testing, types of manual testing and personas involved](media/manual-testing/schematic-01.png)  
 &nbsp; &nbsp; **Holistic approach to manual testing, types of manual testing, and personas involved**
 
-[!INCLUDE [feature-availability](includes/feature-availability.md)] 
+[!INCLUDE [feature-availability](includes/feature-availability.md)]
 
 <a name="manual-testing"></a>
 
@@ -50,25 +50,25 @@ can begin manual testing right from their Kanban boards in the Work
 hub. Teams that need more advanced capabilities can use the Test
 hub for all their test management needs.
 
-Learn how to create tests plans and test cases, and run them using the Azure DevOps web portal. Use the Test &amp; Feedback extension to explore and find bugs in your apps. 
+Learn how to create tests plans and test cases, and run them using the Azure DevOps web portal. Use the Test &amp; Feedback extension to explore and find bugs in your apps.
 
-| | | |
-| --- | --- | --- |
-| ![icon](media/testplan-icon.png)<br />[Create a test plan](create-a-test-plan.md) | ![icon](media/testcases-icon.png)<br />[Create test cases](create-test-cases.md) | ![icon](media/runtests2-icon.png)<br />[Run manual tests](run-manual-tests.md) |
+|                                                                                                |                                                                                                            |                                                                                                               |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| ![icon](media/testplan-icon.png)<br />[Create a test plan](create-a-test-plan.md)              | ![icon](media/testcases-icon.png)<br />[Create test cases](create-test-cases.md)                           | ![icon](media/runtests2-icon.png)<br />[Run manual tests](run-manual-tests.md)                                |
 | ![icon](media/marketplace-icon.png)<br />[Install the extension](perform-exploratory-tests.md) | ![icon](media/connectedmode-icon.png)<br />[Test in Connected mode](connected-mode-exploratory-testing.md) | ![icon](media/standalonemode-icon.png)<br />[Test in Standalone mode](standalone-mode-exploratory-testing.md) |
-| | | |
+|                                                                                                |                                                                                                            |                                                                                                               |
 
 ## Videos
 
-| | |
-| --- | --- |
-| <iframe width="560" height="315" src="https://www.youtube.com/embed/u-fdqhxonPc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> | <iframe src="https://channel9.msdn.com/Series/Visual-Studio-ALM-Rangers-Demos/VS-Team-Services-Test-Case-Explorer-v2/player" width="560" height="315" allowFullScreen="true" frameBorder="0"></iframe> |
-| <iframe src="https://channel9.msdn.com/Series/Test-Tools-in-Visual-Studio/IntroducingTestFeedbackextension/player" width="560" height="315" allowFullScreen frameBorder="0"></iframe> | |
-| | |
+|                                                                                                                                                                                       |                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <iframe width="560" height="315" src="https://www.youtube.com/embed/u-fdqhxonPc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>                          | <iframe src="https://channel9.msdn.com/Series/Visual-Studio-ALM-Rangers-Demos/VS-Team-Services-Test-Case-Explorer-v2/player" width="560" height="315" allowFullScreen="true" frameBorder="0"></iframe> |
+| <iframe src="https://channel9.msdn.com/Series/Test-Tools-in-Visual-Studio/IntroducingTestFeedbackextension/player" width="560" height="315" allowFullScreen frameBorder="0"></iframe> |                                                                                                                                                                                                        |
+|                                                                                                                                                                                       |                                                                                                                                                                                                        |
 
 ## Manual testing from the Kanban board
 
-Get started with manual testing easily using the Kanban board in 
+Get started with manual testing easily using the Kanban board in
 the Work hub. Add, view, and interact with test cases directly
 from the cards on the Kanban board, and then progressively monitor
 status directly from the card. Developers and testers can use these
@@ -84,7 +84,7 @@ to use these features. See more at [Add, run, and update inline tests](../boards
 a rich test management solution for teams that need advanced manual
 testing capabilities. It includes all the capabilities
 required for the testing lifecycle - including test planning, authoring,
-execution, and tracking. Get started using the advanced manual 
+execution, and tracking. Get started using the advanced manual
 testing features with the
 [Test Manager extension for Azure Test Plans](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web).
 
@@ -100,7 +100,7 @@ See more at [Create test plans](create-a-test-plan.md)
 ### Test authoring
 
 Create multiple test cases in one operation, or easily add existing
-test cases to a test suite. Assign single or multiple testers to 
+test cases to a test suite. Assign single or multiple testers to
 execute the tests. View test results and references to a test case
 across test suites. See more at [Create test cases](create-test-cases.md).
 
@@ -150,7 +150,7 @@ user experience teams, and more. Collaborative testing processes and
 tools are the key factors in driving quality in these scenarios.
 
 The [Test &amp; Feedback extension](perform-exploratory-tests.md)
-is a simple browser-based extension you can use to test web apps 
+is a simple browser-based extension you can use to test web apps
 anytime and anywhere, and is simple enough for everyone in the team to use.
 It helps to improve productivity by allowing you to spend more time
 finding issues, and less time filing them.
@@ -160,31 +160,31 @@ finding issues, and less time filing them.
 Using the extension is a simple, three step process:
 
 ![Schematic showing process steps Capture, Create, Collaborate](media/perform-exploratory-tests/getstarted-05.png)
- 
-* **Capture your findings** quickly and easily using the tools in the extension. 
-  Capture notes, screenshots with annotations, and screen recordings 
-  to describe your findings and highlight issues. Additionally, in 
+
+- **Capture your findings** quickly and easily using the tools in the extension.
+  Capture notes, screenshots with annotations, and screen recordings
+  to describe your findings and highlight issues. Additionally, in
   the background the extension automatically captures rich data such
   as user actions as an image action log, page load data,
   and system information about the browser, operating system, memory,
-  and more that can serve as a starting point for debugging. 
+  and more that can serve as a starting point for debugging.
 
-* **Create work items** such as bugs, tasks, and test cases directly from 
-  the extension. The captured findings automatically become a part of the work item. 
+- **Create work items** such as bugs, tasks, and test cases directly from
+  the extension. The captured findings automatically become a part of the work item.
   Users can file a bug to report an issue with the product, or create a task that
-  indicates a new work requirement. The extension can also be used to 
-  create test cases for scenarios discovered during exploration. 
+  indicates a new work requirement. The extension can also be used to
+  create test cases for scenarios discovered during exploration.
 
-* **Collaborate with your team** by sharing your findings. 
+- **Collaborate with your team** by sharing your findings.
   Export your session report in Standalone mode, or connect to Azure DevOps or
   Team Foundation Server (2015 or later) for a fully integrated experience
-  including exploring user stories and backlog items, simplified tracking and triaging of 
+  including exploring user stories and backlog items, simplified tracking and triaging of
   bugs and tasks, and managing feedback requests in one place.
 
 As users perform exploratory testing, you can
-[get insights from the sessions](insights-exploratory-testing.md) in [!INCLUDE [test-hub-include-nolink](includes/test-hub-include-nolink.md)] of 
+[get insights from the sessions](insights-exploratory-testing.md) in [!INCLUDE [test-hub-include-nolink](includes/test-hub-include-nolink.md)] of
 Azure DevOps or TFS. View completed exploratory sessions and derive meaningful
-insights across all the sessions. Get end-to-end traceability such as a breakdown 
+insights across all the sessions. Get end-to-end traceability such as a breakdown
 of the work items created, the work items explored and not explored, session owners,
 and more.
 
@@ -199,29 +199,29 @@ feedback on their user stories and features. Stakeholders can respond
 to feedback requests using the browser-based Test &amp; Feedback extension -
 not just to rate and send comments, but also by capturing rich diagnostic
 data and filing bugs and tasks directly.
-See more at [Request stakeholder feedback](request-stakeholder-feedback.md) 
+See more at [Request stakeholder feedback](request-stakeholder-feedback.md)
 and [Provide stakeholder feedback](provide-stakeholder-feedback.md).
 
 ![Requesting and providing stakeholder feedback](media/manual-testing/stakeholder-feedback-01.png)
 
 ## Key benefits
 
-* **Test on any platform**. With [!INCLUDE [test-hub-include](includes/test-hub-include.md)], you can use your browser to access all the manual testing capabilities. It enables you to [create](create-test-cases.md) and [run manual tests](run-manual-tests.md) through an easy-to-use, web-based interface that can be accessed from all major browsers on any platform.
+- **Test on any platform**. With [!INCLUDE [test-hub-include](includes/test-hub-include.md)], you can use your browser to access all the manual testing capabilities. It enables you to [create](create-test-cases.md) and [run manual tests](run-manual-tests.md) through an easy-to-use, web-based interface that can be accessed from all major browsers on any platform.
 
-* **Rich Diagnostic data collection**. Using the web-based Test Runner and Test Runner client you can [collect rich diagnostic data](collect-diagnostic-data.md) during your tests. This includes screenshots, an image action log, screen recordings, code coverage, IntelliTrace traces, and test impact data for your apps under test. This data is automatically included in all the bugs you create during test, making it easy for developers to reproduce the issues.
+- **Rich Diagnostic data collection**. Using the web-based Test Runner and Test Runner client you can [collect rich diagnostic data](collect-diagnostic-data.md) during your tests. This includes screenshots, an image action log, screen recordings, code coverage, IntelliTrace traces, and test impact data for your apps under test. This data is automatically included in all the bugs you create during test, making it easy for developers to reproduce the issues.
 
-* **End to End Traceability**. Azure DevOps and TFS provide [end-to-end traceability of your requirements, builds, tests and bugs](../boards/queries/link-work-items-support-traceability.md?toc=/azure/devops/test/toc.json&bc=/azure/devops/test/breadcrumb/toc.json). Users can track their requirement quality from cards on the Kanban board. Bugs created while testing are automatically linked to the requirements and builds being tested, which helps you track the quality of the requirements or builds.
+- **End to End Traceability**. Azure DevOps and TFS provide [end-to-end traceability of your requirements, builds, tests and bugs](../boards/queries/link-work-items-support-traceability.md?toc=/azure/devops/test/toc.json&bc=/azure/devops/test/breadcrumb/toc.json). Users can track their requirement quality from cards on the Kanban board. Bugs created while testing are automatically linked to the requirements and builds being tested, which helps you track the quality of the requirements or builds.
 
-* **Extensible platform**. You can combine the tools and technologies you already know with the development tools that work best for you to integrate with and [extend Azure DevOps and TFS](../integrate/index.md). Use the REST APIs and contribution model available for the Test platform to create extensions that provide the experience you need for your test management lifecycle.
+- **Extensible platform**. You can combine the tools and technologies you already know with the development tools that work best for you to integrate with and [extend Azure DevOps and TFS](../integrate/index.md). Use the REST APIs and contribution model available for the Test platform to create extensions that provide the experience you need for your test management lifecycle.
 
 ## Additional resources
 
-* [Get started with manual testing](../boards/boards/add-run-update-tests.md?toc=/azure/devops/test/toc.json&bc=/azure/devops/test/breadcrumb/toc.json)
-* [Advanced manual testing techniques](user-acceptance-testing.md)
-* [Get started with exploratory testing](perform-exploratory-tests.md)
-* [Advanced exploratory testing techniques](explore-workitems-exploratory-testing.md)
-* [Get stakeholder feedback with exploratory testing](request-stakeholder-feedback.md)
+- [Get started with manual testing](../boards/boards/add-run-update-tests.md?toc=/azure/devops/test/toc.json&bc=/azure/devops/test/breadcrumb/toc.json)
+- [Advanced manual testing techniques](user-acceptance-testing.md)
+- [Get started with exploratory testing](perform-exploratory-tests.md)
+- [Advanced exploratory testing techniques](explore-workitems-exploratory-testing.md)
+- [Get stakeholder feedback with exploratory testing](request-stakeholder-feedback.md)
 
 > See also [Continuous testing](../pipelines/index.yml), [Unit testing](https://docs.microsoft.com/visualstudio/test/developer-testing-scenarios).
 
-[!INCLUDE [help-and-support-footer](includes/help-and-support-footer.md)] 
+[!INCLUDE [help-and-support-footer](includes/help-and-support-footer.md)]

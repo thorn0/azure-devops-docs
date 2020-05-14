@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,42 +15,40 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Represents an Azure DevOps Services extension along with its installation state 
+Represents an Azure DevOps Services extension along with its installation state
 
 ### Members
 
-* `baseUri`: string. 
+- `baseUri`: string.
 
-* `contributions`: [Contribution](../../../VSS/References/SDK_Interfaces/Contribution.md)[]. 
+- `contributions`: [Contribution](../../../VSS/References/SDK_Interfaces/Contribution.md)[].
 
-* `contributionTypes`: [ContributionType](../../../VSS/References/SDK_Interfaces/ContributionType.md)[]. 
+- `contributionTypes`: [ContributionType](../../../VSS/References/SDK_Interfaces/ContributionType.md)[].
 
-* `eventCallbacks`: [ExtensionEventCallbackCollection](../../../VSS/References/SDK_Interfaces/ExtensionEventCallbackCollection.md). 
+- `eventCallbacks`: [ExtensionEventCallbackCollection](../../../VSS/References/SDK_Interfaces/ExtensionEventCallbackCollection.md).
 
-* `extensionId`: string. 
+- `extensionId`: string.
 
-* `extensionName`: string. 
+- `extensionName`: string.
 
-* `flags`: [ExtensionFlags](../../../VSS/References/SDK_Interfaces/ExtensionFlags.md). 
+- `flags`: [ExtensionFlags](../../../VSS/References/SDK_Interfaces/ExtensionFlags.md).
 
-* `id`: string. 
+- `id`: string.
 
-* `installState`: [InstalledExtensionState](../../../VSS/References/SDK_Interfaces/InstalledExtensionState.md). Information about this particular installation of the extension
+- `installState`: [InstalledExtensionState](../../../VSS/References/SDK_Interfaces/InstalledExtensionState.md). Information about this particular installation of the extension
 
-* `language`: string. 
+- `language`: string.
 
-* `manifestVersion`: any. 
+- `manifestVersion`: any.
 
-* `publisherId`: string. 
+- `publisherId`: string.
 
-* `publisherName`: string. 
+- `publisherName`: string.
 
-* `registrationId`: string. 
+- `registrationId`: string.
 
-* `scopes`: string[]. 
+- `scopes`: string[].
 
-* `serviceInstanceType`: string. 
+- `serviceInstanceType`: string.
 
-* `version`: string. 
-
+- `version`: string.

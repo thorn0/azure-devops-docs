@@ -7,19 +7,18 @@ ms.custom: seodec18
 ms.author: UshaN
 author: UshaN
 ms.date: 02/17/2020
-monikerRange: '> tfs-2018'
+monikerRange: "> tfs-2018"
 ---
 
 # Azure CLI task
 
 **Azure Pipelines**
 
-Use this task to run a shell or batch 
+Use this task to run a shell or batch
 script containing Azure CLI commands against an Azure subscription.
 
-This task is used to run Azure CLI commands on 
+This task is used to run Azure CLI commands on
 cross-platform agents running on Linux, macOS, or Windows operating systems.
-
 
 ### What's new in Version 2.0
 
@@ -33,9 +32,9 @@ cross-platform agents running on Linux, macOS, or Windows operating systems.
 
 - [Azure Resource Manager service connection](../../library/connect-to-azure.md) to your Azure account
 
-- Microsoft hosted agents have Azure CLI pre-installed. However if you are using private agents, [install Azure CLI](https://azure.microsoft.com/documentation/articles/xplat-cli-install/) on the computer(s) that run the build and release agent. 
+- Microsoft hosted agents have Azure CLI pre-installed. However if you are using private agents, [install Azure CLI](https://azure.microsoft.com/documentation/articles/xplat-cli-install/) on the computer(s) that run the build and release agent.
   If an agent is already running on the machine on which the Azure CLI is installed, restart the agent to ensure all the relevant stage variables are updated.
-  
+
 ## Task Inputs
 
 <table>
@@ -126,6 +125,7 @@ Following is an example of a YAML snippet which lists the version of Azure CLI a
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 [!INCLUDE [qa-agents](../../includes/qa-agents.md)]

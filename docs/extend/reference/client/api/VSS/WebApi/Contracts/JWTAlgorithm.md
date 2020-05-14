@@ -16,9 +16,8 @@ Module path: `VSS/WebApi/Contracts`
 
 ### Values
 
-* `None` 
+- `None`
 
-* `HS256` 
+- `HS256`
 
-* `RS256` 
-
+- `RS256`

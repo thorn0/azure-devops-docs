@@ -1,13 +1,13 @@
 ---
-title: Permissions and role lookup guide 
+title: Permissions and role lookup guide
 titleSuffix: Azure DevOps
 description: Index to permissions defined for Azure DevOps
 ms.technology: devops-security
-ms.assetid:  
+ms.assetid:
 ms.author: kaelli
 author: KathrynEE
 ms.topic: reference
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 04/23/2020
 ---
 
@@ -15,16 +15,16 @@ ms.date: 04/23/2020
 
 [!INCLUDE [temp](../../includes/version-vsts-tfs-all-versions.md)]
 
-Use this index to locate the topic on how to manage a specific permission. Most permissions are managed for an object, project, or collection. Other permissions are managed by adding users and groups to a role.   To learn more, see [About permissions and groups](about-permissions.md) and [About security roles](about-security-roles.md). 
+Use this index to locate the topic on how to manage a specific permission. Most permissions are managed for an object, project, or collection. Other permissions are managed by adding users and groups to a role. To learn more, see [About permissions and groups](about-permissions.md) and [About security roles](about-security-roles.md).
 
 Values in parenthesis indicate what level the permission is managed:
 
 ::: moniker range="azure-devops"
 
-- **Object**: Permissions are managed at the object-level    
+- **Object**: Permissions are managed at the object-level
 - **Project**: Permissions are managed at the project level
-- **Collection**: Permissions are managed at the organization or project collection level  
-- **Role**: Permissions are managed through a security role.   
+- **Collection**: Permissions are managed at the organization or project collection level
+- **Role**: Permissions are managed through a security role.
 - **Team**: Permissions are managed via the team administrator role.
 
 <table>
@@ -49,8 +49,6 @@ Values in parenthesis indicate what level the permission is managed:
 <li><a href="set-permissions-access-work-tracking.md" data-raw-source="[Area path (Object)](set-permissions-access-work-tracking.md)">Area path (Object)</a></li>
 <li><a href="../../artifacts/feeds/feed-permissions.md" data-raw-source="[Azure Artifacts](../../artifacts/feeds/feed-permissions.md)">Azure Artifacts</a></li>
 <li><a href="permissions.md#view-audit-log-permission">Audit log</a></li>
-
-
 
 </ul>
 <h3>B</h3>
@@ -253,17 +251,14 @@ Values in parenthesis indicate what level the permission is managed:
 
 ::: moniker-end
 
-
 ::: moniker range="azure-devops-2019"
 
-- **Object**: Permissions are managed at the object-level    
+- **Object**: Permissions are managed at the object-level
 - **Project**: Permissions are managed at the project level
-- **Collection**: Permissions are managed at the account or project collection level  
-- **Role**: Permissions are managed through a security role.  
-- **Server**: Permissions are managed at the instance level for a server   
+- **Collection**: Permissions are managed at the account or project collection level
+- **Role**: Permissions are managed through a security role.
+- **Server**: Permissions are managed at the instance level for a server
 - **Team**: Permissions are managed via the team administrator role.
- 
-
 
 <table>
 <tbody valign="top">
@@ -287,8 +282,6 @@ Values in parenthesis indicate what level the permission is managed:
 <li><a href="../../report/powerbi/analytics-security.md" data-raw-source="[Analytics views (Object)](../../report/powerbi/analytics-security.md)">Analytics views (Object)</a></li>
 <li><a href="set-permissions-access-work-tracking.md" data-raw-source="[Area path (Object)](set-permissions-access-work-tracking.md)">Area path (Object)</a></li>
 <li><a href="../../artifacts/feeds/feed-permissions.md" data-raw-source="[Azure Artifacts](../../artifacts/feeds/feed-permissions.md)">Azure Artifacts</a></li>
-
-
 
 </ul>
 <h3>B</h3>
@@ -497,13 +490,12 @@ Values in parenthesis indicate what level the permission is managed:
 
 ::: moniker range="<= tfs-2018"
 
-- **Object**: Permissions are managed at the object-level    
+- **Object**: Permissions are managed at the object-level
 - **Project**: Permissions are managed at the project level
-- **Collection**: Permissions are managed at the account or project collection level  
-- **Role**: Permissions are managed through a security role.  
-- **Server**: Permissions are managed at the instance level for a server   
+- **Collection**: Permissions are managed at the account or project collection level
+- **Role**: Permissions are managed through a security role.
+- **Server**: Permissions are managed at the instance level for a server
 - **Team**: Permissions are managed via the team administrator role.
- 
 
 <table>
 <tbody valign="top">
@@ -666,41 +658,37 @@ Values in parenthesis indicate what level the permission is managed:
 <hr/>
 ::: moniker-end
 
-
 ## Edit project-level information
 
-The **Edit project-level information** permission is set through the [Security admin page for a project](set-project-collection-level-permissions.md). It includes the ability to perform the following tasks 
+The **Edit project-level information** permission is set through the [Security admin page for a project](set-project-collection-level-permissions.md). It includes the ability to perform the following tasks
 for all projects defined in the organization or collection:
 
 ::: moniker range="azure-devops"
 
 - Add and administer teams and all team-related features
 - Edit project-level permissions for users and groups in the project
-- Add or remove project-level security groups  
+- Add or remove project-level security groups
 - Edit project level permission ACLs
-- Edit event subscriptions or alerts for teams or the project 
+- Edit event subscriptions or alerts for teams or the project
 
 ::: moniker-end
 
-
-
 ## Edit instance-level or collection-level information
 
-The **Edit instance-level information** (formerly **Edit collection level information**) permission is set through the [Security admin page for an organization or collection](set-project-collection-level-permissions.md). It includes the ability to perform the following tasks 
+The **Edit instance-level information** (formerly **Edit collection level information**) permission is set through the [Security admin page for an organization or collection](set-project-collection-level-permissions.md). It includes the ability to perform the following tasks
 for all team projects defined in the account or collection:
-                
+
 - Add and administer teams and all team-related features
 - Edit collection-level permissions for users and groups in the collection
 - Add or remove collection-level security groups from the collection
-- Implicitly allows the user to modify version control permissions 
+- Implicitly allows the user to modify version control permissions
 - Edit project level and collection level permission ACLs
 - Edit event subscriptions or alerts for teams, projects, or collection level events.
-
 
 ## Related notes
 
 - [Grant or restrict permissions to select tasks](restrict-access.md)
 - [About permissions and groups](about-permissions.md)
-- [About security roles](about-security-roles.md). 
-- [Permissions and groups reference](permissions.md) 
+- [About security roles](about-security-roles.md).
+- [Permissions and groups reference](permissions.md)
 - [Add administrators, set permissions at the project-level or project collection-level](set-project-collection-level-permissions.md)

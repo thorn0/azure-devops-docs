@@ -12,9 +12,9 @@ ms.technology: devops-cicd-tasks
 # Decrypt a file using OpenSSL
 - task: DecryptFile@1
   inputs:
-    #cipher: 'des3' 
-    inFile: 
-    passphrase: 
+    #cipher: 'des3'
+    inFile:
+    passphrase:
     #outFile: # Optional
     #workingDirectory: # Optional
 ```

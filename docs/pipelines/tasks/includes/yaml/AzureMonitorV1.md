@@ -12,8 +12,8 @@ ms.technology: devops-cicd-tasks
 # Observe the configured Azure Monitor rules for active alerts
 - task: AzureMonitor@1
   inputs:
-    connectedServiceNameARM: 
-    resourceGroupName: 
+    connectedServiceNameARM:
+    resourceGroupName:
     #filterType: 'none' # Options: resource, alertrule, none
     #resource: # Required when filterType == Resource
     #alertRule: # Required when filterType == Alertrule

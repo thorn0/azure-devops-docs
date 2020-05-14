@@ -6,7 +6,7 @@ ms.assetid: 2bf80a9f-3f37-4582-8226-4a1d7e519265
 ms.reviewer: dastahel
 ms.custom: seodec18
 ms.date: 03/27/2018
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Build Xamarin apps
@@ -38,7 +38,7 @@ Create a file named **azure-pipelines.yml** in the root of your repository. Then
 ```yaml
 # https://docs.microsoft.com/azure/devops/pipelines/ecosystems/xamarin
 pool:
-  vmImage: 'macOS-10.15' # For Windows, use 'windows-2019'
+  vmImage: "macOS-10.15" # For Windows, use 'windows-2019'
 ```
 
 ## Build a Xamarin.Android app
@@ -47,21 +47,21 @@ To build a Xamarin.Android app, add the following snippet to your `azure-pipelin
 
 ```yaml
 variables:
-  buildConfiguration: 'Release'
-  outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+  buildConfiguration: "Release"
+  outputDirectory: "$(build.binariesDirectory)/$(buildConfiguration)"
 
 steps:
-- task: NuGetToolInstaller@0
+  - task: NuGetToolInstaller@0
 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '**/*.sln'
+  - task: NuGetCommand@2
+    inputs:
+      restoreSolution: "**/*.sln"
 
-- task: XamarinAndroid@1
-  inputs:
-    projectFile: '**/*Droid*.csproj'
-    outputDirectory: '$(outputDirectory)'
-    configuration: '$(buildConfiguration)'
+  - task: XamarinAndroid@1
+    inputs:
+      projectFile: "**/*Droid*.csproj"
+      outputDirectory: "$(outputDirectory)"
+      configuration: "$(buildConfiguration)"
 ```
 
 ### Sign a Xamarin.Android app
@@ -72,12 +72,12 @@ See [Sign your mobile Android app during CI](../apps/mobile/app-signing.md#sign-
 
 See [Android](android.md) guidance for information about:
 
-* Signing and aligning an Android APK
-* Testing on the Android Emulator
-* Testing on Azure-hosted devices
-* Retaining build artifacts with the build record
-* Distributing through App Center
-* Distributing through Google Play
+- Signing and aligning an Android APK
+- Testing on the Android Emulator
+- Testing on Azure-hosted devices
+- Retaining build artifacts with the build record
+- Distributing through App Center
+- Distributing through Google Play
 
 ## Build a Xamarin.iOS app
 
@@ -85,15 +85,15 @@ To build a Xamarin.iOS app, add the following snippet to your `azure-pipelines.y
 
 ```yaml
 variables:
-  buildConfiguration: 'Release'
+  buildConfiguration: "Release"
 
 steps:
-- task: XamariniOS@2
-  inputs:
-    solutionFile: '**/*iOS.csproj'
-    configuration: '$(buildConfiguration)'
-    packageApp: false
-    buildForSimulator: true
+  - task: XamariniOS@2
+    inputs:
+      solutionFile: "**/*iOS.csproj"
+      configuration: "$(buildConfiguration)"
+      packageApp: false
+      buildForSimulator: true
 ```
 
 ### Sign and provision a Xamarin.iOS app - The PackageApp option
@@ -109,6 +109,7 @@ To fulfill these mandatory requisites use the Microsoft Provided tasks for [inst
       configuration: 'AppStore'
       packageApp: true
 ```
+
 > [!TIP]
 > The Xamarin.iOS build task will <u>only</u> generate an .ipa package if the agent running the job has the [appropriate provisioning profile and Apple certificate installed](../apps/mobile/app-signing.md?view=azure-devops&tabs=apple-install-during-build#sign-your-apple-ios-macos-tvos-or-watchos-app). If you enable the packageApp option and the agent does not have the appropriate apple provisioning profile(.mobileprovision) and apple certificate(.p12) the build may report succeeded but there will be no .ipa generated.
 
@@ -118,6 +119,7 @@ For Microsoft Hosted agents the .ipa package is by default located under path:
 You can configure the output path by adding an argument to the Xamarin.iOS task as following:
 
 # [YAML](#tab/yaml)
+
 ```yaml
 - task: XamariniOS@2
     inputs:
@@ -132,7 +134,8 @@ This example locates the .ipa in the Build Artifact Staging Directory ready to b
 See [Sign your mobile iOS app during CI](../apps/mobile/app-signing.md?view=azure-devops&tabs=apple-install-during-build#sign-your-apple-ios-macos-tvos-or-watchos-app) for more information about signing and provisioning your iOS app.
 
 # [Classic](#tab/classic)
-Expand menu Advanced for the Xamarin.iOS build task and add **/p:IpaPackageDir="/Users/vsts/agent/2.153.2/work/1/a"** in the input field Arguments to place the generated .ipa package in the Build Artifact Staging Directory. To push it into Azure DevOps simply add a [Publish Artifact task](../tasks/utility/publish-build-artifacts.md) to the end of your pipeline. 
+
+Expand menu Advanced for the Xamarin.iOS build task and add **/p:IpaPackageDir="/Users/vsts/agent/2.153.2/work/1/a"** in the input field Arguments to place the generated .ipa package in the Build Artifact Staging Directory. To push it into Azure DevOps simply add a [Publish Artifact task](../tasks/utility/publish-build-artifacts.md) to the end of your pipeline.
 
 ### Set the Xamarin SDK version on macOS
 
@@ -140,7 +143,7 @@ To set a specific Xamarin SDK version to use on the Microsoft-hosted macOS agent
 
 ```yaml
 - script: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 5_4_1
-  displayName: 'Select Xamarin SDK version'
+  displayName: "Select Xamarin SDK version"
 ```
 
 ## Build Xamarin.Android and Xamarin.iOS apps with one pipeline
@@ -150,46 +153,46 @@ You can build and test your Xamarin.Android app, Xamarin.iOS app, and related ap
 ```yaml
 # https://docs.microsoft.com/vsts/pipelines/ecosystems/xamarin
 jobs:
-- job: Android
-  pool:
-    vmImage: 'vs2017-win2016'
-  variables:
-    buildConfiguration: 'Release'
-    outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
-  steps:
-  - task: NuGetToolInstaller@0
-  - task: NuGetCommand@2
-    inputs:
-      restoreSolution: '**/*.sln'
-  - task: XamarinAndroid@1
-    inputs:
-      projectFile: '**/*droid*.csproj'
-      outputDirectory: '$(outputDirectory)'
-      configuration: '$(buildConfiguration)'
+  - job: Android
+    pool:
+      vmImage: "vs2017-win2016"
+    variables:
+      buildConfiguration: "Release"
+      outputDirectory: "$(build.binariesDirectory)/$(buildConfiguration)"
+    steps:
+      - task: NuGetToolInstaller@0
+      - task: NuGetCommand@2
+        inputs:
+          restoreSolution: "**/*.sln"
+      - task: XamarinAndroid@1
+        inputs:
+          projectFile: "**/*droid*.csproj"
+          outputDirectory: "$(outputDirectory)"
+          configuration: "$(buildConfiguration)"
 
-- job: iOS
-  pool:
-    vmImage: 'macOS-10.14'
-  variables:
-    buildConfiguration: 'Release'
-  steps:
-  - task: NuGetToolInstaller@0
-  - task: NuGetCommand@2
-    inputs:
-      restoreSolution: '**/*.sln'
-  - task: XamariniOS@2
-    inputs:
-      solutionFile: '**/*iOS.csproj'
-      configuration: '$(buildConfiguration)'
-      buildForSimulator: true
-      packageApp: false
+  - job: iOS
+    pool:
+      vmImage: "macOS-10.14"
+    variables:
+      buildConfiguration: "Release"
+    steps:
+      - task: NuGetToolInstaller@0
+      - task: NuGetCommand@2
+        inputs:
+          restoreSolution: "**/*.sln"
+      - task: XamariniOS@2
+        inputs:
+          solutionFile: "**/*iOS.csproj"
+          configuration: "$(buildConfiguration)"
+          buildForSimulator: true
+          packageApp: false
 ```
 
 ### Next steps
 
 See [Xcode](xcode.md) guidance for information about:
 
-* Testing on Azure-hosted devices
-* Retaining build artifacts with the build record
-* Distributing through App Center
-* Distributing through the Apple App Store
+- Testing on Azure-hosted devices
+- Retaining build artifacts with the build record
+- Distributing through App Center
+- Distributing through the Apple App Store

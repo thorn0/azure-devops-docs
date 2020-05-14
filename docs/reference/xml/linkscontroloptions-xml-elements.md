@@ -1,50 +1,47 @@
 ﻿---
-title: LinksControlOptions XML elements reference 
-titleSuffix: Azure DevOps & TFS  
-description: XML syntax to scope the allowed links within a links control element used in the new web form layout 
+title: LinksControlOptions XML elements reference
+titleSuffix: Azure DevOps & TFS
+description: XML syntax to scope the allowed links within a links control element used in the new web form layout
 ms.technology: devops-agile
 ms.assetid: FA2BB293-5AC9-4861-B9B1-1033E4E078D4
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 06/25/2019
 ---
 
-# LinksControlOptions XML elements (Web form) 
+# LinksControlOptions XML elements (Web form)
 
 **Azure DevOps Services (Hosted XML) | TFS 2018 | TFS 2017 | [Previous versions](linkscontroloptions-elements.md)**
 
-
 > [!IMPORTANT]  
 > This article applies to project customization for Hosted XML and On-premises XML (TFS 2017 and later versions) process models. For TFS 2015, see [LinksControlOptions elements (Client and web, TFS 2015)](linkscontroloptions-elements.md). <br/><br/>
-> Customizing the links control is not a supported feature For the Inheritance process model. For an overview of process models, see [Customize your work tracking experience](../customize-work.md).  
+> Customizing the links control is not a supported feature For the Inheritance process model. For an overview of process models, see [Customize your work tracking experience](../customize-work.md).
 
-By linking work items to other objects, you can track related work, dependencies, and changes made over time. With the updated [**Control** element](weblayout-xml-elements.md), you can specify a scoped links control within the work item form for the web portal by setting **type="LinksControl"**.    
+By linking work items to other objects, you can track related work, dependencies, and changes made over time. With the updated [**Control** element](weblayout-xml-elements.md), you can specify a scoped links control within the work item form for the web portal by setting **type="LinksControl"**.
 
 The **LinksControlOptions** element is a child element of the **Control** element. With a scoped links control, you can specify filters that restrict the types of links that users can add and the types of work items to which users can create links. Specifically, you use the following child elements to scope the control:
 
 - **LinkFilters**: Use to specify the types of links that appear in the control:
-    - Add a **WorkItemLinkFilter** to select links that may be created to other work items
-    - Add an **ExternalLinkFilter** to select links to other objects, such as changesets, hyperlinks, or version controlled files
-- **WorkItemTypeFilters**: Use to restrict the types of work items you can link to from the links control 
+  - Add a **WorkItemLinkFilter** to select links that may be created to other work items
+  - Add an **ExternalLinkFilter** to select links to other objects, such as changesets, hyperlinks, or version controlled files
+- **WorkItemTypeFilters**: Use to restrict the types of work items you can link to from the links control
 - **Column**: Use to specify the work item fields and link type attributes listed within the links control
 
-<blockquote style="font-size: 13px"><b>Note: </b>The standard <img src="../../boards/media/icons/icon-links-tab-wi.png" alt="Links page icon"/> <a href="../../boards/work-items/work-item-form-controls.md#link-wi" data-raw-source="[Links page](../../boards/work-items/work-item-form-controls.md#link-wi)">Links page</a> provides a non-customizable control that displays all link types. From this control, you may view all links associated with the work item, and link the work item to other work items or external objects.<br/></blockquote>      
+<blockquote style="font-size: 13px"><b>Note: </b>The standard <img src="../../boards/media/icons/icon-links-tab-wi.png" alt="Links page icon"/> <a href="../../boards/work-items/work-item-form-controls.md#link-wi" data-raw-source="[Links page](../../boards/work-items/work-item-form-controls.md#link-wi)">Links page</a> provides a non-customizable control that displays all link types. From this control, you may view all links associated with the work item, and link the work item to other work items or external objects.<br/></blockquote>
 
 ## Summary of what's changed
 
-The updated **LinksControlOptions** element introduces several new elements and deprecates several elements that are still in use with the [client **LinksControlOptions** element version](https://msdn.microsoft.com/library/aa337625.aspx). Overall, it's a much simpler syntax structure than its predecessor. 
-
+The updated **LinksControlOptions** element introduces several new elements and deprecates several elements that are still in use with the [client **LinksControlOptions** element version](https://msdn.microsoft.com/library/aa337625.aspx). Overall, it's a much simpler syntax structure than its predecessor.
 
 > [!div class="mx-tdBreakAll"]  
-> |New elements  |Maintained elements  |Deprecated elements  |
+> |New elements |Maintained elements |Deprecated elements |
 > |-------------------------|--------------------|----------------------|
 > |- ListViewOptions<br/>- LinkFilters<br/>- ExternalLinkFilter<br/>- WorkItemLinkFilter<br/>- Columns<br/>- Column |- Filter<br/>- LinksControlOptions<br/>- WorkItemTypeFilters |- ExternalLinkFilters<br/>- WorkItemLinkFilters<br/>- LinkColumns<br/>- LinkColumn |
 
+### Differences between web and client links controls
 
-### Differences between web and client links controls   
-
-The following table summarizes the differences between the **LinksControlOptions** elements used within the **WebLayout** section and those that are used within the **Layout** section.  The **WebLayout** section supports display of work item forms through the web portal, while the **Layout** section supports display of work item forms from the web portal for TFS 2015 and clients such as Visual Studio. 
+The following table summarizes the differences between the **LinksControlOptions** elements used within the **WebLayout** section and those that are used within the **Layout** section. The **WebLayout** section supports display of work item forms through the web portal, while the **Layout** section supports display of work item forms from the web portal for TFS 2015 and clients such as Visual Studio.
 
 <table width="100%"> 
 <tbody valign="top">
@@ -66,7 +63,6 @@ When <code>ListViewOptions GroupLinks=&quot;true&quot;</code>, links are grouped
 When <code>ListViewOptions GroupLinks=&quot;true&quot;</code>, links are grouped within the web form by type in the order they are listed within the <strong>LinkFilters</strong> container element</td>
 <td>Specify to include or exclude work link types using <strong>WorkItemLinkFilters</strong>, specify a link type reference category </td>
 </tr>
-
 
 <tr>
 <td>Restrict links allowed based on work item type </td>
@@ -97,51 +93,49 @@ When <code>ListViewOptions GroupLinks=&quot;true&quot;</code>, links are grouped
 </tbody>
 </table>
 
-### Add links through a scoped links control 
+### Add links through a scoped links control
 
-From the scoped links control, you can perform the same actions provided from the standard ![Links page icon](../../boards/media/icons/icon-links-tab-wi.png) Links page&mdash;you simply do them from a menu rather than a tool bar.  
+From the scoped links control, you can perform the same actions provided from the standard ![Links page icon](../../boards/media/icons/icon-links-tab-wi.png) Links page&mdash;you simply do them from a menu rather than a tool bar.
 
-- To open an associated item or object, click the linked item  
-- To delete a link, highlight it and click the ![delete icon](../../boards/media/icons/delete_icon.png) delete icon   
-- To link to an existing item, or create and link a new work item, select one of the menu options.  
+- To open an associated item or object, click the linked item
+- To delete a link, highlight it and click the ![delete icon](../../boards/media/icons/delete_icon.png) delete icon
+- To link to an existing item, or create and link a new work item, select one of the menu options.
 
-<img src="media/linkscontrol-related-work-menu-options.png" alt="Links control menu of options" style="border: 1px solid #C3C3C3;" />  
-
+<img src="media/linkscontrol-related-work-menu-options.png" alt="Links control menu of options" style="border: 1px solid #C3C3C3;" />
 
 <a id="dynamic-sizing"></a>
 
-### Responsive design and dynamic resizing   
+### Responsive design and dynamic resizing
 
 By default, the scoped links control displays dynamically (`ViewMode=Dynamic`) based on the form's width and the space allocated to the links control. The links control width expands and shrinks proportionally based on the overall form width.
-- When the links control width is less than 460 pixels, the control displays as a *List*. Only the composite field called *Link* (consisting of Work Item Type, ID, Title, and Changed By fields)   
-- When the links control width equals or exceeds 460 pixels, the control displays information within a *Grid* according to the fields specified within the **Column** elements. The number of columns that appear is space-dependent, starting at a minimum of 4, and increasing by one column for every 100 pixels until the width is sufficient to display all defined columns.  
 
-You can specify whether the links display as a list, grid, or dynamically by setting the `ViewMode` in the [LinksControlOptions](#links-control-options).  
+- When the links control width is less than 460 pixels, the control displays as a _List_. Only the composite field called _Link_ (consisting of Work Item Type, ID, Title, and Changed By fields)
+- When the links control width equals or exceeds 460 pixels, the control displays information within a _Grid_ according to the fields specified within the **Column** elements. The number of columns that appear is space-dependent, starting at a minimum of 4, and increasing by one column for every 100 pixels until the width is sufficient to display all defined columns.
 
-## Sample code for default scoped link controls  
+You can specify whether the links display as a list, grid, or dynamically by setting the `ViewMode` in the [LinksControlOptions](#links-control-options).
 
-Core system processes&mdash;[Agile, Scrum, CMMI](../../boards/work-items/guidance/choose-process.md)&mdash;have been updated to include the Development and Related Work scoped links control. 
+## Sample code for default scoped link controls
 
+Core system processes&mdash;[Agile, Scrum, CMMI](../../boards/work-items/guidance/choose-process.md)&mdash;have been updated to include the Development and Related Work scoped links control.
 
-<img src="media/linkscontrol-bug-form-dev-related-links.png" alt="Bug work item form, Agile process, Development and Related links controls" style="border: 1px solid #C3C3C3;" />  
+<img src="media/linkscontrol-bug-form-dev-related-links.png" alt="Bug work item form, Agile process, Development and Related links controls" style="border: 1px solid #C3C3C3;" />
 
 These controls appear on all default work item types, except the following:
+
 - Code Review Request/Code Review Response
 - Feedback Request/Feedback Response
 - Shared Steps/Shared Parameter (these items have specific controls that list Test Case items).
 
+<a id="development-links-control"> </a>
 
+### Development links control
 
-<a id="development-links-control">  </a>
+The Development links control displays all of your development links, whether based on a git or Team Foundation version control (TFVC) repository. It displays links in a set order, and provides calls-to-action that support users to [drive development from a work item](../../boards/backlogs/connect-work-items-to-git-dev-ops.md).
 
-### Development links control  
-
-The Development links control displays all of your development links, whether based on a git or Team Foundation version control (TFVC) repository. It displays links in a set order, and provides calls-to-action that support users to [drive development from a work item](../../boards/backlogs/connect-work-items-to-git-dev-ops.md).  
-
-The following code sample specifies the syntax used to code the Development link control. This control supports adding external links of the specified types&mdash; pull requests, builds, branches, commits, and other development-related links&mdash;  and grouping them according to the Development experience.
-
+The following code sample specifies the syntax used to code the Development link control. This control supports adding external links of the specified types&mdash; pull requests, builds, branches, commits, and other development-related links&mdash; and grouping them according to the Development experience.
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```XML
 > <Control Type="LinksControl" Label="Development">
 >    <LinksControlOptions ViewMode="Dynamic" ZeroDataExperience="Development" ShowCallToAction="true">
@@ -161,13 +155,14 @@ The following code sample specifies the syntax used to code the Development link
 > </Control>
 > ```
 
-### Related Work links control  
+### Related Work links control
 
-The Related Work links control displays links to other work items in a set order on the front page of the form. It supports these link types: Duplicate/Duplicate of, Parent/Child, Predecessor/Successor, Related, and Tests/Tested by. 
+The Related Work links control displays links to other work items in a set order on the front page of the form. It supports these link types: Duplicate/Duplicate of, Parent/Child, Predecessor/Successor, Related, and Tests/Tested by.
 
-The following code sample specifies the syntax used to support the Related Work links control. 
+The following code sample specifies the syntax used to support the Related Work links control.
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```XML
 > <Control Type="LinksControl" Name="Related Work">
 >    <LinksControlOptions>
@@ -189,16 +184,17 @@ The following code sample specifies the syntax used to support the Related Work 
 >    </LinksControlOptions>
 > </Control>
 > ```
+>
 > For Test Case items, this control also displays Shared Steps and Shared Parameter links.
 
-## Sample code to showcase test-related work 
+## Sample code to showcase test-related work
 
-You can include work and external links together in a single control, while also filtering specific work item types to display. This powerful range of scoping allows you to create link controls that satisfy any number of scenarios.   
+You can include work and external links together in a single control, while also filtering specific work item types to display. This powerful range of scoping allows you to create link controls that satisfy any number of scenarios.
 
-For example, the syntax below would create a control specifically designed to display test results and testing work items. 
-
+For example, the syntax below would create a control specifically designed to display test results and testing work items.
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```XML
 > <Control  Name="Test" Type=""LinksControl"">
 >    <LinksControlOptions>
@@ -221,23 +217,24 @@ For example, the syntax below would create a control specifically designed to di
 > </Control>
 > ```
 
-<a id="customize">  </a>  
+<a id="customize"> </a>
 
-## Create a scoped links control  
+## Create a scoped links control
 
 To add or modify a scoped links control, use the information provided in this topic to modify the XML definition file for a specific work item type. Each links control must be added as a **Control** of **type="LinksControl"** within the **WebLayout** section, specifying the appropriate **LinksControlOptions**.
 
-To import and export your changes, see [Customize the work item tracking web form](../customize-wit-form.md).   
+To import and export your changes, see [Customize the work item tracking web form](../customize-wit-form.md).
 
 ## LinksControlOptions element syntax
 
-The following table describes the **LinksControlOptions** element and its child elements. The syntax for the **LinksControlOptions** element is:  
+The following table describes the **LinksControlOptions** element and its child elements. The syntax for the **LinksControlOptions** element is:
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```XML
 > <LinksControlOptions ViewMode="Static | Dynamic" ZeroDataExperience="Development" ShowCallToAction="true | false"   WorkItemTypeFiltersScope="project | all" >
 >    <ListViewOptions GroupLinks="true | false" />
->    <LinkFilters>    
+>    <LinkFilters>
 >       <ExternalLinkFilter Type="ExternalLinkName" />
 >       <WorkItemLinkFilter Type="WorkItemLinkName" />
 >    </LinkFilters>
@@ -258,7 +255,6 @@ The following table describes the **LinksControlOptions** element and its child 
 </tr>
 </thead>
 <tbody valign="top" >
-
 
 <tr>
 <td><p> <strong>Column</strong> </p></td>
@@ -400,7 +396,6 @@ WorkItemTypeFiltersScope="project" &gt;
 </td>
 </tr>
 
-
 <tr>
 <td><p> <strong>WorkItemTypeFilters</strong> </p></td>
 <td><p>Optional container child element of the <strong>LinkFilters</strong> element. Use this element to specify the set of work item types to include in the links control. This element restricts the work item types that users can create links to and those that will appear in the linked list. Specification of this element depends on specifying at least one <strong>WorkItemLinkFilter</strong> element.<br/></p>
@@ -416,13 +411,11 @@ WorkItemTypeFiltersScope="project" &gt;
 </tbody>
 </table>
 
+## Related articles
 
+You use scoped links controls to support your team and business needs. You [link work items to support traceability and manage dependencies](../../boards/queries/link-work-items-support-traceability.md). To learn more about customizing the web form, see these topics:
 
-## Related articles 
-
-You use scoped links controls to support your team and business needs. You [link work items to support traceability and manage dependencies](../../boards/queries/link-work-items-support-traceability.md). To learn more about customizing the web form, see these topics: 
-
-- [WebLayout and Control elements](weblayout-xml-elements.md)  
+- [WebLayout and Control elements](weblayout-xml-elements.md)
 - [Manage new form rollout](../manage-new-form-rollout.md)
 - [New work item experience](../process/new-work-item-experience.md)
 - [Customize the new form](../customize-wit-form.md)

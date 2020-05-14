@@ -14,8 +14,6 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `itemType`: [TaskOrchestrationItemType](../../../TFS/DistributedTask/Contracts/TaskOrchestrationItemType.md). 
-
+- `itemType`: [TaskOrchestrationItemType](../../../TFS/DistributedTask/Contracts/TaskOrchestrationItemType.md).

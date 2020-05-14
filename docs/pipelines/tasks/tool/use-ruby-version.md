@@ -8,7 +8,7 @@ ms.author: dastahel
 author: davidstaheli
 ms.reviewer: lukillgo
 ms.date: 04/21/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Use Ruby Version task
@@ -23,7 +23,7 @@ None
 
 ## Prerequisites
 
-* A [Microsoft-hosted agent](../../agents/hosted.md#software) with side-by-side versions of Ruby installed, or a self-hosted agent with Agent.ToolsDirectory configured (see [Q&A](#how-can-i-configure-a-self-hosted-agent-to-use-this-task)).
+- A [Microsoft-hosted agent](../../agents/hosted.md#software) with side-by-side versions of Ruby installed, or a self-hosted agent with Agent.ToolsDirectory configured (see [Q&A](#how-can-i-configure-a-self-hosted-agent-to-use-this-task)).
 
 This task will fail if no Ruby versions are found in Agent.ToolsDirectory. Available Ruby versions on Microsoft-hosted agents can be found [here](../../agents/hosted.md#software).
 
@@ -37,10 +37,10 @@ This task will fail if no Ruby versions are found in Agent.ToolsDirectory. Avail
 
 ## Arguments
 
-| Argument | Description |
-|----------|-------------|
-|`versionSpec`<br/> Version spec | (Required) Version range or exact version of a Ruby version to use. <br/>Default value: `>= 2.4`|
-|`addToPath`<br/> Add to PATH | (Optional) Whether to prepend the retrieved Ruby version to the PATH environment variable to make it available in subsequent tasks or scripts without using the output variable.<br/>Default value: `true` |
+| Argument                        | Description                                                                                                                                                                                                |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `versionSpec`<br/> Version spec | (Required) Version range or exact version of a Ruby version to use. <br/>Default value: `>= 2.4`                                                                                                           |
+| `addToPath`<br/> Add to PATH    | (Optional) Whether to prepend the retrieved Ruby version to the PATH environment variable to make it available in subsequent tasks or scripts without using the output variable.<br/>Default value: `true` |
 
 If the task completes successfully, the task's output variable will contain the directory of the Ruby installation.
 
@@ -49,6 +49,7 @@ If the task completes successfully, the task's output variable will contain the 
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 ### Where can I learn more about tool installers?

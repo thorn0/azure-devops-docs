@@ -11,7 +11,7 @@ author: yukom
 
 # Sprint planning improvements and SonarQube analysis build tasks – Aug 26
 
-**Renaming columns in place
+\*\*Renaming columns in place
 
 You can now rename columns on your Kanban board in place, without having to jump into the configuration dialog. Over time, we’ll be adding more functionality inline, including adding, deleting, and reordering columns.
 

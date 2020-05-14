@@ -14,58 +14,56 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `area`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `area`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `associatedWorkItems`: number[]. 
+- `associatedWorkItems`: number[].
 
-* `automatedTestId`: string. 
+- `automatedTestId`: string.
 
-* `automatedTestName`: string. 
+- `automatedTestName`: string.
 
-* `automatedTestStorage`: string. 
+- `automatedTestStorage`: string.
 
-* `automatedTestType`: string. 
+- `automatedTestType`: string.
 
-* `automatedTestTypeId`: string. 
+- `automatedTestTypeId`: string.
 
-* `comment`: string. 
+- `comment`: string.
 
-* `completedDate`: string. 
+- `completedDate`: string.
 
-* `computerName`: string. 
+- `computerName`: string.
 
-* `configuration`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `configuration`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `customFields`: [CustomTestField](../../../TFS/TestManagement/Contracts/CustomTestField.md)[]. 
+- `customFields`: [CustomTestField](../../../TFS/TestManagement/Contracts/CustomTestField.md)[].
 
-* `durationInMs`: string. 
+- `durationInMs`: string.
 
-* `errorMessage`: string. 
+- `errorMessage`: string.
 
-* `failureType`: string. 
+- `failureType`: string.
 
-* `outcome`: string. 
+- `outcome`: string.
 
-* `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `resolutionState`: string. 
+- `resolutionState`: string.
 
-* `runBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `runBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `stackTrace`: string. 
+- `stackTrace`: string.
 
-* `startedDate`: string. 
+- `startedDate`: string.
 
-* `state`: string. 
+- `state`: string.
 
-* `testCase`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `testCase`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `testCasePriority`: string. 
+- `testCasePriority`: string.
 
-* `testCaseTitle`: string. 
+- `testCaseTitle`: string.
 
-* `testPoint`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
-
+- `testPoint`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).

@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: TFVC Branches | REST API Reference for Team Foundation Server
 description: Work with TFVC branches programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 9C1923A9-4887-4DC4-9C20-153C19D453CE
@@ -24,17 +24,18 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/_apis/tfvc/branches/{path}?api-version={version}[&includeChildren={bool}&includeParent={bool}&includeDeleted={bool}]
 ```
 
-| Parameter       | Type   | Default | Notes
-|:----------------|:-------|:--------|:------------|
-| URL
-| instance        | string |         | TFS server name ({server:port}).
-| path            | string | $/      | Full path to the branch.<br/>Examples: `$/`, `$/MyProject`, `$/MyProject/SomeFolder`.
-| Query
-| api-version     | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| includeChildren | bool   | false   | Return child branches, if there are any.
-| includeParent   | bool   | false   | Return the parent branch, if there is one.
-| includeDeleted  | bool   | false   | Return branches marked as deleted.
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
 
+
+| URL
+| instance | string | | TFS server name ({server:port}).
+| path | string | \$/ | Full path to the branch.<br/>Examples: `$/`, `$/MyProject`, `$/MyProject/SomeFolder`.
+| Query
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| includeChildren | bool | false | Return child branches, if there are any.
+| includeParent | bool | false | Return the parent branch, if there is one.
+| includeDeleted | bool | false | Return branches marked as deleted.
 
 #### Sample request
 
@@ -59,8 +60,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/branches/$/Fabrikam-Fiber-T
 }
 ```
 
-
 ### With child branches
+
 #### Sample request
 
 ```
@@ -115,8 +116,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/branches/$/Fabrikam-Fiber-T
 }
 ```
 
-
 ### With the parent branch
+
 #### Sample request
 
 ```
@@ -143,8 +144,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/branches/$/Fabrikam-Fiber-T
 }
 ```
 
-
 ### Deleted branch
+
 #### Sample request
 
 ```
@@ -173,21 +174,22 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/branches/$/Fabrikam-Fiber-T
 }
 ```
 
-
 ## Get a list of root branches
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/tfvc/branches?api-version={version}[&includeChildren={bool}&includeDeleted={bool}]
 ```
 
-| Parameter        | Type   | Default | Notes
-|:-----------------|:-------|:--------|:------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance         | string |         | TFS server name ({server:port}).
+| instance | string | | TFS server name ({server:port}).
 | Query
-| api-version      | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| includeChildren  | bool   | false   | Return the child branches for each root branch.
-| includeDeleted   | bool   | false   | Return deleted branches.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| includeChildren | bool | false | Return the child branches for each root branch.
+| includeDeleted | bool | false | Return deleted branches.
 
 #### Sample request
 
@@ -219,8 +221,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/branches?api-version=1.0-pr
 }
 ```
 
-
 ### With child branches
+
 #### Sample request
 
 ```
@@ -286,8 +288,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/branches?includeChildren=tr
 }
 ```
 
-
 ### Including deleted branches
+
 #### Sample request
 
 ```
@@ -341,6 +343,3 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/branches?includeDeleted=tru
   ]
 }
 ```
-
-
-

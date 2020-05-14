@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Delete Command (Team Foundation Version Control)
 
@@ -23,7 +22,7 @@ Removes files and folders from the Team Foundation version control server and de
 
 **Required Permissions**
 
-To use the **delete** command, you must have the **Check out** permission set to **Allow**. If you include the **/lock** option with a value other than *none*, you must have the **Lock** permission set to **Allow**. Additionally, you must own the workspace or have the global **Administer workspaces** permission set to **Allow**. For more information, see [Permissions and groups reference](../../organizations/security/permissions.md).
+To use the **delete** command, you must have the **Check out** permission set to **Allow**. If you include the **/lock** option with a value other than _none_, you must have the **Lock** permission set to **Allow**. Additionally, you must own the workspace or have the global **Administer workspaces** permission set to **Allow**. For more information, see [Permissions and groups reference](../../organizations/security/permissions.md).
 
 ```
 tf delete [/lock:(none|checkin|checkout)] [/recursive] [/login:username,[password]] itemspec
@@ -55,6 +54,7 @@ tf delete [/lock:(none|checkin|checkout)] [/recursive] [/login:username,[passwor
 </table>
 
 ## Remarks
+
 The **delete** command records a pending change of type "delete" in your workspace for the items that you have specified. When you commit a pending change of type "delete" to the Team Foundation version control server by using the** checkin** command, Team Foundation removes the item from the Team Foundation version control server but does not delete it permanently. You can locate deleted items in the Team Foundation version control server by using the Dir Command and you can restore deleted items using the [Undelete Command](undelete-command.md).
 
 If you have deleted an item in your workspace but have not checked in the change, you can restore the item to your workspace and remove the deletion from your list of pending changes using the [Undo Command](undo-command.md).
@@ -63,10 +63,12 @@ You cannot delete an item for which another pending change exists. For example, 
 
 When you check in a pending deletion, Team Foundation marks the file as deleted in the Team Foundation version control server. Subsequently running a **get** of the item from other workspaces (either by you or other users) deletes the item from those workspaces.
 
-When your *itemspec* specifies a folder, Team Foundation deletes all its files and subfolders and the files they contain, by default.
+When your _itemspec_ specifies a folder, Team Foundation deletes all its files and subfolders and the files they contain, by default.
 
 For more information on how to find the **tf** command-line utility, see [Tf Command-Line Utility Commands](https://msdn.microsoft.com/library/z51z7zy0).
+
 ## Examples
+
 The following example deletes 314.cs on disk in the specified local workspace folder and then, when you check in the change, removes 314.c from the version control system non-permanently.
 
 ```

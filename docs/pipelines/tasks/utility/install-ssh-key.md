@@ -46,6 +46,7 @@ Use this task in a pipeline to install an SSH key prior to a build or release st
 1. Open your `known_hosts` file (`~/.ssh/known_hosts` or `C:\Users\<username>\.ssh\known_hosts`) and copy the line that was added.
 
 You now have all necessary values for the "Install SSH Key" task:
+
 - 'Known Hosts Entry' - Enter the line copied in step 6
 - 'SSH Key (Secure File)', 'SSH Public Key', and 'SSH Passphrase' - Enter these values that were created in step 1
 

@@ -4,7 +4,7 @@ title: Developing extensions for vertical web navigation
 description: Guidance for developing extensions to be used with vertical web navigation
 ms.assetid: 3fa22433-150b-428c-8e10-3ffb4d832c20
 ms.topic: conceptual
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ms.author: apawast
 author: apawast
 ms.date: 10/02/2019
@@ -24,42 +24,45 @@ In traditional horizontal navigation, a user could navigate into a project or te
 
 ```json
 {
-    "account": {
-        "name": "Fabrikam",
-        "id": "50e49b94-4bb6-40e7-8c85-a6d756d8a4d8"
-    },
-    "project": {
-        "name": "Fabrikam Dev",
-        "id": "049b1af2-fc87-4e50-95e4-151357f04b7f"
-    },
-    "team": {
-        "name": "Ops Team",
-        "id": "9b3a6b80-fe95-4c8c-8aa1-1e5d535d7af1"
-    }
+  "account": {
+    "name": "Fabrikam",
+    "id": "50e49b94-4bb6-40e7-8c85-a6d756d8a4d8"
+  },
+  "project": {
+    "name": "Fabrikam Dev",
+    "id": "049b1af2-fc87-4e50-95e4-151357f04b7f"
+  },
+  "team": {
+    "name": "Ops Team",
+    "id": "9b3a6b80-fe95-4c8c-8aa1-1e5d535d7af1"
+  }
 }
 ```
+
 We do not recommend relying on `VSS.getWebContext().team`. Instead, follow the guidance below, based on the category your extension falls under.
 
 ### Hub extensions that are team aware
+
 If your extension needs to provide users a way to select a team, you can use the Teams REST API to get a list of teams for the current project. Here is an example of how to call this API from your extension:
 
 ```javascript
-VSS.require(["VSS/Service", "TFS/Core/RestClient"],
-   function(VSS_Service, Tfs_Core_WebApi) {
-      var client = VSS_Service.getCollectionClient(Tfs_Core_WebApi.CoreHttpClient4);
-  
-      client.getTeams(VSS.getWebContext().project.id).then(
-         function(teams) {
-            console.log(teams);
-         }
-      );
+VSS.require(["VSS/Service", "TFS/Core/RestClient"], function (
+  VSS_Service,
+  Tfs_Core_WebApi
+) {
+  var client = VSS_Service.getCollectionClient(Tfs_Core_WebApi.CoreHttpClient4);
+
+  client.getTeams(VSS.getWebContext().project.id).then(function (teams) {
+    console.log(teams);
+  });
 });
 ```
+
 For an example of an extension that provides a team picker control, see [Team Calendar](https://github.com/Microsoft/vsts-team-calendar).
 
 ### Pivots/Panels extensions that are in team aware hubs like Backlogs and Dashboard
 
-Your extension can check the *configuration* object passed to your contribution. This object has different properties depending on the contribution type and where the contribution is hosted. Example shows reading team from the *configuration* and falling back to reading team from *webContext* to support both new vertical navigation and older horizontal navigation in on-premise releases.
+Your extension can check the _configuration_ object passed to your contribution. This object has different properties depending on the contribution type and where the contribution is hosted. Example shows reading team from the _configuration_ and falling back to reading team from _webContext_ to support both new vertical navigation and older horizontal navigation in on-premise releases.
 
 ```javascript
 function getCurrentTeam() {
@@ -78,21 +81,23 @@ function getCurrentTeam() {
 
 ### Actions extensions that are in team aware hubs like Backlogs and Dashboard
 
-Your extension can check the *actionContext* object passed to the callback invoked when a user clicks the contributed menu item. Example shows reading team from the *actionContext*.
+Your extension can check the _actionContext_ object passed to the callback invoked when a user clicks the contributed menu item. Example shows reading team from the _actionContext_.
 
 ```javascript
 var menuContributionHandler = (function () {
-        "use strict";
-        return {
-            // This is a callback that gets invoked when a user clicks the newly contributed menu item
-            // The actionContext parameter contains team information.
-            execute: function (actionContext) {
-                if("team" in actionContext) {
-                    alert(`Team. Id is ${actionContext.team.id}, Name is ${actionContext.team.name}`);
-                }
-            }
-        };
-    }());
+  "use strict";
+  return {
+    // This is a callback that gets invoked when a user clicks the newly contributed menu item
+    // The actionContext parameter contains team information.
+    execute: function (actionContext) {
+      if ("team" in actionContext) {
+        alert(
+          `Team. Id is ${actionContext.team.id}, Name is ${actionContext.team.name}`
+        );
+      }
+    },
+  };
+})();
 ```
 
 ## Hub icon

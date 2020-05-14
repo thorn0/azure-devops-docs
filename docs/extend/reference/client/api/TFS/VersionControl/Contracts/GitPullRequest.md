@@ -13,56 +13,54 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `closedDate`: Date. 
+- `closedDate`: Date.
 
-* `codeReviewId`: number. 
+- `codeReviewId`: number.
 
-* `commits`: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md)[]. 
+- `commits`: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md)[].
 
-* `completionOptions`: [GitPullRequestCompletionOptions](../../../TFS/VersionControl/Contracts/GitPullRequestCompletionOptions.md). 
+- `completionOptions`: [GitPullRequestCompletionOptions](../../../TFS/VersionControl/Contracts/GitPullRequestCompletionOptions.md).
 
-* `completionQueueTime`: Date. 
+- `completionQueueTime`: Date.
 
-* `createdBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `createdBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `creationDate`: Date. 
+- `creationDate`: Date.
 
-* `description`: string. 
+- `description`: string.
 
-* `lastMergeCommit`: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md). 
+- `lastMergeCommit`: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md).
 
-* `lastMergeSourceCommit`: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md). 
+- `lastMergeSourceCommit`: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md).
 
-* `lastMergeTargetCommit`: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md). 
+- `lastMergeTargetCommit`: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md).
 
-* `mergeId`: string. 
+- `mergeId`: string.
 
-* `mergeStatus`: [PullRequestAsyncStatus](../../../TFS/VersionControl/Contracts/PullRequestAsyncStatus.md). 
+- `mergeStatus`: [PullRequestAsyncStatus](../../../TFS/VersionControl/Contracts/PullRequestAsyncStatus.md).
 
-* `pullRequestId`: number. 
+- `pullRequestId`: number.
 
-* `remoteUrl`: string. 
+- `remoteUrl`: string.
 
-* `repository`: [GitRepository](../../../TFS/VersionControl/Contracts/GitRepository.md). 
+- `repository`: [GitRepository](../../../TFS/VersionControl/Contracts/GitRepository.md).
 
-* `reviewers`: [IdentityRefWithVote](../../../TFS/VersionControl/Contracts/IdentityRefWithVote.md)[]. 
+- `reviewers`: [IdentityRefWithVote](../../../TFS/VersionControl/Contracts/IdentityRefWithVote.md)[].
 
-* `sourceRefName`: string. 
+- `sourceRefName`: string.
 
-* `status`: [PullRequestStatus](../../../TFS/VersionControl/Contracts/PullRequestStatus.md). 
+- `status`: [PullRequestStatus](../../../TFS/VersionControl/Contracts/PullRequestStatus.md).
 
-* `targetRefName`: string. 
+- `targetRefName`: string.
 
-* `title`: string. 
+- `title`: string.
 
-* `upgraded`: boolean. 
+- `upgraded`: boolean.
 
-* `url`: string. 
+- `url`: string.
 
-* `workItemRefs`: [VSS_Common_Contracts.ResourceRef](../../../VSS/WebApi/Contracts/ResourceRef.md)[]. 
-
+- `workItemRefs`: [VSS_Common_Contracts.ResourceRef](../../../VSS/WebApi/Contracts/ResourceRef.md)[].

@@ -4,10 +4,10 @@ author: gloridelmorales
 ms.author: glmorale
 ms.technology: devops-release-notes
 ms.date: 08/12/2019
-description: In the **Sprint 156 Update** of Azure DevOps, we continue to improve Azure Boards to include items that can help improve the user experience. 
+description: In the **Sprint 156 Update** of Azure DevOps, we continue to improve Azure Boards to include items that can help improve the user experience.
 ---
 
-#  Enhancements to Azure Boards - Sprint 156 Update
+# Enhancements to Azure Boards - Sprint 156 Update
 
 In the **Sprint 156 Update** of Azure DevOps, we continue to improve Azure Boards to include items that can help enhance the user's experience. For instance, you can now **customize system picklist values** such as Severity, Activity and Priority. In addition, we added rule support for setting fields to read-only or required based on group membership. Finally, we created a new extension to allow you to create [cascading picklists](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.cascading-picklists-extension) on your work item form.
 
@@ -90,15 +90,13 @@ Check out the [Features](#features) list below for more.
 
 Head over to Azure DevOps and take a look.
 
-> [!div class="nextstepaction"]
-> [Go to Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
+> [!div class="nextstepaction"][go to azure devops](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
 
 ## Feedback
 
 We would love to hear what you think about these features. Use the feedback menu to report a problem or provide a suggestion.
 
-> [!div class="mx-imgBorder"]
-> ![Make a suggestion](../media/make-a-suggestion.png)
+> [!div class="mx-imgBorder"] > ![Make a suggestion](../media/make-a-suggestion.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-devops).
 

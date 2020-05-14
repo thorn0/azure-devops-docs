@@ -1,13 +1,13 @@
 ---
 title: Disable the data warehouse and cube
 titleSuffix: TFS
-description: Disable the data warehouse and cube for Team Foundation Server 
-ms.assetid:   
+description: Disable the data warehouse and cube for Team Foundation Server
+ms.assetid:
 ms.technology: devops-analytics
 ms.topic: conceptual
 ms.author: kaelli
 author: KathrynEE
-monikerRange: ">= tfs-2013 <= azure-devops-2019" 
+monikerRange: ">= tfs-2013 <= azure-devops-2019"
 ms.date: 11/19/2018
 ---
 
@@ -17,8 +17,9 @@ ms.date: 11/19/2018
 
 Follow the steps below to disable the data warehouse and cube on your Azure DevOps Server instance.
 
-<a id="prerequisites">  </a>
-## Prerequisites 
+<a id="prerequisites"> </a>
+
+## Prerequisites
 
 In order to disable the data warehouse and cube, you must have an Azure DevOps Server instance already [set up](/azure/devops/server/install/get-started).
 
@@ -28,22 +29,19 @@ In order to disable the data warehouse and cube, you must have an Azure DevOps S
 1. Launch the **Azure DevOps Server Adminstration Console** on your Azure DevOps Server instance.
 2. Navigate to **Reporting**.
 
-    ![Server Admin Console](./media/Server-Console.png)
+   ![Server Admin Console](./media/Server-Console.png)
 
 3. Select **Disable Reporting** on the right hand column. You will be prompted with an alert window.
 
-    ![Alert Window](./media/Disable-Dialog.png)
+   ![Alert Window](./media/Disable-Dialog.png)
 
 > [!WARNING]  
 > Please note that disabling the warehouse CANNOT be undone!
 
 4. After the warehouse is disabled, the **Azure DevOps Server Adminstration Console** will display a confirmation message.
 
-    ![Confirmation Message](./media/Warehouse-Disabled.png)
+   ![Confirmation Message](./media/Warehouse-Disabled.png)
 
 ## Try this next
 
 For future reporting needs, please take a look at our [Analytics Service](../powerbi/what-is-analytics.md).
-
-
- 

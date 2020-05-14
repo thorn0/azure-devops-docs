@@ -1,9 +1,9 @@
 ---
 title: Work Items | REST API Reference for Team Foundation Server
-description: Work with work items programmatically using the REST APIs for Team Foundation Server. 
+description: Work with work items programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 2762B459-BD46-493C-998F-A14EE1DA4C94
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 ms.topic: article
 ms.author: chcomley
 author: chcomley
@@ -18,12 +18,13 @@ ms.date: 08/23/2016
 
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
-The Work Items API is used to create, update, or delete work items in Team Services and Team Foundation Server. There are multiple different 
+The Work Items API is used to create, update, or delete work items in Team Services and Team Foundation Server. There are multiple different
 work item types (bug, task, etc.) that can be accessed.
 
 #### Common Tasks
-This API is often used in combination with other work item tracking APIs for many end-to-end scenarios, check out the 
-[work item tracking common tasks](./overview.md#common-tasks) to see popular use cases. 
+
+This API is often used in combination with other work item tracking APIs for many end-to-end scenarios, check out the
+[work item tracking common tasks](./overview.md#common-tasks) to see popular use cases.
 
 ## C# and .NET Samples
 
@@ -83,25 +84,28 @@ This API is often used in combination with other work item tracking APIs for man
 
 For all of the work items samples, check out the [samples page](./samples.md).
 
-##  Get a list of work items
+## Get a list of work items
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/wit/workitems?api-version={version}&ids={string}[&fields={string}&asOf={DateTime}&$expand={enum{relations}&ErrorPolicy={string}]
 ```
 
-| Parameter         | Type                                                              | Default | Notes
-|:------------------|:------------------------------------------------------------------|:--------|:-------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance          | string                                                            |         | TFS server name ({server:port}).
+| instance | string | | TFS server name ({server:port}).
 | Query
-| api-version       | string                                                            |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| ids               | string                                                            |         | A comma-separated list of up to 200 IDs of the work items to get.
-| fields            | string                                                            |         | A comma-separated list of up to 100 fields to get with each work item.<br/>If not specified, all fields with values are returned. Calculated fields such as Attached File Count must be specifically queried for using this parameter.
-| asOf              | [DateTime](https://msdn.microsoft.com/library/az4se3k1.aspx) |         | Gets the work items as they existed at this time.
-| $expand           | enum { all, relations, none }                                     | none    | Gets work item relationships (work item links, hyperlinks, file attachments, etc.).
-| ErrorPolicy       | string { throw, omit }                                            | throw   | Determines if the call will throw an error when encountering a work item (default behavior) that doesn't exist or simply omit it.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| ids | string | | A comma-separated list of up to 200 IDs of the work items to get.
+| fields | string | | A comma-separated list of up to 100 fields to get with each work item.<br/>If not specified, all fields with values are returned. Calculated fields such as Attached File Count must be specifically queried for using this parameter.
+| asOf | [DateTime](https://msdn.microsoft.com/library/az4se3k1.aspx) | | Gets the work items as they existed at this time.
+| \$expand | enum { all, relations, none } | none | Gets work item relationships (work item links, hyperlinks, file attachments, etc.).
+| ErrorPolicy | string { throw, omit } | throw | Determines if the call will throw an error when encountering a work item (default behavior) that doesn't exist or simply omit it.
 
 ### By IDs
+
 <a name="byids" />
 
 #### Sample request
@@ -183,13 +187,12 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems?ids=297,299,300&ap
 }
 ```
 
-
 ### Sample code
 
-* [C# (GetWorkItemsByIDs method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L20)
-
+- [C# (GetWorkItemsByIDs method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L20)
 
 ### With specific fields
+
 <a name="withspecificfields" />
 
 #### Sample request
@@ -240,13 +243,12 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems?ids=297,299,300&fi
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetWorkItemsWithSpecificFields method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L38)
-
+- [C# (GetWorkItemsWithSpecificFields method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L38)
 
 ### As of a date
+
 <a name="asofdate" />
 
 #### Sample request
@@ -297,13 +299,12 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems?ids=297,299,300&fi
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetWorkItemsAsOfDate method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L67)
+- [C# (GetWorkItemsAsOfDate method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L67)
 
+### With links and attachments
 
-###  With links and attachments
 <a name="withlinksandattachments" />
 
 #### Sample request
@@ -568,27 +569,28 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems?ids=297,299,300&$e
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetWorkItemsWithLinksAndAttachments method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L98)
+- [C# (GetWorkItemsWithLinksAndAttachments method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L98)
 
+## Get a work item
 
-##  Get a work item
 <a name="getaworkitem" />
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/wit/workitems/{id}?api-version={version}[&$expand={enum{relations}]
 ```
 
-| Parameter         | Type                                                              | Default | Notes
-|:------------------|:------------------------------------------------------------------|:--------|:-------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance          | string                                                            |         | TFS server name ({server:port}).
-| id                | string                                                            |         | ID of the work item to retrieve.
+| instance | string | | TFS server name ({server:port}).
+| id | string | | ID of the work item to retrieve.
 | Query
-| api-version       | string                                                            |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| $expand           | enum { all, relations, none }                                     | none    | Gets work item relationships (work item links, hyperlinks and file attachments).
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| \$expand | enum { all, relations, none } | none | Gets work item relationships (work item links, hyperlinks and file attachments).
 
 #### Sample request
 
@@ -645,10 +647,9 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/309?api-version=1.
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetWorkItemsByID method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L122)
+- [C# (GetWorkItemsByID method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L122)
 
 <a name="getaworkitemwithlinksandattachments" />
 ###  With links and attachments
@@ -725,8 +726,8 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/309?$expand=relati
 }
 ```
 
+### Fully expanded
 
-###  Fully expanded
 <a name="fullyexpanded" />
 
 #### Sample request
@@ -814,13 +815,12 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/309?$expand=all&ap
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetWorkItemFullyExpanded method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L140)
+- [C# (GetWorkItemFullyExpanded method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L140)
 
+## Get default values
 
-##  Get default values
 <a name="getdefaultvalues" />
 
 Get the default values that will be filled in automatically when you create a new work item of a specific type.
@@ -829,14 +829,16 @@ Get the default values that will be filled in automatically when you create a ne
 GET https://{instance}/DefaultCollection/{project}/_apis/wit/workitems/${workItemTypeName}?api-version={version}
 ```
 
-| Parameter         | Type      | Notes
-|:------------------|:----------|:-------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance          | string    | TFS server name ({server:port}).
-| project           | string    | Name or ID of a [project](../tfs/projects.md) where the work item type is defined.
-| workItemTypeName  | string    | Name of the [work item type](./work-item-types.md).
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of a [project](../tfs/projects.md) where the work item type is defined.
+| workItemTypeName | string | Name of the [work item type](./work-item-types.md).
 | Query
-| api-version       | string    | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -869,7 +871,6 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workitems
   "url": "https://mytfsserver/DefaultCollection/_apis/wit/workItems"
 }
 ```
-
 
 #### Sample code
 
@@ -907,7 +908,8 @@ public void GetDefaultValues()
 }
 ```
 
-##  Create a work item
+## Create a work item
+
 <a name="create-work-item" />
 
 When you create a work item, you can provide values for any of the work item fields.
@@ -915,9 +917,11 @@ When you create a work item, you can provide values for any of the work item fie
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/_apis/wit/workitems/${workItemTypeName}?api-version={version}
 ```
+
 ```http
 Content-Type: application/json-patch+json
 ```
+
 ```json
 [
     {
@@ -941,24 +945,26 @@ Content-Type: application/json-patch+json
 ]
 ```
 
-| Parameter         | Type                                  |  Notes
-|:------------------|:--------------------------------------|:-------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance          | string                                | TFS server name ({server:port}).
-| project           | string                                | Name or ID of a [project](../tfs/projects.md) where the work item should be created.
-| workItemTypeName  | string                                | Name of the [work item type](./work-item-types.md).
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of a [project](../tfs/projects.md) where the work item should be created.
+| workItemTypeName | string | Name of the [work item type](./work-item-types.md).
 | Query
-| api-version       | string                                | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body - field
-| op                | enum { add, replace, test }           | The operation to perform on the field.<br/>You can use add or replace to set the value of a field when you create a work item.<br/>Use test to verify that the value is valid without actually saving the work item.
-| path              | string                                | Path to the value you want to add, replace, remove, or test.<br/>For a field, use "/fields/{reference name}".
-| value             | string or int, depending on the field | New value to set.
+| op | enum { add, replace, test } | The operation to perform on the field.<br/>You can use add or replace to set the value of a field when you create a work item.<br/>Use test to verify that the value is valid without actually saving the work item.
+| path | string | Path to the value you want to add, replace, remove, or test.<br/>For a field, use "/fields/{reference name}".
+| value | string or int, depending on the field | New value to set.
 | Body - relation
-| op                | enum { add, replace, remove, test }   | The operation to perform on the relation.<br/>Use test to verify that the relation is valid without actually saving the work item.
-| path              | string                                | Path to the value you want to add, replace, remove, or test.<br/>For a specific relation, use "relations/Id".<br/>For all relations, use "/relations/-".
-| value.rel         | string                                | Type of the relationship. Examples include, work-item/hierarchy-forward, changeset, or attachment.<br/>Get the list of relations that a work item type supports using [relation types](./relation-types.md).
-| value.url         | string                                | URL of the item you are relating to the current work item.
-| value.attributes  | array of name/value pairs             | Additional attributes of the relationship (e.g. comment, isLocked, etc.)
+| op | enum { add, replace, remove, test } | The operation to perform on the relation.<br/>Use test to verify that the relation is valid without actually saving the work item.
+| path | string | Path to the value you want to add, replace, remove, or test.<br/>For a specific relation, use "relations/Id".<br/>For all relations, use "/relations/-".
+| value.rel | string | Type of the relationship. Examples include, work-item/hierarchy-forward, changeset, or attachment.<br/>Get the list of relations that a work item type supports using [relation types](./relation-types.md).
+| value.url | string | URL of the item you are relating to the current work item.
+| value.attributes | array of name/value pairs | Additional attributes of the relationship (e.g. comment, isLocked, etc.)
 
 If any of the new field values or relations are not valid, the work item will not be created.
 
@@ -967,6 +973,7 @@ If any of the new field values or relations are not valid, the work item will no
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workitems/$Task?api-version=1.0
 ```
+
 ```json
 [
   {
@@ -1023,10 +1030,9 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workite
 }
 ```
 
-
 #### Sample code
 
-* [C# (CreateWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L66)
+- [C# (CreateWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L66)
 
 <a name="withaworkitemlink" />
 ### With a work item link
@@ -1036,6 +1042,7 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workite
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workitems/$Task?api-version=1.0
 ```
+
 ```json
 [
   {
@@ -1131,21 +1138,23 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workite
 }
 ```
 
-
 #### Sample code
 
-* [C# (CreateAndLinkToWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L198)
-* [C# (ByPassRulesOnCreate method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L271)
+- [C# (CreateAndLinkToWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L198)
+- [C# (ByPassRulesOnCreate method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L271)
 
-##  Update work items
+## Update work items
+
 <a name="updateworkitems" />
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/_apis/wit/workitems/{id}?api-version={version}
 ```
+
 ```http
 Content-Type: application/json-patch+json
 ```
+
 ```json
 [
     {
@@ -1169,27 +1178,30 @@ Content-Type: application/json-patch+json
 ]
 ```
 
-| Parameter         | Type                                  |  Notes
-|:------------------|:--------------------------------------|:-------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance          | string                                | TFS server name ({server:port}).
-| id                | string                                | ID of the work item to retrieve.
+| instance | string | TFS server name ({server:port}).
+| id | string | ID of the work item to retrieve.
 | Query
-| api-version       | string                                | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body - field
-| op                | enum { add, replace, remove, test }   | The operation to perform on the field. <br/>You can use add or replace to set the value of a field.<br/>Use remove to clear the value of the field.<br/>Use test to verify that the value is valid without actually saving the work item.
-| path              | string                                | Path to the value you want to add, replace, remove, or test.<br/>For a field, use "/fields/{reference name}".
-| value             | string or int, depending on the field | New value to set.
+| op | enum { add, replace, remove, test } | The operation to perform on the field. <br/>You can use add or replace to set the value of a field.<br/>Use remove to clear the value of the field.<br/>Use test to verify that the value is valid without actually saving the work item.
+| path | string | Path to the value you want to add, replace, remove, or test.<br/>For a field, use "/fields/{reference name}".
+| value | string or int, depending on the field | New value to set.
 | Body - relation
-| op                | enum { add, replace, remove, test }   | The operation to perform on the relation.<br/>Use test to verify that the relation is valid without actually saving the work item.
-| path              | string                                | Path to the value you want to add, replace, remove, or test.<br/>For replacing, removing, or testing a specific relation, use "/relations/Id". Id is the 0 based 'index' of relation in the list of relations currently on this work item. <br/>For adding relations, use "/relations/-".
-| value.rel         | string                                | Type of the relationship. Examples include, work-item/hierarchy-forward, changeset, or attachment.<br/>Get the list of relations that a work item type supports using [relation types](./relation-types.md).
-| value.url         | string                                | URL of the item you are relating to the current work item.
-| value.attributes  | array of name/value pairs             | Additional attributes of the relationship (e.g. comment, isLocked, etc.)
+| op | enum { add, replace, remove, test } | The operation to perform on the relation.<br/>Use test to verify that the relation is valid without actually saving the work item.
+| path | string | Path to the value you want to add, replace, remove, or test.<br/>For replacing, removing, or testing a specific relation, use "/relations/Id". Id is the 0 based 'index' of relation in the list of relations currently on this work item. <br/>For adding relations, use "/relations/-".
+| value.rel | string | Type of the relationship. Examples include, work-item/hierarchy-forward, changeset, or attachment.<br/>Get the list of relations that a work item type supports using [relation types](./relation-types.md).
+| value.url | string | URL of the item you are relating to the current work item.
+| value.attributes | array of name/value pairs | Additional attributes of the relationship (e.g. comment, isLocked, etc.)
 
 If any of the new field values or relations are not valid, or if the work item has been saved by someone else since the revision was retrieved, the work item will not be updated.
 
 ### Update a field
+
 <a name="updateafield" />
 
 #### Sample request
@@ -1197,6 +1209,7 @@ If any of the new field values or relations are not valid, or if the work item h
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=1.0
 ```
+
 ```json
 [
   {
@@ -1276,23 +1289,24 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 }
 ```
 
-
 #### Sample code
 
-* [C# (ChangeFieldValue method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L316)
+- [C# (ChangeFieldValue method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L316)
 
 ### Move work item
+
 <a name="moveworkitem" />
 
 > **API Availability**: Team Services only (not TFS)
 
-In order to move a work item, we need to update 3 fields (System.TeamProject, System.AreaPath and System.IterationPath). The below example shows that a work item was moved to a destination project (Fabrikam-Scrum). 
+In order to move a work item, we need to update 3 fields (System.TeamProject, System.AreaPath and System.IterationPath). The below example shows that a work item was moved to a destination project (Fabrikam-Scrum).
 
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/398?api-version=1.0
 ```
+
 ```json
 [
   {
@@ -1369,13 +1383,12 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/398?api-version=
 }
 ```
 
-
 #### Sample code
 
-* [C# (MoveToAnotherProject method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L356)
-
+- [C# (MoveToAnotherProject method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L356)
 
 ### Change work item type
+
 <a name="changeworkitemtype" />
 
 > **API Availability**: Team Services only (not TFS)
@@ -1387,6 +1400,7 @@ In order to change a work item type, we need to update the System.WorkItemType f
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/398?api-version=1.0
 ```
+
 ```json
 [
   {
@@ -1456,12 +1470,12 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/398?api-version=
 }
 ```
 
-
 #### Sample code
 
-* [C# (ChangeType method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L398)
+- [C# (ChangeType method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L398)
 
 ### Add a tag
+
 <a name="addatag" />
 
 #### Sample request
@@ -1469,6 +1483,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/398?api-version=
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=1.0
 ```
+
 ```json
 [
   {
@@ -1563,12 +1578,12 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 }
 ```
 
-
 #### Sample code
 
-* [C# (AddTags method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L429)
+- [C# (AddTags method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L429)
 
 ### Add a link
+
 <a name="addalink" />
 
 #### Sample request
@@ -1576,6 +1591,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=1.0
 ```
+
 ```json
 [
   {
@@ -1673,12 +1689,12 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 }
 ```
 
-
 #### Sample code
 
-* [C# (LinkToOtherWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L454)
+- [C# (LinkToOtherWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L454)
 
 ### Update a link
+
 <a name="updatealink" />
 
 #### Sample request
@@ -1686,6 +1702,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=1.0
 ```
+
 ```json
 [
   {
@@ -1777,12 +1794,12 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 }
 ```
 
-
 #### Sample code
 
-* [C# (UpdateLinkComment method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L487)
+- [C# (UpdateLinkComment method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L487)
 
 ### Remove a link
+
 <a name="removealink" />
 
 #### Sample request
@@ -1790,6 +1807,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=1.0
 ```
+
 ```json
 [
   {
@@ -1872,12 +1890,12 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 }
 ```
 
-
 #### Sample code
 
-* [C# (RemoveLink method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L517)
+- [C# (RemoveLink method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L517)
 
 ### Add an attachment
+
 <a name="addanattachment" />
 
 To attach a file to a work item,
@@ -1888,6 +1906,7 @@ To attach a file to a work item,
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=1.0
 ```
+
 ```json
 [
   {
@@ -1995,12 +2014,12 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 }
 ```
 
-
 #### Sample code
 
-* [C# (AddAttachment method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L547)
+- [C# (AddAttachment method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L547)
 
 ### Remove an attachment
+
 <a name="removeanattachment" />
 
 #### Sample request
@@ -2008,6 +2027,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=1.0
 ```
+
 ```json
 [
   {
@@ -2089,12 +2109,12 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 }
 ```
 
-
 #### Sample code
 
-* [C# (RemoveAttachment method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L598)
+- [C# (RemoveAttachment method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L598)
 
 ### Add a hyperlink
+
 <a name="addhyperlink" />
 
 #### Sample request
@@ -2102,6 +2122,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=1.0
 ```
+
 ```json
 [
   {
@@ -2204,15 +2225,15 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 }
 ```
 
-
 #### Sample code
 
-* [C# (UpdateWorkItemAddHyperLink method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L631)
+- [C# (UpdateWorkItemAddHyperLink method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L631)
 
 ### Make an update bypassing rules
+
 <a name="updatebypassingrules" />
 
-For scenarios, such as migration or synchronization tools, when you want to make changes to a work item that otherwise would be invalid, you may optionally choose to bypass the rules engine on a work item update.  This allows you to modify the work item fields without any restrictions, for example you can assign a work item to a user no longer in the organization.
+For scenarios, such as migration or synchronization tools, when you want to make changes to a work item that otherwise would be invalid, you may optionally choose to bypass the rules engine on a work item update. This allows you to modify the work item fields without any restrictions, for example you can assign a work item to a user no longer in the organization.
 
 To modify the System.CreatedBy, System.CreatedDate, System.ChangedBy, or System.ChangedDate fields, you must be a member of the "Project Collection Service Accounts" group.
 
@@ -2223,6 +2244,7 @@ NOTE: System.CreatedBy and System.CreatedDate can only be modified using bypass 
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/335?bypassRules=true&api-version=1.0
 ```
+
 ```json
 [
   {
@@ -2312,12 +2334,12 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/335?bypassRules=
 }
 ```
 
-
 #### Sample code
 
-* [C# (UpdateWorkItemUsingByPassRules method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L711)
+- [C# (UpdateWorkItemUsingByPassRules method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L711)
 
 ## Delete a work item
+
 <a name="deleteaworkitem" />
 
 #### Sample request
@@ -2326,8 +2348,6 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/335?bypassRules=
 DELETE https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/workitems/72?api-version=1.0
 ```
 
-
 #### Sample code
 
-* [C# (DeleteWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L732)
-
+- [C# (DeleteWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/WorkItemsSample.cs#L732)

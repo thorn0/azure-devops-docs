@@ -13,7 +13,7 @@ ms.topic: include
 
 2. Select **Sign in with GitHub**.
 
-   ![Select Sign in with GitHub](/azure/devops/media/sign-in-github.png)  
+   ![Select Sign in with GitHub](/azure/devops/media/sign-in-github.png)
 
    If you have an account in session already, select **Use another account**. You're taken to GitHub sign-in where you can enter your GitHub user name or email address.
 
@@ -35,12 +35,10 @@ You can rename and delete your organization, or change the organization location
 
 ### Enable GitHub invitations
 
-Creating a new Azure DevOps organization with your GitHub username turns on the Invite GitHub users policy by default. For existing organizations, your administrator can turn on this capability via **Organization settings** > **Policies** tab. 
+Creating a new Azure DevOps organization with your GitHub username turns on the Invite GitHub users policy by default. For existing organizations, your administrator can turn on this capability via **Organization settings** > **Policies** tab.
 
 Once the setting is changed, sign out of Azure DevOps, and then from a fresh browser session, sign back in to the organization `dev.azure.com/{organizationName}` or `organizationName.visualstudio.com` with your GitHub credentials. You're now recognized as a GitHub user and the GitHub invitation experience is available to you.
 
 ![Invite GitHub users policy ](/azure/devops/media/invite-github-users-policy.png)
 
 For more information about GitHub authentication, see [FAQs](../organizations/security/faq-github-authentication.md).
-
-

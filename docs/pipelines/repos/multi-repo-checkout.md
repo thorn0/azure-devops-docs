@@ -12,11 +12,11 @@ monikerRange: "> azure-devops-2019"
 
 Pipelines often rely on multiple repositories. You can have different repositories with source, tools, scripts, or other items that you need to build your code. By using multiple `checkout` steps in your pipeline, you can fetch and check out other repositories in addition to the one you use to store your YAML pipeline.
 
-[!INCLUDE [temp](../../includes/feature-support-cloud-only.md)] 
+[!INCLUDE [temp](../../includes/feature-support-cloud-only.md)]
 
 ## Specify multiple repositories
 
-Repositories can be specified as a [repository resource](../yaml-schema.md#repository-resource), or inline with the `checkout` step. 
+Repositories can be specified as a [repository resource](../yaml-schema.md#repository-resource), or inline with the `checkout` step.
 
 - [Repository declared using a repository resource](#repository-declared-using-a-repository-resource)
 - [Repository declared using inline syntax](#repository-declared-using-inline-syntax)
@@ -40,34 +40,34 @@ In the following example, three repositories are declared as repository resource
 ```yaml
 resources:
   repositories:
-  - repository: MyGitHubRepo # The name used to reference this repository in the checkout step
-    type: github
-    endpoint: MyGitHubServiceConnection
-    name: MyGitHubOrgOrUser/MyGitHubRepo
-  - repository: MyBitBucketRepo
-    type: bitbucket
-    endpoint: MyBitBucketServiceConnection
-    name: MyBitBucketOrgOrUser/MyBitBucketRepo
-  - repository: MyAzureReposGitRepository
-    type: git
-    name: MyProject/MyAzureReposGitRepo
+    - repository: MyGitHubRepo # The name used to reference this repository in the checkout step
+      type: github
+      endpoint: MyGitHubServiceConnection
+      name: MyGitHubOrgOrUser/MyGitHubRepo
+    - repository: MyBitBucketRepo
+      type: bitbucket
+      endpoint: MyBitBucketServiceConnection
+      name: MyBitBucketOrgOrUser/MyBitBucketRepo
+    - repository: MyAzureReposGitRepository
+      type: git
+      name: MyProject/MyAzureReposGitRepo
 
 trigger:
-- master
+  - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: "ubuntu-latest"
 
 steps:
-- checkout: self
-- checkout: MyGitHubRepo
-- checkout: MyBitBucketRepo
-- checkout: MyAzureReposGitRepository
+  - checkout: self
+  - checkout: MyGitHubRepo
+  - checkout: MyBitBucketRepo
+  - checkout: MyAzureReposGitRepository
 
-- script: dir $(Build.SourcesDirectory)
+  - script: dir $(Build.SourcesDirectory)
 ```
 
-If the `self` repository is named `CurrentRepo`, the `script` command produces the following output: `CurrentRepo  MyAzureReposGitRepo  MyBitBucketRepo  MyGitHubRepo`. In this example, the names of the repositories are used for the folders, because no `path` is specified in the checkout step. For more information on repository folder names and locations, see the following [Checkout path](#checkout-path) section.
+If the `self` repository is named `CurrentRepo`, the `script` command produces the following output: `CurrentRepo MyAzureReposGitRepo MyBitBucketRepo MyGitHubRepo`. In this example, the names of the repositories are used for the folders, because no `path` is specified in the checkout step. For more information on repository folder names and locations, see the following [Checkout path](#checkout-path) section.
 
 ### Repository declared using inline syntax
 
@@ -78,7 +78,7 @@ If your repository doesn't require a service connection, you can declare it inli
 
 ```yaml
 steps:
-- checkout: git://MyProject/MyRepo # Azure Repos Git repository in the same organization
+  - checkout: git://MyProject/MyRepo # Azure Repos Git repository in the same organization
 ```
 
 > [!NOTE]
@@ -86,11 +86,11 @@ steps:
 
 ## Checkout path
 
-Unless a `path` is specified in the `checkout` step, source code is placed in a default directory. This directory is different depending on whether you are checking out a single repository or multiple repositories. 
+Unless a `path` is specified in the `checkout` step, source code is placed in a default directory. This directory is different depending on whether you are checking out a single repository or multiple repositories.
 
 - **Single repository**: If you have a single `checkout` step in your job, (or you have no checkout step which is equivalent to `checkout: self`), your source code is checked out into a directory called `s` located as a subfolder of `(Agent.BuildDirectory)`. If `(Agent.BuildDirectory)` is `C:\agent\_work\1` then your code is checked out to `C:\agent\_work\1\s`.
 - **Multiple repositories**: If you have multiple `checkout` steps in your job, your source code is checked out into directories named after the repositories as a subfolder of `s` in `(Agent.BuildDirectory)`. If `(Agent.BuildDirectory)` is `C:\agent\_work\1` and your repositories are named `tools` and `code`, your code is checked out to `C:\agent\_work\1\s\tools` and `C:\agent\_work\1\s\code`.
-  
+
   > [!NOTE]
   > If no `path` is specified in the `checkout` step, the name of the repository is used for the folder,
   > not the `repository` value which is used to reference the repository in the `checkout` step.
@@ -117,10 +117,9 @@ When using a repository resource, specify the ref using the `ref` property. The 
 ```yaml
 resources:
   repositories:
-  - repository: MyGitHubRepo
-    type: github
-    endpoint: MyGitHubServiceConnection
-    name: MyGitHubOrgOrUser/MyGitHubRepo
-    ref: features/tools
+    - repository: MyGitHubRepo
+      type: github
+      endpoint: MyGitHubServiceConnection
+      name: MyGitHubOrgOrUser/MyGitHubRepo
+      ref: features/tools
 ```
-

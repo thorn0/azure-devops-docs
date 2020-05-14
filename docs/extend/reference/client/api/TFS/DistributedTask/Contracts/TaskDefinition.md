@@ -14,60 +14,58 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `agentExecution`: [TaskExecution](../../../TFS/DistributedTask/Contracts/TaskExecution.md). 
+- `agentExecution`: [TaskExecution](../../../TFS/DistributedTask/Contracts/TaskExecution.md).
 
-* `author`: string. 
+- `author`: string.
 
-* `category`: string. 
+- `category`: string.
 
-* `contentsUploaded`: boolean. 
+- `contentsUploaded`: boolean.
 
-* `contributionIdentifier`: string. 
+- `contributionIdentifier`: string.
 
-* `contributionVersion`: string. 
+- `contributionVersion`: string.
 
-* `dataSourceBindings`: [DataSourceBinding](../../../TFS/DistributedTask/Contracts/DataSourceBinding.md)[]. 
+- `dataSourceBindings`: [DataSourceBinding](../../../TFS/DistributedTask/Contracts/DataSourceBinding.md)[].
 
-* `demands`: any[]. 
+- `demands`: any[].
 
-* `description`: string. 
+- `description`: string.
 
-* `disabled`: boolean. 
+- `disabled`: boolean.
 
-* `friendlyName`: string. 
+- `friendlyName`: string.
 
-* `groups`: [TaskGroupDefinition](../../../TFS/DistributedTask/Contracts/TaskGroupDefinition.md)[]. 
+- `groups`: [TaskGroupDefinition](../../../TFS/DistributedTask/Contracts/TaskGroupDefinition.md)[].
 
-* `helpMarkDown`: string. 
+- `helpMarkDown`: string.
 
-* `hostType`: string. 
+- `hostType`: string.
 
-* `iconUrl`: string. 
+- `iconUrl`: string.
 
-* `id`: string. 
+- `id`: string.
 
-* `inputs`: [TaskInputDefinition](../../../TFS/DistributedTask/Contracts/TaskInputDefinition.md)[]. 
+- `inputs`: [TaskInputDefinition](../../../TFS/DistributedTask/Contracts/TaskInputDefinition.md)[].
 
-* `instanceNameFormat`: string. 
+- `instanceNameFormat`: string.
 
-* `minimumAgentVersion`: string. 
+- `minimumAgentVersion`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `packageLocation`: string. 
+- `packageLocation`: string.
 
-* `packageType`: string. 
+- `packageType`: string.
 
-* `serverOwned`: boolean. 
+- `serverOwned`: boolean.
 
-* `sourceDefinitions`: [TaskSourceDefinition](../../../TFS/DistributedTask/Contracts/TaskSourceDefinition.md)[]. 
+- `sourceDefinitions`: [TaskSourceDefinition](../../../TFS/DistributedTask/Contracts/TaskSourceDefinition.md)[].
 
-* `sourceLocation`: string. 
+- `sourceLocation`: string.
 
-* `version`: [TaskVersion](../../../TFS/DistributedTask/Contracts/TaskVersion.md). 
+- `version`: [TaskVersion](../../../TFS/DistributedTask/Contracts/TaskVersion.md).
 
-* `visibility`: string[]. 
-
+- `visibility`: string[].

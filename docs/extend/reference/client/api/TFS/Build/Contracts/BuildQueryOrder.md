@@ -16,5 +16,5 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `FinishTimeAscending` Order by finish time ascending.
-* `FinishTimeDescending` Order by finish time descending.
+- `FinishTimeAscending` Order by finish time ascending.
+- `FinishTimeDescending` Order by finish time descending.

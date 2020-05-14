@@ -4,7 +4,7 @@ description: Project scoped feeds in Azure Artifacts in Azure DevOps Services or
 ms.technology: devops-artifacts
 ms.topic: conceptual
 ms.date: 05/07/2020
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Project-scoped feeds
@@ -15,19 +15,19 @@ Historically, all feeds used to be scoped to an organization. However, to enable
 
 A project-scoped feed is scoped to a project instead of an organization. Here are the main differences between the two feed types.
 
-* Project-scoped feeds will always use the visibility of the project. If a project is public, the feed is also public and if the project is private, the feed is also private. Organization-scoped feeds will always remain private.
+- Project-scoped feeds will always use the visibility of the project. If a project is public, the feed is also public and if the project is private, the feed is also private. Organization-scoped feeds will always remain private.
 
-* The URL of a project-scoped feed includes the project. The URL of an organization-scoped feed doesn't include a project.
+- The URL of a project-scoped feed includes the project. The URL of an organization-scoped feed doesn't include a project.
 
-    * Project-scoped feed: `https://feeds.dev.azure.com/contoso/projectId/_apis/Packaging/Feeds`
+  - Project-scoped feed: `https://feeds.dev.azure.com/contoso/projectId/_apis/Packaging/Feeds`
 
-    * Organization-scoped feed: `https://feeds.dev.azure.com/contoso/_apis/Packaging/Feeds`
+  - Organization-scoped feed: `https://feeds.dev.azure.com/contoso/_apis/Packaging/Feeds`
 
-* All organization-scoped feeds will show up in the feed list of the Artifacts feed UI. To see a project-scoped feed in the list you have to be navigated to the project the feed is scoped to.
+- All organization-scoped feeds will show up in the feed list of the Artifacts feed UI. To see a project-scoped feed in the list you have to be navigated to the project the feed is scoped to.
 
-* All new feeds are recommended to be project-scoped. Creating a new feed through the create feed panel will create a project-scoped feed.
+- All new feeds are recommended to be project-scoped. Creating a new feed through the create feed panel will create a project-scoped feed.
 
-* When connecting to a private project scoped feed from an Azure DevOps pipeline that is in the same organization but in a different project, the project that the feed is scoped to must allow access to the other project's build service. The build service must also be separately added to the feed permissions, regardless of the scope of the feed.
+- When connecting to a private project scoped feed from an Azure DevOps pipeline that is in the same organization but in a different project, the project that the feed is scoped to must allow access to the other project's build service. The build service must also be separately added to the feed permissions, regardless of the scope of the feed.
 
 ### What can I do if I'm concerned about my project-scoped feed's visibility
 
@@ -35,4 +35,3 @@ There is an option to not allow public projects in an organization. It can be se
 
 > [!NOTE]
 > If you want to share a package in your feed with all the users in your organization, you can promote that package to a `view` and set its visibility to `People in my organization`. See [Get started with feed views](./views.md#get-started-with-feed-views) for more information.
-

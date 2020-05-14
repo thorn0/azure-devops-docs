@@ -32,20 +32,20 @@ It is unnecessary to use this task with the [Install Apple Certificate](install-
 
 ## Arguments
 
-| Argument | Description |
-| -------- | ----------- |
+| Argument    | Description                                                                                                                                              |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Secure File | The file name or unique identifier (GUID) of the secure file to download to the agent machine. The file will be deleted when the pipeline job completes. |
 
 ## Example
 
-This example downloads a secure certificate file and installs it to a trusted  certificate authority (CA) directory on Linux:
+This example downloads a secure certificate file and installs it to a trusted certificate authority (CA) directory on Linux:
 
 ```yaml
 - task: DownloadSecureFile@1
   name: caCertificate
-  displayName: 'Download CA certificate'
+  displayName: "Download CA certificate"
   inputs:
-    secureFile: 'myCACertificate.pem'
+    secureFile: "myCACertificate.pem"
 
 - script: |
     echo Installing $(caCertificate.secureFilePath) to the trusted CA directory...

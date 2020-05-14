@@ -14,48 +14,46 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `changeId`: number. 
+- `changeId`: number.
 
-* `currentOperation`: string. 
+- `currentOperation`: string.
 
-* `details`: [TimelineReference](../../../TFS/DistributedTask/Contracts/TimelineReference.md). 
+- `details`: [TimelineReference](../../../TFS/DistributedTask/Contracts/TimelineReference.md).
 
-* `errorCount`: number. 
+- `errorCount`: number.
 
-* `finishTime`: Date. 
+- `finishTime`: Date.
 
-* `id`: string. 
+- `id`: string.
 
-* `issues`: [Issue](../../../TFS/DistributedTask/Contracts/Issue.md)[]. 
+- `issues`: [Issue](../../../TFS/DistributedTask/Contracts/Issue.md)[].
 
-* `lastModified`: Date. 
+- `lastModified`: Date.
 
-* `location`: string. 
+- `location`: string.
 
-* `log`: [TaskLogReference](../../../TFS/DistributedTask/Contracts/TaskLogReference.md). 
+- `log`: [TaskLogReference](../../../TFS/DistributedTask/Contracts/TaskLogReference.md).
 
-* `name`: string. 
+- `name`: string.
 
-* `order`: number. 
+- `order`: number.
 
-* `parentId`: string. 
+- `parentId`: string.
 
-* `percentComplete`: number. 
+- `percentComplete`: number.
 
-* `result`: [TaskResult](../../../TFS/DistributedTask/Contracts/TaskResult.md). 
+- `result`: [TaskResult](../../../TFS/DistributedTask/Contracts/TaskResult.md).
 
-* `resultCode`: string. 
+- `resultCode`: string.
 
-* `startTime`: Date. 
+- `startTime`: Date.
 
-* `state`: [TimelineRecordState](../../../TFS/DistributedTask/Contracts/TimelineRecordState.md). 
+- `state`: [TimelineRecordState](../../../TFS/DistributedTask/Contracts/TimelineRecordState.md).
 
-* `type`: string. 
+- `type`: string.
 
-* `warningCount`: number. 
+- `warningCount`: number.
 
-* `workerName`: string. 
-
+- `workerName`: string.

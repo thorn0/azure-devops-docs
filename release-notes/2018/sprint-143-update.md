@@ -43,7 +43,6 @@ Azure Artifacts:
 - [Provenance information on packages](#provenance-information-on-packages)
 - [Azure Artifacts REST API documentation updates](#azure-artifacts-rest-api-documentation-updates)
 
-
 ## General
 
 ### REST API version 5.0
@@ -58,13 +57,11 @@ We're excited to announce the general availability of the new text editor on the
 
 You can use this control in any text field on the work item form, including in your discussions. Here is the new experience that you can expect to see:
 
-> [!div class="mx-imgBorder"]
-> ![Text editor](media/143_05.png)
+> [!div class="mx-imgBorder"] > ![Text editor](media/143_05.png)
 
 Below, you can see the code snippet experience. With this addition, you can easily and clearly discuss code in the work item form.
 
-> [!div class="mx-imgBorder"]
-> ![Text editor code](media/143_06.png)
+> [!div class="mx-imgBorder"] > ![Text editor code](media/143_06.png)
 
 We really want to start making the work item a more social experience. Our first step in that journey is bringing emoji support to your text fields and discussions on the work item. Using emojis, you will be able to bring your descriptions and comments to life and give them a bit more personality!
 
@@ -76,8 +73,7 @@ The work done for this editor is open source, so please feel free to check out t
 
 Most of the experiences in **Azure Repos** require you to select a repo and then a branch in that repo. To improve this experience for organizations with large number of branches, we are rolling out a new branch picker. The picker now allows you to select your favorite branches or quickly search for a branch.
 
-> [!div class="mx-imgBorder"]
-> ![Branch picker](media/143_04.png)
+> [!div class="mx-imgBorder"] > ![Branch picker](media/143_04.png)
 
 ### Draft pull requests
 
@@ -85,13 +81,11 @@ In order to prevent pull requests from being completed before they're ready and 
 
 Draft pull requests can be created by selecting **Create as draft** from the **Create** button drop down when creating a pull request.
 
-> [!div class="mx-imgBorder"]
-> ![Create PR draft](media/143_02.png)
+> [!div class="mx-imgBorder"] > ![Create PR draft](media/143_02.png)
 
-Once you have created a draft pull request, you will see a badge indicating its status next to the title. 
+Once you have created a draft pull request, you will see a badge indicating its status next to the title.
 
-> [!div class="mx-imgBorder"]
-> ![Badge](media/143_03.png)
+> [!div class="mx-imgBorder"] > ![Badge](media/143_03.png)
 
 Draft pull requests do not include reviewers or run builds by default but allow you to manually add reviewers and run builds. To promote the pull request to a normal pull request, simply click the **Publish** button from the pull request detail page.
 
@@ -107,9 +101,9 @@ You can specify which tags to include and exclude. For example:
 trigger:
   tags:
     include:
-    - releases/*
+      - releases/*
     exclude:
-    - releases/old*
+      - releases/old*
 ```
 
 ### Setting to auto cancel an existing pipeline when a pull requests is updated
@@ -120,8 +114,8 @@ By default, pipelines triggered by pull requests (PRs) will be canceled if a new
 pr:
   branches:
     include:
-    - master
-    - releases/*
+      - master
+      - releases/*
   autoCancel: false
 ```
 
@@ -131,9 +125,9 @@ Previously, we required you to declare your container resources in YAML pipeline
 
 ```yaml
 jobs:
-- job: my-container-job
-  container:
-    image: microsoft/dotnet:latest
+  - job: my-container-job
+    container:
+      image: microsoft/dotnet:latest
 ```
 
 ### Changes to default permissions for new projects
@@ -142,10 +136,9 @@ Up until now, project contributors could not create pipelines unless they are ex
 
 ### Deploy to failed targets in a Deployment Group
 
-By default, **Azure Pipelines** used to re-run all jobs when you redeploy a previously failed run. Now, you can override this behavior by configuring the **Deployment Option** when deploying. By selecting the **All jobs and limit to failed targets in a deployment group** option, the re-run will run all the jobs and skip the deployments to the targets that are already up to date.  
+By default, **Azure Pipelines** used to re-run all jobs when you redeploy a previously failed run. Now, you can override this behavior by configuring the **Deployment Option** when deploying. By selecting the **All jobs and limit to failed targets in a deployment group** option, the re-run will run all the jobs and skip the deployments to the targets that are already up to date.
 
-> [!div class="mx-imgBorder"]
-> ![Badge](media/143_08.png)
+> [!div class="mx-imgBorder"] > ![Badge](media/143_08.png)
 
 ### Support for Infrastructure as Code
 
@@ -159,18 +152,13 @@ Previously, in order to exclude files from published artifacts, you would have t
 
 ### Provenance information on packages
 
-With this update, we've made it a bit easier to understand the provenance of your packages, including who or what published them and what source code commit they came from. This information is populated automatically for all packages published using the [npm](https://docs.microsoft.com/azure/devops/pipelines/artifacts/npm?toc=%2Fazure%2Fdevops%2Fartifacts%2Ftoc.json&view=azure-devops&tabs=yaml
-), [NuGet](https://docs.microsoft.com/azure/devops/pipelines/artifacts/nuget?toc=%2Fazure%2Fdevops%2Fartifacts%2Ftoc.json&view=azure-devops&tabs=yaml
-) and .NET Core, [Twine Authenticate](https://docs.microsoft.com/azure/devops/pipelines/artifacts/pypi?toc=%2Fazure%2Fdevops%2Fartifacts%2Ftoc.json&view=azure-devops&tabs=yaml
-) (for Python), and [Universal Packages](https://docs.microsoft.com/azure/devops/pipelines/artifacts/universal-packages?toc=%2Fazure%2Fdevops%2Fartifacts%2Ftoc.json&view=azure-devops&tabs=yaml) tasks.
+With this update, we've made it a bit easier to understand the provenance of your packages, including who or what published them and what source code commit they came from. This information is populated automatically for all packages published using the [npm](https://docs.microsoft.com/azure/devops/pipelines/artifacts/npm?toc=%2Fazure%2Fdevops%2Fartifacts%2Ftoc.json&view=azure-devops&tabs=yaml), [NuGet](https://docs.microsoft.com/azure/devops/pipelines/artifacts/nuget?toc=%2Fazure%2Fdevops%2Fartifacts%2Ftoc.json&view=azure-devops&tabs=yaml) and .NET Core, [Twine Authenticate](https://docs.microsoft.com/azure/devops/pipelines/artifacts/pypi?toc=%2Fazure%2Fdevops%2Fartifacts%2Ftoc.json&view=azure-devops&tabs=yaml) (for Python), and [Universal Packages](https://docs.microsoft.com/azure/devops/pipelines/artifacts/universal-packages?toc=%2Fazure%2Fdevops%2Fartifacts%2Ftoc.json&view=azure-devops&tabs=yaml) tasks.
 
-> [!div class="mx-imgBorder"]
-> ![Badge](media/143_10.png)
+> [!div class="mx-imgBorder"] > ![Badge](media/143_10.png)
 
 ### Azure Artifacts REST API documentation updates
 
 With this sprint's update, we're rolling out substantial updates to the documentation of the Azure Artifacts REST APIs, which should make it easier to develop against them in your own applications.
-
 
 ## Next steps
 
@@ -179,15 +167,13 @@ With this sprint's update, we're rolling out substantial updates to the document
 
 Read about the new features below and head over to Azure DevOps to try them for yourself.
 
-> [!div class="nextstepaction"]
-> [Go to Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
+> [!div class="nextstepaction"][go to azure devops](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
 
 ## Feedback
 
 We would love to hear what you think about these features. Use the feedback menu to report a problem or provide a suggestion.
 
-> [!div class="mx-imgBorder"]
-> ![Make a suggestion](../media/help-make-a-suggestion.png)
+> [!div class="mx-imgBorder"] > ![Make a suggestion](../media/help-make-a-suggestion.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/vsts).
 

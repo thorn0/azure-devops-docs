@@ -17,11 +17,10 @@ Extends: [WorkItemTrackingResource](../../../TFS/WorkItemTracking/Contracts/Work
 
 ### Members
 
-* `fields`: {[key: string]: any}. 
+- `fields`: {[key: string]: any}.
 
-* `id`: number. 
+- `id`: number.
 
-* `relations`: [WorkItemRelation](../../../TFS/WorkItemTracking/Contracts/WorkItemRelation.md)[]. 
+- `relations`: [WorkItemRelation](../../../TFS/WorkItemTracking/Contracts/WorkItemRelation.md)[].
 
-* `rev`: number. 
-
+- `rev`: number.

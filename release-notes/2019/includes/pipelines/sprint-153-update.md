@@ -10,7 +10,7 @@ ms.topic: include
 With this update, we added Windows SDK 18362 to the VS2019 image. In addition, we downgraded several versions of Python to address a bug. The new versions in this update are the following:
 
 | OS      | 2.7.x  | 3.5.x | 3.7.x |
-| ------- |:------:| :----:| :----:|
+| ------- | :----: | :---: | :---: |
 | Linux   | 2.7.15 | 3.5.5 | 3.7.2 |
 | Mac     | 2.7.15 | 3.5.5 | 3.7.2 |
 | Windows | 2.7.1  | 3.5.4 | 3.7.2 |
@@ -27,16 +27,16 @@ We added two YAML keywords (**publish** and **download**) to make it easier to p
 
 ```yaml
 steps:
-- publish: bin
-  artifact: binaries
+  - publish: bin
+    artifact: binaries
 ```
 
 To consume (download) the artifact in the same job or a later job in the same pipeline use the following:
 
 ```yaml
 steps:
-- download: current
-  artifact: binaries
+  - download: current
+    artifact: binaries
 ```
 
 We have also updated the Download Pipeline Artifact to let you download artifacts that have been published with the traditional Publish Build Artifacts task. Now you don't need to know how an artifact was published when you are going to consume it in your pipeline.
@@ -68,6 +68,6 @@ Going forward you won't be able to add or update schedules that have been create
 
 ### Updates to multi-stage pipelines public preview
 
-We continue to add features to the multi-stage pipelines public preview. With this update we made improvements to the log viewing experience, added the ability to view all runs inside of folders, and supported build extensions in the new pages. 
+We continue to add features to the multi-stage pipelines public preview. With this update we made improvements to the log viewing experience, added the ability to view all runs inside of folders, and supported build extensions in the new pages.
 
 In addition, we fixed a few bugs and added the ability to create new pipelines directly into a folder. In the previous sprint, we completed work around browsing and downloading Artifacts, which was a popular feature request.

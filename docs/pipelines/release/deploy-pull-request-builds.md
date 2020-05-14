@@ -5,7 +5,7 @@ ms.topic: tutorial
 ms.author: moala
 author: raiyanalam
 ms.date: 12/18/2018
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ---
 
 # Deploy pull request builds using Azure Pipelines
@@ -43,9 +43,9 @@ This article shows how you can set up a pull request based release for code host
 
    ![Pull request trigger section highlighting information on current opt-in status of stages](media/deploy-pull-request-builds/pull-request-trigger-stage.png)
 
-   To opt-in a stage for PR deployment, select **Pre-deployment conditions** for the intended stage. Inside the **Triggers** section, set **Pull request deployment** to on, which allows PR releases to be deployed to this stage. 
+   To opt-in a stage for PR deployment, select **Pre-deployment conditions** for the intended stage. Inside the **Triggers** section, set **Pull request deployment** to on, which allows PR releases to be deployed to this stage.
 
-   >[!IMPORTANT]
+   > [!IMPORTANT]
    > For critical stages like production, **Pull request deployment** should not be turned on.
 
    ![Release definition highlighting pre-deployment conditions of 'Dev' Environment](media/deploy-pull-request-builds/deploy-to-dev-stage.png)
@@ -99,7 +99,8 @@ You can use branch policies to enforce successful deployment as a required crite
 - [Release triggers](triggers.md)
 - [Supported build source repositories](../repos/index.md)
 
-## Additional resources 
+## Additional resources
+
 - [Azure Repos](../../repos/git/index.yml)
 - [Branch policies](../../repos/git/branch-policies-overview.md)
 - [Configure branch policy for an external service](../../repos/git/pr-status-policy.md)

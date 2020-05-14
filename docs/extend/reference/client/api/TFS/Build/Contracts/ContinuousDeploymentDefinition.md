@@ -14,26 +14,24 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `connectedService`: [TFS_Core_Contracts.WebApiConnectedServiceRef](../../../tfs/distributedtask/contracts/webapiconnectedserviceref.md). The connected service associated with the continuous deployment
+- `connectedService`: [TFS_Core_Contracts.WebApiConnectedServiceRef](../../../tfs/distributedtask/contracts/webapiconnectedserviceref.md). The connected service associated with the continuous deployment
 
-* `definition`: [ShallowReference](./ShallowReference.md). The definition associated with the continuous deployment
+- `definition`: [ShallowReference](./ShallowReference.md). The definition associated with the continuous deployment
 
-* `gitBranch`: string. 
+- `gitBranch`: string.
 
-* `hostedServiceName`: string. 
+- `hostedServiceName`: string.
 
-* `project`: [TFS_Core_Contracts.TeamProjectReference](../../../TFS/DistributedTask/Contracts/TeamProjectReference.md). 
+- `project`: [TFS_Core_Contracts.TeamProjectReference](../../../TFS/DistributedTask/Contracts/TeamProjectReference.md).
 
-* `repositoryId`: string. 
+- `repositoryId`: string.
 
-* `storageAccountName`: string. 
+- `storageAccountName`: string.
 
-* `subscriptionId`: string. 
+- `subscriptionId`: string.
 
-* `website`: string. 
+- `website`: string.
 
-* `webspace`: string. 
-
+- `webspace`: string.

@@ -8,19 +8,19 @@ System variables were documented as being immutable, but in practice they could 
 
 ```yaml
 variables:
-- name: myVar
-  value: myValue
-  readonly: true
+  - name: myVar
+    value: myValue
+    readonly: true
 ```
 
 ### Support for output variables in a deployment job
- 
-You can now define output variables in a deployment job's [lifecycle hooks](https://docs.microsoft.com/azure/devops/pipelines/process/deployment-jobs?view=azure-devops#descriptions-of-life-cycle-hooks) and consume them in other downstream steps and jobs within the same stage. 
+
+You can now define output variables in a deployment job's [lifecycle hooks](https://docs.microsoft.com/azure/devops/pipelines/process/deployment-jobs?view=azure-devops#descriptions-of-life-cycle-hooks) and consume them in other downstream steps and jobs within the same stage.
 
 While executing deployment strategies, you can access output variables across jobs using the following syntax.
 
-- For **runOnce** strategy: `$[dependencies.<job-name>.outputs['<lifecycle-hookname>.<step-name>.<variable-name>']]`  
-- For **canary** strategy:  `$[dependencies.<job-name>.outputs['<lifecycle-hookname>_<increment-value>.<step-name>.<variable-name>']]`  
+- For **runOnce** strategy: `$[dependencies.<job-name>.outputs['<lifecycle-hookname>.<step-name>.<variable-name>']]`
+- For **canary** strategy: `$[dependencies.<job-name>.outputs['<lifecycle-hookname>_<increment-value>.<step-name>.<variable-name>']]`
 - For **rolling** strategy : `$[dependencies.<job-name>.outputs['<lifecycle-hookname>_<resource-name>.<step-name>.<variable-name>']]`
 
 ```yaml
@@ -29,8 +29,8 @@ While executing deployment strategies, you can access output variables across jo
   pool:
     vmImage: 'ubuntu-16.04'
   environment: staging
-  strategy:                  
-    canary:      
+  strategy:
+    canary:
       increments: [10,20]  # creates multiple jobs, one for each increment. Output variable can be referenced with this.
       deploy:
         steps:
@@ -50,6 +50,7 @@ While executing deployment strategies, you can access output variables across jo
   - script: "echo $(myVarFromDeploymentJob)"
     name: echovar
 ```
+
 Learn more on how to [set a multi-job output variable](https://docs.microsoft.com/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#set-a-multi-job-output-variable)
 
 ### Avoid rollback of critical changes
@@ -58,11 +59,11 @@ In classic release pipelines, it is common to rely on scheduled deployments for 
 
 ### Removing older images in Azure Pipelines hosted pools
 
-On March 23, 2020, we will remove the following images from our Azure Pipelines hosted pools. 
+On March 23, 2020, we will remove the following images from our Azure Pipelines hosted pools.
 
-* Windows Server 2012 R2 with Visual Studio 2015 (vs2015-win2012r2)
-* Mac OS High Sierra 10.13 (macOS-10.13)
-* Windows Server Core 1803 (win1803) 
+- Windows Server 2012 R2 with Visual Studio 2015 (vs2015-win2012r2)
+- Mac OS High Sierra 10.13 (macOS-10.13)
+- Windows Server Core 1803 (win1803)
 
 By removing these images, we will continue to roll out newer image versions more efficiently.
 

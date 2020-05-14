@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # How To: Extend your deployments to IIS Deployment Groups
@@ -20,10 +20,10 @@ as demonstrated in [this example](deploy-webdeploy-iis-deploygroups.md).
 In addition, you can extend your deployment in a range of ways
 depending on your scenario and requirements. This topic shows you how to:
 
-* [Dynamically create and remove a deployment group](#depgroup)
-* [Apply stage-specific configurations](#envirconfig)
-* [Perform a safe rolling deployment](#rolling)
-* [Deploy a database with your app](#database)
+- [Dynamically create and remove a deployment group](#depgroup)
+- [Apply stage-specific configurations](#envirconfig)
+- [Perform a safe rolling deployment](#rolling)
+- [Deploy a database with your app](#database)
 
 ## Prerequisites
 
@@ -31,14 +31,16 @@ You should have worked through the example [CD to an IIS Deployment Group](deplo
 This ensures that you have the release pipeline, build artifacts, and websites required.
 
 <a name="depgroup"></a>
+
 ## Dynamically create and remove a deployment group
 
 You can create and remove deployment groups dynamically if you prefer by using
 the [Azure Resource Group Deployment task](https://aka.ms/argtaskreadme)
 to install the agent on the machines in a deployment group using ARM templates.
-See [Provision deployment group agents](../../release/deployment-groups/howto-provision-deployment-group-agents.md).  
+See [Provision deployment group agents](../../release/deployment-groups/howto-provision-deployment-group-agents.md).
 
 <a name="envirconfig"></a>
+
 ## Apply stage-specific configurations
 
 If you deploy releases to multiple stages, you can substitute configuration settings in **Web.config** and other configuration files of your website using these steps:
@@ -51,10 +53,11 @@ If you deploy releases to multiple stages, you can substitute configuration sett
    > If you prefer to manage stage configuration settings in
    > your own database or Azure KeyVault, add a task to the stage to read and emit those values using
    > `##vso[task.setvariable variable=connectionString;issecret=true]<value>`.
-   > 
+   >
    > At present, you cannot apply a different configuration to individual IIS servers.
 
 <a name="rolling"></a>
+
 ## Perform a safe rolling deployment
 
 If your deployment group consists of many IIS target servers, you can deploy to a subset of servers at a time.
@@ -64,6 +67,7 @@ Simply select the **Deployment group job** and use the slider to configure the *
 ![Configuring safe rolling deployment for the proportion of stages to update in parallel](media/howto-webdeploy-iis-deploygroups/safe-rolling-deployment.png)
 
 <a name="database"></a>
+
 ## Deploy a database with your app
 
 To deploy a database with your app:
@@ -74,17 +78,17 @@ To deploy a database with your app:
 1. Add two machine group jobs to stages in the release pipeline, and a task in each job as follows:
 
    **First [Run on deployment group job](../../process/phases.md)** for configuration of web servers.
-   
+
    - **Deployment group**: Select the deployment group you created in the [previous example](deploy-webdeploy-iis-deploygroups.md).
-   
+
    - **Required tags**: `web`<p />
-   
+
    Then add an **IIS Web App Deploy** task to this job.
-   
+
    **Second [Run on deployment group job](../../process/phases.md)** for configuration of database servers.
-   
+
    - **Deployment group**: Select the deployment group you created in the [previous example](deploy-webdeploy-iis-deploygroups.md).
-   
+
    - **Required tags**: `database`<p />
-   
+
    Then add a **SQL Server Database Deploy** task to this job.

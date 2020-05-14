@@ -13,18 +13,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `isLockedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `isLockedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `name`: string. 
+- `name`: string.
 
-* `objectId`: string. 
+- `objectId`: string.
 
-* `statuses`: [GitStatus](../../../TFS/VersionControl/Contracts/GitStatus.md)[]. 
+- `statuses`: [GitStatus](../../../TFS/VersionControl/Contracts/GitStatus.md)[].
 
-* `url`: string. 
-
+- `url`: string.

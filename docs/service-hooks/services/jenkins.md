@@ -4,7 +4,7 @@ ms.topic: conceptual
 title: Create a service hook with Jenkins
 description: Use Jenkins with your Azure DevOps Services organization
 ms.assetid: 3e9cf797-092f-48da-a515-e4d0cc93c4a1
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 11/20/2019
 ---
 
@@ -34,7 +34,7 @@ Git repository or when you check in code to Team Foundation version control.
    <img alt="Build name and type in Jenkins" src="./media/jenkins/my-build.png" style="border: 1px solid #CCCCCC" />
 
 3. Set the URL for your Git repository in Azure DevOps Services.
-The URL is in the form ```https://dev.azure.com/{orgName}/DefaultCollection/_git/{projectName}```.
+The URL is in the form `https://dev.azure.com/{orgName}/DefaultCollection/_git/{projectName}`.
 
    <img alt="Source code management settings with Git selected" src="./media/jenkins/source-code-management-settings.png" style="border: 1px solid #CCCCCC" />
 
@@ -48,13 +48,13 @@ to connect Azure DevOps Services to Jenkins.
 
    <img alt="Profile, credentials tab, alternative credentials enabled with a secondary user name" src="./media/jenkins/alternate-credentials.png" style="border: 1px solid #CCCCCC" />
 
-1. Go to your project Service Hooks page: 
+1. Go to your project Service Hooks page:
 
-    `https://{orgName}/{project_name}/_settings/serviceHooks`
+   `https://{orgName}/{project_name}/_settings/serviceHooks`
 
-    ![Project administration page](./media/add-devops-service-hook.png)
+   ![Project administration page](./media/add-devops-service-hook.png)
 
-    Select **Create Subscription**.
+   Select **Create Subscription**.
 
 1. Add Jenkins.
 
@@ -78,13 +78,13 @@ to connect Azure DevOps Services to Jenkins.
 
    <img alt="Profile, credentials tab, alternative credentials enabled with a secondary user name" src="./media/jenkins/alternate-credentials.png" style="border: 1px solid #CCCCCC" />
 
-1. Go to your project Service Hooks page: 
+1. Go to your project Service Hooks page:
 
-    `https://dev.azure.com/{orgName}/{project_name}/_apps/hub/ms.vss-servicehooks-web.manageServiceHooks-project`
+   `https://dev.azure.com/{orgName}/{project_name}/_apps/hub/ms.vss-servicehooks-web.manageServiceHooks-project`
 
-    ![Project administration page](./media/add-service-hook.png)
+   ![Project administration page](./media/add-service-hook.png)
 
-    Select **Create Subscription**.
+   Select **Create Subscription**.
 
 1. Add Jenkins.
 
@@ -103,8 +103,9 @@ to connect Azure DevOps Services to Jenkins.
 Now, when that event occurs in Azure DevOps Services, your Jenkins build will be triggered.
 
 ## Pricing
+
 Azure DevOps Services doesn't charge for the framework for integrating with external services. Check out the specific service's site
-for pricing related to their services. 
+for pricing related to their services.
 
 ## Q & A
 

@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: a74b3efe-d7bd-438a-be32-47d036556f74
 ms.custom: seodec18
 ms.date: 04/08/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Pipeline options for Git repositories
@@ -18,22 +18,21 @@ monikerRange: '>= tfs-2015'
 
 While editing a pipeline that uses a Git repo&mdash;in an Azure DevOps or TFS project, GitHub, GitHub Enterprise Server, Bitbucket Cloud, or another Git repo&mdash;you have the following options.
 
-| Feature | Azure Pipelines | TFS 2017.2 and higher | TFS 2017 RTM | TFS 2015.4 | TFS 2015 RTM |
-|---------|------|------|----------|------------|--------------|------------|--------------|
-|Branch|Yes|Yes|Yes|Yes|Yes|
-|Clean|Yes|Yes|Yes|Yes|Yes|
-|Tag or label sources|Project; Classic only|Team project|Team project|Team project|No|
-|Report build status|Yes|Yes|Yes|No|No|
-|Checkout submodules|Yes|Yes|Yes|Yes|Yes|
-|Checkout files from LFS|Yes|Yes|Linux and macOS agents|Linux and macOS agents|Linux and macOS agents|
-|Clone a second repo|Yes|Yes|Yes|Yes|Yes|
-|Don't sync sources|Yes|Yes|No|No|No|
-|Shallow fetch|Yes|Yes|Linux and macOS agents|Linux and macOS agents|Linux and macOS agents|
+| Feature                 | Azure Pipelines       | TFS 2017.2 and higher | TFS 2017 RTM           | TFS 2015.4             | TFS 2015 RTM           |
+| ----------------------- | --------------------- | --------------------- | ---------------------- | ---------------------- | ---------------------- |
+| Branch                  | Yes                   | Yes                   | Yes                    | Yes                    | Yes                    |
+| Clean                   | Yes                   | Yes                   | Yes                    | Yes                    | Yes                    |
+| Tag or label sources    | Project; Classic only | Team project          | Team project           | Team project           | No                     |
+| Report build status     | Yes                   | Yes                   | Yes                    | No                     | No                     |
+| Checkout submodules     | Yes                   | Yes                   | Yes                    | Yes                    | Yes                    |
+| Checkout files from LFS | Yes                   | Yes                   | Linux and macOS agents | Linux and macOS agents | Linux and macOS agents |
+| Clone a second repo     | Yes                   | Yes                   | Yes                    | Yes                    | Yes                    |
+| Don't sync sources      | Yes                   | Yes                   | No                     | No                     | No                     |
+| Shallow fetch           | Yes                   | Yes                   | Linux and macOS agents | Linux and macOS agents | Linux and macOS agents |
 
 ::: moniker range=">= tfs-2017"
 
-> [!NOTE]
-> **Azure Pipelines, TFS 2017.2 and newer:** Click **Advanced settings** in the **Get Sources** task to see some of the above options.<br/>
+> [!NOTE] > **Azure Pipelines, TFS 2017.2 and newer:** Click **Advanced settings** in the **Get Sources** task to see some of the above options.<br/>
 
 ::: moniker-end
 
@@ -64,10 +63,11 @@ This is the branch that you want to be the default when you manually queue this 
 ::: moniker-end
 
 ::: moniker range="azure-devops"
+
 > [!NOTE]
-> Cleaning is not effective if you're using a [Microsoft-hosted agent](../agents/hosted.md) because you'll get a new agent every time. 
+> Cleaning is not effective if you're using a [Microsoft-hosted agent](../agents/hosted.md) because you'll get a new agent every time.
 > When using self-hosted agents, depending on how your agents pools are configured, you may get a new agent for subsequent pipeline runs (or stages or jobs in the same pipeline), so **not** cleaning is not a guarantee that subsequent runs, jobs, or stages will be able to access outputs from previous runs, jobs, or stages.
-::: moniker-end
+> ::: moniker-end
 
 ::: moniker range=">= tfs-2015 < azure-devops"
 
@@ -80,21 +80,22 @@ This is the branch that you want to be the default when you manually queue this 
 
 ### Azure Pipelines, TFS 2018, TFS 2017.2, TFS 2017.3
 
-[//]: # (TODO: build.clean variable still works and overrides if clean is set to false)
+[//]: # "TODO: build.clean variable still works and overrides if clean is set to false"
 
 Select one of the following options:
 
-* **Sources**: The build pipeline performs an undo of any changes in `$(Build.SourcesDirectory)`. More specifically, the following Git commands are executed prior to fetching the source.
+- **Sources**: The build pipeline performs an undo of any changes in `$(Build.SourcesDirectory)`. More specifically, the following Git commands are executed prior to fetching the source.
+
   ```
   git clean -ffdx
   git reset --hard HEAD
   ```
 
-* **Sources and output directory**: Same operation as **Sources** option above, plus: Deletes and recreates `$(Build.BinariesDirectory)`. Note that the `$(Build.ArtifactStagingDirectory)` and `$(Common.TestResultsDirectory)` are always deleted and recreated prior to every build regardless of any of these settings.
+- **Sources and output directory**: Same operation as **Sources** option above, plus: Deletes and recreates `$(Build.BinariesDirectory)`. Note that the `$(Build.ArtifactStagingDirectory)` and `$(Common.TestResultsDirectory)` are always deleted and recreated prior to every build regardless of any of these settings.
 
-* **Sources directory**: Deletes and recreates `$(Build.SourcesDirectory)`. This results in initializing a new, local Git repository for every build.
+- **Sources directory**: Deletes and recreates `$(Build.SourcesDirectory)`. This results in initializing a new, local Git repository for every build.
 
-* **All build directories**: Deletes and recreates `$(Agent.BuildDirectory)`. This results in initializing a new, local Git repository for every build.
+- **All build directories**: Deletes and recreates `$(Agent.BuildDirectory)`. This results in initializing a new, local Git repository for every build.
 
 ::: moniker-end
 
@@ -118,7 +119,7 @@ If you select **True** then the build pipeline performs an undo of any changes. 
 
 ### TFS 2015 RTM
 
-[//]: # (TODO: clarify folder)
+[//]: # "TODO: clarify folder"
 
 Select **true** to delete the repository folder.
 
@@ -140,7 +141,7 @@ After the sources are tagged by your build pipeline, an artifact with the Git re
 
 ::: moniker-end
 
-[//]: # (TODO: confirm I got this next section right; e.g. GitHub not in TFS 2018 Update 1)
+[//]: # "TODO: confirm I got this next section right; e.g. GitHub not in TFS 2018 Update 1"
 
 ::: moniker range=">= tfs-2017"
 
@@ -149,9 +150,10 @@ After the sources are tagged by your build pipeline, an artifact with the Git re
 You've got the option to give your team a view of the build status from your remote source repository.
 
 If your sources are in an Azure Repos Git repository in your project, then this option displays a badge on the **Code** page to indicate whether the build is passing or failing. The build status is displayed in the following tabs:
-* **Files**: Indicates the status of the latest build for the selected branch.
-* **Commits**: Indicates the build status of the each commit (this requires the continuous integration (CI) trigger to be enabled for your builds).
-* **Branches**: Indicates the status of the latest build for each branch.
+
+- **Files**: Indicates the status of the latest build for the selected branch.
+- **Commits**: Indicates the build status of the each commit (this requires the continuous integration (CI) trigger to be enabled for your builds).
+- **Branches**: Indicates the status of the latest build for each branch.
 
 If you use multiple build pipelines for the same repository in your project, then you may choose to enable this option for one or more of the pipelines. In the case when this option is enabled on multiple pipelines, the badge on the **Code** page indicates the status of the latest build across all the pipelines. Your team members can click the build status badge to view the latest build status for each one of the build pipelines.
 
@@ -201,20 +203,20 @@ If you want to use LFS with submodules, be sure to see the [note about using LFS
 
 The build pipeline will check out your Git submodules as long as they are:
 
-* **Unauthenticated:**  A public, unauthenticated repo with no credentials required to clone or fetch.
+- **Unauthenticated:** A public, unauthenticated repo with no credentials required to clone or fetch.
 
-* **Authenticated:**  
+- **Authenticated:**
 
   - Contained in the same project, GitHub organization, or Bitbucket Cloud account as the Git repo specified above.
 
-  - Added by using a URL relative to the main repository. For example, this one would be checked out: ```git submodule add /../../submodule.git mymodule``` This one would not be checked out: ```git submodule add https://dev.azure.com/fabrikamfiber/_git/ConsoleApp mymodule```
+  - Added by using a URL relative to the main repository. For example, this one would be checked out: `git submodule add /../../submodule.git mymodule` This one would not be checked out: `git submodule add https://dev.azure.com/fabrikamfiber/_git/ConsoleApp mymodule`
 
 ::: moniker-end
 
 ::: moniker range=">= tfs-2015 <= tfs-2017"
 
 > [!NOTE]
-> If you're running **TFS 2017.1, TFS 2017 RTM, or TFS 2015**, then the submodules must be children (immediate submodules)** of the Git repo you've selected for this build pipeline. In effect, the build pipeline runs ```git submodule update --init``` (not ```git submodule update -init --recursive```).
+> If you're running **TFS 2017.1, TFS 2017 RTM, or TFS 2015**, then the submodules must be children (immediate submodules)\*\* of the Git repo you've selected for this build pipeline. In effect, the build pipeline runs `git submodule update --init` (not `git submodule update -init --recursive`).
 
 ::: moniker-end
 
@@ -229,9 +231,9 @@ The same credentials that are used by the agent to get the sources from the main
 
 If your main repository and submodules are in an Azure Repos Git repository in your Azure DevOps project, then you can select the account used to access the sources. On the **Options** tab, on the **Build job authorization scope** menu, select either:
 
-* **Project collection** to use the Project Collection Build service account
+- **Project collection** to use the Project Collection Build service account
 
-* **Current project** to use the Project Build Service account.
+- **Current project** to use the Project Build Service account.
 
 Make sure that whichever account you use has access to both the main repository as well as the submodules.
 
@@ -256,8 +258,8 @@ Be sure to replace "<BASIC_AUTH_TOKEN>" with your Base64-encoded token.
 
 Use a secret variable in your project or build pipeline to store the basic auth token that you generated.
 Use that variable to populate the secret in the above Git command.
-> [!NOTE]
-> **Q: Why can't I use a Git credential manager on the agent?** **A:** Storing the submodule credentials in a Git credential manager installed on your private build agent is usually not effective as the credential manager may prompt you to re-enter the credentials whenever the submodule is updated. This isn't desirable during automated builds when user interaction isn't possible.
+
+> [!NOTE] > **Q: Why can't I use a Git credential manager on the agent?** **A:** Storing the submodule credentials in a Git credential manager installed on your private build agent is usually not effective as the credential manager may prompt you to re-enter the credentials whenever the submodule is updated. This isn't desirable during automated builds when user interaction isn't possible.
 
 ::: moniker-end
 
@@ -277,15 +279,15 @@ In a YAML build, add a checkout step with `lfs` set to `true`:
 
 ```yaml
 steps:
-- checkout: self
-  lfs: true
+  - checkout: self
+    lfs: true
 ```
 
 ::: moniker-end
 
 ::: moniker range=">= tfs-2015 <= tfs-2017"
 
-* **TFS 2017 RTM and TFS 2015 (macOS and Linux only):** On the **Variables** tab, set `Agent.Source.Git.Lfs` to `true`.
+- **TFS 2017 RTM and TFS 2015 (macOS and Linux only):** On the **Variables** tab, set `Agent.Source.Git.Lfs` to `true`.
 
 ::: moniker-end
 
@@ -307,15 +309,15 @@ As a workaround, if you're using YAML, you can add the following step before you
 
 ```yaml
 steps:
-- script: |
-    git config --global --add filter.lfs.required true
-    git config --global --add filter.lfs.smudge "git-lfs smudge -- %f"
-    git config --global --add filter.lfs.process "git-lfs filter-process"
-    git config --global --add filter.lfs.clean "git-lfs clean -- %f"
-  displayName: Configure LFS for use with submodules
-- checkout: self
-  lfs: true
-  submodules: true
+  - script: |
+      git config --global --add filter.lfs.required true
+      git config --global --add filter.lfs.smudge "git-lfs smudge -- %f"
+      git config --global --add filter.lfs.process "git-lfs filter-process"
+      git config --global --add filter.lfs.clean "git-lfs clean -- %f"
+    displayName: Configure LFS for use with submodules
+  - checkout: self
+    lfs: true
+    submodules: true
 # ... rest of steps ...
 ```
 
@@ -367,15 +369,15 @@ Non-deployment jobs automatically fetch sources.
 Use this option if you want to skip that behavior.
 This option can be useful in cases when you want to:
 
-* Git init, config, and fetch using your own custom options.
+- Git init, config, and fetch using your own custom options.
 
-* Use a build pipeline to just run automation (for example some scripts) that do not depend on code in version control.
+- Use a build pipeline to just run automation (for example some scripts) that do not depend on code in version control.
 
 If you want to disable downloading sources:
 
-* **Azure Pipelines, TFS 2017.2, and newer:** Click **Advanced settings**, and then select **Don't sync sources**.
+- **Azure Pipelines, TFS 2017.2, and newer:** Click **Advanced settings**, and then select **Don't sync sources**.
 
-* **TFS 2017 RTM:** Define `Build.SyncSources` on the **Variables** and set its value to false.
+- **TFS 2017 RTM:** Define `Build.SyncSources` on the **Variables** and set its value to false.
 
 > [!NOTE]
 > When you use this option, the agent also skips running Git commands that clean the repo.
@@ -430,7 +432,7 @@ This setting is always true on non-Windows agents.
 
 When using an Other/external Git repository, CI builds require that the repository is accessible from the internet. If the repository is behind a firewall or proxy, then only scheduled and manual builds will work.
 
-## Q & A  
+## Q & A
 
 <!-- BEGINSECTION class="md-qanda" -->
 

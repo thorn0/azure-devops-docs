@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -17,19 +17,18 @@ Defined in vss.d.ts
 
 ### Values
 
-* `None` 
+- `None`
 
-* `Deployment` Root level in Azure.
+- `Deployment` Root level in Azure.
 
-* `Application` Root level in on premises. Neither of {collection}, {project} and {team} tokens have information
+- `Application` Root level in on premises. Neither of {collection}, {project} and {team} tokens have information
 
-* `Collection` Flag to show {collection} token has information.
+- `Collection` Flag to show {collection} token has information.
 
-* `Project` Flag to show {project} token has information.
+- `Project` Flag to show {project} token has information.
 
-* `Team` Flag to show {team} token has information.
+- `Team` Flag to show {team} token has information.
 
-* `ApplicationAll` Sugar for all application levels.
+- `ApplicationAll` Sugar for all application levels.
 
-* `All` Sugar for all levels
-
+- `All` Sugar for all levels

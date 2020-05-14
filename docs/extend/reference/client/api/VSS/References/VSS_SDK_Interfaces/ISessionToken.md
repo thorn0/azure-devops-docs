@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,14 +15,12 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Session token whose value can be added to the Authorization header in requests to Azure DevOps Services endpoints 
+Session token whose value can be added to the Authorization header in requests to Azure DevOps Services endpoints
 
 ### Members
 
-* `appId`: string. The registered VSS auth application ID
+- `appId`: string. The registered VSS auth application ID
 
-* `name`: string. Name describing the token
+- `name`: string. Name describing the token
 
-* `token`: string. Token value
-
+- `token`: string. Token value

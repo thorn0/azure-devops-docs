@@ -16,5 +16,5 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `Map` The path is mapped in the workspace.
-* `Cloak` The path is cloaked in the workspace.
+- `Map` The path is mapped in the workspace.
+- `Cloak` The path is cloaked in the workspace.

@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: TFVC Labels | REST API Reference for Team Foundation Server
 description: Work with TFVC labels programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 6E87D313-19A9-4271-AB5B-4B4CA1ADA9BA
@@ -24,17 +24,19 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/_apis/tfvc/labels?api-version={version}[&name={srtring}&owner={string}&itemLabelFilter={string}&$top={int}&$skip={int}]
 ```
 
-| Parameter       | Type   | Default | Notes
-|:----------------|:-------|:--------|:------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance        | string |         | TFS server name ({server:port}).
+| instance | string | | TFS server name ({server:port}).
 | Query
-| api-version     | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| name            | string |         | Name of the label.<br/>Wildcards are supported.
-| owner           | string |         | Display name, unique name, or ID of the label owner.
-| itemLabelFilter | string |         | Path of item that has these labels.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| name | string | | Name of the label.<br/>Wildcards are supported.
+| owner | string | | Display name, unique name, or ID of the label owner.
+| itemLabelFilter | string | | Path of item that has these labels.
 | $top            | int    | 100     | Maximum number of labels to return.
-| $skip           | int    | 0       | Number of labels to skip.
+| $skip | int | 0 | Number of labels to skip.
 
 #### Sample request
 
@@ -97,8 +99,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/labels?api-version=1.0-prev
 }
 ```
 
-
 ### By name
+
 #### Sample request
 
 ```
@@ -145,8 +147,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/labels?name=Th*Label&api-ve
 }
 ```
 
-
 ### By person
+
 #### Sample request
 
 ```
@@ -208,8 +210,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/labels?owner=fabrikamfiber3
 }
 ```
 
-
 ### By item
+
 #### Sample request
 
 ```
@@ -241,8 +243,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/labels?itemLabelFilter=$/Fa
 }
 ```
 
-
 ### A page at a time
+
 #### Sample request
 
 ```
@@ -274,22 +276,24 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/labels?$skip=2&$top=2&api-v
 }
 ```
 
-
 ## Get label
-Retrieves details for a label. A list of items under this label can be included by setting maxItemCount to a positive integer. 
+
+Retrieves details for a label. A list of items under this label can be included by setting maxItemCount to a positive integer.
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/tfvc/labels/{labelId}?api-version={version}[&maxItemCount={int}]
 ```
 
-| Parameter    | Type   | Default | Notes
-|:-------------|:-------|:--------|:------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance     | string |         | TFS server name ({server:port}).
-| labelId      | int    |         | ID of label.
+| instance | string | | TFS server name ({server:port}).
+| labelId | int | | ID of label.
 | Query
-| api-version  | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| maxItemCount | int    | 0       | Maximum number of labeled items to return.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| maxItemCount | int | 0 | Maximum number of labeled items to return.
 
 #### Sample request
 
@@ -327,7 +331,6 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/labels/2883?api-version=1.0
   "url": "https://mytfsserver/DefaultCollection/_apis/tfvc/labels/2883"
 }
 ```
-
 
 ### With items
 
@@ -423,23 +426,24 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/labels/2883?maxItemCount=10
 }
 ```
 
-
 ## Get list of labelled items
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/tfvc/labels/{labelId}/items?api-version={version}[&$top={int}&$skip={int}]
 ```
 
-| Parameter    | Type   | Default | Notes
-|:-------------|:-------|:--------|:------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance     | string |         | TFS server name ({server:port}).
-| labelId      | int    |         | ID of the label.
+| instance | string | | TFS server name ({server:port}).
+| labelId | int | | ID of the label.
 | Query
 | Query
-| api-version  | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | $top         | int    | 100     |  Maximum number of items to return.
-| $skip        | int    | 0       |  Number of items to skip.
+| $skip | int | 0 | Number of items to skip.
 
 #### Sample request
 
@@ -510,7 +514,6 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/labels/2883/items?api-versi
 }
 ```
 
-
 ### A page at a time
 
 #### Sample request
@@ -539,5 +542,3 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/labels/2883/items?$top=2&$s
   ]
 }
 ```
-
-

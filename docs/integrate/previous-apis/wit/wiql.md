@@ -1,8 +1,8 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Work Item Query Language | REST API Reference for Team Foundation Server
-description: Work with the work item query language programmatically using the REST APIs for Team Foundation Server. 
+description: Work with the work item query language programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: C98285FE-3882-4F35-9E19-9A6E109EED66
 ms.topic: article
 ms.author: chcomley
@@ -18,38 +18,41 @@ ms.date: 04/04/2017
 
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
-
-
-## Run a query 
+## Run a query
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/[{project}/]_apis/wit/wiql?api-version={version}
 ```
+
 ```http
 Content-type: application/json
 ```
+
 ```json
 {
   "query": string
 }
 ```
 
-| Parameter     | Type    | Default | Notes	
-|:--------------|:--------|:--------|:------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance      | string  |         | TFS server name ({server:port}).
-| project       | string  |         | Filter the results to this project.<br/>If your query string uses the @project macro ([System.TeamProject] = @project, for example), you must specify the project in the URL.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Filter the results to this project.<br/>If your query string uses the @project macro ([System.TeamProject] = @project, for example), you must specify the project in the URL.
 | Query
-| api-version   | string  |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| timePrecision | boolean | false   | True if time precision is allowed in the date time comparisons.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| timePrecision | boolean | false | True if time precision is allowed in the date time comparisons.
 | Body
-| query         | string  |         | The [query string](https://msdn.microsoft.com/library/bb130306.aspx) to run.
+| query | string | | The [query string](https://msdn.microsoft.com/library/bb130306.aspx) to run.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/wiql?api-version=1.0
 ```
+
 ```json
 {
   "query": "Select [System.WorkItemType],[System.Title],[System.State],[Microsoft.VSTS.Scheduling.Effort],[System.IterationPath] FROM WorkItemLinks WHERE Source.[System.WorkItemType] IN GROUP 'Microsoft.RequirementCategory' AND Target.[System.WorkItemType] IN GROUP 'Microsoft.RequirementCategory' AND Target.[System.State] IN ('New','Approved','Committed') AND [System.Links.LinkType] = 'System.LinkTypes.Hierarchy-Forward' ORDER BY [Microsoft.VSTS.Common.BacklogPriority] ASC,[System.Id] ASC MODE (Recursive, ReturnMatchingChildren)"
@@ -142,22 +145,23 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/wiql?api
 }
 ```
 
-
 ## Run a stored query
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/[{project}/]_apis/wit/wiql/{id}?api-version={version}
 ```
 
-| Parameter     | Type    | Default | Notes	
-|:--------------|:--------|:--------|:------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance      | string  |         | TFS server name ({server:port}).
-| project       | string  |         | Filter the results to this project.<br/>If the query uses the @project macro ([System.TeamProject] = @project, for example), you must specify the project in the URL.
-| id            | GUID    |         | ID of a [stored query](./queries.md).
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Filter the results to this project.<br/>If the query uses the @project macro ([System.TeamProject] = @project, for example), you must specify the project in the URL.
+| id | GUID | | ID of a [stored query](./queries.md).
 | Query
-| version       | string  |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| timePrecision | boolean | false   | True if time precision is allowed in the date time comparisons.
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| timePrecision | boolean | false | True if time precision is allowed in the date time comparisons.
 
 #### Sample request
 
@@ -464,20 +468,20 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/wiql/1e4e
 }
 ```
 
-
 ## Get work items
 
 After executing a query, [get the work items using the IDs](./work-items.md#byids) that are returned in the query results response. You can get up to 200 work items at a time.
 
 ### A flat query
 
-##### 1. Get results of a flat work item query.  
+##### 1. Get results of a flat work item query.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/_apis/wit/wiql?api-version=1.0
 ```
+
 ```json
 {
   "query": "Select [System.Id], [System.Title], [System.State] From WorkItems Where [System.WorkItemType] = 'Task' AND [State] <> 'Closed' AND [State] <> 'Removed' order by [Microsoft.VSTS.Common.Priority] asc, [System.CreatedDate] desc"
@@ -565,7 +569,6 @@ POST https://mytfsserver/DefaultCollection/_apis/wit/wiql?api-version=1.0
   ]
 }
 ```
-
 
 ##### 2. Get data for each work item returned.
 
@@ -675,8 +678,8 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/WorkItems?ids=300,299,298,17
 }
 ```
 
-
 ### A one-hop query
+
 ![Results of the one-hop query](./media/wit-onehop.png)
 
 ##### 1. Get results of a one-hop work item query.
@@ -686,6 +689,7 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/WorkItems?ids=300,299,298,17
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/wiql?api-version=1.0
 ```
+
 ```json
 {
   "query": "SELECT [System.Id], [System.Links.LinkType], [System.WorkItemType], [System.Title], [System.State] FROM WorkItemLinks WHERE ([Source].[System.TeamProject] = @project AND  [Source].[System.WorkItemType] IN GROUP 'Microsoft.RequirementCategory'  AND  [Source].[System.State] <> 'Done') AND ([System.Links.LinkType] <> '') And ([Target].[System.State] <> 'Removed' AND [Target].[System.WorkItemType] NOT IN GROUP 'Microsoft.FeatureCategory') mode(MustContain)"
@@ -776,7 +780,6 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/wiql?api
 }
 ```
 
-
 ##### 2. Get data for each work item returned.
 
 #### Sample request
@@ -828,8 +831,8 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/WorkItems?ids=297,299,300&fi
 }
 ```
 
-
 ### A tree query
+
 ![Results of the tree query](./media/wit-tree.png)
 
 ##### 1. Get results of a tree work item query.
@@ -839,6 +842,7 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/WorkItems?ids=297,299,300&fi
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/wiql?api-version=1.0
 ```
+
 ```json
 {
   "query": "Select [System.Id], [System.WorkItemType], [System.Title], [System.AssignedTo], [System.State] From WorkItemLinks WHERE (Source.[System.TeamProject] = @project and Source.[System.State] <> 'Removed') and ([System.Links.LinkType] = 'System.LinkTypes.Hierarchy-Forward') and (Target.[System.WorkItemType] <> '') mode(Recursive)"
@@ -1143,7 +1147,6 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/wiql?api
   ]
 }
 ```
-
 
 ##### 2. Get data for each work item returned.
 
@@ -1520,11 +1523,9 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/WorkItems?ids=4,5,6,7,8,9,11
 }
 ```
 
+## Limits on WIQL length
 
-
-## Limits on WIQL length  
-
-For queries made against Team Services, the WIQL length must not exceed 32K characters. The system won't allow you to create or run queries that exceed that length. 
+For queries made against Team Services, the WIQL length must not exceed 32K characters. The system won't allow you to create or run queries that exceed that length.
 
 ## WIQL extension
 

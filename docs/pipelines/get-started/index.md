@@ -2,18 +2,17 @@
 title: Learn how to build and deploy your apps
 titleSuffix: Azure Pipelines
 description: Use Azure Pipelines to build and deploy your apps
-ms.assetid: 
+ms.assetid:
 ms.author: sdanie
 author: steved0x
 ms.topic: overview
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 09/26/2019
 ---
 
-
 # Get started with Azure Pipelines
 
-[!INCLUDE [temp](../../includes/version-tfs-2017-through-vsts.md)]  
+[!INCLUDE [temp](../../includes/version-tfs-2017-through-vsts.md)]
 
 Azure Pipelines is a fully featured continuous integration (CI) and continuous delivery (CD) service. It works with your preferred Git provider and can deploy to most major cloud services, which include Azure services. Start with your code on GitHub, GitHub Enterprise Server, GitLab, Bitbucket Cloud, or [Azure Repos](/azure/devops/repos/index). Then you can automate the build, testing, and deployment of your code to Microsoft Azure, Google Cloud Platform, or Amazon Web Services.
 
@@ -21,17 +20,15 @@ Use Azure Pipelines to configure and automate your build and delivery tools and 
 
 To learn more about how to automate and streamline the build, test, and deployment of your code projects, see [What is Azure Pipelines?](what-is-azure-pipelines.md).
 
-## Videos 
+## Videos
 
 #### Build and deploy your code with Azure Pipelines
 
 <iframe src="https://channel9.msdn.com/Events/Microsoft-Azure/Azure-DevOps-Launch-2018/A101/player" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
 
-
 #### Continuously build GitHub projects with Azure Pipelines
 
 <iframe src="https://channel9.msdn.com/Events/Microsoft-Azure/Azure-DevOps-Launch-2018/A102/player" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
-
 
 ## Use Azure Pipelines
 
@@ -39,8 +36,7 @@ Quickly learn the different ways you can [use Azure Pipelines](pipelines-get-sta
 
 ## Key concepts for Azure Pipelines
 
-The [Key concepts for Azure Pipelines guide](key-pipelines-concepts.md) explains how Azure Pipelines works. It also explains key terms and concepts.  
-
+The [Key concepts for Azure Pipelines guide](key-pipelines-concepts.md) explains how Azure Pipelines works. It also explains key terms and concepts.
 
 ## Related articles
 

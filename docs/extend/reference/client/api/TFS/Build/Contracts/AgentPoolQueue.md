@@ -18,7 +18,6 @@ Extends: [ShallowReference](./ShallowReference.md)
 
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `pool`: [TaskAgentPoolReference](./TaskAgentPoolReference.md). The pool used by this queue.
-
+- `pool`: [TaskAgentPoolReference](./TaskAgentPoolReference.md). The pool used by this queue.

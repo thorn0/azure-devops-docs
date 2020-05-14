@@ -1,8 +1,8 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Work Item Updates | REST API Reference for Team Foundation Server
-description: Work with updates to work items programmatically using the REST APIs for Team Foundation Server. 
+description: Work with updates to work items programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: B4C07EF4-535A-4479-803D-C181553613EE
 ms.topic: article
 ms.author: chcomley
@@ -28,15 +28,17 @@ To get the entire work item at a point in time, use [revisions](./revisions.md).
 GET https://{instance}/DefaultCollection/_apis/wit/workitems/{id}/updates?api-version={version}[&$top={int}&$skip={int}]
 ```
 
-| Parameter | Type    | Default | Notes	
-|:----------|:--------|:--------|:--------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance  | string  |         | TFS server name ({server:port}).
-| id        | int     |         | ID of the work item.
+| instance | string | | TFS server name ({server:port}).
+| id | int | | ID of the work item.
 | Query
-| api-version | string  |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | $top      | integer | 200     | Number of updates to return, up to 200.
-| $skip     | integer | 0       | Number of updates to skip.
+| $skip | integer | 0 | Number of updates to skip.
 
 #### Sample request
 
@@ -503,10 +505,9 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/updates?api-ve
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetListOfWorkItemUpdates method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/UpdatesSample.cs#L19)
+- [C# (GetListOfWorkItemUpdates method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/UpdatesSample.cs#L19)
 
 ### A page at a time
 
@@ -630,10 +631,9 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/updates?$skip=
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetListOfWorkItemUpdatesPaged method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/UpdatesSample.cs#L43)
+- [C# (GetListOfWorkItemUpdatesPaged method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/UpdatesSample.cs#L43)
 
 ## Get a work item update
 
@@ -641,13 +641,15 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/updates?$skip=
 GET https://{instance}/DefaultCollection/_apis/wit/workitems/{id}/updates/{revisionId}?api-version={version}
 ```
 
-| Parameter | Type    | Notes	
-|:----------|:--------|:------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string  | TFS server name ({server:port}).
-| id        | int     | ID of the work item.
+| instance | string | TFS server name ({server:port}).
+| id | int | ID of the work item.
 | Query
-| api-version | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -723,10 +725,9 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/updates/2?api-
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetWorkItemUpdate method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/UpdatesSample.cs#L68)
+- [C# (GetWorkItemUpdate method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/UpdatesSample.cs#L68)
 
 If the update included changes to the links or attachments, those are included, too.
 

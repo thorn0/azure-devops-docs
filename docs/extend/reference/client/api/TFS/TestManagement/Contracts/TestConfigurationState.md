@@ -16,5 +16,5 @@ Module path: `TFS/TestManagement/Contracts`
 
 ### Values
 
-* `Active` The configuration can be used for new test runs.
-* `Inactive` The configuration has been retired and should not be used for new test runs.
+- `Active` The configuration can be used for new test runs.
+- `Inactive` The configuration has been retired and should not be used for new test runs.

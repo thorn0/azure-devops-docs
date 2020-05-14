@@ -6,7 +6,7 @@ description: Understand pipeline artifacts in Azure Pipelines and Azure DevOps S
 ms.assetid: 028dcda8-a8fa-48cb-bb35-cdda8ac52e2c
 ms.topic: reference
 ms.date: 05/04/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Publish and download artifacts
@@ -20,7 +20,7 @@ Pipeline artifacts provide a way to share files between stages in a pipeline or 
 
 ## Publishing artifacts
 
-[!INCLUDE [temp](../../includes/feature-support-cloud-only.md)] 
+[!INCLUDE [temp](../../includes/feature-support-cloud-only.md)]
 
 To publish (upload) an artifact for the current run of a CI/CD or classic pipeline:
 
@@ -28,8 +28,8 @@ To publish (upload) an artifact for the current run of a CI/CD or classic pipeli
 
 ```yaml
 steps:
-- publish: $(System.DefaultWorkingDirectory)/bin/WebApp
-  artifact: WebApp
+  - publish: $(System.DefaultWorkingDirectory)/bin/WebApp
+    artifact: WebApp
 ```
 
 > [!NOTE]
@@ -39,14 +39,14 @@ steps:
 
 ```yaml
 steps:
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: $(System.DefaultWorkingDirectory)/bin/WebApp
-    artifactName: WebApp
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: $(System.DefaultWorkingDirectory)/bin/WebApp
+      artifactName: WebApp
 ```
 
-* **targetPath**: the path to the folder or file you want to publish.
-* **artifactName**: the name of the artifact that you want to create.
+- **targetPath**: the path to the folder or file you want to publish.
+- **artifactName**: the name of the artifact that you want to create.
 
 > [!TIP]
 > For more information on `PublishPipelineArtifact@1`, see [Publish Pipeline Artifacts task](../tasks/utility/publish-pipeline-artifact.md).
@@ -55,17 +55,17 @@ steps:
 
 ![icon](../tasks/utility/media/publish-pipeline-artifact.png) **Publish Pipeline Artifact**
 
-* Artifact name:
+- Artifact name:
 
-   ```
-   WebApp
-   ```
+  ```
+  WebApp
+  ```
 
-* File or directory path:
+- File or directory path:
 
-   ```
-   $(System.DefaultWorkingDirectory)/bin/WebApp
-   ```
+  ```
+  $(System.DefaultWorkingDirectory)/bin/WebApp
+  ```
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -77,11 +77,11 @@ az pipelines runs artifact upload --artifact-name 'WebApp' --path $(System.Defau
 
 Keep in mind:
 
-* Although artifact name is optional, it is a good practice to specify a name that accurately reflects the contents of the artifact.
+- Although artifact name is optional, it is a good practice to specify a name that accurately reflects the contents of the artifact.
 
-* The path of the file or folder to publish is required. It can be absolute or relative to `$(System.DefaultWorkingDirectory)`.
+- The path of the file or folder to publish is required. It can be absolute or relative to `$(System.DefaultWorkingDirectory)`.
 
-* If you plan to consume the artifact from a job running on a different operating system or file system, you must ensure all file paths in the artifact are valid for the target environment. For example, a file name containing a `\` or `*` character will typically fail to download on Windows.
+- If you plan to consume the artifact from a job running on a different operating system or file system, you must ensure all file paths in the artifact are valid for the target environment. For example, a file name containing a `\` or `*` character will typically fail to download on Windows.
 
 ### Limiting which files are included
 
@@ -96,8 +96,7 @@ Using an `.artifactignore` file, it is possible to omit the path from the task c
 
 The above statement instructs the universal package task and the pipeline artifacts task to ignore all files except the ones with `.exe` extension.
 
-> [!IMPORTANT]
-> `.artifactignore` follows the same syntax as [.gitignore](https://git-scm.com/docs/gitignore) with some minor limitations. The plus sign character `+` is not supported in URL paths as well as some of the builds semantic versioning metadata (`+` suffix) in some packages types such as Maven.
+> [!IMPORTANT] > `.artifactignore` follows the same syntax as [.gitignore](https://git-scm.com/docs/gitignore) with some minor limitations. The plus sign character `+` is not supported in URL paths as well as some of the builds semantic versioning metadata (`+` suffix) in some packages types such as Maven.
 
 To learn more, see [Use the .artifactignore file](../../artifacts/reference/artifactignore.md) or the [.gitignore documentation](https://git-scm.com/docs/gitignore).
 
@@ -109,8 +108,8 @@ To download a specific artifact in CI/CD or classic pipelines:
 
 ```yaml
 steps:
-- download: current
-  artifact: WebApp
+  - download: current
+    artifact: WebApp
 ```
 
 > [!NOTE]
@@ -124,22 +123,22 @@ For additional configuration options, see the [download keyword](../yaml-schema.
 
 ```yaml
 steps:
-- task: DownloadPipelineArtifact@2
-  inputs:
-    artifact: WebApp
+  - task: DownloadPipelineArtifact@2
+    inputs:
+      artifact: WebApp
 ```
 
-* **artifact**: The name of the artifact to download. If left empty, all artifacts associated to the pipeline run will be downloaded.
+- **artifact**: The name of the artifact to download. If left empty, all artifacts associated to the pipeline run will be downloaded.
 
 # [Classic](#tab/classic)
 
 ![icon](../tasks/utility/media/download-pipeline-artifact.png) **Download Pipeline Artifact**
 
-* Artifact name:
+- Artifact name:
 
-   ```
-   WebApp
-   ```
+  ```
+  WebApp
+  ```
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -151,11 +150,11 @@ az pipelines runs artifact download --artifact-name 'WebApp' --path $(System.Def
 
 Keep in mind:
 
-* The **Download Pipeline Artifact** task can download both build artifacts (published with the Publish Build Artifacts task) and pipeline artifacts.
+- The **Download Pipeline Artifact** task can download both build artifacts (published with the Publish Build Artifacts task) and pipeline artifacts.
 
-* By default, files are downloaded to `$(Pipeline.Workspace)/{artifact}`, where `artifact` is the name of the artifact. The folder structure of the artifact is always preserved.
+- By default, files are downloaded to `$(Pipeline.Workspace)/{artifact}`, where `artifact` is the name of the artifact. The folder structure of the artifact is always preserved.
 
-* File matching patterns can be used to limit which files from the artifact(s) are downloaded. See [artifact selection](#artifact-selection) for more details on how pattern matching works.
+- File matching patterns can be used to limit which files from the artifact(s) are downloaded. See [artifact selection](#artifact-selection) for more details on how pattern matching works.
 
 For advanced scenarios, including downloading artifacts from other pipelines, see the [Download Pipeline Artifact](../tasks/utility/download-pipeline-artifact.md) task.
 
@@ -179,9 +178,9 @@ For example, to download all `*.js` from the artifact `WebApp`:
 
 ```yaml
 steps:
-- download: current
-  artifact: WebApp
-  patterns: '**/*.js'
+  - download: current
+    artifact: WebApp
+    patterns: "**/*.js"
 ```
 
 Files (with the directory structure of the artifact preserved) are downloaded under `$(Pipeline.Workspace)/WebApp`.
@@ -190,16 +189,16 @@ Files (with the directory structure of the artifact preserved) are downloaded un
 
 ```yaml
 steps:
-- task: DownloadPipelineArtifact@2
-  inputs:
-    artifact: WebApp
-    patterns: '**/*.js'
-    path: $(Build.SourcesDirectory)/bin
+  - task: DownloadPipelineArtifact@2
+    inputs:
+      artifact: WebApp
+      patterns: "**/*.js"
+      path: $(Build.SourcesDirectory)/bin
 ```
 
-* **artifact**: The name of the artifact to download. If left empty, all artifacts associated to the pipeline run will be downloaded.
-* **patterns**: One or more file matching patterns that limit which files get downloaded.
-* **path**: The destination directory. It accepts both relative and absolute path.
+- **artifact**: The name of the artifact to download. If left empty, all artifacts associated to the pipeline run will be downloaded.
+- **patterns**: One or more file matching patterns that limit which files get downloaded.
+- **path**: The destination directory. It accepts both relative and absolute path.
 
 In this example, all `*.js` files in the `WebApp` artifact are downloaded to `$(Build.SourcesDirectory)/bin`.
 
@@ -207,23 +206,23 @@ In this example, all `*.js` files in the `WebApp` artifact are downloaded to `$(
 
 ![icon](../tasks/utility/media/download-pipeline-artifact.png) **Download Pipeline Artifact**
 
-* Artifact name:
+- Artifact name:
 
-   ```
-   artifactName
-   ```
+  ```
+  artifactName
+  ```
 
-* Destination directory:
+- Destination directory:
 
-   ```
-   $(Build.SourcesDirectory)/bin
-   ```
+  ```
+  $(Build.SourcesDirectory)/bin
+  ```
 
-* Matching patterns:
+- Matching patterns:
 
-   ```
-   '**/*.js'
-   ```
+  ```
+  '**/*.js'
+  ```
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -247,30 +246,30 @@ For example, to download all `.zip` files from all source artifacts:
 
 ```yaml
 steps:
-- download: current
-  patterns: '**/*.zip'
+  - download: current
+    patterns: "**/*.zip"
 ```
 
 # [YAML (task)](#tab/yaml-task)
 
 ```yaml
 steps:
-- task: DownloadPipelineArtifact@2
-  inputs:
-    patterns: '**/*.zip'
+  - task: DownloadPipelineArtifact@2
+    inputs:
+      patterns: "**/*.zip"
 ```
 
-* **patterns**: One or more file matching patterns that limit which files get downloaded.
+- **patterns**: One or more file matching patterns that limit which files get downloaded.
 
 # [Classic](#tab/classic)
 
 ![icon](../tasks/utility/media/download-pipeline-artifact.png) **Download Pipeline Artifact**
 
-* Matching patterns:
+- Matching patterns:
 
-   ```
-   '**/*.zip'
-   ```
+  ```
+  '**/*.zip'
+  ```
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -280,16 +279,16 @@ No available Azure CLI option for this action.
 
 ## Artifacts in release and deployment jobs
 
-If you're using pipeline artifacts to deliver artifacts into a classic release pipeline or deployment job, you do not need to add a download step --- a step is injected automatically. If you need to control over the location where files are downloaded, you can add a **Download Pipeline Artifact** task or use the ```download``` YAML keyword.
+If you're using pipeline artifacts to deliver artifacts into a classic release pipeline or deployment job, you do not need to add a download step --- a step is injected automatically. If you need to control over the location where files are downloaded, you can add a **Download Pipeline Artifact** task or use the `download` YAML keyword.
 
 > [!NOTE]
-> Artifacts are only downloaded automatically in deployment jobs. In a regular build job, you need to explicitly use the `download` step keyword or  **Download Pipeline Artifact** task.
+> Artifacts are only downloaded automatically in deployment jobs. In a regular build job, you need to explicitly use the `download` step keyword or **Download Pipeline Artifact** task.
 
 To stop artifacts from being downloaded automatically, add a `download` step and set its value to none:
 
 ```yaml
 steps:
-- download: none
+  - download: none
 ```
 
 ## Migrating from build artifacts

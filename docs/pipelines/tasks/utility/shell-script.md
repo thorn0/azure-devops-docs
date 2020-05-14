@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: macoope
 author: vtbassmatt
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Shell Script task
@@ -39,6 +39,7 @@ sh
     #cwd: '' # Optional
     #failOnStandardError: false
 ```
+
 ::: moniker-end
 
 ## Arguments
@@ -78,7 +79,6 @@ Select if you want this task to fail if any errors are written to the StandardEr
 </td>
 </tr>
 
-
 <tr>
 <th style="text-align: center" colspan="2"><a href="~/pipelines/process/tasks.md#controloptions" data-raw-source="[Control options](../../process/tasks.md#controloptions)">Control options</a></th>
 </tr>
@@ -87,7 +87,7 @@ Select if you want this task to fail if any errors are written to the StandardEr
 
 ## Example
 
-Create ```test.sh``` at the root of your repo.
+Create `test.sh` at the root of your repo.
 We recommend creating this file from a Linux environment (such as a real Linux machine or Windows Subsystem for Linux) so that line endings are correct.
 Also, don't forget to `chmod +x test.sh` before you commit it.
 
@@ -113,6 +113,7 @@ On the [Build tab](../../index.yml) of a build pipeline, add this task:
 ![](media/shell-script.png)
 
 <br/>**Utility: Shell Script**</td>
+
 <td>
 <p>Run test.bat.</p>
 <ul>

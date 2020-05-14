@@ -18,13 +18,12 @@ Extends: [BuildOptionDefinitionReference](./BuildOptionDefinitionReference.md)
 
 ### Members
 
-* `description`: string. 
+- `description`: string.
 
-* `groups`: [BuildOptionGroupDefinition](./BuildOptionGroupDefinition.md)[]. 
+- `groups`: [BuildOptionGroupDefinition](./BuildOptionGroupDefinition.md)[].
 
-* `inputs`: [BuildOptionInputDefinition](./BuildOptionInputDefinition.md)[]. 
+- `inputs`: [BuildOptionInputDefinition](./BuildOptionInputDefinition.md)[].
 
-* `name`: string. 
+- `name`: string.
 
-* `ordinal`: number. 
-
+- `ordinal`: number.

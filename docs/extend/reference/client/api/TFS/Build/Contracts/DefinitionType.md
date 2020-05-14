@@ -16,5 +16,5 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `Xaml` 
-* `Build` 
+- `Xaml`
+- `Build`

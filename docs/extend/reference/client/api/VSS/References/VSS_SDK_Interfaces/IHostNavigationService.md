@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,16 +15,14 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Service which allows interaction with the browser location and navigation of the host frame 
+Service which allows interaction with the browser location and navigation of the host frame
 
 ### Members
 
-* `reload`: (): any. Reloads the parent frame
+- `reload`: (): any. Reloads the parent frame
 
-* `onHashChanged`: (callback: (hash: string): void): any. Add a callback to be invoked each time the hash navigation has changed
+- `onHashChanged`: (callback: (hash: string): void): any. Add a callback to be invoked each time the hash navigation has changed
 
-* `getHash`: (): IPromise&lt;string&gt;. Gets the current hash.
+- `getHash`: (): IPromise&lt;string&gt;. Gets the current hash.
 
-* `setHash`: (hash: string): any. Sets the provided hash from the hosted content.
-
+- `setHash`: (hash: string): any. Sets the provided hash from the hosted content.

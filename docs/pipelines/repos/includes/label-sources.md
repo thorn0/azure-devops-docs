@@ -7,7 +7,7 @@ author: steved0x
 ms.date: 02/13/2020
 ---
 
-[//]: # (Label sources)
+[//]: # "Label sources"
 
 You may want to label your source code files to enable your team to easily identify which version of each file is included in the completed build. You also have the option to specify whether the source code should be labeled for all builds or only for successful builds.
 

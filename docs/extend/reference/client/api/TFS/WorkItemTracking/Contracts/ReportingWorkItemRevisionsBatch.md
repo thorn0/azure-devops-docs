@@ -16,4 +16,3 @@ Module path: `TFS/WorkItemTracking/Contracts`
 Extends: [StreamedBatch](../../../TFS/[WorkItem](../../../TFS/WorkItemTracking/Contracts/WorkItem.md) &lt;WorkItem&gt;
 
 ### Members
-

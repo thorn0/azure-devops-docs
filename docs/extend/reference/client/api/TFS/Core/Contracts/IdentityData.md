@@ -14,8 +14,6 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Core/Contracts`
 
-
 ### Members
 
-* `identityIds`: string[]. 
-
+- `identityIds`: string[].

@@ -25,21 +25,23 @@ The task will install the `wheel` and `twine` packages with `python -m pip insta
 ## Deprecated
 
 > [!WARNING]
-> The PyPI Publisher task has been deprecated. You can now [publish PyPI packages using twine authentication and custom scripts](../../targets/pypi.md). 
+> The PyPI Publisher task has been deprecated. You can now [publish PyPI packages using twine authentication and custom scripts](../../targets/pypi.md).
 
 ## Demands
 
 None
 
 ## Prerequisites
+
 A generic service connection for a PyPI index.
 
 > [!TIP]
 > To configure a new generic service connection, go to Settings -> Services -> New service connection -> Generic.
-> * **Connection Name**: A friendly connection name of your choice
-> * **Server URL**: PyPI package server (for example: https://upload.pypi.org/legacy/)
-> * **User name**: username for your PyPI account
-> * **Password/Token Key**: password for your PyPI account
+>
+> - **Connection Name**: A friendly connection name of your choice
+> - **Server URL**: PyPI package server (for example: https://upload.pypi.org/legacy/)
+> - **User name**: username for your PyPI account
+> - **Password/Token Key**: password for your PyPI account
 
 ::: moniker range="> tfs-2018"
 
@@ -51,17 +53,18 @@ A generic service connection for a PyPI index.
 
 ## Arguments
 
-| Argument | Description |
-|----------|-------------|
-| PyPI connection | A generic service connection for connecting to the package index. |
-| Python package directory | The directory of the Python package to be created and published, where setup.py is present. |
-| Also publish a wheel | Select whether to create and publish a [universal wheel](https://packaging.python.org/tutorials/distributing-packages/#wheels) package (platform independent) in addition to an sdist package. |
+| Argument                 | Description                                                                                                                                                                                    |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PyPI connection          | A generic service connection for connecting to the package index.                                                                                                                              |
+| Python package directory | The directory of the Python package to be created and published, where setup.py is present.                                                                                                    |
+| Also publish a wheel     | Select whether to create and publish a [universal wheel](https://packaging.python.org/tutorials/distributing-packages/#wheels) package (platform independent) in addition to an sdist package. |
 
 ## Open source
 
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 [!INCLUDE [temp](../../includes/qa-agents.md)]

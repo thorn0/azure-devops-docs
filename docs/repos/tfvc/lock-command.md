@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Lock Command
 
@@ -23,8 +22,8 @@ Locks or unlocks a file or folder to deny or restore the right of users to check
 To use the **lock** command, you must have the **Lock** permission set to **Allow**. Having the Unlock other user's changes permission set to **Allow** is required to remove a lock held by another user if you do not have **Write** permission for that user's workspace. For more information, see [Permissions and groups reference](../../organizations/security/permissions.md#lock-permission).
 
 ```
-tf lock itemspec /lock:(none|checkout|checkin) 
-[/workspace:workspacename] [/recursive] [/login:username,[password]] [/collection:TeamProjectCollectionUrl] 
+tf lock itemspec /lock:(none|checkout|checkin)
+[/workspace:workspacename] [/recursive] [/login:username,[password]] [/collection:TeamProjectCollectionUrl]
 ```
 
 ## Parameters
@@ -62,6 +61,7 @@ tf lock itemspec /lock:(none|checkout|checkin)
 </table>
 
 ## Remarks
+
 You can use the lock command to temporarily freeze the Team Foundation version control server version of an item so that you can check in a pending change without having to resolve any merge conflicts. If you want to permanently prevent access to an item in the Team Foundation version control server, you should use the [Permission Command](permission-command.md) instead.
 
 > [!NOTE]
@@ -73,19 +73,19 @@ For more information on how to find the **tf** command-line utility, see [Tf Com
 
 You can lock an item using the lock command or by specifying a lock option during the commission of several other commands of the **tf** command-line utility that includes:
 
--   [Rename Command (Team Foundation Version Control)](rename-command-team-foundation-version-control.md)
+- [Rename Command (Team Foundation Version Control)](rename-command-team-foundation-version-control.md)
 
--   [Checkout and Edit Commands](checkout-or-edit-command.md)
+- [Checkout and Edit Commands](checkout-or-edit-command.md)
 
--   [Delete Command (Team Foundation Version Control)](delete-command-team-foundation-version-control.md)
+- [Delete Command (Team Foundation Version Control)](delete-command-team-foundation-version-control.md)
 
--   [Undelete Command](undelete-command.md)
+- [Undelete Command](undelete-command.md)
 
--   [Merge Command](merge-command.md)
+- [Merge Command](merge-command.md)
 
--   [Branch Command](branch-command.md)
+- [Branch Command](branch-command.md)
 
--   [Add Command](add-command.md)
+- [Add Command](add-command.md)
 
 For add and branch, the lock is placed on the namespace where the new item will be created. Locks placed with rename apply both to the old and new namespaces. For more information, see [Lock and Unlock Folders or Files](lock-unlock-folders-files.md).
 
@@ -110,7 +110,9 @@ Locks on folders are implicitly recursive. If you lock a folder, you do not have
 You can unlock a locked item using the **none** option. Additionally, Team Foundation unlocks an item automatically when you check in pending changes in the workspace.
 
 You can determine which files are locked in the Team Foundation version control server and by whom the files were locked using the [Status Command](status-command.md).
+
 ## Examples
+
 The following example prevents other users from checking out 314.cs.
 
 ```

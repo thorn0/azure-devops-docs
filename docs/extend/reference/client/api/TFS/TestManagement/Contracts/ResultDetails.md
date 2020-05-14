@@ -16,6 +16,6 @@ Module path: `TFS/TestManagement/Contracts`
 
 ### Values
 
-* `None` 
-* `Iterations` 
-* `WorkItems` 
+- `None`
+- `Iterations`
+- `WorkItems`

@@ -5,7 +5,7 @@ description: Learn about how you can determine what changed, when it happened, a
 ms.topic: reference
 ms.assetid: AB81E23E-DD84-4BDB-ACD9-AE03D783A303
 ms.date: 3/15/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Build pipeline history
@@ -42,7 +42,7 @@ After you've viewed the history, if you want details about a change, select it a
 
 ::: moniker-end
 
-## Q & A 
+## Q & A
 
 <!-- BEGINSECTION class="md-qanda" -->
 

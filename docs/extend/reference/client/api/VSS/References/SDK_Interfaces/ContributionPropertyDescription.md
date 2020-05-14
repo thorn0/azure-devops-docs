@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,16 +15,14 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Description about a property of a contribution type 
+Description about a property of a contribution type
 
 ### Members
 
-* `description`: string. Description of the property
+- `description`: string. Description of the property
 
-* `name`: string. Name of the property
+- `name`: string. Name of the property
 
-* `required`: boolean. True if this property is required
+- `required`: boolean. True if this property is required
 
-* `type`: [ContributionPropertyType](../../../VSS/References/SDK_Interfaces/ContributionPropertyType.md). The type of value used for this property
-
+- `type`: [ContributionPropertyType](../../../VSS/References/SDK_Interfaces/ContributionPropertyType.md). The type of value used for this property

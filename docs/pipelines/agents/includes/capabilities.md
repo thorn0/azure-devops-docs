@@ -16,5 +16,5 @@ In many cases, after you deploy an agent, you'll need to install software or uti
 For example, if your build includes the [npm task](../../tasks/package/npm.md), then the build won't run unless there's a build agent in the pool that has npm installed.
 
 > [!IMPORTANT]
-> 
+>
 > After you install new software on an agent, you must restart the agent for the new capability to show up in the pool so that the build can run.

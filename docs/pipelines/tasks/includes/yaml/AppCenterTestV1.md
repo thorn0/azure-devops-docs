@@ -12,8 +12,8 @@ ms.technology: devops-cicd-tasks
 # Test app packages with Visual Studio App Center
 - task: AppCenterTest@1
   inputs:
-    appFile: 
-    #artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest' 
+    appFile:
+    #artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     #prepareTests: true # Optional
     #frameworkOption: 'appium' # Required when prepareTests == True# Options: appium, espresso, calabash, uitest, xcuitest
     #appiumBuildDirectory: # Required when prepareTests == True && Framework == Appium

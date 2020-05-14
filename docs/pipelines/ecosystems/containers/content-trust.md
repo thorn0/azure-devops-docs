@@ -6,8 +6,9 @@ ms.assetid: b66517e3-85de-4847-82f6-b1b0431d2915
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 08/28/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
+
 # Docker Content Trust
 
 [!INCLUDE [include](../../includes/version-team-services.md)]
@@ -39,13 +40,13 @@ Docker Content Trust (DCT) provides the ability to use digital signatures for da
      containerRegistryServiceConnection: serviceConnectionName
      imageRepository: foobar/content-trust
      tag: test
-    
+
    steps:
    - task: Docker@2
      inputs:
        command: login
        containerRegistry: $(containerRegistryServiceConnection)
-    
+
    - task: DownloadSecureFile@1
      name: privateKey
      inputs:
@@ -53,7 +54,7 @@ Docker Content Trust (DCT) provides the ability to use digital signatures for da
    - script: |
        mkdir -p $(DOCKER_CONFIG)/trust/private
        cp $(privateKey.secureFilePath) $(DOCKER_CONFIG)/trust/private
-    
+
    - task: Docker@2
      inputs:
        command: build
@@ -63,9 +64,9 @@ Docker Content Trust (DCT) provides the ability to use digital signatures for da
        tags: |
          $(tag)
        arguments: '--disable-content-trust=false'
-    
+
    - task: Docker@2
-     inputs: 
+     inputs:
        command: push
        containerRegistry: $(containerRegistryServiceConnection)
        repository: $(imageRepository)
@@ -75,5 +76,6 @@ Docker Content Trust (DCT) provides the ability to use digital signatures for da
      env:
        DOCKER_CONTENT_TRUST_REPOSITORY_PASSPHRASE: $(DOCKER_CONTENT_TRUST_REPOSITORY_PASSPHRASE)
    ```
-   > [!NOTE] 
+
+   > [!NOTE]
    > In the above snippet, the variable `DOCKER_CONFIG` is set by the login action done by Docker task. It is recommended to setup `DOCKER_CONTENT_TRUST_REPOSITORY_PASSPHRASE` as a [secret variable](../../process/variables.md#secret-variables) for the pipeline as the alternative approach of using a pipeline variable in YAML would expose the passphrase in plaintext form.

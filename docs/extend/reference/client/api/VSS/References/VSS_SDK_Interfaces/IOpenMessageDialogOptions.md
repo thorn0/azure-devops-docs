@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,22 +15,20 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Used by IHostDialogService.openMessageDialog(). 
+Used by IHostDialogService.openMessageDialog().
 
 ### Members
 
-* `buttons`: [IMessageDialogButton](../../../VSS/References/VSS_SDK_Interfaces/IMessageDialogButton.md)[]. Optional. Array of buttons to show. Default is [Button.Ok, Button.Cancel]
+- `buttons`: [IMessageDialogButton](../../../VSS/References/VSS_SDK_Interfaces/IMessageDialogButton.md)[]. Optional. Array of buttons to show. Default is [Button.Ok, Button.Cancel]
 
-* `escapeButton`: [IMessageDialogButton](../../../VSS/References/VSS_SDK_Interfaces/IMessageDialogButton.md). Optional. Button to use when the user presses the Esc key. Default is the last button.
+- `escapeButton`: [IMessageDialogButton](../../../VSS/References/VSS_SDK_Interfaces/IMessageDialogButton.md). Optional. Button to use when the user presses the Esc key. Default is the last button.
 
-* `requiredTypedConfirmation`: string. Optional. If this is set, the user is presented with a text box. Non-rejecting buttons are disabled until the user types in this string.
+- `requiredTypedConfirmation`: string. Optional. If this is set, the user is presented with a text box. Non-rejecting buttons are disabled until the user types in this string.
 
-* `title`: string. Optional. Text for the title bar of the dialog. Default is &quot;Confirm&quot;.
+- `title`: string. Optional. Text for the title bar of the dialog. Default is &quot;Confirm&quot;.
 
-* `width`: number. Optional. Width of dialog in px.
+- `width`: number. Optional. Width of dialog in px.
 
-* `height`: number. Optional. Height of dialog in px.
+- `height`: number. Optional. Height of dialog in px.
 
-* `useBowtieStyle`: boolean. Optional. Use Bowtie styling. Default is true.
-
+- `useBowtieStyle`: boolean. Optional. Use Bowtie styling. Default is true.
