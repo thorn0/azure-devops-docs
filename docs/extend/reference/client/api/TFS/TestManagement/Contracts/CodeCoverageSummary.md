@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). Uri of build for which data is retrieved/published
+- `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). Uri of build for which data is retrieved/published
 
-* `coverageData`: [CodeCoverageData](../../../TFS/TestManagement/Contracts/CodeCoverageData.md)[]. List of coverage data and details for the build
+- `coverageData`: [CodeCoverageData](../../../TFS/TestManagement/Contracts/CodeCoverageData.md)[]. List of coverage data and details for the build
 
-* `deltaBuild`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). Uri of build against which difference in coverage is computed
-
+- `deltaBuild`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). Uri of build against which difference in coverage is computed

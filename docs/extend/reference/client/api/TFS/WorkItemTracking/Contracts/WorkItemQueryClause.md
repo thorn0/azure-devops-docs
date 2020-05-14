@@ -13,20 +13,18 @@ ms.date: 08/04/2016
 
 Module path: `TFS/WorkItemTracking/Contracts`
 
-
 ### Members
 
-* `clauses`: [WorkItemQueryClause](../../../TFS/WorkItemTracking/Contracts/WorkItemQueryClause.md)[]. 
+- `clauses`: [WorkItemQueryClause](../../../TFS/WorkItemTracking/Contracts/WorkItemQueryClause.md)[].
 
-* `field`: [WorkItemFieldReference](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldReference.md). 
+- `field`: [WorkItemFieldReference](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldReference.md).
 
-* `fieldValue`: [WorkItemFieldReference](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldReference.md). 
+- `fieldValue`: [WorkItemFieldReference](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldReference.md).
 
-* `isFieldValue`: boolean. 
+- `isFieldValue`: boolean.
 
-* `logicalOperator`: [LogicalOperation](../../../TFS/WorkItemTracking/Contracts/LogicalOperation.md). 
+- `logicalOperator`: [LogicalOperation](../../../TFS/WorkItemTracking/Contracts/LogicalOperation.md).
 
-* `operator`: [WorkItemFieldOperation](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldOperation.md). 
+- `operator`: [WorkItemFieldOperation](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldOperation.md).
 
-* `value`: string. 
-
+- `value`: string.

@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `agentId`: number. 
+- `agentId`: number.
 
-* `timeout`: any. 
-
+- `timeout`: any.

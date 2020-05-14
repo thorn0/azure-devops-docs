@@ -1,11 +1,11 @@
 ---
-title: Catalog of the built-in tasks for build-release and Azure Pipelines & TFS 
+title: Catalog of the built-in tasks for build-release and Azure Pipelines & TFS
 ms.custom: seodec18
 description: Catalog of the built-in tasks on Azure Pipelines and Team Foundation Server
 ms.topic: reference
 ms.assetid: D2DE8A26-AF89-4B08-9FCD-30CD58635B0A
 ms.date: 05/03/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Build and release tasks
@@ -26,7 +26,7 @@ To learn more about tool installer tasks, see [Tool installers](../process/tasks
 
 These tasks are open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
-## Q & A  
+## Q & A
 
 <!-- BEGINSECTION class="md-qanda" -->
 

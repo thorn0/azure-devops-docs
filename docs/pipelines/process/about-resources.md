@@ -9,9 +9,10 @@ monikerRange: azure-devops
 
 # About pipeline resources
 
-A resource is anything used by a pipeline that lives outside the pipeline. [Resources](resources.md) are defined at one place and can be consumed anywhere in your pipeline. Resources can be [protected or open](../security/resources.md). 
+A resource is anything used by a pipeline that lives outside the pipeline. [Resources](resources.md) are defined at one place and can be consumed anywhere in your pipeline. Resources can be [protected or open](../security/resources.md).
 
 Resources include:
+
 - [agent pools](../agents/agents.md)
 - [variable groups](../library/variable-groups.md)
 - [secure files](../library/secure-files.md)

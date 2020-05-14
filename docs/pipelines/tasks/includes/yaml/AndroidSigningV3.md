@@ -12,7 +12,7 @@ ms.technology: devops-cicd-tasks
 # Sign and align Android APK files
 - task: AndroidSigning@3
   inputs:
-    #apkFiles: '**/*.apk' 
+    #apkFiles: '**/*.apk'
     #apksign: true # Optional
     #apksignerKeystoreFile: # Required when apksign == True
     #apksignerKeystorePassword: # Optional

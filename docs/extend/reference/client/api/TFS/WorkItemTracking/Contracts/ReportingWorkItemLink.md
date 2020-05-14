@@ -13,16 +13,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/WorkItemTracking/Contracts`
 
-
 ### Members
 
-* `changedDate`: Date. 
+- `changedDate`: Date.
 
-* `isActive`: boolean. 
+- `isActive`: boolean.
 
-* `rel`: string. 
+- `rel`: string.
 
-* `sourceId`: number. 
+- `sourceId`: number.
 
-* `targetId`: number. 
-
+- `targetId`: number.

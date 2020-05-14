@@ -13,20 +13,18 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `creatorId`: string. 
+- `creatorId`: string.
 
-* `includeLinks`: boolean. Whether to include the _links field on the shallow references
+- `includeLinks`: boolean. Whether to include the \_links field on the shallow references
 
-* `repositoryId`: string. 
+- `repositoryId`: string.
 
-* `reviewerId`: string. 
+- `reviewerId`: string.
 
-* `sourceRefName`: string. 
+- `sourceRefName`: string.
 
-* `status`: [PullRequestStatus](../../../TFS/VersionControl/Contracts/PullRequestStatus.md). 
+- `status`: [PullRequestStatus](../../../TFS/VersionControl/Contracts/PullRequestStatus.md).
 
-* `targetRefName`: string. 
-
+- `targetRefName`: string.

@@ -12,7 +12,7 @@ ms.technology: devops-cicd-tasks
 # Run the gulp Node.js streaming task-based build system
 - task: gulp@1
   inputs:
-    #gulpFile: 'gulpfile.js' 
+    #gulpFile: 'gulpfile.js'
     #targets: # Optional
     #arguments: # Optional
     #workingDirectory: # Optional
@@ -20,7 +20,7 @@ ms.technology: devops-cicd-tasks
     #publishJUnitResults: false # Optional
     #testResultsFiles: '**/TEST-*.xml' # Required when publishJUnitResults == True
     #testRunTitle: # Optional
-    #enableCodeCoverage: false 
+    #enableCodeCoverage: false
     #testFramework: 'Mocha' # Optional. Options: mocha, jasmine
     #srcFiles: # Optional
     #testFiles: 'test/*.js' # Required when enableCodeCoverage == True

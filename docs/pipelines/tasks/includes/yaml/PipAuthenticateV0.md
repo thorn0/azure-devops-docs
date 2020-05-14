@@ -12,6 +12,6 @@ ms.technology: devops-cicd-tasks
 # Authentication task for the pip client used for installing Python distributions
 - task: PipAuthenticate@0
   inputs:
-    artifactFeeds: 
+    artifactFeeds:
     #externalFeeds: # Optional
 ```

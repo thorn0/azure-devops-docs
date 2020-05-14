@@ -8,7 +8,7 @@ ms.author: chcomley
 author: chcomley
 ms.topic: conceptual
 ms.date: 12/30/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Not getting emails from subscriptions or notifications
@@ -21,15 +21,15 @@ In this article, learn why you may not be receiving an expected subscription or 
 
 If you're not receiving an expected notification email, it could be for one of the following reasons.
 
-* The email was delivered to an unchecked folder
-* The subscription is disabled or opted-out
-* The event doesn't match the specified subscription filter conditions
-* The subscription is defined to not send emails to the initiator of an event
-* The organization level _do not deliver_ setting is impacting email delivery
-* The team or group level [_do not deliver_](#check-do-not-deliver-setting-for-your-team-or-group) setting is impacting email delivery
-* You're not a member of the group or team receiving the email
-* You're a member of an Azure Directory (AD) group and the subscription contains a @Me clause
-* You don't have permission to view the event details, which are included in the email
+- The email was delivered to an unchecked folder
+- The subscription is disabled or opted-out
+- The event doesn't match the specified subscription filter conditions
+- The subscription is defined to not send emails to the initiator of an event
+- The organization level _do not deliver_ setting is impacting email delivery
+- The team or group level [_do not deliver_](#check-do-not-deliver-setting-for-your-team-or-group) setting is impacting email delivery
+- You're not a member of the group or team receiving the email
+- You're a member of an Azure Directory (AD) group and the subscription contains a @Me clause
+- You don't have permission to view the event details, which are included in the email
 
 Complete the following tasks to determine if any resolve the issue.
 
@@ -43,8 +43,7 @@ Go to your personal subscriptions and locate the subscription, which you feel sh
 
 If the subscription is grayed-out in the user interface, then it's disabled. The following screenshot shows the first subscription enabled and the second disabled.
 
-> [!div class="mx-imgBorder"] 
->![subscription disabled](media/subscription-disabled.png)
+> [!div class="mx-imgBorder"] > ![subscription disabled](media/subscription-disabled.png)
 
 A default subscription is disabled when an administrator opts out at the organization or team level, or if you opt out in your personal subscription settings. Custom subscriptions get disabled when an administrator disables the subscription at the organization or team level, or if you disable a personal custom subscription.
 

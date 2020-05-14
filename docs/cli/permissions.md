@@ -1,20 +1,20 @@
 ﻿---
 title: Manage Security permissions with Azure DevOps CLI
-titleSuffix: Azure DevOps 
-description: Use Azure DevOps CLI to manage security permissions 
-ms.topic: reference 
-ms.prod: devops 
+titleSuffix: Azure DevOps
+description: Use Azure DevOps CLI to manage security permissions
+ms.topic: reference
+ms.prod: devops
 ms.technology: devops-ref
-ms.manager: mijacobs 
+ms.manager: mijacobs
 ms.author: geverghe
 author: KathrynEE
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ms.date: 06/18/2019
 ---
 
-# Manage security permissions  
+# Manage security permissions
 
-[!INCLUDE [temp](../includes/version-vsts-only.md)] 
+[!INCLUDE [temp](../includes/version-vsts-only.md)]
 
 Security permissions for a User or Security group can be managed by running following group of commands:
 
@@ -46,28 +46,28 @@ Once you have figured the required namespace, you can list all the tokens availa
 `az devops security permission list --namespace-id <NAMESPACE_ID> --subject <USER_ID/GROUP_DESCRIPTOR>`
 
 You can also use token parameter in above command if you know the token already and want to list only root and/or child tokens of a resource. This way you will be able to filter results when some namespace has long list of ACLs for given user/group.
-`az devops security permission list  --namespace-id <NAMESPACE_ID> --subject <USER_ID/GROUP_DESCRIPTOR> --token <SECURITY_TOKEN> --recurse`
+`az devops security permission list --namespace-id <NAMESPACE_ID> --subject <USER_ID/GROUP_DESCRIPTOR> --token <SECURITY_TOKEN> --recurse`
 
 To get the required token for different namespaces, refer [Security tokens for Permissions management](security_tokens.md)
 
 For given token, and group/user, if you need to list permissions or resolve the allow/deny bits to its corresponding permission types,use following command.
-`az devops security permission show  --namespace-id <NAMESPACE_ID> --subject <USER_ID/GROUP_DESCRIPTOR> --token <SECURITY_TOKEN>`
+`az devops security permission show --namespace-id <NAMESPACE_ID> --subject <USER_ID/GROUP_DESCRIPTOR> --token <SECURITY_TOKEN>`
 
 ### Change permissions
 
-Here, permissions could be a single permission type or combination of multiple permission types. 
+Here, permissions could be a single permission type or combination of multiple permission types.
 You will get the permission details available for any namespace with `az devops security permission namespace show --id` command.
 You will have to pass this permission bits while assigning allow/deny permissions and removing permissions.
 
 #### Assign permissions
 
-`az  devops security permission update  --namespace-id <NAMESPACE_ID> --subject <USER_ID/GROUP_DESCRIPTOR> --token <SECURITY_TOKEN> --allow-bit 4 --deny-bit 1`
+`az devops security permission update --namespace-id <NAMESPACE_ID> --subject <USER_ID/GROUP_DESCRIPTOR> --token <SECURITY_TOKEN> --allow-bit 4 --deny-bit 1`
 
 Here, --allow-bit/--deny-bit could be a single permission bit or addition of multiple permission bits.
 
 #### Reset permissions
 
-`az  devops security permission reset  --namespace-id <NAMESPACE_ID> --subject <USER_ID/GROUP_DESCRIPTOR> --token <SECURITY_TOKEN> --permission-bit 5`
+`az devops security permission reset --namespace-id <NAMESPACE_ID> --subject <USER_ID/GROUP_DESCRIPTOR> --token <SECURITY_TOKEN> --permission-bit 5`
 
 Here, --permission-bit could be a single permission bit or addition of multiple permission bits.
 

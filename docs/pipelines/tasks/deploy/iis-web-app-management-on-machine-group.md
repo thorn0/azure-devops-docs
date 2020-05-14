@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 12/07/2018
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # IIS Web App Manage task
@@ -33,12 +33,14 @@ Use this task to create or update a Website, Web App, Virtual Directory, or Appl
 
 &quot;Create Or Update&quot; will create a website or update an existing website.
 
- Start, Stop will start or stop the website respectively.</td></tr>
+Start, Stop will start or stop the website respectively.</td></tr>
+
 <tr><td>Action</td><td>(Required) Select the appropriate action that you want to perform on an IIS Application Pool.
 
 &quot;Create Or Update&quot; will create app-pool or update an existing one.
 
 Start, Stop, Recycle will start, stop or recycle the application pool respectively.</td></tr>
+
 <tr><td>Website name</td><td>(Required) Provide the name of the IIS website.</td></tr>
 <tr><td>Website name</td><td>(Required) Provide the name of the IIS website to create or update.</td></tr>
 <tr><td>Physical path</td><td>(Required) Provide the physical path where the website content will be stored. The content can reside on the local Computer, or in a remote directory, or on a network share, like C:\Fabrikam or \ContentShare\Fabrikam.</td></tr>
@@ -70,6 +72,7 @@ Start, Stop, Recycle will start, stop or recycle the application pool respective
 <tr><td>Virtual path</td><td>(Required) Provide the virtual path of the virtual directory.
 
 Example: To create a virtual directory Site/Application/VDir enter /Application/Vdir. The parent website and application should be already existing.</td></tr>
+
 <tr><td>Physical path</td><td>(Required) Provide the physical path where the virtual directory&#39;s content will be stored. The content can reside on the local Computer, or in a remote directory, or on a network share, like C:\Fabrikam or \ContentShare\Fabrikam.</td></tr>
 <tr><td>Physical path authentication</td><td>(Optional) Select the authentication mechanism that will be used to access the physical path of the virtual directory.</td></tr>
 <tr><td>Username</td><td>(Required) Provide the user name that will be used to access the virtual directory&#39;s physical path.</td></tr>
@@ -78,6 +81,7 @@ Example: To create a virtual directory Site/Application/VDir enter /Application/
 <tr><td>Virtual path</td><td>(Required) Provide the virtual path of the application.
 
 Example: To create an application Site/Application enter /Application. The parent website should be already existing.</td></tr>
+
 <tr><td>Physical path</td><td>(Required) Provide the physical path where the application&#39;s content will be stored. The content can reside on the local Computer, or in a remote directory, or on a network share, like C:\Fabrikam or \ContentShare\Fabrikam.</td></tr>
 <tr><td>Physical path authentication</td><td>(Optional) Select the authentication mechanism that will be used to access the physical path of the application.</td></tr>
 <tr><td>Username</td><td>(Required) Provide the user name that will be used to access the application&#39;s physical path.</td></tr>
@@ -97,7 +101,6 @@ Example: To create an application Site/Application enter /Application. The paren
 <tr><td>Password</td><td>(Optional) Provide the password for custom account. <br/>The best practice is to create a variable in the Build or Release pipeline, and mark it as &#39;Secret&#39; to secure it, and then use it here, like &#39;$(userCredentials)&#39;. <br> Note: Special characters in password are interpreted as per <a href="https://go.microsoft.com/fwlink/?linkid=843470">command-line arguments</a></td></tr>
 <tr><td>Application pool name</td><td>(Required) Provide the name of the IIS application pool.</td></tr>
 <tr><td>Additional appcmd.exe commands</td><td>(Optional) Enter additional AppCmd.exe commands. For more than one command use a line separator, like <br/> list apppools <br/> list sites<br/> recycle apppool /apppool.name:ExampleAppPoolName</td></tr>
-
 
 <tr>
 <th style="text-align: center" colspan="2"><a href="~/pipelines/process/tasks.md#controloptions" data-raw-source="[Control options](../../process/tasks.md#controloptions)">Control options</a></th>

@@ -16,14 +16,14 @@ Module path: `TFS/TestManagement/Contracts`
 
 ### Values
 
-* `GeneralAttachment` 
-* `AfnStrip` 
-* `BugFilingData` 
-* `CodeCoverage` 
-* `IntermediateCollectorData` 
-* `RunConfig` 
-* `TestImpactDetails` 
-* `TmiTestRunDeploymentFiles` 
-* `TmiTestRunReverseDeploymentFiles` 
-* `TmiTestResultDetail` 
-* `TmiTestRunSummary` 
+- `GeneralAttachment`
+- `AfnStrip`
+- `BugFilingData`
+- `CodeCoverage`
+- `IntermediateCollectorData`
+- `RunConfig`
+- `TestImpactDetails`
+- `TmiTestRunDeploymentFiles`
+- `TmiTestRunReverseDeploymentFiles`
+- `TmiTestResultDetail`
+- `TmiTestRunSummary`

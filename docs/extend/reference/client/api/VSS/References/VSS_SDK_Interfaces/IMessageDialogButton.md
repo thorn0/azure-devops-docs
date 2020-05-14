@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,19 +15,17 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Represents a button used in IHostDialogService.openMessageDialog(). 
+Represents a button used in IHostDialogService.openMessageDialog().
 
 ### Members
 
-* `id`: string. Used as HTML ID of the button.
+- `id`: string. Used as HTML ID of the button.
 
-* `text`: string. Text to display on the button.
+- `text`: string. Text to display on the button.
 
-* `reject`: boolean. Optional. When true, the dialog&#x27;s promise is rejected instead of resolved when this button is clicked.
+- `reject`: boolean. Optional. When true, the dialog&#x27;s promise is rejected instead of resolved when this button is clicked.
 
-* `style`: string. Optional. Specifies how the button should look. 
-Possible values: 
+- `style`: string. Optional. Specifies how the button should look.
+  Possible values:
   (undefined) - Default
   &quot;warning&quot; - Red
-

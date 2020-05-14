@@ -4,7 +4,6 @@ ms.topic: include
 
 <!--- TFS version only build-->
 
-
 <table>
 <tr valign="bottom">
 <th>Task</th>
@@ -134,5 +133,3 @@ ms.topic: include
 </tr>
 </tbody>
 </table>
-
-

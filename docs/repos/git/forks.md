@@ -3,14 +3,13 @@ title: Fork your repository
 titleSuffix: Azure Repos
 description: Learn to isolate code using forks in Azure DevOps Services & TFS
 ms.assetid: d212c1ec-19b9-4d5a-bb7f-2a909f151180
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 09/10/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
-
 
 # Forks
 
@@ -18,7 +17,7 @@ monikerRange: '>= tfs-2018'
 
 A fork is a complete copy of a repository, including all files, commits, and (optionally) branches.
 Forks are a great way to support an Inner Source workflow: you can create a
-fork to suggest changes to a project when you don't have permissions to 
+fork to suggest changes to a project when you don't have permissions to
 write to the original project directly.
 Once you're ready to share those changes, it's easy to contribute them back using [pull requests](pull-requests-overview.md).
 
@@ -44,7 +43,7 @@ As your team grows larger, you may find yourself outgrowing this arrangement and
 
 If your repository has a large number of casual or infrequent committers (similar to an open source project), we recommend the forking workflow.
 Typically only core contributors to your project have direct commit rights into your repository.
-You should ask collaborators from outside this core set of people to work from a fork of the repository. 
+You should ask collaborators from outside this core set of people to work from a fork of the repository.
 This will isolate their changes from yours until you've had a chance to vet the work.
 
 ## The forking workflow
@@ -67,7 +66,7 @@ This will isolate their changes from yours until you've had a chance to vet the 
 
 ![Create new fork](media/forks/create-new-fork.png)
 
->[!NOTE]
+> [!NOTE]
 > You must have the [Create Repository](../../organizations/security/permissions.md#git-repository-object-level) permission in your chosen project to create a fork.
 > We recommend you create a dedicated project for forks where all contributors have the Create Repository permission. For an example of granting this permission, see [Set Git repository permissions](../../organizations/security/set-git-tfvc-repository-permissions.md#set-git-repository-permissions).
 
@@ -80,7 +79,6 @@ The fork will be your `origin` remote.
 
 For convenience, after cloning you'll want to add the upstream repository (where you forked from) as a remote named `upstream`.
 
-
 # [Visual Studio](#tab/visual-studio)
 
 To add your upstream repository in Visual Studio, follow these steps:
@@ -91,31 +89,27 @@ To add your upstream repository in Visual Studio, follow these steps:
 
 2. Choose **Repository Settings**.
 
-    ![Team Explorer settings](media/forks/vs-te-settings.png)
+   ![Team Explorer settings](media/forks/vs-te-settings.png)
 
 3. Under **Remotes**, choose **Add**.
 
-    ![Repository settings](media/forks/vs-te-reposettings.png)
+   ![Repository settings](media/forks/vs-te-reposettings.png)
 
 4. Add a new remote called `upstream`, using the Git clone URL of the repo you forked.
 
-    ![Dialog: add new remote](media/forks/vs-te-new-remote.png)
+   ![Dialog: add new remote](media/forks/vs-te-new-remote.png)
 
 5. Select **Save** and the new remote is added and displayed in the repository settings.
 
-    ![New remote added](media/forks/vs-te-upstream-added.png)
+   ![New remote added](media/forks/vs-te-upstream-added.png)
 
 # [Command Line](#tab/command-line)
 
 On the command line, navigate to your repository, and type:
 
-```git remote add upstream {upstream_url}```
+`git remote add upstream {upstream_url}`
 
 ---
-
-
-
-
 
 <a name="push-changes" />
 
@@ -139,8 +133,8 @@ Once all policies are satisfied, the PR can be completed and the changes become 
 
 ![Pull request](media/forks/cross-repo-pr.png)
 
->[!IMPORTANT]
->Anyone with the [Read](../../organizations/security/permissions.md#git-repository-object-level) permission can open a PR to upstream.
+> [!IMPORTANT]
+> Anyone with the [Read](../../organizations/security/permissions.md#git-repository-object-level) permission can open a PR to upstream.
 > If a PR build pipeline is configured, the build will run against the code introduced in the fork.
 
 <a name="sync-fork" />
@@ -158,15 +152,15 @@ In Visual Studio, you can use the **Synchronization** page to fetch and rebase.
 
 2. Fetch from `upstream`.
 
-    ![Team Explorer sync](media/forks/vs-te-sync.png)
+   ![Team Explorer sync](media/forks/vs-te-sync.png)
 
 3. Open the **Branches** page in Team Explorer. Make sure `master` is checked out.
 
-    ![Check out master branch](media/forks/vs-te-master-checked-out.png)
+   ![Check out master branch](media/forks/vs-te-master-checked-out.png)
 
 4. Rebase `master` onto `upstream/master`.
 
-    ![Rebase](media/forks/vs-te-rebase.png)
+   ![Rebase](media/forks/vs-te-rebase.png)
 
 Now you're all set to start your next feature on a new topic branch.
 
@@ -181,12 +175,6 @@ git push origin
 ```
 
 ---
-
-
-
-
-
-
 
 The forking workflow lets you isolate changes from the main repository until you're ready to integrate them.
 When you're ready, integrating code is as easy as completing a pull request.

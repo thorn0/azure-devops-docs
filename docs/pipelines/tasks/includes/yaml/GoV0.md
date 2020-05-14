@@ -15,5 +15,5 @@ ms.technology: devops-cicd-tasks
     #command: 'get' # Options: get, build, test, custom
     #customCommand: # Required when command == Custom
     #arguments: # Optional
-    workingDirectory: 
+    workingDirectory:
 ```

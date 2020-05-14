@@ -15,9 +15,9 @@ ms.technology: devops-cicd-tasks
     #packageType: 'nuget' # Options: maven, npm, nuget, pypi, upack
     feed: # <feedId> for organization-scoped feeds, <projectId>/<feedId> for project-scoped feeds.
     #view: ' ' # Optional
-    definition: 
-    version: 
+    definition:
+    version:
     #files: '**' # Optional
     #extract: true # Optional
-    #downloadPath: '$(System.ArtifactsDirectory)' 
+    #downloadPath: '$(System.ArtifactsDirectory)'
 ```

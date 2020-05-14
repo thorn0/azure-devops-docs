@@ -21,21 +21,23 @@ ms.date: 08/17/2016
 
 These APIs can help you stay up-to-date with the contents of a feed or feeds.
 
-## Poll all feeds for updates 
+## Poll all feeds for updates
 
 ```no-highlight
 GET https://{account}.Feeds.VisualStudio.com/DefaultCollection/_apis/packaging/feedChanges?api-version={version}
 ```
 
-| Parameter | Type    | Notes
-|:----------|:--------|:-------------------------------------------------------------------------------------------------------------
-| URL                        
-| account   | string  | VSTS organization.
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
+| URL  
+| account | string | VSTS organization.
 | Query
 | includeDeleted | boolean | If true, get changes for all feeds including deleted feeds. The default value is false.
-| continuationToken          | long    |  A continuation token which acts as a bookmark to a previously retrieved change. This token allows the user to continue retrieving changes in batches, picking up where the previous batch left off. If specified, all the changes that occur strictly after the token will be returned. If not specified or 0, iteration will start with the first change.
-| batchSize	     | int     | Number of feed changes to fetch. The default value is 1000. The maximum value is 2000. 
-| api-version    | string  | Version of the API to use.
+| continuationToken | long | A continuation token which acts as a bookmark to a previously retrieved change. This token allows the user to continue retrieving changes in batches, picking up where the previous batch left off. If specified, all the changes that occur strictly after the token will be returned. If not specified or 0, iteration will start with the first change.
+| batchSize | int | Number of feed changes to fetch. The default value is 1000. The maximum value is 2000.
+| api-version | string | Version of the API to use.
 
 #### Sample request
 
@@ -83,18 +85,19 @@ GET https://mytfsserver/DefaultCollection/_apis/packaging/feedChanges?api-versio
 }
 ```
 
-
 ## Poll a feed for metadata updates
 
 ```no-highlight
 GET https://{account}.Feeds.VisualStudio.com/DefaultCollection/_apis/packaging/feedChanges/{feed}?api-version={version}
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account   | string  | VSTS organization.
-| feed        | string | Name or ID of feed.
+| account | string | VSTS organization.
+| feed | string | Name or ID of feed.
 | Query
 | api-version | string | Version of the API to use.
 
@@ -121,22 +124,23 @@ GET https://mytfsserver/DefaultCollection/_apis/packaging/feedChanges/Engineerin
 }
 ```
 
-
 ## Poll a feed for package updates
 
 ```no-highlight
 GET https://{account}.Feeds.VisualStudio.com/DefaultCollection/_apis/packaging/feeds/{feed}/packageChanges?api-version={version}
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account   | string  | VSTS organization.
-| feed         | string | Name or ID of feed.
+| account | string | VSTS organization.
+| feed | string | Name or ID of feed.
 | Query
-| continuationToken        | long   | A continuation token which acts as a bookmark to a previously retrieved change. This token allows the user to continue retrieving changes in batches, picking up where the previous batch left off.  If specified, all the changes that occur strictly after the token will be returned. If not specified or 0, iteration will start with the first change.
-| batchSize	   | int    | Number of package changes to fetch. The default value is 1000. The maximum value is 2000.
-| api-version  | string | Version of the API to use.
+| continuationToken | long | A continuation token which acts as a bookmark to a previously retrieved change. This token allows the user to continue retrieving changes in batches, picking up where the previous batch left off. If specified, all the changes that occur strictly after the token will be returned. If not specified or 0, iteration will start with the first change.
+| batchSize | int | Number of package changes to fetch. The default value is 1000. The maximum value is 2000.
+| api-version | string | Version of the API to use.
 
 #### Sample request
 

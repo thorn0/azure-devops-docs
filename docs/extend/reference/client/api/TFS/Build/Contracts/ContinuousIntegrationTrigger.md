@@ -18,13 +18,12 @@ Extends: [BuildTrigger](./BuildTrigger.md)
 
 ### Members
 
-* `batchChanges`: boolean. 
+- `batchChanges`: boolean.
 
-* `branchFilters`: string[]. 
+- `branchFilters`: string[].
 
-* `maxConcurrentBuildsPerBranch`: number. 
+- `maxConcurrentBuildsPerBranch`: number.
 
-* `pollingInterval`: number. The polling interval in seconds.
+- `pollingInterval`: number. The polling interval in seconds.
 
-* `pollingJobId`: string. This is the ID of the polling job that polls the external repository.  Once the build definition is saved/updated, this value is set.
-
+- `pollingJobId`: string. This is the ID of the polling job that polls the external repository. Once the build definition is saved/updated, this value is set.

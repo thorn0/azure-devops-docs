@@ -13,13 +13,13 @@ author: yukom
 
 ## Card coloring on Kanban board
 
-I’m excited to let you know that our update this week brings the ability to change the color of cards on your boards – finally! You can now configure boards to include custom formatting based on any value on your work items. Setting this up is very easy… just click the gear icon on the top of your board, select **Card styles**, and create a rule for the color you’d like to add. You can see in the example below that my board has two rules configured. The first rule colors all Bugs with a red background. The second rule colors all work items tagged with the value “Taskboard” a yellow color. 
+I’m excited to let you know that our update this week brings the ability to change the color of cards on your boards – finally! You can now configure boards to include custom formatting based on any value on your work items. Setting this up is very easy… just click the gear icon on the top of your board, select **Card styles**, and create a rule for the color you’d like to add. You can see in the example below that my board has two rules configured. The first rule colors all Bugs with a red background. The second rule colors all work items tagged with the value “Taskboard” a yellow color.
 
 ![Card coloring](media/7_7_01.png)
 
 ![Card coloring rules](media/7_7_02.png)
 
-This feature is initially only available on Kanban board, but we’re enabling it on the Taskboard with our next deployment… stay tuned. 
+This feature is initially only available on Kanban board, but we’re enabling it on the Taskboard with our next deployment… stay tuned.
 
 ## Personal access tokens
 

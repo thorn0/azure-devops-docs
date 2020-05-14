@@ -13,24 +13,22 @@ ms.date: 08/04/2016
 
 Module path: `TFS/WorkItemTracking/Contracts`
 
-
 ### Members
 
-* `code`: number. 
+- `code`: number.
 
-* `deletedBy`: string. 
+- `deletedBy`: string.
 
-* `deletedDate`: string. 
+- `deletedDate`: string.
 
-* `id`: number. 
+- `id`: number.
 
-* `message`: string. 
+- `message`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `project`: string. 
+- `project`: string.
 
-* `type`: string. 
+- `type`: string.
 
-* `url`: string. 
-
+- `url`: string.

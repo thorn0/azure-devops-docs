@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Dir Command
 
@@ -20,15 +19,16 @@ The **dir** command displays all or some of the contents of the server for Team 
 
 **Required Permissions**
 
-To use the **dir** command, you must have **Read** permission set to **Allow**. For more 
+To use the **dir** command, you must have **Read** permission set to **Allow**. For more
 information, see [Permissions and groups reference](../../organizations/security/permissions.md).
 
 ```
-tf dir itemspec [/version:versionspec] [/recursive] 
+tf dir itemspec [/version:versionspec] [/recursive]
 [/folders] [/deleted] [/login:username,[password]] [/collection:TeamProjectCollectionUrl]
 ```
 
 ## Parameters<table>
+
 <thead>
 <tr>
 <th><p><strong>Argument</strong></p></th>
@@ -105,7 +105,9 @@ The <strong>dir</strong> command operates on the Team Foundation version control
 For links to other Team Foundation commands that provide additional information about items in your Team Foundation version control server and the workspaces that map to it, see [Informational Commands](https://msdn.microsoft.com/library/ms181450).
 
 For more information on how to find the **tf** command-line utility, see [Tf Command-Line Utility Commands](https://msdn.microsoft.com/library/z51z7zy0).
+
 ## Examples
+
 The following example displays a list of files, folders, subfolders, and the files therein in the Team Foundation version control server folder to which c:\\projects maps. The number of items is also listed. For more information about how to view and edit working folder mappings, see [Workspace Command](workspace-command.md) and [Workfold Command](workfold-command.md).
 
 ```

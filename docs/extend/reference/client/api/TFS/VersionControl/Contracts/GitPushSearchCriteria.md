@@ -13,18 +13,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `fromDate`: Date. 
+- `fromDate`: Date.
 
-* `includeLinks`: boolean. Whether to include the _links field on the shallow references
+- `includeLinks`: boolean. Whether to include the \_links field on the shallow references
 
-* `includeRefUpdates`: boolean. 
+- `includeRefUpdates`: boolean.
 
-* `pusherId`: string. 
+- `pusherId`: string.
 
-* `refName`: string. 
+- `refName`: string.
 
-* `toDate`: Date. 
-
+- `toDate`: Date.

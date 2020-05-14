@@ -1,26 +1,26 @@
 ---
-title: Create Service Endpoint using Azure DevOps CLI  
-titleSuffix: Azure DevOps 
+title: Create Service Endpoint using Azure DevOps CLI
+titleSuffix: Azure DevOps
 description: Use Azure DevOps CLI to create Service Endpoint
-ms.topic: reference 
-ms.prod: devops 
+ms.topic: reference
+ms.prod: devops
 ms.technology: devops-ref
-ms.manager: mijacobs 
+ms.manager: mijacobs
 ms.author: gsaral
 author: KathrynEE
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ms.date: 07/31/2019
 ---
 
 # Azure DevOps CLI Service Endpoint
 
-[!INCLUDE [temp](../includes/version-vsts-only.md)] 
+[!INCLUDE [temp](../includes/version-vsts-only.md)]
 
 ## Creating GitHub Service Endpoint
 
 Use command:
 
-``` bash
+```bash
 az devops service-endpoint github create
 ```
 
@@ -41,6 +41,7 @@ In interactive mode this command will ask for service principal password/secret 
 ```bash
 export AZURE_DEVOPS_EXT_AZURE_RM_SERVICE_PRINCIPAL_KEY=<your_secret_here>
 ```
+
 ```powershell
 $env:AZURE_DEVOPS_EXT_AZURE_RM_SERVICE_PRINCIPAL_KEY=<your_secret_here>
 ```
@@ -49,7 +50,7 @@ $env:AZURE_DEVOPS_EXT_AZURE_RM_SERVICE_PRINCIPAL_KEY=<your_secret_here>
 
 If AAD application uses [certificate for authentication](/azure/active-directory/develop/active-directory-certificate-credentials) then create .pem for the certificate and pass path to .pem file in `--azure-rm-service-principal-certificate-path` argument.
 
-.pem file can be created using openssl 
+.pem file can be created using openssl
 
 ```bash
 openssl pkcs12 -in file.pfx -out file.pem -nodes -password pass:<password_here>
@@ -57,7 +58,7 @@ openssl pkcs12 -in file.pfx -out file.pem -nodes -password pass:<password_here>
 
 ## Create service endpoint using configuration file
 
-DevOps CLI extension supports creation of any type of service endpoint using 
+DevOps CLI extension supports creation of any type of service endpoint using
 
 ```bash
 az devops service-endpoint create
@@ -73,7 +74,7 @@ Create endpoint of same type from UI and capture its network trace (using tool o
 Captured request will be a POST call to uri ending
 `apis/serviceendpoint/endpoints`
 
-and body will look like 
+and body will look like
 
 ```json
 {

@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Build Queues (XAML Build) | REST API Reference for Team Foundation Server
 description: Get build queues using the REST APIs for Team Foundation Server.
 ms.assetid: 3F7AB00B-8BC2-437B-8088-ED9F66180941
@@ -26,10 +26,12 @@ A build queue performs lightweight tasks and distributes the processor-intensive
 GET https://{instance}/DefaultCollection/_apis/build/queues?api-version={version}
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
+| instance | string | TFS server name ({server:port}).
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -60,18 +62,19 @@ GET https://mytfsserver/DefaultCollection/_apis/build/queues?api-version=1.0
 }
 ```
 
-
 ## Get a queue
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/build/queues/{queueId}?api-version={version}
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
-| queueId   | int    | ID of the queue
+| instance | string | TFS server name ({server:port}).
+| queueId | int | ID of the queue
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -96,4 +99,3 @@ GET https://mytfsserver/DefaultCollection/_apis/build/queues/274?api-version=1.0
   "url": "https://mytfsserver/DefaultCollection/_apis/build/Queues/274"
 }
 ```
-

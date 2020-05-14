@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `VSS/Common/Contracts/FormInput`
 
-
 ### Members
 
-* `caseSensitive`: boolean. Whether or not to do a case sensitive match
+- `caseSensitive`: boolean. Whether or not to do a case sensitive match
 
-* `inputId`: string. The ID of the input to filter on
+- `inputId`: string. The ID of the input to filter on
 
-* `inputValue`: string. The &quot;expected&quot; input value to compare with the actual input value
+- `inputValue`: string. The &quot;expected&quot; input value to compare with the actual input value
 
-* `operator`: [InputFilterOperator](../../../../VSS/Common/Contracts/FormInput/InputFilterOperator.md). The operator applied between the expected and actual input value
-
+- `operator`: [InputFilterOperator](../../../../VSS/Common/Contracts/FormInput/InputFilterOperator.md). The operator applied between the expected and actual input value

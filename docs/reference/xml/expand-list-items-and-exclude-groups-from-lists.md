@@ -13,25 +13,28 @@ ms.date: 05/10/2017
 
 [!INCLUDE [temp](../../includes/customization-phase-0-and-1-plus-version-header.md)]
 
-You can expand and filter lists by using the `expanditems` and `filteritems` attributes. You can apply these attributes to these list type elements: `ALLOWEDVALUES`, `SUGGESTEDVALUES`, and `PROHIBITEDVALUES`.  
-  
-To better understand how these attributes are used to populate a field's drop-down menu, review the examples provided below.  
+You can expand and filter lists by using the `expanditems` and `filteritems` attributes. You can apply these attributes to these list type elements: `ALLOWEDVALUES`, `SUGGESTEDVALUES`, and `PROHIBITEDVALUES`.
 
-<a name="ExpandListsAndGroups"></a> 
-  
-##  Expand lists and groups  
- You can assign the values `true` and `false` to `expanditems`; its value is `true` by default. When `expanditems` has the value of `true`, list items that represent groups or global lists are expanded recursively. A group's subgroups are expanded; the subgroups of those subgroups are also expanded, and continues in this pattern. After expansion, list items that represented groups include both groups and users as list item values. If `expanditems` is set to `false`, no group or global list expansion is performed.  
+To better understand how these attributes are used to populate a field's drop-down menu, review the examples provided below.
 
-<a name="FilterListsAndGroups"></a> 
-  
-##  Exclude groups  
- You can assign only the value `excludegroups` to the `filteritems` attribute. When this attribute appears, all the list items are evaluated and any groups are removed. Use the `filteritems` attribute to show only users, not groups.  
+<a name="ExpandListsAndGroups"></a>
 
-<a name="ContentsOfListsAndGroups"></a> 
-  
-##  Contents of lists and groups used in the examples  
- The examples provided in this topic use the following values:  
-  
+## Expand lists and groups
+
+You can assign the values `true` and `false` to `expanditems`; its value is `true` by default. When `expanditems` has the value of `true`, list items that represent groups or global lists are expanded recursively. A group's subgroups are expanded; the subgroups of those subgroups are also expanded, and continues in this pattern. After expansion, list items that represented groups include both groups and users as list item values. If `expanditems` is set to `false`, no group or global list expansion is performed.
+
+<a name="FilterListsAndGroups"></a>
+
+## Exclude groups
+
+You can assign only the value `excludegroups` to the `filteritems` attribute. When this attribute appears, all the list items are evaluated and any groups are removed. Use the `filteritems` attribute to show only users, not groups.
+
+<a name="ContentsOfListsAndGroups"></a>
+
+## Contents of lists and groups used in the examples
+
+The examples provided in this topic use the following values:
+
 <table Responsive="true" summary="table">
 <tbody valign="top">
 <tr Responsive="true">
@@ -121,7 +124,6 @@ In this example, the field contains a string value, a group, and a global list. 
    &lt;LISTITEM value="[Project]\Business Analysts" /&gt;  
    &lt;GLOBALLIST name="BoolValues" /&gt; </code></pre>
 
-
 </td>
 
 <td data-th="Drop-down list values">
@@ -136,10 +138,10 @@ In this example, the field contains a string value, a group, and a global list. 
 </ul> 
 </td>
 </tr>
-</table> 
-
+</table>
 
 <a id="Example2"></a>
+
 ## Example: Expand lists and groups and do not filter
 
 In this example, the field contains a string value, two groups, and a global list. At the time it is run the list is expanded and groups are not excluded.
@@ -178,15 +180,12 @@ In this example, the field contains a string value, two groups, and a global lis
 </td></tr>
 </table>
 
-
-
 ## Example: Do not expand lists or groups, and do not filter
 
 In this example, the field contains a string value, two groups, and a global list. At run time, the list is not expanded and groups are not filtered out. This means that group names are displayed, but not the users within those groups.
 
-> [!NOTE]    
->The global list name and contents are not displayed.
-
+> [!NOTE]  
+> The global list name and contents are not displayed.
 
 <table Responsive="true" summary="table">
 <tr Responsive="true">
@@ -213,17 +212,16 @@ In this example, the field contains a string value, two groups, and a global lis
 <li style="margin-bottom:0px">MyReports</li>
 </ul> 
 </td>
-</tr></table> 
-
+</tr></table>
 
 ## Example: Expand lists and exclude groups and global lists
+
 In this example, the field contains a string value, one group, and a global list. At run time, the list is expanded and groups are filtered out.
 
-> [!NOTE]    
->*MyTeam* is a group that is excluded and not expanded, and *BoolValue*s is a global list, so neither one is expanded or shown.
+> [!NOTE]  
+> _MyTeam_ is a group that is excluded and not expanded, and *BoolValue*s is a global list, so neither one is expanded or shown.
 
 <table Responsive="true" summary="table"><tr Responsive="true"><th scope="col"><p>Example</p></th><th scope="col"><p>Drop-down list values</p></th></tr><tr><td data-th="Example">
-
 
 <pre><code>&lt;ALLOWEDVALUES expanditems="true" filteritems="excludegroups"&gt;
    &lt;LISTITEM value="string" /&gt;
@@ -233,8 +231,8 @@ In this example, the field contains a string value, one group, and a global list
 </code></pre>
 </td><td data-th="Drop-down list values"><p>String</p></td></tr></table>
 
-  
-## Related articles 
--  [ALLOWEDVALUES, SUGGESTEDVALUES, and PROHIBITEDVALUES XML elements](define-pick-lists.md)   
--  [GLOBALLIST XML element reference](define-global-lists.md)   
--  [Apply a field rule](apply-rule-work-item-field.md)
+## Related articles
+
+- [ALLOWEDVALUES, SUGGESTEDVALUES, and PROHIBITEDVALUES XML elements](define-pick-lists.md)
+- [GLOBALLIST XML element reference](define-global-lists.md)
+- [Apply a field rule](apply-rule-work-item-field.md)

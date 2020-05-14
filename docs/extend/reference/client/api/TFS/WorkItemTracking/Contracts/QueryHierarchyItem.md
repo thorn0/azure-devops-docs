@@ -17,39 +17,38 @@ Extends: [WorkItemTrackingResource](../../../TFS/WorkItemTracking/Contracts/Work
 
 ### Members
 
-* `children`: [QueryHierarchyItem](../../../TFS/WorkItemTracking/Contracts/QueryHierarchyItem.md)[]. 
+- `children`: [QueryHierarchyItem](../../../TFS/WorkItemTracking/Contracts/QueryHierarchyItem.md)[].
 
-* `clauses`: [WorkItemQueryClause](../../../TFS/WorkItemTracking/Contracts/WorkItemQueryClause.md). 
+- `clauses`: [WorkItemQueryClause](../../../TFS/WorkItemTracking/Contracts/WorkItemQueryClause.md).
 
-* `columns`: [WorkItemFieldReference](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldReference.md)[]. 
+- `columns`: [WorkItemFieldReference](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldReference.md)[].
 
-* `filterOptions`: [LinkQueryMode](../../../TFS/WorkItemTracking/Contracts/LinkQueryMode.md). 
+- `filterOptions`: [LinkQueryMode](../../../TFS/WorkItemTracking/Contracts/LinkQueryMode.md).
 
-* `hasChildren`: boolean. 
+- `hasChildren`: boolean.
 
-* `id`: string. 
+- `id`: string.
 
-* `isDeleted`: boolean. 
+- `isDeleted`: boolean.
 
-* `isFolder`: boolean. 
+- `isFolder`: boolean.
 
-* `isInvalidSyntax`: boolean. 
+- `isInvalidSyntax`: boolean.
 
-* `isPublic`: boolean. 
+- `isPublic`: boolean.
 
-* `linkClauses`: [WorkItemQueryClause](../../../TFS/WorkItemTracking/Contracts/WorkItemQueryClause.md). 
+- `linkClauses`: [WorkItemQueryClause](../../../TFS/WorkItemTracking/Contracts/WorkItemQueryClause.md).
 
-* `name`: string. 
+- `name`: string.
 
-* `path`: string. 
+- `path`: string.
 
-* `queryType`: [QueryType](../../../TFS/WorkItemTracking/Contracts/QueryType.md). 
+- `queryType`: [QueryType](../../../TFS/WorkItemTracking/Contracts/QueryType.md).
 
-* `sortColumns`: [WorkItemQuerySortColumn](../../../TFS/WorkItemTracking/Contracts/WorkItemQuerySortColumn.md)[]. 
+- `sortColumns`: [WorkItemQuerySortColumn](../../../TFS/WorkItemTracking/Contracts/WorkItemQuerySortColumn.md)[].
 
-* `sourceClauses`: [WorkItemQueryClause](../../../TFS/WorkItemTracking/Contracts/WorkItemQueryClause.md). 
+- `sourceClauses`: [WorkItemQueryClause](../../../TFS/WorkItemTracking/Contracts/WorkItemQueryClause.md).
 
-* `targetClauses`: [WorkItemQueryClause](../../../TFS/WorkItemTracking/Contracts/WorkItemQueryClause.md). 
+- `targetClauses`: [WorkItemQueryClause](../../../TFS/WorkItemTracking/Contracts/WorkItemQueryClause.md).
 
-* `wiql`: string. 
-
+- `wiql`: string.

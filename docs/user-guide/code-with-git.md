@@ -3,13 +3,13 @@ title: Code with Git - Azure DevOps
 titleSuffix: Azure DevOps
 ms.custom: seodec18
 description: Learn how to share code within a Git repo and new project
-ms.assetid: 
+ms.assetid:
 ms.technology: devops-new-user
 ms.author: chcomley
 author: chcomley
 ms.date: 12/23/2019
 ms.topic: quickstart
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Quickstart: Code with Git
@@ -36,7 +36,7 @@ To work with a Git repo, you clone it to your computer. Cloning a repo creates a
    ![Screenshot of project with Repos highlighted](media/project-select-repos-vert.png)
 
 2. Select **Clone** in the upper-right corner of the Code window, and copy the URL.
-  
+
    ![Screenshot of project with Copy icon highlighted](media/code-with-git-clone-repo.png)
 
 3. Open the Git command window (Git Bash on Git for Windows). Go to the folder where you want the code from the repo stored on your computer, and run `git clone`, followed by the path copied from **Clone URL** in the previous step. See the following example:
@@ -44,7 +44,7 @@ To work with a Git repo, you clone it to your computer. Cloning a repo creates a
    ```
    git clone https://FabrikamFiber01@dev.azure.com/FabrikamFiber01/FabrikamFiber01-01/_git/FabrikamFiber01-01
    ```
-  
+
    A copy of the code is downloaded in Git, including all [commits](../repos/git/commits.md) and [branches](../repos/git/branches.md) from the repo. This copy is put into a new folder for you to work with.
 
    Keep this command window open, as you'll use it in the following steps).
@@ -64,7 +64,7 @@ To work with a Git repo, you clone it to your computer. Cloning a repo creates a
    ```
    git clone https://contoso-ltd.visualstudio.com/MyFirstProject/_git/contoso->demo
    ```
-  
+
    A copy of the code downloads into a new folder in Git. The code includes all of your [commits](../repos/git/commits.md) and [branches](../repos/git/branches.md) from the repo.
 
    Keep the command window open (use it in the following steps).
@@ -120,12 +120,10 @@ In the following steps, we make a change to the files on your computer, commit t
 
 2. Switch to the **Files** tab, and select the README file to view your changes.
 
-   ![View changed file](../repos/git/media/repo-mgmt/readme-changed-file.png)  
+   ![View changed file](../repos/git/media/repo-mgmt/readme-changed-file.png)
 
 ::: moniker-end
 
-## Next steps  
+## Next steps
 
-> [!div class="nextstepaction"]
-> [Set up continuous integration & delivery](../pipelines/get-started-designer.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json)
-
+> [!div class="nextstepaction"][set up continuous integration & delivery](../pipelines/get-started-designer.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json)

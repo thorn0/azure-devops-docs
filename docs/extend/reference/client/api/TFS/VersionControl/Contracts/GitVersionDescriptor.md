@@ -13,12 +13,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `version`: string. Version string identifier (name of tag/branch/index, SHA1 of commit)
+- `version`: string. Version string identifier (name of tag/branch/index, SHA1 of commit)
 
-* `versionOptions`: [GitVersionOptions](../../../TFS/VersionControl/Contracts/GitVersionOptions.md). Version options - Specify additional modifiers to version (e.g Previous)
+- `versionOptions`: [GitVersionOptions](../../../TFS/VersionControl/Contracts/GitVersionOptions.md). Version options - Specify additional modifiers to version (e.g Previous)
 
-* `versionType`: [GitVersionType](../../../TFS/VersionControl/Contracts/GitVersionType.md). Version type (branch, tag, commit, or index). Determines how ID is interpreted
-
+- `versionType`: [GitVersionType](../../../TFS/VersionControl/Contracts/GitVersionType.md). Version type (branch, tag, commit, or index). Determines how ID is interpreted

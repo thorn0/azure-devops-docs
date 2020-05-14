@@ -7,16 +7,15 @@ ms.reviewer: romik
 ms.author: kaelli
 author: KathrynEE
 ms.topic: tutorial
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ms.date: 04/05/2019
 ---
 
-
-# Manage Analytics views 
+# Manage Analytics views
 
 [!INCLUDE [temp](../includes/version-azure-devops.md)]
 
-With Analytics views, you gain a simplified way to specify and share the filter criteria for a Power BI report based on Analytics data. Analytics provides the reporting platform for Azure DevOps. 
+With Analytics views, you gain a simplified way to specify and share the filter criteria for a Power BI report based on Analytics data. Analytics provides the reporting platform for Azure DevOps.
 
 [!INCLUDE [temp](includes/analytics-views-warning.md)]
 
@@ -25,41 +24,41 @@ With Analytics views, you gain a simplified way to specify and share the filter 
 Use this article to learn how to:
 
 > [!div class="checklist"]
-> * Meet prerequisites to access Analytics views
-> * Open **Analytics views**
-> * Edit an existing view
-> * Share a view
-> * Favorite a view
-> * Manage permissions for a shared view
-> * Delete a view
+>
+> - Meet prerequisites to access Analytics views
+> - Open **Analytics views**
+> - Edit an existing view
+> - Share a view
+> - Favorite a view
+> - Manage permissions for a shared view
+> - Delete a view
 
-[!INCLUDE [temp](../includes/analytics-prerequisites.md)] 
+[!INCLUDE [temp](../includes/analytics-prerequisites.md)]
 
-[!INCLUDE [temp](../includes/analytics-open.md)] 
+[!INCLUDE [temp](../includes/analytics-open.md)]
 
 ## Edit an existing view
 
 The creator of a view and all members of the Project Administrators and Project Collection Administrators groups have permissions to edit, manage, and delete views.
 
-1. From either the **Favorites** or **All** page, hover over the view you want to edit, click the ![ ](../media/icons/actions-icon.png) actions icon and choose the **Edit** option. You can also choose **Edit** from the Summary panel. 
+1.  From either the **Favorites** or **All** page, hover over the view you want to edit, click the ![ ](../media/icons/actions-icon.png) actions icon and choose the **Edit** option. You can also choose **Edit** from the Summary panel.
 
-	> [!div class="mx-imgBorder"]
-	> ![Analytics Views, Edit a view](media/editable-views/edit-view.png)
+    > [!div class="mx-imgBorder"] > ![Analytics Views, Edit a view](media/editable-views/edit-view.png)
 
-2. You can edit any part of the view, in the same way you did to define a view. For details, see [Create an Analytics view.](analytics-views-create.md)
+2.  You can edit any part of the view, in the same way you did to define a view. For details, see [Create an Analytics view.](analytics-views-create.md)
 
-3. Save your changes.
+3.  Save your changes.
 
-	Refresh your Power BI report to access the changes you made to the view.
+        	Refresh your Power BI report to access the changes you made to the view.
 
-   > [!TIP]
-   > If you remove fields from a view that are in use in the report, you'll need to update any Power BI report that references the view. 
+    > [!TIP]
+    > If you remove fields from a view that are in use in the report, you'll need to update any Power BI report that references the view.
 
 <a id="share-view" />
 
-## Share a view 
+## Share a view
 
-All contributors to a project can view shared views and create Power BI reports based on them. When you create a view, you can choose to make it private or shared. 
+All contributors to a project can view shared views and create Power BI reports based on them. When you create a view, you can choose to make it private or shared.
 
 To share a private view, simply edit the view and change the sharing option to **Shared**. To unshare a view, switch the sharing option to **Private**.
 
@@ -67,17 +66,15 @@ To share a private view, simply edit the view and change the sharing option to *
 
 > [!IMPORTANT]
 > If you plan to share [Power BI reports or dashboards](/power-bi/service-share-dashboards) based on an Analytics view, make sure the view is **Shared**. Otherwise, you are the only one who can modify the view and manually refresh the data. We recommend sharing views to support shared reports and dashboards.
-> 
-> [!div class="mx-imgBorder"]
-> ![General tab](media/editable-views/general.png)
+>
+> [!div class="mx-imgBorder"] > ![General tab](media/editable-views/general.png)
 
 ## Favorite a view
 
-Favoriting an item provides a quick way to navigate to items you regularly visit. 
+Favoriting an item provides a quick way to navigate to items you regularly visit.
 To favorite a view, hover over the view and choose the ![star icon](../../media/icons/icon-favorite-star.png).
-    
-> [!div class="mx-imgBorder"]
-> ![Favorite a view](media/editable-views/directory-favorite.png)
+
+> [!div class="mx-imgBorder"] > ![Favorite a view](media/editable-views/directory-favorite.png)
 
 <a id="manage-permissions" />
 <!-- BEGIN ERROR INCLUDE: Unable to resolve [!INCLUDE [temp](includes/manage-shared-view-permissions.md)]: Couldn&#39;t find file includes/manage-shared-view-permissions.md. -->
@@ -92,23 +89,20 @@ You can always delete a view you created. Once you delete a view, any Power BI r
 
 To delete a view, click the ![ ](../media/icons/actions-icon.png) actions icon and choose ![ ](../../media/icons/delete-icon.png) **Delete** from the menu.
 
-<a id="q-a">  </a>
+<a id="q-a"> </a>
 
 ## Try this next
 
-> [!div class="nextstepaction"]
-> [Create a Power BI report using an Analytics view](data-connector-connect.md)
-
+> [!div class="nextstepaction"][create a power bi report using an analytics view](data-connector-connect.md)
 
 ## Related articles
-- [Create an Analytics view](analytics-views-create.md) 
+
+- [Create an Analytics view](analytics-views-create.md)
 - [Data available from Analytics](data-available-in-analytics.md)
 - [Grant permissions to access Analytics](./analytics-security.md)
 - [Power BI integration overview](overview.md)
 
-
-
-<!--- 
+<!---
 ## Copy a view
 
 For a quick start, you can copy any view including [default Analytics Views](./analytics-default-views.md) and edit it.

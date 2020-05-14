@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `configuration`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `configuration`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `tester`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
-
+- `tester`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).

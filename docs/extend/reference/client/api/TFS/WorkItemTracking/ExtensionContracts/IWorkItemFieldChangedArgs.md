@@ -18,5 +18,4 @@ Extends: [IWorkItemChangedArgs](../../../TFS/WorkItemTracking/ExtensionContracts
 
 ### Members
 
-* `changedFields`: {[key: string]: any}. Set of fields that have been changed.  &#x27;key&#x27; is the field reference name.
-
+- `changedFields`: {[key: string]: any}. Set of fields that have been changed. &#x27;key&#x27; is the field reference name.

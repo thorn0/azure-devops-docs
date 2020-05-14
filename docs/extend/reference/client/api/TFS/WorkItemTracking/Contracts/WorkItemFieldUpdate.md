@@ -13,10 +13,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/WorkItemTracking/Contracts`
 
-
 ### Members
 
-* `newValue`: any. 
+- `newValue`: any.
 
-* `oldValue`: any. 
-
+- `oldValue`: any.

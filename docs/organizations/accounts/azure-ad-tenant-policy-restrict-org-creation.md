@@ -1,15 +1,15 @@
 ---
 title: Restrict new organization creation, Azure Active Directory tenant policy
 titleSuffix: Azure DevOps Services
-ms.custom: 
+ms.custom:
 description: Learn how Azure DevOps Administrators can prevent users from creating new organizations via the Azure Active Directory tenant policy.
 ms.technology: devops-accounts
-ms.assetid: 
+ms.assetid:
 ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 03/16/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Restrict organization creation via Azure AD tenant policy
@@ -20,7 +20,7 @@ In this article, learn how to turn on the Azure Active Directory (Azure AD) tena
 
 ## Prerequisites
 
-You must be an Azure DevOps Administrator in Azure AD to manage this policy. 
+You must be an Azure DevOps Administrator in Azure AD to manage this policy.
 
 For more information about the new built-in Azure AD roles, see [Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
 
@@ -33,13 +33,14 @@ You can also check your role using the Azure AD PowerShell module.
 
 ## Turn on the policy
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
 2. Select ![gear icon](../../media/icons/gear-icon.png) **Organization settings**.
 
-    ![Open Organization settings](../../media/settings/open-admin-settings-vert.png)
+   ![Open Organization settings](../../media/settings/open-admin-settings-vert.png)
+
 3. Select **Azure Active Directory**, and then switch the toggle to turn on the policy, restricting organization creation.
-   
+
    ![Turn on Azure AD policy](media/azure-ad-tenant-policy/azure-ad-turn-policy-on.png)
 
 ## Optional
@@ -51,11 +52,11 @@ With the policy turned on, all users are restricted from creating new organizati
 1. Select **Add AAD user or group**.
 
 ![Option, Create allow list and add Azure AD users or groups](media/azure-ad-tenant-policy/add-azure-ad-user-group.png)
- 
+
 ### Create error message
 
-When administrators, who aren't on the allow list, try to create an organization they get an error similar to the following example. 
- 
+When administrators, who aren't on the allow list, try to create an organization they get an error similar to the following example.
+
 ![Error message example](media/azure-ad-tenant-policy/error-message.png)
 
 Customize this error message in the policy settings in Azure DevOps.
@@ -63,14 +64,15 @@ Customize this error message in the policy settings in Azure DevOps.
 1. Select **Edit display message**.
 
    ![Select Edit display message to customize](media/azure-ad-tenant-policy/edit-display-message.png)
+
 2. Enter your customized message, and then choose **Save**.
-   
+
    ![Customize error message dialog](media/azure-ad-tenant-policy/display-error-message-dialog.png)
 
 The error message is customized.
 
 ![Customized error message](media/azure-ad-tenant-policy/error-message-example-ui.png)
- 
+
 > [!NOTE]
 > Administrators, who aren't on the allow list, can't connect their organization to the Azure AD tenant where the policy is turned on.
 >
@@ -78,8 +80,7 @@ The error message is customized.
 
 ## Related articles
 
-* [Connect your organization to Azure Active Directory](connect-organization-to-azure-ad.md)
-* [About access with Azure AD](access-with-azure-ad.md)
-* [Get a list of organizations backed by Azure AD](get-list-of-organizations-connected-to-azure-active-directory.md)
-* [Resolve orphaned organization](resolve-orphaned-organization.md)
-
+- [Connect your organization to Azure Active Directory](connect-organization-to-azure-ad.md)
+- [About access with Azure AD](access-with-azure-ad.md)
+- [Get a list of organizations backed by Azure AD](get-list-of-organizations-connected-to-azure-active-directory.md)
+- [Resolve orphaned organization](resolve-orphaned-organization.md)

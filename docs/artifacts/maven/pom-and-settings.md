@@ -7,10 +7,8 @@ ms.manager: jenp
 ms.topic: conceptual
 ms.reviewer: dastahel
 ms.date: 11/14/2019
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
-
- 
 
 # Set up the Maven client in Azure DevOps Services and TFS
 

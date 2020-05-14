@@ -16,7 +16,7 @@ Module path: `TFS/Core/Contracts`
 
 ### Values
 
-* `Custom` Custom or unknown service
-* `AzureSubscription` Azure Subscription
-* `Chef` Chef Connection
-* `Generic` Generic Connection
+- `Custom` Custom or unknown service
+- `AzureSubscription` Azure Subscription
+- `Chef` Chef Connection
+- `Generic` Generic Connection

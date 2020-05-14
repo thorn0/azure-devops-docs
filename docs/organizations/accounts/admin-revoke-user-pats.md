@@ -4,19 +4,19 @@ titleSuffix: Azure DevOps
 ms.custom: seodec18
 description: Administrators can revoke personal access tokens (PATs) for users when they're compromised, protecting the organization.
 ms.technology: devops-accounts
-ms.assetid: 
+ms.assetid:
 ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 03/16/2020
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Revoke personal access tokens for organization users
 
 [!INCLUDE [version-tfs-2017-through-vsts](../../includes/version-tfs-2017-through-vsts.md)]
 
-If your personal access token (PAT) is compromised, take immediate action. In this article, learn how an administrator can revoke a user's PAT, as a precaution to protect your organization. You can also disable a user, which revokes their PAT. There's latency (up to an hour) before the PAT stops working however, once the disable or delete function completes in Azure Active Directory (Azure AD). 
+If your personal access token (PAT) is compromised, take immediate action. In this article, learn how an administrator can revoke a user's PAT, as a precaution to protect your organization. You can also disable a user, which revokes their PAT. There's latency (up to an hour) before the PAT stops working however, once the disable or delete function completes in Azure Active Directory (Azure AD).
 
 ## Prerequisites
 

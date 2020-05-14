@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `displayName`: string. 
+- `displayName`: string.
 
-* `isExpanded`: boolean. 
+- `isExpanded`: boolean.
 
-* `name`: string. 
-
+- `name`: string.

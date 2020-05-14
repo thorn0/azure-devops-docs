@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,18 +15,16 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-A contribution type, given by a json schema 
+A contribution type, given by a json schema
 
 ### Members
 
-* `description`: string. 
+- `description`: string.
 
-* `id`: string. 
+- `id`: string.
 
-* `indexed`: boolean. Controls whether or not contributions of this type have the type indexed for queries. This allows clients to find all extensions that have a contribution of this type.  NOTE: Only TrustedPartners are allowed to specify indexed contribution types.
+- `indexed`: boolean. Controls whether or not contributions of this type have the type indexed for queries. This allows clients to find all extensions that have a contribution of this type. NOTE: Only TrustedPartners are allowed to specify indexed contribution types.
 
-* `name`: string. Friendly name of the contribution/type
+- `name`: string. Friendly name of the contribution/type
 
-* `properties`: {[key: string]: [ContributionPropertyDescription](../../../VSS/References/SDK_Interfaces/ContributionPropertyDescription.md)}. Describes the allowed properties for this contribution type
-
+- `properties`: {[key: string]: [ContributionPropertyDescription](../../../VSS/References/SDK_Interfaces/ContributionPropertyDescription.md)}. Describes the allowed properties for this contribution type

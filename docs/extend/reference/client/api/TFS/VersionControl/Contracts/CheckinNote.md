@@ -13,10 +13,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `name`: string. 
+- `name`: string.
 
-* `value`: string. 
-
+- `value`: string.

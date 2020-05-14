@@ -15,9 +15,9 @@ Module path: `TFS/VersionControl/Contracts`
 
 ### Values
 
-* `NotSet` 
-* `Queued` 
-* `Conflicts` 
-* `Succeeded` 
-* `RejectedByPolicy` 
-* `Failure` 
+- `NotSet`
+- `Queued`
+- `Conflicts`
+- `Succeeded`
+- `RejectedByPolicy`
+- `Failure`

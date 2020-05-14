@@ -1,15 +1,15 @@
 ---
-title:  Rollup on backlogs and Azure App Service deployment improvements - Sprint 157 Update
+title: Rollup on backlogs and Azure App Service deployment improvements - Sprint 157 Update
 author: gloridelmorales
 ms.author: glmorale
 ms.technology: devops-release-notes
 ms.date: 09/06/2019
-description: In the **Sprint 157 Update** of Azure DevOps, we added new service hooks subscriptions for YAML pipelines. 
+description: In the **Sprint 157 Update** of Azure DevOps, we added new service hooks subscriptions for YAML pipelines.
 ---
 
-#  Rollup on backlogs and Azure App Service deployment improvements - Sprint 157 Update
+# Rollup on backlogs and Azure App Service deployment improvements - Sprint 157 Update
 
-In the **Sprint 157 Update** of Azure DevOps, we added rollup columns to backlogs that let you track progress across work item hierarchies (e.g. Epics/Features/User Stories). We also added multiple improvements for deploying Azure App Service apps. 
+In the **Sprint 157 Update** of Azure DevOps, we added rollup columns to backlogs that let you track progress across work item hierarchies (e.g. Epics/Features/User Stories). We also added multiple improvements for deploying Azure App Service apps.
 
 Check out the [Features](#features) list below for more.
 
@@ -74,15 +74,13 @@ Check out the [Features](#features) list below for more.
 
 Head over to Azure DevOps and take a look.
 
-> [!div class="nextstepaction"]
-> [Go to Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
+> [!div class="nextstepaction"][go to azure devops](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
 
 ## Feedback
 
 We would love to hear what you think about these features. Use the feedback menu to report a problem or provide a suggestion.
 
-> [!div class="mx-imgBorder"]
-> ![Make a suggestion](../media/make-a-suggestion.png)
+> [!div class="mx-imgBorder"] > ![Make a suggestion](../media/make-a-suggestion.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-devops).
 

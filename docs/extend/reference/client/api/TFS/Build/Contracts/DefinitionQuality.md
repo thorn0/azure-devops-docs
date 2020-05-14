@@ -16,5 +16,5 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `Definition` 
-* `Draft` 
+- `Definition`
+- `Draft`

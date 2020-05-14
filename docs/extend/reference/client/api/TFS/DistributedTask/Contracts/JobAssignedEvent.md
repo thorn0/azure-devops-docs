@@ -18,5 +18,4 @@ Extends: [JobEvent](../../../TFS/DistributedTask/Contracts/JobEvent.md)
 
 ### Members
 
-* `request`: [TaskAgentJobRequest](../../../TFS/DistributedTask/Contracts/TaskAgentJobRequest.md). 
-
+- `request`: [TaskAgentJobRequest](../../../TFS/DistributedTask/Contracts/TaskAgentJobRequest.md).

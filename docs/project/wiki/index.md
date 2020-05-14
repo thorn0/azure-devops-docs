@@ -1,19 +1,19 @@
 ---
 title: Share information using READMEs or Wikis in Azure DevOps
 titleSuffix: Azure DevOps
-description: Share information using READMEs or Wikis in Azure DevOps  
+description: Share information using READMEs or Wikis in Azure DevOps
 ms.technology: devops-collab
 ms.topic: overview
-ms.assetid:  
+ms.assetid:
 ms.author: chcomley
 author: chcomley
 ms.date: 08/01/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
-# READMEs & Wikis  
+# READMEs & Wikis
 
-[!INCLUDE [temp](../../includes/version-ts-tfs-2015-2016.md)]  
+[!INCLUDE [temp](../../includes/version-ts-tfs-2015-2016.md)]
 
 Wikis and repository README files are great ways to share information with your team and stakeholders.
 
@@ -26,21 +26,20 @@ Wikis and repository README files are great ways to share information with your 
 
 > [!VIDEO https://www.youtube.com/embed/744v1IefE-E?start=0]
 
-## 5-minute quickstarts  
+## 5-minute quickstarts
 
 ::: moniker range=">= azure-devops-2019"
 
-- [Create a wiki for your project](wiki-create-repo.md)  
-- [Add & edit wiki pages](add-edit-wiki.md)  
-- [Publish code to a wiki](publish-repo-to-wiki.md)  
+- [Create a wiki for your project](wiki-create-repo.md)
+- [Add & edit wiki pages](add-edit-wiki.md)
+- [Publish code to a wiki](publish-repo-to-wiki.md)
 
 ::: moniker-end
 
 ::: moniker range="tfs-2018"
 
-- [Create a wiki for your project](wiki-create-repo.md)  
-- [Add & edit wiki pages](add-edit-wiki.md)  
-
+- [Create a wiki for your project](wiki-create-repo.md)
+- [Add & edit wiki pages](add-edit-wiki.md)
 
 ::: moniker-end
 
@@ -48,14 +47,14 @@ Wikis and repository README files are great ways to share information with your 
 
 ::: moniker range=">= tfs-2018"
 
-- [Wiki Git repository files and file structure](wiki-file-structure.md)  
-- [Create a README for your repo](../../repos/git/create-a-readme.md?toc=/azure/devops/project/wiki/toc.json&bc=/azure/devops/project/wiki/breadcrumb/toc.json )
+- [Wiki Git repository files and file structure](wiki-file-structure.md)
+- [Create a README for your repo](../../repos/git/create-a-readme.md?toc=/azure/devops/project/wiki/toc.json&bc=/azure/devops/project/wiki/breadcrumb/toc.json)
 
 ::: moniker-end
 
 ::: moniker range=">= tfs-2015 <= tfs-2017"
 
-- [Create a README for your repo](../../repos/git/create-a-readme.md?toc=/azure/devops/project/wiki/toc.json&bc=/azure/devops/project/wiki/breadcrumb/toc.json )
+- [Create a README for your repo](../../repos/git/create-a-readme.md?toc=/azure/devops/project/wiki/toc.json&bc=/azure/devops/project/wiki/breadcrumb/toc.json)
 
 ::: moniker-end
 
@@ -64,13 +63,13 @@ Wikis and repository README files are great ways to share information with your 
 ::: moniker range=">= azure-devops-2019"
 
 - [View wiki history and revert](wiki-view-history.md)
-- [Filter or print wiki content](filter-print-wiki.md)  
+- [Filter or print wiki content](filter-print-wiki.md)
 - [Search wiki content](search-wiki.md)
 - [Follow wiki pages, get notifications](follow-notifications-wiki-pages.md)
 - [Create and embed a work item from wiki content](create-embed-wit-from-wiki.md)
 - [Version, select, or unpublish a wiki](wiki-select-unpublish-versions.md)
-- [Add comments to wiki](add-comments-wiki.md)  
-- [Update wiki pages offline](wiki-update-offline.md)  
+- [Add comments to wiki](add-comments-wiki.md)
+- [Update wiki pages offline](wiki-update-offline.md)
 - [Manage README & Wiki permissions (security)](manage-readme-wiki-permissions.md)
 - [Markdown guidance](markdown-guidance.md)
 - [Wiki Markdown guidance](wiki-markdown-guidance.md)
@@ -80,9 +79,9 @@ Wikis and repository README files are great ways to share information with your 
 ::: moniker range="tfs-2018"
 
 - [View wiki history and revert](wiki-view-history.md)
-- [Filter or print wiki content](filter-print-wiki.md)  
+- [Filter or print wiki content](filter-print-wiki.md)
 - [Search wiki content](search-wiki.md)
-- [Update wiki pages offline](wiki-update-offline.md)  
+- [Update wiki pages offline](wiki-update-offline.md)
 - [Manage README & Wiki permissions (security)](manage-readme-wiki-permissions.md)
 
 ::: moniker-end

@@ -12,11 +12,11 @@ ms.technology: devops-cicd-tasks
 # Sends a message to Azure Service Bus using a service connection (no agent is required)
 - task: PublishToAzureServiceBus@1
   inputs:
-    azureSubscription: 
+    azureSubscription:
     #messageBody: # Optional
     #sessionId: # Optional
-    #signPayload: false 
+    #signPayload: false
     #certificateString: # Required when signPayload == True
     #signatureKey: 'signature' # Optional
-    #waitForCompletion: false 
+    #waitForCompletion: false
 ```

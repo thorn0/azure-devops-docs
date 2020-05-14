@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Service Endpoint Types | REST API Reference for Team Foundation Server
 description: Get the available service endpoint types
 ms.ContentId: 81A52B66-E3EB-4212-91A0-60B4430B64BC
@@ -9,7 +9,6 @@ ms.ContentId: 81A52B66-E3EB-4212-91A0-60B4430B64BC
 # Service endpoint types
 
 [!INCLUDE [azure-devops](../_data/azure-devops-message.md)]
-
 
 [!INCLUDE [API_version](../_data/version3-preview1.md)]
 
@@ -21,12 +20,14 @@ ms.ContentId: 81A52B66-E3EB-4212-91A0-60B4430B64BC
 GET https://{instance}/defaultcollection/_apis/distributedtask/serviceendpointtypes?[api-version={version}]
 ```
 
-| Parameter     | Type     | Notes
-|:--------------|:---------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string   | TFS server name ({server:port}).
+| instance | string | TFS server name ({server:port}).
 | Query
-| version       | string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 

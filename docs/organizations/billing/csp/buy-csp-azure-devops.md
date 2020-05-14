@@ -8,8 +8,9 @@ ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 05/10/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
+
 # Cloud Solution Providers: Buy Azure DevOps
 
 [!INCLUDE [version-vsts-only](../../../includes/version-vsts-only.md)]
@@ -34,7 +35,7 @@ When your customer gains access to the CSP-based Azure subscription, they can [s
 
 ### Customer steps
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 2. Select ![gear icon](../../../media/icons/gear-icon.png) **Organization settings**.
 
    ![Open Organization settings](../../../media/settings/open-admin-settings-vert.png)
@@ -42,10 +43,9 @@ When your customer gains access to the CSP-based Azure subscription, they can [s
 3. Select **Billing**.
 
    ![Select Billing from Organization settings](../media/shared/select-billing-organization-settings.png)
+
 4. Select **Change billing**.
 
    ![Change billing button](../media/shared/select-change-billing.png)
 
 5. Select your CSP Azure subscription that you want to be billed with, and then select **Save**.
-
-

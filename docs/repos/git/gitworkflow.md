@@ -3,12 +3,12 @@ title: Azure Repos Git tutorial
 titleSuffix: Azure Repos
 description: Learn Git with the Azure DevOps Services/TFS Git tutorial.
 ms.assetid: 0270b0fa-461b-4079-9703-cdcf53bdf39f
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: tutorial
 ms.date: 09/10/2018
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Azure Repos Git tutorial
@@ -26,6 +26,7 @@ Version control has a general workflow that most developers use when writing cod
 These steps are:
 
 ---
+
 1. Get a local copy of code if they don't have one yet.
 2. Make changes to code to fix bugs or add new features.
 3. Once the code is ready, make it available for review by your team.
@@ -35,17 +36,18 @@ These steps are:
 
 ![The Git feature branch workflow](media/gitworkflow.png)
 
-Git has a version of this workflow using terminology and commands unique to Git. Throughout this tutorial you'll learn about repositories, branches, commits, and pull requests. 
+Git has a version of this workflow using terminology and commands unique to Git. Throughout this tutorial you'll learn about repositories, branches, commits, and pull requests.
 These terms might sound familiar if you've used a version control system like Team Foundation Version Control or Subversion, but they behave differently in Git.
- 
-##  Git workflow
+
+## Git workflow
 
 ---
+
 1. [Create a branch](branches.md) for the changes you plan to make and give it a name, such as `users/jamal/fix-bug-3214` or `cool-feature-x`. For more branching guidance, see [Adopt a Git branching strategy](git-branching-guidance.md)
 2. [Commit changes](commits.md) to your branch. People often have multiple commits for a bug fix or feature.
-3. [Push your branch](pushing.md) to the remote repository. 
+3. [Push your branch](pushing.md) to the remote repository.
 4. [Create a pull request](pullrequest.md) so other people can review your changes. To incorporate feedback, you might need to make more commits and push more changes.
-5. [Complete your pull request](pullrequest.md) and resolve any merge conflicts from changes other people made after you created your branch.   
+5. [Complete your pull request](pullrequest.md) and resolve any merge conflicts from changes other people made after you created your branch.
 
 ---
 
@@ -53,8 +55,6 @@ Use this workflow if you're new to Git. As your team gets more experienced and c
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Create a new Git repository](creatingrepo.md)
+> [!div class="nextstepaction"][create a new git repository](creatingrepo.md)
 
-> [!div class="nextstepaction"]
-> [Clone an existing Git repository](clone.md)
+> [!div class="nextstepaction"][clone an existing git repository](clone.md)

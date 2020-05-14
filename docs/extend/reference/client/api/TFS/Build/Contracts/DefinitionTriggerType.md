@@ -16,10 +16,10 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `None` Manual builds only.
-* `ContinuousIntegration` A build should be started for each changeset.
-* `BatchedContinuousIntegration` A build should be started for multiple changesets at a time at a specified interval.
-* `Schedule` A build should be started on a specified schedule whether or not changesets exist.
-* `GatedCheckIn` A validation build should be started for each check-in.
-* `BatchedGatedCheckIn` A validation build should be started for each batch of check-ins.
-* `All` All types.
+- `None` Manual builds only.
+- `ContinuousIntegration` A build should be started for each changeset.
+- `BatchedContinuousIntegration` A build should be started for multiple changesets at a time at a specified interval.
+- `Schedule` A build should be started on a specified schedule whether or not changesets exist.
+- `GatedCheckIn` A validation build should be started for each check-in.
+- `BatchedGatedCheckIn` A validation build should be started for each batch of check-ins.
+- `All` All types.

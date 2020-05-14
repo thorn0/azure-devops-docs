@@ -80,8 +80,7 @@ ms.topic: include
 </tbody>
 </table>
 
-::: moniker-end    
-
+::: moniker-end
 
 ::: moniker range="<= tfs-2018"
 
@@ -161,7 +160,4 @@ ms.topic: include
 </tbody>
 </table>
 
-
-::: moniker-end    
-
-
+::: moniker-end

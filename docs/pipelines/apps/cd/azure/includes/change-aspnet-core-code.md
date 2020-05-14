@@ -23,7 +23,7 @@ Now that you have a completely automated CI/CD pipeline, any changes that you ma
 
    Open your GitHub repository in the browser and edit **Views/Home/Index.cshtml** file.
 
-   ---
+   ***
 
 2. Make a simple change above the slide carousel `div` tag:
 

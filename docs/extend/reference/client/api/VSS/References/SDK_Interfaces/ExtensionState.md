@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,22 +15,20 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-The state of an extension 
+The state of an extension
 
 ### Members
 
-* `extensionId`: string. 
+- `extensionId`: string.
 
-* `extensionName`: string. 
+- `extensionName`: string.
 
-* `flags`: [ExtensionStateFlags](../../../VSS/References/SDK_Interfaces/ExtensionStateFlags.md). 
+- `flags`: [ExtensionStateFlags](../../../VSS/References/SDK_Interfaces/ExtensionStateFlags.md).
 
-* `lastUpdated`: Date. 
+- `lastUpdated`: Date.
 
-* `lastVersionCheck`: Date. The time at which the version was last checked
+- `lastVersionCheck`: Date. The time at which the version was last checked
 
-* `publisherName`: string. 
+- `publisherName`: string.
 
-* `version`: string. Version of this extension
-
+- `version`: string. Version of this extension

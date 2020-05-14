@@ -15,5 +15,5 @@ Module path: `TFS/WorkItemTracking/Contracts`
 
 ### Values
 
-* `Areas` 
-* `Iterations` 
+- `Areas`
+- `Iterations`

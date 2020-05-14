@@ -3,12 +3,12 @@ title: Pull changes to your local Git repo
 titleSuffix: Azure Repos
 description: Using Git Pull, fetch, and merge to get code from others
 ms.assetid: b06b9f18-b76f-418c-93d0-f12d1f48f3c0
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: tutorial
 ms.date: 11/15/2019
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Update code with fetch and pull
@@ -24,10 +24,11 @@ Update the code in your local repo with the changes from other members of your t
 In this tutorial you learn how to:
 
 > [!div class="checklist"]
-> * Download changes with fetch
-> * Update branches with merge
-> * Fetch and merge with pull
-> * Update your local branch with the latest changes from master
+>
+> - Download changes with fetch
+> - Update branches with merge
+> - Fetch and merge with pull
+> - Update your local branch with the latest changes from master
 
 ## Video Overview
 
@@ -41,8 +42,8 @@ You download changes to your local branch from the remote through `fetch`. `Fetc
 
 `Fetch` doesn't merge any changes into your local branches. It only downloads the new commits for your review.
 
->[!TIP]
->To help keep your branches list clean and up to date, configure Git to prune remote branches during fetch. You can configure this setting from the [command line](git-config.md?tabs=command-line#prune-remote-branches-during-fetch) or from within [Visual Studio](git-config.md?tabs=visual-studio#prune-remote-branches-during-fetch).
+> [!TIP]
+> To help keep your branches list clean and up to date, configure Git to prune remote branches during fetch. You can configure this setting from the [command line](git-config.md?tabs=command-line#prune-remote-branches-during-fetch) or from within [Visual Studio](git-config.md?tabs=visual-studio#prune-remote-branches-during-fetch).
 
 #### [Visual Studio](#tab/visual-studio/)
 
@@ -79,7 +80,7 @@ Unpacking objects: 100% (3/3), done.
    e2ccee6..55b26a5  feature1   -> origin/feature1
 ```
 
-* * *
+---
 
 ## Update branches with merge
 
@@ -123,8 +124,9 @@ git merge
 
 Specify the `--no-commit` parameter to merge without committing. The command attempts to merge but not commit the final changes. This parameter gives you a chance to inspect the changed files before finalizing the merge with a commit.
 
-* * *
-<a name="pull"></a>  
+---
+
+<a name="pull"></a>
 
 ## Fetch and merge with pull
 
@@ -171,7 +173,7 @@ git pull origin users/frank/bugfix
 
 A `pull` command is a useful way to directly merge the work from remote branch into your local branch.
 
-* * *
+---
 
 ## Update your branch with the latest changes from master
 
@@ -180,8 +182,8 @@ When working in a branch, you may want to incorporate the latest changes from th
 - **Rebase** takes the changes made in the commits in your current branch and replays them on the history of another branch. Rebasing rewrites the commit history of your current branch. The history starts from the most recent commit in the target branch of the rebase.
 - **Merge** merges the changes from the source branch to the target branch using a merge commit, which becomes part of the commit history.
 
->[!NOTE]
->This article demonstrates the `merge` approach. For more information on `rebase` and guidance on which method is right for your scenario, see [Apply changes with Rebase - When to rebase vs. merge](rebase.md#when-to-rebase-vs-merge) and [Rebase vs merge](https://git-scm.com/book/en/v2/Git-Branching-Rebasing#_rebase_vs_merge) from the Pro Git book.
+> [!NOTE]
+> This article demonstrates the `merge` approach. For more information on `rebase` and guidance on which method is right for your scenario, see [Apply changes with Rebase - When to rebase vs. merge](rebase.md#when-to-rebase-vs-merge) and [Rebase vs merge](https://git-scm.com/book/en/v2/Git-Branching-Rebasing#_rebase_vs_merge) from the Pro Git book.
 
 #### [Visual Studio](#tab/visual-studio/)
 
@@ -219,12 +221,10 @@ git push
 
 `git pull origin master` fetches and merges the contents of the master branch with your branch and creates a merge commit. If there are any merge conflicts, git shows you after the `pull`. [Resolve the merge commits](merging.md?tabs=command-line) before you continue. When you're ready to push your local commits, including your new merge commit, to the remote server, run `git push`.
 
-* * *
+---
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Share code with push](pushing.md)
+> [!div class="nextstepaction"][share code with push](pushing.md)
 
-> [!div class="nextstepaction"]
-> [Resolve merge conflicts](merging.md)
+> [!div class="nextstepaction"][resolve merge conflicts](merging.md)

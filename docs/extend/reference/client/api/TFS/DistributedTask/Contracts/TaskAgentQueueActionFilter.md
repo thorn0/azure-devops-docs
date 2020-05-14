@@ -16,6 +16,6 @@ Module path: `TFS/DistributedTask/Contracts`
 
 ### Values
 
-* `None` 
-* `Manage` 
-* `Use` 
+- `None`
+- `Manage`
+- `Use`

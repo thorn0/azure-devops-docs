@@ -14,50 +14,48 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `area`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `area`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `automatedTestEnvironment`: [TestEnvironment](../../../TFS/TestManagement/Contracts/TestEnvironment.md). 
+- `automatedTestEnvironment`: [TestEnvironment](../../../TFS/TestManagement/Contracts/TestEnvironment.md).
 
-* `automatedTestSettings`: [TestSettings](../../../TFS/TestManagement/Contracts/TestSettings.md). 
+- `automatedTestSettings`: [TestSettings](../../../TFS/TestManagement/Contracts/TestSettings.md).
 
-* `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `clientUrl`: string. 
+- `clientUrl`: string.
 
-* `description`: string. 
+- `description`: string.
 
-* `endDate`: Date. 
+- `endDate`: Date.
 
-* `id`: number. 
+- `id`: number.
 
-* `iteration`: string. 
+- `iteration`: string.
 
-* `manualTestEnvironment`: [TestEnvironment](../../../TFS/TestManagement/Contracts/TestEnvironment.md). 
+- `manualTestEnvironment`: [TestEnvironment](../../../TFS/TestManagement/Contracts/TestEnvironment.md).
 
-* `manualTestSettings`: [TestSettings](../../../TFS/TestManagement/Contracts/TestSettings.md). 
+- `manualTestSettings`: [TestSettings](../../../TFS/TestManagement/Contracts/TestSettings.md).
 
-* `name`: string. 
+- `name`: string.
 
-* `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `previousBuild`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `previousBuild`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `project`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `project`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `revision`: number. 
+- `revision`: number.
 
-* `rootSuite`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `rootSuite`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `startDate`: Date. 
+- `startDate`: Date.
 
-* `state`: string. 
+- `state`: string.
 
-* `updatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `updatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `updatedDate`: Date. 
+- `updatedDate`: Date.
 
-* `url`: string. 
-
+- `url`: string.

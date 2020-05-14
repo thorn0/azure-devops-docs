@@ -6,18 +6,19 @@ ms.technology: devops-ecosystem
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 06/28/2019
 ---
 
 # Combo control
 
-See [Use combo](../../../develop/ui-controls/comboo.md) for basic usage and advanced samples. For more information, see 
+See [Use combo](../../../develop/ui-controls/comboo.md) for basic usage and advanced samples. For more information, see
 
 ## Create a combo
 
 ### TypeScript
-``` javascript
+
+```javascript
   import Controls = require("VSS/Controls");
   import Combos = require("VSS/Controls/Combos");
 
@@ -26,9 +27,10 @@ See [Use combo](../../../develop/ui-controls/comboo.md) for basic usage and adva
 ```
 
 ### JavaScript
-``` javascript
-  require(["VSS/Controls", "VSS/Controls/Combos"], function(Controls, Combos) {
-      // Create the combo in a container element
-      var combo = Controls.create(Combos.Combo, container, options);
-  });
+
+```javascript
+require(["VSS/Controls", "VSS/Controls/Combos"], function (Controls, Combos) {
+  // Create the combo in a container element
+  var combo = Controls.create(Combos.Combo, container, options);
+});
 ```

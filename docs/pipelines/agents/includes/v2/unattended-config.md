@@ -32,29 +32,33 @@ For example, `VSTS_AGENT_INPUT_PASSWORD` instead of specifying `--password`.
   - `--password <password>` - specifies a password
 
 ### Pool and agent names
+
 - `--pool <pool>` - pool name for the agent to join
 - `--agent <agent>` - agent name
 - `--replace` - replace the agent in a pool. If another agent is listening by the same name, it will start failing with a conflict
 
 ### Agent setup
+
 - `--work <workDirectory>` - work directory where job data is stored. Defaults to `_work` under the
-root of the agent directory. The work directory is owned by a given
-agent and should not share between multiple agents.
+  root of the agent directory. The work directory is owned by a given
+  agent and should not share between multiple agents.
 - `--acceptTeeEula` - accept the Team Explorer Everywhere End User License Agreement (macOS and Linux only)
 
 ### Windows-only startup
+
 - `--runAsService` - configure the agent to run as a Windows service (requires administrator permission)
 - `--runAsAutoLogon` - configure auto-logon and run the agent on startup (requires administrator permission)
 - `--windowsLogonAccount <account>` - used with `--runAsService` or `--runAsAutoLogon` to specify the Windows user
-name in the format `domain\userName` or `userName@domain.com`
+  name in the format `domain\userName` or `userName@domain.com`
 - `--windowsLogonPassword <password>` - used with `--runAsService` or `--runAsAutoLogon` to specify Windows logon password
 - `--overwriteAutoLogon` - used with `--runAsAutoLogon` to overwrite the existing auto logon on the machine
 - `--noRestart` - used with `--runAsAutoLogon` to stop the host from restarting after agent configuration completes
 
 ### Deployment group only
+
 - `--deploymentGroup` - configure the agent as a deployment group agent
 - `--deploymentGroupName <name>` - used with `--deploymentGroup` to specify the deployment group for the agent to join
 - `--projectName <name>` - used with `--deploymentGroup` to set the project name
 - `--addDeploymentGroupTags` - used with `--deploymentGroup` to indicate that deployment group tags should be added
 - `--deploymentGroupTags <tags>` - used with `--addDeploymentGroupTags` to specify the comma separated list of tags for
-the deployment group agent - for example "web, db"
+  the deployment group agent - for example "web, db"

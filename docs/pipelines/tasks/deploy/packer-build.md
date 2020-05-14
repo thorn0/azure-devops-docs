@@ -6,7 +6,7 @@ ms.assetid: 845fd4f4-642d-4694-8514-047948a5a556
 ms.author: ronai
 author: RoopeshNair
 ms.date: 12/07/2018
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Build Machine Image task

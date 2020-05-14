@@ -7,9 +7,8 @@ ms.assetid: BD27A4F7-F870-4D90-AD3F-C74E2A94538B
 ms.author: pbora
 author: PBoraMSFT
 ms.date: 04/13/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Index Sources & Publish Symbols task
 
@@ -27,8 +26,8 @@ Symbol servers enables your debugger to automatically retrieve the correct symbo
 
 > [!NOTE]
 > This build task works only:
-> 
-> * For code in Git or TFVC stored in Team Foundation Server (TFS) or Azure Repos. It does not work for any other type of repository.
+>
+> - For code in Git or TFVC stored in Team Foundation Server (TFS) or Azure Repos. It does not work for any other type of repository.
 
 ## Demands
 
@@ -155,13 +154,15 @@ For more information about the different types of tasks and their uses, see [Tas
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 ### How does indexing work?
 
-By choosing to index the sources, an extra section will be injected into the PDB files. PDB files normally contain references to the local source file paths only. For example, ```C:\BuildAgent\_work\1\src\MyApp\Program.cs```. The extra section injected into the PDB file contains mapping instructions for debuggers. The mapping information indicates how to retrieve the server item corresponding to each local path.
+By choosing to index the sources, an extra section will be injected into the PDB files. PDB files normally contain references to the local source file paths only. For example, `C:\BuildAgent\_work\1\src\MyApp\Program.cs`. The extra section injected into the PDB file contains mapping instructions for debuggers. The mapping information indicates how to retrieve the server item corresponding to each local path.
 
- The Visual Studio debugger will use the mapping information to retrieve the source file from the server. An actual command to retrieve the source file is included in the mapping information. You may be prompted by Visual Studio whether to run the command. For example
+The Visual Studio debugger will use the mapping information to retrieve the source file from the server. An actual command to retrieve the source file is included in the mapping information. You may be prompted by Visual Studio whether to run the command. For example
+
 ```
 tf.exe git view /collection:http://SERVER:8080/tfs/DefaultCollection /teamproject:"93fc2e4d-0f0f-4e40-9825-01326191395d" /repository:"647ed0e6-43d2-4e3d-b8bf-2885476e9c44" /commitId:3a9910862e22f442cd56ff280b43dd544d1ee8c9 /path:"/MyApp/Program.cs" /output:"C:\Users\username\AppData\Local\SOURCE~1\TFS_COMMIT\3a991086\MyApp\Program.cs" /applyfilters
 ```

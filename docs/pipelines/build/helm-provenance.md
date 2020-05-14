@@ -7,7 +7,7 @@ ms.assetid: 0B8D8335-A15A-4F8E-A731-767BC6C6A4B3
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 4/29/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Package and sign Helm charts
@@ -25,7 +25,7 @@ In this step-by-step guide you'll learn how to package and sign Helm charts in a
    ```cmd
    gpg --full-generate-key
    ```
-   
+
    ![Generate Key](media/helm-provenance/generate-key.png)
 
 3. You'll be prompted for the passphrase. Give the value and click ok.
@@ -52,7 +52,7 @@ In this step-by-step guide you'll learn how to package and sign Helm charts in a
 
 5. Store the private and public keys in 2 different files with the extension **gpg** as shown below.
 
-   * For a private key
+   - For a private key
 
    ```cmd
    gpg --export-secret-key 94325E18E53EDD99DD8339C3CFD9DAF0707CB788 contoso@microsoft.com > C:/somepath/privatekeys.gpg
@@ -60,7 +60,7 @@ In this step-by-step guide you'll learn how to package and sign Helm charts in a
 
    You'll see the **privatekeys.gpg** file exported to the path which was mentioned above.
 
-   * For a public key
+   - For a public key
 
    ```cmd
    gpg --export-key 94325E18E53EDD99DD8339C3CFD9DAF0707CB788 contoso@microsoft.com > C:/somepath/publickey.gpg

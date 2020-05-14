@@ -6,7 +6,7 @@ ms.assetid: 57D04B69-1068-4A06-80B8-4C0FE7BEEC55
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 02/24/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Azure Web App task
@@ -56,28 +56,29 @@ steps:
 
 To deploy Web App for linux, set the appType parameter to <code>appType: webAppLinux</code>.
 
-To specify the deployment method as Zip Deploy, add the parameter <code>deploymentMethod: zipDeploy</code>. Other supported value for this parameter is <code>runFromPackage</code>. 
+To specify the deployment method as Zip Deploy, add the parameter <code>deploymentMethod: zipDeploy</code>. Other supported value for this parameter is <code>runFromPackage</code>.
 If not mentioned, <code>auto</code> is taken as the default value.
 
 <a name="deployment-methods"></a>
+
 ## Deployment methods
 
-Several deployment methods are available in this task. <code>Auto</code> is the default option. 
+Several deployment methods are available in this task. <code>Auto</code> is the default option.
 
 To change the deployment option in designer task, expand Additional Deployment Options and enable **Select deployment method** to choose from additional package-based deployment options.
 
 Based on the type of Azure App Service and Azure Pipelines agent, the task chooses a suitable deployment technology. The different deployment technologies used by the task are:
 
-* Kudu REST APIs
-* Zip Deploy
-* RunFromPackage
+- Kudu REST APIs
+- Zip Deploy
+- RunFromPackage
 
 By default the task tries to select the appropriate deployment technology given the input package, app service type and agent OS.
 
-* When the App Service type is Web App on Linux App, use Zip Deploy 
-* If War file is provided, use War Deploy 
-* If Jar file is provided, use Run From package 
-* For all others, use Run From Zip (via Zip Deploy) 
+- When the App Service type is Web App on Linux App, use Zip Deploy
+- If War file is provided, use War Deploy
+- If Jar file is provided, use Run From package
+- For all others, use Run From Zip (via Zip Deploy)
 
 On non-Windows agent (for any App service type), the task relies on [Kudu REST APIs](https://github.com/projectkudu/kudu/wiki/REST-API) to deploy the Web App.
 
@@ -103,23 +104,24 @@ Creates the same deployment package as Zip Deploy. However, instead of deploying
 
 This may be because web.config is not present in your app. You can either add a web.config file to your source or auto-generate one using the Application and Configuration Settings of the task.
 
-* Click on the task and go to Generate web.config parameters for Python, Node.js, Go and Java apps.
+- Click on the task and go to Generate web.config parameters for Python, Node.js, Go and Java apps.
 
 ![Generate web.config parameters Dialog](media/azure-rm-web-app-01.png)
 
-* Click on the more button Generate web.config parameters for Python, Node.js, Go and Java apps to edit the parameters.
+- Click on the more button Generate web.config parameters for Python, Node.js, Go and Java apps to edit the parameters.
 
 ![Drop Down Dialog](media/azure-rm-web-app-deployment-02.png)
 
-* Select your application type from the drop down.
-* Click on OK. This will populate web.config parameters required to generate web.config.
+- Select your application type from the drop down.
+- Click on OK. This will populate web.config parameters required to generate web.config.
 
 ### Web app deployment on App Service Environment (ASE) is not working
-* Ensure that the Azure DevOps build agent is on the same VNET (subnet can be different) as the Internal Load Balancer (ILB) of  ASE. This will enable the agent to pull code from Azure DevOps and deploy to ASE. 
-* If you are using Azure DevOps, the agent neednt be accessible from internet but needs only outbound access to connect to Azure DevOps Service. 
-* If you are using TFS/Azure DevOps server deployed in a Virtual Network, the agent can be completely isolated.
-* Build agent must be configured with the DNS configuration of the Web App it needs to deploy to. Since the private resources in the Virtual Network don't have entries in Azure DNS, this needs to be added to the hosts file on the agent machine.
-* If a self-signed certificate is used for the ASE configuration, "-allowUntrusted" option needs to be set in the deploy task for MSDeploy.It is also recommended to set the variable VSTS_ARM_REST_IGNORE_SSL_ERRORS to true. If a certificate from a certificate authority is used for ASE configuration, this should not be necessary.
+
+- Ensure that the Azure DevOps build agent is on the same VNET (subnet can be different) as the Internal Load Balancer (ILB) of ASE. This will enable the agent to pull code from Azure DevOps and deploy to ASE.
+- If you are using Azure DevOps, the agent neednt be accessible from internet but needs only outbound access to connect to Azure DevOps Service.
+- If you are using TFS/Azure DevOps server deployed in a Virtual Network, the agent can be completely isolated.
+- Build agent must be configured with the DNS configuration of the Web App it needs to deploy to. Since the private resources in the Virtual Network don't have entries in Azure DNS, this needs to be added to the hosts file on the agent machine.
+- If a self-signed certificate is used for the ASE configuration, "-allowUntrusted" option needs to be set in the deploy task for MSDeploy.It is also recommended to set the variable VSTS_ARM_REST_IGNORE_SSL_ERRORS to true. If a certificate from a certificate authority is used for ASE configuration, this should not be necessary.
 
 ## FAQs
 

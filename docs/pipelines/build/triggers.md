@@ -6,7 +6,7 @@ ms.custom: seodec18
 ms.author: vijayma
 author: vijayma
 ms.date: 04/03/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Specify events that trigger pipelines
@@ -18,6 +18,7 @@ monikerRange: '>= tfs-2015'
 Use triggers to run a pipeline automatically. Azure Pipelines supports many types of triggers. Based on your pipeline's type, select the appropriate trigger from the list below:
 
 <a name="ci"></a>
+
 ## Classic build pipelines and YAML pipelines
 
 <a name="ci-triggers"></a>

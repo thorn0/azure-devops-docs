@@ -17,4 +17,3 @@ Module path: `TFS/Build/Contracts`
 Extends: [BuildUpdatedEvent](./BuildUpdatedEvent.md)
 
 ### Members
-

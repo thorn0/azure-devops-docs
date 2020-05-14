@@ -71,8 +71,7 @@ See the [Navigation Update](https://aka.ms/vstsnewnav) blog post for more inform
 
 One of our long-standing feature requests has been to offer a dark theme. We're happy to let you know that this is now available as part of the new navigation. You can turn on dark theme by selecting **Theme** from the menu underneath your avatar in the top right of every page.
 
-> [!div class="mx-imgBorder"]
-> ![Dark theme](media/142_08.png)
+> [!div class="mx-imgBorder"] > ![Dark theme](media/142_08.png)
 
 ## Azure Boards
 
@@ -80,8 +79,7 @@ One of our long-standing feature requests has been to offer a dark theme. We're 
 
 Attaching files to work items allows you and your team to centralize reference materials so they are always close by when you need them. It's now easier to add a new attachment by simply dragging and dropping the file anywhere on the work item form. You can continue viewing the attachments as a list or switch to a grid view to show a thumbnail preview. Double-click on the file to open a preview and cycle through them to quickly find the information you need.
 
-> [!div class="mx-imgBorder"]
-> ![Work item attachments](media/142_01.gif)
+> [!div class="mx-imgBorder"] > ![Work item attachments](media/142_01.gif)
 
 ### Manage dependencies by linking work items across your organizations
 
@@ -89,12 +87,11 @@ Linking related or dependent work gives you broader context into the work you're
 
 > [!NOTE]
 > Permissions are respected across both Azure DevOps organizations, which must both be backed by the same Azure AD tenant.
-> 
-> [!div class="mx-imgBorder"]
-> ![Remote link](media/142_05.png)
+>
+> [!div class="mx-imgBorder"] > ![Remote link](media/142_05.png)
 
 As you begin to manage several dependencies, use the new **Remote Link Count** field in **Queries** to list the work items that have remote dependencies in your project, or consider installing the [Dependency Tracker](https://marketplace.visualstudio.com/items?itemName=ms-eswm.dependencytracker) extension. This extension, which was created by the Windows group at Microsoft to meet their scale needs, builds upon remote links to display a rich hierarchy and graphical representation of your dependencies.
- 
+
 ### Open work items from search
 
 Previously, a work item couldn't be opened from the search results page if the work item preview pane was turned off. This would make it difficult to dig into your search results. Now you can click on the work item title to open the work items in a modal window. This feature was prioritized from UserVoice.
@@ -104,8 +101,9 @@ Previously, a work item couldn't be opened from the search results page if the w
 ### Extension authors can query context about the current repo
 
 One of the challenges for an author of a version control extension is to get the context of the repository being displayed to the user, such as the name, ID and URL. To help with this, we added the VersionControlRepositoryService as an extension-accessible service. Using this, an extension author can query for information about the current Git repository context within the Web UI. It currently has one method, getCurrentGitRepository().
-* If a Git repository is selected, a GitRepository object is returned with basic data about the repository (name, ID, and URL)
-* If a TFVC repository is selected or the service is accessed outside the Azure Repos pages, null will be returned.
+
+- If a Git repository is selected, a GitRepository object is returned with basic data about the repository (name, ID, and URL)
+- If a TFVC repository is selected or the service is accessed outside the Azure Repos pages, null will be returned.
 
 Here is a [sample extension](https://github.com/eldarerathis/vsts-extension-samples/commit/e9935324046846c23973fca284661d2b767985a3) that uses this service.
 
@@ -113,12 +111,12 @@ Here is a [sample extension](https://github.com/eldarerathis/vsts-extension-samp
 
 ### Add custom build counters to your builds
 
-Build counters provide a way to uniquely number and label builds. Previously, you could use the $(rev:r) special variable to accomplish this. Now you can define your own counter variables in your build definition that are auto-incremented every time you run a build. You do this on the variables tab of a definition. This new feature gives you more power in the following ways:
+Build counters provide a way to uniquely number and label builds. Previously, you could use the \$(rev:r) special variable to accomplish this. Now you can define your own counter variables in your build definition that are auto-incremented every time you run a build. You do this on the variables tab of a definition. This new feature gives you more power in the following ways:
 
-* You can define a custom counter and set its seed value. For instance you can start your counter at 100. $(rev:r) always starts at 0.
-* You can use your own custom logic to reset a counter. $(rev:r) is tied to build number generation, and it is auto-reset whenever there is a new prefix in the build number.
-* You can define multiple counters per definition.
-* You can query for the value of a counter outside of a build. For instance, you can count the number of builds that have run since last reset using a counter.
+- You can define a custom counter and set its seed value. For instance you can start your counter at 100. \$(rev:r) always starts at 0.
+- You can use your own custom logic to reset a counter. \$(rev:r) is tied to build number generation, and it is auto-reset whenever there is a new prefix in the build number.
+- You can define multiple counters per definition.
+- You can query for the value of a counter outside of a build. For instance, you can count the number of builds that have run since last reset using a counter.
 
 See the documentation on [User-defined variables](https://docs.microsoft.com/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) for more information about build counters.
 
@@ -173,11 +171,10 @@ The Azure Pipelines [open source, cross-platform agent](https://github.com/Micro
 
 ### Clone variable groups
 
-We have added support for cloning variable groups. Whenever you want to replicate a variable group and just update few of the variables, you don't need to go through the tedious process of adding variables one by one. You can now quickly make a copy of your variable group, update the values appropriately, and save it as a new variable group. 
+We have added support for cloning variable groups. Whenever you want to replicate a variable group and just update few of the variables, you don't need to go through the tedious process of adding variables one by one. You can now quickly make a copy of your variable group, update the values appropriately, and save it as a new variable group.
 
-> [!div class="mx-imgBorder"]
-> ![Clone variable group](media/142_13.png)
-> 
+> [!div class="mx-imgBorder"] > ![Clone variable group](media/142_13.png)
+>
 > [!NOTE]
 > The secret variable values are not copied over when you clone a variable group. You need to update the encrypted variables and then save the cloned variable group.
 
@@ -185,25 +182,25 @@ We have added support for cloning variable groups. Whenever you want to replicat
 
 Continuing our commitment towards improved traceability, we are happy to announce that customers can now see the commit and work items details for all the artifacts linked to the pipeline. By default, the commit and work item is compared with the last deployment to the same stage. However, you can compare with any other previous deployment if needed.
 
-> [!div class="mx-imgBorder"]
-> ![Linked sources](media/142_15.png)
+> [!div class="mx-imgBorder"] > ![Linked sources](media/142_15.png)
 
 ### Run from Package supported in Azure App Service deployments
 
-The Azure App Service Deploy task (4.*) version now supports [RunFromPackage](https://docs.microsoft.com/azure/azure-functions/run-functions-from-deployment-package) (previously called [RunFromZip](https://github.com/Azure/app-service-announcements/issues/110).
+The Azure App Service Deploy task (4.\*) version now supports [RunFromPackage](https://docs.microsoft.com/azure/azure-functions/run-functions-from-deployment-package) (previously called [RunFromZip](https://github.com/Azure/app-service-announcements/issues/110).
 
-App Service supports a number of different techniques to deploy your files such as msdeploy (aka WebDeploy), git, ARM and more. But all these techniques have a limitation. Your files are deployed under your wwwroot folder (specifically d:\home\site\wwwroot) and the runtime then runs the files from there. 
+App Service supports a number of different techniques to deploy your files such as msdeploy (aka WebDeploy), git, ARM and more. But all these techniques have a limitation. Your files are deployed under your wwwroot folder (specifically d:\home\site\wwwroot) and the runtime then runs the files from there.
 
 With Run From Package, there is no longer a deployment step which copies the individual files to wwwroot. Instead, you just point it to a zip file, and the zip gets mounted on wwwroot as a read-only file system. This has several benefits:
-* Reduces the risk of file copy locking issues.
-* Can be deployed to a production app (with restart).
-* You can be certain of the files that are running in your app.
-* Improves the performance of Azure App Service deployments.
-* May reduce cold-start times, particularly for JavaScript functions with large npm package trees.
+
+- Reduces the risk of file copy locking issues.
+- Can be deployed to a production app (with restart).
+- You can be certain of the files that are running in your app.
+- Improves the performance of Azure App Service deployments.
+- May reduce cold-start times, particularly for JavaScript functions with large npm package trees.
 
 ### Deploy Linux containers with the App Server Deploy task
 
-The 4.* version of the Azure App Service Deploy task now supports deploying your own custom container to [Azure Functions on Linux](https://blogs.msdn.microsoft.com/appserviceteam/2017/11/15/functions-on-linux-preview/). 
+The 4.\* version of the Azure App Service Deploy task now supports deploying your own custom container to [Azure Functions on Linux](https://blogs.msdn.microsoft.com/appserviceteam/2017/11/15/functions-on-linux-preview/).
 
 The Linux hosting model for Azure Functions is based on Docker containers which bring greater flexibility in terms of packaging and leveraging app specific dependencies. Functions on Linux can be hosted in 2 different modes:
 
@@ -214,15 +211,13 @@ The Linux hosting model for Azure Functions is based on Docker containers which 
 
 ### Azure Test Runner client to run manual tests for desktop applications
 
-You can now use the Azure Test Runner (ATR) client to run manual tests for desktop applications. This will help you move from Microsoft Test Manager to Azure Test Plans. Please refer to our guidance [here](/azure/devops/test/mtm/guidance-mtm-usage?view=azure-devops). Using the ATR client, you can run your manual tests and record the test results for each test step. You also have data collection capabilities such as screenshot, image action log, and audio video recording. If you find an issue when testing, use Test Runner to create a bug with test steps, screenshots, and comments automatically included in the bug.  
+You can now use the Azure Test Runner (ATR) client to run manual tests for desktop applications. This will help you move from Microsoft Test Manager to Azure Test Plans. Please refer to our guidance [here](/azure/devops/test/mtm/guidance-mtm-usage?view=azure-devops). Using the ATR client, you can run your manual tests and record the test results for each test step. You also have data collection capabilities such as screenshot, image action log, and audio video recording. If you find an issue when testing, use Test Runner to create a bug with test steps, screenshots, and comments automatically included in the bug.
 
-ATR requires a one-time download and install of the runner. Select **Run for desktop application** as shown below. 
+ATR requires a one-time download and install of the runner. Select **Run for desktop application** as shown below.
 
-> [!div class="mx-imgBorder"]
-> ![Azure Test Runner](media/142_01.png)
-> 
-> [!div class="mx-imgBorder"]
-> ![Azure Test Runner install](media/142_02.png)
+> [!div class="mx-imgBorder"] > ![Azure Test Runner](media/142_01.png)
+>
+> [!div class="mx-imgBorder"] > ![Azure Test Runner install](media/142_02.png)
 
 ## Azure Artifacts
 
@@ -249,15 +244,13 @@ In February 2017, we announced [support for Azure Active Directory Conditional A
 
 Read about the new features below and head over to Azure DevOps to try them for yourself.
 
-> [!div class="nextstepaction"]
-> [Go to Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
+> [!div class="nextstepaction"][go to azure devops](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
 
 ## Feedback
 
 We would love to hear what you think about these features. Use the feedback menu to report a problem or provide a suggestion.
 
-> [!div class="mx-imgBorder"]
-> ![Make a suggestion](../media/help-make-a-suggestion.png)
+> [!div class="mx-imgBorder"] > ![Make a suggestion](../media/help-make-a-suggestion.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/vsts).
 

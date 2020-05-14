@@ -14,18 +14,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Core/Contracts`
 
-
 ### Members
 
-* `description`: string. This is a description string
+- `description`: string. This is a description string
 
-* `friendlyName`: string. The friendly name of the server
+- `friendlyName`: string. The friendly name of the server
 
-* `globalDefault`: boolean. 
+- `globalDefault`: boolean.
 
-* `site`: string. This is a string representation of the site that the proxy server is located in (e.g. &quot;NA-WA-RED&quot;)
+- `site`: string. This is a string representation of the site that the proxy server is located in (e.g. &quot;NA-WA-RED&quot;)
 
-* `siteDefault`: boolean. 
+- `siteDefault`: boolean.
 
-* `url`: string. The URL of the proxy server
-
+- `url`: string. The URL of the proxy server

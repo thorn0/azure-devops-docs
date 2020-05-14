@@ -13,20 +13,18 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `contentType`: string. 
+- `contentType`: string.
 
-* `encoding`: number. 
+- `encoding`: number.
 
-* `extension`: string. 
+- `extension`: string.
 
-* `fileName`: string. 
+- `fileName`: string.
 
-* `isBinary`: boolean. 
+- `isBinary`: boolean.
 
-* `isImage`: boolean. 
+- `isImage`: boolean.
 
-* `vsLink`: string. 
-
+- `vsLink`: string.

@@ -18,11 +18,10 @@ Extends: [DefinitionReference](./DefinitionReference.md)
 
 ### Members
 
-* `authoredBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). The author of the definition.
+- `authoredBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). The author of the definition.
 
-* `draftOf`: [DefinitionReference](./DefinitionReference.md). If this is a draft definition, it might have a parent
+- `draftOf`: [DefinitionReference](./DefinitionReference.md). If this is a draft definition, it might have a parent
 
-* `quality`: [DefinitionQuality](./DefinitionQuality.md). The quality of the definition document (draft, etc.)
+- `quality`: [DefinitionQuality](./DefinitionQuality.md). The quality of the definition document (draft, etc.)
 
-* `queue`: [AgentPoolQueue](./AgentPoolQueue.md). The default queue which should be used for requests.
-
+- `queue`: [AgentPoolQueue](./AgentPoolQueue.md). The default queue which should be used for requests.

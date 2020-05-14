@@ -7,26 +7,25 @@ ms.technology: devops-migrate
 ms.date: 04/26/2018
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Learn how to add continuous security validation to your CI/CD pipeline
 
 [!INCLUDE [version-azure-devops](../includes/version-ts-tfs-2015-2016.md)]
 
-
 Are you planning Azure DevOps continuous integration and deployment pipelines? You probably have a few questions, such as:
-* How do you ensure your application is safe?
-* How do you add continuous security validation to your CI/CD pipeline?
 
-DevOps practices are allowing businesses to stay ahead of the competition by delivering new features faster than ever before. As the frequency of production deployments increases, this business agility cannot come at the expense of security. With continuous delivery, how do you ensure your applications are secure and stay secure? How can you find and fix security issues early in the process? This begins with practices commonly referred to as DevSecOps.  DevSecOps incorporates the security team and their capabilities into your DevOps practices making security a responsibility of everyone on the team.  This article will walk you through how to help ensure your application is secure by adding continuous security validation to your CI/CD pipeline.
+- How do you ensure your application is safe?
+- How do you add continuous security validation to your CI/CD pipeline?
+
+DevOps practices are allowing businesses to stay ahead of the competition by delivering new features faster than ever before. As the frequency of production deployments increases, this business agility cannot come at the expense of security. With continuous delivery, how do you ensure your applications are secure and stay secure? How can you find and fix security issues early in the process? This begins with practices commonly referred to as DevSecOps. DevSecOps incorporates the security team and their capabilities into your DevOps practices making security a responsibility of everyone on the team. This article will walk you through how to help ensure your application is secure by adding continuous security validation to your CI/CD pipeline.
 
 Security needs to shift from an afterthought to being evaluated at every step of the process. Securing applications is a continuous process that encompasses secure infrastructure, designing an architecture with layered security, continuous security validation, and monitoring for attacks.
 
 ![Security](media/security-validation-cicd-pipeline/security.png)
 
-Continuous security validation should be added at each step from development through production to help ensure the application is always secure. The goal of this approach is to switch the conversation with the security team from approving each release to approving the CI/CD process and having the ability to monitor and audit the process at any time. When building greenfield applications, the diagram below highlights the key validation points in the CI/CD pipeline. Depending on your platform and where your application is at in its lifecycle, you may need to consider implementing the tools gradually. Especially if your product is mature and you haven't previously run any security validation against your site or application.  
+Continuous security validation should be added at each step from development through production to help ensure the application is always secure. The goal of this approach is to switch the conversation with the security team from approving each release to approving the CI/CD process and having the ability to monitor and audit the process at any time. When building greenfield applications, the diagram below highlights the key validation points in the CI/CD pipeline. Depending on your platform and where your application is at in its lifecycle, you may need to consider implementing the tools gradually. Especially if your product is mature and you haven't previously run any security validation against your site or application.
 
 ![Feedback](media/security-validation-cicd-pipeline/feedback.png)
 
@@ -38,13 +37,13 @@ Validation in the CI/CD begins before the developer commits his or her code. Sta
 
 The CI build should be executed as part of the pull request (PR-CI) process discussed above and once the merge is complete. Typically, the primary difference between the two runs is that the PR-CI process doesn't need to do any of the packaging/staging that is done in the CI build. These CI builds should run static code analysis tests to ensure that the code is following all rules for both maintenance and security. Several tools can be used for this.
 
-* [Visual Studio Code Analysis and the Roslyn Security Analyzers](https://blogs.msdn.microsoft.com/secdevblog/2016/03/30/roslyn-diagnostics-security-analyzers-overview/)
+- [Visual Studio Code Analysis and the Roslyn Security Analyzers](https://blogs.msdn.microsoft.com/secdevblog/2016/03/30/roslyn-diagnostics-security-analyzers-overview/)
 
-* [Checkmarx](https://www.checkmarx.com/) - A Static Application Security Testing (SAST) tool
+- [Checkmarx](https://www.checkmarx.com/) - A Static Application Security Testing (SAST) tool
 
-* [BinSkim](https://github.com/Microsoft/binskim) - A binary static analysis tool that provides security and correctness results for Windows portable executables
+- [BinSkim](https://github.com/Microsoft/binskim) - A binary static analysis tool that provides security and correctness results for Windows portable executables
 
-* [Other 3rd party tools](https://blogs.msdn.microsoft.com/devops/2016/10/11/team-services-october-extensions-roundup-rugged-devops/)
+- [Other 3rd party tools](https://blogs.msdn.microsoft.com/devops/2016/10/11/team-services-october-extensions-roundup-rugged-devops/)
 
 Many of the tools seamlessly integrate into the Azure Pipelines build process. Visit the VSTS Marketplace for more information on the integration capabilities of these tools.
 
@@ -72,20 +71,20 @@ The benefit of using this is that the vulnerabilities are created as bugs that p
 
 Even with continuous security validation running against every change to help ensure new vulnerabilities are not introduced, hackers are continuously changing their approaches, and new vulnerabilities are being discovered. Good monitoring tools allow you to help detect, prevent, and remediate issues discovered while your application is running in production. Azure provides a number of tools that provide detection, prevention, and alerting using rules such as OWASP Top 10 / modSecurity and now even using machine learning to detect anomalies and unusual behavior to help identify attackers.
 
-Minimize security vulnerabilities by taking a holistic and layered approach to security including secure infrastructure, application architecture, continuous validation, and monitoring. DevSecOps practices enable your entire team to incorporate these security capabilities throughout the entire lifecycle of your application.  Establishing continuous security validation into your CI/CD pipeline can allow your application to stay secure while you are improving the deployment frequency to meet needs of your business to stay ahead of the competition.
+Minimize security vulnerabilities by taking a holistic and layered approach to security including secure infrastructure, application architecture, continuous validation, and monitoring. DevSecOps practices enable your entire team to incorporate these security capabilities throughout the entire lifecycle of your application. Establishing continuous security validation into your CI/CD pipeline can allow your application to stay secure while you are improving the deployment frequency to meet needs of your business to stay ahead of the competition.
 
 ## Reference information
 
-* [BinSkim](https://github.com/Microsoft/binskim) - A binary static analysis tool that provides security and correctness results for Windows portable executables
-* [Checkmarx](https://www.checkmarx.com/) - A Static Application Security Testing (SAST) tool
-* [Manage your open source usage and security as reported by your CI/CD pipeline](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/06/08/manage-your-open-source-usage-and-security-as-reported-by-your-cicd-pipeline/)
-* [OWASP](https://www.owasp.org)
-* [OWASP ZAP VSTS extension](https://github.com/deliveron/owasp-zap-vsts-extension)
-* [WhiteSource Software](https://www.whitesourcesoftware.com/)
-* [Visual Studio Code Analysis and the Roslyn Security Analyzers](https://blogs.msdn.microsoft.com/secdevblog/2016/03/30/roslyn-diagnostics-security-analyzers-overview/)
+- [BinSkim](https://github.com/Microsoft/binskim) - A binary static analysis tool that provides security and correctness results for Windows portable executables
+- [Checkmarx](https://www.checkmarx.com/) - A Static Application Security Testing (SAST) tool
+- [Manage your open source usage and security as reported by your CI/CD pipeline](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/06/08/manage-your-open-source-usage-and-security-as-reported-by-your-cicd-pipeline/)
+- [OWASP](https://www.owasp.org)
+- [OWASP ZAP VSTS extension](https://github.com/deliveron/owasp-zap-vsts-extension)
+- [WhiteSource Software](https://www.whitesourcesoftware.com/)
+- [Visual Studio Code Analysis and the Roslyn Security Analyzers](https://blogs.msdn.microsoft.com/secdevblog/2016/03/30/roslyn-diagnostics-security-analyzers-overview/)
 
 > Authors: Mike Douglas | Find the origin of this article and connect with the ALM | DevOps Rangers [here](https://github.com/ALM-Rangers/Guidance/blob/master/README.md)
- 
-*(c) 2017 Microsoft Corporation. All rights reserved. This document is provided "as-is." Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it.*
 
-*This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.*
+_(c) 2017 Microsoft Corporation. All rights reserved. This document is provided "as-is." Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it._
+
+_This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes._

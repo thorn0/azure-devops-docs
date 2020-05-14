@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Git Diffs | REST API Reference for Team Foundation Server
 description: Work with Git differences programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 920FAC3A-471D-412C-BC6B-CA767CFC3645
@@ -27,20 +27,22 @@ If either the target or base version isn't specified, the default branch is used
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/diffs/commits?api-version={version}
 ```
 
-| Parameter         | Type                         | Default | Notes
-|:------------------|:-----------------------------|:--------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance          | string                       |         | TFS server name ({server:port}).
-| project           | string                       |         | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository        | string                       |         | ID of the [repository](./repositories.md).
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | | ID of the [repository](./repositories.md).
 | Query
-| api-version       | string                       |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| baseVersionType   | enum { Branch, Tag, Commit } | Branch  | [Item versions](./items.md#getaspecificversion).
-| baseVersion       | string                       | master  | [Item versions](./items.md#getaspecificversion).
-| targetVersionType | enum { Branch, Tag, Commit } | Branch  | [Item versions](./items.md#getaspecificversion).
-| targetVersion     | string                       | master  | [Item versions](./items.md#getaspecificversion).
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| baseVersionType | enum { Branch, Tag, Commit } | Branch | [Item versions](./items.md#getaspecificversion).
+| baseVersion | string | master | [Item versions](./items.md#getaspecificversion).
+| targetVersionType | enum { Branch, Tag, Commit } | Branch | [Item versions](./items.md#getaspecificversion).
+| targetVersion | string | master | [Item versions](./items.md#getaspecificversion).
 | $skip             | integer                      | 0       | Number of commits to skip.
-| $top              | integer                      | 100     | Number of commits to return.
+| $top | integer | 100 | Number of commits to return.
 
 [!INCLUDE [ID_vs_Name](_data/id_or_name.md)]
 
@@ -350,7 +352,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ### A page at a time
 
 #### Sample request
@@ -393,7 +394,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
   "behindCount": 1
 }
 ```
-
 
 ### Between commit IDs
 

@@ -15,6 +15,6 @@ Module path: `TFS/VersionControl/Contracts`
 
 ### Values
 
-* `None` 
-* `Previous` 
-* `UseRename` 
+- `None`
+- `Previous`
+- `UseRename`

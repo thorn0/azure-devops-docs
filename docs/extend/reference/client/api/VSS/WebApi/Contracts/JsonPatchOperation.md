@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `VSS/WebApi/Contracts`
 
-
 ### Members
 
-* `from`: string. The path to copy from for the Move/Copy operation.
+- `from`: string. The path to copy from for the Move/Copy operation.
 
-* `op`: [Operation](../../../VSS/WebApi/Contracts/Operation.md). The patch operation
+- `op`: [Operation](../../../VSS/WebApi/Contracts/Operation.md). The patch operation
 
-* `path`: string. The path for the operation
+- `path`: string. The path for the operation
 
-* `value`: any. The value for the operation. This is either a primitive or a JToken.
-
+- `value`: any. The value for the operation. This is either a primitive or a JToken.

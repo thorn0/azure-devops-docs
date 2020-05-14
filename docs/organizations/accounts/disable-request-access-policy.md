@@ -1,15 +1,15 @@
 ---
 title: Disable Request Access policy
 titleSuffix: Azure DevOps Services
-ms.custom: 
+ms.custom:
 description: Learn how to stop your users from requesting access to your organization or project within your organization by disabling the Request Access policy.
 ms.technology: devops-accounts
-ms.assetid: 
+ms.assetid:
 ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 02/21/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Disable your organization's Request Access policy
@@ -18,7 +18,7 @@ monikerRange: 'azure-devops'
 
 Stop your users from requesting access to your organization or project within your organization, by disabling the Request Access policy.
 
-When this policy is on, users can request access to a resource. A request results in an email notification to the administrators asking for review and access, as needed. 
+When this policy is on, users can request access to a resource. A request results in an email notification to the administrators asking for review and access, as needed.
 
 ## Prerequisites
 
@@ -26,13 +26,13 @@ You must be a Project Collection Administrator or organization Administrator to 
 
 ## Disable Request Access policy
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
 2. Choose ![gear icon](../../media/icons/gear-icon.png) **Organization settings**.
 
    ![Choose the gear icon, Organization settings](../../media/settings/open-admin-settings-vert.png)
 
-3. In the Policies tab, find the Request Access policy and move the toggle to *off*.
+3. In the Policies tab, find the Request Access policy and move the toggle to _off_.
 
    ![Disable the Request Access policy in Organization settings](media/request-access-policy-settings.png)
 

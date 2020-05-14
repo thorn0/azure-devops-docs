@@ -1,14 +1,14 @@
 ---
-title: Navigate in Visual Studio Team Explorer 
-titleSuffix: Azure DevOps 
-description: Download TFS clients, navigate in Team Explorer for Azure DevOps Services & Team Foundation Server 
-keywords: Download TFS clients 
+title: Navigate in Visual Studio Team Explorer
+titleSuffix: Azure DevOps
+description: Download TFS clients, navigate in Team Explorer for Azure DevOps Services & Team Foundation Server
+keywords: Download TFS clients
 ms.technology: devops-new-user
 ms.assetid: fd7a5cf7-7916-4fa0-b5e6-5a83cf377a02
 ms.author: kaelli
 author: KathrynEE
 ms.topic: reference
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 12/04/2018
 ---
 
@@ -19,19 +19,20 @@ ms.date: 12/04/2018
 You use Team Explorer to coordinate your code efforts with other team members to develop a software project. In addition, you can manage work and that is assigned to you, your team, or your projects. Team Explorer is a plug-in that installs with Visual Studio and Team Explorer Everywhere is a plug-in that installs with Eclipse. Developers can effectively collaborate using Team Explorer connected to projects hosted on Azure DevOps Services or an on-premises Azure DevOps Server (previously named Team Foundation Server (TFS)).
 
 > [!TIP]
-> You can install the latest version of Visual Studio clients from the [Visual Studio downloads page](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). 
-> 
-> Additional options for connecting to Azure DevOps Services or TFS include:  
+> You can install the latest version of Visual Studio clients from the [Visual Studio downloads page](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
+>
+> Additional options for connecting to Azure DevOps Services or TFS include:
+>
 > - [Team Explorer Everywhere](/previous-versions/azure/devops/java/download-eclipse-plug-in)
-> - [Azure DevOps Plugin for Android Studio](/previous-versions/azure/devops/java/download-android-studio-plug-in)  
+> - [Azure DevOps Plugin for Android Studio](/previous-versions/azure/devops/java/download-android-studio-plug-in)
 > - [Azure DevOps Plugin for IntelliJ](/previous-versions/azure/devops/java/download-intellij-plug-in)
-> - [Visual Studio Code](/previous-versions/azure/devops/java/vscode-extension)  
-> 
+> - [Visual Studio Code](/previous-versions/azure/devops/java/vscode-extension)
+>
 > For information about compatibility among client and server versions, see [Requirements and compatibility](/azure/devops/server/requirements).
 
 If you don't need Visual Studio, but want to connect to a project in Azure DevOps, you can install the free [Visual Studio Community](https://visualstudio.microsoft.com/downloads/download-visual-studio-vs).
 
-## Prerequisites 
+## Prerequisites
 
 - You must have a project in Azure DevOps. If you need to add a project, see [Create a project](../organizations/projects/create-project.md).
 - You must be a member of the project you connect to. To get added, see [Add users to a project or team](../organizations/security/add-users-team-project.md).
@@ -47,18 +48,17 @@ From the **Connect** page, you can select the projects you want to connect to an
 
 ![Team Explorer, Connect](media/vs-2019-te/manage-connections.png)
 
+The Git and TFVC repos support different pages and functions. For a comparison of the two version control systems, see [Choosing the right version control for your project](../repos/tfvc/comparison-git-tfvc.md).
 
-The Git and TFVC repos support different pages and functions. For a comparison of the two version control systems, see [Choosing the right version control for your project](../repos/tfvc/comparison-git-tfvc.md). 
+## Git version control and repository
 
-## Git version control and repository 
+The following images show the pages available when you connect to a Git repository from Team Explorer.
 
-The following images show the pages available when you connect to a Git repository from Team Explorer. 
+> | Visual Studio 2019                                                                                          | Visual Studio 2017                                                                                          | Visual Studio 2015                                                                           |
+> | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+> | ![Visual studio 2019, Team Explorer Home page with Git as source control](media/vs-2019-te/te-git-full.png) | ![Visual studio 2017, Team Explorer Home page with Git as source control](media/vs-2017-te/te-git-full.png) | ![Visual Studio 2015, Team Explorer Home page w/ TFVC as source control](media/IC827210.png) |
 
-> |Visual Studio 2019| Visual Studio 2017 | Visual Studio 2015 |  
-> |------|---------|---------|  
-> | ![Visual studio 2019, Team Explorer Home page with Git as source control](media/vs-2019-te/te-git-full.png) |![Visual studio 2017, Team Explorer Home page with Git as source control](media/vs-2017-te/te-git-full.png) | ![Visual Studio 2015, Team Explorer Home page w/ TFVC as source control](media/IC827210.png) |  
-
-To learn more about each page, see the following articles. 
+To learn more about each page, see the following articles.
 
 <table width="100%">
 <tbody valign="top">
@@ -123,17 +123,17 @@ To learn more about each page, see the following articles.
 </tbody>
 </table>
 
-## Team Foundation version control 
+## Team Foundation version control
 
-The following images show the pages available when you connect to a TFVC repository from Team Explorer. 
+The following images show the pages available when you connect to a TFVC repository from Team Explorer.
 
-> [!div class="mx-tdCol2BreakAll"]  
-> 
-> |Visual Studio 2019| Visual Studio 2017 | Visual Studio 2015 |  
-> |------|---------|---------|
-> | ![Visual Studio 2019, Team Explorer Home page w/ TFVC as source control](media/vs-2019-te/te-tfvc.png) | ![Visual Studio 2017, Team Explorer Home page w/ TFVC as source control](media/vs-2017-te/te-tfvc.png) | ![Visual Studio 2015, Team Explorer Home page w/ TFVC as source control](media/IC827209.png) |  
+> [!div class="mx-tdCol2BreakAll"]
+>
+> | Visual Studio 2019                                                                                     | Visual Studio 2017                                                                                     | Visual Studio 2015                                                                           |
+> | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+> | ![Visual Studio 2019, Team Explorer Home page w/ TFVC as source control](media/vs-2019-te/te-tfvc.png) | ![Visual Studio 2017, Team Explorer Home page w/ TFVC as source control](media/vs-2017-te/te-tfvc.png) | ![Visual Studio 2015, Team Explorer Home page w/ TFVC as source control](media/IC827209.png) |
 
-To learn more about each page, see the following articles. 
+To learn more about each page, see the following articles.
 
 <table width="100%">
 <tbody valign="top">
@@ -172,7 +172,7 @@ To learn more about each page, see the following articles.
 </ul>
 </td>
 
-<td> 
+<td>
 
 <p><strong>Default experience</strong> (Visual Studio 2019 only)</p> 
 <ul>
@@ -197,20 +197,16 @@ To learn more about each page, see the following articles.
 </tbody>
 </table>
 
-
-
 ## Team Explorer plug-in for Eclipse
 
 If you work in Eclipse or on a non-Windows platform, you can [install the Team Explorer plug-in for Eclipse](/previous-versions/azure/devops/java/download-eclipse-plug-in#to-install-team-explorer-everywhere-from-within-eclipse). Once installed, you can share your Eclipse projects by adding them to Azure DevOps Services or TFS using [Git](../repos/git/share-your-code-in-git-eclipse.md) or [TFVC](../repos/tfvc/share-your-code-in-tfvc-eclipse.md).
-
 
 > [!div class="mx-tdBreakAll"]  
 > |Home page with Git (Eclipse) |Home page with TFVC (Eclipse) |
 > |-------------|----------|
 > |![Eclipse, Team Explorer, Git source control](media/work-team-explorer/tee-git-10.2018.png) |![Eclipse, Team Explorer, TFVC source control](media/work-team-explorer/tee-tfvc-10.2018.png) |
 
-
-To learn more about each page, see the following articles. 
+To learn more about each page, see the following articles.
 
 <table width="100%">
 <tbody valign="top">
@@ -235,7 +231,6 @@ To learn more about each page, see the following articles.
 <li><a href="../pipelines/apps/cd/azure/aspnet-core-to-acr.md#configure-and-execute-continuous-delivery-cd-for-your-app" data-raw-source="[Configure and execute Continuous Delivery (CD) for your app](../pipelines/apps/cd/azure/aspnet-core-to-acr.md#configure-and-execute-continuous-delivery-cd-for-your-app)">Configure and execute Continuous Delivery (CD) for your app</a></li>
 </ul>
 </td>
-
 
 <td> 
 <p><strong>Git repo</strong></p> 
@@ -263,15 +258,13 @@ To learn more about each page, see the following articles.
 </ul>
 </td>
 
-
 </tr>
 </tbody>
 </table>
 
-
 ::: moniker range=">= tfs-2018 <= azure-devops-2019"
 
-## Reports 
+## Reports
 
 > [!NOTE]  
 > Some pages, such as **Reports**, only appear when an on-premises TFS is configured with the required resources, such as SQL Server Reporting Services and SharePoint.
@@ -284,7 +277,7 @@ If your project is missing one or more pages, you may be able to [add functional
 
 ::: moniker range=">= tfs-2013 <= tfs-2017"
 
-## Reports and Documents  
+## Reports and Documents
 
 > [!NOTE]  
 > Some pages, such as **Reports** and **Documents**, only appear when an on-premises TFS is configured with the required resources, such as SQL Server Reporting Services and SharePoint.
@@ -297,10 +290,9 @@ If your project is missing one or more pages, you may be able to [add functional
 
 ::: moniker-end
 
+## Settings
 
-## Settings  
-
-From the **Settings** page, you can configure administrative features for either a project or project collection. To learn more about each page, see the following articles. Most of the links open to a web portal administration page. Not all settings are available from the Team Explorer plug-in for Eclipse. 
+From the **Settings** page, you can configure administrative features for either a project or project collection. To learn more about each page, see the following articles. Most of the links open to a web portal administration page. Not all settings are available from the Team Explorer plug-in for Eclipse.
 
 <table width="100%">
 <tbody valign="top">
@@ -341,9 +333,7 @@ From the **Settings** page, you can configure administrative features for either
 </tbody>
 </table>
 
-
 To learn more about settings, see [About team, project, and organizational-level settings](../organizations/settings/about-settings.md).
-
 
 ## Refresh Team Explorer or Team Explorer Everywhere
 
@@ -355,24 +345,22 @@ If data doesn't appear as expected, the first thing to try is to refresh your cl
 
 [!INCLUDE [temp](includes/when-to-refresh-client.md)]
 
-[!INCLUDE [temp](../includes/images-not-appearing-vs.md)] 
-
+[!INCLUDE [temp](../includes/images-not-appearing-vs.md)]
 
 ## Related articles
 
-- [Troubleshoot connection](troubleshoot-connection.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json)  
+- [Troubleshoot connection](troubleshoot-connection.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json)
 - [Create a project](../organizations/projects/create-project.md)
 
-
-### Additional tools provided with TFS Power Tools 
+### Additional tools provided with TFS Power Tools
 
 By installing [TFS Power Tools](https://marketplace.visualstudio.com/items?itemName=TFSPowerToolsTeam.MicrosoftVisualStudioTeamFoundationServer2015Power), you gain access to these additional tools through the Team Explorer plug-in for Visual Studio:
 
--   Process Template Editor
--   Additional check-in policies for Team Foundation Version Control
--   Team Explorer enhancements including Team Members
--   Team Foundation Power Tool Command Line
--   Test Attachment Cleaner
--   Work Item Templates
+- Process Template Editor
+- Additional check-in policies for Team Foundation Version Control
+- Team Explorer enhancements including Team Members
+- Team Foundation Power Tool Command Line
+- Test Attachment Cleaner
+- Work Item Templates
 
 Additional requirements may apply.

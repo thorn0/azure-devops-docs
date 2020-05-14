@@ -14,18 +14,18 @@ ms.date: 01/20/2017
 
 [!INCLUDE [temp](../../includes/version-vsts-tfs-all-versions.md)]
 
-This is a generic error message displayed when the instance of Team Foundation on the local computer cannot connect to a Team Foundation Server and no error message was returned by a specific component within Team Foundation Server.  
-  
- The likely causes of this problem are:  
-  
-- The version of Team Foundation running on the local computer does not match the version running on the Team Foundation Server server {name}.  
-  
-- The server returned HTML content instead of XML content.  
-  
-- The required Web service on the server could not be found.  
-  
-  The procedure below will help you correct the cause.  
-  
-### To correct this error  
-  
--   Contact your Team Foundation Server administrator for the server {*name*} for further instructions.
+This is a generic error message displayed when the instance of Team Foundation on the local computer cannot connect to a Team Foundation Server and no error message was returned by a specific component within Team Foundation Server.
+
+The likely causes of this problem are:
+
+- The version of Team Foundation running on the local computer does not match the version running on the Team Foundation Server server {name}.
+
+- The server returned HTML content instead of XML content.
+
+- The required Web service on the server could not be found.
+
+  The procedure below will help you correct the cause.
+
+### To correct this error
+
+- Contact your Team Foundation Server administrator for the server {_name_} for further instructions.

@@ -3,7 +3,7 @@ title: Release Management Overview | Visual Studio Online REST API Reference
 description: Work with Visual Studio Online builds programmatically using the REST APIs.
 ms.assetid: a5af63ab-36dd-4370-b962-ffbd6c1c4f58
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 ms.topic: article
 ms.author: chcomley
 author: chcomley
@@ -21,9 +21,9 @@ ms.date: 06/01/2017
 New [release](./releases.md) references a [release definition](./definitions.md) to deploy an application comprising of one/more artifacts.
 A release process goes through a set of [approval requests](./approvals.md).
 
-* [Definitions](./definitions.md)
-* [Releases](./releases.md)
-* [Approvals](./approvals.md)
+- [Definitions](./definitions.md)
+- [Releases](./releases.md)
+- [Approvals](./approvals.md)
 
 ## Common tasks
 
@@ -37,7 +37,7 @@ A release process goes through a set of [approval requests](./approvals.md).
 ### Start a release
 
 1. Get the ID of the release [definition](./definitions.md) that you want to use.
-3. Create a [release](./releases.md).
+2. Create a [release](./releases.md).
 3. Get the ID of the release from the response so you can use it later.
 4. If required, abandon a [release](./releases.md).
 
@@ -45,7 +45,7 @@ A release process goes through a set of [approval requests](./approvals.md).
 
 1. Get a list of [releases](./releases.md) and find the ID of the release you're interested in.
 2. Get the [details](./releases.md#getreleasedetails) about the release.
-4. Get the [approvals](./approvals.md) required for the release.
+3. Get the [approvals](./approvals.md) required for the release.
 
 ### Accept/Reject approvals
 

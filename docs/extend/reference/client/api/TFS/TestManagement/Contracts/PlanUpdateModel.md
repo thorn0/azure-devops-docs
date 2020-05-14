@@ -14,36 +14,34 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `area`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `area`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `automatedTestEnvironment`: [TestEnvironment](../../../TFS/TestManagement/Contracts/TestEnvironment.md). 
+- `automatedTestEnvironment`: [TestEnvironment](../../../TFS/TestManagement/Contracts/TestEnvironment.md).
 
-* `automatedTestSettings`: [TestSettings](../../../TFS/TestManagement/Contracts/TestSettings.md). 
+- `automatedTestSettings`: [TestSettings](../../../TFS/TestManagement/Contracts/TestSettings.md).
 
-* `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `configurationIds`: number[]. 
+- `configurationIds`: number[].
 
-* `description`: string. 
+- `description`: string.
 
-* `endDate`: string. 
+- `endDate`: string.
 
-* `iteration`: string. 
+- `iteration`: string.
 
-* `manualTestEnvironment`: [TestEnvironment](../../../TFS/TestManagement/Contracts/TestEnvironment.md). 
+- `manualTestEnvironment`: [TestEnvironment](../../../TFS/TestManagement/Contracts/TestEnvironment.md).
 
-* `manualTestSettings`: [TestSettings](../../../TFS/TestManagement/Contracts/TestSettings.md). 
+- `manualTestSettings`: [TestSettings](../../../TFS/TestManagement/Contracts/TestSettings.md).
 
-* `name`: string. 
+- `name`: string.
 
-* `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `startDate`: string. 
+- `startDate`: string.
 
-* `state`: string. 
+- `state`: string.
 
-* `status`: string. 
-
+- `status`: string.

@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Service Hook Publishers | REST API Reference for Team Foundation Server
 description: Work with service hook publishers programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: F61EDE31-0F8D-4C4E-AE03-B4480C51C5FD
@@ -21,6 +21,7 @@ A publisher is a service that publishes events to service hooks. For example, Te
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get a list of publishers
+
 <a name="getalistofpublishers" />
 
 #### Sample request
@@ -47,9 +48,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/build.complete",
           "name": "Build completed",
           "description": "A build completes",
-          "supportedResourceVersions": [
-            "1.0-preview.1"
-          ],
+          "supportedResourceVersions": ["1.0-preview.1"],
           "inputDescriptors": [
             {
               "id": "definitionName",
@@ -115,9 +114,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/message.posted",
           "name": "Team room message posted",
           "description": "Triggers when a message is posted to a team room",
-          "supportedResourceVersions": [
-            "1.0-preview.1"
-          ],
+          "supportedResourceVersions": ["1.0-preview.1"],
           "inputDescriptors": [
             {
               "id": "roomId",
@@ -162,9 +159,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/git.pullrequest.created",
           "name": "Pull request created",
           "description": "Pull request is created in a git repository",
-          "supportedResourceVersions": [
-            "1.0-preview.1"
-          ],
+          "supportedResourceVersions": ["1.0-preview.1"],
           "inputDescriptors": [
             {
               "id": "repository",
@@ -203,9 +198,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
                 ],
                 "isLimitedToPossibleValues": true
               },
-              "dependencyInputIds": [
-                "repository"
-              ],
+              "dependencyInputIds": ["repository"],
               "hasDynamicValueInformation": true
             }
           ]
@@ -216,9 +209,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/git.pullrequest.updated",
           "name": "Pull request updated",
           "description": "Pull request is updated – status, review list, reviewer vote changed or the source branch is updated with a push",
-          "supportedResourceVersions": [
-            "1.0-preview.1"
-          ],
+          "supportedResourceVersions": ["1.0-preview.1"],
           "inputDescriptors": [
             {
               "id": "repository",
@@ -257,9 +248,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
                 ],
                 "isLimitedToPossibleValues": true
               },
-              "dependencyInputIds": [
-                "repository"
-              ],
+              "dependencyInputIds": ["repository"],
               "hasDynamicValueInformation": true
             },
             {
@@ -308,9 +297,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/git.push",
           "name": "Code pushed",
           "description": "Code is pushed to a git repository",
-          "supportedResourceVersions": [
-            "1.0-preview.1"
-          ],
+          "supportedResourceVersions": ["1.0-preview.1"],
           "inputDescriptors": [
             {
               "id": "repository",
@@ -349,9 +336,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
                 ],
                 "isLimitedToPossibleValues": true
               },
-              "dependencyInputIds": [
-                "repository"
-              ],
+              "dependencyInputIds": ["repository"],
               "hasDynamicValueInformation": true
             }
           ]
@@ -362,9 +347,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/tfvc.checkin",
           "name": "Code checked in",
           "description": "A changeset is checked into version control.",
-          "supportedResourceVersions": [
-            "1.0-preview.1"
-          ],
+          "supportedResourceVersions": ["1.0-preview.1"],
           "inputDescriptors": [
             {
               "id": "path",
@@ -390,10 +373,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/workitem.created",
           "name": "Work item created",
           "description": "Filter events to include only newly created work items.",
-          "supportedResourceVersions": [
-            "1.0-preview.2",
-            "1.0-preview.1"
-          ],
+          "supportedResourceVersions": ["1.0-preview.2", "1.0-preview.1"],
           "inputDescriptors": [
             {
               "id": "areaPath",
@@ -449,10 +429,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/workitem.commented",
           "name": "Work item commented on",
           "description": "Filter events to include only work items commented on.",
-          "supportedResourceVersions": [
-            "1.0-preview.2",
-            "1.0-preview.1"
-          ],
+          "supportedResourceVersions": ["1.0-preview.2", "1.0-preview.1"],
           "inputDescriptors": [
             {
               "id": "areaPath",
@@ -527,10 +504,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/workitem.updated",
           "name": "Work item updated",
           "description": "Filter events to include only changed work items.",
-          "supportedResourceVersions": [
-            "1.0-preview.2",
-            "1.0-preview.1"
-          ],
+          "supportedResourceVersions": ["1.0-preview.2", "1.0-preview.1"],
           "inputDescriptors": [
             {
               "id": "areaPath",
@@ -599,9 +573,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
                 "isLimitedToPossibleValues": true,
                 "isReadOnly": true
               },
-              "dependencyInputIds": [
-                "workItemType"
-              ],
+              "dependencyInputIds": ["workItemType"],
               "hasDynamicValueInformation": true
             }
           ]
@@ -636,7 +608,6 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers?api-version=1.0
 }
 ```
 
-
 ## Get supported events
 
 #### Sample request
@@ -657,9 +628,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
       "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/build.complete",
       "name": "Build completed",
       "description": "A build completes",
-      "supportedResourceVersions": [
-        "1.0-preview.1"
-      ],
+      "supportedResourceVersions": ["1.0-preview.1"],
       "inputDescriptors": [
         {
           "id": "definitionName",
@@ -725,9 +694,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
       "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/message.posted",
       "name": "Team room message posted",
       "description": "Triggers when a message is posted to a team room",
-      "supportedResourceVersions": [
-        "1.0-preview.1"
-      ],
+      "supportedResourceVersions": ["1.0-preview.1"],
       "inputDescriptors": [
         {
           "id": "roomId",
@@ -772,9 +739,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
       "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/git.pullrequest.created",
       "name": "Pull request created",
       "description": "Pull request is created in a git repository",
-      "supportedResourceVersions": [
-        "1.0-preview.1"
-      ],
+      "supportedResourceVersions": ["1.0-preview.1"],
       "inputDescriptors": [
         {
           "id": "repository",
@@ -813,9 +778,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
             ],
             "isLimitedToPossibleValues": true
           },
-          "dependencyInputIds": [
-            "repository"
-          ],
+          "dependencyInputIds": ["repository"],
           "hasDynamicValueInformation": true
         }
       ]
@@ -826,9 +789,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
       "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/git.pullrequest.updated",
       "name": "Pull request updated",
       "description": "Pull request is updated – status, review list, reviewer vote changed or the source branch is updated with a push",
-      "supportedResourceVersions": [
-        "1.0-preview.1"
-      ],
+      "supportedResourceVersions": ["1.0-preview.1"],
       "inputDescriptors": [
         {
           "id": "repository",
@@ -867,9 +828,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
             ],
             "isLimitedToPossibleValues": true
           },
-          "dependencyInputIds": [
-            "repository"
-          ],
+          "dependencyInputIds": ["repository"],
           "hasDynamicValueInformation": true
         },
         {
@@ -918,9 +877,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
       "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/git.push",
       "name": "Code pushed",
       "description": "Code is pushed to a git repository",
-      "supportedResourceVersions": [
-        "1.0-preview.1"
-      ],
+      "supportedResourceVersions": ["1.0-preview.1"],
       "inputDescriptors": [
         {
           "id": "repository",
@@ -959,9 +916,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
             ],
             "isLimitedToPossibleValues": true
           },
-          "dependencyInputIds": [
-            "repository"
-          ],
+          "dependencyInputIds": ["repository"],
           "hasDynamicValueInformation": true
         }
       ]
@@ -972,9 +927,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
       "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/tfvc.checkin",
       "name": "Code checked in",
       "description": "A changeset is checked into version control.",
-      "supportedResourceVersions": [
-        "1.0-preview.1"
-      ],
+      "supportedResourceVersions": ["1.0-preview.1"],
       "inputDescriptors": [
         {
           "id": "path",
@@ -1000,10 +953,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
       "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/workitem.created",
       "name": "Work item created",
       "description": "Filter events to include only newly created work items.",
-      "supportedResourceVersions": [
-        "1.0-preview.2",
-        "1.0-preview.1"
-      ],
+      "supportedResourceVersions": ["1.0-preview.2", "1.0-preview.1"],
       "inputDescriptors": [
         {
           "id": "areaPath",
@@ -1059,10 +1009,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
       "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/workitem.commented",
       "name": "Work item commented on",
       "description": "Filter events to include only work items commented on.",
-      "supportedResourceVersions": [
-        "1.0-preview.2",
-        "1.0-preview.1"
-      ],
+      "supportedResourceVersions": ["1.0-preview.2", "1.0-preview.1"],
       "inputDescriptors": [
         {
           "id": "areaPath",
@@ -1137,10 +1084,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
       "url": "https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes/workitem.updated",
       "name": "Work item updated",
       "description": "Filter events to include only changed work items.",
-      "supportedResourceVersions": [
-        "1.0-preview.2",
-        "1.0-preview.1"
-      ],
+      "supportedResourceVersions": ["1.0-preview.2", "1.0-preview.1"],
       "inputDescriptors": [
         {
           "id": "areaPath",
@@ -1209,9 +1153,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
             "isLimitedToPossibleValues": true,
             "isReadOnly": true
           },
-          "dependencyInputIds": [
-            "workItemType"
-          ],
+          "dependencyInputIds": ["workItemType"],
           "hasDynamicValueInformation": true
         }
       ]
@@ -1219,6 +1161,3 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/publishers/tfs/eventTypes?
   ]
 }
 ```
-
-
-

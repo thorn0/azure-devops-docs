@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: ronai
 author: RoopeshNair
 ms.date: 07/16/2018
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Connect Release Management to TFS
@@ -16,40 +16,38 @@ monikerRange: '>= tfs-2013'
 
 ![Installing Release Management on TFS](media/connect-tfs-01.png)
 
-These are the steps for connecting TFS to Release Management and adding an 
-SMTP server. These are optional procedures. See 
-**[system requirements](system-requirements.md)** 
-for details of compatible versions of TFS. If you want to connect TFS, you 
+These are the steps for connecting TFS to Release Management and adding an
+SMTP server. These are optional procedures. See
+**[system requirements](system-requirements.md)**
+for details of compatible versions of TFS. If you want to connect TFS, you
 will need a user account to act as an intermediary between TFS and Release
- Management. We show an account being created for this purpose, but you can 
-use an account that already exists in TFS as long as it has the appropriate 
+Management. We show an account being created for this purpose, but you can
+use an account that already exists in TFS as long as it has the appropriate
 permissions.
 
 ## Connect Release Management to TFS
- 
-1. Ensure that you are a member of the **Release Manager** role in Release 
-   Management. In addition, to manage permissions in TFS, you must be a member 
-   of the **Project Collection Administrators** group. To add a user account, 
-   you must be a member of the Windows **Administrators** group (local user) 
+
+1. Ensure that you are a member of the **Release Manager** role in Release
+   Management. In addition, to manage permissions in TFS, you must be a member
+   of the **Project Collection Administrators** group. To add a user account,
+   you must be a member of the Windows **Administrators** group (local user)
    or the **Domain Administrators** group (domain account).
 
-    > [!TIP]
-    > _Do you need to add teammates to the **Release Manager** role 
-    > in Release Management? See [Add users to Release Management](../add-users-and-groups.md)._
+   > [!TIP] > _Do you need to add teammates to the **Release Manager** role
+   > in Release Management? See [Add users to Release Management](../add-users-and-groups.md)._
 
-1. Either designate an existing account or create a user account in TFS 
-   to act as intermediary account for Release Management. This can be a local 
+1. Either designate an existing account or create a user account in TFS
+   to act as intermediary account for Release Management. This can be a local
    or domain account. It doesn't need any special Windows or Domain permissions.
    We're creating a local Windows account named RMTFS here.
 
    ![Selecting an intermediary account for TFS](media/connect-tfs-02.png)
 
-    > [!NOTE]
-    > _If you're planning to use an account that already exists in 
-    > TFS, you can skip this step. If you have TFS deployed on more than one 
-    > server, you'll want to use a domain account._
+   > [!NOTE] > _If you're planning to use an account that already exists in
+   > TFS, you can skip this step. If you have TFS deployed on more than one
+   > server, you'll want to use a domain account._
 
-1. In TFS, make the account a member of the **Project Collection 
+1. In TFS, make the account a member of the **Project Collection
    Administrators** group. For more details, see
    [Set administrator permissions for project collections](../../../../../organizations/security/set-project-collection-level-permissions.md),
    though you can ignore the procedures for SharePoint and Reporting Services.
@@ -57,7 +55,7 @@ permissions.
 
    ![Adding the account to the Project Collection Administrators group](media/connect-tfs-03.png)
 
-1. In TFS, select the account and set the **Make requests on behalf of 
+1. In TFS, select the account and set the **Make requests on behalf of
    others** permission to **Allow**.
 
    ![Allowing requests on behalf of others](media/connect-tfs-04.png)
@@ -76,18 +74,17 @@ permissions.
 
    ![Setting the connection identity in Release Management client](media/connect-tfs-07.png)
 
-1. After you save these settings, Release Management is connected to this 
-   TFS project collection. You're ready to manage releases with TFS and 
+1. After you save these settings, Release Management is connected to this
+   TFS project collection. You're ready to manage releases with TFS and
    Release Management.
 
 ## Set up an SMTP server
- 
-1. Ensure that you are a member of the **Release Manager** role in Release 
+
+1. Ensure that you are a member of the **Release Manager** role in Release
    Management. This is required to connect an SMTP server to Release Management.
 
-    > [!TIP]
-    > _Do you need to add teammates to the **Release Manager** role 
-   in Release Management? See [Add users to Release Management](../add-users-and-groups.md)._
+   > [!TIP] > _Do you need to add teammates to the **Release Manager** role
+   > in Release Management? See [Add users to Release Management](../add-users-and-groups.md)._
 
 1. In Release Management client, choose **Administration** and then **Settings**.
 
@@ -98,14 +95,14 @@ permissions.
 
 ## Related topics
 
-* [Overview of Release Management](../release-management-overview.md)
-* [System requirements for Release Management](system-requirements.md)
-* [Install Release Management](../install-release-management.md)
-* [Install Release Management server and client](install-server-and-client.md)
-* [Install deployment agents](install-deployment-agent.md)
-* [Manage users, groups, and permissions](../add-users-and-groups.md)
-* [Manage your release](../manage-your-release.md) 
-  
+- [Overview of Release Management](../release-management-overview.md)
+- [System requirements for Release Management](system-requirements.md)
+- [Install Release Management](../install-release-management.md)
+- [Install Release Management server and client](install-server-and-client.md)
+- [Install deployment agents](install-deployment-agent.md)
+- [Manage users, groups, and permissions](../add-users-and-groups.md)
+- [Manage your release](../manage-your-release.md)
+
 [!INCLUDE [wpfver-back-to-index-shared](../../includes/wpfver-back-to-index-shared.md)]
- 
+
 [!INCLUDE [wpfver-support-shared](../../includes/wpfver-support-shared.md)]

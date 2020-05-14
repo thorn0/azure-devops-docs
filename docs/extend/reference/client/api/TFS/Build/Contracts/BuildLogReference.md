@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `id`: number. The ID of the log.
+- `id`: number. The ID of the log.
 
-* `type`: string. The type of the log location.
+- `type`: string. The type of the log location.
 
-* `url`: string. Full link to the log resource.
-
+- `url`: string. Full link to the log resource.

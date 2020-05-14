@@ -13,12 +13,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `changeList`: [ChangeList](../../../TFS/VersionControl/Contracts/ChangeList.md)&lt;T&gt;. The Change list (changeset/commit/shelveset) for this point in history
+- `changeList`: [ChangeList](../../../TFS/VersionControl/Contracts/ChangeList.md)&lt;T&gt;. The Change list (changeset/commit/shelveset) for this point in history
 
-* `itemChangeType`: [VersionControlChangeType](../../../TFS/VersionControl/Contracts/VersionControlChangeType.md). The change made to the item from this change list (only relevant for File history, not folders)
+- `itemChangeType`: [VersionControlChangeType](../../../TFS/VersionControl/Contracts/VersionControlChangeType.md). The change made to the item from this change list (only relevant for File history, not folders)
 
-* `serverItem`: string. The path of the item at this point in history (only relevant for File history, not folders)
-
+- `serverItem`: string. The path of the item at this point in history (only relevant for File history, not folders)

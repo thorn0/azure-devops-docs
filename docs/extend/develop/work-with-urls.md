@@ -4,7 +4,7 @@ title: Working with URLs in extensions | Azure DevOps Services
 description: Best practices for working with URLs in Azure DevOps extensions and integrations
 ms.assetid: 1f27f05e-2c55-4873-ab4a-8c9c0947a7fe
 ms.topic: conceptual
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ms.author: apawast
 author: apawast
 ms.date: 08/31/2018
@@ -14,29 +14,29 @@ ms.date: 08/31/2018
 
 With the introduction of Azure DevOps Services, organizational resources and APIs are now accessible via either of the following URLs:
 
-* `https://dev.azure.com/{organization}` (new)
-* `https://{organization}.visualstudio.com` (legacy)
+- `https://dev.azure.com/{organization}` (new)
+- `https://{organization}.visualstudio.com` (legacy)
 
 Regardless of when the organization was created, users, tools, and integrations can interact with organization-level REST APIs using either URL. As the developer of an extension, integration, or tool that interacts with Azure DevOps Services, it is important to understand how to properly work with URLs made available to your code and how to properly form URLs when calling REST APIs.
 
 [!INCLUDE [extension-docs-new-sdk](../../includes/extension-docs-new-sdk.md)]
-    
+
 ## Organization primary URL
 
 Each organization has a designated **primary** URL that is either the new form or the legacy form. The primary URL is used by Azure DevOps Services for constructing URLs in certain scenarios (more details below). The default primary URL for an organization is determined by when the organization was created, but can be changed by an administrator:
 
 | When the organization was created | Default primary URL |
-|--------------------------|---------------------|
-| On or after 9/10/2018     | New                 |        
-| Prior to 9/10/2018        | Legacy              |
+| --------------------------------- | ------------------- |
+| On or after 9/10/2018             | New                 |
+| Prior to 9/10/2018                | Legacy              |
 
 ### How the primary URL is used
 
 The primary URL is the base URL for all URLs constructed by Azure DevOps in background jobs and other automated scenarios, like:
 
-* URLs provided to Azure Pipelines tasks via environment variables (like `SYSTEM_TEAMFOUNDATIONCOLLECTIONURI`)
-* URLs included in service hooks event payloads (like URLs in `resourceContainers`)
-* URLs in email, Slack, Microsoft Teams, and similar notifications
+- URLs provided to Azure Pipelines tasks via environment variables (like `SYSTEM_TEAMFOUNDATIONCOLLECTIONURI`)
+- URLs included in service hooks event payloads (like URLs in `resourceContainers`)
+- URLs in email, Slack, Microsoft Teams, and similar notifications
 
 For example, the following task snippet displays the organization URL provided to the task:
 
@@ -130,6 +130,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.Services.Common;
 using Microsoft.VisualStudio.Services.WebApi;
 ```
+
 ```cs
 public async Task MyMethod()
 {
@@ -137,9 +138,9 @@ public async Task MyMethod()
     VssCredentials credentials = ...;
 
     Uri organizationUrl = await VssConnectionHelper.GetOrganizationUrlAsync(organizationName);
-    
+
     VssConnection connection = new VssConnection(organizationUrl, credentials);
-    
+
     // get a client using connection.GetClient<T>() and do something
 }
 ```
@@ -174,7 +175,7 @@ public async Task<Uri> GetOrganizationUrl(string organizationName)
             return new Uri(resourceArea["locationUrl"].ToString());
         }
     }
-    
+
     return null;
 }
 ```
@@ -182,24 +183,26 @@ public async Task<Uri> GetOrganizationUrl(string organizationName)
 # [Node.js (generic)](#tab/nodejsgeneric)
 
 ```javascript
-const request = require('request');
+const request = require("request");
 
-let getOrgUrl = function(orgName, callback) {
-    let resourceAreaUrl = 'https://dev.azure.com/_apis/resourceAreas/79134C72-4A58-4B42-976C-04E7115F32BF?' + 
-      'accountName=' + orgName +
-      '&api-version=5.0-preview.1';
-    
-    request(resourceAreaUrl, { json: true }, (err, res, body) => {
-        if (err) { 
-            callback(err);   
-        } else {
-            callback(null, body.locationUrl);
-        }
-    });
+let getOrgUrl = function (orgName, callback) {
+  let resourceAreaUrl =
+    "https://dev.azure.com/_apis/resourceAreas/79134C72-4A58-4B42-976C-04E7115F32BF?" +
+    "accountName=" +
+    orgName +
+    "&api-version=5.0-preview.1";
+
+  request(resourceAreaUrl, { json: true }, (err, res, body) => {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, body.locationUrl);
+    }
+  });
 };
 
-getOrgUrl('fabrikam', (err, url) => {
-    console.log(url);
+getOrgUrl("fabrikam", (err, url) => {
+  console.log(url);
 });
 ```
 
@@ -228,14 +231,13 @@ If you are not using a Microsoft-provided client library:
    ```
    GET https://dev.azure.com/Fabrikam/_apis/resourceAreas/efc2f575-36ef-48e9-b672-0c6fb4a48ac5?api-version=5.0-preview.1
    ```
-    
 3. Use the `locationUrl` field from the JSON response as the base URL for calling other REST APIs for this area. In this example, the base URL for Release Management REST APIs is `https://vsrm.dev.azure.com/Fabrikam`.
 
 > Like the global Resource Areas REST API described earlier, no credentials are required to call the organization-level Resource Areas REST API.
 
 ### Example: Pipelines task calling an Azure Pipelines releases REST API
 
-In this example, a build task needs to call the Azure Pipelines releases REST API. It forms the correct base URL for this REST API call by using the organization URL (provided in an environment variable) and the Resource Areas REST API. 
+In this example, a build task needs to call the Azure Pipelines releases REST API. It forms the correct base URL for this REST API call by using the organization URL (provided in an environment variable) and the Resource Areas REST API.
 
 > [!NOTE]
 > Resource area IDs are fixed and can be safely embedded in tasks and other logic.
@@ -259,41 +261,41 @@ $releaseDefinitionsUrl = [string]::Format("{0}/_apis/release/definitions?api-pre
 
 ## Resource area IDs (reference)
 
-This table shows the IDs for common resource areas. See the previous section for details on how to use this table. 
+This table shows the IDs for common resource areas. See the previous section for details on how to use this table.
 
 > [!NOTE]
 > Resource area IDs are fixed and are consistent across all organizations in Azure DevOps Services.
 
-| Resource Area ID | Name |
-|---|---|
-|0d55247a-1c47-4462-9b1f-5e2125590ee6|account|
-|5d6898bb-45ec-463f-95f9-54d49c71752e|build|
-|79bea8f8-c898-4965-8c51-8bbc3966faa8|collection|
-|79134c72-4a58-4b42-976c-04e7115f32bf|core|
-|31c84e0a-3ece-48fd-a29d-100849af99ba|dashboard|
-|a0848fa1-3593-4aec-949c-694c73f4c4ce|delegatedAuth|
-|6823169a-2419-4015-b2fd-6fd6f026ca00|discussion|
-|a85b8835-c1a1-4aac-ae97-1c3d0ba72dbd|distributedtask|
-|7bf94c77-0ce1-44e5-a0f3-263e4ebbf327|drop|
-|6c2b0933-3600-42ae-bf8b-93d4f7e83594|extensionManagement|
-|67349c8b-6425-42f2-97b6-0843cb037473|favorite|
-|4e080c62-fa21-4fbc-8fef-2a10a2b38049|git|
-|4e40f190-2e3f-4d9f-8331-c7788e833080|graph|
-|68ddce18-2501-45f1-a17b-7931a9922690|memberEntitlementManagement|
-|b3be7473-68ea-4a81-bfc7-9530baaa19ad|nuget|
-|4c83cfc1-f33a-477e-a789-29d38ffca52e|npm|
-|45fb9450-a28d-476d-9b0f-fb4aedddff73|package|
-|7ab4e64e-c4d8-4f50-ae73-5ef2e21642a5|packaging|
-|2e0bf237-8973-4ec9-a581-9c3d679d1776|pipelines|
-|fb13a388-40dd-4a04-b530-013a739c72ef|policy|
-|8ccfef3d-2b87-4e99-8ccb-66e343d2daa8|profile|
-|efc2f575-36ef-48e9-b672-0c6fb4a48ac5|release|
-|57731fdf-7d72-4678-83de-f8b31266e429|reporting|
-|ea48a0a1-269c-42d8-b8ad-ddc8fcdcf578|search|
-|3b95fb80-fdda-4218-b60e-1052d070ae6b|test|
-|c83eaf52-edf3-4034-ae11-17d38f25404c|testresults|
-|8aa40520-446d-40e6-89f6-9c9f9ce44c48|tfvc|
-|970aa69f-e316-4d78-b7b0-b7137e47a22c|user|
-|5264459e-e5e0-4bd8-b118-0985e68a4ec5|wit|
-|1d4f49f9-02b9-4e26-b826-2cdb6195f2a9|work|
-|85f8c7b6-92fe-4ba6-8b6d-fbb67c809341|worktracking|
+| Resource Area ID                     | Name                        |
+| ------------------------------------ | --------------------------- |
+| 0d55247a-1c47-4462-9b1f-5e2125590ee6 | account                     |
+| 5d6898bb-45ec-463f-95f9-54d49c71752e | build                       |
+| 79bea8f8-c898-4965-8c51-8bbc3966faa8 | collection                  |
+| 79134c72-4a58-4b42-976c-04e7115f32bf | core                        |
+| 31c84e0a-3ece-48fd-a29d-100849af99ba | dashboard                   |
+| a0848fa1-3593-4aec-949c-694c73f4c4ce | delegatedAuth               |
+| 6823169a-2419-4015-b2fd-6fd6f026ca00 | discussion                  |
+| a85b8835-c1a1-4aac-ae97-1c3d0ba72dbd | distributedtask             |
+| 7bf94c77-0ce1-44e5-a0f3-263e4ebbf327 | drop                        |
+| 6c2b0933-3600-42ae-bf8b-93d4f7e83594 | extensionManagement         |
+| 67349c8b-6425-42f2-97b6-0843cb037473 | favorite                    |
+| 4e080c62-fa21-4fbc-8fef-2a10a2b38049 | git                         |
+| 4e40f190-2e3f-4d9f-8331-c7788e833080 | graph                       |
+| 68ddce18-2501-45f1-a17b-7931a9922690 | memberEntitlementManagement |
+| b3be7473-68ea-4a81-bfc7-9530baaa19ad | nuget                       |
+| 4c83cfc1-f33a-477e-a789-29d38ffca52e | npm                         |
+| 45fb9450-a28d-476d-9b0f-fb4aedddff73 | package                     |
+| 7ab4e64e-c4d8-4f50-ae73-5ef2e21642a5 | packaging                   |
+| 2e0bf237-8973-4ec9-a581-9c3d679d1776 | pipelines                   |
+| fb13a388-40dd-4a04-b530-013a739c72ef | policy                      |
+| 8ccfef3d-2b87-4e99-8ccb-66e343d2daa8 | profile                     |
+| efc2f575-36ef-48e9-b672-0c6fb4a48ac5 | release                     |
+| 57731fdf-7d72-4678-83de-f8b31266e429 | reporting                   |
+| ea48a0a1-269c-42d8-b8ad-ddc8fcdcf578 | search                      |
+| 3b95fb80-fdda-4218-b60e-1052d070ae6b | test                        |
+| c83eaf52-edf3-4034-ae11-17d38f25404c | testresults                 |
+| 8aa40520-446d-40e6-89f6-9c9f9ce44c48 | tfvc                        |
+| 970aa69f-e316-4d78-b7b0-b7137e47a22c | user                        |
+| 5264459e-e5e0-4bd8-b118-0985e68a4ec5 | wit                         |
+| 1d4f49f9-02b9-4e26-b826-2cdb6195f2a9 | work                        |
+| 85f8c7b6-92fe-4ba6-8b6d-fbb67c809341 | worktracking                |

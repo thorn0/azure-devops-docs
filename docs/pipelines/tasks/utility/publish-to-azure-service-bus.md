@@ -1,5 +1,5 @@
 ---
-title: Publish To Azure Service Bus task 
+title: Publish To Azure Service Bus task
 description: Send a message to an Azure Service Bus with a build or release pipeline in Azure Pipelines and TFS
 ms.assetid: 81D73795-0171-434F-AE37-5386F4E71915
 ms.topic: reference
@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 12/07/2018
-monikerRange: '> tfs-2018'
+monikerRange: "> tfs-2018"
 ---
 
 # Publish To Azure Service Bus task
@@ -30,13 +30,13 @@ Can be used in only an [agentless job](../../process/phases.md#server-jobs) of a
 
 ## Arguments
 
-| Parameter | Comments |
-| --- | --- |
-| **Display name** | Required. The name to display for this task. |
-| **Azure Service Bus Connection** | Required. An existing service connection to an Azure Service Bus. |
-| **Message body** | Required. The text of the message body to send to the Service Bus. |
-| **Wait for Task Completion** | Optional. Set this option to force the task to halt until a response is received. |
-| **Control options** | See [Control options](../../process/tasks.md#controloptions) |
+| Parameter                        | Comments                                                                          |
+| -------------------------------- | --------------------------------------------------------------------------------- |
+| **Display name**                 | Required. The name to display for this task.                                      |
+| **Azure Service Bus Connection** | Required. An existing service connection to an Azure Service Bus.                 |
+| **Message body**                 | Required. The text of the message body to send to the Service Bus.                |
+| **Wait for Task Completion**     | Optional. Set this option to force the task to halt until a response is received. |
+| **Control options**              | See [Control options](../../process/tasks.md#controloptions)                      |
 
 ## Open source
 
@@ -59,7 +59,6 @@ To signal completion, the external service should POST completion data to the fo
  { "name": "TaskCompleted", "taskId": "taskInstanceId", "jobId": "jobId", "result": "succeeded" }
 ```
 
-See [this simple cmdline application](https://github.com/Microsoft/azure-pipelines-extensions/tree/master/ServerTaskHelper/HttpRequestSampleWithoutHandler) for specifics. 
+See [this simple cmdline application](https://github.com/Microsoft/azure-pipelines-extensions/tree/master/ServerTaskHelper/HttpRequestSampleWithoutHandler) for specifics.
 
-In addition, a C# helper library is available to enable live logging and managing task status for agentless tasks. [Learn more](https://blogs.msdn.microsoft.com/aseemb/2017/12/18/async-http-agentless-task/) 
-
+In addition, a C# helper library is available to enable live logging and managing task status for agentless tasks. [Learn more](https://blogs.msdn.microsoft.com/aseemb/2017/12/18/async-http-agentless-task/)

@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,14 +15,12 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Model to represent a public access uri 
+Model to represent a public access uri
 
 ### Members
 
-* `authority`: string. Host name and port number of the url
+- `authority`: string. Host name and port number of the url
 
-* `scheme`: string. Url scheme (http, https, ...)
+- `scheme`: string. Url scheme (http, https, ...)
 
-* `uri`: string. Full url
-
+- `uri`: string. Full url

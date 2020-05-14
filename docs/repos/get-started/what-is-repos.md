@@ -1,21 +1,21 @@
 ---
 title: Collaborate on code
 titleSuffix: Azure Repos
-description: What do you get with Azure Repos  
+description: What do you get with Azure Repos
 ms.technology: devops-new-user
 ms.author: apawast
 author: apawast
 ms.date: 09/19/2018
 ms.topic: overview
 layout: LandingPage
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # What is Azure Repos?
 
-Azure Repos is a set of version control tools that you can use to manage your code. Whether your software project is large or small, using version control as soon as possible is a good idea. 
+Azure Repos is a set of version control tools that you can use to manage your code. Whether your software project is large or small, using version control as soon as possible is a good idea.
 
-Version control systems are software that help you track changes you make in your code over time. As you edit your code, you tell the version control system to take a snapshot of your files. The version control system saves that snapshot permanently so you can recall it later if you need it. Use version control to save your work and coordinate code changes across your team. 
+Version control systems are software that help you track changes you make in your code over time. As you edit your code, you tell the version control system to take a snapshot of your files. The version control system saves that snapshot permanently so you can recall it later if you need it. Use version control to save your work and coordinate code changes across your team.
 
 Even if you're just a single developer, version control helps you stay organized as you fix bugs and develop new features. Version control keeps a history of your development so that you can review and even roll back to any version of your code with ease.
 
@@ -47,7 +47,7 @@ Git in Azure Repos is standard Git. You can use the clients and tools of your ch
 </div>
 </div>
 
-<!--- All images are placeholders --> 
+<!--- All images are placeholders -->
 <!-- Converting to icon48 format, this gets cleaner in YAML -->
 <div class="ico48Case halfStack">
 <div class="ico48Link"><a href="../git/share-your-code-in-git-cmdline.md"><img width="48" height="48" alt="Command line" src="https://docs.microsoft.com/media/common/i_cligeneric.svg"><span>Command-line</span></a></div>
@@ -66,7 +66,7 @@ Git in Azure Repos is standard Git. You can use the clients and tools of your ch
 <div class="col-sm-6 col-md-6">
 
 </div>
-<div class="col-sm-6 col-md-6"> 
+<div class="col-sm-6 col-md-6">
 
 <p>Review code with your team and make sure that changes build and pass tests before it's merged.</p>
 
@@ -270,9 +270,9 @@ A clean build of the merged code and approval from multiple reviewers are extra 
 
 ### Extend pull request workflows with pull request status
 
-Pull requests and branch policies enable teams to enforce many best practices related to reviewing code and running automated builds. But many teams have additional requirements and validations to perform on code. To cover these individual and custom needs, Azure Repos offers pull request statuses. 
+Pull requests and branch policies enable teams to enforce many best practices related to reviewing code and running automated builds. But many teams have additional requirements and validations to perform on code. To cover these individual and custom needs, Azure Repos offers pull request statuses.
 
-Pull request statuses integrate into the PR workflow. They allow external services to programmatically sign off on a code change by associating simple success/failure information with a pull request. 
+Pull request statuses integrate into the PR workflow. They allow external services to programmatically sign off on a code change by associating simple success/failure information with a pull request.
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -380,9 +380,9 @@ After a fork has been created, new files, folders, and branches are not shared b
 
 Azure Repos also supports Team Foundation Version Control (TFVC). TFVC is a centralized version control system. Typically, team members have only one version of each file on their dev machines. Historical data is maintained only on the server. Branches are path-based and created on the server.
 
-Get started by creating a project, configuring your workspace, and reviewing and sharing your code. You can use any one of these clients or IDEs: 
+Get started by creating a project, configuring your workspace, and reviewing and sharing your code. You can use any one of these clients or IDEs:
 
-<!--- All images are Placeholder --> 
+<!--- All images are Placeholder -->
 <!-- Converting to icon48 format, this gets cleaner in YAML -->
 <div class="ico48Case halfStack"><div class="ico48Link"><a href="../tfvc/share-your-code-in-tfvc-vs.md"><img width="48" height="48" alt="Visual Studio" src="https://docs.microsoft.com/media/logos/logo_visual-studio.svg"><span>Visual Studio</span></a></div><div class="ico48Link"><a href="../tfvc/share-your-code-in-tfvc-xcode.md"><img width="48" height="48" alt="Xcode" src="https://docs.microsoft.com/media/logos/logo_xcode.svg"><span>Xcode</span></a></div><div class="ico48Link"><a href="../tfvc/share-your-code-in-tfvc-eclipse.md"><img width="48" height="48" alt="Eclipse" src="https://docs.microsoft.com/media/logos/logo_eclipse.svg"><span>Eclipse</span></a></div></div>
 

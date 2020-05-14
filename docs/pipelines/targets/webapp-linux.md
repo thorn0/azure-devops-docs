@@ -1,6 +1,6 @@
 ---
 title: Deploy an Azure Web App
-description: Deploy to Azure Web Apps on Linux from Azure Pipelines 
+description: Deploy to Azure Web Apps on Linux from Azure Pipelines
 services: vsts
 ms.topic: conceptual
 ms.assetid:
@@ -8,7 +8,7 @@ ms.custom: seodec18
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 09/09/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Deploy an Azure Web App
@@ -22,7 +22,7 @@ You can automatically deploy your web app to an Azure App Service Linux on every
 ::: moniker range="azure-devops"
 
 > [!NOTE]
- 
+
 > This guidance applies to Azure DevOps Services.
 
 ::: moniker-end
@@ -61,7 +61,7 @@ However, if you are a new user, then you might get a better start by using our s
     https://github.com/MicrosoftDocs/pipelines-javascript
 ```
 
-* * *
+---
 
 ## Build your app
 
@@ -100,12 +100,12 @@ YAML pipelines aren't available on TFS.
 
 ::: moniker range="< azure-devops"
 
-> [!TIP] 
+> [!TIP]
 > If you're new to Azure DevOps Server or TFS, then see [Create your first pipeline](../create-first-pipeline.md) before you start.
 
 ::: moniker-end
 
-To get started: 
+To get started:
 
 1. Fork this repo in GitHub, or import it into Azure Repos:
 
@@ -117,11 +117,11 @@ To get started:
 
 3. Save the pipeline and queue a build to see it in action.
 
-4. Create a release pipeline and select the **Empty job** for your stage.Search for the **AzureWebAppDeploy** task and configure accordingly. 
+4. Create a release pipeline and select the **Empty job** for your stage.Search for the **AzureWebAppDeploy** task and configure accordingly.
 
 5. Link the build pipeline as an artifact for this release pipeline. Save the release pipeline and create a release to see it in action.
 
-* * *
+---
 
 Now you're ready to read through the rest of this topic to learn some of the more common configurations to customize the deployment of the Azure Web App.
 
@@ -139,7 +139,7 @@ input. The Azure service connection stores the credentials to connect from Azure
 You must supply an Azure service connection to the `AzureWebApp` task. Add the following YAML snippet to your existing **azure-pipelines.yaml** file. Make sure you add the service connection details in the variables section as shown below.
 
 ```yaml
-variables: 
+variables:
   ## Add this under variables section in the pipeline
   azureSubscription: <Name of the Azure subscription>
   appName: <Name of the Web App>
@@ -152,7 +152,7 @@ variables:
     appType: webAppLinux
     appName: $(appName)
     package: $(System.ArtifactsDirectory)/**/*.zip
-```    
+```
 
 ::: moniker-end
 
@@ -178,7 +178,7 @@ To learn how to create an Azure service connection, see [Create an Azure service
 
 ::: moniker-end
 
-* * *
+---
 
 ## Deploy with Azure Web App
 
@@ -229,7 +229,7 @@ When you link the artifact in your release pipeline to a build that compiles and
 it's automatically downloaded and placed into the `$(System.ArtifactsDirectory)` folder on the agent as part of the release.
 This is where the task picks up the web package for deployment.
 
-* * *
+---
 
 ## Deploy to a slot
 
@@ -244,19 +244,19 @@ The following YAML snippet shows how to deploy to a staging slot, and then swap 
 ```yaml
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: '<Azure service connection>'
+    azureSubscription: "<Azure service connection>"
     appType: webAppLinux
-    appName: '<name of web app>'
+    appName: "<name of web app>"
     deployToSlotOrASE: true
-    resourceGroupName: '<name of resource group>'
+    resourceGroupName: "<name of resource group>"
     slotName: staging
 
 - task: AzureAppServiceManage@0
   inputs:
-    azureSubscription: '<Azure service connection>'
+    azureSubscription: "<Azure service connection>"
     appType: webAppLinux
-    WebAppName: '<name of web app>'
-    ResourceGroupName: '<name of resource group>'
+    WebAppName: "<name of web app>"
+    ResourceGroupName: "<name of resource group>"
     SourceSlot: staging
     SwapWithProduction: true
 ```
@@ -274,5 +274,4 @@ YAML pipelines aren't available on TFS.
 You can configure the Azure Web App on Linux to have multiple slots. Slots allow you to safely deploy your app and test it before making it available to your customers.
 Use the option **Deploy to Slot** in the **Azure Web App** task to specify the slot to deploy to. You can swap the slots by using the **Azure App Service Manage** task.
 
-* * *
-
+---

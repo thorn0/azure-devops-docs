@@ -18,5 +18,4 @@ Extends: [BuildUpdatedEvent](./BuildUpdatedEvent.md)
 
 ### Members
 
-* `artifact`: [BuildArtifact](./BuildArtifact.md). 
-
+- `artifact`: [BuildArtifact](./BuildArtifact.md).

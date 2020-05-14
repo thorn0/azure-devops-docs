@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Service Endpoints | REST API Reference for Team Foundation Server
 description: Get, create, update and delete endpoints
 ms.ContentId: 01af664f-d3e9-4331-b1c4-8b323045940b
@@ -9,7 +9,6 @@ ms.ContentId: 01af664f-d3e9-4331-b1c4-8b323045940b
 # Service endpoints
 
 [!INCLUDE [azure-devops](../_data/azure-devops-message.md)]
-
 
 [!INCLUDE [API_version](../_data/version3-preview1.md)]
 
@@ -21,13 +20,15 @@ ms.ContentId: 01af664f-d3e9-4331-b1c4-8b323045940b
 GET https://{instance}/defaultcollection/{project}/_apis/distributedtask/serviceendpoints?[api-version={version}]
 ```
 
-| Parameter     | Type     | Notes
-|:--------------|:---------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string   | TFS server name ({server:port}).
-| project       | string   | [Project](../tfs/projects.md) ID or name.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
 | Query
-| version       | string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -106,34 +107,36 @@ GET https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
 }
 ```
 
-
 ## Create a service endpoint
 
 ```no-highlight
 POST https://{instance}/defaultcollection/{project}/_apis/distributedtask/serviceendpoints?[api-version={version}]
 ```
 
-| Parameter     | Type     | Notes
-|:--------------|:---------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string   | TFS server name ({server:port}).
-| project       | string   | [Project](../tfs/projects.md) ID or name.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
 | Query
-| version       | string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name          | string   | Name of the service endpoint.
-| type          | string   | Type of the service endpoint.
-| url           | string   | Complete URL of the service that is being connected. 
+| name | string | Name of the service endpoint.
+| type | string | Type of the service endpoint.
+| url | string | Complete URL of the service that is being connected.
 | authorization | JSON | Inputs related to authentication of the service endpoint.
-| data          | JSON     | Other inputs that are required by the mentioned endpoint type.
+| data | JSON | Other inputs that are required by the mentioned endpoint type.
 | Response
-| isReady | bool  | Indicates if the created endpoint is ready to use or not. Applies only to Azure SPN, always true for other endpoint types
+| isReady | bool | Indicates if the created endpoint is ready to use or not. Applies only to Azure SPN, always true for other endpoint types
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_apis/distributedtask/serviceendpoints?api-version=3.0-preview.1
 ```
+
 ```json
 {
   "name": "Fabrikam-Chef",
@@ -181,21 +184,22 @@ POST https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/
 }
 ```
 
-
 ## Get a service endpoint
 
 ```no-highlight
 GET https://{instance}/defaultcollection/{project}/_apis/distributedtask/serviceendpoints/{id}?[api-version={version}]
 ```
 
-| Parameter     | Type     | Notes
-|:--------------|:---------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string   | TFS server name ({server:port}).
-| project       | string   | [Project](../tfs/projects.md) ID or name.
-| id            | string   | Endpoint ID.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| id | string | Endpoint ID.
 | Query
-| version       | string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -234,27 +238,29 @@ GET https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
 }
 ```
 
-
 ## Update a service endpoint
 
 ```no-highlight
 PUT https://{instance}/defaultcollection/{project}/_apis/distributedtask/serviceendpoints/{id}?[api-version={version}]
 ```
 
-| Parameter     | Type     | Notes
-|:--------------|:---------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string   | TFS server name ({server:port}).
-| project       | string   | [Project](../tfs/projects.md) ID or name.
-| id            | string   | Endpoint ID.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| id | string | Endpoint ID.
 | Query
-| version       | string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 PUT https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_apis/distributedtask/serviceendpoints/d4177445-c5ad-414a-82bf-2d5727a8176e?api-version=3.0-preview.1
 ```
+
 ```json
 {
   "name": "Fabrikam-Chef-Updated",
@@ -290,21 +296,22 @@ PUT https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
 }
 ```
 
-
 ## Delete a service endpoint
 
 ```no-highlight
 DELETE https://{instance}/defaultcollection/{project}/_apis/distributedtask/serviceendpoints/{id}?[api-version={version}]
 ```
 
-| Parameter     | Type     | Notes
-|:--------------|:---------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string   | TFS server name ({server:port}).
-| project       | string   | [Project](../tfs/projects.md) ID or name.
-| id            | string   | Endpoint ID.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| id | string | Endpoint ID.
 | Query
-| version       | string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 

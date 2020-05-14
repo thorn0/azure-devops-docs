@@ -17,11 +17,10 @@ Extends: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/Identi
 
 ### Members
 
-* `isRequired`: boolean. 
+- `isRequired`: boolean.
 
-* `reviewerUrl`: string. 
+- `reviewerUrl`: string.
 
-* `vote`: number. 
+- `vote`: number.
 
-* `votedFor`: [IdentityRefWithVote](../../../TFS/VersionControl/Contracts/IdentityRefWithVote.md)[]. 
-
+- `votedFor`: [IdentityRefWithVote](../../../TFS/VersionControl/Contracts/IdentityRefWithVote.md)[].

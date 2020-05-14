@@ -14,68 +14,66 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `automated`: boolean. 
+- `automated`: boolean.
 
-* `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `buildDropLocation`: string. 
+- `buildDropLocation`: string.
 
-* `buildFlavor`: string. 
+- `buildFlavor`: string.
 
-* `buildPlatform`: string. 
+- `buildPlatform`: string.
 
-* `comment`: string. 
+- `comment`: string.
 
-* `completeDate`: string. 
+- `completeDate`: string.
 
-* `configurationIds`: number[]. 
+- `configurationIds`: number[].
 
-* `controller`: string. 
+- `controller`: string.
 
-* `customTestFields`: [CustomTestField](../../../TFS/TestManagement/Contracts/CustomTestField.md)[]. 
+- `customTestFields`: [CustomTestField](../../../TFS/TestManagement/Contracts/CustomTestField.md)[].
 
-* `dtlAutEnvironment`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `dtlAutEnvironment`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `dtlTestEnvironment`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `dtlTestEnvironment`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `dueDate`: string. 
+- `dueDate`: string.
 
-* `environmentDetails`: [DtlEnvironmentDetails](../../../TFS/TestManagement/Contracts/DtlEnvironmentDetails.md). 
+- `environmentDetails`: [DtlEnvironmentDetails](../../../TFS/TestManagement/Contracts/DtlEnvironmentDetails.md).
 
-* `errorMessage`: string. 
+- `errorMessage`: string.
 
-* `filter`: [RunFilter](../../../TFS/TestManagement/Contracts/RunFilter.md). 
+- `filter`: [RunFilter](../../../TFS/TestManagement/Contracts/RunFilter.md).
 
-* `iteration`: string. 
+- `iteration`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `plan`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `plan`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `pointIds`: number[]. 
+- `pointIds`: number[].
 
-* `releaseEnvironmentUri`: string. 
+- `releaseEnvironmentUri`: string.
 
-* `releaseUri`: string. 
+- `releaseUri`: string.
 
-* `runTimeout`: any. 
+- `runTimeout`: any.
 
-* `sourceWorkflow`: string. 
+- `sourceWorkflow`: string.
 
-* `startDate`: string. 
+- `startDate`: string.
 
-* `state`: string. 
+- `state`: string.
 
-* `testConfigurationsMapping`: string. 
+- `testConfigurationsMapping`: string.
 
-* `testEnvironmentId`: string. 
+- `testEnvironmentId`: string.
 
-* `testSettings`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `testSettings`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `type`: string. 
-
+- `type`: string.

@@ -16,6 +16,6 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `Custom` Indicates a custom template.
-* `Default` Indicates a default template.
-* `Upgrade` Indicates an upgrade template.
+- `Custom` Indicates a custom template.
+- `Default` Indicates a default template.
+- `Upgrade` Indicates an upgrade template.

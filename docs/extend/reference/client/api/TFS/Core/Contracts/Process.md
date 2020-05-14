@@ -18,13 +18,12 @@ Extends: [ProcessReference](../../../TFS/Core/Contracts/ProcessReference.md)
 
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `description`: string. 
+- `description`: string.
 
-* `id`: string. 
+- `id`: string.
 
-* `isDefault`: boolean. 
+- `isDefault`: boolean.
 
-* `type`: [ProcessType](../../../TFS/Core/Contracts/ProcessType.md). 
-
+- `type`: [ProcessType](../../../TFS/Core/Contracts/ProcessType.md).

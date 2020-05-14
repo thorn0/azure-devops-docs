@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Develop code and manage pending changes
 
@@ -35,18 +34,19 @@ If you're working in a solution that contains a lot of files, you'll probably fi
 If you're using Visual Studio Premium or Visual Studio Ultimate, you can use the My Work (Keyboard: Ctrl + 0, M) page in the team explorer to manage your work.
 
 ![To Do List on My Work Page in Team Navigator](media/develop-code-manage-pending-changes/IC591023.png)  
-You can use My Work to:  
--   Track your work against [work items](../../boards/queries/link-work-items-support-traceability.md)    
--   Suspend and later resume your work (including file changes, associated work items, and Visual Studio state such as window positions and breakpoints)  
--   Request a code review
+You can use My Work to:
+
+- Track your work against [work items](../../boards/queries/link-work-items-support-traceability.md)
+- Suspend and later resume your work (including file changes, associated work items, and Visual Studio state such as window positions and breakpoints)
+- Request a code review
 
 For a step-by-step example, see [Day in the life of an devops Developer: Write new code for a user story](day-life-alm-developer-write-new-code-user-story.md), and [Day in the life of a devops Developer: Suspend work, fix a bug, and conduct a code review](day-life-alm-developer-suspend-work-fix-bug-conduct-code-review.md).
 
 ### Tips
 
--   You can control the kinds of work items that appear in the **Available Work Items** section. Choose one of the default options or any of your personal queries that are contained in the root **My Queries** folder. To work with these queries, in the team explorer choose ![Home icon](media/develop-code-manage-pending-changes/IC547418.png) **Home**, and then choose **Work Items**.  
--   When you move a work item to **Available**, **In Progress**, or **Suspended**, the work item state or comments are updated so that your team is automatically advised on the status of your work. For example, the task board for your team is updated to show your status. See [Collaborate [redirected]](https://msdn.microsoft.com/library/hh500404).  
--   If your project contains customized work item type definitions, you might have problems using My Work, unless an Administrator for your project has taken certain steps. See [Configure and customize Agile planning tools for a project](../../boards/work-items/guidance/agile-process.md) and [Update a customized process template to access new features](https://msdn.microsoft.com/library/ms194972).
+- You can control the kinds of work items that appear in the **Available Work Items** section. Choose one of the default options or any of your personal queries that are contained in the root **My Queries** folder. To work with these queries, in the team explorer choose ![Home icon](media/develop-code-manage-pending-changes/IC547418.png) **Home**, and then choose **Work Items**.
+- When you move a work item to **Available**, **In Progress**, or **Suspended**, the work item state or comments are updated so that your team is automatically advised on the status of your work. For example, the task board for your team is updated to show your status. See [Collaborate [redirected]](https://msdn.microsoft.com/library/hh500404).
+- If your project contains customized work item type definitions, you might have problems using My Work, unless an Administrator for your project has taken certain steps. See [Configure and customize Agile planning tools for a project](../../boards/work-items/guidance/agile-process.md) and [Update a customized process template to access new features](https://msdn.microsoft.com/library/ms194972).
 
 ## Use the Pending Changes page to manage your work
 
@@ -55,19 +55,21 @@ You can use the Pending Changes page (Keyboard: Ctrl + 0, P) in the team explore
 ![Checking in the pending changes](media/develop-code-manage-pending-changes/IC591276.png)
 
 > [!TIP]
-> -  You can <img src="media/develop-code-manage-pending-changes/IC667296.png" title="Undock" alt="Undock" style="border: 1px solid black;"/> undock the Pending Changes page from the team explorer and open it in a new window.
-> -  You can toggle between list and tree view from the actions menu.
+>
+> - You can <img src="media/develop-code-manage-pending-changes/IC667296.png" title="Undock" alt="Undock" style="border: 1px solid black;"/> undock the Pending Changes page from the team explorer and open it in a new window.
+> - You can toggle between list and tree view from the actions menu.
 
-Almost every change that you make to the files on your dev machine is stored in your workspace as a pending change until you check it in:  
--   [add](add-files-server.md)  
--   [branch](branch-folders-files.md)  
--   [delete](delete-restore-files-folders.md)  
--   [edit](check-out-edit-files.md)  
--   [rename](rename-move-files-folders.md) (includes moving items)  
--   property  
--   [rollback](roll-back-changesets.md)  
--   [type](/azure/devops/server/admin/manage-file-types#config-file-encodings) (file encoding)  
--   [undelete](delete-restore-files-folders.md)
+Almost every change that you make to the files on your dev machine is stored in your workspace as a pending change until you check it in:
+
+- [add](add-files-server.md)
+- [branch](branch-folders-files.md)
+- [delete](delete-restore-files-folders.md)
+- [edit](check-out-edit-files.md)
+- [rename](rename-move-files-folders.md) (includes moving items)
+- property
+- [rollback](roll-back-changesets.md)
+- [type](/azure/devops/server/admin/manage-file-types#config-file-encodings) (file encoding)
+- [undelete](delete-restore-files-folders.md)
 
 ### Work with automatically detected changes
 
@@ -94,18 +96,18 @@ You can remind yourself about what you've changed in a file.
 
 ### Use Pending Changes to view what you changed
 
--   On the Pending Changes page, open the context menu for the item and choose:  
-    -   **Compare with Workspace Version** to see what you've changed to the version in your workspace  
-    -   **Compare with Latest Version** to see how your changes compare to the latest version of the file in your team's codebase
+- On the Pending Changes page, open the context menu for the item and choose:
+  - **Compare with Workspace Version** to see what you've changed to the version in your workspace
+  - **Compare with Latest Version** to see how your changes compare to the latest version of the file in your team's codebase
 
 ### Use Solution Explorer or Source Control Explorer to view what you changed
 
-1.  Locate and select the item in Solution Explorer or in Source Control Explorer.  
-2.  Open the context menu for the item, and then choose **Compare**.  
-3.  On the **Compare** dialog box, from the **Type** menu, choose:  
-    -   **Workspace Version** to see what you've changed in the version in your workspace  
-    -   **Latest Version** to see how your changes compare to the latest version of the file in your team's codebase  
-    -   One of the other options: **Changeset**, **Date**, or **Label**.  
+1.  Locate and select the item in Solution Explorer or in Source Control Explorer.
+2.  Open the context menu for the item, and then choose **Compare**.
+3.  On the **Compare** dialog box, from the **Type** menu, choose:
+    - **Workspace Version** to see what you've changed in the version in your workspace
+    - **Latest Version** to see how your changes compare to the latest version of the file in your team's codebase
+    - One of the other options: **Changeset**, **Date**, or **Label**.
 4.  Choose **OK**.
 
 The Diff window appears. See [Compare files](compare-files.md).
@@ -117,7 +119,7 @@ You can discard one, a few, or all of the pending changes in your workspace.
 > [!NOTE]
 > A few other options:
 >
-> -  You can first [put the changes away in a shelveset on your server](suspend-your-work-manage-your-shelvesets.md) before removing them from your workspace.  
+> - You can first [put the changes away in a shelveset on your server](suspend-your-work-manage-your-shelvesets.md) before removing them from your workspace.
 > - If you have already checked in the change and want to revert it, see [Roll back changesets](roll-back-changesets.md).
 
 ### To undo a few of your pending changes
@@ -131,12 +133,12 @@ You can discard one, a few, or all of the pending changes in your workspace.
 
 ### To undo all your pending changes
 
--   On the **Pending Changes** page, choose the **Actions** link, and then choose **Undo All**.
+- On the **Pending Changes** page, choose the **Actions** link, and then choose **Undo All**.
 
 ## Use the command prompt
 
-- [Status command](status-command.md) : Display pending changes in the command prompt.  
-- [Checkin command](checkin-command.md) : View pending changes in the **Check In** dialog box.  
+- [Status command](status-command.md) : Display pending changes in the command prompt.
+- [Checkin command](checkin-command.md) : View pending changes in the **Check In** dialog box.
 - [Undo command](undo-command.md) : Undo pending changes.
 
   > [!TIP]
@@ -146,13 +148,14 @@ You can discard one, a few, or all of the pending changes in your workspace.
 
 ## Next steps
 
-When you're ready:  
--   To request a code review of your pending changes, on the **Pending Changes** page, choose Request Review. See [Day in the life of an devops Developer: Suspend work, fix a bug, and conduct a code review](day-life-alm-developer-suspend-work-fix-bug-conduct-code-review.md).  
--   If you need to set aside your changes, see [Suspend your work and manage your shelvesets](suspend-your-work-manage-your-shelvesets.md).  
--   Check in and add your changes to the team's codebase, see [Check in your work to the team's codebase](check-your-work-team-codebase.md).
+When you're ready:
+
+- To request a code review of your pending changes, on the **Pending Changes** page, choose Request Review. See [Day in the life of an devops Developer: Suspend work, fix a bug, and conduct a code review](day-life-alm-developer-suspend-work-fix-bug-conduct-code-review.md).
+- If you need to set aside your changes, see [Suspend your work and manage your shelvesets](suspend-your-work-manage-your-shelvesets.md).
+- Check in and add your changes to the team's codebase, see [Check in your work to the team's codebase](check-your-work-team-codebase.md).
 
 ## Tips
 
--   If you are new to developing an app with Visual Studio and Team Foundation Server: [Walk step by step with an agile team as they collaborate to develop an app](day-life-alm-developer-write-new-code-user-story.md).  
--   When you begin a new work item, it is probably a good idea for you to [download the latest files from the server](download-get-files-from-server.md) before you check out files and begin your work.  
--   Use [Source Control Explorer](use-source-control-explorer-manage-files-under-version-control.md) to manage your files in version control.
+- If you are new to developing an app with Visual Studio and Team Foundation Server: [Walk step by step with an agile team as they collaborate to develop an app](day-life-alm-developer-write-new-code-user-story.md).
+- When you begin a new work item, it is probably a good idea for you to [download the latest files from the server](download-get-files-from-server.md) before you check out files and begin your work.
+- Use [Source Control Explorer](use-source-control-explorer-manage-files-under-version-control.md) to manage your files in version control.

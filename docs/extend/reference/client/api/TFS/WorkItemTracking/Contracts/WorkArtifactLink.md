@@ -11,8 +11,8 @@ ms.date: 11/12/2019
 
 # WorkArtifactLink
 
-| Field        | Type
-| :----------- | :--------
-| <code>artifactType</code> | string
-| <code>linkType</code> | string
-| <code>toolType</code> | string
+| Field                     | Type   |
+| :------------------------ | :----- |
+| <code>artifactType</code> | string |
+| <code>linkType</code>     | string |
+| <code>toolType</code>     | string |

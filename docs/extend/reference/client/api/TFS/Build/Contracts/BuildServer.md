@@ -14,30 +14,28 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `agents`: [ShallowReference](./ShallowReference.md)[]. 
+- `agents`: [ShallowReference](./ShallowReference.md)[].
 
-* `controller`: [ShallowReference](./ShallowReference.md). 
+- `controller`: [ShallowReference](./ShallowReference.md).
 
-* `id`: number. 
+- `id`: number.
 
-* `isVirtual`: boolean. 
+- `isVirtual`: boolean.
 
-* `messageQueueUrl`: string. 
+- `messageQueueUrl`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `requireClientCertificates`: boolean. 
+- `requireClientCertificates`: boolean.
 
-* `status`: [ServiceHostStatus](./ServiceHostStatus.md). 
+- `status`: [ServiceHostStatus](./ServiceHostStatus.md).
 
-* `statusChangedDate`: Date. 
+- `statusChangedDate`: Date.
 
-* `uri`: string. 
+- `uri`: string.
 
-* `url`: string. 
+- `url`: string.
 
-* `version`: number. 
-
+- `version`: number.

@@ -4,7 +4,7 @@ ms.topic: conceptual
 title: WebHooks with Azure DevOps Services
 description: Use WebHooks with your Azure DevOps Services organization
 ms.assetid: 6c7dfe37-800d-47b8-b9db-9f73878eeb77
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 2/08/2019
 ---
 
@@ -18,53 +18,53 @@ For more information about the JSON payloads posted by this consumer, see [event
 
 ::: moniker range=">= azure-devops-2019"
 
-1. Go to your project Service Hooks page: 
+1. Go to your project Service Hooks page:
 
-	`https://{orgName}/{project_name}/_settings/serviceHooks`
+   `https://{orgName}/{project_name}/_settings/serviceHooks`
 
-	![Project administration page](./media/add-devops-service-hook.png)
+   ![Project administration page](./media/add-devops-service-hook.png)
 
-	Select **Create Subscription**.
+   Select **Create Subscription**.
 
-1.  Select and configure the Azure DevOps Services event:
+1. Select and configure the Azure DevOps Services event:
 
-	![Configure the event dialog box](./media/webhooks/configure-event.png)
+   ![Configure the event dialog box](./media/webhooks/configure-event.png)
 
 1. Configure what to do when the event occurs:
 
-	See Q & A below for information on the **Resource details to send**, **Messages to send**, and **Detailed messages to send** settings.
+   See Q & A below for information on the **Resource details to send**, **Messages to send**, and **Detailed messages to send** settings.
 
-	![Configure the action dialog box](./media/webhooks/configure-action.png)
+   ![Configure the action dialog box](./media/webhooks/configure-action.png)
 
 1. Test the service hook subscription and finish the wizard:
 
-	![Test it](./media/webhooks/test.png)
+   ![Test it](./media/webhooks/test.png)
 
 ::: moniker-end
 
 ::: moniker range=">= tfs-2017 < azure-devops-2019"
 
-1. Go to your project Service Hooks page: 
+1. Go to your project Service Hooks page:
 
-    `https://dev.azure.com/{orgName}/{project_name}/_apps/hub/ms.vss-servicehooks-web.manageServiceHooks-project`
+   `https://dev.azure.com/{orgName}/{project_name}/_apps/hub/ms.vss-servicehooks-web.manageServiceHooks-project`
 
-	![Project administration page](./media/add-service-hook.png)
+   ![Project administration page](./media/add-service-hook.png)
 
-	Select **Create Subscription**.
+   Select **Create Subscription**.
 
-1.  Select and configure the Azure DevOps Services event:
+1. Select and configure the Azure DevOps Services event:
 
-	![Configure the event dialog box](./media/webhooks/configure-event.png)
+   ![Configure the event dialog box](./media/webhooks/configure-event.png)
 
 1. Configure what to do when the event occurs:
 
-	See Q & A below for information on the **Resource details to send**, **Messages to send**, and **Detailed messages to send** settings.
+   See Q & A below for information on the **Resource details to send**, **Messages to send**, and **Detailed messages to send** settings.
 
-	![Configure the action dialog box](./media/webhooks/configure-action.png)
+   ![Configure the action dialog box](./media/webhooks/configure-action.png)
 
 1. Test the service hook subscription and finish the wizard:
 
-	![Test it](./media/webhooks/test.png)
+   ![Test it](./media/webhooks/test.png)
 
 ::: moniker-end
 
@@ -72,10 +72,10 @@ Now the Web hook is set up. Go to the target service to view the JSON representa
 
 ![View the JSON representation](./media/webhooks/request-bin.png)
 
-
 ## Pricing
+
 Azure DevOps Services doesn't charge for the framework for integrating with external services. Check out the specific service's site
-for pricing related to their services. 
+for pricing related to their services.
 
 ## Q & A
 
@@ -115,7 +115,7 @@ Sample JSON:
 	        "name": "...",
 	        "field1:": "..."
 	    }
-	}	
+	}
 ```
 
 #### Q: Can I programmatically create subscriptions?
@@ -124,14 +124,14 @@ A: Yes, see details [here](../create-subscription.md).
 
 #### Q: Can I send web hooks to non HTTPS endpoints?
 
-A: Yes. However, it's recommended that you only use HTTPS endpoints for your web hooks. Using HTTP means there is a the potential for private data being sent unencrypted. This includes any authentication headers in your web hook. 
+A: Yes. However, it's recommended that you only use HTTPS endpoints for your web hooks. Using HTTP means there is a the potential for private data being sent unencrypted. This includes any authentication headers in your web hook.
 
 #### Q: Can I use basic authentication when setting up a web hook that isn't HTTPS?
 
-A: No. You must use HTTPS when utilizing basic authentication on a web hook. 
+A: No. You must use HTTPS when utilizing basic authentication on a web hook.
 
 #### Q: Can we use localhost or special range IPs as web hook targets?
 
-A: No. Web hooks cannot target localhost (loopback) or special range [IPv4](https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml)/[IPv6](https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml) addresses. 
+A: No. Web hooks cannot target localhost (loopback) or special range [IPv4](https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml)/[IPv6](https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml) addresses.
 
 <!-- ENDSECTION -->

@@ -18,9 +18,8 @@ Extends: [TimelineReference](../../../TFS/DistributedTask/Contracts/TimelineRefe
 
 ### Members
 
-* `lastChangedBy`: string. 
+- `lastChangedBy`: string.
 
-* `lastChangedOn`: Date. 
+- `lastChangedOn`: Date.
 
-* `records`: [TimelineRecord](../../../TFS/DistributedTask/Contracts/TimelineRecord.md)[]. 
-
+- `records`: [TimelineRecord](../../../TFS/DistributedTask/Contracts/TimelineRecord.md)[].

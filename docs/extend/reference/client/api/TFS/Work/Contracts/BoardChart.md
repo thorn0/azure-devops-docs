@@ -17,7 +17,6 @@ Extends: [BoardChartReference](../../../TFS/Work/Contracts/BoardChartReference.m
 
 ### Members
 
-* `_links`: any. The links for the resource
+- `_links`: any. The links for the resource
 
-* `settings`: {[key: string]: any}. The settings for the resource
-
+- `settings`: {[key: string]: any}. The settings for the resource

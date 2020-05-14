@@ -7,7 +7,7 @@ ms.assetid: 11E76804-BA67-4086-9CF1-8CB2887169BA
 ms.author: vijayma
 author: vijayma
 ms.date: 12/23/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Visual Studio Build task
@@ -155,6 +155,7 @@ msbuild, visualstudio
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 [!INCLUDE [temp](../includes/msbuild_qa.md)]

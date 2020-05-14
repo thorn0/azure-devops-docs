@@ -4,27 +4,29 @@ description: C# samples showing how to integrate with Azure DevOps Services and 
 ms.assetid: 9ff78e9c-63f7-45b1-a70d-42aa6a9dbc57
 ms.technology: devops-ecosystem
 ms.topic: conceptual
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.author: chcomley
 author: chcomley
 ms.date: 08/04/2016
 ---
 
-# C# client library samples 
+# C# client library samples
 
 Samples showing how to extend and integrate with Team Foundation Server and Azure DevOps Services using the [.NET client libraries](../../concepts/dotnet-client-libraries.md).
 
-
 ## Samples in GitHub
-There are many samples with instructions on how to run them on our [.NET Sample GitHub Page](https://github.com/microsoft/azure-devops-dotnet-samples). 
+
+There are many samples with instructions on how to run them on our [.NET Sample GitHub Page](https://github.com/microsoft/azure-devops-dotnet-samples).
 
 ## Other samples
-REST examples on this page require the following NuGet packages:
-* [Microsoft.TeamFoundationServer.Client](https://www.nuget.org/packages/Microsoft.TeamFoundationServer.Client/)
-* [Microsoft.VisualStudio.Services.Client](https://www.nuget.org/packages/Microsoft.VisualStudio.Services.Client/)
-* [Microsoft.VisualStudio.Services.InteractiveClient](https://www.nuget.org/packages/Microsoft.VisualStudio.Services.InteractiveClient/)
 
->[!NOTE]
+REST examples on this page require the following NuGet packages:
+
+- [Microsoft.TeamFoundationServer.Client](https://www.nuget.org/packages/Microsoft.TeamFoundationServer.Client/)
+- [Microsoft.VisualStudio.Services.Client](https://www.nuget.org/packages/Microsoft.VisualStudio.Services.Client/)
+- [Microsoft.VisualStudio.Services.InteractiveClient](https://www.nuget.org/packages/Microsoft.VisualStudio.Services.InteractiveClient/)
+
+> [!NOTE]
 > The Work Item Tracking (WIT) and Test Client OM are scheduled to be deprecated in 2020. For more information, see [Deprecation of WIT and Test Client OM](../../concepts/wit-client-om-deprecation.md).
 
 #### Example: Using a REST-based HTTP client
@@ -38,18 +40,18 @@ using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
 using Microsoft.VisualStudio.Services.Client;
 
 // https://www.nuget.org/packages/Microsoft.VisualStudio.Services.Client/
-using Microsoft.VisualStudio.Services.Common; 
+using Microsoft.VisualStudio.Services.Common;
 
 /// <summary>
 /// This sample creates a new work item query for New Bugs, stores it under 'MyQueries', runs the query, and then sends the results to the console.
 /// </summary>
 public static void SampleREST()
 {
-    // Connection object could be created once per application and we will use it to get httpclient objects. 
+    // Connection object could be created once per application and we will use it to get httpclient objects.
     // Httpclients have been reused between callers and threads.
     // Their lifetime has been managed by connection (we don't have to dispose them).
-    // This is more robust then newing up httpclient objects directly.  
-    
+    // This is more robust then newing up httpclient objects directly.
+
     // Be sure to send in the full collection uri, i.e. http://myserver:8080/tfs/defaultcollection
     // We are using default VssCredentials which uses NTLM against a Team Foundation Server.  See additional provided
     // examples for creating credentials for other types of authentication.
@@ -123,6 +125,7 @@ public static void SampleREST()
 To change the method of authentication to Azure DevOps Services or Azure DevOps Server, change the VssCredential type passed to VssConnection when creating it.
 
 ##### Personal Access Token authentication for REST services
+
 ```cs
 public static void PersonalAccessTokenRestSample()
 {
@@ -144,6 +147,7 @@ public static void MicrosoftAccountRestSample()
 ```
 
 ##### Azure Active Directory Authentication for REST services
+
 ```cs
 public static void AADRestSample()
 {
@@ -153,7 +157,9 @@ public static void AADRestSample()
 ```
 
 ##### OAuth Authentication for REST services
+
 Follow this link to learn how to obtain and refresh an OAuth accessToken: https://github.com/microsoft/azure-devops-auth-samples
+
 ```cs
 public static void OAuthSample()
 {

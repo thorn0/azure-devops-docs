@@ -14,22 +14,20 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `authenticationSchemes`: [ServiceEndpointAuthenticationScheme](../../../TFS/DistributedTask/Contracts/ServiceEndpointAuthenticationScheme.md)[]. 
+- `authenticationSchemes`: [ServiceEndpointAuthenticationScheme](../../../TFS/DistributedTask/Contracts/ServiceEndpointAuthenticationScheme.md)[].
 
-* `dataSources`: [DataSource](../../../TFS/DistributedTask/Contracts/DataSource.md)[]. 
+- `dataSources`: [DataSource](../../../TFS/DistributedTask/Contracts/DataSource.md)[].
 
-* `description`: string. 
+- `description`: string.
 
-* `displayName`: string. 
+- `displayName`: string.
 
-* `endpointUrl`: EndpointUrl. 
+- `endpointUrl`: EndpointUrl.
 
-* `helpLink`: HelpLink. 
+- `helpLink`: HelpLink.
 
-* `helpMarkDown`: string. 
+- `helpMarkDown`: string.
 
-* `name`: string. 
-
+- `name`: string.

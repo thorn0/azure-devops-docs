@@ -1,8 +1,8 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Work Item Tracking Samples | REST API Reference for Team Foundation Server
-description: Samples for work item tracking using the REST APIs and .NET Libraries for Team Foundation Server. 
+description: Samples for work item tracking using the REST APIs and .NET Libraries for Team Foundation Server.
 ms.assetid: 94639057-d0b4-472e-952d-182efcc165fa
 ms.topic: article
 ms.author: chcomley
@@ -18,7 +18,7 @@ ms.date: 08/24/2016
 
 ## Getting Started
 
-If this is your first time using the REST APIs or .NET libraries, check out the [getting started sample](../../get-started/rest/samples.md) first. 
+If this is your first time using the REST APIs or .NET libraries, check out the [getting started sample](../../get-started/rest/samples.md) first.
 
 All sample source code is located at [our GitHub repo](https://github.com/Microsoft/vsts-restapi-samplecode).
 
@@ -39,7 +39,7 @@ using Newtonsoft.Json;
 
 ...
 
-public class WebApiTeams 
+public class WebApiTeams
 {
     public WebApiTeam[] value { get; set; }
     public int count { get; set; }
@@ -55,12 +55,12 @@ public class WebApiTeam
 }
 
 public void GetTeams()
-{   
+{
     string _personalAccessToken = "your personal access token";
     string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
     string _project = "My project name";
-      
-    //use the httpclient        
+
+    //use the httpclient
     using (var client = new HttpClient())
     {
         //set our headers
@@ -71,11 +71,11 @@ public void GetTeams()
 
         //send the request and content
         HttpResponseMessage response = client.GetAsync("_apis/projects/" + _project + "/teams?api-version=2.2").Result;
-        
+
         if (response.IsSuccessStatusCode)
         {
-            WebApiTeams teams = response.Content.ReadAsAsync<WebApiTeams>().Result;       
-        }             
+            WebApiTeams teams = response.Content.ReadAsAsync<WebApiTeams>().Result;
+        }
     }
 }
 
@@ -104,13 +104,13 @@ public class WebApiTeam
 }
 
 public void GetTeam()
-{   
+{
     string _personalAccessToken = "your personal access token";
     string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
     string _project = "My project name";
     string _team = "My team";
-      
-    //use the httpclient        
+
+    //use the httpclient
     using (var client = new HttpClient())
     {
         //set our headers
@@ -121,11 +121,11 @@ public void GetTeam()
 
         //send the request and content
         HttpResponseMessage response = client.GetAsync("_apis/projects/" + _project + "/teams/" + _team + "?api-version=2.2").Result;
-        
+
         if (response.IsSuccessStatusCode)
         {
-            WebApiTeam team = response.Content.ReadAsAsync<WebApiTeam>().Result;       
-        }             
+            WebApiTeam team = response.Content.ReadAsAsync<WebApiTeam>().Result;
+        }
     }
 }
 
@@ -160,13 +160,13 @@ public class Member
 }
 
 public void GetTeamMembers()
-{   
+{
     string _personalAccessToken = "your personal access token";
     string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
     string _project = "My project name";
     string _team = "My team";
-      
-    //use the httpclient        
+
+    //use the httpclient
     using (var client = new HttpClient())
     {
         //set our headers
@@ -177,11 +177,11 @@ public void GetTeamMembers()
 
         //send the request and content
         HttpResponseMessage response = client.GetAsync("_apis/projects/" + _project + "/teams/" + _team + "/members?api-version=2.2").Result;
-        
+
         if (response.IsSuccessStatusCode)
         {
-            Members members = response.Content.ReadAsAsync<Members>().Result;       
-        }             
+            Members members = response.Content.ReadAsAsync<Members>().Result;
+        }
     }
 }
 
@@ -210,10 +210,10 @@ public class WebApiTeam
 }
 
 public void CreateTeam()
-{   
+{
     string _personalAccessToken = "your personal access token";
     string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
-    string _project = "My project name"; 
+    string _project = "My project name";
 
     //create a team object to save
     Object teamData = new { name = "My new team" };
@@ -224,7 +224,7 @@ public void CreateTeam()
         client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", _credentials);
 
-        // serialize the fields array into a json string         
+        // serialize the fields array into a json string
         var patchValue = new StringContent(JsonConvert.SerializeObject(teamData), Encoding.UTF8, "application/json"); // mediaType needs to be application/json-patch+json for a patch call
         var method = new HttpMethod("POST");
 
@@ -233,7 +233,7 @@ public void CreateTeam()
 
         if (response.IsSuccessStatusCode)
         {
-            WebApiTeam teamResponse = response.Content.ReadAsAsync<WebApiTeam>().Result;            
+            WebApiTeam teamResponse = response.Content.ReadAsAsync<WebApiTeam>().Result;
         }
     }
 }
@@ -263,11 +263,11 @@ public class WebApiTeam
 }
 
 public void UpdateTeam()
-{   
+{
     string _personalAccessToken = "your personal access token";
     string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
-    
-    string _project = "My project name"; 
+
+    string _project = "My project name";
     string _team = "My team";
 
     //create a team object to save
@@ -279,7 +279,7 @@ public void UpdateTeam()
         client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", _credentials);
 
-        // serialize the fields array into a json string         
+        // serialize the fields array into a json string
         var patchValue = new StringContent(JsonConvert.SerializeObject(team), Encoding.UTF8, "application/json"); // mediaType needs to be application/json-patch+json for a patch call
         var method = new HttpMethod("PATCH");
 
@@ -288,9 +288,9 @@ public void UpdateTeam()
 
         if (response.IsSuccessStatusCode)
         {
-            WebApiTeam teamResponse = response.Content.ReadAsAsync<WebApiTeam>().Result;     
-        }  
-    }    
+            WebApiTeam teamResponse = response.Content.ReadAsAsync<WebApiTeam>().Result;
+        }
+    }
 }
 
 ```
@@ -309,10 +309,10 @@ using Newtonsoft.Json;
 ....
 
 public void DeleteTeam()
-{   
+{
     string _personalAccessToken = "your personal access token";
     string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
-    string _project = "My project name"; 
+    string _project = "My project name";
     string _team = "My team";
 
     using (var client = new HttpClient())
@@ -324,7 +324,7 @@ public void DeleteTeam()
         var method = new HttpMethod("DELETE");
 
         var request = new HttpRequestMessage(method, "https://accountname.visualstudio.com/_apis/projects/" + _project + "/teams/" + _team + "?api-version=2.2");
-        var response = client.SendAsync(request).Result;        
+        var response = client.SendAsync(request).Result;
     }
 }
 
@@ -347,14 +347,14 @@ public GetTeams()
 {
     //create uri and VssBasicCredential variables
     Uri _uri = new Uri("https://accountname.visualstudio.com");
-    string _personalAccessToken = "your personal access token";    
+    string _personalAccessToken = "your personal access token";
     VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);
-   
+
     string _project = "My project name";
-    
+
     using (TeamHttpClient teamHttpClient = new TeamHttpClient(_uri, _credentials))
     {
-        IEnumerable<WebApiTeam> results = teamHttpClient.GetTeamsAsync(_project).Result;     
+        IEnumerable<WebApiTeam> results = teamHttpClient.GetTeamsAsync(_project).Result;
     }
 }
 
@@ -375,15 +375,15 @@ public GetTeam()
 {
     //create uri and VssBasicCredential variables
     Uri _uri = new Uri("https://accountname.visualstudio.com");
-    string _personalAccessToken = "your personal access token";    
+    string _personalAccessToken = "your personal access token";
     VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);
-    
+
     string _project = "My project name";
     string _team = "My team";
-    
+
     using (TeamHttpClient teamHttpClient = new TeamHttpClient(_uri, _credentials))
     {
-        WebApiTeam result = teamHttpClient.GetTeamAsync(_project, _team).Result;     
+        WebApiTeam result = teamHttpClient.GetTeamAsync(_project, _team).Result;
     }
 }
 
@@ -404,15 +404,15 @@ public GetTeamMembers()
 {
     //create uri and VssBasicCredential variables
     Uri _uri = new Uri("https://accountname.visualstudio.com");
-    string _personalAccessToken = "your personal access token";    
-    VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);    
-    
+    string _personalAccessToken = "your personal access token";
+    VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);
+
     string _project = "My project name";
     string _team = "My team"
 
     using (TeamHttpClient teamHttpClient = new TeamHttpClient(_uri, _credentials))
     {
-        IEnumerable<IdentityRef> results = teamHttpClient.GetTeamMembersAsync(_project, _team).Result;               
+        IEnumerable<IdentityRef> results = teamHttpClient.GetTeamMembersAsync(_project, _team).Result;
     }
 }
 
@@ -433,11 +433,11 @@ public CreateTeam()
 {
     //create uri and VssBasicCredential variables
     Uri _uri = new Uri("https://accountname.visualstudio.com");
-    string _personalAccessToken = "your personal access token";    
+    string _personalAccessToken = "your personal access token";
     VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);
-    
+
     string _project = "My project name";
-  
+
     WebApiTeam teamData = new WebApiTeam()
     {
         Name = "My new team"
@@ -450,7 +450,6 @@ public CreateTeam()
 }
 
 ```
-
 
 ### Update Existing Team
 
@@ -467,12 +466,12 @@ public UpdateTeam()
 {
     //create uri and VssBasicCredential variables
     Uri _uri = new Uri("https://accountname.visualstudio.com");
-    string _personalAccessToken = "your personal access token";    
+    string _personalAccessToken = "your personal access token";
     VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);
-    
+
     string _project = "My project name";
     string _team = "My team";
-  
+
     WebApiTeam teamData = new WebApiTeam()
     {
         Name = "My updated team",
@@ -502,11 +501,11 @@ public DeleteTeam()
 {
     //create uri and VssBasicCredential variables
     Uri _uri = new Uri("https://accountname.visualstudio.com");
-    string _personalAccessToken = "your personal access token";    
+    string _personalAccessToken = "your personal access token";
     VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);
-    
+
     string _project = "My project name";
-    string _team = "My team";  
+    string _team = "My team";
 
     using (TeamHttpClient teamHttpClient = new TeamHttpClient(_uri, _credentials))
     {
@@ -528,8 +527,4 @@ A: See the [https://github.com/Microsoft/vsts-restapi-samplecode](https://github
 
 A: Yes, see the [overview of client libraries](../../get-started/client-libraries/dotnet.md)
 
-
-<!-- ENDSECTION --> 
-
-
-
+<!-- ENDSECTION -->

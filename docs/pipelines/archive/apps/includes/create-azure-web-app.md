@@ -10,7 +10,7 @@ ms.date: 02/19/2020
 ## Create an Azure Web App using the CLI
 
 > [!NOTE]
-> If you already have a web app that you want to use, you can skip this and move to the next section.  
+> If you already have a web app that you want to use, you can skip this and move to the next section.
 
 The Azure Cloud Shell is a free Bash shell that you can run directly within the Azure portal.
 It has the Azure CLI preinstalled and configured to use with your Azure subscription.
@@ -22,7 +22,7 @@ The button launches an interactive shell that you can use to run all of the foll
 
 [![Screenshot showing the Cloud Shell window in the portal]((https://docs.microsoft.com/azure/includes/media/cloud-shell-try-it/cloud-shell-safari.png)](https://portal.azure.com)
 
-Create a resource group with the [az group create](/cli/azure/group#az-group-create) command. The following example creates a resource group named *myResourceGroup* in the *eastus* location.
+Create a resource group with the [az group create](/cli/azure/group#az-group-create) command. The following example creates a resource group named _myResourceGroup_ in the _eastus_ location.
 
 ```azurecli-interactive
 az group create --name myResourceGroup --location eastus

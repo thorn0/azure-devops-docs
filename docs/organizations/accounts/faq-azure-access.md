@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 04/20/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Access via Azure AD FAQs
@@ -18,6 +18,7 @@ monikerRange: 'azure-devops'
 [!INCLUDE [alt-creds-deprecation-notice](../../includes/alt-creds-deprecation-notice.md)]
 
 In this article, learn the answers to the following frequently asked questions (FAQs) about access to your Azure DevOps organization via Azure Active Directory (AD). FAQs are grouped by the following subjects:
+
 - [General](#general)
 - [Azure AD users and permissions](#azure-ad-users-and-permissions)
 - [Azure AD groups](#azure-ad-groups)
@@ -29,10 +30,10 @@ In this article, learn the answers to the following frequently asked questions (
 
 ## General access with Azure AD
 
-### Q:  Why don't I see my organization in the Azure portal?
+### Q: Why don't I see my organization in the Azure portal?
 
-A:  In both applications, you must have
-[Azure Service Administrator or Co-administrator](/azure/billing-add-change-azure-subscription-administrator) 
+A: In both applications, you must have
+[Azure Service Administrator or Co-administrator](/azure/billing-add-change-azure-subscription-administrator)
 permissions for the Azure subscription that's linked to your organization in Azure DevOps.
 Also, in the [Azure portal](https://portal.azure.com), you must have Project Collection Administrator or organization Owner permissions.
 
@@ -60,26 +61,27 @@ A: Yes.
 ### Q: My organization uses Microsoft accounts only. Can I switch to Azure AD?
 
 A. Yes, but before you switch, make sure that Azure AD meets your needs for sharing the following items:
+
 - work items
 - code
 - resources
 - other assets with your team and partners
 
-Learn more about 
+Learn more about
 controlling access with Microsoft accounts versus Azure AD, and [how to switch when you're ready](access-with-azure-ad.md).
 
 [!INCLUDE [why-cant-sign-in-msa-azuread-account](../../includes/qa-why-cant-sign-in-msa-azuread-account.md)]
 
 ### Q: What happens if my Azure subscription is disabled?
 
-A: If you're the organization Owner or 
-[Azure subscription Account Administrator](/azure/billing/billing-add-change-azure-subscription-administrator), 
-check your subscription status in the [Account Center](https://account.windowsazure.com/), 
-then try to [fix your subscription](/azure/billing-subscription-become-disable). 
-Your paid settings are restored. 
-Or you can link your organization to another Azure subscription by 
-[unlinking your organization from the disabled subscription](/azure/devops/billing/change-azure-subscription). 
-While your subscription is disabled, your organization goes back to the free 
+A: If you're the organization Owner or
+[Azure subscription Account Administrator](/azure/billing/billing-add-change-azure-subscription-administrator),
+check your subscription status in the [Account Center](https://account.windowsazure.com/),
+then try to [fix your subscription](/azure/billing-subscription-become-disable).
+Your paid settings are restored.
+Or you can link your organization to another Azure subscription by
+[unlinking your organization from the disabled subscription](/azure/devops/billing/change-azure-subscription).
+While your subscription is disabled, your organization goes back to the free
 monthly limits until your subscription is fixed.
 
 <a name="azure-ad-users-and-permissions"></a>
@@ -121,7 +123,7 @@ A: Yes, but deleting a user from the directory removes the user's access to all 
 
 ### Q: Why are "no identities found" when I try to add users from Azure AD to my Azure DevOps organization?
 
-A: You're probably a *guest* in the Azure AD that backs your Azure DevOps organization, rather than a *member*. By default, Azure AD guests can't search the Azure AD in the manner required by Azure DevOps. Learn how to [convert an Azure AD guest into a member](#q-how-can-i-convert-an-azure-ad-guest-into-a-member).
+A: You're probably a _guest_ in the Azure AD that backs your Azure DevOps organization, rather than a _member_. By default, Azure AD guests can't search the Azure AD in the manner required by Azure DevOps. Learn how to [convert an Azure AD guest into a member](#q-how-can-i-convert-an-azure-ad-guest-into-a-member).
 
 <a name="q-how-can-i-convert-an-azure-ad-guest-into-a-member"></a>
 
@@ -129,8 +131,8 @@ A: You're probably a *guest* in the Azure AD that backs your Azure DevOps organi
 
 A: Select from the following two options:
 
-* Have the Azure AD administrator(s) remove you from the Azure AD and readd you, making you an Azure AD *member*, rather than a *guest*. For more information, see [Can Azure AD B2B users be added as members instead of guests](https://docs.microsoft.com/azure/active-directory/b2b/user-properties#can-azure-ad-b2b-users-be-added-as-members-instead-of-guests).
-* [Change the UserType of the Azure AD guest using Azure AD PowerShell](#convert-azure-ad-usertype-from-guest-to-member-using-azure-ad-powershell). [We don't advise](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Fb2b%2Fuser-properties%23convert-usertype&data=02%7C01%7CChrystal.Comley%40microsoft.com%7Cf59a62633fb447b1aaaa08d6b3b86e00%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636894002034849797&sdata=flX3JmpUn8m5sqr%2Fxmc%2B9BPEGJEEUcUPcaXRwLub40s%3D&reserved=0) using this advanced process, but it allows the user to query Azure AD from the Azure DevOps organization.
+- Have the Azure AD administrator(s) remove you from the Azure AD and readd you, making you an Azure AD _member_, rather than a _guest_. For more information, see [Can Azure AD B2B users be added as members instead of guests](https://docs.microsoft.com/azure/active-directory/b2b/user-properties#can-azure-ad-b2b-users-be-added-as-members-instead-of-guests).
+- [Change the UserType of the Azure AD guest using Azure AD PowerShell](#convert-azure-ad-usertype-from-guest-to-member-using-azure-ad-powershell). [We don't advise](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Factive-directory%2Fb2b%2Fuser-properties%23convert-usertype&data=02%7C01%7CChrystal.Comley%40microsoft.com%7Cf59a62633fb447b1aaaa08d6b3b86e00%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636894002034849797&sdata=flX3JmpUn8m5sqr%2Fxmc%2B9BPEGJEEUcUPcaXRwLub40s%3D&reserved=0) using this advanced process, but it allows the user to query Azure AD from the Azure DevOps organization.
 
 #### Convert Azure AD UserType from guest to member using Azure AD PowerShell
 
@@ -141,8 +143,8 @@ A: Select from the following two options:
 
 The user making the UserType change must have the following items:
 
-* A work/school account (WSA)/native user in Azure AD. You can't change the UserType with a Microsoft Account.
-* Global administrator permissions
+- A work/school account (WSA)/native user in Azure AD. You can't change the UserType with a Microsoft Account.
+- Global administrator permissions
 
 > [!IMPORTANT]
 > We recommend that you create a brand new (native) Azure AD user who is a global admin in the Azure AD, and then complete the following steps with that user. This new user should eliminate the possibility of connecting to the wrong Azure AD. You can delete the new user when you're done.
@@ -161,10 +163,10 @@ The user making the UserType change must have the following items:
    ![Administrator action in Windows PowerShell](media/faq/Administrator-action-Windows-PowerShell.png)
 
 6. Once the installation completes, execute `Connect-AzureAD`. You're prompted to sign in to the Azure AD. Be sure to use an ID that meets the criteria above.
-7. Execute `Get-AzureADuser -SearchString "<display_name>"`, where <display_name> is part of the entire display name for the user, as seen inside the Azure portal). The command returns four columns for the user found - ObjectId, DisplayName, UserPrincipalName, UserType - and the UserType should say *guest*.
+7. Execute `Get-AzureADuser -SearchString "<display_name>"`, where <display*name> is part of the entire display name for the user, as seen inside the Azure portal). The command returns four columns for the user found - ObjectId, DisplayName, UserPrincipalName, UserType - and the UserType should say \_guest*.
 8. Execute `Set-AzureADUser -ObjectID <string> -UserType Member`, where <string> is the value of ObjectId returned by the previous command. The user is set to member status.
 9. Execute `Get-AzureADuser -SearchString "<display_name>"` again to verify the UserType has changed. You can also verify in the Azure Active Directory section of the Azure portal.
-While not the norm, we've seen it takes several hours or even days before this change is reflected inside Azure DevOps. If it doesn't fix your Azure DevOps issue immediately, give it some time and keep trying.
+   While not the norm, we've seen it takes several hours or even days before this change is reflected inside Azure DevOps. If it doesn't fix your Azure DevOps issue immediately, give it some time and keep trying.
 
 <a name="azure-ad-groups"></a>
 
@@ -188,11 +190,11 @@ A: The Azure DevOps UI indicates membership scope using brackets `[]`. For examp
 
 ![Permissions Settings with various scopes](media/manage-azure-ad-groups/permissions-scope-example.png)
 
-| Scope name | Definition |
-|:--|:--|
-| `[fabrikam-fiber]` | Membership is defined in Organization Settings |
-| `[Project Name]` | Membership is defined in Project Settings |
-| `[TEAM FOUNDATION]` | Membership is defined _directly_ in Azure AD | 
+| Scope name          | Definition                                     |
+| :------------------ | :--------------------------------------------- |
+| `[fabrikam-fiber]`  | Membership is defined in Organization Settings |
+| `[Project Name]`    | Membership is defined in Project Settings      |
+| `[TEAM FOUNDATION]` | Membership is defined _directly_ in Azure AD   |
 
 > [!Note]
 > If you add an Azure AD group to a custom security group _and_ use a similar name, you may see what appears to be duplicate groups. Examine the scope in `[]` to determine which is a DevOps Group and which is an Azure AD Group.
@@ -209,7 +211,7 @@ A: When these group members sign in to your organization for the first time, Azu
 [Visual Studio subscriptions](faq-user-and-permissions-management.md#EligibleMSDNSubscriptions),
 Azure DevOps assigns the respective access level to them. Otherwise, Azure DevOps assigns them the next "best available"
 [access level](https://visualstudio.microsoft.com/pricing/visual-studio-online-feature-matrix-vs), in this order: Basic, Stakeholder.
- 
+
 If you don't have enough access levels for all Azure AD group members, those members who sign in get a Stakeholder access.
 
 ### Q: Why doesn't the Security tab show all members when I select an Azure AD group?
@@ -317,6 +319,7 @@ A: Users who are disabled or removed from your directory, can no longer access y
 - [Disconnect your organization from your directory](disconnect-organization-from-aad.md)
 - [Change the directory that's connected to Azure DevOps](change-azure-ad-connection.md)
 - [Get a list of organizations backed by Azure AD](get-list-of-organizations-connected-to-azure-active-directory.md)
+
 * [Restrict organization creation with tenant policy](azure-ad-tenant-policy-restrict-org-creation.md)
 
 ### Q: How can I manage multiple organizations that are backed by Azure AD?
@@ -336,9 +339,9 @@ A: Yes. If you can't find your Azure AD created from Office 365, see
 
 A: You might not see the directory for any of the following circumstances:
 
-* You don't have [organization Owner permissions](../security/lookup-organization-owner-admin.md) to manage directory connections.
+- You don't have [organization Owner permissions](../security/lookup-organization-owner-admin.md) to manage directory connections.
 
-* Talk to your Azure AD organization administrator and ask them to make you a member of the organization. It's possible that you're not  part of the organization.
+- Talk to your Azure AD organization administrator and ask them to make you a member of the organization. It's possible that you're not part of the organization.
 
 <a name="AlreadyConnected"></a>
 
@@ -350,33 +353,37 @@ A: Your organization was connected to a directory when the organization Owner cr
 
 ### Q: Can I switch to a different directory?
 
-A: Yes. For more information, see [Switch to another Azure AD](change-azure-ad-connection.md). 
+A: Yes. For more information, see [Switch to another Azure AD](change-azure-ad-connection.md).
 
 <a name="AlternateCredentials"></a>
 
 ### Q: My alternate credentials don't work anymore. What do I do?
 
-A: Alternate credentials don't work after you connect your organization to a directory. 
+A: Alternate credentials don't work after you connect your organization to a directory.
 [Set up your credentials](https://support.microsoft.com/kb/2991274) again for the organization that you connected.
 
 ### Q: Some users are disconnected, but they have matching identities in Azure AD. What should I do?
-A: 
-* In your Azure DevOps **Organization settings**, select **Azure Active Directory**, and then select **Resolve**. 
 
-   ![Select Azure AD and then Resolve](media/shared/azure-ad-select-resolve-for-disconnected-users.png)
+A:
 
-* Match the identities. Select **Next** when you're done.
+- In your Azure DevOps **Organization settings**, select **Azure Active Directory**, and then select **Resolve**.
 
-   ![Resolve disconnected users](media/shared/resolve-disconnected-users.png)
+  ![Select Azure AD and then Resolve](media/shared/azure-ad-select-resolve-for-disconnected-users.png)
+
+- Match the identities. Select **Next** when you're done.
+
+  ![Resolve disconnected users](media/shared/resolve-disconnected-users.png)
 
 ### Q: I got an error message when I was resolving disconnections. What should I do?
-A: 
-* Try again.
-* You might be a guest in Azure AD. Request that an organization administrator, who is a member of Azure AD,  do the mapping. Or, request that an admin of the Azure AD convert you to a member.
 
-   ![guest-azure-ad-cannot-invite.png](media/shared/guest-azure-ad-cannot-invite.png)
+A:
 
-* If the error message includes a user in your domain, but you don't see them active in your directory, the user likely left your company. Go to the organization user settings to remove the user from your organization.
+- Try again.
+- You might be a guest in Azure AD. Request that an organization administrator, who is a member of Azure AD, do the mapping. Or, request that an admin of the Azure AD convert you to a member.
+
+  ![guest-azure-ad-cannot-invite.png](media/shared/guest-azure-ad-cannot-invite.png)
+
+- If the error message includes a user in your domain, but you don't see them active in your directory, the user likely left your company. Go to the organization user settings to remove the user from your organization.
 
 ### Q: When I was trying to invite a new user to my Azure AD, I got a 403 exception. What do I do?
 
@@ -391,22 +398,24 @@ A: Visual Studio subscription administrators ordinarily assign subscriptions to 
 A: Clear your browser cache and delete any cookies for the session. Close your browser, and then reopen.
 
 ### Q: What if my email account isn't found in Azure AD?
-A: 
-* In your Azure DevOps **Organization settings**, select **Azure Active Directory**, and then select **Resolve**. 
 
-   ![Select Azure AD and then Resolve](media/shared/azure-ad-select-resolve-for-disconnected-users.png)
+A:
 
-* Match the identities. Select **Next** when you're done.
+- In your Azure DevOps **Organization settings**, select **Azure Active Directory**, and then select **Resolve**.
 
-   ![Resolve disconnected users](media/shared/resolve-disconnected-users.png)
+  ![Select Azure AD and then Resolve](media/shared/azure-ad-select-resolve-for-disconnected-users.png)
+
+- Match the identities. Select **Next** when you're done.
+
+  ![Resolve disconnected users](media/shared/resolve-disconnected-users.png)
 
 ### Q: What if my work items are indicating that the users aren't valid?
 
 A: Clear your browser cache and delete any cookies for the session. Close your browser, and then reopen.
 
-### Q: Once my organization is connected to Azure AD, will it update Azure Boards work items, pull requests, and other pieces where I'm referenced in the system with my new ID? 
+### Q: Once my organization is connected to Azure AD, will it update Azure Boards work items, pull requests, and other pieces where I'm referenced in the system with my new ID?
 
-A: Yes, all pieces in the system are updated with the new ID when a user's ID gets mapped from their personal email to their work email. 
+A: Yes, all pieces in the system are updated with the new ID when a user's ID gets mapped from their personal email to their work email.
 
 ### Q: What if I get a warning about members who will lose access to the organization?
 
@@ -437,4 +446,3 @@ A: The tenant cache must be cleared if you're using a GCM version before v1.15.0
 - [Configure and customize organization FAQs](faq-configure-customize-organization.md)
 - [User and permissions management FAQs](faq-user-and-permissions-management.md)
 - [Set up Visual Studio FAQs](faq-set-up-vs.md)
-

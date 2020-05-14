@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Work/Contracts`
 
-
 ### Members
 
-* `id`: string. ID of the resource
+- `id`: string. ID of the resource
 
-* `name`: string. Name of the resource
+- `name`: string. Name of the resource
 
-* `url`: string. Full http link to the resource
-
+- `url`: string. Full http link to the resource

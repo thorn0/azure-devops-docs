@@ -14,8 +14,6 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `revision`: number. 
-
+- `revision`: number.

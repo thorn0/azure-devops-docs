@@ -18,5 +18,4 @@ Extends: [BuildUpdatedEvent](./BuildUpdatedEvent.md)
 
 ### Members
 
-* `changes`: [Change](./Change.md)[]. 
-
+- `changes`: [Change](./Change.md)[].

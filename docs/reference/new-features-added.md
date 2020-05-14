@@ -1,29 +1,27 @@
 ---
 title: New features enabled with upgrade
 titleSuffix: TFS
-description: Features that you can enable through the Configure Features Wizard after you've upgraded the application tier server for Team Foundation Server  
+description: Features that you can enable through the Configure Features Wizard after you've upgraded the application tier server for Team Foundation Server
 ms.technology: devops-agile
-ms.assetid: 1A7B7A18-457F-4AFF-9151-FCF13B850907  
+ms.assetid: 1A7B7A18-457F-4AFF-9151-FCF13B850907
 ms.author: kaelli
 author: KathrynEE
 ms.topic: conceptual
-monikerRange: '>= tfs-2013 <= azure-devops-2019'
+monikerRange: ">= tfs-2013 <= azure-devops-2019"
 ms.date: 04/05/2017
 ---
 
 <!---
-Supports the following FWLINK: Learn more about these configuration changes: https://go.microsoft.com/fwlink/?LinkID=242985 - 
+Supports the following FWLINK: Learn more about these configuration changes: https://go.microsoft.com/fwlink/?LinkID=242985 -
 -->
 
-# New features added through feature enablement 
+# New features added through feature enablement
 
-<b>TFS 2017 | TFS 2015 | TFS 2013</b>  
+<b>TFS 2017 | TFS 2015 | TFS 2013</b>
 
-> [!NOTE]
-> <b>Feature availability: </b>This topic applies only to projects defined on an on-premises Team Foundation Server (TFS). Projects defined on Azure DevOps Services [update automatically with each service upgrade](/azure/devops/release-notes/index).
+> [!NOTE] > <b>Feature availability: </b>This topic applies only to projects defined on an on-premises Team Foundation Server (TFS). Projects defined on Azure DevOps Services [update automatically with each service upgrade](/azure/devops/release-notes/index).
 
-The Configure Features Wizard detects which features have and haven't been configured. Most new features include additions or changes to work item types (WITs), categories, or process configuration. New features are introduced with different updates to Team Foundation Server (TFS).  
-
+The Configure Features Wizard detects which features have and haven't been configured. Most new features include additions or changes to work item types (WITs), categories, or process configuration. New features are introduced with different updates to Team Foundation Server (TFS).
 
 <table>
 <tbody valign="top">
@@ -93,9 +91,10 @@ Planning Tools
 <td>
 Adds or updates process configuration that supports using the Agile tools: <a href="../boards/backlogs/create-your-backlog.md" data-raw-source="[product backlog](../boards/backlogs/create-your-backlog.md)">product backlog</a>, <a href="../boards/sprints//assign-work-sprint.md" data-raw-source="[plan sprints](../boards/sprints//assign-work-sprint.md)">plan sprints</a>, <a href="../boards/boards/kanban-basics.md" data-raw-source="[Kanban board](../boards/boards/kanban-basics.md)">Kanban board</a>, and <a href="../boards/sprints//define-sprints.md" data-raw-source="[more](../boards/sprints//define-sprints.md)">more</a>.<br/>
 
-Agile tools depend on the WITs, categories, and process configuration definitions that are made.  Definitions are interdependent. <br/>
+Agile tools depend on the WITs, categories, and process configuration definitions that are made. Definitions are interdependent. <br/>
 
 See <a href="xml/process-configuration-xml-element.md" data-raw-source="[ProcessConfiguration XML element reference](xml/process-configuration-xml-element.md)">ProcessConfiguration XML element reference</a> to learn more about defining the process configuration for your project.<br/></td>
+
 <td>
 TFS 2012
 </td>
@@ -114,7 +113,6 @@ TFS 2012
 </td>
 </tr>
 
-
 <tr>
 <td>
 Portfolio Backlogs
@@ -124,14 +122,13 @@ For first time updates, adds the Feature and Epic WIT and categories to the proj
 
 <blockquote style="font-size: 13px"><b>Note: </b>If you have previously updated your project to add the Feature WIT and portfolio backlog, then you&#39;ll need to add the Epic WIT, category, and portfolio backlog manually. If your project doesn&#39;t have the Epic WIT, you can <a href="add-portfolio-backlogs.md" data-raw-source="[add it manually](add-portfolio-backlogs.md)">add it manually</a>.    </blockquote>
 
-To manually add Feature and Epics portfolio backlogs to a project, see <a href="add-features-manually.md" data-raw-source="[Add features manually](add-features-manually.md)">Add features manually</a>. 
+To manually add Feature and Epics portfolio backlogs to a project, see <a href="add-features-manually.md" data-raw-source="[Add features manually](add-features-manually.md)">Add features manually</a>.
 
 </td>
 <td>
 TFS 2013, TFS 2015
 </td>
 </tr>
-
 
 <tr>
 <td>
@@ -145,7 +142,6 @@ To manually add them to a project, see <a href="add-features-manually.md" data-r
 TFS 2013.2
 </td>
 </tr>
-
 
 <tr>
 <td>
@@ -167,6 +163,7 @@ Bug Behavior
 Adds the required fields to the Bug WIT definition so that they can be treated like requirements or like tasks. Teams can configure this option as described in <a href="../organizations/settings/show-bugs-on-backlog.md" data-raw-source="[Show bugs on backlogs and boards feature](../organizations/settings/show-bugs-on-backlog.md)">Show bugs on backlogs and boards feature</a>.<br/>
 
 If you need to manually add them to a project, see <a href="add-features-manually.md" data-raw-source="[Add features manually](add-features-manually.md)">Add features manually</a>.<br/></td>
+
 <td>
 TFS 2015
 </td>
@@ -175,13 +172,14 @@ TFS 2015
 </tbody>
 </table>
 
-## Related articles 
+## Related articles
 
-Not all new features require feature enablement. 
+Not all new features require feature enablement.
 
+<a id="test-management" > </a>
 
-<a id="test-management" >   </a>
-### Test Plan and Test Suite features  
+### Test Plan and Test Suite features
+
 The Test Plan and Test Suite WITs are added when you run the TFS Upgrade Wizard. They aren't enabled through the Configure Feature wizard. They support customization of test plans and test suites
 
 <p>The enhancements support:</p>
@@ -198,4 +196,3 @@ The Test Plan and Test Suite WITs are added when you run the TFS Upgrade Wizard.
   </ul>
   <p>The server upgrade automatically converts existing test plans and test suites to WITs and migrates test data and links. If it encounters a problem, a warning message appears in the server log. To learn more, see <a href="xml/update-a-team-project-manually-to-support-test-management.md" data-raw-source="[Update a project manually to support test management](xml/update-a-team-project-manually-to-support-test-management.md)">Update a project manually to support test management</a>.</p>
   <p>To learn about changes introduced to Test Manager and the web portal, see <a href="../test/create-a-test-plan.md" data-raw-source="[Create a test plan](../test/create-a-test-plan.md)">Create a test plan</a>.</p>
-

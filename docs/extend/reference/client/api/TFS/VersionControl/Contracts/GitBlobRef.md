@@ -13,14 +13,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `objectId`: string. SHA1 hash of git object
+- `objectId`: string. SHA1 hash of git object
 
-* `size`: number. Size of blob content (in bytes)
+- `size`: number. Size of blob content (in bytes)
 
-* `url`: string. 
-
+- `url`: string.

@@ -5,12 +5,12 @@ description: Learn how to set permissions to grant or secure access to README fi
 ms.technology: devops-collab
 ms.custom: wiki
 ms.topic: conceptual
-ms.assetid: 
+ms.assetid:
 ms.author: chcomley
 author: chcomley
 ms.reviewer: gopinach
 ms.date: 11/19/2018
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Manage Wiki permissions
@@ -29,9 +29,10 @@ By default, all project contributors have read and edit access of the wiki repos
 ::: moniker-end
 
 ::: moniker range="tfs-2018"
+
 > [!NOTE]  
-> **Feature availability**: The built-in wiki is available with TFS 2018 and later versions. 
-::: moniker-end
+> **Feature availability**: The built-in wiki is available with TFS 2018 and later versions.
+> ::: moniker-end
 
 ::: moniker range=">=tfs-2018"
 

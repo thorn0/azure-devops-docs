@@ -16,9 +16,9 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `Succeeded` 
-* `SucceededWithIssues` 
-* `Failed` 
-* `Canceled` 
-* `Skipped` 
-* `Abandoned` 
+- `Succeeded`
+- `SucceededWithIssues`
+- `Failed`
+- `Canceled`
+- `Skipped`
+- `Abandoned`

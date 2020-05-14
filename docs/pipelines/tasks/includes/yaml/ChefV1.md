@@ -12,8 +12,8 @@ ms.technology: devops-cicd-tasks
 # Deploy to Chef environments by editing environment attributes
 - task: Chef@1
   inputs:
-    connectedServiceName: 
-    environment: 
-    attributes: 
-    #chefWaitTime: '30' 
+    connectedServiceName:
+    environment:
+    attributes:
+    #chefWaitTime: '30'
 ```

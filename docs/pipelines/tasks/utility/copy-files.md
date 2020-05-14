@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: macoope
 author: vtbassmatt
 ms.date: 02/11/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Copy Files task
@@ -36,15 +36,15 @@ None
 
 ## Arguments
 
-|Argument|Description|
-|--- |--- |
-|`SourceFolder`<br/>Source Folder|(Optional) Folder that contains the files you want to copy. If you leave it empty, the copying is done from the root folder of the repo (same as if you had specified [**`$(Build.SourcesDirectory)`**](../../build/variables.md)). <br/> If your build produces artifacts outside of the sources directory, specify `$(Agent.BuildDirectory)` to copy files from the directory created for the pipeline.|
-|`Contents`<br/>Contents|(Required) File paths to include as part of the copy. Supports multiple lines of match patterns. [More Information](https://go.microsoft.com/fwlink/?LinkID=708389). <br/>For example: <br/><ul><li><b><code>*</code></b> copies all files in the specified source folder</li><li><b><code>\*\*</code></b> copies all files in the specified source folder and all files in all sub-folders</li><li><b><code>\*\*\bin\*\*</code></b> copies all files recursively from any bin folder <br/><br/>The pattern is used to match only file paths, not folder paths. So you should specify patterns such as \*\*\bin\*\* instead of \*\*\bin.<br/>You must use the path separator that matches your build agent type. **Example,** / must be used for Linux agents. More examples are shown below. <br/>Default value: `\*\*`|
-|`TargetFolder`<br/>Target Folder|(Required) Target folder or UNC path files will copy to. You can use [variables](https://go.microsoft.com/fwlink/?LinkID=550988). <br/>Example: **$(build.artifactstagingdirectory)**|
-|`CleanTargetFolder`<br/>Clean Target Folder|(Optional) Delete all existing files in target folder before copy <br/>Default value: `false`|
-|`OverWrite`<br/>Overwrite|(Optional) Replace existing files in target folder <br/>Default value: `false`|
-|`flattenFolders`<br/>Flatten Folders|(Optional) Flatten the folder structure and copy all files into the specified target folder <br/>Default value: `false`|
-|`preserveTimestamp`<br/>Preserve Target Timestamp|(Optional) Using the original source file, preserve the target file timestamp. <br/>Default value: `false`|
+| Argument                                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `SourceFolder`<br/>Source Folder                  | (Optional) Folder that contains the files you want to copy. If you leave it empty, the copying is done from the root folder of the repo (same as if you had specified [**`$(Build.SourcesDirectory)`**](../../build/variables.md)). <br/> If your build produces artifacts outside of the sources directory, specify `$(Agent.BuildDirectory)` to copy files from the directory created for the pipeline.                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `Contents`<br/>Contents                           | (Required) File paths to include as part of the copy. Supports multiple lines of match patterns. [More Information](https://go.microsoft.com/fwlink/?LinkID=708389). <br/>For example: <br/><ul><li><b><code>\*</code></b> copies all files in the specified source folder</li><li><b><code>\*\*</code></b> copies all files in the specified source folder and all files in all sub-folders</li><li><b><code>\*\*\bin\*\*</code></b> copies all files recursively from any bin folder <br/><br/>The pattern is used to match only file paths, not folder paths. So you should specify patterns such as \*\*\bin\*\* instead of \*\*\bin.<br/>You must use the path separator that matches your build agent type. **Example,** / must be used for Linux agents. More examples are shown below. <br/>Default value: `\*\*` |
+| `TargetFolder`<br/>Target Folder                  | (Required) Target folder or UNC path files will copy to. You can use [variables](https://go.microsoft.com/fwlink/?LinkID=550988). <br/>Example: **\$(build.artifactstagingdirectory)**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `CleanTargetFolder`<br/>Clean Target Folder       | (Optional) Delete all existing files in target folder before copy <br/>Default value: `false`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `OverWrite`<br/>Overwrite                         | (Optional) Replace existing files in target folder <br/>Default value: `false`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `flattenFolders`<br/>Flatten Folders              | (Optional) Flatten the folder structure and copy all files into the specified target folder <br/>Default value: `false`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `preserveTimestamp`<br/>Preserve Target Timestamp | (Optional) Using the original source file, preserve the target file timestamp. <br/>Default value: `false`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ## Notes
 
@@ -73,53 +73,53 @@ You want to copy just the readme and the files needed to run this C# console app
         |-- ConsoleApplication1.csproj
 ```
 
-> [!NOTE]
-> _ConsoleApplication1.sln_ contains a _bin_ folder with .dll and .exe files, see the Results below to see what gets moved!
+> [!NOTE] > _ConsoleApplication1.sln_ contains a _bin_ folder with .dll and .exe files, see the Results below to see what gets moved!
 
-On the Variables tab, ```$(BuildConfiguration)``` is set to ```release```.
+On the Variables tab, `$(BuildConfiguration)` is set to `release`.
 
 #### [YAML](#tab/yaml/)
+
 ::: moniker range="azure-devops"
 
 **Example with multiple match patterns:**
 
 ```yaml
 steps:
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
-  inputs:
-    Contents: |
-      ConsoleApplication1\ConsoleApplication1\bin\**\*.exe
-      ConsoleApplication1\ConsoleApplication1\bin\**\*.dll
-      ConsoleApplication1\readme.txt
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  - task: CopyFiles@2
+    displayName: "Copy Files to: $(Build.ArtifactStagingDirectory)"
+    inputs:
+      Contents: |
+        ConsoleApplication1\ConsoleApplication1\bin\**\*.exe
+        ConsoleApplication1\ConsoleApplication1\bin\**\*.dll
+        ConsoleApplication1\readme.txt
+      TargetFolder: "$(Build.ArtifactStagingDirectory)"
 ```
 
 **Example with OR condition:**
 
 ```yaml
 steps:
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
-  inputs:
-    Contents: |
-      ConsoleApplication1\ConsoleApplication1\bin\**\?(*.exe|*.dll)
-      ConsoleApplication1\readme.txt
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  - task: CopyFiles@2
+    displayName: "Copy Files to: $(Build.ArtifactStagingDirectory)"
+    inputs:
+      Contents: |
+        ConsoleApplication1\ConsoleApplication1\bin\**\?(*.exe|*.dll)
+        ConsoleApplication1\readme.txt
+      TargetFolder: "$(Build.ArtifactStagingDirectory)"
 ```
 
 **Example with NOT condition:**
 
 ```yaml
 steps:
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
-  inputs:
-    Contents: |
-      ConsoleApplication1\**\bin\**\!(*.pdb|*.config)
-      !ConsoleApplication1\**\ClassLibrary*\**
-      ConsoleApplication1\readme.txt
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  - task: CopyFiles@2
+    displayName: "Copy Files to: $(Build.ArtifactStagingDirectory)"
+    inputs:
+      Contents: |
+        ConsoleApplication1\**\bin\**\!(*.pdb|*.config)
+        !ConsoleApplication1\**\ClassLibrary*\**
+        ConsoleApplication1\readme.txt
+      TargetFolder: "$(Build.ArtifactStagingDirectory)"
 ```
 
 ::: moniker-end
@@ -131,44 +131,48 @@ YAML builds are not yet available on TFS.
 ::: moniker-end
 
 #### [Classic](#tab/classic/)
+
 ![icon](media/copy-files.png) **Utility: Copy Files**
 
-* Source folder
+- Source folder
 
   ```
   $(Build.SourcesDirectory)
   ```
 
-* Contents
+- Contents
 
-    **Example with multiple match patterns:**
+  **Example with multiple match patterns:**
 
-    ```
-    ConsoleApplication1\ConsoleApplication1\bin\**\*.exe
-    ConsoleApplication1\ConsoleApplication1\bin\**\*.dll
-    ConsoleApplication1\readme.txt
-    ```
+  ```
+  ConsoleApplication1\ConsoleApplication1\bin\**\*.exe
+  ConsoleApplication1\ConsoleApplication1\bin\**\*.dll
+  ConsoleApplication1\readme.txt
+  ```
 
-    **Example with OR condition:**
-    ```
-    ConsoleApplication1\ConsoleApplication1\bin\**\?(*.exe|*.dll)
-    ConsoleApplication1\readme.txt
-    ```
+  **Example with OR condition:**
 
-    **Example with NOT condition:**
-    ```
-    ConsoleApplication1\**\bin\**\!(*.pdb|*.config)
-    !ConsoleApplication1\**\ClassLibrary*\**
-    ConsoleApplication1\readme.txt
-    ```
+  ```
+  ConsoleApplication1\ConsoleApplication1\bin\**\?(*.exe|*.dll)
+  ConsoleApplication1\readme.txt
+  ```
 
-* Target folder
+  **Example with NOT condition:**
+
+  ```
+  ConsoleApplication1\**\bin\**\!(*.pdb|*.config)
+  !ConsoleApplication1\**\ClassLibrary*\**
+  ConsoleApplication1\readme.txt
+  ```
+
+- Target folder
 
   ```
   $(Build.ArtifactStagingDirectory)
   ```
 
-* * *
+---
+
 #### Results
 
 These files are copied to the staging directory:
@@ -186,22 +190,22 @@ These files are copied to the staging directory:
 
 ### Copy everything from the source directory except the .git folder
 
-
 #### [YAML](#tab/yaml/)
+
 ::: moniker range="azure-devops"
 
 **Example with multiple match patterns:**
 
 ```yaml
 steps:
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)'
-    Contents: |
-      **/*
-      !.git/**/*
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  - task: CopyFiles@2
+    displayName: "Copy Files to: $(Build.ArtifactStagingDirectory)"
+    inputs:
+      SourceFolder: "$(Build.SourcesDirectory)"
+      Contents: |
+        **/*
+        !.git/**/*
+      TargetFolder: "$(Build.ArtifactStagingDirectory)"
 ```
 
 ::: moniker-end
@@ -213,30 +217,32 @@ YAML builds are not yet available on TFS.
 ::: moniker-end
 
 #### [Classic](#tab/classic/)
+
 ![icon](media/copy-files.png) **Utility: Copy Files**
 
-* Source folder
+- Source folder
 
   ```
   $(Build.SourcesDirectory)
   ```
 
-* Contents
+- Contents
 
 **Example with multiple match patterns:**
 
- ```
-     **/*
-     !.git/**/*
+```
+    **/*
+    !.git/**/*
 ```
 
-* Target folder
+- Target folder
 
   ```
   $(Build.ArtifactStagingDirectory)
   ```
 
-* * *
+---
+
 ## Open source
 
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.

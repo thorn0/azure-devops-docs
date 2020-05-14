@@ -25,7 +25,7 @@ Today’s update adds a new maximize command to each text area control allowing 
 
 ## Navigating to links
 
-We also made a simple improvement to allow you to follow a hyperlink embedded in a text area control by holding down the CTRL key and clicking the link.  Previously, you were forced to click the link and then select a “navigate to…” command at the top of the text area. Today’s change should feel much more natural and familiar.
+We also made a simple improvement to allow you to follow a hyperlink embedded in a text area control by holding down the CTRL key and clicking the link. Previously, you were forced to click the link and then select a “navigate to…” command at the top of the text area. Today’s change should feel much more natural and familiar.
 
 ![Navigating to links](media/9_23_03.png)
 

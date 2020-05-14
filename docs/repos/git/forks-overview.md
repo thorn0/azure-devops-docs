@@ -1,15 +1,15 @@
 ---
 title: Forks
-titleSuffix: Azure Repos     
-description: Learn about forks in Azure DevOps Services & TFS  
-ms.technology: devops-code-git 
-ms.assetid: 36A4986E-BFB8-422B-BFC9-8A0CB75D0603    
+titleSuffix: Azure Repos
+description: Learn about forks in Azure DevOps Services & TFS
+ms.technology: devops-code-git
+ms.assetid: 36A4986E-BFB8-422B-BFC9-8A0CB75D0603
 ms.author: apawast
 author: apawast
 ms.topic: overview
 ms.date: 09/10/2018
 layout: LandingPage
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Forks
@@ -28,7 +28,6 @@ When working with forks, you typically use the following workflow:
 3. [Make your changes locally and push them to a branch](forks.md#push-changes)
 4. [Create and complete a PR to upstream](forks.md#create-pr)
 5. [Sync your fork to the latest from upstream](forks.md#sync-fork)
-
 
 ## Learn more
 
@@ -52,6 +51,3 @@ When working with forks, you typically use the following workflow:
         </a>
     </li>
  </ul>
-
-
-

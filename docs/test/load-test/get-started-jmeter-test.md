@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.author: sdanie
 author: steved0x
 ms.date: 12/07/2018
-monikerRange: '> tfs-2018'
+monikerRange: "> tfs-2018"
 ---
 
 # Run Apache JMeter load tests with Azure DevOps
 
-[!INCLUDE [version-header-devops-services](../includes/version-header-devops-services.md)] 
+[!INCLUDE [version-header-devops-services](../includes/version-header-devops-services.md)]
 
 [!INCLUDE [loadtest-deprecated-include](../includes/loadtest-deprecated-include.md)]
 
 Before you start your load testing:
 
-* [Create your Azure DevOps subscription](https://visualstudio.microsoft.com/products/visual-studio-team-services-vs), 
+- [Create your Azure DevOps subscription](https://visualstudio.microsoft.com/products/visual-studio-team-services-vs),
   if you don't have one already.
 
 **To run a JMeter load test:**
@@ -35,17 +35,17 @@ Before you start your load testing:
 
    ![Add load test information, then choose Run Test](media/get-started-jmeter-test/JMeterLoadTestVSO-parameters.png)
 
-   >For information about the scripts and supporting files used for JMeter
-   web tests, see [Build a Web Test Plan](https://jmeter.apache.org/usermanual/build-web-test-plan.html)
-   on the Apache JMeter website.
- 
+   > For information about the scripts and supporting files used for JMeter
+   > web tests, see [Build a Web Test Plan](https://jmeter.apache.org/usermanual/build-web-test-plan.html)
+   > on the Apache JMeter website.
+
 4. As the test runs, you see live information about the progress
    of the test. You can stop the test by using the **Abort** link on the
    toolbar.
 
    ![Live information about the running load test](media/get-started-jmeter-test/JMeterTestVSO-progress.png)
 
-5. When your test is done, look at the results to see how 
+5. When your test is done, look at the results to see how
    well your app performed. For example, you can see an overview
    of your app's performance in the **Summary** page.
    This page shows all of the main metrics such as average response
@@ -53,18 +53,18 @@ Before you start your load testing:
    that might have occurred, and test usage.
 
    ![Load test Summary tab results](media/get-started-jmeter-test/JMeterLoadTestVSO-summary-tab.png)
- 
+
    The lower section of the **Summary** page shows the settings used
    for the test, and details of the five slowest requests during the test.
    If there are any transaction tests, the page will also show the five slowest of these.
    Use the ![down arrow](media/shared/SimpleLoadTestVSO-sort-column.png)
    icon above a column to sort the list based on the contents of that column.
 
-6. Open the **Charts** page to see a graphical representation of 
+6. Open the **Charts** page to see a graphical representation of
    the test results over time. The charts show the average
-   performance, throughput, errors, and the results of each test 
-   request. Hover your mouse pointer over a chart to 
-   see more details. 
+   performance, throughput, errors, and the results of each test
+   request. Hover your mouse pointer over a chart to
+   see more details.
 
    ![Load test Charts page results](media/shared/LoadTestVSO-charts.png)
 
@@ -74,7 +74,7 @@ Before you start your load testing:
    ![Load test Diagnostics page results](media/get-started-jmeter-test/JMeterLoadTestVSO-diagnostics-tab.png)
 
    You can also use the ![arrow](media/shared/SimpleLoadTestVSO-summary-errors-icon.png)
-   icon in the **Errors** section of the **Summary** page to go directly to the 
+   icon in the **Errors** section of the **Summary** page to go directly to the
    **Diagnostics** page.
 
    ![Opening the Diagnostics page from the Summary tab](media/shared/SimpleLoadTestVSO-summary-errors-link.png)
@@ -98,11 +98,11 @@ Before you start your load testing:
 
 ## See also
 
-* [FAQs for load testing](reference-qa.md#jmeter-tests)
-* [Load test with Visual Studio](getting-started-with-performance-testing.md) 
-* [Load test with Azure DevOps](get-started-simple-cloud-load-test.md) 
-* [Load test with Azure portal](app-service-web-app-performance-test.md) 
-* [Tutorial: Run load tests before release](run-performance-tests-app-before-release.md) 
-* [Analyze load test results using the Load Test Analyzer](/visualstudio/test/analyze-load-test-results-using-the-load-test-analyzer)
+- [FAQs for load testing](reference-qa.md#jmeter-tests)
+- [Load test with Visual Studio](getting-started-with-performance-testing.md)
+- [Load test with Azure DevOps](get-started-simple-cloud-load-test.md)
+- [Load test with Azure portal](app-service-web-app-performance-test.md)
+- [Tutorial: Run load tests before release](run-performance-tests-app-before-release.md)
+- [Analyze load test results using the Load Test Analyzer](/visualstudio/test/analyze-load-test-results-using-the-load-test-analyzer)
 
-[!INCLUDE [help-and-support-footer](../includes/help-and-support-footer.md)] 
+[!INCLUDE [help-and-support-footer](../includes/help-and-support-footer.md)]

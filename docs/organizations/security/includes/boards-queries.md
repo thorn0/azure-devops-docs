@@ -68,9 +68,7 @@ ms.date: 03/25/2020
 </tbody>
 </table>
   
-::: moniker-end    
-
-
+::: moniker-end
 
 ::: moniker range="<= tfs-2015"
 
@@ -127,6 +125,4 @@ ms.date: 03/25/2020
 </tbody>
 </table>
   
-::: moniker-end    
-
-
+::: moniker-end

@@ -5,7 +5,7 @@ description: Define a CI pipeline that builds your Universal Windows Platform (U
 ms.assetid: E3E15C22-3211-4FCC-A10C-5717EA8B116E
 ms.date: 12/20/2017
 ms.topic: quickstart
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Build your Universal Windows Platform app
@@ -20,9 +20,9 @@ Universal Windows Platform (UWP) is a common app platform available on every dev
 
 ## Prerequisites
 
-* You need an Azure DevOps organization. If you don't have one, you can [create one for free](https://go.microsoft.com/fwlink/?LinkId=307137). If your team already has one, then make sure you're an administrator of the Azure DevOps project that you want to use.  (An Azure DevOps organization is different from your GitHub organization. Give them the same name if you want alignment between them.)
+- You need an Azure DevOps organization. If you don't have one, you can [create one for free](https://go.microsoft.com/fwlink/?LinkId=307137). If your team already has one, then make sure you're an administrator of the Azure DevOps project that you want to use. (An Azure DevOps organization is different from your GitHub organization. Give them the same name if you want alignment between them.)
 
-* While the simplest way to try this quickstart is to use an Azure DevOps organization, you can also use a TFS server instead of an Azure DevOps organization. Make sure that you have [configured a build agent](../../agents/v2-windows.md) for your project, and that you have a version of Visual Studio matching your development machine installed on the agent machine.
+- While the simplest way to try this quickstart is to use an Azure DevOps organization, you can also use a TFS server instead of an Azure DevOps organization. Make sure that you have [configured a build agent](../../agents/v2-windows.md) for your project, and that you have a version of Visual Studio matching your development machine installed on the agent machine.
 
 ## Get sample app code
 
@@ -46,7 +46,7 @@ https://github.com/Microsoft/UWPQuickStart
 
 [!INCLUDE [include](../../includes/ci-quickstart-intro.md)]
 
-[//]: # (TODO: Restore use of includes when we get support for using them in a list.)
+[//]: # "TODO: Restore use of includes when we get support for using them in a list."
 
 1. Create a new build pipeline.
 
@@ -62,7 +62,7 @@ https://github.com/Microsoft/UWPQuickStart
 
    Navigate to the **Builds** tab Azure Pipelines or TFS, and then click **+ New**. You are asked to **Select a template** for the new build pipeline.
 
-   ---
+   ***
 
 2. In the right panel, click **Universal Windows Platform**, and then click **Apply**.
 
@@ -70,9 +70,9 @@ https://github.com/Microsoft/UWPQuickStart
 
 3. For the **Agent pool**:
 
-   * **Azure Pipelines:** Select _Hosted VS2017_. This is how you can use our pool of agents that have the software you need to build your app.
+   - **Azure Pipelines:** Select _Hosted VS2017_. This is how you can use our pool of agents that have the software you need to build your app.
 
-   * **TFS:** Select a pool that includes a [Windows build agent](../../agents/v2-windows.md).
+   - **TFS:** Select a pool that includes a [Windows build agent](../../agents/v2-windows.md).
 
 4. Click **Get sources** and then:
 
@@ -84,7 +84,7 @@ https://github.com/Microsoft/UWPQuickStart
 
    Select your version control repository. You'll need to authorize access to your repo.
 
-   ---
+   ***
 
 5. Click the **Triggers** tab in the build pipeline. Enable the **Continuous Integration** trigger. This will ensure that the build pipeline is automatically triggered every time you commit a change to your repository.
 
@@ -92,8 +92,8 @@ https://github.com/Microsoft/UWPQuickStart
 
 7. A new build is started. You'll see a link to the new build on the top of the page. Click the link to watch the new build as it happens.
 
-[//]: # (TODO:> [!TIP])
-[//]: # (TODO:> To learn more about GitHub CI builds, see [Define CI build pipeline for your Git repo](#)
+[//]: # "TODO:> [!TIP]"
+[//]: # "TODO:> To learn more about GitHub CI builds, see [Define CI build pipeline for your Git repo](#"
 
 ## View the build summary
 
@@ -103,9 +103,9 @@ https://github.com/Microsoft/UWPQuickStart
 
 You can now update the build pipeline to generate production builds.
 
- * [Signing UWP package](/windows/uwp/packaging/create-certificate-package-signing)
- * [Associate package with the store](/windows/msix/package/packaging-uwp-apps#configure-your-project)
- 
+- [Signing UWP package](/windows/uwp/packaging/create-certificate-package-signing)
+- [Associate package with the store](/windows/msix/package/packaging-uwp-apps#configure-your-project)
+
 ## Related topics
 
-* [Set up automated builds for your UWP app](/windows/uwp/packaging/auto-build-package-uwp-apps)
+- [Set up automated builds for your UWP app](/windows/uwp/packaging/auto-build-package-uwp-apps)

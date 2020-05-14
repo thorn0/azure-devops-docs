@@ -35,7 +35,6 @@ Use this task to run a Python script.
 <tr><td>Working directory</td><td>(Optional) undefined</td></tr>
 <tr><td>Fail on standard error</td><td>(Optional) If this is true, this task will fail if any text are written to the stderr stream.</td></tr>
 
-
 <tr>
 <th style="text-align: center" colspan="2"><a href="~/pipelines/process/tasks.md#controloptions" data-raw-source="[Control options](../../process/tasks.md#controloptions)">Control options</a></th>
 </tr>

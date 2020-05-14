@@ -13,12 +13,10 @@ ms.date: 08/04/2016
 
 Module path: `VSS/Common/Contracts/FormInput`
 
-
 ### Members
 
-* `currentValues`: {[key: string]: string}. 
+- `currentValues`: {[key: string]: string}.
 
-* `inputValues`: [InputValues](../../../../VSS/Common/Contracts/FormInput/InputValues.md)[]. The input values to return on input, and the result from the consumer on output.
+- `inputValues`: [InputValues](../../../../VSS/Common/Contracts/FormInput/InputValues.md)[]. The input values to return on input, and the result from the consumer on output.
 
-* `resource`: any. Subscription containing information about the publisher/consumer and the current input values
-
+- `resource`: any. Subscription containing information about the publisher/consumer and the current input values

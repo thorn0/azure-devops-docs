@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Core/Contracts`
 
-
 ### Members
 
-* `id`: string. Collection Id.
+- `id`: string. Collection Id.
 
-* `name`: string. Collection Name.
+- `name`: string. Collection Name.
 
-* `url`: string. Collection REST Url.
-
+- `url`: string. Collection REST Url.

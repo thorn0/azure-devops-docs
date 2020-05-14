@@ -4,7 +4,7 @@ description: Events supported by Azure DevOps Services and Team Foundation Serve
 ms.assetid: 1DC15791-5614-405E-8372-79A5ED6E66EE
 ms.technology: devops-collab
 ms.topic: conceptual
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -12,40 +12,43 @@ ms.date: 08/04/2016
 
 ## Available event types
 
-* Build and release
-  * [Build completed](#build.complete)
-  * [Release created](#ms.vss-release.release-created-event)
-  * [Release abandoned](#ms.vss-release.release-abandoned-event)
-  * [Release deployment approval completed](#ms.vss-release.deployment-approval-completed-event)
-  * [Release deployment approval pending](#ms.vss-release.deployment-approval-pending-event)
-  * [Release deployment completed](#ms.vss-release.deployment-completed-event)
-  * [Release deployment started](#ms.vss-release.deployment-started-event)
+- Build and release
+  - [Build completed](#build.complete)
+  - [Release created](#ms.vss-release.release-created-event)
+  - [Release abandoned](#ms.vss-release.release-abandoned-event)
+  - [Release deployment approval completed](#ms.vss-release.deployment-approval-completed-event)
+  - [Release deployment approval pending](#ms.vss-release.deployment-approval-pending-event)
+  - [Release deployment completed](#ms.vss-release.deployment-completed-event)
+  - [Release deployment started](#ms.vss-release.deployment-started-event)
 
 ::: moniker range="azure-devops"
-* Pipelines
-  * [Run state changed](#run.statechanged)
-  *	[Run stage state changed](#run.stagestatechanged)
-  * [Run stage waiting for approval](#run.stageapprovalpending)
-  * [Run stage approval completed](#run.stageapprovalcompleted)
-::: moniker-end
 
-* Code
-  * [Code checked in](#tfvc.checkin)
-  * [Code pushed](#git.push)
-  * [Pull request created](#git.pullrequest.created)
-  * [Pull request merge commit created](#git.pullrequest.merged)
-  * [Pull request updated](#git.pullrequest.updated)
+- Pipelines
 
-* Work item 
-  * [Work item commented on](#workitem.commented)
-  * [Work item created](#workitem.created)
-  * [Work item deleted](#workitem.deleted)
-  * [Work item restored](#workitem.restored)
-  * [Work item updated](#workitem.updated)
+  - [Run state changed](#run.statechanged)
+  - [Run stage state changed](#run.stagestatechanged)
+  - [Run stage waiting for approval](#run.stageapprovalpending)
+  - [Run stage approval completed](#run.stageapprovalcompleted)
+    ::: moniker-end
+
+- Code
+
+  - [Code checked in](#tfvc.checkin)
+  - [Code pushed](#git.push)
+  - [Pull request created](#git.pullrequest.created)
+  - [Pull request merge commit created](#git.pullrequest.merged)
+  - [Pull request updated](#git.pullrequest.updated)
+
+- Work item
+  - [Work item commented on](#workitem.commented)
+  - [Work item created](#workitem.created)
+  - [Work item deleted](#workitem.deleted)
+  - [Work item restored](#workitem.restored)
+  - [Work item updated](#workitem.updated)
 
 Deprecated event types:
 
-* [Team room message posted](#message.posted)
+- [Team room message posted](#message.posted)
 
 > [!NOTE]
 > The [Nuget WebHooks Receivers package](https://www.nuget.org/packages/Microsoft.AspNet.WebHooks.Receivers.vsts) provides support for receiving WebHooks from Azure DevOps Services.
@@ -53,23 +56,26 @@ Deprecated event types:
 ## Build and release
 
 <a name="build.complete"></a>
+
 ### Build completed
 
 A build completes
 
-* Publisher ID: `tfs`
-* Event ID: `build.complete`
+- Publisher ID: `tfs`
+- Event ID: `build.complete`
 
 #### Settings
- * `definitionName`: Filter events to include only completed builds for the specified pipeline
- * `buildStatus`: Filter events to include only completed builds for the specified completion status
-   * Valid values: 
-      * `Succeeded` 
-      * `PartiallySucceeded` 
-      * `Failed` 
-      * `Stopped` 
+
+- `definitionName`: Filter events to include only completed builds for the specified pipeline
+- `buildStatus`: Filter events to include only completed builds for the specified completion status
+  - Valid values:
+    - `Succeeded`
+    - `PartiallySucceeded`
+    - `Failed`
+    - `Stopped`
 
 #### Sample payload
+
 ```json
 {
   "id": "4a5d99d6-1c75-4e53-91b9-ee80057d4ce3",
@@ -162,17 +168,20 @@ A build completes
 ```
 
 <a name="ms.vss-release.release-abandoned-event"></a>
+
 ### Release abandoned
 
 A release was abandoned
 
-* Publisher ID: `rm`
-* Event ID: `ms.vss-release.release-abandoned-event`
+- Publisher ID: `rm`
+- Event ID: `ms.vss-release.release-abandoned-event`
 
 #### Settings
- * `releaseDefinitionId`: Filter events to include only completed deployments for the specified pipeline
+
+- `releaseDefinitionId`: Filter events to include only completed deployments for the specified pipeline
 
 #### Sample payload
+
 ```json
 {
   "id": "b0497ad3-50c9-4722-96da-a8fa5b80d77f",
@@ -322,17 +331,20 @@ A release was abandoned
 ```
 
 <a name="ms.vss-release.release-created-event"></a>
+
 ### Release created
 
 A release was created
 
-* Publisher ID: `rm`
-* Event ID: `ms.vss-release.release-created-event`
+- Publisher ID: `rm`
+- Event ID: `ms.vss-release.release-created-event`
 
 #### Settings
- * `releaseDefinitionId`: Filter events to include only completed deployments for the specified pipeline
+
+- `releaseDefinitionId`: Filter events to include only completed deployments for the specified pipeline
 
 #### Sample payload
+
 ```json
 {
   "id": "d4d69db4-18d4-413e-bc43-07f56b531160",
@@ -482,26 +494,29 @@ A release was created
 ```
 
 <a name="ms.vss-release.deployment-approval-completed-event"></a>
+
 ### Release deployment approval completed
 
 A deployment approval has been completed
 
-* Publisher ID: `rm`
-* Event ID: `ms.vss-release.deployment-approval-completed-event`
+- Publisher ID: `rm`
+- Event ID: `ms.vss-release.deployment-approval-completed-event`
 
 #### Settings
- * `releaseApprovalStatus`: Filter events to include only deployments with an approval of the specified status
-   * Valid values: 
-      * `2` - Approved
-      * `4` - Rejected
- * `releaseApprovalType`: Filter events to include only deployments requesting an approval of the specified type
-   * Valid values: 
-      * `1` - Pre-deployment
-      * `2` - Post-deployment
- * `releaseEnvironmentId`: Filter events to include only completed deployments for the specified environment
- * `releaseDefinitionId`: Filter events to include only completed deployments for the specified definition
+
+- `releaseApprovalStatus`: Filter events to include only deployments with an approval of the specified status
+  - Valid values:
+    - `2` - Approved
+    - `4` - Rejected
+- `releaseApprovalType`: Filter events to include only deployments requesting an approval of the specified type
+  - Valid values:
+    - `1` - Pre-deployment
+    - `2` - Post-deployment
+- `releaseEnvironmentId`: Filter events to include only completed deployments for the specified environment
+- `releaseDefinitionId`: Filter events to include only completed deployments for the specified definition
 
 #### Sample payload
+
 ```json
 {
   "id": "106acb39-c61e-4efd-995e-a9f5e71ba3cd",
@@ -686,22 +701,25 @@ A deployment approval has been completed
 ```
 
 <a name="ms.vss-release.deployment-approval-pending-event"></a>
+
 ### Release deployment approval pending
 
 A deployment approval has been requested
 
-* Publisher ID: `rm`
-* Event ID: `ms.vss-release.deployment-approval-pending-event`
+- Publisher ID: `rm`
+- Event ID: `ms.vss-release.deployment-approval-pending-event`
 
 #### Settings
- * `releaseApprovalType`: Filter events to include only deployments requesting an approval of the specified type
-   * Valid values: 
-      * `1` - Pre-deployment
-      * `2` - Post-deployment
- * `releaseEnvironmentId`: Filter events to include only completed deployments for the specified environment
- * `releaseDefinitionId`: Filter events to include only completed deployments for the specified pipeline
+
+- `releaseApprovalType`: Filter events to include only deployments requesting an approval of the specified type
+  - Valid values:
+    - `1` - Pre-deployment
+    - `2` - Post-deployment
+- `releaseEnvironmentId`: Filter events to include only completed deployments for the specified environment
+- `releaseDefinitionId`: Filter events to include only completed deployments for the specified pipeline
 
 #### Sample payload
+
 ```json
 {
   "id": "a73e7272-e96d-4249-93ac-7404eacd6801",
@@ -882,24 +900,27 @@ A deployment approval has been requested
 ```
 
 <a name="ms.vss-release.deployment-completed-event"></a>
+
 ### Release deployment completed
 
 A deployment completed
 
-* Publisher ID: `rm`
-* Event ID: `ms.vss-release.deployment-completed-event`
+- Publisher ID: `rm`
+- Event ID: `ms.vss-release.deployment-completed-event`
 
 #### Settings
- * `releaseEnvironmentId`: Filter events to include only completed deployments for the specified environment
- * `releaseDefinitionId`: Filter events to include only completed deployments for the specified pipeline
- * `releaseEnvironmentStatus`: Filter events to include only completed deployments with the specified status
-   * Valid values: 
-      * `8` - Canceled
-      * `16` - Rejected
-      * `4` - Succeeded
-      * `128` - Partially Succeeded
+
+- `releaseEnvironmentId`: Filter events to include only completed deployments for the specified environment
+- `releaseDefinitionId`: Filter events to include only completed deployments for the specified pipeline
+- `releaseEnvironmentStatus`: Filter events to include only completed deployments with the specified status
+  - Valid values:
+    - `8` - Canceled
+    - `16` - Rejected
+    - `4` - Succeeded
+    - `128` - Partially Succeeded
 
 #### Sample payload
+
 ```json
 "environment": {
             "id": 5,
@@ -1035,176 +1056,182 @@ A deployment completed
 ```
 
 <a name="ms.vss-release.deployment-started-event"></a>
+
 ### Release deployment started
 
 A deployment was started
 
-* Publisher ID: `rm`
-* Event ID: `ms.vss-release.deployment-started-event`
+- Publisher ID: `rm`
+- Event ID: `ms.vss-release.deployment-started-event`
 
 #### Settings
- * `releaseEnvironmentId`: Filter events to include only completed deployments for the specified environment
- * `releaseDefinitionId`: Filter events to include only completed deployments for the specified definition
+
+- `releaseEnvironmentId`: Filter events to include only completed deployments for the specified environment
+- `releaseDefinitionId`: Filter events to include only completed deployments for the specified definition
 
 #### Sample payload
+
 ```json
 {
-    "id": "1f04688d-98bb-4206-850f-43389f4c8cb4",
-    "eventType": "ms.vss-release.deployment-started-event",
-    "publisherId": "rm",
-    "message": {
-        "text": "Deployment of release Release-5 to stage Dev started.",
-        "html": "Deployment on stage <a href='http://fabfiber.visualstudio.com/Fabrikam-Fiber-Git/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?_a=environment-summary&definitionEnvironmentId=1&definitionId=4'>Dev</a> started.",
-        "markdown": "Deployment on stage [Dev](https://fabfiber.visualstudio.com/Fabrikam-Fiber-Git/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?_a=environment-summary&definitionEnvironmentId=1&definitionId=4) started."
-    },
-    "detailedMessage": {
-        "text": "Deployment of release Release-5 on stage Dev started.\r\nTrigger: Manual",
-        "html": "Deployment on stage <a href='Dev'>http://fabfiber.visualstudio.com/Fabrikam-Fiber-Git/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?_a=environment-summary&definitionEnvironmentId=1&definitionId=4</a> started.<br>Trigger: Manual",
-        "markdown": "Deployment on stage [Release-1](https://fabfiber.visualstudio.com/Fabrikam-Fiber-Git/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?_a=environment-summary&definitionEnvironmentId=1&definitionId=4) started.\r\nTrigger: Dev"
-    },
-    "resource": {
-        "environment": {
-            "id": 5,
-            "releaseId": 0,
-            "name": "Dev",
-            "status": "queued",
-            "variables": {},
-            "variableGroups": [],
-            "preDeployApprovals": [],
-            "postDeployApprovals": [],
-            "preApprovalsSnapshot": {
-                "approvals": [],
-                "approvalOptions": {
-                    "requiredApproverCount": 0,
-                    "releaseCreatorCanBeApprover": true,
-                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
-                    "enforceIdentityRevalidation": false,
-                    "timeoutInMinutes": 0,
-                    "executionOrder": "beforeGates"
-                }
-            },
-            "postApprovalsSnapshot": {
-                "approvals": []
-            },
-            "deploySteps": [],
-            "rank": 1,
-            "definitionEnvironmentId": 1,
-            "queueId": 1,
-            "environmentOptions": {
-                "emailNotificationType": "OnlyOnFailure",
-                "emailRecipients": "release.environment.owner;release.creator",
-                "skipArtifactsDownload": false,
-                "timeoutInMinutes": 0,
-                "enableAccessToken": false,
-                "publishDeploymentStatus": false,
-                "badgeEnabled": false,
-                "autoLinkWorkItems": false,
-                "pullRequestDeploymentEnabled": false
-            },
-            "demands": [],
-            "conditions": [],
-            "modifiedOn": "2016-01-21T08:19:17.26Z",
-            "workflowTasks": [],
-            "deployPhasesSnapshot": [],
-            "owner": {
-                "displayName": "Chuck Reinhart",
-                "id": "4247c988-4060-4712-abca-ff44681dd78a"
-            },
-            "scheduledDeploymentTime": "2016-01-21T08:19:17.26Z",
-            "schedules": [],
-            "release": {
-                "id": 5,
-                "name": "Release-5",
-                "_links": {
-                    "web": {
-                        "href": "https://fabfiber.visualstudio.com/Fabrikam-Fiber-Git/_release?releaseId=1&_a=release-summary"
-                    }
-                }
-            },
-            "preDeploymentGatesSnapshot": {
-                "id": 0,
-                "gatesOptions": null,
-                "gates": []
-            },
-            "postDeploymentGatesSnapshot": {
-                "id": 0,
-                "gatesOptions": null,
-                "gates": []
-            }
-        },
-        "release": {
-            "id": 0,
-            "name": null,
-            "status": "undefined",
-            "createdOn": "0001-01-01T00:00:00",
-            "modifiedOn": "0001-01-01T00:00:00",
-            "modifiedBy": null,
-            "createdBy": null,
-            "environments": [],
-            "variables": {},
-            "variableGroups": [],
-            "artifacts": [],
-            "releaseDefinition": {
-                "id": 1,
-                "name": "Fabrikam.CD",
-                "projectReference": null,
-                "_links": {}
-            },
-            "releaseDefinitionRevision": 0,
-            "reason": "none",
-            "releaseNameFormat": null,
-            "keepForever": false,
-            "definitionSnapshotRevision": 0,
-            "logsContainerUrl": null,
-            "_links": {},
-            "tags": [],
-            "triggeringArtifactAlias": null,
-            "projectReference": null
-        },
-        "project": {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "name": "Fabrikam"
+  "id": "1f04688d-98bb-4206-850f-43389f4c8cb4",
+  "eventType": "ms.vss-release.deployment-started-event",
+  "publisherId": "rm",
+  "message": {
+    "text": "Deployment of release Release-5 to stage Dev started.",
+    "html": "Deployment on stage <a href='http://fabfiber.visualstudio.com/Fabrikam-Fiber-Git/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?_a=environment-summary&definitionEnvironmentId=1&definitionId=4'>Dev</a> started.",
+    "markdown": "Deployment on stage [Dev](https://fabfiber.visualstudio.com/Fabrikam-Fiber-Git/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?_a=environment-summary&definitionEnvironmentId=1&definitionId=4) started."
+  },
+  "detailedMessage": {
+    "text": "Deployment of release Release-5 on stage Dev started.\r\nTrigger: Manual",
+    "html": "Deployment on stage <a href='Dev'>http://fabfiber.visualstudio.com/Fabrikam-Fiber-Git/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?_a=environment-summary&definitionEnvironmentId=1&definitionId=4</a> started.<br>Trigger: Manual",
+    "markdown": "Deployment on stage [Release-1](https://fabfiber.visualstudio.com/Fabrikam-Fiber-Git/_apps/hub/ms.vss-releaseManagement-web.hub-explorer?_a=environment-summary&definitionEnvironmentId=1&definitionId=4) started.\r\nTrigger: Dev"
+  },
+  "resource": {
+    "environment": {
+      "id": 5,
+      "releaseId": 0,
+      "name": "Dev",
+      "status": "queued",
+      "variables": {},
+      "variableGroups": [],
+      "preDeployApprovals": [],
+      "postDeployApprovals": [],
+      "preApprovalsSnapshot": {
+        "approvals": [],
+        "approvalOptions": {
+          "requiredApproverCount": 0,
+          "releaseCreatorCanBeApprover": true,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": "beforeGates"
         }
-    },
-    "resourceVersion": "3.0-preview.1",
-    "resourceContainers": {
-        "collection": {
-            "id": "c12d0eb8-e382-443b-9f9c-c52cba5014c2"
-        },
-        "account": {
-            "id": "f844ec47-a9db-4511-8281-8b63f4eaf94e"
-        },
-        "project": {
-            "id": "be9b3917-87e6-42a4-a549-2bc06a7a878f"
+      },
+      "postApprovalsSnapshot": {
+        "approvals": []
+      },
+      "deploySteps": [],
+      "rank": 1,
+      "definitionEnvironmentId": 1,
+      "queueId": 1,
+      "environmentOptions": {
+        "emailNotificationType": "OnlyOnFailure",
+        "emailRecipients": "release.environment.owner;release.creator",
+        "skipArtifactsDownload": false,
+        "timeoutInMinutes": 0,
+        "enableAccessToken": false,
+        "publishDeploymentStatus": false,
+        "badgeEnabled": false,
+        "autoLinkWorkItems": false,
+        "pullRequestDeploymentEnabled": false
+      },
+      "demands": [],
+      "conditions": [],
+      "modifiedOn": "2016-01-21T08:19:17.26Z",
+      "workflowTasks": [],
+      "deployPhasesSnapshot": [],
+      "owner": {
+        "displayName": "Chuck Reinhart",
+        "id": "4247c988-4060-4712-abca-ff44681dd78a"
+      },
+      "scheduledDeploymentTime": "2016-01-21T08:19:17.26Z",
+      "schedules": [],
+      "release": {
+        "id": 5,
+        "name": "Release-5",
+        "_links": {
+          "web": {
+            "href": "https://fabfiber.visualstudio.com/Fabrikam-Fiber-Git/_release?releaseId=1&_a=release-summary"
+          }
         }
+      },
+      "preDeploymentGatesSnapshot": {
+        "id": 0,
+        "gatesOptions": null,
+        "gates": []
+      },
+      "postDeploymentGatesSnapshot": {
+        "id": 0,
+        "gatesOptions": null,
+        "gates": []
+      }
     },
-    "createdDate": "2019-10-10T17:49:39.157Z"
+    "release": {
+      "id": 0,
+      "name": null,
+      "status": "undefined",
+      "createdOn": "0001-01-01T00:00:00",
+      "modifiedOn": "0001-01-01T00:00:00",
+      "modifiedBy": null,
+      "createdBy": null,
+      "environments": [],
+      "variables": {},
+      "variableGroups": [],
+      "artifacts": [],
+      "releaseDefinition": {
+        "id": 1,
+        "name": "Fabrikam.CD",
+        "projectReference": null,
+        "_links": {}
+      },
+      "releaseDefinitionRevision": 0,
+      "reason": "none",
+      "releaseNameFormat": null,
+      "keepForever": false,
+      "definitionSnapshotRevision": 0,
+      "logsContainerUrl": null,
+      "_links": {},
+      "tags": [],
+      "triggeringArtifactAlias": null,
+      "projectReference": null
+    },
+    "project": {
+      "id": "00000000-0000-0000-0000-000000000000",
+      "name": "Fabrikam"
+    }
+  },
+  "resourceVersion": "3.0-preview.1",
+  "resourceContainers": {
+    "collection": {
+      "id": "c12d0eb8-e382-443b-9f9c-c52cba5014c2"
+    },
+    "account": {
+      "id": "f844ec47-a9db-4511-8281-8b63f4eaf94e"
+    },
+    "project": {
+      "id": "be9b3917-87e6-42a4-a549-2bc06a7a878f"
+    }
+  },
+  "createdDate": "2019-10-10T17:49:39.157Z"
 }
 ```
 
 ::: moniker range="azure-devops"
+
 ## Pipelines
 
-> [!NOTE]
-> [Multi-stage pipelines](https://go.microsoft.com/fwlink/?linkid=2097082) preview feature needs to be enabled for these events
+> [!NOTE][multi-stage pipelines](https://go.microsoft.com/fwlink/?linkid=2097082) preview feature needs to be enabled for these events
 
 <a name="run.statechanged"></a>
+
 ### Run state changed
 
 Overall status of a pipeline run changed. A new run has started, or a run has transitioned to canceling, canceled, failed, partially succeeded or succeeded state.
 
-* Publisher ID: `pipelines`
-* Event ID: `ms.vss-pipelines.run-state-changed-event`
+- Publisher ID: `pipelines`
+- Event ID: `ms.vss-pipelines.run-state-changed-event`
 
 #### Settings
- * `PipelineId`: Filter to include only events for the specified pipeline
- * `runStateId`: Filter events based on the new state of the run
-   * Valid values: 
-      * `InProgress` 
-      * `Canceling` 
-      * `Completed` 
+
+- `PipelineId`: Filter to include only events for the specified pipeline
+- `runStateId`: Filter events based on the new state of the run
+  - Valid values:
+    - `InProgress`
+    - `Canceling`
+    - `Completed`
 
 #### Sample payload
+
 ```json
 {
   "id": "62e4351f-1c24-40f9-8510-7af03692ab45",
@@ -1276,24 +1303,27 @@ Overall status of a pipeline run changed. A new run has started, or a run has tr
 ```
 
 <a name="run.stagestatechanged"></a>
+
 ### Run stage state changed
 
 A new stage has started, or a stage has transitioned to canceling, canceled, failed, partially succeeded or succeeded.
 
-* Publisher ID: `pipelines`
-* Event ID: `ms.vss-pipelines.stage-state-changed-event`
+- Publisher ID: `pipelines`
+- Event ID: `ms.vss-pipelines.stage-state-changed-event`
 
 #### Settings
- * `PipelineId`: Filter to include only events for the specified pipeline
- * `stageNameId`: Filter events to a specific stage name
- * `stageStateId`: Filter events based on the new state of the stage
-   * Valid values: 
-      * `NotStarted` 
-      * `Waiting` 
-      * `Running`
-      * `Completed`
+
+- `PipelineId`: Filter to include only events for the specified pipeline
+- `stageNameId`: Filter events to a specific stage name
+- `stageStateId`: Filter events based on the new state of the stage
+  - Valid values:
+    - `NotStarted`
+    - `Waiting`
+    - `Running`
+    - `Completed`
 
 #### Sample payload
+
 ```json
 {
   "id": "ac1dd6da-af30-43cb-8434-e1005864b0a3",
@@ -1365,19 +1395,22 @@ A new stage has started, or a stage has transitioned to canceling, canceled, fai
 ```
 
 <a name="run.stageapprovalpending"></a>
+
 ### Run stage waiting for approval
 
 An approval is created for a run stage
 
-* Publisher ID: `pipelines`
-* Event ID: `ms.vss-pipelinechecks-events.approval-pending`
+- Publisher ID: `pipelines`
+- Event ID: `ms.vss-pipelinechecks-events.approval-pending`
 
 #### Settings
- * `PipelineId`: Filter to include only events for the specified pipeline
- * `stageName`: Filter events to a specific stage name
- * `environmentName`: Filter events to approvals for deployments to a specified environment
- 
+
+- `PipelineId`: Filter to include only events for the specified pipeline
+- `stageName`: Filter events to a specific stage name
+- `environmentName`: Filter events to approvals for deployments to a specified environment
+
 #### Sample payload
+
 ```json
 {
   "id": "55382df7-24fa-453c-9173-3369b2417a5b",
@@ -1447,19 +1480,22 @@ An approval is created for a run stage
 ```
 
 <a name="run.stageapprovalcompleted"></a>
+
 ### Run stage approval completed
 
 An approval completed for a run stage
 
-* Publisher ID: `pipelines`
-* Event ID: `ms.vss-pipelinechecks-events.approval-completed`
+- Publisher ID: `pipelines`
+- Event ID: `ms.vss-pipelinechecks-events.approval-completed`
 
 #### Settings
- * `PipelineId`: Filter to include only events for the specified pipeline
- * `stageName`: Filter events to a specific stage name
- * `environmentName`: Filter events to approvals for deployments to a specified environment
- 
+
+- `PipelineId`: Filter to include only events for the specified pipeline
+- `stageName`: Filter events to a specific stage name
+- `environmentName`: Filter events to approvals for deployments to a specified environment
+
 #### Sample payload
+
 ```json
 {
   "id": "5810cce3-55e9-46dc-ad4f-681c57cf620e",
@@ -1527,23 +1563,27 @@ An approval completed for a run stage
   "createdDate": "2019-12-13T06:18:22.487Z"
 }
 ```
+
 ::: moniker-end
 
 ## Code
 
 <a name="tfvc.checkin"></a>
+
 ### Code checked in
 
 A changeset is checked into TFVC.
 
-* Publisher ID: `tfs`
-* Event ID: `tfvc.checkin`
+- Publisher ID: `tfs`
+- Event ID: `tfvc.checkin`
 
 #### Settings
- * `path`: Filter to checkins that change one or more files under the specified path
-   * Required
+
+- `path`: Filter to checkins that change one or more files under the specified path
+  - Required
 
 #### Sample payload
+
 ```json
 {
   "id": "f9b4c23e-88dd-4516-b04d-849787304e32",
@@ -1590,20 +1630,23 @@ A changeset is checked into TFVC.
 ```
 
 <a name="git.push"></a>
+
 ### Code pushed
 
 Code is pushed to a Git repository
 
-* Publisher ID: `tfs`
-* Event ID: `git.push`
+- Publisher ID: `tfs`
+- Event ID: `git.push`
 
 #### Settings
- * `branch`: The branch that code was pushed into
- * `pushedBy`: A group which has the pusher as its member
- * `repository`: The repository that code was pushed to
-   * Data type: `guid`
+
+- `branch`: The branch that code was pushed into
+- `pushedBy`: A group which has the pusher as its member
+- `repository`: The repository that code was pushed to
+  - Data type: `guid`
 
 #### Sample payload
+
 ```json
 {
   "id": "03c164c2-8912-4d5e-8009-3707d5f83734",
@@ -1684,21 +1727,24 @@ Code is pushed to a Git repository
 ```
 
 <a name="git.pullrequest.created"></a>
+
 ### Pull request created
 
 Pull request is created in a Git repository
 
-* Publisher ID: `tfs`
-* Event ID: `git.pullrequest.created`
+- Publisher ID: `tfs`
+- Event ID: `git.pullrequest.created`
 
 #### Settings
- * `repository`: The repository that code was pushed to
-   * Data type: `guid`
- * `pullrequestCreatedBy`: A group which has the requester as a member
- * `pullrequestReviewersContains`: A group included in the reviewers list
- * `branch`: The target branch of the pull request
+
+- `repository`: The repository that code was pushed to
+  - Data type: `guid`
+- `pullrequestCreatedBy`: A group which has the requester as a member
+- `pullrequestReviewersContains`: A group included in the reviewers list
+- `branch`: The target branch of the pull request
 
 #### Sample payload
+
 ```json
 {
   "id": "2ab4e3d3-b7a6-425e-92b1-5a9982c1269e",
@@ -1788,21 +1834,24 @@ Pull request is created in a Git repository
 ```
 
 <a name="git.pullrequest.merged"></a>
+
 ### Pull request merge commit created
 
 Pull request - Created merge commit
 
-* Publisher ID: `tfs`
-* Event ID: `git.pullrequest.merged`
+- Publisher ID: `tfs`
+- Event ID: `git.pullrequest.merged`
 
 #### Settings
- * `repository`: The repository that code was pushed to
-   * Data type: `guid`
- * `pullrequestCreatedBy`: A group which has the requester as a member
- * `pullrequestReviewersContains`: A group included in the reviewers list
- * `branch`: The target branch of the pull request
+
+- `repository`: The repository that code was pushed to
+  - Data type: `guid`
+- `pullrequestCreatedBy`: A group which has the requester as a member
+- `pullrequestReviewersContains`: A group included in the reviewers list
+- `branch`: The target branch of the pull request
 
 #### Sample payload
+
 ```json
 {
   "id": "6872ee8c-b333-4eff-bfb9-0d5274943566",
@@ -1893,27 +1942,30 @@ Pull request - Created merge commit
 ```
 
 <a name="git.pullrequest.updated"></a>
+
 ### Pull request updated
 
 Pull request is updated; status, review list, reviewer vote changed or the source branch is updated with a push
 
-* Publisher ID: `tfs`
-* Event ID: `git.pullrequest.updated`
+- Publisher ID: `tfs`
+- Event ID: `git.pullrequest.updated`
 
 #### Settings
- * `notificationType`: The type of pull request change
-   * Valid values: 
-      * `PushNotification` - Source branch updated
-      * `ReviewersUpdateNotification` - Reviewers changed
-      * `StatusUpdateNotification` - Status changed
-      * `ReviewerVoteNotification` - Votes score changed
- * `repository`: The repository that code was pushed to
-   * Data type: `guid`
- * `pullrequestCreatedBy`: A group which has the requester as a member
- * `pullrequestReviewersContains`: A group included in the reviewers list
- * `branch`: The target branch of the pull request
+
+- `notificationType`: The type of pull request change
+  - Valid values:
+    - `PushNotification` - Source branch updated
+    - `ReviewersUpdateNotification` - Reviewers changed
+    - `StatusUpdateNotification` - Status changed
+    - `ReviewerVoteNotification` - Votes score changed
+- `repository`: The repository that code was pushed to
+  - Data type: `guid`
+- `pullrequestCreatedBy`: A group which has the requester as a member
+- `pullrequestReviewersContains`: A group included in the reviewers list
+- `branch`: The target branch of the pull request
 
 #### Sample payload
+
 ```json
 {
   "id": "af07be1b-f3ad-44c8-a7f1-c4835f2df06b",
@@ -2012,18 +2064,21 @@ Pull request is updated; status, review list, reviewer vote changed or the sourc
 ## Work item
 
 <a name="workitem.created"></a>
+
 ### Work item created
 
 Filter events to include only newly created work items.
 
-* Publisher ID: `tfs`
-* Event ID: `workitem.created`
+- Publisher ID: `tfs`
+- Event ID: `workitem.created`
 
 #### Settings
- * `areaPath`: Filter events to include only work items under the specified area path.
- * `workItemType`: Filter events to include only work items of the specified type.
+
+- `areaPath`: Filter events to include only work items under the specified area path.
+- `workItemType`: Filter events to include only work items of the specified type.
 
 #### Sample payload
+
 ```json
 {
   "id": "d2d46fb1-dba5-403c-9373-427583f19e8c",
@@ -2094,18 +2149,21 @@ Filter events to include only newly created work items.
 ```
 
 <a name="workitem.deleted"></a>
+
 ### Work item deleted
 
 Filter events to include only newly deleted work items.
 
-* Publisher ID: `tfs`
-* Event ID: `workitem.deleted`
+- Publisher ID: `tfs`
+- Event ID: `workitem.deleted`
 
 #### Settings
- * `areaPath`: Filter events to include only work items under the specified area path.
- * `workItemType`: Filter events to include only work items of the specified type.
+
+- `areaPath`: Filter events to include only work items under the specified area path.
+- `workItemType`: Filter events to include only work items of the specified type.
 
 #### Sample payload
+
 ```json
 {
   "id": "72da0ade-0709-40ee-beb7-104287bf7e84",
@@ -2170,18 +2228,21 @@ Filter events to include only newly deleted work items.
 ```
 
 <a name="workitem.restored"></a>
+
 ### Work item restored
 
 Filter events to include only newly restored work items.
 
-* Publisher ID: `tfs`
-* Event ID: `workitem.restored`
+- Publisher ID: `tfs`
+- Event ID: `workitem.restored`
 
 #### Settings
- * `areaPath`: Filter events to include only work items under the specified area path.
- * `workItemType`: Filter events to include only work items of the specified type.
+
+- `areaPath`: Filter events to include only work items under the specified area path.
+- `workItemType`: Filter events to include only work items of the specified type.
 
 #### Sample payload
+
 ```json
 {
   "id": "1ca023d6-6cff-49dd-b3d1-302b69311810",
@@ -2258,19 +2319,22 @@ Filter events to include only newly restored work items.
 ```
 
 <a name="workitem.updated"></a>
+
 ### Work item updated
 
 Filter events to include only changed work items.
 
-* Publisher ID: `tfs`
-* Event ID: `workitem.updated`
+- Publisher ID: `tfs`
+- Event ID: `workitem.updated`
 
 #### Settings
- * `areaPath`: Filter events to include only work items under the specified area path.
- * `changedFields`: Filter events to include only work items with the specified field(s) changed.
- * `workItemType`: Filter events to include only work items of the specified type.
+
+- `areaPath`: Filter events to include only work items under the specified area path.
+- `changedFields`: Filter events to include only work items with the specified field(s) changed.
+- `workItemType`: Filter events to include only work items of the specified type.
 
 #### Sample payload
+
 ```json
 {
   "id": "27646e0e-b520-4d2b-9411-bba7524947cd",
@@ -2379,21 +2443,23 @@ Filter events to include only changed work items.
 }
 ```
 
-
 <a name="workitem.commented"></a>
+
 ### Work item commented on
 
 Filter events to include only work items commented on.
 
-* Publisher ID: `tfs`
-* Event ID: `workitem.commented`
+- Publisher ID: `tfs`
+- Event ID: `workitem.commented`
 
 #### Settings
- * `areaPath`: Filter events to include only work items under the specified area path.
- * `commentPattern`: The string that must be found in the comment.
- * `workItemType`: Filter events to include only work items of the specified type.
+
+- `areaPath`: Filter events to include only work items under the specified area path.
+- `commentPattern`: The string that must be found in the comment.
+- `workItemType`: Filter events to include only work items of the specified type.
 
 #### Sample payload
+
 ```json
 {
   "id": "fb2617ed-60df-4518-81fa-749faa6c5cd6",
@@ -2467,20 +2533,23 @@ Filter events to include only work items commented on.
 ## Deprecated event types
 
 <a name="message.posted"></a>
+
 ### Team room message posted
 
 Triggers when a message is posted to a team room
 
-* Publisher ID: `tfs`
-* Event ID: `message.posted`
+- Publisher ID: `tfs`
+- Event ID: `message.posted`
 
 #### Settings
- * `messagePattern`: The string that must be found in the message
- * `roomId`: Filter events to include only messages sent to the specified Team room
-   * Data type: `number`
-   * Required
+
+- `messagePattern`: The string that must be found in the message
+- `roomId`: Filter events to include only messages sent to the specified Team room
+  - Data type: `number`
+  - Required
 
 #### Sample payload
+
 ```json
 {
   "id": "daae438c-296b-4512-b08e-571910874e9b",
@@ -2529,7 +2598,6 @@ Triggers when a message is posted to a team room
 
 The event payload contains a `resourceContainers` dictionary that includes the IDs of the project, collection/account, or server that the event initiated from. Some products/environments also include a `baseUrl` field with each entry that provides the full URL to the container. This URL can be used to create a connection to the container in order to make REST API calls.
 
-* **Team Foundation Server 2015**: includes project, collection, and server. Does not include `baseUrl`.
-* **Team Foundation Server 2017**: includes project, collection, and server. Includes `baseUrl` for each.
-* **Azure DevOps Services**: includes project and collection (account). Includes `baseUrl` for each.
-
+- **Team Foundation Server 2015**: includes project, collection, and server. Does not include `baseUrl`.
+- **Team Foundation Server 2017**: includes project, collection, and server. Includes `baseUrl` for each.
+- **Azure DevOps Services**: includes project and collection (account). Includes `baseUrl` for each.

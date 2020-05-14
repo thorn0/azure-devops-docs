@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,16 +15,14 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Specifies a constraint that can be used to dynamically include/exclude a given contribution 
+Specifies a constraint that can be used to dynamically include/exclude a given contribution
 
 ### Members
 
-* `group`: number. An optional property that can be specified to group constraints together. All constraints within a group are AND&#x27;d together (all must be evaluate to True in order for the contribution to be included). Different groups of constraints are OR&#x27;d (only one group needs to evaluate to True for the contribution to be included).
+- `group`: number. An optional property that can be specified to group constraints together. All constraints within a group are AND&#x27;d together (all must be evaluate to True in order for the contribution to be included). Different groups of constraints are OR&#x27;d (only one group needs to evaluate to True for the contribution to be included).
 
-* `inverse`: boolean. If true, negate the result of the filter (include the contribution if the applied filter returns false instead of true)
+- `inverse`: boolean. If true, negate the result of the filter (include the contribution if the applied filter returns false instead of true)
 
-* `name`: string. Name of the IContributionFilter class
+- `name`: string. Name of the IContributionFilter class
 
-* `properties`: any. Properties that are fed to the contribution filter class
-
+- `properties`: any. Properties that are fed to the contribution filter class

@@ -18,17 +18,16 @@ Extends: [ShallowReference](./ShallowReference.md)
 
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `createdDate`: Date. The date the controller was created.
+- `createdDate`: Date. The date the controller was created.
 
-* `description`: string. The description of the controller.
+- `description`: string. The description of the controller.
 
-* `enabled`: boolean. Indicates whether the controller is enabled.
+- `enabled`: boolean. Indicates whether the controller is enabled.
 
-* `status`: [ControllerStatus](./ControllerStatus.md). The status of the controller.
+- `status`: [ControllerStatus](./ControllerStatus.md). The status of the controller.
 
-* `updatedDate`: Date. The date the controller was last updated.
+- `updatedDate`: Date. The date the controller was last updated.
 
-* `uri`: string. The controller&#x27;s URI.
-
+- `uri`: string. The controller&#x27;s URI.

@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Merge folders and files
 
@@ -24,13 +23,13 @@ The procedures in this topic advise how you can use the graphical user interface
 
 To perform these procedures, you must have the following permissions set:
 
--   You must have the **Read** permission for the item in the source tree and your **Check out** permission for the item in the target tree set to **Allow**.
+- You must have the **Read** permission for the item in the source tree and your **Check out** permission for the item in the target tree set to **Allow**.
 
--   You must have the **Merge** permission set for the target path.
+- You must have the **Merge** permission set for the target path.
 
--   If the item in the target tree is being renamed, you must have the **Check out** permission for both the source tree and the target tree set to **Allow**.
+- If the item in the target tree is being renamed, you must have the **Check out** permission for both the source tree and the target tree set to **Allow**.
 
--   If any files affected by the operation are locked, you must have the **Lock** permission set to **Allow**. For more information about permissions, see [Permissions and groups reference](../../organizations/security/permissions.md).
+- If any files affected by the operation are locked, you must have the **Lock** permission set to **Allow**. For more information about permissions, see [Permissions and groups reference](../../organizations/security/permissions.md).
 
 ## Initiate a Merge from the Source Control Window
 
@@ -125,37 +124,37 @@ After you complete one of the above procedures, the **Source Control Merge Wizar
     > [!TIP]
     > If possible, click **All changes up to a specific version**, as it will reduce the risk of conflicts in future merges.
 
-    -   If you selected **All changes up to a specific version**, then the **Select the versions of the source items** page appears. Select the version of the items that you want to use.
+    - If you selected **All changes up to a specific version**, then the **Select the versions of the source items** page appears. Select the version of the items that you want to use.
 
-        <table>
-                <tbody>
-        <tr>
-        <td><p><strong>Changeset</strong></p></td>
-        <td><p>Merge by specifying a <a href="find-view-changesets.md">changeset</a> version.</p></td>
-        </tr>
-        <tr>
-        <td><p><strong>Date</strong></p></td>
-        <td><p>Merge by specifying a date version.</p></td>
-        </tr>
-        <tr>
-        <td><p><strong>Label</strong></p></td>
-        <td><p>Merge by specifying a <a href="use-labels-take-snapshot-your-files.md">label</a> version.</p></td>
-        </tr>
-        <tr>
-        <td><p><strong>Latest Version</strong></p></td>
-        <td><p>Merge by specifying the latest version.</p></td>
-        </tr>
-        <tr>
-        <td><p><strong>Workspace</strong></p></td>
-        <td><p>Merge by specifying a <a href="create-work-workspaces.md">workspace</a> version.</p></td>
-        </tr>
-        </tbody>
-        </table>
+      <table>
+              <tbody>
+      <tr>
+      <td><p><strong>Changeset</strong></p></td>
+      <td><p>Merge by specifying a <a href="find-view-changesets.md">changeset</a> version.</p></td>
+      </tr>
+      <tr>
+      <td><p><strong>Date</strong></p></td>
+      <td><p>Merge by specifying a date version.</p></td>
+      </tr>
+      <tr>
+      <td><p><strong>Label</strong></p></td>
+      <td><p>Merge by specifying a <a href="use-labels-take-snapshot-your-files.md">label</a> version.</p></td>
+      </tr>
+      <tr>
+      <td><p><strong>Latest Version</strong></p></td>
+      <td><p>Merge by specifying the latest version.</p></td>
+      </tr>
+      <tr>
+      <td><p><strong>Workspace</strong></p></td>
+      <td><p>Merge by specifying a <a href="create-work-workspaces.md">workspace</a> version.</p></td>
+      </tr>
+      </tbody>
+      </table>
 
-    -   If you selected **Selected changesets**, then the **Select changesets to merge into the target branch **page appears. Select the changeset you want to merge.
+    - If you selected **Selected changesets**, then the **Select changesets to merge into the target branch **page appears. Select the changeset you want to merge.
 
-        > [!TIP]
-        > You can press and hold the CONTROL or SHIFT keys and then select multiple items in a continuous range.
+      > [!TIP]
+      > You can press and hold the CONTROL or SHIFT keys and then select multiple items in a continuous range.
 
 4.  Click **Next**, and then on the **Perform the merge operation** page, click **Finish**.
 
@@ -171,12 +170,12 @@ After you complete one of the above procedures, the **Source Control Merge Wizar
 
 #### Other Resources
 
- [Use branches to isolate risk in Team Foundation Version Control](use-branches-isolate-risk-team-foundation-version-control.md) 
+[Use branches to isolate risk in Team Foundation Version Control](use-branches-isolate-risk-team-foundation-version-control.md)
 
- [Merge Command](merge-command.md) 
+[Merge Command](merge-command.md)
 
- [Merges Command](merges-command.md) 
+[Merges Command](merges-command.md)
 
- [Resolve Team Foundation Version Control conflicts](resolve-team-foundation-version-control-conflicts.md) 
+[Resolve Team Foundation Version Control conflicts](resolve-team-foundation-version-control-conflicts.md)
 
- [Use Source Control Explorer to manage files under version control](use-source-control-explorer-manage-files-under-version-control.md) 
+[Use Source Control Explorer to manage files under version control](use-source-control-explorer-manage-files-under-version-control.md)

@@ -65,7 +65,7 @@ Learn more about [how agents communicate](/azure/devops/pipelines/agents/agents#
 As an alternative, on TFS 2017, you can use either a domain user or a
 local Windows user on each of your TFS application tiers.
 
-On TFS 2015, for macOS and Linux only, 
+On TFS 2015, for macOS and Linux only,
 we recommend that you create a local Windows user on each of your TFS application tiers and dedicate that user for the purpose of deploying build agents.
 
 ::: moniker-end

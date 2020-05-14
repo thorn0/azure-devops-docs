@@ -13,7 +13,7 @@ ms.technology: devops-cicd-tasks
 - task: ServiceFabricUpdateManifests@2
   inputs:
     #updateType: 'Manifest versions' # Options: manifest Versions, docker Image Settings
-    applicationPackagePath: 
+    applicationPackagePath:
     #versionSuffix: '.$(Build.BuildNumber)' # Required when updateType == Manifest Versions
     #versionBehavior: 'Append' # Optional. Options: append, replace
     #updateOnlyChanged: false # Required when updateType == Manifest Versions

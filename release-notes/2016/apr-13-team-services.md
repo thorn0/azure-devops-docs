@@ -15,7 +15,7 @@ Let’s start by walking through some of the improvements we’ve made in the Wo
 
 ## Follow a work item
 
-You can now setup an alert for tracking changes to a single work item just by clicking on the new "Follow" button in the form. When you follow a work item, you'll be notified any time the work item changes – including field updates, links, attachments, and comments. Here is a work item that I’m following closely and * **almost*** made it into these release notes.
+You can now setup an alert for tracking changes to a single work item just by clicking on the new "Follow" button in the form. When you follow a work item, you'll be notified any time the work item changes – including field updates, links, attachments, and comments. Here is a work item that I’m following closely and \* **almost\*** made it into these release notes.
 
 ![Follow a work item](media/4_13_01.png)
 
@@ -37,7 +37,7 @@ For details see [Move, change, and delete work items](https://msdn.microsoft.com
 
 Users may now move a work item(s) between team projects. The work item ID remains the same and all of the work item's revisions are moved. Users may also change type during a move and add a comment to be included as part of the work item's discussion section.
 
-## Kanban board live updates 
+## Kanban board live updates
 
 Your Kanban board is now Live
 
@@ -51,7 +51,7 @@ When anyone in your team creates, updates, or deletes a work item on the board, 
 
 All you need to do now is, enable the tower icon on your Kanban board and start collaborating with your team.
 
-## Pick lists for work Items 
+## Pick lists for work Items
 
 The biggest ask since we opened up process changes has been to add fields with lists of values – we call these picklists. In TFS, we have rules (AllowedValues/SuggestedValue/ProhibitedValue) as well as global lists that help provide this functionality, but they’re fairly complex and can be difficult to configure. Instead of thinking about picklists as a set of rules, we’ve made lists a first class concept. You can define items in a list and then back a picklist field with a list.
 
@@ -83,7 +83,7 @@ Clicking on the error link, opens up the source file causing the build error:
 
 The previous log view only supported logs up to 10,000 lines. The new viewer is based on the Monaco editor used in VS Code and will support logs up to 150,000 lines.
 
-## Java Build templates 
+## Java Build templates
 
 We’ve made it even easier for Java developers to get started with build by adding build templates for Ant, Maven and Gradle.
 
@@ -91,7 +91,7 @@ We’ve made it even easier for Java developers to get started with build by add
 
 Xamarin Build Tasks
 
-We made some significant improvements to our Xamarin support: 
+We made some significant improvements to our Xamarin support:
 
 - The [Xamarin.Android](https://msdn.microsoft.com/library/vs/alm/build/steps/build/xamarin-android) step now supports macOS and Linux
 - The [Xamarin.iOS](https://msdn.microsoft.com/library/vs/alm/build/steps/build/xamarin-ios) step now supports signing and packaging

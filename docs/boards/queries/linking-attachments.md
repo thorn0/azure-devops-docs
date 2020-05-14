@@ -1,66 +1,66 @@
 ---
-title: Query by link of attachment count   
+title: Query by link of attachment count
 titleSuffix: Azure Boards
-description: Query work items based on link type, link count, link restrictions, and attachment file count in Azure Boards, Azure DevOps, & Team Foundation Server 
+description: Query work items based on link type, link count, link restrictions, and attachment file count in Azure Boards, Azure DevOps, & Team Foundation Server
 ms.technology: devops-agile
 ms.assetid: 219717a0-de6e-4f70-8558-54f813f82507
 ms.author: kaelli
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 10/02/2019
 ---
 
-
-# Query by link or attachment count  
+# Query by link or attachment count
 
 [!INCLUDE [temp](../includes/version-vsts-tfs-all-versions.md)]
 
 You can [link work items to track related work and dependencies](link-work-items-support-traceability.md) and [attach files to share information with your team](share-plans.md#attachments). You can then list work items based on one or more of the following integer fields:
 
-::: moniker range="azure-devops"  
+::: moniker range="azure-devops"
+
 - Attachment File Count
-- (Discussion) Comment Count 
+- (Discussion) Comment Count
 - External Link count
 - Hyperlink Count
 - Link Comment
 - Related Link Count
 - Remote Link Count
-::: moniker-end 
+  ::: moniker-end
 
+::: moniker range=">= tfs-2017 <= azure-devops-2019"
 
-::: moniker range=">= tfs-2017 <= azure-devops-2019" 
 - Attachment File Count
-- (Discussion) Comment Count 
+- (Discussion) Comment Count
 - External Link count
 - Hyperlink Count
 - Link Comment
 - Related Link Count
-::: moniker-end 
+  ::: moniker-end
 
+::: moniker range=">= tfs-2013 <= tfs-2015"
 
-::: moniker range=">= tfs-2013 <= tfs-2015" 
 - Attachment File Count
 - External Link count
 - Hyperlink Count
 - Link Comment
 - Related Link Count
-::: moniker-end 
+  ::: moniker-end
 
-For descriptions of each of these fields, see the [table provided later in this article](#table-field). 
+For descriptions of each of these fields, see the [table provided later in this article](#table-field).
 
-
-## Supported operators and macros 
+## Supported operators and macros
 
 Query clauses that specify an integer field can use the operators listed below.
-- = , <> , > , < , >= , <= , 
-- =[Field], <>[Field], >[Field], <[Field], >=[Field], <=[Field], 
-- In, Not In, 
+
+- = , <> , > , < , >= , <= ,
+- =[Field], <>[Field], >[Field], <[Field], >=[Field], <=[Field],
+- In, Not In,
 - Was Ever
 
 ## Link or attachment count queries
 
-You can filter for work items by the link type, link count, or attachment count.  
+You can filter for work items by the link type, link count, or attachment count.
 
 <table valign="top">
 <tbody valign="top">
@@ -122,23 +122,21 @@ You can filter for work items by the link type, link count, or attachment count.
 </table>
 
 <!---
-## List work items containing remote links 
+## List work items containing remote links
 -->
-
 
 <a id="tree" />
 
-## List hierarchical items in a tree view  
+## List hierarchical items in a tree view
 
-Add a query and select **Tree of work items** to begin your query. You should see something similar to the following: 
+Add a query and select **Tree of work items** to begin your query. You should see something similar to the following:
 
-![Query editor, new tree of work items query](media/query-link-attach-all-items-tree-query.png)  
+![Query editor, new tree of work items query](media/query-link-attach-all-items-tree-query.png)
 
-> [!NOTE]    
-> You can't construct a query that shows a hierarchical view of Test Plans, Test Suites, and Test Cases. These items aren't linked together using parent-child link types. You can [view the hierarchy through the Test>Test Plans page](../../test/create-a-test-plan.md). 
+> [!NOTE]  
+> You can't construct a query that shows a hierarchical view of Test Plans, Test Suites, and Test Cases. These items aren't linked together using parent-child link types. You can [view the hierarchy through the Test>Test Plans page](../../test/create-a-test-plan.md).
 
-From there, you can add additional query clauses or change the Filter options for linked work items. 
-
+From there, you can add additional query clauses or change the Filter options for linked work items.
 
 <table width="100%">
 <tbody valign="top">
@@ -174,15 +172,15 @@ Change Filter options to <strong>Match linked work items first</strong><br/>Add 
 </tr>
 
 </tbody>
-</table>  
+</table>
 
 <a id="dependents" />
 
-## List items based on linked dependents  
+## List items based on linked dependents
 
 The following example shows a dependent linked query that returns items with dependencies on work managed by other teams and other projects. Use this query to see all dependent work items that link to active Product Backlog Items or Bugs that have not been removed, closed, or completed. Only those dependent work items that are under a product area other than the **Phone Save\\Phone Customers** are returned.
 
-![Work Items and Dependent Links Query](media/example-work-item-queries/IC588290.png)   
+![Work Items and Dependent Links Query](media/example-work-item-queries/IC588290.png)
 
 **Why this works:**
 
@@ -198,22 +196,22 @@ The following example shows a dependent linked query that returns items with dep
 
 The following image shows the query results that are returned.
 
-![Direct links query results](media/example-work-item-queries/IC588291.png)  
+![Direct links query results](media/example-work-item-queries/IC588291.png)
 
 <a id="orphan-stories" />
 
 ## List orphan user stories
 
-If you typically organize your user stories under features, you can quickly find those user stories that are orphan by opening the product backlog, enable Parents On view option,  and scroll down to the section that lists Unparented Stories (Agile) or Unparented Backlog items (Scrum)
+If you typically organize your user stories under features, you can quickly find those user stories that are orphan by opening the product backlog, enable Parents On view option, and scroll down to the section that lists Unparented Stories (Agile) or Unparented Backlog items (Scrum)
 
 > [!div class="mx-imgBorder"]  
-> ![List orphan stories or backlog items](media/link-attachments/list-orphan-stories.png) 
+> ![List orphan stories or backlog items](media/link-attachments/list-orphan-stories.png)
 
 <a id="table-field"/>
 
-## Link and attachment count and comment fields 
+## Link and attachment count and comment fields
 
-The following table describes fields associated with links and attachments. Most of these fields do not appear on the work item forms but are tracked for all work item types. 
+The following table describes fields associated with links and attachments. Most of these fields do not appear on the work item forms but are tracked for all work item types.
 
 <table><thead>
 <tr>
@@ -294,37 +292,33 @@ For Azure Boards (cloud service), you can add up to 100 attachments to a work it
 </tbody>
 </table>
 
-
 ## Related articles
 
-- [Add a link to multiple work items](../backlogs/add-link.md) 
-- [Linking, traceability, and managing dependencies](link-work-items-support-traceability.md) 
+- [Add a link to multiple work items](../backlogs/add-link.md)
+- [Linking, traceability, and managing dependencies](link-work-items-support-traceability.md)
 - [Query quick reference](query-index-quick-ref.md)
-- [Query editor](using-queries.md)   
-- [Query fields, operators, and macros](query-operators-variables.md)   
-- [Add work items](../backlogs/add-work-items.md)  
-- [Work item field index](../work-items/guidance/work-item-field.md) 
+- [Query editor](using-queries.md)
+- [Query fields, operators, and macros](query-operators-variables.md)
+- [Add work items](../backlogs/add-work-items.md)
+- [Work item field index](../work-items/guidance/work-item-field.md)
 
+::: moniker range=">= tfs-2015 <= azure-devops-2019"
 
-::: moniker range=">= tfs-2015 <= azure-devops-2019" 
+### Visualize related work and other objects
 
-### Visualize related work and other objects 
+You can view related work items and object within a work item form by installing the [Work item visualization extension](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.WorkItemVisualization) available from the Visual Studio Marketplace, Azure DevOps tab.
+::: moniker-end
 
-You can view related work items and object within a work item form by installing the [Work item visualization extension](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.WorkItemVisualization) available from the Visual Studio Marketplace, Azure DevOps tab. 
-::: moniker-end 
+::: moniker range=">= tfs-2013 <= azure-devops-2019"
 
-::: moniker range=">= tfs-2013 <= azure-devops-2019" 
+### Add custom link types or customize the links controls
 
-### Add custom link types or customize the links controls 
+To add link types, see [Manage link types [witadmin]](../../reference/witadmin/manage-link-types.md).
 
-To add link types, see [Manage link types [witadmin]](../../reference/witadmin/manage-link-types.md). 
-
-All tabs that support creating links between work items are implemented by using the **LinksControl** element on the work item form. This element controls filtering and restricting the types of work items to which you can link, the types of links that you can create, and whether you can link to work items in another project. To customize the link controls and restrictions, you modify the definition of the `LinksControlOptions` for a work item type, see [LinksControlOptions XML elements](../../reference/xml/linkscontroloptions-xml-elements.md).  
+All tabs that support creating links between work items are implemented by using the **LinksControl** element on the work item form. This element controls filtering and restricting the types of work items to which you can link, the types of links that you can create, and whether you can link to work items in another project. To customize the link controls and restrictions, you modify the definition of the `LinksControlOptions` for a work item type, see [LinksControlOptions XML elements](../../reference/xml/linkscontroloptions-xml-elements.md).
 
 ### Default data fields in lists of links
 
 You can add or remove columns from the list of links, and you can customize the default columns and the column order. For more information, see [LinksControlOptions XML elements](../../reference/xml/linkscontroloptions-xml-elements.md).
 
-::: moniker-end 
-
-
+::: moniker-end

@@ -8,7 +8,7 @@ ms.technology: devops-accounts
 ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ms.date: 10/31/2019
 ---
 
@@ -35,7 +35,6 @@ To restore a project, you must delete project permissions and have the "delete p
 
 ::: moniker-end
 
-
 > [!NOTE]
 > A recently deleted project is only viewable when there's a project that's been deleted from an organization within the last 28 days.
 
@@ -43,11 +42,12 @@ To restore a project, you must delete project permissions and have the "delete p
 
 ::: moniker range="azure-devops"
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
 2. Choose ![gear icon](../../media/icons/gear-icon.png) **Organization settings**.
 
    ![Choose the gear icon, Organization settings](../../media/settings/open-admin-settings-vert.png)
+
 3. Select **Overview**, and then scroll down to "recently deleted projects."
 
    ![organization-settings-select-overview.png](../accounts/media/shared/organization-settings-select-overview.png)
@@ -64,11 +64,10 @@ To restore a project, you must delete project permissions and have the "delete p
 
 > [!WARNING]
 > If you're trying to restore a project with a name that's already taken, you need to rename the project before it can be restored. To rename the project, enter the following in the request body: `"name":"new name"`
-> 
 
-1. Open a browser window and enter a URL that uses the following form:  
+1. Open a browser window and enter a URL that uses the following form:
 
-    <pre><code>http://ServerName:8080/tfs/DefaultCollection/<i>ProjectName</i></code></pre> 
+    <pre><code>http://ServerName:8080/tfs/DefaultCollection/<i>ProjectName</i></code></pre>
 
    For example, to connect to the server named **FabrikamPrime**, enter: **http://FabrikamPrime:8080/tfs/**.
 
@@ -79,11 +78,13 @@ To restore a project, you must delete project permissions and have the "delete p
    GET http://ServerName:8080/tfs/DefaultCollection/_apis/projects?stateFilter=deleted&api-version=5.0-preview.3
    ```
 3. Restore a deleted project using the following request:
+
    ```
    PATCH http://ServerName:8080/tfs/DefaultCollection/_apis/projects/{projectId}?api-version=5.0-preview.3
    ```
 
    Request body
+
    ```
    {
     "state" : "wellFormed"
@@ -93,13 +94,14 @@ To restore a project, you must delete project permissions and have the "delete p
 ### Using PowerShell
 
 1. Execute the following PowerShell script to get a list of deleted projects and make sure to update `$collectionUrl`.
+
    ```
-   $collectionUrl = "https://localhost/defaultcollection" 
+   $collectionUrl = "https://localhost/defaultcollection"
    (irm -Uri "$collectionUrl/_apis/projects?stateFilter=deleted&api-version=5.0-preview.3" -UseDefaultCredentials).value
    ```
 
-    Something similar to the following screenshot appears:
-    ![PowerShell script return example for deleted projects](media/restore-project/deleted-projects-powershell-script-2019.png)
+   Something similar to the following screenshot appears:
+   ![PowerShell script return example for deleted projects](media/restore-project/deleted-projects-powershell-script-2019.png)
 
 2. Use the following script to restore a project. Be sure to update `$collectionUrl` and `$projectName`.
    ```
@@ -108,11 +110,11 @@ To restore a project, you must delete project permissions and have the "delete p
    $project = (irm -Uri "$collectionUrl/_apis/projects?stateFilter=deleted&api-version=5.0-preview.3" -UseDefaultCredentials).value | where > name -eq $projectName
    irm -Uri ($project.url + "?api-version=5.0-preview.3") -UseDefaultCredentials -Method PATCH -Body '{"state":"wellFormed"}' -Headers @> > > {'Content-Type' = 'application/json'}
    ```
-::: moniker-end
+   ::: moniker-end
 
 Your project and associated data are restored.
 
 ## Related articles
 
-* [Save project data](save-project-data.md)
-* [Create a project](create-project.md)
+- [Save project data](save-project-data.md)
+- [Create a project](create-project.md)

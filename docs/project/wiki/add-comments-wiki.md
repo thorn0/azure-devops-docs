@@ -1,7 +1,7 @@
 ---
-title: Add comments to wiki pages 
-titleSuffix: Azure DevOps 
-description: Learn how to add comments to wiki pages in Azure DevOps 
+title: Add comments to wiki pages
+titleSuffix: Azure DevOps
+description: Learn how to add comments to wiki pages in Azure DevOps
 ms.technology: devops-collab
 ms.custom: wiki
 ms.topic: conceptual
@@ -9,8 +9,8 @@ ms.assetid:
 ms.author: chcomley
 author: chcomley
 ms.reviewer: gopinach
-monikerRange: 'azure-devops'
-ms.date: 08/05/2019  
+monikerRange: "azure-devops"
+ms.date: 08/05/2019
 ---
 
 # Add comments to wiki pages
@@ -45,4 +45,3 @@ Edit or delete any comments that you've added to a wiki.
 - [Version, select, or unpublish a wiki](wiki-select-unpublish-versions.md)
 - [Markdown guidance](markdown-guidance.md)
 - [Wiki Markdown guidance](wiki-markdown-guidance.md)
-

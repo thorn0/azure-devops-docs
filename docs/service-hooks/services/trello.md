@@ -4,7 +4,7 @@ ms.topic: conceptual
 title: Create a service hook with Trello
 description: Use Trello with your Azure DevOps Services organization
 ms.assetid: 7472f06c-11f3-4603-953c-9a0de5abe29d
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 2/08/2019
 ---
 
@@ -31,13 +31,13 @@ Create a Trello card or list from an Azure DevOps Services event.
 
 ::: moniker range=">= azure-devops-2019"
 
-1. Go to your project Service Hooks page: 
+1. Go to your project Service Hooks page:
 
-	`https://{orgName}/{project_name}/_settings/serviceHooks`
+   `https://{orgName}/{project_name}/_settings/serviceHooks`
 
-	![Project administration page](./media/add-devops-service-hook.png)
+   ![Project administration page](./media/add-devops-service-hook.png)
 
-	Select **Create Subscription**.
+   Select **Create Subscription**.
 
 1. Pick the Trello service.
 
@@ -48,19 +48,18 @@ we're going to have the subscription respond when a work item is created.
 
    <img alt="Trigger configuration page" src="./media/trello/trigger.png" style="border: 1px solid #CCCCCC" />
 
+1) Set up the action that Trello will take in response to the trigger -
+   either create a card or a list.
 
-1. Set up the action that Trello will take in response to the trigger -
-either create a card or a list.
+      <img alt="Action configuration page" src="./media/trello/action.png" style="border: 1px solid #CCCCCC" />
 
-   <img alt="Action configuration page" src="./media/trello/action.png" style="border: 1px solid #CCCCCC" />
-
-   You can use  placeholders to insert content from the event into the
+   You can use placeholders to insert content from the event into the
    name and description of the cards or lists that the subscription creates.
    For example, when we run the test notification, the card that gets created is named
    "Bug #5: Some great new idea!" because the test work item is a bug (ID=5)
    with the title "Some great new idea!".
 
-1. Test the service hook subscription and finish the wizard.
+1) Test the service hook subscription and finish the wizard.
 
    <img alt="Test notification" src="./media/trello/test.png" style="border: 1px solid #CCCCCC" />
 
@@ -68,13 +67,13 @@ either create a card or a list.
 
 ::: moniker range=">= tfs-2017 < azure-devops-2019"
 
-1. Go to your project Service Hooks page: 
+1. Go to your project Service Hooks page:
 
-    `https://dev.azure.com/{orgName}/{project_name}/_apps/hub/ms.vss-servicehooks-web.manageServiceHooks-project`
+   `https://dev.azure.com/{orgName}/{project_name}/_apps/hub/ms.vss-servicehooks-web.manageServiceHooks-project`
 
-	![Project administration page](./media/add-service-hook.png)
+   ![Project administration page](./media/add-service-hook.png)
 
-	Select **Create Subscription**.
+   Select **Create Subscription**.
 
 1. Pick the Trello service.
 
@@ -85,19 +84,18 @@ we're going to have the subscription respond when a work item is created.
 
    <img alt="Trigger configuration page" src="./media/trello/trigger.png" style="border: 1px solid #CCCCCC" />
 
+1) Set up the action that Trello will take in response to the trigger -
+   either create a card or a list.
 
-1. Set up the action that Trello will take in response to the trigger -
-either create a card or a list.
+      <img alt="Action configuration page" src="./media/trello/action.png" style="border: 1px solid #CCCCCC" />
 
-   <img alt="Action configuration page" src="./media/trello/action.png" style="border: 1px solid #CCCCCC" />
-
-   You can use  placeholders to insert content from the event into the
+   You can use placeholders to insert content from the event into the
    name and description of the cards or lists that the subscription creates.
    For example, when we run the test notification, the card that gets created is named
    "Bug #5: Some great new idea!" because the test work item is a bug (ID=5)
    with the title "Some great new idea!".
 
-1. Test the service hook subscription and finish the wizard.
+1) Test the service hook subscription and finish the wizard.
 
    <img alt="Test notification" src="./media/trello/test.png" style="border: 1px solid #CCCCCC" />
 
@@ -120,7 +118,7 @@ The example we used for the card name in this page uses:
 So when a bug is created with the ID 5 and title "Some great new idea!",
 the card name is "Bug #5: Some great new idea!".
 
-The basic form of the placeholder is ```{{resource.field}}```
+The basic form of the placeholder is `{{resource.field}}`
 where resource is the name of the resource raising the event (workitem, build, and so on)
 and field is a field within the resource section of the event, like ID.
 So, if the subscription is for a completed build, it might be something like
@@ -137,18 +135,18 @@ Work item fields appear in the event in the fields array, like this example:
 
 ```
     " fields": {
-                " System.AreaPath": "Fabrikam-Fiber-Git", 
-                " System.TeamProject": "Fabrikam-Fiber-Git", 
-                " System.IterationPath": "Fabrikam-Fiber-Git", 
-                " System.WorkItemType": "Product Backlog Item", 
-                " System.State": "New", 
-                " System.Reason": "New backlog item", 
-                " System.CreatedDate": "2014-11-05T21:11:28.85Z", 
-                " System.CreatedBy": "Normal Paulk", 
-                " System.ChangedDate": "2014-11-05T21:11:29.23Z", 
-                " System.ChangedBy": "Normal Paulk", 
-                " System.Title": "Test PBI", 
-                " Microsoft.Azure DevOps Services.Common.BacklogPriority": 999999999, 
+                " System.AreaPath": "Fabrikam-Fiber-Git",
+                " System.TeamProject": "Fabrikam-Fiber-Git",
+                " System.IterationPath": "Fabrikam-Fiber-Git",
+                " System.WorkItemType": "Product Backlog Item",
+                " System.State": "New",
+                " System.Reason": "New backlog item",
+                " System.CreatedDate": "2014-11-05T21:11:28.85Z",
+                " System.CreatedBy": "Normal Paulk",
+                " System.ChangedDate": "2014-11-05T21:11:29.23Z",
+                " System.ChangedBy": "Normal Paulk",
+                " System.Title": "Test PBI",
+                " Microsoft.Azure DevOps Services.Common.BacklogPriority": 999999999,
                 " WEF_6CB513B6E70E43499D9FC94E5BBFB784_Kanban.Column": "New"
            },
 ```
@@ -161,7 +159,7 @@ Working directly from the event definition, we would have created our card name 
 
 As a shortcut, you can reference any fields in the System or Microsoft.Azure DevOps Services.Common namespaces
 as if they were fields of the resource.
-So ```{{workitem.fields["System.workItemType"]}}``` becomes ```{{workitem.workItemType}}```.
+So `{{workitem.fields["System.workItemType"]}}` becomes `{{workitem.workItemType}}`.
 
 ### Placeholder expressions
 
@@ -169,19 +167,20 @@ These placeholders use a [handlebars templates](https://handlebarsjs.com/)
 implementation that is largely compatible with [Mustache](https://mustache.github.io/mustache.5.html).
 Some useful expressions include
 
-Type of expression         | examples
----------------------------|-----------------------------
-basic expressions          | ```{{workitem.name}}```
-array expressions          | ```{{pullRequest.reviewers.[0].displayName}}```
-Mustache sections          | ```{{#workitem.assignedTo}}``` This WI is assigned ```{{/workitem.assignedTo}}```
-Mustache Inverted Sections | ```{{^workitem.assignedTo}}``` This WI isn't assigned ```{{/workitem.assignedTo}}```
-Handlebars block helpers   | with<br/>if/else<br/>unless<br/>each
-Handlebars paths          | ...<br/>this<br/>For example, ```{{../comment/id}}``` or ```{{this/title}}```
-Template comments          | ```{{!-- this is a handlebar comment --}}``` 
+| Type of expression         | examples                                                                     |
+| -------------------------- | ---------------------------------------------------------------------------- |
+| basic expressions          | `{{workitem.name}}`                                                          |
+| array expressions          | `{{pullRequest.reviewers.[0].displayName}}`                                  |
+| Mustache sections          | `{{#workitem.assignedTo}}` This WI is assigned `{{/workitem.assignedTo}}`    |
+| Mustache Inverted Sections | `{{^workitem.assignedTo}}` This WI isn't assigned `{{/workitem.assignedTo}}` |
+| Handlebars block helpers   | with<br/>if/else<br/>unless<br/>each                                         |
+| Handlebars paths           | ...<br/>this<br/>For example, `{{../comment/id}}` or `{{this/title}}`        |
+| Template comments          | `{{!-- this is a handlebar comment --}}`                                     |
 
 ## Pricing
+
 Azure DevOps Services doesn't charge for the framework for integrating with external services. Check out the specific service's site
-for pricing related to their services. 
+for pricing related to their services.
 
 ## Q & A
 

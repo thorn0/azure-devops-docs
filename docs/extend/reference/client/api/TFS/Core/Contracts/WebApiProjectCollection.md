@@ -18,7 +18,6 @@ Extends: [WebApiProjectCollectionRef](../../../TFS/Core/Contracts/WebApiProjectC
 
 ### Members
 
-* `description`: string. Project collection description
+- `description`: string. Project collection description
 
-* `state`: string. Project collection state
-
+- `state`: string. Project collection state

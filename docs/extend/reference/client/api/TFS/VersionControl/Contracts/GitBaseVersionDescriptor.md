@@ -17,9 +17,8 @@ Extends: [GitVersionDescriptor](../../../TFS/VersionControl/Contracts/GitVersion
 
 ### Members
 
-* `baseVersion`: string. Version string identifier (name of tag/branch, SHA1 of commit)
+- `baseVersion`: string. Version string identifier (name of tag/branch, SHA1 of commit)
 
-* `baseVersionOptions`: [GitVersionOptions](../../../TFS/VersionControl/Contracts/GitVersionOptions.md). Version options - Specify additional modifiers to version (e.g Previous)
+- `baseVersionOptions`: [GitVersionOptions](../../../TFS/VersionControl/Contracts/GitVersionOptions.md). Version options - Specify additional modifiers to version (e.g Previous)
 
-* `baseVersionType`: [GitVersionType](../../../TFS/VersionControl/Contracts/GitVersionType.md). Version type (branch, tag, or commit). Determines how ID is interpreted
-
+- `baseVersionType`: [GitVersionType](../../../TFS/VersionControl/Contracts/GitVersionType.md). Version type (branch, tag, or commit). Determines how ID is interpreted

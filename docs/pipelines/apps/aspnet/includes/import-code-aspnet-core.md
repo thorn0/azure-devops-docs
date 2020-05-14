@@ -17,7 +17,7 @@ https://github.com/MicrosoftDocs/pipelines-dotnet-core
 
 You've got a few version control options. Some common ones are:
 
-* To import the sample app into a Git repo in Azure Repos or TFS:
+- To import the sample app into a Git repo in Azure Repos or TFS:
 
   1. on the **Code** page for your project in Azure Repos/TFS, select the option to **Import repository**.
 
@@ -25,7 +25,7 @@ You've got a few version control options. Some common ones are:
 
   1. Click **Import** to copy the sample code into your Git repo.
 
-* To fork the sample app into your own GitHub repository:
+- To fork the sample app into your own GitHub repository:
 
   1. Navigate to the above GitHub repository URL in your browser.
 

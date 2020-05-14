@@ -13,16 +13,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `afterId`: string. 
+- `afterId`: string.
 
-* `beforeId`: string. 
+- `beforeId`: string.
 
-* `branch`: string. 
+- `branch`: string.
 
-* `commits`: [GitCommit](../../../TFS/VersionControl/Contracts/GitCommit.md)[]. 
+- `commits`: [GitCommit](../../../TFS/VersionControl/Contracts/GitCommit.md)[].
 
-* `repository`: [GitRepository](../../../TFS/VersionControl/Contracts/GitRepository.md). 
-
+- `repository`: [GitRepository](../../../TFS/VersionControl/Contracts/GitRepository.md).

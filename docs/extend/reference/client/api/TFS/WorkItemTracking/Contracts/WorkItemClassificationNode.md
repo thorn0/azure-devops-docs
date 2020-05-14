@@ -17,15 +17,14 @@ Extends: [WorkItemTrackingResource](../../../TFS/WorkItemTracking/Contracts/Work
 
 ### Members
 
-* `attributes`: {[key: string]: any}. 
+- `attributes`: {[key: string]: any}.
 
-* `children`: [WorkItemClassificationNode](../../../TFS/WorkItemTracking/Contracts/WorkItemClassificationNode.md)[]. 
+- `children`: [WorkItemClassificationNode](../../../TFS/WorkItemTracking/Contracts/WorkItemClassificationNode.md)[].
 
-* `id`: number. 
+- `id`: number.
 
-* `identifier`: string. 
+- `identifier`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `structureType`: [TreeNodeStructureType](../../../TFS/WorkItemTracking/Contracts/TreeNodeStructureType.md). 
-
+- `structureType`: [TreeNodeStructureType](../../../TFS/WorkItemTracking/Contracts/TreeNodeStructureType.md).

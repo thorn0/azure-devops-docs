@@ -8,7 +8,7 @@ ms.assetid:
 ms.author: kaelli
 author: KathrynEE
 ms.topic: conceptual
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ms.date: 11/19/2018
 ---
 
@@ -16,11 +16,9 @@ ms.date: 11/19/2018
 
 [!INCLUDE [temp](../includes/version-vsts-tfs-2015-on.md)]
 
-
 <a id="filter"></a>
 
 Depending on the size of your team and the number of stories in progress, your Kanban board can get a bit crowded. With filtering, you can selectively choose what cards display to focus on what's of interest in the moment. With parent work item filters, you can focus on one or more select features or epics.
-
 
 <a id="text-filter"></a>
 
@@ -76,7 +74,7 @@ The filter criteria ignores the following characters: `,` (comma), `.` (period),
 ::: moniker range=">= tfs-2017 <= tfs-2018"
 
 The filter criteria ignores the following characters when the field value starts with the characters:<br/>
-```{ ( [ ! @ # $ % ^ & * ~ ` ' "```
+`` { ( [ ! @ # $ % ^ & * ~ ` ' " ``
 
 ::: moniker-end
 
@@ -95,13 +93,13 @@ To start filtering, click the ![Kanban filter icon](../media/icons/kanban-filter
 Choose one or more values from the multi-select drop-down menu for each field. The values for these fields are populated as follows:
 
 - **Assigned To**: All users who are currently assigned to work items on the board plus Unassigned
-- **Iteration**: All Iteration Paths [selected for the current team](../sprints/define-sprints.md) and for which there are work items assigned to that iteration 
+- **Iteration**: All Iteration Paths [selected for the current team](../sprints/define-sprints.md) and for which there are work items assigned to that iteration
 - **Work item type**: Work item types defined for the Requirements Category (product backlog) or Features or Epic categories (feature or epic portfolio backlogs), subject to work items being assigned to the work item types
 - **Tags**: All tags assigned to work items on the board
 - **Parent Work Items**: All features defined for the team, or all epics defined for the team when viewing the Features board (The Parent Work Items field doesn't appear when viewing the Epic or top-level Kanban board)
 
-> [!NOTE]   
-> Filter options are dependent on the work items that meet the filter criteria. For example, if you don't have any work items assigned to Sprint 4, then the Sprint 4 option won't appear in the filter options for the Iteration Path.  
+> [!NOTE]  
+> Filter options are dependent on the work items that meet the filter criteria. For example, if you don't have any work items assigned to Sprint 4, then the Sprint 4 option won't appear in the filter options for the Iteration Path.
 
 For example, here we filter for all items assigned to Jamal and Raisa.
 
@@ -123,7 +121,7 @@ You can use the **Filter by parent** feature to filter by select parent work ite
 You can use this feature only when you've created features or epics and linked them to user stories or features, respectively. A quick and easy way to create the links is to [map them using drag-and-drop](../backlogs/organize-backlog.md). Mapping creates parent-child links between the work items.
 
 > [!NOTE]
-> The **Filter by parent**  feature doesn't support filtering of parent work items of the same work item type. For example, you can't filter the Stories backlog by specifying user stories that are parents of nested user stories.
+> The **Filter by parent** feature doesn't support filtering of parent work items of the same work item type. For example, you can't filter the Stories backlog by specifying user stories that are parents of nested user stories.
 
 To start filtering, click the ![Kanban filter icon](../media/icons/kanban-filter-icon.png) Kanban board filter icon. Choose one or more values from the multi-select drop-down menu for the Parent Work Item. These values are derived from the [Features](kanban-epics-features-stories.md) you've defined.
 
@@ -139,15 +137,15 @@ The final board displays just those stories linked as child work items to the se
 
 Cards are filtered based on the assignments made in the following order and logic:
 
-1. **Assigned to**:  Show all cards that are assigned to user 1 ```OR``` user 2
-	```AND```
-2. **Iteration**: Show all cards that are assigned to Iteration 1 ```OR```  Iteration 2
-	```AND```
-3. **Work Item type**: Show all cards that are work item type 1 ```OR``` work item type 2
-	```AND```
-4.	**Tags**: Show all cards that have tag 1 ```AND``` or ```OR``` tags 2, based on your selection of ```AND | OR```.
-	```AND```
-5.	**Parent Work Items**: Show all cards that have Parent Work Item 1 ```OR``` Parent Work Item 2.
+1. **Assigned to**: Show all cards that are assigned to user 1 `OR` user 2
+   `AND`
+2. **Iteration**: Show all cards that are assigned to Iteration 1 `OR` Iteration 2
+   `AND`
+3. **Work Item type**: Show all cards that are work item type 1 `OR` work item type 2
+   `AND`
+4. **Tags**: Show all cards that have tag 1 `AND` or `OR` tags 2, based on your selection of `AND | OR`.
+   `AND`
+5. **Parent Work Items**: Show all cards that have Parent Work Item 1 `OR` Parent Work Item 2.
 
 ::: moniker-end
 

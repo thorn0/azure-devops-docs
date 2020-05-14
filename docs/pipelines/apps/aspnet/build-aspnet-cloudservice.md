@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.custom: seodec18
 description: Define a continuous integration (CI) build for your Azure Cloud Service in Azure Pipelines or Team Foundation Server (TFS)
 ms.date: 01/02/2017
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Build your Azure Cloud Service
@@ -48,7 +48,7 @@ Save the build pipeline and queue a new build by selecting the **Queue new build
 
 After you've run the build, you're ready to create a release pipeline to deploy your app to:
 
-* <a href="../cd/deploy-cloudservice-cloudservice.md"><img src="../../tasks/deploy/media/azure-cloud-service-deployment-icon.png"/> An Azure Cloud Service</a>
+- <a href="../cd/deploy-cloudservice-cloudservice.md"><img src="../../tasks/deploy/media/azure-cloud-service-deployment-icon.png"/> An Azure Cloud Service</a>
 
 ## Q & A
 

@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # View where and when changesets have been merged
 
@@ -32,10 +31,10 @@ To perform these procedures, your **Read** permission must be set to **Allow** f
 
 ## View the Tracking Changeset Window
 
->**Important:**  
->These procedures can be performed only on a branch, not on a folder.  
->![View the Tracking Changeset Window](media/view-where-when-changesets-have-been-merged/IC268252.png)  
->For more information about how to branch, see [Branch folders and files](branch-folders-files.md).
+> **Important:**  
+> These procedures can be performed only on a branch, not on a folder.  
+> ![View the Tracking Changeset Window](media/view-where-when-changesets-have-been-merged/IC268252.png)  
+> For more information about how to branch, see [Branch folders and files](branch-folders-files.md).
 
 ### To view the Tracking Changeset Window from the History window of a branch or file
 
@@ -75,7 +74,7 @@ To perform these procedures, your **Read** permission must be set to **Allow** f
 
 ### Overview of the Tracking Changeset Window
 
--   The following illustration shows an example of a changeset in the DinnerNow project.
+- The following illustration shows an example of a changeset in the DinnerNow project.
 
 Tracking Changeset window elements
 
@@ -83,16 +82,16 @@ Tracking Changeset window elements
 
 The previous example illustrates how you can use the **Tracking Changeset** window to visualize the following information:
 
--   The branches to which the changeset has been merged (displayed in green), including the numbers of changesets in which the merge was implemented.
+- The branches to which the changeset has been merged (displayed in green), including the numbers of changesets in which the merge was implemented.
 
-	> [!TIP]
-	> You can click one of these branches (for example, **Version2** in the previous example) to highlight all the merges that were required for the changeset to reach that branch.
+  > [!TIP]
+  > You can click one of these branches (for example, **Version2** in the previous example) to highlight all the merges that were required for the changeset to reach that branch.
 
--   Whether the merge was a standard merge (solid line) or a baseless merge (dashed line).
+- Whether the merge was a standard merge (solid line) or a baseless merge (dashed line).
 
--   If a branch has received some (but not all) of the changes in a changeset, the branch is filled with a pattern, and an asterisk follows the changeset numbers within that branch. For example, the previous illustration shows that only some of the changes in changeset 38 were merged to the **Test** branch.
+- If a branch has received some (but not all) of the changes in a changeset, the branch is filled with a pattern, and an asterisk follows the changeset numbers within that branch. For example, the previous illustration shows that only some of the changes in changeset 38 were merged to the **Test** branch.
 
--   The branches to which the changeset has not been merged (displayed in light blue).
+- The branches to which the changeset has not been merged (displayed in light blue).
 
 ## Switch to Timeline View
 
@@ -104,7 +103,7 @@ To perform these procedures, your **Manage branch object** permission must be se
 
 ### To display the Timeline View of a changeset
 
--   Open the **Tracking Changeset** or **Tracking Work Item** window, and then click ![Timeline View of a changeset](media/view-where-when-changesets-have-been-merged/IC267920.gif) **Timeline Tracking**.
+- Open the **Tracking Changeset** or **Tracking Work Item** window, and then click ![Timeline View of a changeset](media/view-where-when-changesets-have-been-merged/IC267920.gif) **Timeline Tracking**.
 
 ### Example: Using Timeline View
 

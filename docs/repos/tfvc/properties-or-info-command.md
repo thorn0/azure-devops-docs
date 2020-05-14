@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Properties Command
 
@@ -24,7 +23,7 @@ To use the **properties** command, you must have the **Read** permission set to 
 
 ```
 tf properties [/collection:TeamProjectCollectionUrl] [/recursive] [/login:username,[password]]
-itemspec [/version:versionspec] [/workspace] 
+itemspec [/version:versionspec] [/workspace]
 ```
 
 ## Parameters
@@ -45,15 +44,16 @@ itemspec [/version:versionspec] [/workspace]
     <td><p>Provides a value to the <strong>/login</strong> option. You can specify a username value as either <em>Domain</em>&lt;em&gt;UserName</em> or <em>UserName</em>.</p></td></tr></tbody>
 </table>
 
-|**Option**|**Description**|
-|---|---|
-|**/recursive**|Displays all files and subfolders of a folder.|
-|**/version**|Specifies the version of the file to open for viewing the properties on.|
-|**/workspace**|Indicates the workspace to be used when displaying the &quot;local&quot; properties (such as location on disk).|
-|**/collection**|Specifies the project collection.|
-|**/login**|Specifies the user name and password to authenticate the user with Team Foundation Server.|
+| **Option**      | **Description**                                                                                                 |
+| --------------- | --------------------------------------------------------------------------------------------------------------- |
+| **/recursive**  | Displays all files and subfolders of a folder.                                                                  |
+| **/version**    | Specifies the version of the file to open for viewing the properties on.                                        |
+| **/workspace**  | Indicates the workspace to be used when displaying the &quot;local&quot; properties (such as location on disk). |
+| **/collection** | Specifies the project collection.                                                                               |
+| **/login**      | Specifies the user name and password to authenticate the user with Team Foundation Server.                      |
 
 ## Remarks
+
 The properties command displays several pieces of information about a version-controlled item. Local and server information is listed separately.
 
 <table><thead>
@@ -102,7 +102,9 @@ The properties command displays several pieces of information about a version-co
 For links to other Team Foundation commands that describe the items on the server and the workspaces that map to the server, see [Informational Commands](https://msdn.microsoft.com/library/ms181450).
 
 For more information on how to find the **tf** command-line utility, see [Tf Command-Line Utility Commands](https://msdn.microsoft.com/library/z51z7zy0).
+
 ## Examples
+
 The following example displays properties information about the file 314.cs.
 
 ```

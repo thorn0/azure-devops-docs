@@ -4,7 +4,6 @@ ms.topic: include
 
 ::: moniker range=">= tfs-2015"
 
-
 <table>
 <tr valign="bottom">
 <th width="41%">Task</th>
@@ -54,12 +53,9 @@ ms.topic: include
 </tbody>
 </table>
 
-::: moniker-end    
-
-
+::: moniker-end
 
 ::: moniker range="tfs-2013"
-
 
 <table>
 <tr valign="bottom">
@@ -103,6 +99,4 @@ ms.topic: include
 </tbody>
 </table>
 
-::: moniker-end    
-
-
+::: moniker-end

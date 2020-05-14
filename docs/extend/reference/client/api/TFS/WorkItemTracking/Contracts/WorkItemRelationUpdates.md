@@ -13,12 +13,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/WorkItemTracking/Contracts`
 
-
 ### Members
 
-* `added`: [WorkItemRelation](../../../TFS/WorkItemTracking/Contracts/WorkItemRelation.md)[]. 
+- `added`: [WorkItemRelation](../../../TFS/WorkItemTracking/Contracts/WorkItemRelation.md)[].
 
-* `removed`: [WorkItemRelation](../../../TFS/WorkItemTracking/Contracts/WorkItemRelation.md)[]. 
+- `removed`: [WorkItemRelation](../../../TFS/WorkItemTracking/Contracts/WorkItemRelation.md)[].
 
-* `updated`: [WorkItemRelation](../../../TFS/WorkItemTracking/Contracts/WorkItemRelation.md)[]. 
-
+- `updated`: [WorkItemRelation](../../../TFS/WorkItemTracking/Contracts/WorkItemRelation.md)[].

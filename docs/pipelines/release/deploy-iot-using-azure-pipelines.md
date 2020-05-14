@@ -9,7 +9,7 @@ ms.date: 04/25/2019
 monikerRange: azure-devops
 ---
 
-# Automatically deploy to IoT edge devices 
+# Automatically deploy to IoT edge devices
 
 [!INCLUDE [include](../includes/version-team-services.md)]
 
@@ -39,13 +39,13 @@ The following steps creates an [IoT Edge](https://docs.microsoft.com/azure/iot-e
 
 1. In the command palette, enter and run the command **Azure IoT Edge: New IoT Edge solution**. Follow the prompts in the command palette to create the solution.
 
-    <table><thead><tr><th>Field</th><th>Values</th></tr></thead>
-    <tr><td>Select Folder</td><td>Choose the location on your development machine for VS Code to create the solution files</td></tr>
-    <tr><td>Provide a solution name</td><td>Enter a descriptive name for your solution or accept the default EdgeSolution</td></tr>
-    <tr><td>Select module template</td><td>Choose <b>C# Module</b></td></tr>
-    <tr><td>Provide a module name</td><td>Name your module <b>CSharpModule</b></td></tr>
-    <tr><td>Provide Docker image repository for the module</td><td>An image repository includes the name of your container registry and the name of your container image. Your container image is prepopulated from the name that you have provided in the last step. Replace <b>localhost:5000</b> with the login server value from your Azure container registry. You can retrieve the login server from the Overview page of your container registry in the Azure portal.</td></tr>
-    </table>
+<table><thead><tr><th>Field</th><th>Values</th></tr></thead>
+<tr><td>Select Folder</td><td>Choose the location on your development machine for VS Code to create the solution files</td></tr>
+<tr><td>Provide a solution name</td><td>Enter a descriptive name for your solution or accept the default EdgeSolution</td></tr>
+<tr><td>Select module template</td><td>Choose <b>C# Module</b></td></tr>
+<tr><td>Provide a module name</td><td>Name your module <b>CSharpModule</b></td></tr>
+<tr><td>Provide Docker image repository for the module</td><td>An image repository includes the name of your container registry and the name of your container image. Your container image is prepopulated from the name that you have provided in the last step. Replace <b>localhost:5000</b> with the login server value from your Azure container registry. You can retrieve the login server from the Overview page of your container registry in the Azure portal.</td></tr>
+</table>
 
 The VS Code window loads your IoT Edge solution workspace. The solution workspace contains five top-level components.
 
@@ -89,10 +89,10 @@ If your workspace isn't under Git source control, you can easily create a Git re
 
 1. Select **View > Terminal** to open the terminal. To **push, pull** and **sync** you need to have a Git origin set up. You can get the required URL from the repo host. Once you have that URL, you need to add it to the Git settings by running a couple of command line actions as shown below.
 
-    ```Git
-    git remote add origin https://<org name@dev.azure.com>/<org name>/<project name>/_git/<repo name>
-    git push -u origin --all
-    ```
+   ```Git
+   git remote add origin https://<org name@dev.azure.com>/<org name>/<project name>/_git/<repo name>
+   git push -u origin --all
+   ```
 
 1. From the browser, navigate to the repo. You should see the code.
 
@@ -129,7 +129,7 @@ You can use Azure Pipelines to build your projects on Windows, Linux, or macOS w
 
    ![ARM](media/Iot-devops-using-azure-pipelines/arm.png)
 
-8. Edit the pipeline, and select **+**, and search for the **Azure IoT Edge** task. Select **add**. This step will build the module images.  
+8. Edit the pipeline, and select **+**, and search for the **Azure IoT Edge** task. Select **add**. This step will build the module images.
 
 9. Select **+** and search for the **Azure IoT Edge** task. Select **add**. Configure the task as shown below -
 
@@ -140,11 +140,11 @@ You can use Azure Pipelines to build your projects on Windows, Linux, or macOS w
    <tr><td>Azure Container Registry</td><td>Select an Azure Container Registry from the dropdown which was created in the step 5</td></tr>
    </table>
 
-10. Select **+** and search for **Publish Build Artifacts** task. Select **add**. Set the path to publish to **$(Build.ArtifactStagingDirectory)/deployment.amd64.json**.
+10. Select **+** and search for **Publish Build Artifacts** task. Select **add**. Set the path to publish to **\$(Build.ArtifactStagingDirectory)/deployment.amd64.json**.
 
 11. Save the pipeline and queue the build.
 
-     ![Build Pipeline](media/Iot-devops-using-azure-pipelines/build-pipeline.png)
+    ![Build Pipeline](media/Iot-devops-using-azure-pipelines/build-pipeline.png)
 
 ## Create a release pipeline
 
@@ -152,11 +152,11 @@ The build pipeline has already built a Docker image and pushed it to an Azure Co
 
 1. Navigate to the **Pipelines | Releases**.
 
-2. From the **New** drop-down menu, select **New release pipeline** to create a new release pipeline. 
+2. From the **New** drop-down menu, select **New release pipeline** to create a new release pipeline.
 
 3. Select **Empty job** to create the pipeline.
 
-4. Select **+** and search for **Azure Resource Group Deployment** task. Select **add**. Configure the task as shown below. 
+4. Select **+** and search for **Azure Resource Group Deployment** task. Select **add**. Configure the task as shown below.
 
     <table><thead><tr><th>Field</th><th>Values</th></tr></thead>
    <tr><td>Azure subscription</td><td>(Required) Name of <a href="../library/connect-to-azure.md" data-raw-source="[Azure Resource Manager service connection](../library/connect-to-azure.md)">Azure Resource Manager service connection</a></td></tr>
@@ -168,12 +168,12 @@ The build pipeline has already built a Docker image and pushed it to an Azure Co
    <tr><td>Override template parameters</td><td><b>-iotHubName IoTEdge -iotHubSku &quot;S1&quot;</td></tr>
    </table>
 
-5. Select **+** and search for **Azure CLI** task. Select **add** and configure the task as shown below. 
+5. Select **+** and search for **Azure CLI** task. Select **add** and configure the task as shown below.
 
    - **Azure subscription**: Select the Azure Resource Manager subscription for the deployment
 
    - **Script Location**: Set the type to **Inline script** and copy paste the below script
-    
+
      ```CLI
      (az extension add --name azure-cli-iot-ext && az iot hub device-identity show --device-id YOUR_DEVICE_ID --hub-name YOUR_HUB_NAME) || (az iot hub device-identity create --hub-name YOUR_HUB_NAME --device-id YOUR_DEVICE_ID --edge-enabled && TMP_OUTPUT="$(az iot hub device-identity show-connection-string --device-id YOUR_DEVICE_ID --hub-name YOUR_HUB_NAME)" && RE="\"cs\":\s?\"(.*)\"" && if [[ $TMP_OUTPUT =~ $RE ]]; then CS_OUTPUT=${BASH_REMATCH[1]}; fi && echo "##vso[task.setvariable variable=CS_OUTPUT]${CS_OUTPUT}")
      ```
@@ -214,6 +214,6 @@ The build pipeline has already built a Docker image and pushed it to an Azure Co
 
 8. Disable the first 2 tasks in the pipeline. Save and queue.
 
-    ![Edit Pipeline](media/Iot-devops-using-azure-pipelines/edit-release-pipeline.png)
+   ![Edit Pipeline](media/Iot-devops-using-azure-pipelines/edit-release-pipeline.png)
 
 9. Once the release is complete, go to IoT hub in the Azure portal to view more information.

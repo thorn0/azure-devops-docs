@@ -7,7 +7,7 @@ ms.author: ronai
 author: RoopeshNair
 ms.custom: seodec18
 ms.date: 03/06/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Release triggers
@@ -19,9 +19,10 @@ monikerRange: '>= tfs-2015'
 ::: moniker-end
 
 ::: moniker range="azure-devops"
-> [!NOTE] 
+
+> [!NOTE]
 > This topic covers classic release pipelines. To understand triggers in YAML pipelines, see [pipeline triggers](../build/triggers.md).
-::: moniker-end
+> ::: moniker-end
 
 You can configure when releases should be created, and when those releases should be deployed to stages,
 in your DevOps CI/CD processes.
@@ -48,7 +49,7 @@ You add build branch filters if you want to create the release only
 when the build is produced by compiling code from certain branches
 (only applicable when the code is in a TFVC, Git, or GitHub repository)
 or when the build has certain tags. These can be both include and exclude filters.
-For example, use **features/*** to include all builds under the **features** branch.
+For example, use **features/\*** to include all builds under the **features** branch.
 You can also include [custom variables](variables.md) in a filter value.
 
 Alternatively, you can specify a filter to use the default branch specified
@@ -57,9 +58,9 @@ changes in every development sprint. It means you don't need to update the trigg
 filter across all release pipelines for every change - instead you just change the
 default branch in the build pipeline.
 
->Note that, even though a release is automatically created, it
-might not be deployed automatically to any stages. The
-[stage triggers](#env-triggers) govern when and if a release should be deployed to a stage.
+> Note that, even though a release is automatically created, it
+> might not be deployed automatically to any stages. The
+> [stage triggers](#env-triggers) govern when and if a release should be deployed to a stage.
 
 For information about the ID of the requester for CI triggers, see [How are the identity variables set?](../build/variables.md#how-are-the-identity-variables-set)
 
@@ -77,19 +78,19 @@ See also [stage scheduled triggers](#stage-scheduled-triggers).
 
 <h2 id="prsettrigger">Pull request triggers</h2>
 
-You can configure a pull request trigger that will create a new release when a pull request 
+You can configure a pull request trigger that will create a new release when a pull request
 uploads a new version of the artifact. Enable the trigger and add the branches targeted by pull requests
-that you want to activate this trigger. 
+that you want to activate this trigger.
 
 ![Selecting a trigger for a release](media/trigger-01a.png)
 
 However, to use a pull request trigger, you must also enable it for specific stages of the pipeline.
-Do this in the stage [triggers panel](#prtrigger) for the required stage(s). 
+Do this in the stage [triggers panel](#prtrigger) for the required stage(s).
 You may also want to set up a [branch policy](../../repos/git/pr-status-policy.md) for the branch. For more information, see [Deploy pull request builds](deploy-pull-request-builds.md).
 
->Note that, even though a release is automatically created, it
-might not be deployed automatically to any stages. The
-[stage triggers](#env-triggers) govern when and if a release should be deployed to a stage.
+> Note that, even though a release is automatically created, it
+> might not be deployed automatically to any stages. The
+> [stage triggers](#env-triggers) govern when and if a release should be deployed to a stage.
 
 ::: moniker-end
 
@@ -98,7 +99,7 @@ might not be deployed automatically to any stages. The
 You can choose to have the deployment to each stage triggered automatically
 when a release is created by a continuous deployment trigger, based on:
 
-* **The result of deploying to a previous stage in the pipeline**.
+- **The result of deploying to a previous stage in the pipeline**.
   Use this setting if you want the release to be first deployed and validated in
   another stage(s) before it is deployed to this stage.
   Triggers are configured for each stage,
@@ -113,7 +114,7 @@ when a release is created by a continuous deployment trigger, based on:
 
   ![The stage trigger conditions settings](media/trigger-02a.png)
 
-* **Filters based on the artifacts**. You can add one or more filters for each artifact linked to the release pipeline,
+- **Filters based on the artifacts**. You can add one or more filters for each artifact linked to the release pipeline,
   and specify if you want to include or exclude particular branches of the code.
   Deployment will be triggered to this stage only if all the artifact conditions are successfully met.
   Unlike [build branch filters](#release-triggers), variables _cannot_ be used in artifact filter conditions.
@@ -122,11 +123,11 @@ when a release is created by a continuous deployment trigger, based on:
 
   <a name="stage-scheduled-triggers"></a>
 
-* **A predefined schedule**. When you select this option,
+- **A predefined schedule**. When you select this option,
   you can select the days of the week and the time of day that
   Azure Pipelines will automatically start a new deployment. Unlike scheduled
   release triggers, you cannot configure multiple schedules for stage triggers.
-  Note that, with scheduled triggers, a new deployment request is created that deploys the 
+  Note that, with scheduled triggers, a new deployment request is created that deploys the
   artifacts from the current release. All deployment requests are executed on the stage as per the configured [queueing policies](../process/stages.md?tabs=classic#queuing-policies) defined on the stage.
   For example, if the queueing policy is set to **Deploy latest and cancel the others**, any previously deployed artifacts
   on the stage will be overwritten by the _most recently requested_ deployment. It does not necessarily require a newer version of the artifacts to be
@@ -136,14 +137,14 @@ when a release is created by a continuous deployment trigger, based on:
 
 <a name="prtrigger"></a>
 
-* **A pull request that updates the artifacts**. If you have enabled
+- **A pull request that updates the artifacts**. If you have enabled
   pull request triggers for your pipeline, you must also enable
-  pull request deployment for the specific stages where you want the release to be deployed. 
+  pull request deployment for the specific stages where you want the release to be deployed.
   You may also want to set up a [branch policy](../../repos/git/pr-status-policy.md) for the branch. For more information, see [Deploy pull request builds](deploy-pull-request-builds.md).
 
   ![The pull request trigger conditions settings](media/trigger-02c.png)
 
-* **Manually by a user**. Releases are
+- **Manually by a user**. Releases are
   not automatically deployed to the stage. To
   deploy a release to this stage, you must manually
   start a release and deployment from the release pipeline
@@ -156,9 +157,9 @@ a schedule.
 ::: moniker range="tfs-2015"
 
 > **TFS 2015**: The following features are not available in TFS 2015 -
-continuous deployment triggers for multiple artifact sources,
-multiple scheduled triggers, combining scheduled and continuous deployment triggers in the same pipeline,
-continuous deployment based on the branch or tag of a build.
+> continuous deployment triggers for multiple artifact sources,
+> multiple scheduled triggers, combining scheduled and continuous deployment triggers in the same pipeline,
+> continuous deployment based on the branch or tag of a build.
 
 ::: moniker-end
 
@@ -186,7 +187,7 @@ In combination with the ability to define
 [pre- and post-deployment approvals](approvals/approvals.md),
 this capability enables the configuration of complex
 and fully managed deployment pipelines to suit
-almost any release scenario.  
+almost any release scenario.
 
 ::: moniker-end
 

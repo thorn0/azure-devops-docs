@@ -14,10 +14,10 @@ ms.date: 01/20/2017
 
 [!INCLUDE [temp](../../includes/version-vsts-tfs-all-versions.md)]
 
-This error occurs when the New Team Project Wizard attempts to use the process template you selected and encounters a problem with either the XML in the process template file or the plug-in {*name*}. The plug-in code indicates there is a wizard page, but the call to the designated wizard page returns either an error or a null value.  
-  
- If you're receiving this error and you haven't customized the process template file, or it doesn't reference any third-party plug-ins, report your issue in the [Team Foundation Server - Process Templates forum](https://social.msdn.microsoft.com/Forums/home?forum=tfsprocess).  
-  
-### To correct this error  
-  
--   Contact the third-party developer or vendor that provided the process template and plug-in.
+This error occurs when the New Team Project Wizard attempts to use the process template you selected and encounters a problem with either the XML in the process template file or the plug-in {_name_}. The plug-in code indicates there is a wizard page, but the call to the designated wizard page returns either an error or a null value.
+
+If you're receiving this error and you haven't customized the process template file, or it doesn't reference any third-party plug-ins, report your issue in the [Team Foundation Server - Process Templates forum](https://social.msdn.microsoft.com/Forums/home?forum=tfsprocess).
+
+### To correct this error
+
+- Contact the third-party developer or vendor that provided the process template and plug-in.

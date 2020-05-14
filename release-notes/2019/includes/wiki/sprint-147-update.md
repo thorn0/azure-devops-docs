@@ -12,8 +12,7 @@ This feature was prioritized based on a suggestion ticket.
 
 In this update, we've enhanced work item mentions in Wiki pages by adding the status of the work item to the page, along with its ID and title.
 
-> [!div class="mx-imgBorder"]
-> ![Badge](../../media/147_03.png)
+> [!div class="mx-imgBorder"] > ![Badge](../../media/147_03.png)
 
 Work item references in Pull Request comments and Boards discussions will also show the status.
 

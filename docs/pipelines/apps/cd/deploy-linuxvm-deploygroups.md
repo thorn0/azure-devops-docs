@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 02/23/2020
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Deploy to a Linux Virtual Machine
@@ -26,7 +26,7 @@ automatically show up on your site.
 ## Define your CI build pipeline
 
 You'll need a continuous integration (CI) build pipeline that publishes your web application, as well as
-a deployment script that can be run locally on the Ubuntu server. Set up a CI build pipeline based on the runtime you want to use. 
+a deployment script that can be run locally on the Ubuntu server. Set up a CI build pipeline based on the runtime you want to use.
 
 #### [Java](#tab/java)
 
@@ -35,18 +35,20 @@ a deployment script that can be run locally on the Ubuntu server. Set up a CI bu
 ```
 https://github.com/spring-guides/gs-spring-boot-docker.git
 ```
+
 Follow additional steps mentioned in [Build your Java app with Maven](../../ecosystems/java.md) for creating a build to deploy to Linux.
 
 #### [JavaScript](#tab/java-script)
 
-[!INCLUDE [include](../../ecosystems/includes/get-code-before-sample-repo-option-to-use-own-code.md)] 
+[!INCLUDE [include](../../ecosystems/includes/get-code-before-sample-repo-option-to-use-own-code.md)]
 
 ```
 https://github.com/MicrosoftDocs/pipelines-javascript-docker
 ```
+
 Follow additional steps mentioned in [Build your Node.js app with gulp](../../ecosystems/javascript.md) for creating a build to deploy to Linux.
 
-* * * 
+---
 
 ## Prerequisites for the Linux VM
 
@@ -57,7 +59,7 @@ Follow the additional steps described below based on the runtime stack used for 
 
 - For deploying Java Spring Boot and Spring Cloud based apps, create a Linux VM in Azure using [this](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu8-ubuntu-1804) template, which provides a fully supported OpenJDK-based runtime.
 - For deploying Java servlets on Tomcat server, create a Linux VM with Java 8 using [this](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu8-ubuntu-1804) Azure template and [configure Tomcat 9.x as a service](https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04#step-5-create-a-systemd-service-file).
-- For deploying Java EE based app, use an Azure template to create a [Linux VM + Java + WebSphere 9.x](https://azuremarketplace.microsoft.com/marketplace/apps/midvision.websphere-application-server-nde-90) or a [Linux VM + Java + WebLogic 12.x](https://azuremarketplace.microsoft.com/marketplace/apps/oracle.20191009-arm-oraclelinux-wls-admin) or a [Linux VM +Java](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu8-ubuntu-1804) + WildFly/JBoss 14 
+- For deploying Java EE based app, use an Azure template to create a [Linux VM + Java + WebSphere 9.x](https://azuremarketplace.microsoft.com/marketplace/apps/midvision.websphere-application-server-nde-90) or a [Linux VM + Java + WebLogic 12.x](https://azuremarketplace.microsoft.com/marketplace/apps/oracle.20191009-arm-oraclelinux-wls-admin) or a [Linux VM +Java](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu8-ubuntu-1804) + WildFly/JBoss 14
 
 #### [JavaScript](#tab/java-script)
 
@@ -65,7 +67,7 @@ To install a javascript app or a Node.js app, you'll need a Linux VM with Nginx 
 If you don't already have a Linux VM with Nginx, create one now in Azure using the steps in
 [this example](/azure/virtual-machines/linux/quick-create-cli).
 
-* * * 
+---
 
 [!INCLUDE [create-linux-deployment-group](../includes/create-linux-deployment-group.md)]
 
@@ -75,12 +77,12 @@ Your CD release pipeline picks up the artifacts published by your CI build and t
 
 1. Do one of the following to start creating a release pipeline:
 
-   * If you've just completed a CI build, in the build's **Summary** tab under **Deployments**,
+   - If you've just completed a CI build, in the build's **Summary** tab under **Deployments**,
      choose **Create release** followed by **Yes**. This starts a new release pipeline that's automatically linked to the build pipeline.
 
      ![Creating a new release pipeline from the build summary](../media/release-from-build-summary.png)
 
-   * Open the **Releases** tab of **Azure Pipelines**, open the **+** drop-down
+   - Open the **Releases** tab of **Azure Pipelines**, open the **+** drop-down
      in the list of release pipelines, and choose **Create release pipeline**.
 
      ![Creating a new release pipeline in the Releases page](../media/release-from-release-page.png)
@@ -112,7 +114,7 @@ Your CD release pipeline picks up the artifacts published by your CI build and t
 
    ![Selecting the deployment group](media/deploy-linuxvm-deploygroups/select-deployment-group.png)
 
-    The tasks you add to this job will run on each of the machines in the deployment group you specified.
+   The tasks you add to this job will run on each of the machines in the deployment group you specified.
 
 1. Choose **+** next to the **Deployment group job** and, in the task catalog, search for and add a
    **Bash** task.
@@ -139,7 +141,7 @@ with the artifacts produced by a specific build. This will result in deploying t
 
 ## Next steps
 
-* [Dynamically create and remove a deployment group](howto-webdeploy-iis-deploygroups.md#depgroup)
-* [Apply stage-specific configurations](howto-webdeploy-iis-deploygroups.md#envirconfig)
-* [Perform a safe rolling deployment](howto-webdeploy-iis-deploygroups.md#rolling)
-* [Deploy a database with your app](howto-webdeploy-iis-deploygroups.md#database)
+- [Dynamically create and remove a deployment group](howto-webdeploy-iis-deploygroups.md#depgroup)
+- [Apply stage-specific configurations](howto-webdeploy-iis-deploygroups.md#envirconfig)
+- [Perform a safe rolling deployment](howto-webdeploy-iis-deploygroups.md#rolling)
+- [Deploy a database with your app](howto-webdeploy-iis-deploygroups.md#database)

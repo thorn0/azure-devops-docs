@@ -18,9 +18,8 @@ Extends: [RealtimeBuildEvent](./RealtimeBuildEvent.md)
 
 ### Members
 
-* `lines`: string[]. 
+- `lines`: string[].
 
-* `timelineId`: string. 
+- `timelineId`: string.
 
-* `timelineRecordId`: string. 
-
+- `timelineRecordId`: string.

@@ -1,8 +1,8 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Work Item Relation Types | REST API Reference for Team Foundation Server
-description: Work with work item relation types programmatically using the REST APIs for Team Foundation Server. 
+description: Work with work item relation types programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: D5EAD6ED-8972-4A9F-A5EE-369C1C77E996
 ms.topic: article
 ms.author: chcomley
@@ -22,18 +22,21 @@ but especially [links between two work items](https://msdn.microsoft.com/library
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get a list of relation types
+
 <a name="getalistofrelationtypes" />
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/wit/workItemRelationTypes?api-version={version}
 ```
 
-| Property  	| Type 		| Description 
-|:--------------|:----------|:---------------------------
+| Property | Type | Description |
+| :------- | :--- | :---------- |
+
+
 | URL
-| instance      | string    | TFS server name ({server:port}).
+| instance | string | TFS server name ({server:port}).
 | Query
-| api-version   | string    | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -235,21 +238,21 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitemrelationtypes?api-ve
 }
 ```
 
-
-
 ## Get a relation type
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/wit/workItemRelationTypes/{name}?api-version={version}
 ```
 
-| Property  	| Type 		| Description 
-|:--------------|:----------|:---------------------------
+| Property | Type | Description |
+| :------- | :--- | :---------- |
+
+
 | URL
-| instance      | string    | TFS server name ({server:port}).
-| name          | string    | The name of the relationship.
+| instance | string | TFS server name ({server:port}).
+| name | string | The name of the relationship.
 | Query
-| api-version   | string    | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -275,4 +278,3 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitemrelationtypes/System
   "url": "https://mytfsserver/DefaultCollection/_apis/wit/workItemRelationTypes/System.LinkTypes.Related"
 }
 ```
-

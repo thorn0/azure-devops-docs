@@ -14,42 +14,40 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `associatedWorkItems`: number[]. 
+- `associatedWorkItems`: number[].
 
-* `automatedTestTypeId`: string. 
+- `automatedTestTypeId`: string.
 
-* `comment`: string. 
+- `comment`: string.
 
-* `completedDate`: string. 
+- `completedDate`: string.
 
-* `computerName`: string. 
+- `computerName`: string.
 
-* `customFields`: [CustomTestField](../../../TFS/TestManagement/Contracts/CustomTestField.md)[]. 
+- `customFields`: [CustomTestField](../../../TFS/TestManagement/Contracts/CustomTestField.md)[].
 
-* `durationInMs`: string. 
+- `durationInMs`: string.
 
-* `errorMessage`: string. 
+- `errorMessage`: string.
 
-* `failureType`: string. 
+- `failureType`: string.
 
-* `outcome`: string. 
+- `outcome`: string.
 
-* `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `resolutionState`: string. 
+- `resolutionState`: string.
 
-* `runBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `runBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `stackTrace`: string. 
+- `stackTrace`: string.
 
-* `startedDate`: string. 
+- `startedDate`: string.
 
-* `state`: string. 
+- `state`: string.
 
-* `testCasePriority`: string. 
+- `testCasePriority`: string.
 
-* `testResult`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
-
+- `testResult`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).

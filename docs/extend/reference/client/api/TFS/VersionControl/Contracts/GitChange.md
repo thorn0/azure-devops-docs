@@ -16,4 +16,3 @@ Module path: `TFS/VersionControl/Contracts`
 Extends: [Change](../../../TFS/VersionControl/Contracts/Change.md)&lt;[GitItem](../../../TFS/VersionControl/Contracts/GitItem.md)&gt;
 
 ### Members
-

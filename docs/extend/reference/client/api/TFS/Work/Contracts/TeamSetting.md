@@ -18,11 +18,10 @@ Extends: [TeamSettingsDataContractBase](../../../TFS/Work/Contracts/TeamSettings
 
 ### Members
 
-* `backlogIteration`: [TeamSettingsIteration](../../../TFS/Work/Contracts/TeamSettingsIteration.md). Default Iteration
+- `backlogIteration`: [TeamSettingsIteration](../../../TFS/Work/Contracts/TeamSettingsIteration.md). Default Iteration
 
-* `backlogVisibilities`: {[key: string]: boolean}. Information about categories that are visible on the backlog.
+- `backlogVisibilities`: {[key: string]: boolean}. Information about categories that are visible on the backlog.
 
-* `bugsBehavior`: [BugsBehavior](../../../TFS/Work/Contracts/BugsBehavior.md). BugsBehavior (Off, AsTasks, AsRequirements, ...)
+- `bugsBehavior`: [BugsBehavior](../../../TFS/Work/Contracts/BugsBehavior.md). BugsBehavior (Off, AsTasks, AsRequirements, ...)
 
-* `workingDays`: [System_Contracts.DayOfWeek](../../../VSS/Common/Contracts/System/DayOfWeek.md)[]. Days that the team is working
-
+- `workingDays`: [System_Contracts.DayOfWeek](../../../VSS/Common/Contracts/System/DayOfWeek.md)[]. Days that the team is working

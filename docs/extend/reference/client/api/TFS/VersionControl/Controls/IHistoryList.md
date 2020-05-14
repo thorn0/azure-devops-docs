@@ -13,8 +13,6 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Controls`
 
-
 ### Members
 
-* `createHistoryList`: (itemPath: string, fromVersion: string, toVersion: string, repositoryId: string): any. Query the history by providing certain searchCriteria
-
+- `createHistoryList`: (itemPath: string, fromVersion: string, toVersion: string, repositoryId: string): any. Query the history by providing certain searchCriteria

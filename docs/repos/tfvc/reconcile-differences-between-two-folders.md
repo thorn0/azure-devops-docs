@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Reconcile differences between two folders
 
@@ -48,19 +47,19 @@ To perform these procedures, you must have the **Read** and **Check out** permis
 
 6.  For **Files that have pending changes**, select one of the following options:
 
-    -   **Ignore** to keep the changes made to these files in your local workspace.
+    - **Ignore** to keep the changes made to these files in your local workspace.
 
-    -   **Undo Pending Changes** to disregard changes made to these files in your local workspace.
+    - **Undo Pending Changes** to disregard changes made to these files in your local workspace.
 
-    -   **Get** to download the latest version of these files to your local workspace.
+    - **Get** to download the latest version of these files to your local workspace.
 
 7.  For **Files that do not have pending changes**, select one of the following options:
 
-    -   Click **Get** to download the latest version of files that you do not have in your local workspace.
+    - Click **Get** to download the latest version of files that you do not have in your local workspace.
 
-    -   Click **Check Out** to check out the server version of files. If you have made any changes to your local version, you will have an option to merge these changes with the server version when you check in the files.
+    - Click **Check Out** to check out the server version of files. If you have made any changes to your local version, you will have an option to merge these changes with the server version when you check in the files.
 
-    -   Click **Ignore** to leave these files only on the server.
+    - Click **Ignore** to leave these files only on the server.
 
 8.  Click **OK**.
 
@@ -70,8 +69,8 @@ To perform these procedures, you must have the **Read** and **Check out** permis
 
 #### Other Resources
 
- [Compare folders](compare-folders.md) 
+[Compare folders](compare-folders.md)
 
- [Compare files](compare-files.md) 
+[Compare files](compare-files.md)
 
- [Resolve Team Foundation Version Control conflicts](resolve-team-foundation-version-control-conflicts.md) 
+[Resolve Team Foundation Version Control conflicts](resolve-team-foundation-version-control-conflicts.md)

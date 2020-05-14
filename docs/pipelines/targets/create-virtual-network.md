@@ -1,5 +1,5 @@
 ---
-title: Create a virtual network for build-deploy-test 
+title: Create a virtual network for build-deploy-test
 description: Provision and manage VMs in SCVMM - Create a virtual network for build-deploy-test scenarios using Network Virtualization
 ms.assetid: 64620E9B-D2D1-4516-921A-40A159019513
 ms.topic: conceptual
@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Create a virtual network isolated environment for build-deploy-test scenarios
@@ -26,9 +26,9 @@ to create isolated networks of virtual machines.
 
 ![Logical Networks and corresponding VM Networks](media/virtual-networks/1.png)
 
-* You can create an isolated network of virtual machines that span across different hosts in a host-cluster or a private cloud.
-* You can have VMs from different networks residing in the same host machine and still be isolated from each other.
-* You can define IP address from the any IP pool of your choice for a VM Network.
+- You can create an isolated network of virtual machines that span across different hosts in a host-cluster or a private cloud.
+- You can have VMs from different networks residing in the same host machine and still be isolated from each other.
+- You can define IP address from the any IP pool of your choice for a VM Network.
 
 See also: [Hyper-V Network Virtualization Overview](/windows-server/networking/sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server).
 
@@ -36,27 +36,27 @@ See also: [Hyper-V Network Virtualization Overview](/windows-server/networking/s
 
 ## To create a virtual network isolated environment:
 
-* Ensure you meet the prerequisite conditions described in [this section](#prereqs).
+- Ensure you meet the prerequisite conditions described in [this section](#prereqs).
 
-* Set up Network Virtualization using SCVMM. This is a one-time setup task you do not need to repeat.
+- Set up Network Virtualization using SCVMM. This is a one-time setup task you do not need to repeat.
   Follow [these steps](#setup-net-virt).
 
-* Decide on the network topology you want to use. You'll specify this when you create the
+- Decide on the network topology you want to use. You'll specify this when you create the
   virtual network. The options and steps are described in [this section](#select-topology).
 
-* Enable your build-deploy-test scenario as shown in [these steps](#enable-scenario).
+- Enable your build-deploy-test scenario as shown in [these steps](#enable-scenario).
 
-* You can perform a range of operations to manage VMs using SCVMM. For examples, see [SCVMM deployment](scvmm.md).
-  
+- You can perform a range of operations to manage VMs using SCVMM. For examples, see [SCVMM deployment](scvmm.md).
+
 <a name="prereqs"></a>
 
 ## Prerequisites
 
-* SCVMM Server 2012 R2 or later.
-* Window 2012 R2 host machines with Hyper-V set up with at least two physical NICs attached.
-* One NIC (perhaps external) with corporate network or Internet access.
-* One NIC configured in Trunk Mode with a VLAN ID (such as 991) and routable IP subnets (such as 10.10.30.1/24). You network administrator can configure this.
-* All Hyper-V hosts in the host group have the same VLAN ID. This host group will be used for your isolated networks.
+- SCVMM Server 2012 R2 or later.
+- Window 2012 R2 host machines with Hyper-V set up with at least two physical NICs attached.
+- One NIC (perhaps external) with corporate network or Internet access.
+- One NIC configured in Trunk Mode with a VLAN ID (such as 991) and routable IP subnets (such as 10.10.30.1/24). You network administrator can configure this.
+- All Hyper-V hosts in the host group have the same VLAN ID. This host group will be used for your isolated networks.
 
 Verify the setup is working correctly by following these steps:
 
@@ -126,7 +126,7 @@ port profiles, logical switches, and adding the switches to the Hyper-V hosts.
 
 1. Add a network site and select the same host group, but this time add the VLAN as `0`. This means the communication uses
    the default access mode NIC (Internet).
-   
+
    ![Add a network site and select the same host group](media/virtual-networks/11.png)
 
 1. Click **Next** and **Save**.
@@ -135,7 +135,7 @@ port profiles, logical switches, and adding the switches to the Hyper-V hosts.
 
    ![Viewing the result](media/virtual-networks/11_1.png)
 
-### Create port profiles 
+### Create port profiles
 
 1. Go to **Fabric** -> **Networking** -> **Port profiles** and **Create Hyper-V port profile**.
 
@@ -162,7 +162,7 @@ port profiles, logical switches, and adding the switches to the Hyper-V hosts.
 
 <a name="create-switch"></a>
 
-### Create logical switches 
+### Create logical switches
 
 1. Go to **Fabric** -> **Networking** -> **Logical switches** and **Create Logical Switch**.
 
@@ -217,38 +217,38 @@ Isolated virtual networks can be broadly classified into three topologies.
 
 **Topology 1: AD-backed Isolated VMs**
 
-* A boundary VM with Internet/TFS connectivity.
-* An Azure Pipelines/TFS deployment group agent installed on the boundary VM.
-* An AD-DNS VM if you want to use a local Active Directory domain.
-* Isolated app VMs where you deploy and test your apps.
+- A boundary VM with Internet/TFS connectivity.
+- An Azure Pipelines/TFS deployment group agent installed on the boundary VM.
+- An AD-DNS VM if you want to use a local Active Directory domain.
+- Isolated app VMs where you deploy and test your apps.
 
-   ![Topology 1 AD-backed Isolated VMs](media/virtual-networks/24.png)
+  ![Topology 1 AD-backed Isolated VMs](media/virtual-networks/24.png)
 
 **Topology 2: Non-AD backed isolated VMs**
 
-* A boundary VM with Internet/TFS connectivity.
-* An Azure Pipelines/TFS deployment group agent installed on the boundary VM.
-* Isolated app VMs where you deploy and test your apps.
+- A boundary VM with Internet/TFS connectivity.
+- An Azure Pipelines/TFS deployment group agent installed on the boundary VM.
+- Isolated app VMs where you deploy and test your apps.
 
-   ![Topology 2 Non-AD backed isolated VMs](media/virtual-networks/25.png)
+  ![Topology 2 Non-AD backed isolated VMs](media/virtual-networks/25.png)
 
 **Topology 3: AD-backed non-isolated VMs**
 
-* A boundary VM with Internet/TFS connectivity.
-* An Azure Pipelines/TFS deployment group agent installed on the boundary VM.
-* An AD-DNS VM if you want to use a local Active Directory domain.
-* App VMs that are also connected to the external network where you deploy and test your apps.
+- A boundary VM with Internet/TFS connectivity.
+- An Azure Pipelines/TFS deployment group agent installed on the boundary VM.
+- An AD-DNS VM if you want to use a local Active Directory domain.
+- App VMs that are also connected to the external network where you deploy and test your apps.
 
-   ![Topology 3 AD-backed non-isolated VMs](media/virtual-networks/26.png)
+  ![Topology 3 AD-backed non-isolated VMs](media/virtual-networks/26.png)
 
 You can create any of the above topologies using the SCVMM extension, as shown in the following steps.
 
 1. Open your TFS or Azure Pipelines instance and install the **SCVMM extension** if not already installed.
    For more information, see [SCVMM deployment](scvmm.md).
 
-   >The **SCVMM task** provides a more efficient way capability to perform lab management operations using build and release
-   pipelines. You can manage SCVMM environments, provision isolated virtual networks, and implement build-deploy-test scenarios.
-   
+   > The **SCVMM task** provides a more efficient way capability to perform lab management operations using build and release
+   > pipelines. You can manage SCVMM environments, provision isolated virtual networks, and implement build-deploy-test scenarios.
+
 1. In a build or release pipeline, add a new **SCVMM** task.
 
 1. In the **SCVMM** task, select a service connection for the SCVMM server where you want to provision
@@ -341,8 +341,8 @@ environments. You can create as many environments as you need with just a click 
 
 ## See also
 
-* [SCVMM deployment](scvmm.md)
-* [Hyper-V Network Virtualization Overview](/windows-server/networking/sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server)
+- [SCVMM deployment](scvmm.md)
+- [Hyper-V Network Virtualization Overview](/windows-server/networking/sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server)
 
 ## Q&A
 

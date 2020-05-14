@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Deploy a web app to Azure App Services
@@ -22,11 +22,11 @@ as long as your continuous integration pipeline publishes a Web Deploy package.
 
 Before you begin, you'll need a CI build that publishes your Web Deploy package. To set up CI for your specific type of app, see:
 
-* [Build your ASP.NET 4 app](../aspnet/build-aspnet-4.md)
+- [Build your ASP.NET 4 app](../aspnet/build-aspnet-4.md)
 
-* [Build your ASP.NET Core app](../../ecosystems/dotnet-core.md)
+- [Build your ASP.NET Core app](../../ecosystems/dotnet-core.md)
 
-* [Build your Node.js app with gulp](../../ecosystems/javascript.md)
+- [Build your Node.js app with gulp](../../ecosystems/javascript.md)
 
 You'll also need an Azure Web App where you will deploy the app.
 
@@ -34,4 +34,4 @@ You'll also need an Azure Web App where you will deploy the app.
 
 ## Next step
 
-* [Customize web app deployment](../../targets/webapp.md)
+- [Customize web app deployment](../../targets/webapp.md)

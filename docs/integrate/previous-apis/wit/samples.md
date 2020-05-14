@@ -1,8 +1,8 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Work Item Tracking Samples | REST API Reference for Team Foundation Server
-description: Samples for work item tracking using the REST APIs and .NET Libraries for Team Foundation Server. 
+description: Samples for work item tracking using the REST APIs and .NET Libraries for Team Foundation Server.
 ms.assetid: 6830FA0E-9EA6-4AD3-913D-9E3450315C13
 ms.topic: article
 ms.author: chcomley
@@ -17,22 +17,24 @@ ms.date: 08/24/2016
 [!INCLUDE [API_version](../_data/version.md)]
 
 ## Getting Started Sample
+
 <a name="gettingstartedsample" />
 
-If this is your first time using the REST API's or .NET Libraries, check out the [getting started sample](../../get-started/rest/samples.md) first. 
+If this is your first time using the REST API's or .NET Libraries, check out the [getting started sample](../../get-started/rest/samples.md) first.
 
 All sample source code is located at [our GitHub repo](https://github.com/Microsoft/vsts-restapi-samplecode).
 
 ## Create a user story and a child task
+
 <a name="createuserstoryandchildtask" />
 
-You can create multiple work items, including adding links between them, in a single REST API call.  Batching calls like this allows your application to be more performant.
+You can create multiple work items, including adding links between them, in a single REST API call. Batching calls like this allows your application to be more performant.
 
 The code below will
+
 1. Create a User story patch document
 2. Create a task patch document
 3. Post a batch request containing the above patch documents
-
 
 ```cs
 using System;
@@ -106,9 +108,10 @@ public void CreateAndLinkMultipleWorkItems()
 ```
 
 ## Query Work Items
+
 <a name="queryworkitems" />
 
-In this example we want execute an existing query to get a list of work items. We assume we already know the query we want to execute. Running a query is a two step process. 
+In this example we want execute an existing query to get a list of work items. We assume we already know the query we want to execute. Running a query is a two step process.
 
 1. Find the query id for a given project and query path (example: Shared Queries/Current Iteration/Open User Stories).
 2. Use the query id from step 1 and execute it to get the results. These results only contain a limited reference back to the work items.
@@ -116,54 +119,55 @@ In this example we want execute an existing query to get a list of work items. W
 
 If you already have the query id, you can skip step 1. The code sample below shows both steps.
 
->[!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
->```cs
->using System;
->using System.Net.Http;
->using System.Net.Http.Headers;
->using System.Text;
->using Newtonsoft.Json;
+> [!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
 >
->...
+> ```cs
+> using System;
+> using System.Net.Http;
+> using System.Net.Http.Headers;
+> using System.Text;
+> using Newtonsoft.Json;
 >
->//we need create an object so that we can bind the
->//query results and get the query id
->public class QueryResult
->{
+> ...
+>
+> //we need create an object so that we can bind the
+> //query results and get the query id
+> public class QueryResult
+> {
 >    public string id { get; set; }
 >    public string name { get; set; }
 >    public string path { get; set; }
 >    public string url { get; set; }
->}
+> }
 >
->public class WorkItemQueryResult
->{
+> public class WorkItemQueryResult
+> {
 >    public string queryType { get; set; }
 >    public string queryResultType { get; set; }
 >    public DateTime asOf { get; set; }
 >    public Column[] columns { get; set; }
 >    public Workitem[] workItems { get; set; }
->}
+> }
 >
->public class Workitem
->{
+> public class Workitem
+> {
 >    public int id { get; set; }
 >    public string url { get; set; }
->}
+> }
 >
->public class Column
->{
+> public class Column
+> {
 >    public string referenceName { get; set; }
 >    public string name { get; set; }
 >    public string url { get; set; }
->}
+> }
 >
->public void GetWorkItemsByQuery()
->{
+> public void GetWorkItemsByQuery()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
 >    var project = "fabrikam"
->    var path = "Shared Queries/Current Iteration/Open User Stories"     //path to the query   
+>    var path = "Shared Queries/Current Iteration/Open User Stories"     //path to the query
 >
 >    using (var client = new HttpClient())
 >    {
@@ -194,33 +198,34 @@ If you already have the query id, you can skip step 1. The code sample below sho
 >                {
 >                    builder.Append(item.id.ToString()).Append(",");
 >                }
->                        
+>
 >                //clean up string of id's
 >                string ids = builder.ToString().TrimEnd(new char[] { ',' });
->                        
+>
 >                HttpResponseMessage getWorkItemsHttpResponse = client.GetAsync("_apis/wit/workitems?ids=" + ids + "&fields=System.Id,System.Title,System.State&asOf=" + workItemQueryResult.asOf + "&api-version=2.2").Result;
 >
 >                if (getWorkItemsHttpResponse.IsSuccessStatusCode)
 >                {
->                    var result = getWorkItemsHttpResponse.Content.ReadAsStringAsync().Result;                    
->                }                
->            }           
->        }                                  
+>                    var result = getWorkItemsHttpResponse.Content.ReadAsStringAsync().Result;
+>                }
+>            }
+>        }
 >    }
->}
+> }
 >
->```
->```cl
->using System;
->using System.Linq;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
->using Microsoft.VisualStudio.Services.Common;
+> ```
 >
->...
+> ```cl
+> using System;
+> using System.Linq;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
+> using Microsoft.VisualStudio.Services.Common;
 >
->public void GetWorkItemsByQuery()
->{
+> ...
+>
+> public void GetWorkItemsByQuery()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    Uri _uri = new Uri("https://account.visualstudio.com");
 >    VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);
@@ -235,19 +240,19 @@ If you already have the query id, you can skip step 1. The code sample below sho
 >        try
 >        {
 >            //get the query object based on the query name and project
->            queryItem = workItemTrackingHttpClient.GetQueryAsync(project, query).Result;                    
->        }                
+>            queryItem = workItemTrackingHttpClient.GetQueryAsync(project, query).Result;
+>        }
 >        catch (Exception ex)
 >        {
 >            //handle the error
->        }             
->               
+>        }
+>
 >        //now we have the query id, so lets execute the query and get the results
 >        WorkItemQueryResult workItemQueryResult = workItemTrackingHttpClient.QueryByIdAsync(queryItem.Id).Result;
 >
->        //some error handling                
+>        //some error handling
 >        if (workItemQueryResult != null)
->        {         
+>        {
 >            //need to get the list of our work item id's and put them into an array
 >            List<int> list = new List<int>();
 >            foreach (var item in workItemQueryResult.WorkItems)
@@ -263,29 +268,31 @@ If you already have the query id, you can skip step 1. The code sample below sho
 >            fields[2] = "System.State";
 >
 >            var workItems = workItemTrackingHttpClient.GetWorkItemsAsync(arr, fields, workItemQueryResult.AsOf).Result;
->        }                         
+>        }
 >    }
->}
+> }
 >
->```
+> ```
 
 ## Query Work Items with WIQL
+
 <a name="queryworkitemswithwiql" />
 
 If you don't know the query you want to execute, you can use the [work item query language (WIQL)](https://msdn.microsoft.com/library/bb130306.aspx) to dynamically create a query in your code.
 
->[!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
->```cs
->using System;
->using System.Net.Http;
->using System.Net.Http.Headers;
->using System.Text;
->using Newtonsoft.Json;
+> [!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
 >
->...
+> ```cs
+> using System;
+> using System.Net.Http;
+> using System.Net.Http.Headers;
+> using System.Text;
+> using Newtonsoft.Json;
 >
->public void GetWorkItemsByWiql()
->{
+> ...
+>
+> public void GetWorkItemsByWiql()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
 >
@@ -309,7 +316,7 @@ If you don't know the query you want to execute, you can use the [work item quer
 >        client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 >        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", _credentials);
 >
->        //serialize the wiql object into a json string   
+>        //serialize the wiql object into a json string
 >        var postValue = new StringContent(JsonConvert.SerializeObject(wiql), Encoding.UTF8, "application/json"); //mediaType needs to be application/json for a post call
 >
 >        var method = new HttpMethod("POST");
@@ -319,7 +326,7 @@ If you don't know the query you want to execute, you can use the [work item quer
 >        if (httpResponseMessage.IsSuccessStatusCode)
 >        {
 >            WorkItemQueryResult workItemQueryResult = httpResponseMessage.Content.ReadAsAsync<WorkItemQueryResult>().Result;
->                                     
+>
 >            //now that we have a bunch of work items, build a list of id's so we can get details
 >            var builder = new System.Text.StringBuilder();
 >            foreach (var item in workItemQueryResult.workItems)
@@ -334,22 +341,23 @@ If you don't know the query you want to execute, you can use the [work item quer
 >
 >            if (getWorkItemsHttpResponse.IsSuccessStatusCode)
 >            {
->                var result = getWorkItemsHttpResponse.Content.ReadAsStringAsync().Result;                
->            }                          
->        }                                     
->    }    
->}
+>                var result = getWorkItemsHttpResponse.Content.ReadAsStringAsync().Result;
+>            }
+>        }
+>    }
+> }
 >
->```
->```cl
->using System;
->using System.Linq;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
->using Microsoft.VisualStudio.Services.Common;
+> ```
 >
->public void GetWorkItemsByWiql()
->{
+> ```cl
+> using System;
+> using System.Linq;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
+> using Microsoft.VisualStudio.Services.Common;
+>
+> public void GetWorkItemsByWiql()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    Uri _uri = new Uri("https://account.visualstudio.com");
 >    VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);
@@ -372,10 +380,10 @@ If you don't know the query you want to execute, you can use the [work item quer
 >    {
 >        //execute the query to get the list of work items in the results
 >        WorkItemQueryResult workItemQueryResult = workItemTrackingHttpClient.QueryByWiqlAsync(wiql).Result;
->     
->        //some error handling                
+>
+>        //some error handling
 >        if (workItemQueryResult != null)
->        {          
+>        {
 >            //need to get the list of our work item id's and put them into an array
 >            List<int> list = new List<int>();
 >            foreach (var item in workItemQueryResult.WorkItems)
@@ -390,47 +398,48 @@ If you don't know the query you want to execute, you can use the [work item quer
 >            fields[1] = "System.Title";
 >            fields[2] = "System.State";
 >
->            var workItems = workItemTrackingHttpClient.GetWorkItemsAsync(arr, fields, workItemQueryResult.AsOf).Result;           
->        }  
+>            var workItems = workItemTrackingHttpClient.GetWorkItemsAsync(arr, fields, workItemQueryResult.AsOf).Result;
+>        }
 >    }
->}
+> }
 >
->```
-
+> ```
 
 ## Get List of Work Item fields
+
 <a name="getlistfoworkitemfields" />
 
 To be able to set the values on any fields through the REST APIs, you are going to need to know the ReferenceName of each field. The ReferenceName is not exposed in the web interface, it is only exposed through the [field](./fields.md) REST API endpoint.
 
->[!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
->```cs
->using System;
->using System.Net.Http;
->using System.Net.Http.Headers;
->using System.Text;
->using Newtonsoft.Json;
->using System.Collections.Generic;
+> [!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
 >
->...
+> ```cs
+> using System;
+> using System.Net.Http;
+> using System.Net.Http.Headers;
+> using System.Text;
+> using Newtonsoft.Json;
+> using System.Collections.Generic;
 >
->public class WorkItemFields 
->{
+> ...
+>
+> public class WorkItemFields
+> {
 >    public int count { get; set; }
 >    public WorkItemField[] value { get; set; }
->}
+> }
 >
->public class WorkItemField
->{
+> public class WorkItemField
+> {
 >    public string name { get; set; }
 >    public string referenceName { get; set; }
 >    public string type { get; set; }
->    public bool readOnly { get; set; }        
+>    public bool readOnly { get; set; }
 >    public string url { get; set; }
->}
+> }
 >
->public void GetFieldByName()
->{
+> public void GetFieldByName()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
 >    string _fieldName = "Title"; //add name of custom field you want to search for
@@ -450,23 +459,24 @@ To be able to set the values on any fields through the REST APIs, you are going 
 >        //search for custom field in list of fields returned
 >        var item = list.Find(x => x.name == _fieldName);
 >
->        var result = item.referenceName;    
+>        var result = item.referenceName;
 >    }
->}
+> }
 >
->```
->```cl
->using System;
->using System.Linq;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
->using Microsoft.VisualStudio.Services.Common;
->using System.Collections.Generic;
+> ```
 >
->...
+> ```cl
+> using System;
+> using System.Linq;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
+> using Microsoft.VisualStudio.Services.Common;
+> using System.Collections.Generic;
 >
->public void GetFieldByName()
->{
+> ...
+>
+> public void GetFieldByName()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    Uri _uri = new Uri("https://account.visualstudio.com");
 >    VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);
@@ -480,11 +490,12 @@ To be able to set the values on any fields through the REST APIs, you are going 
 >            var result =  item.ReferenceName;
 >        }
 >    }
->}
+> }
 >
->```
+> ```
 
 ## Create Bug
+
 <a name="samples-createabug" />
 
 Creating a new bug (or any work item) is pretty straight forward. You just need to set the field values and send a JSON-Patch object to the REST endpoint.
@@ -497,18 +508,19 @@ There are a few things happening in the code sample below:
 2. Convert that array to a serialized json object
 3. Send that serialized json object to the REST endpoint
 
->[!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
->```cs
->using System;
->using System.Net.Http;
->using System.Net.Http.Headers;
->using System.Text;
->using Newtonsoft.Json;
+> [!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
 >
->...
+> ```cs
+> using System;
+> using System.Net.Http;
+> using System.Net.Http.Headers;
+> using System.Text;
+> using Newtonsoft.Json;
 >
->public void CreateBug()
->{
+> ...
+>
+> public void CreateBug()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
 >
@@ -528,7 +540,7 @@ There are a few things happening in the code sample below:
 >        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", _credentials);
 >
 >        //serialize the fields array into a json string
->        var patchValue = new StringContent(JsonConvert.SerializeObject(patchDocument), Encoding.UTF8, "application/json-patch+json"); 
+>        var patchValue = new StringContent(JsonConvert.SerializeObject(patchDocument), Encoding.UTF8, "application/json-patch+json");
 >
 >        var method = new HttpMethod("PATCH");
 >        var request = new HttpRequestMessage(method, "https://accountname.visualstudio.com/fabrikam/_apis/wit/workitems/$Bug?api-version=2.2") { Content = patchValue };
@@ -540,21 +552,22 @@ There are a few things happening in the code sample below:
 >            var result = response.Content.ReadAsStringAsync().Result;
 >        }
 >    }
->}
+> }
 >
->```
->```cl
->using System;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
->using Microsoft.VisualStudio.Services.WebApi.Patch.Json;
->using Microsoft.VisualStudio.Services.WebApi.Patch;
->using Microsoft.VisualStudio.Services.Common;
+> ```
 >
->...
+> ```cl
+> using System;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
+> using Microsoft.VisualStudio.Services.WebApi.Patch.Json;
+> using Microsoft.VisualStudio.Services.WebApi.Patch;
+> using Microsoft.VisualStudio.Services.Common;
 >
->public void CreateBug()
->{
+> ...
+>
+> public void CreateBug()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    string _projectName = "fabrikam"
 >    Uri _uri = new Uri("https://account.visualstudio.com");
@@ -601,34 +614,35 @@ There are a few things happening in the code sample below:
 >        //create a work item
 >        WorkItem result = workItemTrackingHttpClient.CreateWorkItemAsync(patchDocument, _projectName, "Bug").Result;
 >    }
->}
+> }
 >
->```
-
+> ```
 
 ## Migrating work items
+
 <a name="samples-migratingworkitems" />
 
-Often, when migrating work items from another source, organizations want to retain all the original properties of the work item.  For example, you may want to create a bug that retains the original created date and created by values from the system where it originated.  By using the basic REST example above, this is not possible since the Created and Changed date fields are automatically calculated by the system.  Luckily, there is a solution - you may optionally choose to bypass the rules engine on a work item update. This allows you to modify the work item fields without any restrictions. There are some limitations on what's supported:
+Often, when migrating work items from another source, organizations want to retain all the original properties of the work item. For example, you may want to create a bug that retains the original created date and created by values from the system where it originated. By using the basic REST example above, this is not possible since the Created and Changed date fields are automatically calculated by the system. Luckily, there is a solution - you may optionally choose to bypass the rules engine on a work item update. This allows you to modify the work item fields without any restrictions. There are some limitations on what's supported:
 
-* To modify the System.CreatedBy or System.ChangedBy fields, you must be a member of the "Project Collection Service Accounts" group.
-* Created Date and Created By can ONLY be set on the initial revision
-* Changed Date must always be increasing, meaning you can't have a revision
+- To modify the System.CreatedBy or System.ChangedBy fields, you must be a member of the "Project Collection Service Accounts" group.
+- Created Date and Created By can ONLY be set on the initial revision
+- Changed Date must always be increasing, meaning you can't have a revision
 
 The code is the same as Create Bug. However, we pass the bypassRules=true parameter to the REST endpoint.
 
->[!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
->```cs
->using System;
->using System.Net.Http;
->using System.Net.Http.Headers;
->using System.Text;
->using Newtonsoft.Json;
+> [!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
 >
->...
+> ```cs
+> using System;
+> using System.Net.Http;
+> using System.Net.Http.Headers;
+> using System.Text;
+> using Newtonsoft.Json;
 >
->public void CreateBugByPassingRules()
->{
+> ...
+>
+> public void CreateBugByPassingRules()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
 >
@@ -650,7 +664,7 @@ The code is the same as Create Bug. However, we pass the bypassRules=true parame
 >        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", _credentials);
 >
 >        //serialize the fields array into a json string
->        var patchValue = new StringContent(JsonConvert.SerializeObject(patchDocument), Encoding.UTF8, "application/json-patch+json"); 
+>        var patchValue = new StringContent(JsonConvert.SerializeObject(patchDocument), Encoding.UTF8, "application/json-patch+json");
 >
 >        var method = new HttpMethod("PATCH");
 >        var request = new HttpRequestMessage(method, "https://account.visualstudio.com/fabrikam/_apis/wit/workitems/$Bug?bypassRules=true&api-version=2.2") { Content = patchValue };
@@ -662,21 +676,22 @@ The code is the same as Create Bug. However, we pass the bypassRules=true parame
 >            var result = response.Content.ReadAsStringAsync().Result;
 >        }
 >    }
->}
+> }
 >
->```
->```cl
->using System;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
->using Microsoft.VisualStudio.Services.WebApi.Patch.Json;
->using Microsoft.VisualStudio.Services.WebApi.Patch;
->using Microsoft.VisualStudio.Services.Common;
+> ```
 >
->...
+> ```cl
+> using System;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
+> using Microsoft.VisualStudio.Services.WebApi.Patch.Json;
+> using Microsoft.VisualStudio.Services.WebApi.Patch;
+> using Microsoft.VisualStudio.Services.Common;
 >
->public void CreateBugByPassingRules()
->{
+> ...
+>
+> public void CreateBugByPassingRules()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    string _projectName = "fabrikam"
 >    Uri _uri = new Uri("https://account.visualstudio.com");
@@ -739,12 +754,12 @@ The code is the same as Create Bug. However, we pass the bypassRules=true parame
 >        //create a work item
 >        WorkItem result = workItemTrackingHttpClient.CreateWorkItemAsync(patchDocument, _projectName, "Bug", null, true).Result;
 >    }
->}
+> }
 >
->```
-
+> ```
 
 ## Update Bug
+
 <a name="samples-updateabug" />
 
 In this example we are going to update the values of a bug. Before we get started with the code, there are couple of assumptions being made:
@@ -754,19 +769,20 @@ In this example we are going to update the values of a bug. Before we get starte
 
 Later on we will learn how to query for work items and then update them in bulk.
 
->[!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
->```cs
+> [!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
 >
->using System;
->using System.Net.Http;
->using System.Net.Http.Headers;
->using System.Text;
->using Newtonsoft.Json;
+> ```cs
 >
->...
+> using System;
+> using System.Net.Http;
+> using System.Net.Http.Headers;
+> using System.Text;
+> using Newtonsoft.Json;
 >
->public void UpdateBug()
->{
+> ...
+>
+> public void UpdateBug()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
 >    string _id = "1234";    //change to id for a specific work item
@@ -796,21 +812,22 @@ Later on we will learn how to query for work items and then update them in bulk.
 >            var result = response.Content.ReadAsStringAsync().Result;
 >        }
 >    }
->}
+> }
 >
->```
->```cl
->using System;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
->using Microsoft.VisualStudio.Services.WebApi.Patch.Json;
->using Microsoft.VisualStudio.Services.WebApi.Patch;
->using Microsoft.VisualStudio.Services.Common;
+> ```
 >
->...
+> ```cl
+> using System;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
+> using Microsoft.VisualStudio.Services.WebApi.Patch.Json;
+> using Microsoft.VisualStudio.Services.WebApi.Patch;
+> using Microsoft.VisualStudio.Services.Common;
 >
->public void UpdateBug()
->{
+> ...
+>
+> public void UpdateBug()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    Uri _uri = new Uri("https://account.visualstudio.com");
 >    VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);
@@ -847,28 +864,29 @@ Later on we will learn how to query for work items and then update them in bulk.
 >    {
 >        WorkItem result = workItemTrackingHttpClient.UpdateWorkItemAsync(patchDocument, _id).Result;
 >    }
->}
+> }
 >
->```
-
+> ```
 
 ## Add Comment to Bug
+
 <a name="samples-addcommenttobug" />
 
 This sample is very similar to [Update a Bug](#samples-updateabug) example. The difference is, we only need to add a value for the System.History field.
 
->[!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
->```cs
->using System;
->using System.Net.Http;
->using System.Net.Http.Headers;
->using System.Text;
->using Newtonsoft.Json;
+> [!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
 >
->...
+> ```cs
+> using System;
+> using System.Net.Http;
+> using System.Net.Http.Headers;
+> using System.Text;
+> using Newtonsoft.Json;
 >
->public void AddCommentToBug()
->{
+> ...
+>
+> public void AddCommentToBug()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
 >    string _id = "1234";    //change to id for a specific work item
@@ -896,21 +914,22 @@ This sample is very similar to [Update a Bug](#samples-updateabug) example. The 
 >            var result = response.Content.ReadAsStringAsync().Result;
 >        }
 >    }
->}
+> }
 >
->```
->```cl
->using System;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
->using Microsoft.VisualStudio.Services.WebApi.Patch.Json;
->using Microsoft.VisualStudio.Services.WebApi.Patch;
->using Microsoft.VisualStudio.Services.Common;
+> ```
 >
->...
+> ```cl
+> using System;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
+> using Microsoft.VisualStudio.Services.WebApi.Patch.Json;
+> using Microsoft.VisualStudio.Services.WebApi.Patch;
+> using Microsoft.VisualStudio.Services.Common;
 >
->public void AddCommentToBug()
->{
+> ...
+>
+> public void AddCommentToBug()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    Uri _uri = new Uri("https://account.visualstudio.com");
 >    VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);
@@ -931,30 +950,31 @@ This sample is very similar to [Update a Bug](#samples-updateabug) example. The 
 >    {
 >        WorkItem result = workItemTrackingHttpClient.UpdateWorkItemAsync(patchDocument, _id).Result;
 >    }
->}
+> }
 >
->```
-
+> ```
 
 ## Change Bug to a User Story
+
 <a name="samples-changebugtouserstory" />
 
 Depending on your workflow, you may want to change the type of a work item. For example, if someone creates a bug but it is really a change request. Instead of creating a new user story, you can change the type from a bug to a user story.
 
-The below example is very similar to the [Update a Bug](#samples-updateabug) example. You just need to set the ```/fields/System.WorkItemType``` field to a User Story.
+The below example is very similar to the [Update a Bug](#samples-updateabug) example. You just need to set the `/fields/System.WorkItemType` field to a User Story.
 
->[!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
->```cs
->using System;
->using System.Net.Http;
->using System.Net.Http.Headers;
->using System.Text;
->using Newtonsoft.Json;
+> [!div class="tabbedCodeSnippets" cs='C#' cl='.NET Client Library']
 >
->...
+> ```cs
+> using System;
+> using System.Net.Http;
+> using System.Net.Http.Headers;
+> using System.Text;
+> using Newtonsoft.Json;
 >
->public void ChangeBugToUserStory()
->{
+> ...
+>
+> public void ChangeBugToUserStory()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    string _credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", _personalAccessToken)));
 >    string _id = "1234";    //change to id for a specific work item
@@ -983,21 +1003,22 @@ The below example is very similar to the [Update a Bug](#samples-updateabug) exa
 >            var result = response.Content.ReadAsStringAsync().Result;
 >        }
 >    }
->}
+> }
 >
->```
->```cl
->using System;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
->using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
->using Microsoft.VisualStudio.Services.WebApi.Patch.Json;
->using Microsoft.VisualStudio.Services.WebApi.Patch;
->using Microsoft.VisualStudio.Services.Common;
+> ```
 >
->...
+> ```cl
+> using System;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi;
+> using Microsoft.TeamFoundation.WorkItemTracking.WebApi.Models;
+> using Microsoft.VisualStudio.Services.WebApi.Patch.Json;
+> using Microsoft.VisualStudio.Services.WebApi.Patch;
+> using Microsoft.VisualStudio.Services.Common;
 >
->public void ChangeBugToUserStory()
->{
+> ...
+>
+> public void ChangeBugToUserStory()
+> {
 >    string _personalAccessToken = "your personal access token";
 >    Uri _uri = new Uri("https://account.visualstudio.com");
 >    VssBasicCredential _credentials = new VssBasicCredential("", _personalAccessToken);
@@ -1018,12 +1039,12 @@ The below example is very similar to the [Update a Bug](#samples-updateabug) exa
 >    {
 >        WorkItem result = workItemTrackingHttpClient.UpdateWorkItemAsync(patchDocument, _id).Result;
 >    }
->}
+> }
 >
->```
-
+> ```
 
 ## FAQ
+
 <a name="faq" />
 
 <!-- BEGINSECTION class="md-qanda" -->
@@ -1036,4 +1057,4 @@ A: See the [https://github.com/Microsoft/vsts-restapi-samplecode](https://github
 
 A: Yes, see the [overview of client libraries](../../get-started/client-libraries/dotnet.md)
 
-<!-- ENDSECTION --> 
+<!-- ENDSECTION -->

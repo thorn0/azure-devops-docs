@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Team Field Values | REST API Reference for Team Foundation Server
 description: Work with team field values programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: eb99bcf1-7f2b-4db5-bfdf-f2b923ff9d5a
@@ -21,20 +21,23 @@ The team field is used to identify which work items belong to your team. By defa
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get a team field values
+
 <a id="GetTeamFieldValues"></a>
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/{team}/_apis/Work/TeamSettings/TeamFieldValues?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:-----------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team. 
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
 | Query
-| api-version| string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version| string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -86,28 +89,31 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsettings
 }
 ```
 
-
 ## Update team field values
+
 <a id="UpdateTeamFieldValues"></a>
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/{team}/_apis/Work/TeamSettings/TeamFieldValues?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:-----------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team. 
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
 | Query
-| api-version| string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version| string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsettings/teamfieldvalues?api-version=2.0-preview.1
 ```
+
 ```json
 {
   "defaultValue": "Fabrikam-Fiber\\Auto",

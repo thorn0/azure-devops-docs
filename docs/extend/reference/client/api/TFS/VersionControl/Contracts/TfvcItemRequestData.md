@@ -13,12 +13,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `includeContentMetadata`: boolean. If true, include metadata about the file type
+- `includeContentMetadata`: boolean. If true, include metadata about the file type
 
-* `includeLinks`: boolean. Whether to include the _links field on the shallow references
+- `includeLinks`: boolean. Whether to include the \_links field on the shallow references
 
-* `itemDescriptors`: [TfvcItemDescriptor](../../../TFS/VersionControl/Contracts/TfvcItemDescriptor.md)[]. 
-
+- `itemDescriptors`: [TfvcItemDescriptor](../../../TFS/VersionControl/Contracts/TfvcItemDescriptor.md)[].

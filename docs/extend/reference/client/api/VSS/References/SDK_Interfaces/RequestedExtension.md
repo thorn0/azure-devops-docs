@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,18 +15,16 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-A request for an extension (to be installed or have a license assigned) 
+A request for an extension (to be installed or have a license assigned)
 
 ### Members
 
-* `extensionName`: string. THe unique name of the extensions
+- `extensionName`: string. THe unique name of the extensions
 
-* `extensionRequests`: [ExtensionRequest](../../../VSS/References/SDK_Interfaces/ExtensionRequest.md)[]. A list of each request for the extension
+- `extensionRequests`: [ExtensionRequest](../../../VSS/References/SDK_Interfaces/ExtensionRequest.md)[]. A list of each request for the extension
 
-* `publisherDisplayName`: string. DisplayName of the publisher that owns the extension being published.
+- `publisherDisplayName`: string. DisplayName of the publisher that owns the extension being published.
 
-* `publisherName`: string. Represents the Publisher of the requested extension
+- `publisherName`: string. Represents the Publisher of the requested extension
 
-* `requestCount`: number. The total number of requests for an extension
-
+- `requestCount`: number. The total number of requests for an extension

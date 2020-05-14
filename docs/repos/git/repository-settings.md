@@ -3,12 +3,12 @@ title: Repository settings
 titleSuffix: Azure Repos
 description: Repository settings
 ms.assetid: 9336ed18-c239-4394-aa4c-64b6d01130f9
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 11/19/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Repository settings
@@ -189,7 +189,7 @@ ID    Name               Is Blocking    Is Enabled    Repository Id             
 
 ### Create file size policy
 
-Use [`az repos policy file-size create`](/cli/azure/repos/policy/file-size?view=azure-cli-latest#az-repos-policy-file-size-create) to manage  [Maximum file size](#maximum-file-size) policy.
+Use [`az repos policy file-size create`](/cli/azure/repos/policy/file-size?view=azure-cli-latest#az-repos-policy-file-size-create) to manage [Maximum file size](#maximum-file-size) policy.
 
 ```azurecli
 az repos policy file-size create --blocking {false, true}
@@ -283,7 +283,7 @@ ID    Name                     Is Blocking    Is Enabled    Repository Id       
 
 az repos policy file-size update --id 2 --maximum-git-blob-size 20971520
 {
-  
+
   <Some properties omitted for space>
 
   "createdDate": "2019-11-19T16:09:32.960070+00:00",
@@ -301,7 +301,7 @@ az repos policy file-size update --id 2 --maximum-git-blob-size 20971520
     ],
     "useUncompressedSize": true
   },
-  
+
    <Some properties omitted for space>
 
 }
@@ -309,9 +309,9 @@ az repos policy file-size update --id 2 --maximum-git-blob-size 20971520
 
 ::: moniker-end
 
-[!INCLUDE [temp](../../includes/note-cli-not-supported.md)] 
+[!INCLUDE [temp](../../includes/note-cli-not-supported.md)]
 
-* * *
+---
 
 ## Forking
 
@@ -333,12 +333,12 @@ If you [import a repository](import-git-repository.md), we automatically turn th
 
 By default, the option to complete linked work items during pull request completion will remember each user's last choice.
 Some teams may have different approaches to closing work items, such as at a standup meeting, and may want to discourage users from completing work items with their pull requests.
-By disabling this setting, users must opt-in to completing work items for each pull request.  
+By disabling this setting, users must opt-in to completing work items for each pull request.
 
 ## Cross-platform compatibility settings
 
->[!NOTE]
->Our recommendation is to configure these settings **either** at the project level or each individual repo, but not both. If set at both levels, we will compute whichever setting is the most restrictive and honor that. Configuring these settings at only one level removes this complexity prevents slow downs in Git performance.
+> [!NOTE]
+> Our recommendation is to configure these settings **either** at the project level or each individual repo, but not both. If set at both levels, we will compute whichever setting is the most restrictive and honor that. Configuring these settings at only one level removes this complexity prevents slow downs in Git performance.
 
 ### Case enforcement
 
@@ -372,7 +372,7 @@ This setting will block pushes to your repository that contain files or folders 
 
 Not all [path lengths](os-compatibility.md) are allowed on the three major OS file systems (Windows, macOS, and Linux). Developers can push commits to a shared repository that may contain files or directories with path lengths that are invalid on one or more platforms. If these files or directories are fetched and checked out on a platform where they are invalid then the working directory can become corrupted.
 
-This setting will block pushes to your repository that contain files or directories with path names that are invalid **on any platform**. [See what path lengths are invalid](os-compatibility.md). When enabled, a default value of `248` is selected because that is the highest max length that is 100% supported across all three major platforms. 
+This setting will block pushes to your repository that contain files or directories with path names that are invalid **on any platform**. [See what path lengths are invalid](os-compatibility.md). When enabled, a default value of `248` is selected because that is the highest max length that is 100% supported across all three major platforms.
 
 The max path value can be modified. For example, if you only have macOS or Linux developers in your organization, then you may optionally choose to set it to highest value that is 100% supported on both platforms (`1016`). You may also optionally choose to set a lower max path value if you wish to enforce certain directory & naming conventions for your organization.
 

@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Use Team Foundation version control commands
 
@@ -20,7 +19,7 @@ You can use version control commands to do nearly all tasks you can do in Visual
 
 ## Run a command
 
-To launch the Visual Studio command prompt, from Windows **Start**, choose **Visual Studio 2015**,   then choose the **Developer Command Prompt for V2015** shortcut.
+To launch the Visual Studio command prompt, from Windows **Start**, choose **Visual Studio 2015**, then choose the **Developer Command Prompt for V2015** shortcut.
 
 > Visual Studio 2017 users: The tf.exe binary is no longer in a fixed location in the Visual Studio install path as in previous releases (for example, C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE). Scripts using tf.exe should not hardcode a path to the file based on the Visual Studio 2017 install path.
 
@@ -34,13 +33,13 @@ c:\code\SiteApp\Main\SolutionA>tf get
 
 Your workspace is a local copy of your team's codebase. Because it is a local copy on your dev machine, you can develop and test your code in isolation until you are ready to check in your work. Here are some commands to manage your workspace:
 
-[Proxy Command](proxy-command.md) (Visual Studio 2010)  
+[Proxy Command](proxy-command.md) (Visual Studio 2010)
 
-[Workfold Command](workfold-command.md) (Visual Studio 2010)  
+[Workfold Command](workfold-command.md) (Visual Studio 2010)
 
-[Workspace Command](workspace-command.md) (Visual Studio 2010)  
+[Workspace Command](workspace-command.md) (Visual Studio 2010)
 
-[Workspaces Command](workspaces-command.md) (Visual Studio 2010)  
+[Workspaces Command](workspaces-command.md) (Visual Studio 2010)
 
 See also: [Set up Team Foundation Version Control on your dev machine](set-up-team-foundation-version-control-your-dev-machine.md), [Create and work with workspaces](create-work-workspaces.md)
 
@@ -54,12 +53,12 @@ Adds files and folders to version control.
 [Checkout (or Edit) command](checkout-or-edit-command.md)  
 Checks out a file and changes its pending change status to "edit".
 
-[Delete Command (Team Foundation Version Control)](delete-command-team-foundation-version-control.md) (Visual Studio 2010)  
+[Delete Command (Team Foundation Version Control)](delete-command-team-foundation-version-control.md) (Visual Studio 2010)
 
 [Get command](get-command.md)  
 Gets (downloads) the latest or a specified version of one or more files or folders from Team Foundation Server to the workspace.
 
-[Rename Command (Team Foundation Version Control)](rename-command-team-foundation-version-control.md) (Visual Studio 2010)  
+[Rename Command (Team Foundation Version Control)](rename-command-team-foundation-version-control.md) (Visual Studio 2010)
 
 [Status command](status-command.md)  
 Displays information about pending changes to files and folders items in one or more workspaces, or in a shelveset.
@@ -67,7 +66,7 @@ Displays information about pending changes to files and folders items in one or 
 [Undo command](undo-command.md)  
 Discards one or more pending changes to files or folders.
 
-[Undelete Command](undelete-command.md) (Visual Studio 2010)  
+[Undelete Command](undelete-command.md) (Visual Studio 2010)
 
 See also: [Develop your app in Team Foundation version control](develop-your-app-team-foundation-version-control.md)
 
@@ -75,11 +74,11 @@ See also: [Develop your app in Team Foundation version control](develop-your-app
 
 For a variety of reasons, sometimes you need to set aside some or all of your work in progress. To suspend and resume your work, and to manage your shelvesets, use these commands:
 
-[Shelve Command](shelve-command.md) (Visual Studio 2010)  
+[Shelve Command](shelve-command.md) (Visual Studio 2010)
 
-[Shelvesets Command](shelvesets-command.md) (Visual Studio 2010)  
+[Shelvesets Command](shelvesets-command.md) (Visual Studio 2010)
 
-[Unshelve Command](unshelve-command.md) (Visual Studio 2010)  
+[Unshelve Command](unshelve-command.md) (Visual Studio 2010)
 
 See also: [Suspend your work and manage your shelvesets](suspend-your-work-manage-your-shelvesets.md).
 
@@ -94,54 +93,54 @@ See also: [Check in your work to the team's codebase](check-your-work-team-codeb
 
 ### Manage files and solve problems
 
-**View and Manage Version Control Files and Folders**  
+**View and Manage Version Control Files and Folders**
 
-[Properties (or Info) Command](properties-or-info-command.md) (Visual Studio 2010)  
+[Properties (or Info) Command](properties-or-info-command.md) (Visual Studio 2010)
 
-Property Command (not documented)  
+Property Command (not documented)
 
-[Dir Command](dir-command.md) (Visual Studio 2010)  
+[Dir Command](dir-command.md) (Visual Studio 2010)
 
-[Destroy Command (Team Foundation Version Control)](destroy-command-team-foundation-version-control.md) (Visual Studio 2010)  
+[Destroy Command (Team Foundation Version Control)](destroy-command-team-foundation-version-control.md) (Visual Studio 2010)
 
-[LocalVersions Command](localversions-command.md) (Visual Studio 2010)  
+[LocalVersions Command](localversions-command.md) (Visual Studio 2010)
 
 See also: [Use Source Control Explorer to manage files under version control](use-source-control-explorer-manage-files-under-version-control.md)
 
-**View and Manage Past Versions**  
+**View and Manage Past Versions**
 
-[Changeset Command](changeset-command.md) (Visual Studio 2010)  
+[Changeset Command](changeset-command.md) (Visual Studio 2010)
 
 [History command](history-command.md)  
 Displays the revision history of one or more files or folders.
 
-[Label Command (Team Foundation Version Control)](label-command-team-foundation-version-control.md) (Visual Studio 2010)  
+[Label Command (Team Foundation Version Control)](label-command-team-foundation-version-control.md) (Visual Studio 2010)
 
-[Labels Command](labels-command.md) (Visual Studio 2010)  
+[Labels Command](labels-command.md) (Visual Studio 2010)
 
-[Rollback Command (Team Foundation Version Control)](rollback-command-team-foundation-version-control.md) (Visual Studio 2010)  
+[Rollback Command (Team Foundation Version Control)](rollback-command-team-foundation-version-control.md) (Visual Studio 2010)
 
-[Unlabel Command](unlabel-command.md) (Visual Studio 2010)  
+[Unlabel Command](unlabel-command.md) (Visual Studio 2010)
 
-[View Command](view-command.md) (Visual Studio 2010)  
-
-See also: [View and manage past versions](view-manage-past-versions.md)
-
-**Compare Folders and Files**  
-
-[Difference Command](difference-command.md) (Visual Studio 2010)  
-
-[Folderdiff Command](folderdiff-command.md) (Visual Studio 2010)  
+[View Command](view-command.md) (Visual Studio 2010)
 
 See also: [View and manage past versions](view-manage-past-versions.md)
 
-**Resolve File Conflicts**  
+**Compare Folders and Files**
+
+[Difference Command](difference-command.md) (Visual Studio 2010)
+
+[Folderdiff Command](folderdiff-command.md) (Visual Studio 2010)
+
+See also: [View and manage past versions](view-manage-past-versions.md)
+
+**Resolve File Conflicts**
 
 [Resolve Command](resolve-command.md) (Visual Studio 2010)
 
 See also: [Resolve Team Foundation Version Control conflicts](resolve-team-foundation-version-control-conflicts.md).
 
-**Work with Version Control Locks**  
+**Work with Version Control Locks**
 
 [Lock Command](lock-command.md) (Visual Studio 2010)
 
@@ -151,13 +150,13 @@ See also: [Work with version control locks](work-version-control-locks.md).
 
 Use the following commands to isolate risk using branches:
 
-[Branch Command](branch-command.md) (Visual Studio 2010)  
+[Branch Command](branch-command.md) (Visual Studio 2010)
 
-[Branches Command](branches-command.md) (Visual Studio 2010)  
+[Branches Command](branches-command.md) (Visual Studio 2010)
 
-[Merge Command](merge-command.md) (Visual Studio 2010)  
+[Merge Command](merge-command.md) (Visual Studio 2010)
 
-[Merges Command](merges-command.md) (Visual Studio 2010)  
+[Merges Command](merges-command.md) (Visual Studio 2010)
 
 See also: [Use branches to isolate risk in Team Foundation Version Control](use-branches-isolate-risk-team-foundation-version-control.md).
 
@@ -165,9 +164,9 @@ See also: [Use branches to isolate risk in Team Foundation Version Control](use-
 
 Use the following commands to administer your version control system:
 
-[Configure Command](configure-command.md) (Visual Studio 2010)  
+[Configure Command](configure-command.md) (Visual Studio 2010)
 
-[Permission Command](permission-command.md) (Visual Studio 2010)  
+[Permission Command](permission-command.md) (Visual Studio 2010)
 
 See also: [Administering Team Foundation Version Control](administering-team-foundation-version-control.md) (Visual Studio 2010).
 
@@ -175,9 +174,9 @@ See also: [Administering Team Foundation Version Control](administering-team-fou
 
 Use the following commands to get more information about version control commands:
 
-[Help Command (Team Foundation Version Control)](help-command-team-foundation-version-control.md) (Visual Studio 2010)  
+[Help Command (Team Foundation Version Control)](help-command-team-foundation-version-control.md) (Visual Studio 2010)
 
-[Msdn Command](msdn-command.md) (Visual Studio 2010)  
+[Msdn Command](msdn-command.md) (Visual Studio 2010)
 
 ## Understand command syntax
 
@@ -193,7 +192,7 @@ When options are separated by a pipe (**|**), you can specify one of the options
 
 ### Verbatim and replaceable arguments
 
-Bold items are options that you include verbatim. *Italicized* items are arguments that you must replace with actual characters to perform a command.
+Bold items are options that you include verbatim. _Italicized_ items are arguments that you must replace with actual characters to perform a command.
 
 ### Command Shortcuts and Aliases
 
@@ -209,7 +208,7 @@ tf checkout [/lock:( none|checkin|checkout)] [/recursive] itemspec [/login: user
 
 Let's review the arguments from this example:
 
-- *itemspec*: You must replace this argument with an [itemspec](use-team-foundation-version-control-commands.md#itemspec) that specifies the items you are checking out.
+- _itemspec_: You must replace this argument with an [itemspec](use-team-foundation-version-control-commands.md#itemspec) that specifies the items you are checking out.
 
 - **/lock:(none|checkin|checkout)**: You are not required to specify the **/lock** option. If you do not specify it, then the system by default specifies **/lock:none**. Otherwise, you can specify one of the lock options.
 
@@ -217,7 +216,7 @@ Let's review the arguments from this example:
 
   - **/recursive**: If you want to recursively check out multiple items in a folder, you must specify this option verbatim.
 
-  - **/login**:*username*<em>,password</em>: If you want to run the command as another user, you must specify the **/login** option verbatim, replace *username* with the name of the user, and if necessary, you can supply the password.
+  - **/login**:_username_<em>,password</em>: If you want to run the command as another user, you must specify the **/login** option verbatim, replace _username_ with the name of the user, and if necessary, you can supply the password.
 
 ## Specify the items affected by a command
 
@@ -227,7 +226,7 @@ You can use itemspecs and versionspecs to specify which items are affected by a 
 
 #### Use an itemspec argument to specify affected items
 
-You use an *itemspec* (item specification) to specify the items affected by a command. You can specify items either on a client machine or on your Team Foundation Server. You can use wildcard characters such as **\\*** and **?**.
+You use an _itemspec_ (item specification) to specify the items affected by a command. You can specify items either on a client machine or on your Team Foundation Server. You can use wildcard characters such as **\\\*** and **?**.
 
 #### Client itemspec arguments
 
@@ -235,19 +234,19 @@ A client itemspec argument specifies a path to items on a client machine such as
 
 #### Server itemspec arguments
 
-A server itemspec argument specifies a path to items on your Team Foundation Server such as a folder (for example, **$/SiteApp/Main/SolutionA**) a file (for example, **$/SiteApp/Main/SolutionA/Project1/program.cs** or multiple files (for example, **$/SiteApp/Main/SolutionA/\*.cs**.
+A server itemspec argument specifies a path to items on your Team Foundation Server such as a folder (for example, **\$/SiteApp/Main/SolutionA**) a file (for example, **\$/SiteApp/Main/SolutionA/Project1/program.cs** or multiple files (for example, **\$/SiteApp/Main/SolutionA/\*.cs**.
 
 You typically use server itemspec arguments when you need run a command on items not on the client machine. For example, you are working on a dev machine and need to get some revision history data about some items that are in a project collection you don't work in:
 
 ```
 c:\>tf history /collection:http://fabrikam-3:8080/tfs/DefaultCollection
-$/SiteApp/Main/SolutionA/Project1/* /recursive  
-/noprompt 
+$/SiteApp/Main/SolutionA/Project1/* /recursive
+/noprompt
 ```
 
 #### Multiple itemspec arguments
 
-For some commands, you can specify multiple *itemspec* arguments. For example:
+For some commands, you can specify multiple _itemspec_ arguments. For example:
 
 ```
 c:\code\SiteApp\Main\SolutionA\Project1\>tf checkout program1.cs program2.c
@@ -257,11 +256,11 @@ Checks out program.cs and program2.c.
 
 ### Use a versionspec argument to specify affected versions of items
 
-You use a *versionspec* (version specification) to specify the version of items affected by a command. To provide a *versionspec* you can:
+You use a _versionspec_ (version specification) to specify the version of items affected by a command. To provide a _versionspec_ you can:
 
--   Use the **/version** option. For example: **/version:C44**.
+- Use the **/version** option. For example: **/version:C44**.
 
--   Append the versionspec to an itemspec with a semicolon. For example: **program1.cs;C44**.
+- Append the versionspec to an itemspec with a semicolon. For example: **program1.cs;C44**.
 
 When you use the [History command](history-command.md) or the [Difference Command](difference-command.md), you can specify a range of versions by separating the versions with a tilde (~). For example:
 
@@ -269,7 +268,7 @@ When you use the [History command](history-command.md) or the [Difference Comman
 c:\code\SiteApp\Main\SolutionA>tf history /noprompt * /recursive /v:D4/12/2012~D4/24/2012
 ```
 
-Use the following syntax to specify a *versionspec*.
+Use the following syntax to specify a _versionspec_.
 
 <table>
 <thead>
@@ -405,13 +404,13 @@ Use the **/noprompt** option to suppress requests for data input and redirect ou
 
 When you use this option, the system:
 
--   Suppresses all requests for input:
+- Suppresses all requests for input:
 
-    -   Questions are not asked in the command prompt window. For example, when you use the [Undo command](undo-command.md) with this option, the system does not prompt you to confirm if you want to proceed with undoing the changes.
+  - Questions are not asked in the command prompt window. For example, when you use the [Undo command](undo-command.md) with this option, the system does not prompt you to confirm if you want to proceed with undoing the changes.
 
-    -   Windows and dialog boxes are not presented. For example, you use this option with the [Checkin command](checkin-command.md). Instead of displaying the **Check In** dialog box for you to confirm your options (which items you want to check in or which work items to associate), the system proceeds with the check in without confirmation.
+  - Windows and dialog boxes are not presented. For example, you use this option with the [Checkin command](checkin-command.md). Instead of displaying the **Check In** dialog box for you to confirm your options (which items you want to check in or which work items to associate), the system proceeds with the check in without confirmation.
 
--   Redirects output data to the command prompt. For example, you use this option with the [History command](history-command.md). The data is displayed in the command prompt window instead of the [History window](get-history-item.md).
+- Redirects output data to the command prompt. For example, you use this option with the [History command](history-command.md). The data is displayed in the command prompt window instead of the [History window](get-history-item.md).
 
 ### Use /login option to specify credentials when running a command
 
@@ -452,9 +451,9 @@ Use the **/lock** option to apply or remove a lock at the same time you run anot
 /lock:(none|checkin|checkout)
 ```
 
--   **None**: No lock is placed on an item. If a lock is already in place, it is removed.
+- **None**: No lock is placed on an item. If a lock is already in place, it is removed.
 
--   **Checkin** or **Checkout**: Applies a lock. See [Understand lock types](understand-lock-types.md).
+- **Checkin** or **Checkout**: Applies a lock. See [Understand lock types](understand-lock-types.md).
 
 > [!NOTE]
 > In a few cases, the lock operation can fail:

@@ -17,5 +17,4 @@ Extends: [WorkItemTrackingReference](../../../TFS/WorkItemTracking/Contracts/Wor
 
 ### Members
 
-* `attributes`: {[key: string]: any}. 
-
+- `attributes`: {[key: string]: any}.

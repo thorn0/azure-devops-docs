@@ -12,16 +12,16 @@ ms.technology: devops-cicd-tasks
 # Deploy an Azure Cloud Service
 - task: AzureCloudPowerShellDeployment@1
   inputs:
-    azureClassicSubscription: 
+    azureClassicSubscription:
     #storageAccount: # Required when enableAdvancedStorageOptions == False
-    serviceName: 
-    serviceLocation: 
-    csPkg: 
-    csCfg: 
-    #slotName: 'Production' 
+    serviceName:
+    serviceLocation:
+    csPkg:
+    csCfg:
+    #slotName: 'Production'
     #deploymentLabel: '$(Build.BuildNumber)' # Optional
     #appendDateTimeToLabel: false # Optional
-    #allowUpgrade: true 
+    #allowUpgrade: true
     #simultaneousUpgrade: false # Optional
     #forceUpgrade: false # Optional
     #verifyRoleInstanceStatus: false # Optional
@@ -29,7 +29,7 @@ ms.technology: devops-cicd-tasks
     #newServiceCustomCertificates: # Optional
     #newServiceAdditionalArguments: # Optional
     #newServiceAffinityGroup: # Optional
-    #enableAdvancedStorageOptions: false 
+    #enableAdvancedStorageOptions: false
     #aRMConnectedServiceName: # Required when enableAdvancedStorageOptions == True
     #aRMStorageAccount: # Required when enableAdvancedStorageOptions == True
 ```

@@ -6,7 +6,7 @@ ms.assetid: 4fd7bae1-7484-4bb2-9bb9-a95ef17cb8fb
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 09/28/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Build an image
@@ -16,6 +16,7 @@ monikerRange: 'azure-devops'
 Azure Pipelines can be used to build images for any repository containing a Dockerfile. Building of both Linux and Windows containers is possible based on the agent platform used for the build.
 
 ## Example
+
 ### Get the code
 
 Fork the following repository containing a sample application and a Dockerfile:
@@ -34,18 +35,18 @@ https://github.com/MicrosoftDocs/pipelines-javascript-docker
    > You might be redirected to GitHub to sign in. If so, enter your GitHub credentials.
    > You might be redirected to GitHub to install the Azure Pipelines app. If so, select **Approve and install**.
 
-4. Select **Starter pipeline**. In the Review tab, replace the contents of azure-pipelines.yml with the following snippet - 
+4. Select **Starter pipeline**. In the Review tab, replace the contents of azure-pipelines.yml with the following snippet -
 
    ```YAML
    trigger:
    - master
-   
+
    pool:
      vmImage: 'Ubuntu-16.04'
-   
+
    variables:
      imageName: 'pipelines-javascript-docker'
-   
+
    steps:
    - task: Docker@2
      displayName: Build an image
@@ -71,13 +72,13 @@ Windows container images can be built using either Microsoft hosted Windows agen
 
 ## BuildKit
 
-[BuildKit](https://github.com/moby/buildkit) introduces build improvements in the areas of performance, storage management,  feature functionality, and security. To enable BuildKit based docker builds, set the DOCKER_BUILDKIT variable as shown in the following snippet:
+[BuildKit](https://github.com/moby/buildkit) introduces build improvements in the areas of performance, storage management, feature functionality, and security. To enable BuildKit based docker builds, set the DOCKER_BUILDKIT variable as shown in the following snippet:
 
 ```YAML
 variables:
   imageName: 'pipelines-javascript-docker'
   DOCKER_BUILDKIT: 1
-    
+
 steps:
 - task: Docker@2
   displayName: Build an image
@@ -100,7 +101,7 @@ Docker needs to be installed on self-hosted agent machines prior to runs that tr
 
 ## Script based docker builds
 
-Note that it also possible to build (or any Docker command) images by running docker on script as shown below: 
+Note that it also possible to build (or any Docker command) images by running docker on script as shown below:
 
 ```
 docker build -f Dockerfile -t foobar.azurecr.io/hello:world .
@@ -119,18 +120,18 @@ However, Docker layer caching is possible using self-hosted agents as the epheme
 ### How to build Linux container images for architectures other than x64?
 
 When you use Microsoft-hosted Linux agents, you create Linux container images for the x64 architecture. To create images for other architectures (for example, x86, ARM, and so on), you can use a machine emulator such as [QEMU](https://www.qemu.org/). The following steps illustrate how to create an ARM container image:
+
 1. Author your Dockerfile so that an Intel binary of QEMU exists in the base image. For example, the raspbian image already has this.
-    ```
-    FROM balenalib/rpi-raspbian
-    ```
+   ```
+   FROM balenalib/rpi-raspbian
+   ```
 1. Run the following script in your job before building the image:
-    ```
-    # register QEMU binary - this can be done by running the following image
-    docker run --rm --privileged multiarch/qemu-user-static:register --reset
-    # build your image
-    ```
+   ```
+   # register QEMU binary - this can be done by running the following image
+   docker run --rm --privileged multiarch/qemu-user-static:register --reset
+   # build your image
+   ```
 
 ### How to run tests and publish test results for containerized applications?
 
 For different options on testing containerized applications and publishing the resulting test results, check out [Publish Test Results task](../../tasks/test/publish-test-results.md#docker)
-

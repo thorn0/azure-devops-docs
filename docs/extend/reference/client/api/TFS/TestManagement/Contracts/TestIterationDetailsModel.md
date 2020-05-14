@@ -14,28 +14,26 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `actionResults`: [TestActionResultModel](../../../TFS/TestManagement/Contracts/TestActionResultModel.md)[]. 
+- `actionResults`: [TestActionResultModel](../../../TFS/TestManagement/Contracts/TestActionResultModel.md)[].
 
-* `attachments`: [TestCaseResultAttachmentModel](../../../TFS/TestManagement/Contracts/TestCaseResultAttachmentModel.md)[]. 
+- `attachments`: [TestCaseResultAttachmentModel](../../../TFS/TestManagement/Contracts/TestCaseResultAttachmentModel.md)[].
 
-* `comment`: string. 
+- `comment`: string.
 
-* `completedDate`: Date. 
+- `completedDate`: Date.
 
-* `durationInMs`: number. 
+- `durationInMs`: number.
 
-* `errorMessage`: string. 
+- `errorMessage`: string.
 
-* `id`: number. 
+- `id`: number.
 
-* `outcome`: string. 
+- `outcome`: string.
 
-* `parameters`: [TestResultParameterModel](../../../TFS/TestManagement/Contracts/TestResultParameterModel.md)[]. 
+- `parameters`: [TestResultParameterModel](../../../TFS/TestManagement/Contracts/TestResultParameterModel.md)[].
 
-* `startedDate`: Date. 
+- `startedDate`: Date.
 
-* `url`: string. 
-
+- `url`: string.

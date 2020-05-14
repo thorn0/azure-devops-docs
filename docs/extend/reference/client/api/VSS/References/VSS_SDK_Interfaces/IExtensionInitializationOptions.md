@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,26 +15,24 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Options for the extension&#x27;s initialization method 
+Options for the extension&#x27;s initialization method
 
 ### Members
 
-* `explicitNotifyLoaded`: boolean. Optional. Set to true if the extension explicitly calls notifyLoadSucceeded or notifyLoadFailed
-itself to indicate that the extension is done loading (stops UI loading indicator in the host).
-If false (the default) the extension is considered ready as soon as it is called.
+- `explicitNotifyLoaded`: boolean. Optional. Set to true if the extension explicitly calls notifyLoadSucceeded or notifyLoadFailed
+  itself to indicate that the extension is done loading (stops UI loading indicator in the host).
+  If false (the default) the extension is considered ready as soon as it is called.
 
-* `usePlatformScripts`: boolean. Optional. Set to true if the extension is going to consume any VSS script libraries.
-For example, controls, REST clients, services, etc.
-This pulls in the script loader and configuration data from the host frame so that
-&#x27;require&#x27; statements can be used to load Azure DevOps Services modules. A call to VSS.require effectively turns this option on, even if not specified in the VSS.init handshake.
+- `usePlatformScripts`: boolean. Optional. Set to true if the extension is going to consume any VSS script libraries.
+  For example, controls, REST clients, services, etc.
+  This pulls in the script loader and configuration data from the host frame so that
+  &#x27;require&#x27; statements can be used to load Azure DevOps Services modules. A call to VSS.require effectively turns this option on, even if not specified in the VSS.init handshake.
 
-* `usePlatformStyles`: boolean. Optional. Set to true if the extension desires to use VSS platform CSS styles. If not explicitly set,
-the default value is the value of &#x27;usePlatformScripts&#x27;.
+- `usePlatformStyles`: boolean. Optional. Set to true if the extension desires to use VSS platform CSS styles. If not explicitly set,
+  the default value is the value of &#x27;usePlatformScripts&#x27;.
 
-* `moduleLoaderConfig`: [ModuleLoaderConfiguration](../../../VSS/References/SDK_Interfaces/ModuleLoaderConfiguration.md). Optional. Extension-specific AMD module loader configuration. This configuration
-is merged with the Azure DevOps Services-specific configuration.
+- `moduleLoaderConfig`: [ModuleLoaderConfiguration](../../../VSS/References/SDK_Interfaces/ModuleLoaderConfiguration.md). Optional. Extension-specific AMD module loader configuration. This configuration
+  is merged with the Azure DevOps Services-specific configuration.
 
-* `extensionReusedCallback`: (contribution: [Contribution](../../../VSS/References/SDK_Interfaces/Contribution.md)): void. Optional. Optional callback method that gets invoked when this extension frame is reused by another contribution
-which shares the same URI of the contribution that originally caused this extension frame to be loaded.
-
+- `extensionReusedCallback`: (contribution: [Contribution](../../../VSS/References/SDK_Interfaces/Contribution.md)): void. Optional. Optional callback method that gets invoked when this extension frame is reused by another contribution
+  which shares the same URI of the contribution that originally caused this extension frame to be loaded.

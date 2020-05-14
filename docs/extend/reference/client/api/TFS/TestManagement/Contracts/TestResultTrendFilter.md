@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `branchNames`: string[]. 
+- `branchNames`: string[].
 
-* `definitionIds`: number[]. 
+- `definitionIds`: number[].
 
-* `sourceWorkflow`: string. 
+- `sourceWorkflow`: string.
 
-* `testRunTitles`: string[]. 
-
+- `testRunTitles`: string[].

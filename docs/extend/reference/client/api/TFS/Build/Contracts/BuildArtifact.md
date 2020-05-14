@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `id`: number. The artifact ID
+- `id`: number. The artifact ID
 
-* `name`: string. The name of the artifact
+- `name`: string. The name of the artifact
 
-* `resource`: [ArtifactResource](./ArtifactResource.md). The actual resource
-
+- `resource`: [ArtifactResource](./ArtifactResource.md). The actual resource

@@ -4,20 +4,20 @@ ms.custom: seodec18
 description: Learn how to automatically build, test, and deploy your code with Azure Pipelines
 ms.topic: overview
 ms.date: 05/31/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # What is Azure Pipelines?
 
-[!INCLUDE [temp](../../includes/version-tfs-2017-through-vsts.md)]  
+[!INCLUDE [temp](../../includes/version-tfs-2017-through-vsts.md)]
 
-Azure Pipelines is a cloud service that you can use to automatically 
-build and test your code project and make it available to other users. 
+Azure Pipelines is a cloud service that you can use to automatically
+build and test your code project and make it available to other users.
 It works with just about any language or project type.
 
-Azure Pipelines combines continuous integration (CI) and continuous 
-delivery (CD) to constantly and consistently test and build your code 
-and ship it to any target. 
+Azure Pipelines combines continuous integration (CI) and continuous
+delivery (CD) to constantly and consistently test and build your code
+and ship it to any target.
 
 ## Does Azure Pipelines work with my language and tools?
 
@@ -45,8 +45,8 @@ To produce packages that can be consumed by others, you can publish NuGet, npm, 
 
 To use Azure Pipelines, you need:
 
-* An organization in Azure DevOps.
-* To have your source code stored in a version control system.
+- An organization in Azure DevOps.
+- To have your source code stored in a version control system.
 
 ### Pricing
 
@@ -56,21 +56,18 @@ Learn more about how the pricing works based on [parallel jobs](../licensing/con
 
 ## Why should I use Azure Pipelines?
 
-Implementing CI and CD pipelines helps to ensure consistent and quality code that's readily available to users. 
+Implementing CI and CD pipelines helps to ensure consistent and quality code that's readily available to users.
 And, Azure Pipelines provides a quick, easy, and safe way to automate building your projects and making them available to users.
 
-Use Azure Pipelines because it supports the following scenarios:  
+Use Azure Pipelines because it supports the following scenarios:
 
-* Works with any language or platform 
-* Deploys to different types of targets at the same time 
-* Integrates with Azure deployments 
-* Builds on Windows, Linux, or Mac machines 
-* Integrates with GitHub 
-* Works with open-source projects.
+- Works with any language or platform
+- Deploys to different types of targets at the same time
+- Integrates with Azure deployments
+- Builds on Windows, Linux, or Mac machines
+- Integrates with GitHub
+- Works with open-source projects.
 
 ## Try this next
 
-> [!div class="nextstepaction"]
-> [Get started with Azure Pipelines guide](pipelines-get-started.md)
-
- 
+> [!div class="nextstepaction"][get started with azure pipelines guide](pipelines-get-started.md)

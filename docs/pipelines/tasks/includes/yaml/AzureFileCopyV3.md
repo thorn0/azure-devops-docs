@@ -12,10 +12,10 @@ ms.technology: devops-cicd
 # Copy files to Azure Blob Storage or virtual machines
 - task: AzureFileCopy@3
   inputs:
-    sourcePath: 
-    azureSubscription: 
+    sourcePath:
+    azureSubscription:
     destination: # Options: azureBlob, azureVMs
-    storage: 
+    storage:
     #containerName: # Required when destination == AzureBlob
     #blobPrefix: # Optional
     #resourceGroup: # Required when destination == AzureVMs

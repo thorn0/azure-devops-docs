@@ -13,10 +13,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `comment`: string. 
+- `comment`: string.
 
-* `policyFailures`: [TfvcPolicyFailureInfo](../../../TFS/VersionControl/Contracts/TfvcPolicyFailureInfo.md)[]. 
-
+- `policyFailures`: [TfvcPolicyFailureInfo](../../../TFS/VersionControl/Contracts/TfvcPolicyFailureInfo.md)[].

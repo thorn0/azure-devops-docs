@@ -1,7 +1,7 @@
 ---
 title: Define the tasks to process a plug-in
 titleSuffix: Azure DevOps & TFS
-description: Define the artifacts to be uploaded or created for a process template plug-in for Team Foundation Server 
+description: Define the artifacts to be uploaded or created for a process template plug-in for Team Foundation Server
 ms.technology: devops-agile
 ms.assetid: af1b9f73-b930-49b6-b6f2-68d691b152aa
 ms.author: kaelli
@@ -14,37 +14,40 @@ ms.date: 09/08/2017
 
 [!INCLUDE [temp](../../includes/customization-phase-0-and-1-plus-version-header.md)]
 
-<a name="top"></a> 
+<a name="top"></a>
 
-You use the **tasks** element and its child elements to define the artifacts to be uploaded or specific elements to be created for a plug-in. A task specifies work that must occur to configure something specific to the process in a new project. A number of the tasks that you define upload the work item types, work item queries, documents, and reports for a project. Other tasks that you can define configure other areas of Visual Studio Application Lifecycle Management, such as Team Foundation Build, Visual Studio Lab Management, Test Manager, and Team Foundation version control.    
- 
-<a name="syntax"></a>  
-##  Tasks Syntax Structure  
- You can specify several tasks within a plug-in, and these tasks may have dependencies on one another. The tasks that you define for each plug-in must conform to the schema definition for **tasks**, defined in the Tasks.xsd file, and be specified in its own file using the **tasks** container element.  
-  
- The following syntax shows the high-level structure of the **tasks** element and its child elements.  
-  
+You use the **tasks** element and its child elements to define the artifacts to be uploaded or specific elements to be created for a plug-in. A task specifies work that must occur to configure something specific to the process in a new project. A number of the tasks that you define upload the work item types, work item queries, documents, and reports for a project. Other tasks that you can define configure other areas of Visual Studio Application Lifecycle Management, such as Team Foundation Build, Visual Studio Lab Management, Test Manager, and Team Foundation version control.
+
+<a name="syntax"></a>
+
+## Tasks Syntax Structure
+
+You can specify several tasks within a plug-in, and these tasks may have dependencies on one another. The tasks that you define for each plug-in must conform to the schema definition for **tasks**, defined in the Tasks.xsd file, and be specified in its own file using the **tasks** container element.
+
+The following syntax shows the high-level structure of the **tasks** element and its child elements.
+
 > [!div class="tabbedCodeSnippets"]
+>
 > ```XML
-> <tasks>  
->       <task>  
->       <dependencies>  
->          <dependency />  
->         . . .          
->       </dependencies />  
->       <taskXml>  
->         . . .          
->       </taskXml>  
->       <task/>  
-> </tasks>   
-> ``` 
+> <tasks>
+>       <task>
+>       <dependencies>
+>          <dependency />
+>         . . .
+>       </dependencies />
+>       <taskXml>
+>         . . .
+>       </taskXml>
+>       <task/>
+> </tasks>
+> ```
 
-<a name="elements"></a> 
-  
-##  Tasks element reference  
- The following table describes each element that can define the tasks for a plug-in.  
-  
-  
+<a name="elements"></a>
+
+## Tasks element reference
+
+The following table describes each element that can define the tasks for a plug-in.
+
 <table>
 <tr><th>Element</th><th>Description and syntax</th></tr>
 <tbody valign="top">
@@ -119,48 +122,52 @@ completionDescription="InProcessMessage"&gt;
 </tr>
 </tbody>
 </table>
-  
 
-<a name="index"></a> 
-##  Index to taskXML Elements by Function  
- For more information about the specifics of the XML markup elements that you can specify for each plug-in, see one of the following topics:  
-  
--   Build: [Define the initial configuration of Team Foundation Build](define-initial-configuration-build.md)   
--   Classifications: [Define initial areas, iterations, and Project mapping file](define-classification-plug-in.md)   
--   Groups and Permissions: [Configure initial groups, teams, members, and permissions](configure-initial-groups-teams-members-permissions.md)    
--   Lab: [Define the initial configuration of Lab Management](define-initial-configuration-lab-management.md)    
--   Portal: [Define the project portal](define-project-portal-plug-in.md)   
--   Reports: [Add reports](add-reports-to-the-process-template.md)    
--   Test Management: [Define the initial configuration of Test Manager](define-initial-configuration-test-manager.md)    
--   Version Control: [Define the initial configuration of Team Foundation version control](define-initial-configuration-version-control.md)    
--   Work Item Tracking: [Define objects for tracking work items](define-objects-track-work-items-plug-in.md)  
- 
-  
-<a name="example"></a> 
-##  Example: Define work item types  
- The following example shows a task that creates six types of work items by referencing the definition files for each type.  
-  
+<a name="index"></a>
+
+## Index to taskXML Elements by Function
+
+For more information about the specifics of the XML markup elements that you can specify for each plug-in, see one of the following topics:
+
+- Build: [Define the initial configuration of Team Foundation Build](define-initial-configuration-build.md)
+- Classifications: [Define initial areas, iterations, and Project mapping file](define-classification-plug-in.md)
+- Groups and Permissions: [Configure initial groups, teams, members, and permissions](configure-initial-groups-teams-members-permissions.md)
+- Lab: [Define the initial configuration of Lab Management](define-initial-configuration-lab-management.md)
+- Portal: [Define the project portal](define-project-portal-plug-in.md)
+- Reports: [Add reports](add-reports-to-the-process-template.md)
+- Test Management: [Define the initial configuration of Test Manager](define-initial-configuration-test-manager.md)
+- Version Control: [Define the initial configuration of Team Foundation version control](define-initial-configuration-version-control.md)
+- Work Item Tracking: [Define objects for tracking work items](define-objects-track-work-items-plug-in.md)
+
+<a name="example"></a>
+
+## Example: Define work item types
+
+The following example shows a task that creates six types of work items by referencing the definition files for each type.
+
 > [!div class="tabbedCodeSnippets"]
+>
 > ```XML
-> <task  
->    id="WITs"  
->    name="WorkItemType definitions"  
->    plugin="Microsoft.ProjectCreationWizard.WorkItemTracking"  
->    completionMessage="WorkItemTypes created"           
->    completionDescription = "Processing work item types used by work item tracking">  
->    <taskXml>  
->    <WORKITEMTYPES>  
->         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Bug.xml" />  
->         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\SharedStep.xml" />  
->         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Task.xml" />  
->         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\TestCase.xml" />  
->         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\UserStory.xml" />  
->         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Issue.xml" />  
->    </WORKITEMTYPES>  
->    </taskXml>  
-> </task>  
-> ``` 
-  
-## Related articles  
--  [Define dependencies for task groups and tasks](define-dependencies-plug-ins-groups-tasks.md)   
--  [Overview of process template files](overview-process-template-files.md)
+> <task
+>    id="WITs"
+>    name="WorkItemType definitions"
+>    plugin="Microsoft.ProjectCreationWizard.WorkItemTracking"
+>    completionMessage="WorkItemTypes created"
+>    completionDescription = "Processing work item types used by work item tracking">
+>    <taskXml>
+>    <WORKITEMTYPES>
+>         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Bug.xml" />
+>         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\SharedStep.xml" />
+>         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Task.xml" />
+>         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\TestCase.xml" />
+>         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\UserStory.xml" />
+>         <WORKITEMTYPE fileName="WorkItem Tracking\TypeDefinitions\Issue.xml" />
+>    </WORKITEMTYPES>
+>    </taskXml>
+> </task>
+> ```
+
+## Related articles
+
+- [Define dependencies for task groups and tasks](define-dependencies-plug-ins-groups-tasks.md)
+- [Overview of process template files](overview-process-template-files.md)

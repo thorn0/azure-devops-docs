@@ -2,13 +2,13 @@
 title: Quick index to work item tasks and key concepts
 titleSuffix: Azure Boards
 description: Index to query operators, macros, and sample queries used to list work items for Azure Boards, Azure DevOps, & Team Foundation Server
-ms.custom: boards-work-items  
+ms.custom: boards-work-items
 ms.technology: devops-agile
 ms.assetid:
 ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 04/10/2019
 ---
 
@@ -17,9 +17,6 @@ ms.date: 04/10/2019
 [!INCLUDE [temp](../includes/version-vsts-tfs-all-versions.md)]
 
 Use this index to quickly access concepts related to work items and information on adding and updating work items&mdash;such as users stories, features, tasks, and bugs.
-
-
-
 
 <a id="concepts" />
 
@@ -82,10 +79,9 @@ Use this index to quickly access concepts related to work items and information 
 </tbody>
 </table>
 
+## Work item user tasks
 
-## Work item  user tasks
-
-Tasks listed below are available to users with Contributor permissions and Basic access.  
+Tasks listed below are available to users with Contributor permissions and Basic access.
 
 ::: moniker range="azure-devops"
 
@@ -186,7 +182,6 @@ Tasks listed below are available to users with Contributor permissions and Basic
 
 ::: moniker-end
 
-
 ::: moniker range="azure-devops-2019"
 
 <table valign="top">
@@ -285,7 +280,6 @@ Tasks listed below are available to users with Contributor permissions and Basic
 
 ::: moniker-end
 
-
 ::: moniker range=">= tfs-2017 <= tfs-2018"
 
 <table valign="top">
@@ -373,8 +367,6 @@ Tasks listed below are available to users with Contributor permissions and Basic
 
 ::: moniker-end
 
-
-
 ::: moniker range="<= tfs-2015"
 
 <table valign="top">
@@ -455,14 +447,13 @@ Tasks listed below are available to users with Contributor permissions and Basic
 
 ::: moniker-end
 
+## Administrative customization tasks
 
-## Administrative customization tasks 
-
-Tasks listed in the following table must be performed by an administrator who has the necessary permissions, as they affect all users and teams within a project. 
+Tasks listed in the following table must be performed by an administrator who has the necessary permissions, as they affect all users and teams within a project.
 
 ::: moniker range="azure-devops"
 
-You customize work item types using the Inheritance process model. 
+You customize work item types using the Inheritance process model.
 
 <table valign="top">
 <tbody valign="top">
@@ -516,7 +507,6 @@ You customize work item types using the Inheritance process model.
 </table>
 
 ::: moniker-end
-
 
 ::: moniker range="azure-devops-2019"
 
@@ -577,9 +567,7 @@ You customize work item types using either the Inheritance process model or On-p
 </tbody>
 </table>
 
-
 ### On-premises XML process model
-
 
 <table valign="top">
 <tbody valign="top">
@@ -618,9 +606,6 @@ You customize work item types using either the Inheritance process model or On-p
 </table>
 
 ::: moniker-end
-
-
-
 
 ::: moniker range="<= tfs-2018"
 
@@ -663,9 +648,6 @@ You customize work item types using the On-premises XML process model. For addit
 </table>
 
 ::: moniker-end
-
-
-
 
 ## Related articles
 

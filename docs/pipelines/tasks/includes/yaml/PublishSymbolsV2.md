@@ -13,7 +13,7 @@ ms.technology: devops-cicd-tasks
 - task: PublishSymbols@2
   inputs:
     #symbolsFolder: '$(Build.SourcesDirectory)' # Optional
-    #searchPattern: '**/bin/**/*.pdb' 
+    #searchPattern: '**/bin/**/*.pdb'
     #indexSources: true # Optional
     #publishSymbols: true # Optional
     #symbolServerType: ' ' # Required when publishSymbols == True# Options:  , teamServices, fileShare

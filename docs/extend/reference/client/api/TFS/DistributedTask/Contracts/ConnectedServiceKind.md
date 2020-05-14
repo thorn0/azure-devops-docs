@@ -16,8 +16,8 @@ Module path: `TFS/DistributedTask/Contracts`
 
 ### Values
 
-* `Custom` Custom or unknown service
-* `AzureSubscription` Azure Subscription
-* `Chef` Chef Connection
-* `Generic` Generic Connection
-* `GitHub` GitHub Connection
+- `Custom` Custom or unknown service
+- `AzureSubscription` Azure Subscription
+- `Chef` Chef Connection
+- `Generic` Generic Connection
+- `GitHub` GitHub Connection

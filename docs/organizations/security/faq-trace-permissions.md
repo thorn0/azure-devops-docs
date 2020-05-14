@@ -7,9 +7,8 @@ ms.topic: conceptual
 ms.author: kaelli
 author: KathrynEE
 ms.date: 04/21/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
-
 
 # Troubleshoot tracing permissions
 
@@ -43,10 +42,10 @@ It can take up to 1 hour for Azure AD group memberships or permissions changes t
 
 Access levels enable administrators to provide their users base access to the features they need, and only pay for those features. Several features can only be accessed with a Basic access level or higher. To assign access levels or check the access level of a user in your account, see the following topics:
 
-* For cloud Azure DevOps: [Manage users and access in Azure DevOps](../accounts/add-organization-users.md) 
-* For on-premises Azure DevOps: [Change access levels](/azure/devops/organizations/security/change-access-levels?view=azure-devops)
+- For cloud Azure DevOps: [Manage users and access in Azure DevOps](../accounts/add-organization-users.md)
+- For on-premises Azure DevOps: [Change access levels](/azure/devops/organizations/security/change-access-levels?view=azure-devops)
 
 ## Related articles
 
-* [Grant or restrict access to select features and functions](/azure/devops/organizations/security/restrict-access?view=azure-devops)
-* [Change individual permissions](/azure/devops/organizations/security/change-individual-permissions?view=azure-devops)
+- [Grant or restrict access to select features and functions](/azure/devops/organizations/security/restrict-access?view=azure-devops)
+- [Change individual permissions](/azure/devops/organizations/security/change-individual-permissions?view=azure-devops)

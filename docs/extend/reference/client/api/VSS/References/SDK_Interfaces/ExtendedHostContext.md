@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,23 +15,20 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-
 ### Members
 
-* `authority`: string. 
+- `authority`: string.
 
-* `hostType`: [ContextHostType](../../../VSS/References/SDK_Interfaces/ContextHostType.md). 
+- `hostType`: [ContextHostType](../../../VSS/References/SDK_Interfaces/ContextHostType.md).
 
-* `id`: string. 
+- `id`: string.
 
-* `isAADAccount`: boolean. 
+- `isAADAccount`: boolean.
 
-* `name`: string. 
+- `name`: string.
 
-* `relativeUri`: string. 
+- `relativeUri`: string.
 
-* `scheme`: string. 
+- `scheme`: string.
 
-* `uri`: string. 
-
+- `uri`: string.

@@ -5,7 +5,7 @@ ms.assetid: 70313C3C-2E52-4FFC-94C2-41F1E37C9D26
 ms.technology: devops-artifacts
 ms.topic: conceptual
 ms.date: 11/30/2017
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Secure and share packages using feed permissions
@@ -18,14 +18,14 @@ Packages you host in Azure Artifacts are stored in a **feed**. Setting permissio
 
 Feeds have four levels of access: Owners, Contributors, Collaborators, and Readers. Owners can add any type of identity-individuals, teams, and groups-to any access level.
 
-| Permission | Reader | Collaborator | Contributor | Owner |
-| ---------- | ------ | ------------ | ----------- | ----- |
-| List and restore/install packages             | &#x2713; | &#x2713; | &#x2713; | &#x2713; |
-| Save packages from upstream sources           |          | &#x2713; | &#x2713; | &#x2713; |
-| Push packages                                 |          |          | &#x2713; | &#x2713; |
-| Unlist/deprecate packages                     |          |          | &#x2713; | &#x2713; |
-| Delete/unpublish package                      |          |          |          | &#x2713; |
-| Edit feed permissions                         |          |          |          | &#x2713; |
+| Permission                          | Reader   | Collaborator | Contributor | Owner    |
+| ----------------------------------- | -------- | ------------ | ----------- | -------- |
+| List and restore/install packages   | &#x2713; | &#x2713;     | &#x2713;    | &#x2713; |
+| Save packages from upstream sources |          | &#x2713;     | &#x2713;    | &#x2713; |
+| Push packages                       |          |              | &#x2713;    | &#x2713; |
+| Unlist/deprecate packages           |          |              | &#x2713;    | &#x2713; |
+| Delete/unpublish package            |          |              |             | &#x2713; |
+| Edit feed permissions               |          |              |             | &#x2713; |
 
 By default, the Project Collection Build Service is a Contributor and your project team is a Reader.
 
@@ -39,8 +39,7 @@ Select **Permissions**.
 
 ::: moniker range=">= azure-devops-2019"
 
-> [!div class="mx-imgBorder"] 
->![Editing a feed's permissions](media/editfeeddialog-azure-devops-newnav.png)
+> [!div class="mx-imgBorder"] > ![Editing a feed's permissions](media/editfeeddialog-azure-devops-newnav.png)
 
 ::: moniker-end
 
@@ -67,7 +66,7 @@ In the edit feed dialog:
 
 To use packages from a feed in Azure Pipelines, the appropriate build identity must have permission to your feed. By default, the **Project Collection Build Service** is a Contributor. If you've changed your builds to run at [project scope](../../pipelines/build/options.md#build-job-authorization-scope), you'll need to add the project-level build identity as a Reader or Contributor, as desired. The project-level build identity is named as follows:
 
-`[Project name] Build Service ([Organization name])` (e.g. FabrikamFiber Build Service (codesharing-demo)) 
+`[Project name] Build Service ([Organization name])` (e.g. FabrikamFiber Build Service (codesharing-demo))
 
 ## Sharing packages with everyone in your organization
 

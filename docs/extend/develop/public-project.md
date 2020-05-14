@@ -5,7 +5,7 @@ description: Guidance for developing Azure DevOps Services extensions that suppo
 ms.technology: devops-ecosystem
 ms.assetid: 3fa22433-150b-428c-8e10-3ffb4d832c20
 ms.topic: conceptual
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ms.author: apawast
 author: apawast
 ms.date: 05/14/2018
@@ -13,17 +13,14 @@ ms.date: 05/14/2018
 
 # Public project support by Azure DevOps Services extensions
 
-Prior to public project support, all Azure DevOps Services projects were private, meaning that only authenticated users with access to the project could see or interact with it. A public project allows non-member users to view the contents of that project in a read-only state. 
-
+Prior to public project support, all Azure DevOps Services projects were private, meaning that only authenticated users with access to the project could see or interact with it. A public project allows non-member users to view the contents of that project in a read-only state.
 
 > A non-member user is either **anonymous** (not authenticated to Azure DevOps Services) or **public** (are authenticated to Azure DevOps Services, but do not belong to the organization).
 
 Non-member users generally see the same views as authenticated users, with non-public functionality such as settings and actions (such as queue build) either hidden or disabled.
 
-
 > [!NOTE]
 > Azure DevOps Services public project support is currently in **Limited Preview**. Contact [vsts-public@microsoft.com](mailto:vsts-public@microsoft.com) if you are interested in developing extensions that support public projects. To learn more about public projects, see [Azure DevOps Services Public Projects Limited Preview](https://blogs.msdn.microsoft.com/devops/2018/04/27/vsts-public-projects-limited-preview/).
-
 
 ## Decide whether to make an extension visible to non-member users
 
@@ -32,18 +29,19 @@ As the extension developer, you can make all or part of your extension available
 Use this checklist to help decide if you should make your extension available to non-member users:
 
 > [!div class="checklist"]
-> * Data presented by your extension is relevant to non-member users
-> * Your extension contributes capabilities at the project level
-> * Your extension contributes to areas of the product that are accessible by non-member users
-> * Your extension doesn't extend or rely on features that are unavailable to non-member users, for example the Data Service or certain Azure DevOps Services REST APIs. See the [Limitations](#limitations) section below for more details.
+>
+> - Data presented by your extension is relevant to non-member users
+> - Your extension contributes capabilities at the project level
+> - Your extension contributes to areas of the product that are accessible by non-member users
+> - Your extension doesn't extend or rely on features that are unavailable to non-member users, for example the Data Service or certain Azure DevOps Services REST APIs. See the [Limitations](#limitations) section below for more details.
 
 ## Contribution visibility
 
 By default, contributions are only visible to organization members. To give non-member users visibility to a contribution, set the `restrictedTo` attribute on that contribution. The value is a string array that lists which types of users should have visibility to the contribution. The possible values are:
 
-* `member` an authenticated user that is a member of the organization
-* `public` an authenticated user that is **not** a member of the organization
-* `anonymous` an un-authenticated user
+- `member` an authenticated user that is a member of the organization
+- `public` an authenticated user that is **not** a member of the organization
+- `anonymous` an un-authenticated user
 
 ### Example: make a hub visible to anonymous, public, and member users
 
@@ -62,7 +60,7 @@ By default, contributions are only visible to organization members. To give non-
                 "anonymous"
             ],
             "properties": {
-                ...            
+                ...
             }
         }
     ]
@@ -101,8 +99,8 @@ You can also set the default visibility for all contributions in your extension 
             "targets": [
                 "ms.vss-code-web.code-hub-group"
             ],
-            "properties": {  
-                ...              
+            "properties": {
+                ...
             }
         },
         {
@@ -111,15 +109,16 @@ You can also set the default visibility for all contributions in your extension 
             "targets": [
                 "ms.vss-work-web.work-hub-group"
             ],
-            "properties": {  
-                ...              
+            "properties": {
+                ...
             }
-        }            
+        }
     ]
 }
 ```
 
 <a name="limitations"></a>
+
 ## Limitations
 
 If you want to make some or all aspects of your contribution available to public users, be aware of the following limitations.
@@ -128,26 +127,29 @@ If you want to make some or all aspects of your contribution available to public
 
 The core SDK script, VSS.SDK.js, allows web extensions to communicate with the parent frame to perform operations like initializing communication and getting context information about the current user. The following VSS SDK methods are not supported for non-member users:
 
-* `VSS.getAccessToken()`
-* `VSS.getAppToken()`
+- `VSS.getAccessToken()`
+- `VSS.getAppToken()`
 
 ### Extension data service
 
-Because data managed by the [extension data service](./data-storage.md) is not scoped or secured to a project, non-member users are prevented from reading or writing any type of extension data. 
+Because data managed by the [extension data service](./data-storage.md) is not scoped or secured to a project, non-member users are prevented from reading or writing any type of extension data.
 
 #### Example: handling data access errors
 
 If the data service can't access the data service due to permission limitations by the calling user, the promise returned from the call to `getValue` is rejected. The error passed to the reject function has a name that can be checked to understand why the call to read or write data failed.
 
 ```javascript
-VSS.getService(VSS.ServiceIds.ExtensionData).then(function(dataService) {
-    dataService.getValue("someKey").then(function(value) {
-         // do something with the value
-    }, function(error) {
-       if (error.name === "AccessCheckException") {
-           alert(error.message);
-       }
-    });
+VSS.getService(VSS.ServiceIds.ExtensionData).then(function (dataService) {
+  dataService.getValue("someKey").then(
+    function (value) {
+      // do something with the value
+    },
+    function (error) {
+      if (error.name === "AccessCheckException") {
+        alert(error.message);
+      }
+    }
+  );
 });
 ```
 
@@ -170,23 +172,32 @@ A good best practice in general is to use permissions to decide whether or not t
 This example shows how to use the Security REST client to check whether the user has permissions to queue builds in the current project. By default, non-member users don't have this permission.
 
 ```javascript
-VSS.require(["VSS/Service", "VSS/organizations/security/RestClient"], function(VSS_Service, Security_RestClient) {
-   var client = VSS_Service.getCollectionClient(Security_RestClient.SecurityHttpClient3);
- 
-   var securityToken = VSS.getWebContext().project.id;
- 
-   client.hasPermissionsBatch({
-    evaluations: [
-       {
-           "securityNamespaceId": "33344D9C-FC72-4d6f-ABA5-FA317101A7E9",
-           "token": securityToken,
-           "permissions": 128 /* queue builds */
-       }
-    ]
-}
-).then(function(response) {
-     console.log("Can user queue builds in this project? " + response.evaluations[0].value);
-  });
+VSS.require(["VSS/Service", "VSS/organizations/security/RestClient"], function (
+  VSS_Service,
+  Security_RestClient
+) {
+  var client = VSS_Service.getCollectionClient(
+    Security_RestClient.SecurityHttpClient3
+  );
+
+  var securityToken = VSS.getWebContext().project.id;
+
+  client
+    .hasPermissionsBatch({
+      evaluations: [
+        {
+          securityNamespaceId: "33344D9C-FC72-4d6f-ABA5-FA317101A7E9",
+          token: securityToken,
+          permissions: 128 /* queue builds */,
+        },
+      ],
+    })
+    .then(function (response) {
+      console.log(
+        "Can user queue builds in this project? " +
+          response.evaluations[0].value
+      );
+    });
 });
 ```
 
@@ -218,7 +229,7 @@ Just like other types of contributions, the visibility of dashboard widget contr
 
 ### Widget settings
 
-In addition to controlling visibility of the widget to non-member users, the dashboard framework provides an optional, open-form storage mechanism for widget settings. Two mechanisms are available for indicate whether a widget's settings are available for use by non-member users in public projects. 
+In addition to controlling visibility of the widget to non-member users, the dashboard framework provides an optional, open-form storage mechanism for widget settings. Two mechanisms are available for indicate whether a widget's settings are available for use by non-member users in public projects.
 
 A widget with configurable settings that is visible to non-member users **must** follow one of the following patterns. Not doing so blocks the widget from surfacing to these users.
 
@@ -243,9 +254,9 @@ Individual widget instances can also indicate that its settings are project-spec
 
 ```json
 {
-    "hasCrossProjectSettings": false,
-    "hypotheticalWidgetOption": true,
-    "backlogLevel": "Stories"
+  "hasCrossProjectSettings": false,
+  "hypotheticalWidgetOption": true,
+  "backlogLevel": "Stories"
 }
 ```
 
@@ -273,6 +284,6 @@ Only project-scoped REST APIs can be invoked by an extension when the current us
 
 There are limitations for non-member users related to work item queries:
 
-* non-member users can only execute know queries (by ID or path)
-* Queries must be scoped to the current project. Any work items not belonging to the current project are excluded.
-* non-member user can't create new queries or execute WIQL queries
+- non-member users can only execute know queries (by ID or path)
+- Queries must be scoped to the current project. Any work items not belonging to the current project are excluded.
+- non-member user can't create new queries or execute WIQL queries

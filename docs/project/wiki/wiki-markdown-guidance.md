@@ -8,7 +8,7 @@ ms.author: chcomley
 author: chcomley
 ms.reviewer: gopinach
 ms.topic: reference
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ms.date: 12/17/2019
 ---
 
@@ -28,8 +28,7 @@ In this article, find some Wiki-specific Markdown syntax guidance for use in Azu
 
 To create a table of contents, add a \[[\_TOC\_]]. The TOC is generated when the tag is added and there's at least one heading on the page.
 
-> [!div class="mx-imgBorder"]
-> ![Table of contents](media/toc_sample.png)
+> [!div class="mx-imgBorder"] > ![Table of contents](media/toc_sample.png)
 
 The \[[\_TOC\_]] can be placed anywhere in the page to render the table of contents.
 Only Markdown headings are considered for TOC (HTML heading tags aren't).
@@ -37,8 +36,7 @@ Only Markdown headings are considered for TOC (HTML heading tags aren't).
 All HTML and Markdown tags are stripped from the headings while adding it inside the TOC block.
 For example: Adding bold and italics to a heading text renders the TOC as follows.
 
-> [!div class="mx-imgBorder"]
-> ![Tags for TOC](media/toc_tags.png)
+> [!div class="mx-imgBorder"] > ![Tags for TOC](media/toc_tags.png)
 
 Consistency is maintained in the formatting in TOC.
 
@@ -53,13 +51,13 @@ Consistency is maintained in the formatting in TOC.
 
 Wiki supports the following Mermaid diagram types:
 
-1.	[Flowcharts](https://mermaid-js.github.io/mermaid/#/flowchart)
-2.	[Sequence diagrams](https://mermaid-js.github.io/mermaid/#/sequenceDiagram)
-3.	[Gantt Charts](https://mermaid-js.github.io/mermaid/#/gantt)
+1. [Flowcharts](https://mermaid-js.github.io/mermaid/#/flowchart)
+2. [Sequence diagrams](https://mermaid-js.github.io/mermaid/#/sequenceDiagram)
+3. [Gantt Charts](https://mermaid-js.github.io/mermaid/#/gantt)
 
 To add Mermaid diagrams to a wiki page, use the following syntax:
 
-``` wiki-mermaid
+```wiki-mermaid
 ::: mermaid
 <mermaid diagram syntax>
 :::
@@ -71,7 +69,7 @@ There's also a toolbar button to add a default Mermaid diagram to a wiki page.
 
 > [!NOTE]
 > Most HTML tags and fontawesome aren't supported in the Mermaid diagram syntax. Mermaid isn't supported in the Internet Explorer browser.
-> Current version of Mermaid used is 8.2.6 
+> Current version of Mermaid used is 8.2.6
 
 ::: moniker-end
 
@@ -83,9 +81,11 @@ To embed videos from YouTube and Microsoft Streams in a wiki page, use the follo
 
 ```markdown
 ::: video
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OtqFyBA6Dbk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 :::
 ```
+
 The iframe is the embed iframe block of the YouTube or Microsoft Streams video.
 
 **Result:**
@@ -105,19 +105,22 @@ Basic example:
 tag: post
 title: Hello world
 ---
+
 ```
 
 ![YAML tag, basic example](media/wiki/yaml_basic_example.png)
 
 Tags with list:
+
 ```yaml
 ---
 tags:
-- post
-- code
-- web
+  - post
+  - code
+  - web
 title: Hello world
 ---
+
 ```
 
 ![YAML tags with list example](media/wiki/yaml_tags_with_list.png)
@@ -164,7 +167,7 @@ Use the batch API `pagesBatch` to see the daily quantity of visits to all pages 
 
 ::: moniker-end
 
-<a id="link-work-items">  </a>
+<a id="link-work-items"> </a>
 
 ## Link to work items from a Wiki page
 
@@ -180,7 +183,6 @@ Enter the pound sign (`#`), and then enter a work item ID.
 > This feature is available with TFS 2018.2 and later versions.
 
 ::: moniker-end
-
 
 <a name="html"></a>
 

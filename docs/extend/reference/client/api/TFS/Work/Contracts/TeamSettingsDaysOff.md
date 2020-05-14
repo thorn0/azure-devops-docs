@@ -17,5 +17,4 @@ Extends: [TeamSettingsDataContractBase](../../../TFS/Work/Contracts/TeamSettings
 
 ### Members
 
-* `daysOff`: [DateRange](../../../TFS/Work/Contracts/DateRange.md)[]. 
-
+- `daysOff`: [DateRange](../../../TFS/Work/Contracts/DateRange.md)[].

@@ -2,9 +2,9 @@
 title: Migrate your packages to Azure Artifacts
 description: Use a PowerShell Module to easily migrate your packages to an Azure Artifacts Feed
 ms.technology: devops-artifacts
-ms.reviewer: elbatk 
+ms.reviewer: elbatk
 ms.date: 07/18/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Migrate your packages to Azure Artifacts
@@ -24,8 +24,8 @@ Using the AzureArtifactsPackageMigration PowerShell module, you can easily migra
 
 ## Install and import the module
 
-1. In Windows, open a PowerShell Window, form Mac or Linux, open a terminal and run the `pwsh` command to start PowerShell. 
- 
+1. In Windows, open a PowerShell Window, form Mac or Linux, open a terminal and run the `pwsh` command to start PowerShell.
+
 2. Run the following commands to install the module and import it into your current session.
 
 ```PowerShell
@@ -37,7 +37,7 @@ Alternatively, you can download it from the [GitHub page](https://github.com/mic
 
 ## Collect URLs to transfer packages
 
-To migrate your packages, you will need the index URL to your source, and destination feeds. 
+To migrate your packages, you will need the index URL to your source, and destination feeds.
 
 ### Get Azure Artifacts Index URL
 
@@ -59,7 +59,7 @@ You can easily copy the destination URL from the **Connect to feed** dialog box.
 
 If your source feed is not public, you will need to create a `SecureString` to use as your password to access it.
 
-1. You can skip this step if your **source feed** is public. 
+1. You can skip this step if your **source feed** is public.
 
 ```PowerShell
 $password = ConvertTo-SecureString -String '<your password here>' -AsPlainText -Force
@@ -76,7 +76,7 @@ $password = ConvertTo-SecureString -String '<your password here>' -AsPlainText -
 # Migrate packages from a public source feed.
   Move-MyGetNuGetPackages -SourceIndexUrl '<your source index url here>' -DestinationIndexUrl '<your destination index url here>' -DestinationPAT '<your destination PAT string here>' -DestinationFeedName '<your destination feed name>' -Verbose
 ```
- 
+
 3. After a successful migration, you should see output with the number of packages copied.
 
 > [!NOTE]

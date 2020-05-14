@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `distributedTaskAgents`: number. 
+- `distributedTaskAgents`: number.
 
-* `totalUsage`: number. 
+- `totalUsage`: number.
 
-* `xamlControllers`: number. 
-
+- `xamlControllers`: number.

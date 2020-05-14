@@ -7,10 +7,10 @@ ms.assetid: 50c06553-9fba-40da-8c04-357497cc1db7
 ms.author: chcomley
 author: chcomley
 ms.date: 11/26/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
-#  Marketplace extensions for Azure DevOps
+# Marketplace extensions for Azure DevOps
 
 [!INCLUDE [version-vsts-tfs-2015-on](../boards/includes/version-vsts-tfs-2015-on.md)]
 
@@ -28,8 +28,9 @@ In the Azure DevOps Marketplace you can do the following tasks:
 
 ![Extensions Marketplace](../organizations/billing/media/shared/extensions-marketplace.png)
 
-Most extensions are available for free. 
+Most extensions are available for free.
 For information on purchasing, see the following articles:
+
 - [Azure DevOps billing overview](../organizations/billing/overview.md)
 - [How to pay for TFS users](../organizations/billing/buy-access-tfs-test-hub.md)
 - [How to buy Visual Studio cloud subscriptions](/visualstudio/subscriptions/vscloud-overview)
@@ -51,9 +52,9 @@ To upload, install, or assign extensions you need [Project Collection Administra
 
 Add an extension to your organization by first searching for and then installing the extension from the [Marketplace > Azure DevOps](https://marketplace.visualstudio.com/azuredevops).
 
-[Search for extension](#search-extension) | [Install extension](install-extension.md#install-extension) 
+[Search for extension](#search-extension) | [Install extension](install-extension.md#install-extension)
 
-<a id="search-extension" /> 
+<a id="search-extension" />
 
 ### Search for an extension
 
@@ -69,9 +70,9 @@ az devops extension search --search-query
 
 #### Example
 
-The following command searches the marketplace for the term **Timetracker** and returns the *Publisher ID* and *Extension ID* in table format.  
+The following command searches the marketplace for the term **Timetracker** and returns the _Publisher ID_ and _Extension ID_ in table format.
 
-```CLI 
+```CLI
 az devops extension search --search-query Timetracker --output table
 
 Publisher Id    Extension Id    Name
@@ -84,25 +85,20 @@ Publisher Id    Extension Id    Name
 
 [!INCLUDE [temp](../includes/note-cli-not-supported.md)]
 
-* * *
+---
 
 ## Get or build extensions
 
-| Product | Articles |
-|-----------------------------|--------------------------------------------------------------------------------------------------|
-| Azure DevOps | [Get extensions for Azure DevOps](install-extension.md) <br/> [Develop extensions for Azure DevOps](https://aka.ms/vsoextensions) |
-| Visual Studio | [Get extensions for Visual Studio](https://marketplace.visualstudio.com/vs) <br/> [Develop extensions for Visual Studio](https://aka.ms/extendvs) |
+| Product            | Articles                                                                                                                                                                               |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Azure DevOps       | [Get extensions for Azure DevOps](install-extension.md) <br/> [Develop extensions for Azure DevOps](https://aka.ms/vsoextensions)                                                      |
+| Visual Studio      | [Get extensions for Visual Studio](https://marketplace.visualstudio.com/vs) <br/> [Develop extensions for Visual Studio](https://aka.ms/extendvs)                                      |
 | Visual Studio Code | [Get extensions for Visual Studio Code](https://marketplace.visualstudio.com/vscode) <br/> [Develop extensions for Visual Studio Code](https://go.microsoft.com/fwlink/?LinkID=703825) |
-
 
 ## Related articles
 
-* [Install extensions](install-extension.md)
-* [Request extensions and approve extension requests](request-extensions.md)
-* [Manage extension permissions](how-to/grant-permissions.md)
-* [Uninstall or disable extensions](uninstall-disable-extensions.md)
-* [Extension FAQs](faq-extensions.md)
-
-
-
-
+- [Install extensions](install-extension.md)
+- [Request extensions and approve extension requests](request-extensions.md)
+- [Manage extension permissions](how-to/grant-permissions.md)
+- [Uninstall or disable extensions](uninstall-disable-extensions.md)
+- [Extension FAQs](faq-extensions.md)

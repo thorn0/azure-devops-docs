@@ -4,7 +4,7 @@ ms.topic: conceptual
 title: Authorization using OAuth 2.0 | Azure DevOps Services REST APIs
 description: Use OAuth 2.0 authentication to get started with the REST APIs for Azure DevOps Services.
 ms.assetid: 19285121-1805-4421-B7C4-63784C9A7CFA
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ms.author: chcomley
 author: chcomley
 ms.date: 04/01/2020
@@ -62,7 +62,7 @@ The settings for each app that you register are available from your profile `htt
 ## Authorize your app
 
 If your user hasn't yet authorized your app to access their organization,
-call the authorization URL. 
+call the authorization URL.
 
 ```no-highlight
 https://app.vssps.visualstudio.com/oauth2/authorize
@@ -73,13 +73,13 @@ https://app.vssps.visualstudio.com/oauth2/authorize
         &redirect_uri={callback URL}
 ```
 
-Parameter     | Type   | Notes
---------------|--------|----------------------------
-client_id     | GUID   | The ID assigned to your app when it was registered
-response_type | string | `Assertion`
-state         | string | Can be any value. Typically a generated string value that correlates the callback with its associated authorization request.
-scope         | string | Scopes registered with the app. Space separated. See [available scopes](#scopes).
-redirect_uri  | URL    | Callback URL for your app. **Must exactly match the URL registered with the app**.
+| Parameter     | Type   | Notes                                                                                                                        |
+| ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| client_id     | GUID   | The ID assigned to your app when it was registered                                                                           |
+| response_type | string | `Assertion`                                                                                                                  |
+| state         | string | Can be any value. Typically a generated string value that correlates the callback with its associated authorization request. |
+| scope         | string | Scopes registered with the app. Space separated. See [available scopes](#scopes).                                            |
+| redirect_uri  | URL    | Callback URL for your app. **Must exactly match the URL registered with the app**.                                           |
 
 Azure DevOps Services asks your user to authorize your app.
 It handles authentication, and then calls you back with an authorization code, if the user approves the authorization.
@@ -94,6 +94,7 @@ https://app.vssps.visualstudio.com/oauth2/authorize
         &scope=vso.work%20vso.code_write
         &redirect_uri=https://fabrikam.azurewebsites.net/myapp/oauth-callback
 ```
+
 <br>
 Azure DevOps Services asks the user to authorize your app.
 
@@ -110,16 +111,17 @@ https://fabrikam.azurewebsites.net/myapp/oauth-callback
 Now you use the authorization code to request an access token (and refresh token) for the user. Your service must make a service-to-service HTTP request to Azure DevOps Services.
 
 ### URL
+
 ```no-highlight
 POST https://app.vssps.visualstudio.com/oauth2/token
 ```
 
 ### HTTP request headers
 
-|  Header           | Value 
-|-------------------|------------------------------------------------------------------
-| Content-Type      | `application/x-www-form-urlencoded`
-| Content-Length    | Calculated string length of the request body (see below)
+| Header         | Value                                                    |
+| -------------- | -------------------------------------------------------- |
+| Content-Type   | `application/x-www-form-urlencoded`                      |
+| Content-Length | Calculated string length of the request body (see below) |
 
 ```no-highlight
 Content-Type: application/x-www-form-urlencoded
@@ -127,15 +129,17 @@ Content-Length: 1322
 ```
 
 ### HTTP request body
+
 ```no-highlight
 client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer&client_assertion={0}&grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion={1}&redirect_uri={2}
 ```
+
 <br>
 Replace the placeholder values in the sample request body above:
 
-* **{0}**: URL encoded client secret acquired when the app was registered
-* **{1}**: URL encoded "code" provided via the `code` query parameter to your callback URL
-* **{2}**: callback URL registered with the app
+- **{0}**: URL encoded client secret acquired when the app was registered
+- **{1}**: URL encoded "code" provided via the `code` query parameter to your callback URL
+- **{2}**: callback URL registered with the app
 
 #### C# example to form the request body
 
@@ -151,6 +155,7 @@ public string GenerateRequestPostData(string appSecret, string authCode, string 
 ```
 
 ### Response
+
 ```json
 {
     "access_token": { access token for the user },
@@ -183,16 +188,17 @@ Authorization: Bearer {access_token}
 If a user's access token expires, you can use the refresh token that they acquired in the authorization flow to get a new access token. It's like the original process for exchanging the authorization code for an access and refresh token.
 
 ### URL
+
 ```no-highlight
 POST https://app.vssps.visualstudio.com/oauth2/token
 ```
 
 ### HTTP request headers
 
-|  Header           | Value 
-|-------------------|------------------------------------------------------------------
-| Content-Type      | `application/x-www-form-urlencoded`
-| Content-Length    | Calculated string length of the request body (see below)
+| Header         | Value                                                    |
+| -------------- | -------------------------------------------------------- |
+| Content-Type   | `application/x-www-form-urlencoded`                      |
+| Content-Length | Calculated string length of the request body (see below) |
 
 ```no-highlight
 Content-Type: application/x-www-form-urlencoded
@@ -200,18 +206,20 @@ Content-Length: 1654
 ```
 
 ### HTTP request body
+
 ```no-highlight
 client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer&client_assertion={0}&grant_type=refresh_token&assertion={1}&redirect_uri={2}
 ```
+
 <br>
 Replace the placeholder values in the sample request body above:
 
-* **{0}**: URL encoded client secret acquired when the app was registered
-* **{1}**: URL encoded refresh token for the user
-* **{2}**: callback URL registered with the app
-
+- **{0}**: URL encoded client secret acquired when the app was registered
+- **{1}**: URL encoded refresh token for the user
+- **{2}**: callback URL registered with the app
 
 ### Response
+
 ```json
 {
     "access_token": { access token for this user },
@@ -220,6 +228,7 @@ Replace the placeholder values in the sample request body above:
     "refresh_token": { new refresh token to use when the token has timed out }
 }
 ```
+
 > [!IMPORTANT]
 > A new refresh token gets issued for the user. Persist this new token and use it the next time you need to acquire a new access token for the user.
 
@@ -228,7 +237,7 @@ Replace the placeholder values in the sample request body above:
 ## Scopes
 
 > [!IMPORTANT]
-> Scopes only enable access to REST APIs and select Git endpoints. SOAP API access isn't supported.  
+> Scopes only enable access to REST APIs and select Git endpoints. SOAP API access isn't supported.
 
 [!INCLUDE [scopes table](../../includes/scopes.md)]
 
@@ -258,7 +267,7 @@ A: Make sure that you handle the following conditions:
 
 ### Q: I want to debug my web app locally. Can I use localhost for the callback URL when I register my app?
 
-A: Azure DevOps Services doesn't allow localhost to be the hostname in your callback URL. You can edit the host file on your local computer to map a hostname to 127.0.0.1. Then, use this hostname when you register your app. Or, you can deploy your app when testing to a Microsoft Azure website,  to debug and use HTTPS for the callback URL.
+A: Azure DevOps Services doesn't allow localhost to be the hostname in your callback URL. You can edit the host file on your local computer to map a hostname to 127.0.0.1. Then, use this hostname when you register your app. Or, you can deploy your app when testing to a Microsoft Azure website, to debug and use HTTPS for the callback URL.
 
 ### Q: I get an HTTP 400 error when I try to get an access token. What might be wrong?
 
@@ -268,11 +277,9 @@ A: Check that you set the content type to application/x-www-form-urlencoded in y
 
 A: No. OAuth is only supported in the REST APIs at this point.
 
-<!-- ENDSECTION --> 
+<!-- ENDSECTION -->
 
 ## Related articles
 
 - [Choosing the right authentication method](authentication-guidance.md)
 - [Default permissions and access for Azure DevOps](../../../organizations/security/permissions-access.md)
-
-

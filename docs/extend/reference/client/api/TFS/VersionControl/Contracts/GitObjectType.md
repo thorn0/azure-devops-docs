@@ -15,11 +15,11 @@ Module path: `TFS/VersionControl/Contracts`
 
 ### Values
 
-* `Bad` 
-* `Commit` 
-* `Tree` 
-* `Blob` 
-* `Tag` 
-* `Ext2` 
-* `OfsDelta` 
-* `RefDelta` 
+- `Bad`
+- `Commit`
+- `Tree`
+- `Blob`
+- `Tag`
+- `Ext2`
+- `OfsDelta`
+- `RefDelta`

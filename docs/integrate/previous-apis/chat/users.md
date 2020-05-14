@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Team Room Users | REST API Reference for Team Foundation Server
 description: Work with users in team rooms programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 6452FEDA-E518-4983-B37B-C50BB17E0047
@@ -24,11 +24,13 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/_apis/chat/rooms/{roomId}/users?api-version={version}
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string | TFS server name ({server:port}).
-| roomId      | int    | ID of the team room.
+| instance | string | TFS server name ({server:port}).
+| roomId | int | ID of the team room.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -120,18 +122,20 @@ GET https://mytfsserver/DefaultCollection/_apis/chat/rooms/305/users?api-version
 }
 ```
 
-
 ## Get a user
+
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/chat/rooms/{roomId}/users/{userId}?api-version={version}
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string | TFS server name ({server:port}).
-| roomId      | int    | ID of the team room.
-| userId      | int    | ID of the user.
+| instance | string | TFS server name ({server:port}).
+| roomId | int | ID of the team room.
+| userId | int | ID of the user.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -157,29 +161,33 @@ GET https://mytfsserver/DefaultCollection/_apis/chat/rooms/305/users/d6245f20-2a
   "isOnline": true
 }
 ```
-   
 
 ## Join a room
+
 <a name="joinaroom" />
 
 ```no-highlight
 PUT https://{instance}/DefaultCollection/_apis/chat/rooms/{roomId}/users/{userId}?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
-	userId: {int}
+  "userId": { int }
 }
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string | TFS server name ({server:port}).
-| roomId      | int    | ID of the team room.
-| userId      | int    | ID of the user.
+| instance | string | TFS server name ({server:port}).
+| roomId | int | ID of the team room.
+| userId | int | ID of the user.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -188,12 +196,12 @@ Content-Type: application/json
 ```
 PUT https://mytfsserver/DefaultCollection/_apis/chat/rooms/305/users/d6245f20-2af8-44f4-9451-8107cb2767db?api-version=1.0
 ```
+
 ```json
 {
   "userId": "d6245f20-2af8-44f4-9451-8107cb2767db"
 }
 ```
-
 
 ## Leave a room
 
@@ -201,12 +209,14 @@ PUT https://mytfsserver/DefaultCollection/_apis/chat/rooms/305/users/d6245f20-2a
 DELETE https://{instance}/DefaultCollection/_apis/chat/rooms/{roomId}/users/{userId}?api-version={version}
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string | TFS server name ({server:port}).
-| roomId      | int    | ID of the team room.
-| userId      | int    | ID of the user.
+| instance | string | TFS server name ({server:port}).
+| roomId | int | ID of the team room.
+| userId | int | ID of the user.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -215,4 +225,3 @@ DELETE https://{instance}/DefaultCollection/_apis/chat/rooms/{roomId}/users/{use
 ```
 DELETE https://mytfsserver/DefaultCollection/_apis/chat/rooms/305/users/d6245f20-2af8-44f4-9451-8107cb2767db?api-version=1.0
 ```
-

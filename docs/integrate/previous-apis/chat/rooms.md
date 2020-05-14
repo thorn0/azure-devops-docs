@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Team Rooms | REST API Reference for Team Foundation Server
 description: Work with team rooms programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 6E6370DD-6E61-4F56-BCAD-8A66CC45965A
@@ -24,10 +24,12 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/_apis/chat/rooms?api-version={version}
 ```
 
-| Parameter | Type    | Notes
-|:----------|:--------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string  | TFS server name ({server:port}).
+| instance | string | TFS server name ({server:port}).
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -107,18 +109,19 @@ GET https://mytfsserver/DefaultCollection/_apis/chat/rooms?api-version=1.0
 }
 ```
 
-
 ## Get a room
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/chat/rooms/{roomId}?api-version={version}
 ```
 
-| Parameter | Type    | Notes
-|:----------|:--------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string  | TFS server name ({server:port}).
-| roomId    | int    | ID of the room to update.
+| instance | string | TFS server name ({server:port}).
+| roomId | int | ID of the room to update.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -148,8 +151,8 @@ GET https://mytfsserver/DefaultCollection/_apis/chat/rooms/12797?api-version=1.0
 }
 ```
 
-
 ## Create a room
+
 <a name="createaroom" />
 <code>no-highlight
 POST https://{instance}/DefaultCollection/_apis/chat/rooms?api-version={version}</code>
@@ -161,14 +164,16 @@ Content-Type: application/json</code>
   description: {description}
 }</code>
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string | TFS server name ({server:port}).
+| instance | string | TFS server name ({server:port}).
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| Name        | string | Name of the new room.
+| Name | string | Name of the new room.
 | Description | string | Description of the new room.
 
 #### Sample request
@@ -176,6 +181,7 @@ Content-Type: application/json</code>
 ```
 POST https://mytfsserver/DefaultCollection/_apis/chat/rooms?api-version=1.0
 ```
+
 ```json
 {
   "name": "newCreatedRoom",
@@ -203,15 +209,16 @@ POST https://mytfsserver/DefaultCollection/_apis/chat/rooms?api-version=1.0
 }
 ```
 
-
 ## Update room
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/_apis/chat/rooms/{roomId}?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
   [name: {name},]
@@ -219,15 +226,17 @@ Content-Type: application/json
 }
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string | TFS server name ({server:port}).
-| roomId      | int    | ID of the room to update.
+| instance | string | TFS server name ({server:port}).
+| roomId | int | ID of the room to update.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| Name        | string | New name of the room.
+| Name | string | New name of the room.
 | Description | string | Updated description of the room.
 
 #### Sample request
@@ -235,6 +244,7 @@ Content-Type: application/json
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/chat/rooms/12797?api-version=1.0
 ```
+
 ```json
 {
   "name": "renamedRoom",
@@ -262,25 +272,24 @@ PATCH https://mytfsserver/DefaultCollection/_apis/chat/rooms/12797?api-version=1
 }
 ```
 
-
 ## Delete room
 
 ```no-highlight
 DELETE https://{instance}/DefaultCollection/_apis/chat/rooms/{roomId}?api-version={version}
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string | TFS server name ({server:port}).
-| roomId      | int    | ID of the room to update.
+| instance | string | TFS server name ({server:port}).
+| roomId | int | ID of the room to update.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-
 
 #### Sample request
 
 ```
 DELETE https://mytfsserver/DefaultCollection/_apis/chat/rooms/12797?api-version=1.0
 ```
-

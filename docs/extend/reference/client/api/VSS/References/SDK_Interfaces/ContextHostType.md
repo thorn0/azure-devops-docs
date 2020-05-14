@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -17,11 +17,10 @@ Defined in vss.d.ts
 
 ### Values
 
-* `Unknown` 
+- `Unknown`
 
-* `Deployment` The Deployment Host
+- `Deployment` The Deployment Host
 
-* `Application` The Application Host
+- `Application` The Application Host
 
-* `ProjectCollection` The Project Collection
-
+- `ProjectCollection` The Project Collection

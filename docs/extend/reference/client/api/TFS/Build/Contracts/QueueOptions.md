@@ -16,5 +16,5 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `None` No queue options
-* `DoNotRun` Create a plan ID for the build, do not run it
+- `None` No queue options
+- `DoNotRun` Create a plan ID for the build, do not run it

@@ -1,18 +1,18 @@
 ---
-title: Upstream sources 
+title: Upstream sources
 description: Upstream sources manage packages from public sources in an Azure DevOps Services or Team Foundation Server feed
 ms.assetid: 7cb70122-7c5b-46c1-b07e-1382cfc7d62b
 ms.technology: devops-artifacts
 ms.topic: conceptual
 ms.date: 2/1/2018
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Upstream sources
 
 **Azure DevOps Services** | **TFS 2018** | **TFS 2017**
 
-Check the ([availability note](../overview.md#versions-compatibility)) to ensure compatibility. 
+Check the ([availability note](../overview.md#versions-compatibility)) to ensure compatibility.
 
 Upstream sources enable you to use a single feed to store both the packages you produce and the packages you consume from "remote feeds": both public feeds (e.g. npmjs.com, nuget.org, Maven Central, and PyPI) and authenticated feeds (i.e. other Azure DevOps Services feeds in your organization or in organizations in your Azure Active Directory (AAD) tenant). Once you've enabled an upstream source, any user connected to your feed can install a package from the remote feed, and your feed will save a copy.
 
@@ -77,7 +77,7 @@ In rare cases, some organizations choose to modify OSS packages to fix security 
 
 ### Use the suggested default view
 
-Upstream sources to Azure DevOps Services feeds require you to select a *view* of the remote feed when you add it as an upstream source. This prevents your upstream sources from creating a cycle, and it requires and encourages your upstream feed to provide you with a [complete package graph](package-graph.md). In general, the feed owner should [select the correct default view](#local), as the view communicates which packages and versions the producer wants consumers to use.
+Upstream sources to Azure DevOps Services feeds require you to select a _view_ of the remote feed when you add it as an upstream source. This prevents your upstream sources from creating a cycle, and it requires and encourages your upstream feed to provide you with a [complete package graph](package-graph.md). In general, the feed owner should [select the correct default view](#local), as the view communicates which packages and versions the producer wants consumers to use.
 
 ## Best practices: feed owners/package producers
 
@@ -87,7 +87,7 @@ To make your feed easily usable as an upstream source to other feeds, consider a
 
 ### When in doubt, `@local` is your default view
 
-If you don't use [views](views.md), the `@local` view should be your default view (and is the default view on all newly-created feeds). @local contains all packages uploaded/pushed/published to the feed from a package client (e.g. nuget.exe) *and* all packages saved from any upstream source. @local, like [all views](views.md), does **not** include packages that are available in the feed's upstream sources but have never been saved into the feed.
+If you don't use [views](views.md), the `@local` view should be your default view (and is the default view on all newly-created feeds). @local contains all packages uploaded/pushed/published to the feed from a package client (e.g. nuget.exe) _and_ all packages saved from any upstream source. @local, like [all views](views.md), does **not** include packages that are available in the feed's upstream sources but have never been saved into the feed.
 
 If you do use views to communicate release quality, you can set the default view to whichever view contains the packages you want to make available to your consumers.
 

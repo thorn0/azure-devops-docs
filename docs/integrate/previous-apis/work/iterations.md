@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Iterations | REST API Reference for Team Foundation Server
 description: Work with team iterations programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 8a5b43ab-7d3c-4342-b738-65c310a556cc
@@ -19,22 +19,24 @@ ms.date: 08/04/2016
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get a team's iterations
+
 <a id="GetTeamIteraions"></a>
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/{team}/_apis/work/TeamSettings/Iterations?[$timeframe=current&]api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:-----------------------------------------------------
-| URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team. 
-| Query
-| api-version| string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| $timeframe | enum { current } | A filter for which iterations are returned based on relative time.  
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
 
+
+| URL
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
+| Query
+| api-version| string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| \$timeframe | enum { current } | A filter for which iterations are returned based on relative time.
 
 #### Sample request
 
@@ -96,7 +98,6 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsettings
 }
 ```
 
-
 ### By timeframe
 
 #### Sample request
@@ -123,23 +124,25 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsettings
 }
 ```
 
-
 ## Get team settings for an iteration
+
 <a id="GetTeamIteration"></a>
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/{team}/_apis/work/TeamSettings/Iterations/{iterationId}?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:-----------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team. 
-| iterationId  | string   | ID of the iteration.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
+| iterationId | string | ID of the iteration.
 | Query
-| api-version| string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version| string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -188,28 +191,31 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsettings
 }
 ```
 
-
 ## Add an iteration to the team
+
 <a id="AddTeamIteration"></a>
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/{team}/_apis/work/TeamSettings/Iterations?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:-----------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team. 
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
 | Query
-| api-version| string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version| string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsettings/iterations?api-version=v2.0-preview
 ```
+
 ```json
 "{\"id\":\"a589a806-bf11-4d4f-a031-c19813331553\"}"
 ```
@@ -255,30 +261,31 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsetting
 }
 ```
 
-
 ## Remove an iteration from the team
+
 <a id="RemoveTeamIteration"></a>
 
 ```no-highlight
 DELETE https://{instance}/DefaultCollection/{project}/{team}/_apis/work/TeamSettings/Iterations/{iterationId}?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:-----------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team. 
-| iterationId  | string   | ID of the iteration.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
+| iterationId | string | ID of the iteration.
 | Query
-| api-version| string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version| string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 DELETE https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsettings/iterations/a589a806-bf11-4d4f-a031-c19813331553?api-version=v2.0-preview
 ```
-
 
 ## Update an iteration
 

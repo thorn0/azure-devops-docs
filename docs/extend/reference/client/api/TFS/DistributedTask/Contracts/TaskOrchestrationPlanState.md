@@ -16,6 +16,6 @@ Module path: `TFS/DistributedTask/Contracts`
 
 ### Values
 
-* `InProgress` 
-* `Queued` 
-* `Completed` 
+- `InProgress`
+- `Queued`
+- `Completed`

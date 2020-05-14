@@ -22,30 +22,29 @@ To trigger a pipeline upon the completion of another, specify the triggering pip
 > [!NOTE]
 > Previously, you may have navigated to the classic editor for your YAML pipeline and configured **build completion triggers** in the UI. While that model still works, it is no longer recommended. The recommended approach is to specify **pipeline triggers** directly within the YAML file. Build completion triggers as defined in the classic editor have various drawbacks, which have now been addressed in pipeline triggers. For instance, there is no way to trigger a pipeline on the same branch as that of the triggering pipeline using build completion triggers.
 
-
 ```yaml
 # this is being defined in app-ci pipeline
 resources:
   pipelines:
-  - pipeline: securitylib   # Name of the pipeline resource
-    source: security-lib-ci # Name of the triggering pipeline
-    trigger: 
-      branches:
-      - releases/*
-      - master
+    - pipeline: securitylib # Name of the pipeline resource
+      source: security-lib-ci # Name of the triggering pipeline
+      trigger:
+        branches:
+          - releases/*
+          - master
 ```
 
-In this example, `pipeline: securitylib` specifies the name of the pipeline resource (used when referring to the pipeline resource from other parts of the pipeline, such as pipeline resource variables), 
-and `source: security-lib-ci` specifies the name of the triggering pipeline. You can retrieve a pipeline's name from the Azure DevOps portal in several places, such as the [Pipelines landing page](../get-started/multi-stage-pipelines-experience.md#pipelines-landing-page). To configure the pipeline name 
+In this example, `pipeline: securitylib` specifies the name of the pipeline resource (used when referring to the pipeline resource from other parts of the pipeline, such as pipeline resource variables),
+and `source: security-lib-ci` specifies the name of the triggering pipeline. You can retrieve a pipeline's name from the Azure DevOps portal in several places, such as the [Pipelines landing page](../get-started/multi-stage-pipelines-experience.md#pipelines-landing-page). To configure the pipeline name
 setting, edit the YAML pipeline, choose **Triggers** from the settings menu, and navigate to the **YAML** pane.
 
 ![Pipeline settings](../repos/media/pipelines-options-for-git/yaml-pipeline-git-options-menu.png)
 
-> [!NOTE] 
+> [!NOTE]
 > If the triggering pipeline is in another Azure DevOps project, you must specify the
 > project name using `project: OtherProjectName`. If the triggering pipeline is in another
-> Azure DevOps organization, you must also create a 
-> [service connection](../library/service-endpoints.md) to that project and reference it 
+> Azure DevOps organization, you must also create a
+> [service connection](../library/service-endpoints.md) to that project and reference it
 > in your pipeline resource. For more information, see [pipeline resource](resources.md#resources-pipelines).
 
 In the above example, we have two pipelines - `app-ci` and `security-lib-ci`. We want the `app-ci` pipeline to run automatically every time a new version of the security library is built in master or a release branch.
@@ -55,14 +54,14 @@ Similar to CI triggers, you can specify the branches to include or exclude:
 ```yaml
 resources:
   pipelines:
-  - pipeline: securitylib
-    source: security-lib-ci
-    trigger: 
-      branches:
-        include: 
-        - releases/*
-        exclude:
-        - releases/old*
+    - pipeline: securitylib
+      source: security-lib-ci
+      trigger:
+        branches:
+          include:
+            - releases/*
+          exclude:
+            - releases/old*
 ```
 
 If the triggering pipeline and the triggered pipeline use the same repository, then both the pipelines will run using the same commit when one triggers the other. This is helpful if your first pipeline builds the code, and the second pipeline tests it. However, if the two pipelines use different repositories, then the triggered pipeline will use the latest version of the code from its default branch.

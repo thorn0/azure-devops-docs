@@ -8,7 +8,7 @@ ms.custom: seodec18
 ms.author: puagarw
 author: pulkitaggarwl
 ms.date: 9/11/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Deploy an Azure Function
@@ -49,14 +49,14 @@ However, if you are a new user, then you might get a better start by using our s
     https://github.com/microsoft/devops-project-samples/tree/master/node/plain/functionApp
 ```
 
-* * *
+---
 
 ## Build your app
 
 #### [YAML](#tab/yaml)
 
 ::: moniker range="azure-devops"
- 
+
 Follow the guidance in [Create your first pipeline](../create-first-pipeline.md) to setup the build pipeline. When you're done, you'll have a YAML pipeline to build, test, and publish the source as an artifact.
 
 ::: moniker-end
@@ -78,12 +78,12 @@ YAML pipelines aren't available on TFS.
 
 ::: moniker range="< azure-devops"
 
-> [!TIP] 
+> [!TIP]
 > If you're new to Azure DevOps Server or TFS, then see [Create your first pipeline](../create-first-pipeline.md) before you start.
 
 ::: moniker-end
 
-To get started: 
+To get started:
 
 1. Fork this repo in GitHub, or import it into Azure Repos:
 
@@ -96,11 +96,11 @@ To get started:
 3. Save the pipeline and queue a build to see it in action.
 
 4. Create a release pipeline and select the **Deploy a function app to Azure Functions** template for your stage.
-   This automatically adds the necessary tasks. 
+   This automatically adds the necessary tasks.
 
 5. Link the build pipeline as an artifact for this release pipeline. Save the release pipeline and create a release to see it in action.
 
-* * *
+---
 
 Now you're ready to read through the rest of this topic to learn some of the more common configurations to customize the deployment of an Azure Function App.
 
@@ -118,7 +118,7 @@ input. The Azure service connection stores the credentials to connect from Azure
 You must supply an Azure service connection to the AzureFunctionApp task. Add the following YAML snippet to your existing **azure-pipelines.yaml** file. Make sure you add the service connection details in the variables section as shown below.
 
 ```yaml
-variables: 
+variables:
   ## Add this under variables section in the pipeline
   azureSubscription: <Name of the Azure subscription>
   appName: <Name of the Function App>
@@ -157,7 +157,7 @@ Otherwise, to learn how to create an Azure service connection, see [Create an Az
 
 ::: moniker-end
 
-* * *
+---
 
 ## Deploy with Azure Function App
 
@@ -202,13 +202,13 @@ YAML pipelines aren't available on TFS.
 
 The simplest way to deploy to an Azure Function is to use the **Azure Function App Deploy** task.
 This task is automatically added to the release pipeline when you select **Deploy a function app to Azure Functions** template for Azure Function App deployment.
-Templates exist for apps developed in various programming languages. 
+Templates exist for apps developed in various programming languages.
 
 When you link the artifact in your release pipeline to a build that compiles and publishes the web package,
 it's automatically downloaded and placed into the `$(System.ArtifactsDirectory)` folder on the agent as part of the release.
 This is where the task picks up the web package for deployment.
 
-* * *
+---
 
 ## Deploy to a slot
 
@@ -253,4 +253,4 @@ YAML pipelines aren't available on TFS.
 You can configure the Azure Function App to have multiple slots. Slots allow you to safely deploy your app and test it before making it available to your customers.
 Use the option **Deploy to Slot** in the **Azure Function App Deploy** task to specify the slot to deploy to. You can swap the slots by using the **Azure App Service Manage** task.
 
-* * *
+---

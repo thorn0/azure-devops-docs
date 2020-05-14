@@ -15,8 +15,8 @@ Module path: `TFS/WorkItemTracking/Contracts`
 
 ### Values
 
-* `None` 
-* `WorkItem` 
-* `WorkItemLink` 
-* `Tree` 
-* `WorkItemTypeExtension` 
+- `None`
+- `WorkItem`
+- `WorkItemLink`
+- `Tree`
+- `WorkItemTypeExtension`

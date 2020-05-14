@@ -1,5 +1,5 @@
 ---
-title: Query Work Items task 
+title: Query Work Items task
 description: Ensure the number of matching items returned by a work item query is within the configured threshold
 ms.assetid: F24517BD-FEA2-4EFF-8030-EF441B9C7F67
 ms.topic: reference
@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Query Work Items task
@@ -38,12 +38,12 @@ None
 
 ## Arguments
 
-| Parameter | Comments |
-| --- | --- |
-| **Query** | Required. Select a work item query within the current project. Can be a built-in or custom query. |
-| **Upper threshold** | Required. Maximum number of matching workitems for the query. Default value = 0 |
-| **Lower threshold** | Required. Minimum number of matching workitems for the query. Default value = 0 |
-| **Control options** | See [Control options](../../process/tasks.md#controloptions) |
+| Parameter           | Comments                                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------------- |
+| **Query**           | Required. Select a work item query within the current project. Can be a built-in or custom query. |
+| **Upper threshold** | Required. Maximum number of matching workitems for the query. Default value = 0                   |
+| **Lower threshold** | Required. Minimum number of matching workitems for the query. Default value = 0                   |
+| **Control options** | See [Control options](../../process/tasks.md#controloptions)                                      |
 
 Succeeds if _minimum-threshold_ **&lt;=** _#-matching-workitems_ **&lt;=** _maximum-threshold_
 

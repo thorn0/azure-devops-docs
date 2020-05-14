@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 05/06/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Change application connection policies for your organization
@@ -20,15 +20,15 @@ monikerRange: 'azure-devops'
 
 In this article, learn how to manage the policies that determine which applications can integrate with services and resources in your organization. To access your organization without asking for user credentials multiple times, applications use the following authentication methods.
 
-* [OAuth](../../integrate/get-started/authentication/oauth.md) to generate tokens for accessing [REST APIs for Azure DevOps](../../integrate/get-started/rest/basics.md). The [Organizations](/rest/api/azure/devops/account) and [Profiles](/rest/api/azure/devops/profile/) APIs support only OAuth.
+- [OAuth](../../integrate/get-started/authentication/oauth.md) to generate tokens for accessing [REST APIs for Azure DevOps](../../integrate/get-started/rest/basics.md). The [Organizations](/rest/api/azure/devops/account) and [Profiles](/rest/api/azure/devops/profile/) APIs support only OAuth.
 
-* [SSH authentication](../../repos/git/use-ssh-keys-to-authenticate.md) to generate encryption keys for using Linux, macOS, and Windows running [Git for Windows](https://www.git-scm.com/download/win), but you can't use [Git credential managers](../../repos/git/set-up-credential-managers.md) or [personal access tokens](use-personal-access-tokens-to-authenticate.md) for HTTPS authentication.
- 
-* [Personal access tokens](use-personal-access-tokens-to-authenticate.md) to generate tokens for:
+- [SSH authentication](../../repos/git/use-ssh-keys-to-authenticate.md) to generate encryption keys for using Linux, macOS, and Windows running [Git for Windows](https://www.git-scm.com/download/win), but you can't use [Git credential managers](../../repos/git/set-up-credential-managers.md) or [personal access tokens](use-personal-access-tokens-to-authenticate.md) for HTTPS authentication.
 
-   * Accessing specific resources or activities, like builds or work items
-   * Clients like Xcode and NuGet that require usernames and passwords as basic credentials and don't support Microsoft account and Azure Active Directory features like multi-factor authentication
-   * Accessing [REST APIs for Azure DevOps](../../integrate/get-started/rest/basics.md)
+- [Personal access tokens](use-personal-access-tokens-to-authenticate.md) to generate tokens for:
+
+  - Accessing specific resources or activities, like builds or work items
+  - Clients like Xcode and NuGet that require usernames and passwords as basic credentials and don't support Microsoft account and Azure Active Directory features like multi-factor authentication
+  - Accessing [REST APIs for Azure DevOps](../../integrate/get-started/rest/basics.md)
 
 By default, your organization allows access for all authentication methods.
 You can limit access, but you must specifically restrict access for each method.
@@ -43,7 +43,6 @@ To change an application connection policy, you need at least Basic access and o
 [How do I find the organization Owner?](../security/lookup-organization-owner-admin.md)
 
 [!INCLUDE [manage-policies](../../includes/manage-policies.md)]
-
 
 ## Related articles
 

@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: pbora
 author: pboraMSFT
 ms.date: 12/07/2018
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Cloud-based Apache JMeter Load Test task
@@ -22,7 +22,7 @@ Use this task to run Apache JMeter load tests in the cloud.
 
 The agent must have the following capability:
 
-* Azure PowerShell
+- Azure PowerShell
 
 ::: moniker range="> tfs-2018"
 
@@ -41,7 +41,6 @@ The agent must have the following capability:
 <tr><td>Agent Count</td><td>(Required) Number of test agents (dual-core) used in the run.</td></tr>
 <tr><td>Run Duration (sec)</td><td>(Required) Load test run duration in seconds.</td></tr>
 <tr><td>Run load test using</td><td>(Optional) undefined</td></tr>
-
 
 <tr>
 <th style="text-align: center" colspan="2"><a href="~/pipelines/process/tasks.md#controloptions" data-raw-source="[Control options](../../process/tasks.md#controloptions)">Control options</a></th>

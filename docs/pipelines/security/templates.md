@@ -4,7 +4,7 @@ description: Using template features to improve pipeline security.
 ms.assetid: 73d26125-e3ab-4e18-9bcd-387fb21d3568
 ms.reviewer: macoope
 ms.date: 03/11/2020
-monikerRange: '> azure-devops-2019'
+monikerRange: "> azure-devops-2019"
 ---
 
 # Security through templates
@@ -27,40 +27,41 @@ To use an extends template, your pipeline might look like the below example.
 ```yaml
 # template.yml
 parameters:
-- name: usersteps
-  type: stepList
-  default: []
+  - name: usersteps
+    type: stepList
+    default: []
 steps:
-- ${{ each step in parameters.usersteps }}
-  - ${{ step }}
+  - ${{ each step in parameters.usersteps }}
+    - ${{ step }}
 ```
 
 ```yaml
 # azure-pipelines.yml
 resources:
   repositories:
-  - repository: templates
-    type: git
-    name: MyProject/MyTemplates
-    ref: tags/v1
+    - repository: templates
+      type: git
+      name: MyProject/MyTemplates
+      ref: tags/v1
 
 extends:
   template: template.yml@templates
   parameters:
     usersteps:
-    - script: echo This is my first step
-    - script: echo This is my second step
+      - script: echo This is my first step
+      - script: echo This is my second step
 ```
 
 When you set up `extends` templates, consider anchoring them to a particular Git branch or tag.
 That way, if breaking changes need to be made, existing pipelines won't be affected.
-The examples above use this feature. 
+The examples above use this feature.
 
 ## Security features enforced through YAML
 
 There are several protections built into the YAML syntax, and an extends template can enforce the usage of any or all of them.
 
 ### Step targets
+
 Restrict some steps to run in a container instead of the host.
 Without access to the agent's host, user steps can't modify agent configuration or leave malicious code for later execution.
 Run code on the host first to make the container more secure.
@@ -70,12 +71,12 @@ Without open access to the network, user steps will be unable to access packages
 ```yaml
 resources:
   containers:
-  - container: builder
-    image: mysecurebuildcontainer:latest
+    - container: builder
+      image: mysecurebuildcontainer:latest
 steps:
-- script: echo This step runs on the agent host, and it could use docker commands to tear down or limit the container's network
-- script: echo This step runs inside the builder container
-  target: builder
+  - script: echo This step runs on the agent host, and it could use docker commands to tear down or limit the container's network
+  - script: echo This step runs inside the builder container
+    target: builder
 ```
 
 ### Agent logging command restrictions
@@ -100,13 +101,13 @@ Conditions can help, for example, to ensure that you are only building certain b
 
 ```yaml
 jobs:
-- job: buildNormal
-  steps:
-  - script: echo Building the normal, unsensitive part
-- ${{ if eq(variables['Build.SourceBranchName'], 'refs/heads/master') }}:
-  - job: buildMasterOnly
+  - job: buildNormal
     steps:
-    - script: echo Building the restricted part that only builds for master branch
+      - script: echo Building the normal, unsensitive part
+  - ${{ if eq(variables['Build.SourceBranchName'], 'refs/heads/master') }}:
+      - job: buildMasterOnly
+        steps:
+          - script: echo Building the restricted part that only builds for master branch
 ```
 
 ### Require certain syntax with extends templates
@@ -124,14 +125,14 @@ You can, for example, prevent inline script execution.
 ```yaml
 # template.yml
 parameters:
-- name: usersteps
-  type: stepList
-  default: []
+  - name: usersteps
+    type: stepList
+    default: []
 steps:
-- ${{ each step in parameters.usersteps }}:
-  - ${{ each pair in step }}:
-    ${{ if ne(pair.key, 'script') }}:
-      ${{ pair.key }}: ${{ pair.value }}
+  - ${{ each step in parameters.usersteps }}:
+      - ${{ each pair in step }}:
+        ${{ if ne(pair.key, 'script') }}:
+          ${{ pair.key }}: ${{ pair.value }}
 ```
 
 ```yaml
@@ -140,9 +141,9 @@ extends:
   template: template.yml
   parameters:
     usersteps:
-    - task: MyTask@1
-    - script: echo This step will be stripped out and not run!
-    - task: MyOtherTask@2
+      - task: MyTask@1
+      - script: echo This step will be stripped out and not run!
+      - task: MyOtherTask@2
 ```
 
 ### Type-safe parameters
@@ -154,17 +155,17 @@ For instance, it can restrict which pools can be used in a pipeline by offering 
 ```yaml
 # template.yml
 parameters:
-- name: userpool
-  type: string
-  default: Azure Pipelines
-  values:
-  - Azure Pipelines
-  - private-pool-1
-  - private-pool-2
+  - name: userpool
+    type: string
+    default: Azure Pipelines
+    values:
+      - Azure Pipelines
+      - private-pool-1
+      - private-pool-2
 
 pool: ${{ parameters.userpool }}
 steps:
-- script: # ... removed for clarity
+  - script: # ... removed for clarity
 ```
 
 ```yaml
@@ -177,59 +178,55 @@ extends:
 
 ### Set required templates
 
-To require that a specific template gets used, you can set the [required template check](../process/approvals.md#required-template) for a resource or environment. The required template check can be used when extending from a template. 
+To require that a specific template gets used, you can set the [required template check](../process/approvals.md#required-template) for a resource or environment. The required template check can be used when extending from a template.
 
-You can check on the status of a check when viewing a pipeline job. When a pipeline doesn't extend from the require template, the check will fail and the run will stop. You will see that your check failed. 
+You can check on the status of a check when viewing a pipeline job. When a pipeline doesn't extend from the require template, the check will fail and the run will stop. You will see that your check failed.
 
-   > [!div class="mx-imgBorder"]
-   > ![approval check fails](../process/media/approval-fail.png)
+> [!div class="mx-imgBorder"] > ![approval check fails](../process/media/approval-fail.png)
 
 When the required template is used, you'll see that your check passed.
 
-   > [!div class="mx-imgBorder"]
-   > ![approval check passes](../process/media/approval-pass.png)
+> [!div class="mx-imgBorder"] > ![approval check passes](../process/media/approval-pass.png)
 
-
-Here the template `params.yml` is required with an approval on the resource. To trigger the pipeline to fail, comment out the reference to `params.yml`. 
+Here the template `params.yml` is required with an approval on the resource. To trigger the pipeline to fail, comment out the reference to `params.yml`.
 
 ```yaml
 # params.yml
 parameters:
-- name: yesNo 
-  type: boolean
-  default: false
-- name: image
-  displayName: Pool Image
-  type: string
-  default: ubuntu-latest
-  values:
-  - windows-latest
-  - vs2017-win2016
-  - ubuntu-latest
-  - ubuntu-16.04
-  - macOS-latest
-  - macOS-10.14
+  - name: yesNo
+    type: boolean
+    default: false
+  - name: image
+    displayName: Pool Image
+    type: string
+    default: ubuntu-latest
+    values:
+      - windows-latest
+      - vs2017-win2016
+      - ubuntu-latest
+      - ubuntu-16.04
+      - macOS-latest
+      - macOS-10.14
 
 steps:
-- script: echo ${{ parameters.yesNo }}
-- script: echo ${{ parameters.image }}
+  - script: echo ${{ parameters.yesNo }}
+  - script: echo ${{ parameters.image }}
 ```
 
 ```yaml
 # azure-pipeline.yml
 
 resources:
- containers:
-     - container: my-container
-       endpoint: my-service-connection
-       image: mycontainerimages
+  containers:
+    - container: my-container
+      endpoint: my-service-connection
+      image: mycontainerimages
 
 extends:
-    template: params.yml
-    parameters:
-        yesNo: true
-        image: 'windows-latest'
-
+  template: params.yml
+  parameters:
+    yesNo: true
+    image: "windows-latest"
 ```
 
 ### Additional steps
@@ -243,15 +240,15 @@ parameters:
   jobs: []
 
 jobs:
-- ${{ each job in parameters.jobs }}: # Each job
-  - ${{ each pair in job }}:  # Insert all properties other than "steps"
-      ${{ if ne(pair.key, 'steps') }}:
-        ${{ pair.key }}: ${{ pair.value }}
-    steps:                            # Wrap the steps
-    - task: CredScan@1                # Pre steps
-    - ${{ job.steps }}                # Users steps
-    - task: PublishMyTelemetry@1      # Post steps
-      condition: always()
+  - ${{ each job in parameters.jobs }}: # Each job
+      - ${{ each pair in job }}: # Insert all properties other than "steps"
+          ${{ if ne(pair.key, 'steps') }}:
+            ${{ pair.key }}: ${{ pair.value }}
+        steps: # Wrap the steps
+          - task: CredScan@1 # Pre steps
+          - ${{ job.steps }} # Users steps
+          - task: PublishMyTelemetry@1 # Post steps
+            condition: always()
 ```
 
 <!-- Coming Q1 CY20

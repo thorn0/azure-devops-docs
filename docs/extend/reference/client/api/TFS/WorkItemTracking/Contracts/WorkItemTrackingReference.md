@@ -17,7 +17,6 @@ Extends: [WorkItemTrackingResource](../../../TFS/WorkItemTracking/Contracts/Work
 
 ### Members
 
-* `name`: string. 
+- `name`: string.
 
-* `referenceName`: string. 
-
+- `referenceName`: string.

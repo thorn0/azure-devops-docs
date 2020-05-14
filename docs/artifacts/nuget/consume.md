@@ -5,7 +5,7 @@ ms.assetid: BF919E28-65C2-40E3-8A49-5BF0DA3DE598
 ms.technology: devops-artifacts
 ms.topic: conceptual
 ms.date: 11/14/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Consume NuGet packages in Visual Studio

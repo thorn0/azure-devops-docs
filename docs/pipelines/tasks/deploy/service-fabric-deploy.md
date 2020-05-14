@@ -1,5 +1,5 @@
 ---
-title: Service Fabric Application Deployment task 
+title: Service Fabric Application Deployment task
 description: Service Fabric Application Deployment task
 ms.assetid: 82493BC9-241C-491F-9B42-075FD0E33b52
 ms.topic: reference
@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 7/25/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Service Fabric Application Deployment task
@@ -15,7 +15,7 @@ monikerRange: '>= tfs-2017'
 [!INCLUDE [temp](../../includes/version-tfs-2017-rtm.md)]
 
 Use this task to deploy a Service Fabric application to a cluster.
-This task deploys an Azure Service Fabric application to a cluster 
+This task deploys an Azure Service Fabric application to a cluster
 according to the settings defined in the publish profile.
 
 ::: moniker range="<= tfs-2018"
@@ -26,12 +26,14 @@ according to the settings defined in the publish profile.
 
 ### Service Fabric
 
-This task uses a Service Fabric installation to connect and 
+This task uses a Service Fabric installation to connect and
 deploy to a Service Fabric cluster.  
 [Download and install Service Fabric](https://aka.ms/servicefabric) on the build agent.
 
 ::: moniker range=">= azure-devops-2019"
+
 ## YAML snippet
+
 [!INCLUDE [temp](../includes/yaml/ServiceFabricDeployV1.md)]
 
 ## Task Inputs
@@ -49,7 +51,9 @@ deploy to a Service Fabric cluster.
 <Parameter Name = "SampleApp_InstanceCount" DefaultValue ="-1"/>
 </Parameters>
 ```
+
 and you want to change the partition count to 2, you can define a release pipeline or an environment variable "SampleApp_PartitionCount" and its value as "2". <br/><b>Note:</b> If same variables are defined in the release pipeline and in the environment, then the environment variables will supersede the release pipeline variables<br/>Default value: false</td></tr>
+
 <tr><td><code>compressPackage</code><br/>Compress Package</td><td>(Optional) Indicates whether the application package should be compressed before copying to the image store. If enabled, this will override the value in the publish profile. More information for compress package can be found <a href="https://docs.microsoft.com/azure/service-fabric/service-fabric-package-apps#compress-a-package">here</a><br/>Default value: false</td></tr>
 <tr><td><code>copyPackageTimeoutSec</code><br/>CopyPackageTimeoutSec</td><td>(Optional) Timeout in seconds for copying application package to image store. If specified, this will override the value in the publish profile </td></tr>
 <tr><td><code>registerPackageTimeoutSec</code><br/>RegisterPackageTimeoutSec</td><td>(Optional) Timeout in seconds for registering or un-registering application package</td></tr>
@@ -91,12 +95,12 @@ Also see: [Update Service Fabric Manifests task](../utility/service-fabric-versi
 
 ## Arguments
 
-| Argument | Description |
-| -------- | ----------- |
-| **Publish Profile** | The location of the publish profile that specifies the settings to use for deployment, including the location of the target Service Fabric cluster. Can include wildcards and variables. Example:<br />`$(system.defaultworkingdirectory)/**/drop/projectartifacts/**/PublishProfiles/Cloud.xml` |
-| **Application Package** | The location of the Service Fabric application package to be deployed to the cluster. Can include wildcards and variables. Example: `$(system.defaultworkingdirectory)/**/drop/applicationpackage` |
-| **Cluster Connection** | The name of the Azure Service Fabric service connection defined in the TS/TFS project that describes the connection to the cluster. |
-| **Control options** | See [Control options](../../process/tasks.md#controloptions) |
+| Argument                | Description                                                                                                                                                                                                                                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Publish Profile**     | The location of the publish profile that specifies the settings to use for deployment, including the location of the target Service Fabric cluster. Can include wildcards and variables. Example:<br />`$(system.defaultworkingdirectory)/**/drop/projectartifacts/**/PublishProfiles/Cloud.xml` |
+| **Application Package** | The location of the Service Fabric application package to be deployed to the cluster. Can include wildcards and variables. Example: `$(system.defaultworkingdirectory)/**/drop/applicationpackage`                                                                                               |
+| **Cluster Connection**  | The name of the Azure Service Fabric service connection defined in the TS/TFS project that describes the connection to the cluster.                                                                                                                                                              |
+| **Control options**     | See [Control options](../../process/tasks.md#controloptions)                                                                                                                                                                                                                                     |
 
 Also see: [Update Service Fabric App Versions task](../utility/service-fabric-versioning.md)
 

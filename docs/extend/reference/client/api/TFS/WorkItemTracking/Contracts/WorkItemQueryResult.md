@@ -13,20 +13,18 @@ ms.date: 08/04/2016
 
 Module path: `TFS/WorkItemTracking/Contracts`
 
-
 ### Members
 
-* `asOf`: Date. 
+- `asOf`: Date.
 
-* `columns`: [WorkItemFieldReference](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldReference.md)[]. 
+- `columns`: [WorkItemFieldReference](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldReference.md)[].
 
-* `queryResultType`: [QueryResultType](../../../TFS/WorkItemTracking/Contracts/QueryResultType.md). 
+- `queryResultType`: [QueryResultType](../../../TFS/WorkItemTracking/Contracts/QueryResultType.md).
 
-* `queryType`: [QueryType](../../../TFS/WorkItemTracking/Contracts/QueryType.md). 
+- `queryType`: [QueryType](../../../TFS/WorkItemTracking/Contracts/QueryType.md).
 
-* `sortColumns`: [WorkItemQuerySortColumn](../../../TFS/WorkItemTracking/Contracts/WorkItemQuerySortColumn.md)[]. 
+- `sortColumns`: [WorkItemQuerySortColumn](../../../TFS/WorkItemTracking/Contracts/WorkItemQuerySortColumn.md)[].
 
-* `workItemRelations`: [WorkItemLink](../../../TFS/WorkItemTracking/Contracts/WorkItemLink.md)[]. 
+- `workItemRelations`: [WorkItemLink](../../../TFS/WorkItemTracking/Contracts/WorkItemLink.md)[].
 
-* `workItems`: [WorkItemReference](../../../TFS/WorkItemTracking/Contracts/WorkItemReference.md)[]. 
-
+- `workItems`: [WorkItemReference](../../../TFS/WorkItemTracking/Contracts/WorkItemReference.md)[].

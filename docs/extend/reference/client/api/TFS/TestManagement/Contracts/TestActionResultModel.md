@@ -18,11 +18,10 @@ Extends: [TestResultModelBase](../../../TFS/TestManagement/Contracts/TestResultM
 
 ### Members
 
-* `actionPath`: string. 
+- `actionPath`: string.
 
-* `iterationId`: number. 
+- `iterationId`: number.
 
-* `sharedStepModel`: [SharedStepModel](../../../TFS/TestManagement/Contracts/SharedStepModel.md). 
+- `sharedStepModel`: [SharedStepModel](../../../TFS/TestManagement/Contracts/SharedStepModel.md).
 
-* `url`: string. 
-
+- `url`: string.

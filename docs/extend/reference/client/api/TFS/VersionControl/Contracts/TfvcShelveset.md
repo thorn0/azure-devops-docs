@@ -17,11 +17,10 @@ Extends: [TfvcShelvesetRef](../../../TFS/VersionControl/Contracts/TfvcShelvesetR
 
 ### Members
 
-* `changes`: [TfvcChange](../../../TFS/VersionControl/Contracts/TfvcChange.md)[]. 
+- `changes`: [TfvcChange](../../../TFS/VersionControl/Contracts/TfvcChange.md)[].
 
-* `notes`: [CheckinNote](../../../TFS/VersionControl/Contracts/CheckinNote.md)[]. 
+- `notes`: [CheckinNote](../../../TFS/VersionControl/Contracts/CheckinNote.md)[].
 
-* `policyOverride`: [TfvcPolicyOverrideInfo](../../../TFS/VersionControl/Contracts/TfvcPolicyOverrideInfo.md). 
+- `policyOverride`: [TfvcPolicyOverrideInfo](../../../TFS/VersionControl/Contracts/TfvcPolicyOverrideInfo.md).
 
-* `workItems`: [AssociatedWorkItem](../../../TFS/VersionControl/Contracts/AssociatedWorkItem.md)[]. 
-
+- `workItems`: [AssociatedWorkItem](../../../TFS/VersionControl/Contracts/AssociatedWorkItem.md)[].

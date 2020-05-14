@@ -18,9 +18,8 @@ Extends: [WebApiConnectedServiceRef](../../../tfs/distributedtask/contracts/weba
 
 ### Members
 
-* `connectedServiceMetaData`: [WebApiConnectedService](../../../TFS/Core/Contracts/WebApiConnectedService.md). Meta data for service endpoint
+- `connectedServiceMetaData`: [WebApiConnectedService](../../../TFS/Core/Contracts/WebApiConnectedService.md). Meta data for service endpoint
 
-* `credentialsXml`: string. Credential info
+- `credentialsXml`: string. Credential info
 
-* `endPoint`: string. Optional uri to connect directly to the service such as https:\//windows.azure.com
-
+- `endPoint`: string. Optional uri to connect directly to the service such as https:\//windows.azure.com

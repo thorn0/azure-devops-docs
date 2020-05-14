@@ -18,7 +18,6 @@ Extends: [WebApiTeamRef](../../../TFS/Core/Contracts/WebApiTeamRef.md)
 
 ### Members
 
-* `description`: string. Team description
+- `description`: string. Team description
 
-* `identityUrl`: string. Identity REST API Url to this team
-
+- `identityUrl`: string. Identity REST API Url to this team

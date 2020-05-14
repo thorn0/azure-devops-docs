@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Test Sessions| REST API Reference for Team Foundation Server
 description: Work with test sessions programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 98502210-26d4-4b47-9d42-087c8e62782f
@@ -24,14 +24,15 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/{project}/{team}/_apis/test/session?api-version={version}
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:------------ |:------------------------------
-| URL
-| instance  | string  | | TFS server name ({server:port}).
-| project   | string  | | Name of a project.
-| team	    | string  | Project's default team name| Name of a team within the project.
-| version | string  | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
 
+
+| URL
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name of a project.
+| team | string | Project's default team name| Name of a team within the project.
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -87,43 +88,44 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-TFVC/Fabrikam-Fiber-TFV
 }
 ```
 
-
-
 ## Create a test session
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/{team}/_apis/test/session?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
-    "Title": { string },
-    "Area" : {
-              "Name": { string }
-             }
+  "Title": { string },
+  "Area": {
+    "Name": { string }
+  }
 }
-
-
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:------------ |:------------------------------
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
+
+
 | URL
-| instance  | string  | | TFS server name ({server:port}).
-| project   | string  | | Name of a project.
-| team	    | string  | Project's default team name | Name of a team within the project.
-| version   | string  | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name of a project.
+| team | string | Project's default team name | Name of a team within the project.
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| Title     | string  | | Name of the session.
-| Area.Name | string  | | Area path under which session needs to be created.
+| Title | string | | Name of the session.
+| Area.Name | string | | Area path under which session needs to be created.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-TFVC/Fabrikam-Fiber-TFVC%20Team/_apis/test/session?api-version=1.0-preview
 ```
+
 ```json
 {
   "Title": "Sample TestSession",
@@ -163,16 +165,16 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-TFVC/Fabrikam-Fiber-TF
 }
 ```
 
-
-
 ## Update a test session
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/{team}/_apis/test/session?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
    "Title"    : { string },
@@ -182,13 +184,13 @@ Content-Type: application/json
    "Id"       : { int },
    "Comment"  : { string },
    "State"    : { enum { NotStarted, InProgress, Paused, Completed } },
-  
+
    "Revision" : { int },
 
-   "PropertyBag": 
-            
-      { 
-         "Bag" : 
+   "PropertyBag":
+
+      {
+         "Bag" :
                  {  "ExploredWorkItem"   : "[{  \"Id\":\"{ int }\", \"Type\": \"{ string }\", \"StartTime\":\"{ DateTime }\", \"EndTime\": \"{ DateTime }\" }
                                             ]",
 
@@ -196,25 +198,27 @@ Content-Type: application/json
                                             ]"
 
                  }
- 
+
       }
 }
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:------------ |:------------------------------
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
+
+
 | URL
-| instance  | string  | | TFS server name ({server:port}).
-| project   | string  | | Name of a project.
-| team	    | string  | Project's default team Name| Name of a team within the project.
-| version   | string  | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name of a project.
+| team | string | Project's default team Name| Name of a team within the project.
+| version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| Title     | string  | | Name of the test session.
-| Area.Name | string  | | Area path under which session needs to be created.
-| Id	    | int     | | ID of the test session needs to update.
-| Comment   | string  | | Comment for the session.
-| State	    | enum { NotStarted, InProgress, Paused, Completed } | InProgress |	State of the test session
-| Revision  | int     | | Revision of the test session needs to update.
+| Title | string | | Name of the test session.
+| Area.Name | string | | Area path under which session needs to be created.
+| Id | int | | ID of the test session needs to update.
+| Comment | string | | Comment for the session.
+| State | enum { NotStarted, InProgress, Paused, Completed } | InProgress | State of the test session
+| Revision | int | | Revision of the test session needs to update.
 | PropertyBag.Bag.ExploredWorkItem | string[] | | Explored workitem(s) details in the session.
 | PropertyBag.Bag.ExploredWorkItem.Id | int | | Id of the explored work item
 | PropertyBag.Bag.ExploredWorkItem.Type | string| | Type of the explored work item
@@ -224,13 +228,14 @@ Content-Type: application/json
 | PropertyBag.Bag.AssociatedWorkItem.Id | int | | Id of the explored work item.
 | PropertyBag.Bag.AssociatedWorkItem.Type | string| | Type of the explored work item.
 
-
 ### Name
+
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-TFVC/Fabrikam-Fiber-TFVC%20Team/_apis/test/session?api-version=1.0-preview
 ```
+
 ```json
 {
   "Title": "Sample TestSession",
@@ -265,6 +270,3 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-TFVC/Fabrikam-Fiber-T
   }
 }
 ```
-
-
-

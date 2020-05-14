@@ -2,44 +2,41 @@
 title: CMMI process work item types & workflow
 titleSuffix: Azure Boards
 ms.custom: work-items
-description: How to guide for using the CMMI process  work item types and workflow to track work in Azure Boards, Azure DevOps, & Team Foundation Server   
+description: How to guide for using the CMMI process  work item types and workflow to track work in Azure Boards, Azure DevOps, & Team Foundation Server
 ms.technology: devops-agile
 ms.assetid: b5b7b488-3248-485c-b896-a2c6f824a219
 ms.topic: conceptual
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 12/20/2018
 ---
 
 # CMMI process work item types and workflow
 
-
 [!INCLUDE [temp](../../includes/version-vsts-tfs-all-versions.md)]
 
 Teams use the work item types (WITs) provided with the MSF for CMMI Process Improvement 2015 (CMMI) process to plan and track progress of software projects. Teams define requirements to manage the backlog of work and then, using the Kanban board, track progress by updating the status of requirements.
- 
+
 ![CMMI process work item types, conceptual image](media/cmmi-process-plan-wits.png)
 
 To gain insight into a portfolio of requirements, product owners can map requirements to features. When teams work in iterations, they define tasks that automatically link to requirements.
 
 Using Microsoft Test Manager and the web portal, testers create and run test cases and define bugs to track code defects.
 
-To support additional CMMI processes, teams can track change requests, risks, issues, and notes captured in review meetings. If you are new to the CMMI process, review the section [Plan and track work with CMMI](cmmi-process.md#start-using) to get started. 
+To support additional CMMI processes, teams can track change requests, risks, issues, and notes captured in review meetings. If you are new to the CMMI process, review the section [Plan and track work with CMMI](cmmi-process.md#start-using) to get started.
 
-  
-[!INCLUDE [temp](../../includes/note-work-item-form-differences.md)] 
+[!INCLUDE [temp](../../includes/note-work-item-form-differences.md)]
 
-## Define requirements 
+## Define requirements
 
 Create requirements from the quick add panel on the [product backlog page](../../backlogs/create-your-backlog.md). Alternatively, you can bulk add requirements using [Excel](../../backlogs/office//bulk-add-modify-work-items-excel.md) or [Project](../../backlogs/office/create-your-backlog-tasks-using-project.md).
 
 <img src="media/cmmi-quick-add-panel.png" alt="CMMI process, Quick add panel on the requirements backlog page" style="border: 2px solid #C3C3C3;" />
 
-
 Later, you can open each requirement to provide more details and estimate its size.
 
-![Requirement work item form](media/cmmi-requirement-form.png)  
+![Requirement work item form](media/cmmi-requirement-form.png)
 
 Requirements specify the functions and product elements that teams need to create. Product owners typically define and stack rank requirements on the product backlog page. The team then scopes the size of the effort to deliver the highest priority items.
 
@@ -280,29 +277,29 @@ Use the following guidance and that provided for [fields used in common across w
 </tbody>
 </table>
 
-
-[!INCLUDE [temp](../../includes/discussion-tip.md)] 
+[!INCLUDE [temp](../../includes/discussion-tip.md)]
 
 ## Track progress
 
-As work progresses, you change the State field to update the status. Optionally, you can specify a reason. The state and reason fields appear on the work item form in the header area. 
+As work progresses, you change the State field to update the status. Optionally, you can specify a reason. The state and reason fields appear on the work item form in the header area.
 
-<img src="media/agile-bug-form-state-reason.png" alt="Bug work item form, header area" style="border: 1px solid #C3C3C3;" /> 
+<img src="media/agile-bug-form-state-reason.png" alt="Bug work item form, header area" style="border: 1px solid #C3C3C3;" />
 
-### CMMI workflow states 
+### CMMI workflow states
 
-These diagrams show the main progression and regression states for the Requirement, Bug, and Task WITs. 
+These diagrams show the main progression and regression states for the Requirement, Bug, and Task WITs.
 
 > [!div class="mx-tdBreakAll"]  
-> |Requirement  |Bug |Task |  
-> |-------------|----------|---------| 
+> |Requirement |Bug |Task |  
+> |-------------|----------|---------|
 > |<img src="media/IC757081.png" title="Requirement workflow states, CMMI process" alt="Requirement workflow states, CMMI process" /> |<img src="media/IC757084.png" title="Bug workflow states, CMMI process" alt="Bug workflow states, CMMI process" /> |<img src="media/IC757087.png" title="Task workflow states, CMMI process" alt="Task workflow states, CMMI process" /> |
 
-The typical workflow progression for a requirement is:  
--   The product owner creates a requirement in the **Proposed** state with the default reason, **New requirement**.  
--   The product owner updates the status to **Active** when they begin work to implement it.  
--   The team updates the status to **Resolved** when code development is finished and system tests have passed.  
--   Lastly, the team or product owner moves the requirement to **Closed** when the product owner agrees that it has been implemented according to the Acceptance Criteria and passed all validation tests.  
+The typical workflow progression for a requirement is:
+
+- The product owner creates a requirement in the **Proposed** state with the default reason, **New requirement**.
+- The product owner updates the status to **Active** when they begin work to implement it.
+- The team updates the status to **Resolved** when code development is finished and system tests have passed.
+- Lastly, the team or product owner moves the requirement to **Closed** when the product owner agrees that it has been implemented according to the Acceptance Criteria and passed all validation tests.
 
 ### Update status with Kanban or taskboards
 
@@ -320,11 +317,9 @@ Using portfolio backlogs, you can [drill down from one backlog to another](../..
 
 The feature work item contains similar fields provided for requirements and includes additional fields, as the following table describes.
 
-
 ## Define tasks
 
-
-When your team manages their work in sprints, they can use the [sprint backlog page](../../sprints/assign-work-sprint.md) to break down the work to be accomplished into distinct tasks.  
+When your team manages their work in sprints, they can use the [sprint backlog page](../../sprints/assign-work-sprint.md) to break down the work to be accomplished into distinct tasks.
 
 <img src="media/IC697755.png" alt="Web portal, Add task link on a sprint backlog page" style="border: 2px solid #C3C3C3;" />
 
@@ -381,16 +376,15 @@ When teams estimate work they define tasks and estimate the hours or days to com
 </tbody>
 </table>
 
-
-## Track test progress 
+## Track test progress
 
 ### Test requirements
 
-From the web portal or Test Manager, you can [create test cases that automatically link to a requirement or bug](../../../test/create-test-cases.md).  Or, you can link a requirement to a test case from the ![Links tab icon](../../backlogs/media/icon-links-tab-wi.png) (links tab). 
+From the web portal or Test Manager, you can [create test cases that automatically link to a requirement or bug](../../../test/create-test-cases.md). Or, you can link a requirement to a test case from the ![Links tab icon](../../backlogs/media/icon-links-tab-wi.png) (links tab).
 
-![Select the test suite and add a test case](media/IC793453.png)  
+![Select the test suite and add a test case](media/IC793453.png)
 
-The test case contains a number of fields, many of which are automated and integrated with Test Manager and the build process. For a description of each field, see [Query based on build and test integration fields](../../queries/build-test-integration.md).  
+The test case contains a number of fields, many of which are automated and integrated with Test Manager and the build process. For a description of each field, see [Query based on build and test integration fields](../../queries/build-test-integration.md).
 
 <img src="media/agile-test-case-form.png" alt="Web portal, Test case work item form" style="border: 2px solid #C3C3C3;" />
 
@@ -398,47 +392,44 @@ The ![Links tab icon](../../backlogs/media/icon-links-tab-wi.png) (links tab) li
 
 ### Track code defects
 
-You can [create bugs from the web portal web portal, Visual Studio, or when testing with Test Manager](../../backlogs/manage-bugs.md). 
-
+You can [create bugs from the web portal web portal, Visual Studio, or when testing with Test Manager](../../backlogs/manage-bugs.md).
 
 ## Track change requests, risks, issues, and notes captured in review meetings
 
 In addition to the requirement, feature, task, and bug WITs, you can track information recommended by the CMMI process with the following WITS.
 
--  [Change request](cmmi/guidance-change-request-field-reference-cmmi.md) to [manage proposed changes](cmmi/guidance-manage-change.md) to any work product that is under change control.  
--   [Issue](cmmi/guidance-bugs-issues-risks-field-reference-cmmi.md) to track an event or situation that might block work or is blocking work on the product. [Issues differ from risks](cmmi/guidance-manage-issues-cmmi.md) in that teams identify issues spontaneously, generally during daily team meetings. 
--   [Risk](cmmi/guidance-bugs-issues-risks-field-reference-cmmi.md) to track the probability  and degree of variance between actual and desired outcomes. When you [manage risks](cmmi/guidance-manage-risks.md), you strategically minimize the variance between the outcome that you want and the actual outcome.  
--   [Review](cmmi/guidance-review-meeting-field-reference-cmmi.md) to document the results of a design or code review. Team members can [capture the details of how the design or code meets standards](cmmi/guidance-implement-development-tasks.md) in areas of name correctness, code relevance, extensibility, code complexity, algorithmic complexity, and code security.  
-<br/>
-You can add an issue from the  [New work item widget](../../../report/dashboards/widget-catalog.md#new-work-item-widget) added to a [team dashboard](../../../Report/dashboards.md), or from the **New** menu on the Queries page. 
+- [Change request](cmmi/guidance-change-request-field-reference-cmmi.md) to [manage proposed changes](cmmi/guidance-manage-change.md) to any work product that is under change control.
+- [Issue](cmmi/guidance-bugs-issues-risks-field-reference-cmmi.md) to track an event or situation that might block work or is blocking work on the product. [Issues differ from risks](cmmi/guidance-manage-issues-cmmi.md) in that teams identify issues spontaneously, generally during daily team meetings.
+- [Risk](cmmi/guidance-bugs-issues-risks-field-reference-cmmi.md) to track the probability and degree of variance between actual and desired outcomes. When you [manage risks](cmmi/guidance-manage-risks.md), you strategically minimize the variance between the outcome that you want and the actual outcome.
+- [Review](cmmi/guidance-review-meeting-field-reference-cmmi.md) to document the results of a design or code review. Team members can [capture the details of how the design or code meets standards](cmmi/guidance-implement-development-tasks.md) in areas of name correctness, code relevance, extensibility, code complexity, algorithmic complexity, and code security.  
+  <br/>
+  You can add an issue from the [New work item widget](../../../report/dashboards/widget-catalog.md#new-work-item-widget) added to a [team dashboard](../../../Report/dashboards.md), or from the **New** menu on the Queries page.
 
-![Add work item from a New work item widget](media/cmmi-new-work-item-widget.png)  
+![Add work item from a New work item widget](media/cmmi-new-work-item-widget.png)
 
-Work items you add from the widget are automatically scoped to your team's default area and iteration paths. To change the team context, see [Switch team context](../../../project/navigation/go-to-project-repo.md?toc=/azure/devops/boards/plans/toc.json&bc=/azure/devops/boards/plans/breadcrumb/toc.json).  
+Work items you add from the widget are automatically scoped to your team's default area and iteration paths. To change the team context, see [Switch team context](../../../project/navigation/go-to-project-repo.md?toc=/azure/devops/boards/plans/toc.json&bc=/azure/devops/boards/plans/breadcrumb/toc.json).
 
-
-[!INCLUDE [temp](../../includes/common-work-item-fields.md)]   
+[!INCLUDE [temp](../../includes/common-work-item-fields.md)]
 
 ## Customize work item types
 
-[!INCLUDE [temp](../../includes/customize-work-tracking.md)] 
+[!INCLUDE [temp](../../includes/customize-work-tracking.md)]
 
-## Related articles 
+## Related articles
 
-[!INCLUDE [temp](../../includes/create-team-project-links.md)]  
-
+[!INCLUDE [temp](../../includes/create-team-project-links.md)]
 
 ### Backlog list order
 
-The [Stack Rank](../../queries/planning-ranking-priorities.md) field is used to track the relative ranking of requirements, features, or epics. However, by default it doesn't appear on the work item form. The sequence of items on the backlog page is determined according to where you have [added the items or moved the items on the page](../../backlogs/create-your-backlog.md#move-items-priority-order). As you drag items, a background process updates this field.  
+The [Stack Rank](../../queries/planning-ranking-priorities.md) field is used to track the relative ranking of requirements, features, or epics. However, by default it doesn't appear on the work item form. The sequence of items on the backlog page is determined according to where you have [added the items or moved the items on the page](../../backlogs/create-your-backlog.md#move-items-priority-order). As you drag items, a background process updates this field.
 
-This field doesn't appear on the work item form. 
+This field doesn't appear on the work item form.
 
 ::: moniker range="<= tfs-2015"
 
-### Links control, client work item form 
+### Links control, client work item form
 
-Work item forms displayed in a client and the web portal for TFS 2015 and earlier versions display link tabs and link control restrictions as described in the following table. 
+Work item forms displayed in a client and the web portal for TFS 2015 and earlier versions display link tabs and link control restrictions as described in the following table.
 
 <table>
 <thead>

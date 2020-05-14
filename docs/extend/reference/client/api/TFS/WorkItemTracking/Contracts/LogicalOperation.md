@@ -15,6 +15,6 @@ Module path: `TFS/WorkItemTracking/Contracts`
 
 ### Values
 
-* `NONE` 
-* `AND` 
-* `OR` 
+- `NONE`
+- `AND`
+- `OR`

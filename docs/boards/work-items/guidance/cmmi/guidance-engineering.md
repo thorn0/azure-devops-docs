@@ -7,7 +7,7 @@ ms.assetid: 53c52c0e-da53-4f9c-afc4-6c6260d32ccc
 ms.topic: conceptual
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 01/20/2017
 ---
 
@@ -15,10 +15,9 @@ ms.date: 01/20/2017
 
 [!INCLUDE [temp](../../../includes/version-vsts-tfs-all-versions.md)]
 
-The Engineering section of the MSF for CMMI Process Improvement guidance covers the value-added activities for discovering the information that is required to design and build software products. The Engineering grouping of process areas in the CMMI includes Requirements Development, Requirements Management, Technical Solution, Product Integration, Verification, and Validation. All of these are model level 2 or 3 process areas.  
-  
- For more information about CMMI see [Background to CMMI](guidance-background-to-cmmi.md).  
-  
+The Engineering section of the MSF for CMMI Process Improvement guidance covers the value-added activities for discovering the information that is required to design and build software products. The Engineering grouping of process areas in the CMMI includes Requirements Development, Requirements Management, Technical Solution, Product Integration, Verification, and Validation. All of these are model level 2 or 3 process areas.
+
+For more information about CMMI see [Background to CMMI](guidance-background-to-cmmi.md).
 
 |**Vision and Requirements:** Capture the product vision and requirements.|[Develop requirements](guidance-develop-requirements.md)<br />[Arrange requirements into a product plan](arrange-requirements-into-a-product-plan.md)|  
 |**Architecture:** Define or capture the architecture of your solution.|[Create a solution architecture](guidance-create-solution-architecture.md)|  

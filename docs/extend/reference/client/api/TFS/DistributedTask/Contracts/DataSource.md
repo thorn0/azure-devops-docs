@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `endpointUrl`: string. 
+- `endpointUrl`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `resultSelector`: string. 
-
+- `resultSelector`: string.

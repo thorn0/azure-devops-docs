@@ -12,7 +12,7 @@ ms.technology: devops-cicd-tasks
 # Build an Android app with Xamarin
 - task: XamarinAndroid@1
   inputs:
-    #projectFile: '**/*.csproj' 
+    #projectFile: '**/*.csproj'
     #target: # Optional
     #outputDirectory: # Optional
     #configuration: # Optional

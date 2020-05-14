@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `data`: {[key: string]: string}. 
+- `data`: {[key: string]: string}.
 
-* `id`: string. Gets the ID of the option.
-
+- `id`: string. Gets the ID of the option.

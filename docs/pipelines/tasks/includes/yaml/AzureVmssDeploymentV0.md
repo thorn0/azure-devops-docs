@@ -12,11 +12,11 @@ ms.technology: devops-cicd-tasks
 # Deploy a virtual machine scale set image
 - task: AzureVmssDeployment@0
   inputs:
-    azureSubscription: 
+    azureSubscription:
     #action: 'Update image' # Options: update Image, configure Application Startup
-    vmssName: 
+    vmssName:
     vmssOsType: # Options: windows, linux
-    imageUrl: 
+    imageUrl:
     #customScriptsDirectory: # Optional
     #customScript: # Optional
     #customScriptArguments: # Optional

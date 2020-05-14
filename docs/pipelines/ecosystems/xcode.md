@@ -6,7 +6,7 @@ ms.assetid: e9dd0efb-8932-4a77-93be-28e209d486ca
 ms.author: vijayma
 author: vijayma
 ms.date: 02/14/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Build, test, and deploy Xcode apps
@@ -38,7 +38,7 @@ Create a file named **azure-pipelines.yml** in the root of your repository. Then
 ```yaml
 # https://docs.microsoft.com/azure/devops/pipelines/ecosystems/xcode
 pool:
-  vmImage: 'macOS-10.14'
+  vmImage: "macOS-10.14"
 ```
 
 ## Build an app with Xcode
@@ -47,19 +47,19 @@ To build an app with Xcode, add the following snippet to your `azure-pipelines.y
 
 ```yaml
 variables:
-  scheme: ''
-  sdk: 'iphoneos'
-  configuration: 'Release'
+  scheme: ""
+  sdk: "iphoneos"
+  configuration: "Release"
 
 steps:
-- task: Xcode@5
-  inputs:
-    sdk: '$(sdk)'
-    scheme: '$(scheme)'
-    configuration: '$(configuration)'
-    xcodeVersion: 'default' # Options: default, 10, 9, 8, specifyPath
-    exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
-    packageApp: false
+  - task: Xcode@5
+    inputs:
+      sdk: "$(sdk)"
+      scheme: "$(scheme)"
+      configuration: "$(configuration)"
+      xcodeVersion: "default" # Options: default, 10, 9, 8, specifyPath
+      exportPath: "$(agent.buildDirectory)/output/$(sdk)/$(configuration)"
+      packageApp: false
 ```
 
 ### Signing and provisioning
@@ -72,25 +72,25 @@ The following snippet installs an Apple P12 certificate and provisioning profile
 # The `certSecureFile` and `provProfileSecureFile` files are uploaded to the Azure Pipelines secure files library where they are encrypted.
 # The `P12Password` variable is set in the Azure Pipelines pipeline editor and marked 'secret' to be encrypted.
 steps:
-- task: InstallAppleCertificate@2
-  inputs:
-    certSecureFile: 'chrisid_iOSDev_Nov2018.p12'
-    certPwd: $(P12Password)
+  - task: InstallAppleCertificate@2
+    inputs:
+      certSecureFile: "chrisid_iOSDev_Nov2018.p12"
+      certPwd: $(P12Password)
 
-- task: InstallAppleProvisioningProfile@1
-  inputs:
-    provProfileSecureFile: '6ffac825-ed27-47d0-8134-95fcf37a666c.mobileprovision'
+  - task: InstallAppleProvisioningProfile@1
+    inputs:
+      provProfileSecureFile: "6ffac825-ed27-47d0-8134-95fcf37a666c.mobileprovision"
 
-- task: Xcode@5
-  inputs:
-    actions: 'build'
-    scheme: ''
-    sdk: 'iphoneos'
-    configuration: 'Release'
-    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
-    xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
-    signingOption: 'default' # Options: nosign, default, manual, auto
-    useXcpretty: 'false' # Makes it easier to diagnose build failures
+  - task: Xcode@5
+    inputs:
+      actions: "build"
+      scheme: ""
+      sdk: "iphoneos"
+      configuration: "Release"
+      xcWorkspacePath: "**/*.xcodeproj/project.xcworkspace"
+      xcodeVersion: "default" # Options: 8, 9, 10, default, specifyPath
+      signingOption: "default" # Options: nosign, default, manual, auto
+      useXcpretty: "false" # Makes it easier to diagnose build failures
 ```
 
 ### CocoaPods
@@ -99,16 +99,16 @@ If your project uses CocoaPods, you can run CocoaPods commands in your pipeline 
 
 ```yaml
 - script: /usr/local/bin/pod install
-  displayName: 'pod install using a script'
+  displayName: "pod install using a script"
 
 - task: CocoaPods@0
-  displayName: 'pod install using the CocoaPods task with defaults'
+  displayName: "pod install using the CocoaPods task with defaults"
 
 - task: CocoaPods@0
   inputs:
     forceRepoUpdate: true
-    projectDirectory: '$(system.defaultWorkingDirectory)'
-  displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
+    projectDirectory: "$(system.defaultWorkingDirectory)"
+  displayName: "pod install using the CocoaPods task with a forced repo update and a custom project directory"
 ```
 
 ### Carthage
@@ -132,7 +132,7 @@ Here is an example that uses a secret variable named `myGitHubAccessToken` for t
 
 ### Testing on Azure-hosted devices
 
-Add the [App Center Test](../tasks/test/app-center-test.md) task to test the app in a hosted lab of iOS and Android devices. An [App Center](https://appcenter.ms) free trial is required which must later be converted to paid. 
+Add the [App Center Test](../tasks/test/app-center-test.md) task to test the app in a hosted lab of iOS and Android devices. An [App Center](https://appcenter.ms) free trial is required which must later be converted to paid.
 
 [Sign up with App Center](https://appcenter.ms/signup?utm_source=DevOps&utm_medium=Azure&utm_campaign=docs) first.
 
@@ -146,8 +146,8 @@ to store your IPA with the build record or test and deploy it in subsequent pipe
 ```yaml
 - task: CopyFiles@2
   inputs:
-    contents: '**/*.ipa'
-    targetFolder: '$(build.artifactStagingDirectory)'
+    contents: "**/*.ipa"
+    targetFolder: "$(build.artifactStagingDirectory)"
 - task: PublishBuildArtifacts@1
 ```
 
@@ -178,11 +178,11 @@ fastlane session tokens expire quickly and must be recreated and reconfigured.
 
 ```yaml
 - task: AppStoreRelease@1
-  displayName: 'Publish to the App Store TestFlight track'
+  displayName: "Publish to the App Store TestFlight track"
   inputs:
-    serviceEndpoint: 'My Apple App Store service connection' # This service connection must be added by you
+    serviceEndpoint: "My Apple App Store service connection" # This service connection must be added by you
     appIdentifier: com.yourorganization.testapplication.etc
-    ipaPath: '$(build.artifactstagingdirectory)/**/*.ipa'
+    ipaPath: "$(build.artifactstagingdirectory)/**/*.ipa"
     shouldSkipWaitingForProcessing: true
     shouldSkipSubmission: true
 ```
@@ -194,9 +194,9 @@ task to automate the promotion of a previously submitted app from iTunes Connect
 
 ```yaml
 - task: AppStorePromote@1
-  displayName: 'Submit to the App Store for review'
+  displayName: "Submit to the App Store for review"
   inputs:
-    serviceEndpoint: 'My Apple App Store service connection' # This service connection must be added by you
+    serviceEndpoint: "My Apple App Store service connection" # This service connection must be added by you
     appIdentifier: com.yourorganization.testapplication.etc
     shouldAutoRelease: false
 ```
@@ -204,10 +204,10 @@ task to automate the promotion of a previously submitted app from iTunes Connect
 ## Related extensions
 
 - [Apple App Store](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.app-store) (Microsoft)
-- [Codified Security](https://marketplace.visualstudio.com/items?itemName=codifiedsecurity.CodifiedSecurity) (Codified Security)  
+- [Codified Security](https://marketplace.visualstudio.com/items?itemName=codifiedsecurity.CodifiedSecurity) (Codified Security)
 - [MacinCloud](https://marketplace.visualstudio.com/items?itemName=moboware.macincloud) (Moboware Inc.)
-- [Mobile App Tasks for iOS and Android](https://marketplace.visualstudio.com/items?itemName=vs-publisher-473885.motz-mobile-buildtasks) (James Montemagno)  
+- [Mobile App Tasks for iOS and Android](https://marketplace.visualstudio.com/items?itemName=vs-publisher-473885.motz-mobile-buildtasks) (James Montemagno)
 - [Mobile Testing Lab](https://marketplace.visualstudio.com/items?itemName=Perfecto.PerfectoCQ) (Perfecto Mobile)
 - [Raygun](https://marketplace.visualstudio.com/items?itemName=Raygun.vsts-extension) (Raygun)
-- [React Native](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.react-native-extension) (Microsoft)  
+- [React Native](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.react-native-extension) (Microsoft)
 - [Version Setter](https://marketplace.visualstudio.com/items?itemName=tomgilder.version-setter) (Tom Gilder)

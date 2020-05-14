@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: ronai
 author: RoopeshNair
 ms.date: 08/24/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Troubleshoot Azure Resource Manager service connections
@@ -21,15 +21,16 @@ monikerRange: '>= tfs-2015'
 ::: moniker-end
 
 This topic will help you resolve issues you may encounter when creating
-a connection to Microsoft Azure using an **Azure Resource Manager** 
+a connection to Microsoft Azure using an **Azure Resource Manager**
 [service connection](../library/service-endpoints.md) for your Azure DevOps CI/CD processes.
 
 <a name="whathappens"></a>
+
 ## What happens when you create a Resource Manager service connection?
 
 You open the **Add Azure Resource Manager service connection** dialog,
 provide a connection name, and select a subscription from drop-down
-list of your subscriptions.  
+list of your subscriptions.
 
 ![The Add Azure Resource Manager service connection dialog](media/azure-rm-endpoint/endpoint-01.png)
 
@@ -41,16 +42,18 @@ When you choose **OK**, the system:
 1. Creates an Azure Resource Manager service connection using this application's details
 
 <a name="troubleshoot"></a>
+
 ## How to troubleshoot errors that may occur while creating a connection?
 
 Errors that may occur when the system attempts to create the service connection include:
 
-* [Insufficient privileges to complete the operation](#privileges)
-* [Failed to obtain an access token](#sessionexpired)
-* [A valid refresh token was not found](#sessionexpired)
-* [Failed to assign contributor role](#contributorrole)
+- [Insufficient privileges to complete the operation](#privileges)
+- [Failed to obtain an access token](#sessionexpired)
+- [A valid refresh token was not found](#sessionexpired)
+- [Failed to assign contributor role](#contributorrole)
 
 <a name="privileges"></a>
+
 ### Insufficient privileges to complete the operation
 
 This typically occurs when the system attempts to create an
@@ -58,10 +61,11 @@ application in Azure AD on your behalf.
 
 This is a permission issue that may be due to the following causes:
 
-* [The user has only guest permission in the directory](#guestonly)
-* [The user is not authorized to add applications in the directory](#notauthtoadd)
+- [The user has only guest permission in the directory](#guestonly)
+- [The user is not authorized to add applications in the directory](#notauthtoadd)
 
 <a name="guestonly"></a>
+
 #### The user has only guest permission in the directory
 
 The best approach to resolve this issue, while granting only the minimum additional permissions
@@ -90,8 +94,7 @@ Alternatively, if you are prepared to give the user additional (administrator-le
 you can make the user a member of the **Global administrator** role as follows.
 
 > [!WARNING]
-> Users with this role have access to all administrative features in Azure Active Directory, as well as services that use Azure Active Directory identities such as Exchange Online, SharePoint Online, and Skype for Business Online. 
-
+> Users with this role have access to all administrative features in Azure Active Directory, as well as services that use Azure Active Directory identities such as Exchange Online, SharePoint Online, and Skype for Business Online.
 
 1. Sign in to the Azure portal at [https://portal.azure.com](https://portal.azure.com) using an administrator account.
    The account should be an [owner](/azure/role-based-access-control/built-in-roles#owner),
@@ -103,7 +106,7 @@ you can make the user a member of the **Global administrator** role as follows.
 1. Ensure you are editing the appropriate directory corresponding to the user subscription. If not, select **Switch directory** and log in using the appropriate credentials if required.
 
 1. In the **MANAGE** section choose **Users**.
-   
+
 1. Use the search box to filter the list and then choose the user you want to manage.
 
 1. In the **MANAGE** section choose **Directory role** and change the role to **Global administrator**.
@@ -114,6 +117,7 @@ It typically takes 15 to 20 minutes to apply the changes globally.
 After this period has elapsed, the user can retry creating the service connection.
 
 <a name="notauthtoadd"></a>
+
 #### The user is not authorized to add applications in the directory
 
 You must have permission to add integrated applications in the directory.
@@ -129,12 +133,12 @@ The directory administrator has permission to change this setting, as follows:
 
 1. In the **App registrations** section, change **Users can register applications** to **Yes**.
 
-
 #### Create the service principal manually with the user already having required permissions in Azure Active Directory
 
 You can also create the service principal with an existing user who already has the required permissions in Azure Active Directory. For more information, see [Create an Azure Resource Manager service connection with an existing service principal](../library/connect-to-azure.md#create-an-azure-resource-manager-service-connection-with-an-existing-service-principal).
 
 <a name="sessionexpired"></a>
+
 ### Failed to obtain an access token or A valid refresh token was not found
 
 These errors typically occur when your session has expired.
@@ -150,6 +154,7 @@ To resolve these issues:
 1. Create the service connection you need by opening the **Settings** page. Then, select **Services** > **New service connection** > **Azure Resource Manager**.
 
 <a name="contributorrole"></a>
+
 ### Failed to assign Contributor role
 
 This error typically occurs when you do not have **Write** permission
@@ -161,8 +166,8 @@ To resolve this issue, ask the subscription administrator to
 
 ## What authentication mechanisms are supported? How do Managed Identities work?
 
-Azure Resource Manager service connection can connect to a Microsoft Azure subscription using Service Principal Authentication (SPA) or  Managed Identity Authentication.
-Managed identities for Azure resources provides Azure services with an automatically managed identity in Azure Active Directory. You can use this identity to authenticate to any service that supports Azure AD authentication, without persisting credentials in code or in the service connection. [Learn more](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm) about managed identities for virtual machines.  
+Azure Resource Manager service connection can connect to a Microsoft Azure subscription using Service Principal Authentication (SPA) or Managed Identity Authentication.
+Managed identities for Azure resources provides Azure services with an automatically managed identity in Azure Active Directory. You can use this identity to authenticate to any service that supports Azure AD authentication, without persisting credentials in code or in the service connection. [Learn more](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm) about managed identities for virtual machines.
 
 > [!NOTE]
 >

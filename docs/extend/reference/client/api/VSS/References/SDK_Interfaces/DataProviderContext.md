@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,10 +15,8 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Contextual information that data providers can examine when populating their data 
+Contextual information that data providers can examine when populating their data
 
 ### Members
 
-* `properties`: {[key: string]: number}. Generic property bag that contains context-specific properties that data providers can use when populating their data dictionary
-
+- `properties`: {[key: string]: number}. Generic property bag that contains context-specific properties that data providers can use when populating their data dictionary

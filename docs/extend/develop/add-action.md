@@ -4,7 +4,7 @@ title: Add an Action | Extensions for Azure DevOps Services
 description: Add an action for your extension that extends Azure DevOps Services.
 ms.assetid: 7b117bbf-f188-41ce-8ff6-3723ebccea81
 ms.topic: conceptual
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.author: chcomley
 author: chcomley
 ms.date: 08/22/2016
@@ -24,6 +24,7 @@ In this example, we add an action to the query context menu in the work item que
 ## Update extension manifest file
 
 Below is the code snippet that adds your action to the contributions section of your [extension manifest](../develop/manifest.md).
+
 ```json
 ...
     "contributions": [
@@ -47,39 +48,41 @@ Below is the code snippet that adds your action to the contributions section of 
 ```
 
 ### Properties
-| Property           | Description                                                                                                                         
-|--------------------|-----------------------------------------------------------------------------------------------------------------|
-| text               | Text that appears on the menu item.                                                                         |                  
-| title              | Tooltip text that appears on the menu item.                                                                 |                   
-| icon               | URL to an icon that appears on the menu item. Relative URLs are resolved using baseUri.                     |                   
-| groupId            | Determines where this menu item appears in relation to the others. |
-| uri                | URI to a page that registers the menu action handler (see below).                                               |                   
-| registeredObjectId | (Optional) Name of the registered menu action handler. Defaults to the contributor id.                          |                   
+
+| Property           | Description                                                                             |
+| ------------------ | --------------------------------------------------------------------------------------- |
+| text               | Text that appears on the menu item.                                                     |
+| title              | Tooltip text that appears on the menu item.                                             |
+| icon               | URL to an icon that appears on the menu item. Relative URLs are resolved using baseUri. |
+| groupId            | Determines where this menu item appears in relation to the others.                      |
+| uri                | URI to a page that registers the menu action handler (see below).                       |
+| registeredObjectId | (Optional) Name of the registered menu action handler. Defaults to the contributor id.  |
 
 Learn about all of the places where you can add actions in the [contributions reference](../reference/targets/overview.md).
 
 ## Your HTML page
 
-Your menu action is represented by a JavaScript script embedded in an HTML file. Save the following contents in a file and location that matches the reference to it 
+Your menu action is represented by a JavaScript script embedded in an HTML file. Save the following contents in a file and location that matches the reference to it
 in your extension's manifest file.
 
 ```html
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Action Sample</title>
-	</head>
-	<body>
-		<div>
-			The end user doesn't see the content on this page.
-			It is only in the background to handle the contributed menu item being clicked.
-		</div>
-	</body>
-	</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Action Sample</title>
+  </head>
+  <body>
+    <div>
+      The end user doesn't see the content on this page. It is only in the
+      background to handle the contributed menu item being clicked.
+    </div>
+  </body>
+</html>
 ```
 
 ## Your JavaScript
+
 The script below registers the handler object to handle the action, place it in the `head` section of the HTML page above.
 
 > We aliased `lib` to be `node_modules/vss-web-extension-sdk/lib` in our `vss-extension.json` manifest file.
@@ -109,8 +112,8 @@ The script below registers the handler object to handle the action, place it in 
 
 ## Next Steps
 
-Now that you've written your extension, the next steps are to Package, Publish, and Install your extension. You can also check out the 
-documentation for Testing and Debugging your extension. 
+Now that you've written your extension, the next steps are to Package, Publish, and Install your extension. You can also check out the
+documentation for Testing and Debugging your extension.
 
-* [Package, publish, and install extensions](../publish/overview.md)
-* [Testing and debugging extensions](../test/debug-in-browser.md)
+- [Package, publish, and install extensions](../publish/overview.md)
+- [Testing and debugging extensions](../test/debug-in-browser.md)

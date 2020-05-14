@@ -8,7 +8,7 @@ ms.date: 04/08/2020
 
 The **Connect to feed** dialog box generates an appropriately formatted token that you can place into your .npmrc file with a lifespan of 90 days.
 
->  If you want to create a token that lasts _longer than 90 days_, skip to the second of the following methods.
+> If you want to create a token that lasts _longer than 90 days_, skip to the second of the following methods.
 
 **90-day token:**
 
@@ -22,9 +22,7 @@ The **Connect to feed** dialog box generates an appropriately formatted token th
 
 4. Select **Generate npm credentials**. Copy the credentials to add them to your user .npmrc file manually:
 
-   > [!div class="mx-imgBorder"] 
-   >![Connect to feed from Azure Artifacts Linux/Mac credentials](../../media/connect-to-feed-npm-creds-azure-devops-newnav.png)
-   > 
+   > [!div class="mx-imgBorder"] > ![Connect to feed from Azure Artifacts Linux/Mac credentials](../../media/connect-to-feed-npm-creds-azure-devops-newnav.png)
 
 ::: moniker-end
 
@@ -36,7 +34,7 @@ The **Connect to feed** dialog box generates an appropriately formatted token th
 
 3. Select **Generate npm credentials**. Copy the credentials to add them to your user .npmrc file manually:
 
-    ![Connect to feed from Azure Artifacts Linux/Mac credentials](../../media/connect-to-feed-npm-creds.png)
+   ![Connect to feed from Azure Artifacts Linux/Mac credentials](../../media/connect-to-feed-npm-creds.png)
 
 ::: moniker-end
 
@@ -46,25 +44,27 @@ The **Connect to feed** dialog box generates an appropriately formatted token th
 
 2. Base64 encode the PAT.
 
-    # [Windows](#tab/windows)
-    ```powershell
-    [Convert]::ToBase64String([system.Text.Encoding]::UTF8.GetBytes("YOUR_PAT_GOES_HERE"))
-    ```
+   # [Windows](#tab/windows)
 
-    # [Mac](#tab/mac)
-    ```
-    echo -n "YOUR_PAT_GOES_HERE" | base64
-    ```
+   ```powershell
+   [Convert]::ToBase64String([system.Text.Encoding]::UTF8.GetBytes("YOUR_PAT_GOES_HERE"))
+   ```
 
-3. In your $home/.npmrc file, add the following lines. Replace `yourorganization` and `yourfeed`, and add your username (can be anything except empty), PAT, and email.
+   # [Mac](#tab/mac)
 
-    ```ini
-    ; begin auth token
-    //pkgs.dev.azure.com/<yourorganization>/_packaging/<yourfeed>/npm/registry/:username=[ANY_VALUE_BUT_NOT_EMPTY_STRING]
-    //pkgs.dev.azure.com/<yourorganization>/_packaging/<yourfeed>/npm/registry/:_password=[BASE64_ENCODED_PERSONAL_ACCESS_TOKEN]
-    //pkgs.dev.azure.com/<yourorganization>/_packaging/<yourfeed>/npm/registry/:email=[NPM REQUIRES EMAIL TO BE SET BUT DOES NOT USE THE VALUE]
-    //pkgs.dev.azure.com/<yourorganization>/_packaging/<yourfeed>/npm/:username=[ANY_VALUE_BUT_NOT_EMPTY_STRING]
-    //pkgs.dev.azure.com/<yourorganization>/_packaging/<yourfeed>/npm/:_password=[BASE64_ENCODED_PERSONAL_ACCESS_TOKEN]
-    //pkgs.dev.azure.com/<yourorganization>/_packaging/<yourfeed>/npm/:email=[NPM REQUIRES EMAIL TO BE SET BUT DOES NOT USE THE VALUE]
-    ; end auth token
-    ```
+   ```
+   echo -n "YOUR_PAT_GOES_HERE" | base64
+   ```
+
+3. In your \$home/.npmrc file, add the following lines. Replace `yourorganization` and `yourfeed`, and add your username (can be anything except empty), PAT, and email.
+
+   ```ini
+   ; begin auth token
+   //pkgs.dev.azure.com/<yourorganization>/_packaging/<yourfeed>/npm/registry/:username=[ANY_VALUE_BUT_NOT_EMPTY_STRING]
+   //pkgs.dev.azure.com/<yourorganization>/_packaging/<yourfeed>/npm/registry/:_password=[BASE64_ENCODED_PERSONAL_ACCESS_TOKEN]
+   //pkgs.dev.azure.com/<yourorganization>/_packaging/<yourfeed>/npm/registry/:email=[NPM REQUIRES EMAIL TO BE SET BUT DOES NOT USE THE VALUE]
+   //pkgs.dev.azure.com/<yourorganization>/_packaging/<yourfeed>/npm/:username=[ANY_VALUE_BUT_NOT_EMPTY_STRING]
+   //pkgs.dev.azure.com/<yourorganization>/_packaging/<yourfeed>/npm/:_password=[BASE64_ENCODED_PERSONAL_ACCESS_TOKEN]
+   //pkgs.dev.azure.com/<yourorganization>/_packaging/<yourfeed>/npm/:email=[NPM REQUIRES EMAIL TO BE SET BUT DOES NOT USE THE VALUE]
+   ; end auth token
+   ```

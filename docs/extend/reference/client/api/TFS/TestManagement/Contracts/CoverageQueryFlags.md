@@ -16,6 +16,6 @@ Module path: `TFS/TestManagement/Contracts`
 
 ### Values
 
-* `Modules` If set, the Coverage.Modules property is populated.
-* `Functions` If set, the ModuleCoverage.Functions properties are populated.
-* `BlockData` If set, the ModuleCoverage.CoverageData field is populated.
+- `Modules` If set, the Coverage.Modules property is populated.
+- `Functions` If set, the ModuleCoverage.Functions properties are populated.
+- `BlockData` If set, the ModuleCoverage.CoverageData field is populated.

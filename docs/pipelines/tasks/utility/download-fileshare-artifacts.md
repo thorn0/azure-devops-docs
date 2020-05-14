@@ -6,7 +6,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 12/07/2018
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Download Fileshare Artifacts task
@@ -32,7 +32,6 @@ Use this task to download fileshare artifacts.
 <tr><td>Download path</td><td>(Required) Path on the agent machine where the artifacts will be downloaded.</td></tr>
 <tr><td>Parallelization limit</td><td>(Optional) Number of files to download simultaneously.</td></tr>
 
-
 <tr>
 <th style="text-align: center" colspan="2"><a href="~/pipelines/process/tasks.md#controloptions" data-raw-source="[Control options](../../process/tasks.md#controloptions)">Control options</a></th>
 </tr>
@@ -42,4 +41,3 @@ Use this task to download fileshare artifacts.
 ## Open source
 
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
-

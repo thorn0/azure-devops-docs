@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: macoope
 author: damccorm
 ms.date: 12/13/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Cache task
@@ -30,12 +30,12 @@ None
 
 ## Arguments
 
-| Argument | Description |
-|---|---|
-| Key (unique identifier) for the cache | This should be a string that can be segmented using '\|'. File paths can be absolute or relative to $(System.DefaultWorkingDirectory). |
-| Path of the folder to cache | Can be fully qualified or relative to $(System.DefaultWorkingDirectory). Wildcards are not supported. [Variables](https://go.microsoft.com/fwlink/?LinkID=550988) are supported. |
-| Cache hit variable | Variable to set to 'true' when the cache is restored (a cache hit), otherwise set to 'false'. |
-| Additional restore key prefixes | Additional restore key prefixes that are used if the primary key misses. This can be a newline-delimited list of key prefixes. |
+| Argument                              | Description                                                                                                                                                                       |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Key (unique identifier) for the cache | This should be a string that can be segmented using '\|'. File paths can be absolute or relative to \$(System.DefaultWorkingDirectory).                                           |
+| Path of the folder to cache           | Can be fully qualified or relative to \$(System.DefaultWorkingDirectory). Wildcards are not supported. [Variables](https://go.microsoft.com/fwlink/?LinkID=550988) are supported. |
+| Cache hit variable                    | Variable to set to 'true' when the cache is restored (a cache hit), otherwise set to 'false'.                                                                                     |
+| Additional restore key prefixes       | Additional restore key prefixes that are used if the primary key misses. This can be a newline-delimited list of key prefixes.                                                    |
 
 [**Control options**](../../process/tasks.md#controloptions)
 

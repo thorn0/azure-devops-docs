@@ -14,28 +14,26 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `administratorsGroup`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `administratorsGroup`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `authorization`: [EndpointAuthorization](../../../TFS/DistributedTask/Contracts/EndpointAuthorization.md). Gets or sets the authorization data for talking to the endpoint.
+- `authorization`: [EndpointAuthorization](../../../TFS/DistributedTask/Contracts/EndpointAuthorization.md). Gets or sets the authorization data for talking to the endpoint.
 
-* `createdBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). The Gets or sets Identity reference for the user who created the service endpoint
+- `createdBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). The Gets or sets Identity reference for the user who created the service endpoint
 
-* `data`: {[key: string]: string}. 
+- `data`: {[key: string]: string}.
 
-* `description`: string. Gets or Sets description of endpoint
+- `description`: string. Gets or Sets description of endpoint
 
-* `groupScopeId`: string. 
+- `groupScopeId`: string.
 
-* `id`: string. Gets or sets the identifier of this endpoint.
+- `id`: string. Gets or sets the identifier of this endpoint.
 
-* `name`: string. Gets or sets the friendly name of the endpoint.
+- `name`: string. Gets or sets the friendly name of the endpoint.
 
-* `readersGroup`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `readersGroup`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `type`: string. Gets or sets the type of the endpoint.
+- `type`: string. Gets or sets the type of the endpoint.
 
-* `url`: string. Gets or sets the url of the endpoint.
-
+- `url`: string. Gets or sets the url of the endpoint.

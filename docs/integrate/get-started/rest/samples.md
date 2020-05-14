@@ -5,7 +5,7 @@ ms.assetid: 9E17A266-051F-403F-A285-7F21D9CC52F0
 ms.technology: devops-ecosystem
 ms.topic: conceptual
 ms.custom: has-adal-ref
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.author: chcomley
 author: chcomley
 ms.date: 08/25/2016
@@ -15,7 +15,7 @@ ms.date: 08/25/2016
 
 ## Personal Access Tokens
 
-When using the REST APIs or .NET Libraries, you need to authenticate with Azure DevOps Services. Most samples on this site use Personal Access Tokens as they're a compact example for authenticating with the service.  However, there are a variety of authentication mechanisms available for Azure DevOps Services including ADAL, OAuth and Session Tokens.  Refer to the [Authentication](../authentication/authentication-guidance.md) section for guidance on which one is best suited for your scenario.
+When using the REST APIs or .NET Libraries, you need to authenticate with Azure DevOps Services. Most samples on this site use Personal Access Tokens as they're a compact example for authenticating with the service. However, there are a variety of authentication mechanisms available for Azure DevOps Services including ADAL, OAuth and Session Tokens. Refer to the [Authentication](../authentication/authentication-guidance.md) section for guidance on which one is best suited for your scenario.
 
 To get started with these samples [create a personal access token](../../../organizations/accounts/use-personal-access-tokens-to-authenticate.md).
 
@@ -23,14 +23,15 @@ To get started with these samples [create a personal access token](../../../orga
 Tip: Personal access tokens are like passwords. Keep them secret. Make sure you save them in a secure location once your personal access token is created.
 </div>
 
-If you wish to provide the personal access token through an HTTP header, you must first convert it to a Base64 string (the following example shows how to convert to Base64 using C#).  The resulting string can then be provided as an HTTP header in the format:
+If you wish to provide the personal access token through an HTTP header, you must first convert it to a Base64 string (the following example shows how to convert to Base64 using C#). The resulting string can then be provided as an HTTP header in the format:
+
 ```
 Authorization: Basic BASE64USERNAME:PATSTRING
-``` 
+```
 
 ## REST API
 
-Here is an example getting a list of projects for your organization. 
+Here is an example getting a list of projects for your organization.
 
 ```cs
 using System.Net.Http;
@@ -38,7 +39,7 @@ using System.Net.Http.Headers;
 
 ...
 
-//encode your personal access token                   
+//encode your personal access token
 string credentials = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", "", personalAccessToken)));
 
 ListOfProjectsResponse.Projects viewModel = null;
@@ -49,19 +50,19 @@ using (var client = new HttpClient())
     client.BaseAddress = new Uri($"https://dev.azure.com/{OrgName}");  //url of your organization
     client.DefaultRequestHeaders.Accept.Clear();
     client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", credentials); 
+    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", credentials);
 
-    //connect to the REST endpoint            
+    //connect to the REST endpoint
     HttpResponseMessage response = client.GetAsync("_apis/projects?stateFilter=All&api-version=1.0").Result;
-          
+
     //check to see if we have a successful response
     if (response.IsSuccessStatusCode)
     {
         //set the viewmodel from the content in the response
         viewModel = response.Content.ReadAsAsync<ListOfProjectsResponse.Projects>().Result;
-                
+
         //var value = response.Content.ReadAsStringAsync().Result;
-    }   
+    }
 }
 
 ```
@@ -74,7 +75,7 @@ In this example we are using two of the .NET Client Libraries. Make sure these a
 
 [Microsoft Visual Studio Services Client](https://www.nuget.org/packages/Microsoft.VisualStudio.Services.Client/)
 
-Here is a simple example getting a list of projects for your organization. 
+Here is a simple example getting a list of projects for your organization.
 
 ```cs
 using Microsoft.TeamFoundation.Core.WebApi;
@@ -88,7 +89,7 @@ VssBasicCredential credentials = new VssBasicCredential("", personalAccessToken)
 
 using (ProjectHttpClient projectHttpClient = new ProjectHttpClient(uri, credentials))
 {
-    IEnumerable<TeamProjectReference> projects = projectHttpClient.GetProjects().Result;                    
+    IEnumerable<TeamProjectReference> projects = projectHttpClient.GetProjects().Result;
 }
 
 ```
@@ -105,6 +106,4 @@ A: See the [https://github.com/Microsoft/vsts-restapi-samplecode](https://github
 
 A: Yes, see the [overview of client libraries](../client-libraries/dotnet.md)
 
-
-<!-- ENDSECTION --> 
-
+<!-- ENDSECTION -->

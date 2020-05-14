@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `eventType`: string. 
+- `eventType`: string.
 
-* `queue`: [TaskAgentQueue](../../../TFS/DistributedTask/Contracts/TaskAgentQueue.md). 
-
+- `queue`: [TaskAgentQueue](../../../TFS/DistributedTask/Contracts/TaskAgentQueue.md).

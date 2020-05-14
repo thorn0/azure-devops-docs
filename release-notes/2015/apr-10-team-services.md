@@ -38,7 +38,6 @@ If you’re familiar with the cumulative flow diagram (CFD) that shows up above 
 
 This sprint we also made a change to the code history hub by introducing a new view: **Branch Updates**. This view (only available for Git projects) shows all updates for a given branch, grouping commits by push and pull request activity. This view provides developers new insight into how their Git repo is being updated over time, and provides traceability from history to pull requests.
 
-
 ![Branch Updates view for Git projects](media/4_10_05.png)
 
 ## Cloud load testing support for 100 cores

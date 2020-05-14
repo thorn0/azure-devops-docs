@@ -16,5 +16,5 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `Online` The service host is currently connected and accepting commands.
-* `Offline` The service host is currently disconnected and not accepting commands.
+- `Online` The service host is currently connected and accepting commands.
+- `Offline` The service host is currently disconnected and not accepting commands.

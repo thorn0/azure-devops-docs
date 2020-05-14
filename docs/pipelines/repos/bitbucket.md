@@ -20,7 +20,7 @@ BitBucket and Azure Pipelines are two independent services that integrate well t
 
 # [YAML](#tab/yaml/)
 
-You create a new pipeline by first selecting a BitBucket Cloud repository and then a YAML file in that repository. The repository in which the YAML file is present is called `self` repository. By default, this is the repository that your pipeline builds. 
+You create a new pipeline by first selecting a BitBucket Cloud repository and then a YAML file in that repository. The repository in which the YAML file is present is called `self` repository. By default, this is the repository that your pipeline builds.
 
 You can later configure your pipeline to check out a different repository or multiple repositories. To learn how to do this, see [multi-repo checkout](multi-repo-checkout.md).
 
@@ -34,9 +34,9 @@ Azure Pipelines must be granted access to your repositories to trigger their bui
 
 There are 2 authentication types for granting Azure Pipelines access to your BitBucket Cloud repositories while creating a pipeline.
 
-| Authentication type            | Pipelines run using              |
-|--------------------------------|----------------------------------|
-| 1. [OAuth](#oauth-authentication)           | Your personal BitBucket identity |
+| Authentication type                                  | Pipelines run using              |
+| ---------------------------------------------------- | -------------------------------- |
+| 1. [OAuth](#oauth-authentication)                    | Your personal BitBucket identity |
 | 2. [Username and password](#password-authentication) | Your personal BitBucket identity |
 
 ### OAuth authentication
@@ -54,7 +54,7 @@ Create a new BitBucket service connection and provide the user name and password
 
 ## CI triggers
 
-Continuous integration (CI) triggers cause a pipeline to run whenever you push an update to the specified branches or you push  specified tags.
+Continuous integration (CI) triggers cause a pipeline to run whenever you push an update to the specified branches or you push specified tags.
 
 # [YAML](#tab/yaml/)
 
@@ -97,12 +97,12 @@ or when updates are made to such a pull request.
 
 You can specify the target branches when validating your pull requests.
 For example, to validate pull requests that
-target `master` and `releases/*`, you can use the following `pr` trigger. 
+target `master` and `releases/*`, you can use the following `pr` trigger.
 
 ```yaml
 pr:
-- master
-- releases/*
+  - master
+  - releases/*
 ```
 
 This configuration starts a new run the first time a new pull request is created, and after every update made to the pull request.
@@ -117,19 +117,19 @@ You can specify the full name of the branch (for example, `master`) or a wildcar
 
 BitBucket creates a new _ref_ when a pull request is created. The ref points to a _merge commit_, which is the merged code between the source and target branches of the pull request. The PR validation pipeline builds the commit this ref points to. This means that the YAML file that is used to run the pipeline is also a merge between the source and the target branch. As a result, the changes you make to the YAML file in source branch of the pull request can override the behavior defined by the YAML file in target branch.
 
-If no `pr` triggers appear in your YAML file, pull request validations are automatically enabled for all 
-branches, as if you wrote the following `pr` trigger. This configuration triggers a build when any 
+If no `pr` triggers appear in your YAML file, pull request validations are automatically enabled for all
+branches, as if you wrote the following `pr` trigger. This configuration triggers a build when any
 pull request is created, and when commits come into the source branch of any active pull request.
 
 ```yaml
 pr:
   branches:
     include:
-    - '*'  # must quote since "*" is a YAML reserved character; we want a string
+      - "*" # must quote since "*" is a YAML reserved character; we want a string
 ```
 
->[!IMPORTANT]
->When you specify a `pr` trigger, it replaces the default implicit `pr` trigger, and only pushes to branches that are explicitly configured to be included will trigger a pipeline.
+> [!IMPORTANT]
+> When you specify a `pr` trigger, it replaces the default implicit `pr` trigger, and only pushes to branches that are explicitly configured to be included will trigger a pipeline.
 
 For more complex triggers that need to exclude certain branches, you must use the full syntax as shown in the following example.
 
@@ -138,10 +138,10 @@ For more complex triggers that need to exclude certain branches, you must use th
 pr:
   branches:
     include:
-    - master
-    - releases/*
+      - master
+      - releases/*
     exclude:
-    - releases/old*
+      - releases/old*
 ```
 
 ### Paths
@@ -153,13 +153,13 @@ You can specify file paths to include or exclude. For example:
 pr:
   branches:
     include:
-    - master
-    - releases/*
+      - master
+      - releases/*
   paths:
     include:
-    - docs/*
+      - docs/*
     exclude:
-    - docs/README.md
+      - docs/README.md
 ```
 
 > [!NOTE]
@@ -175,7 +175,7 @@ pr:
   autoCancel: false
   branches:
     include:
-    - master
+      - master
 ```
 
 ### Opting out of PR validation

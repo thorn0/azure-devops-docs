@@ -9,7 +9,7 @@ description: In the **Sprint 151 Update** of Azure DevOps, we improved the GitHu
 
 # New Azure Pipelines App for Teams, improved GitHub and Azure Boards integration - Sprint 151 Update
 
-In the **Sprint 151 Update** of Azure DevOps, we improved the GitHub integration with Azure Boards by adding a GitHub Marketplace app to streamline the acquisition and configuration with your GitHub repositories. 
+In the **Sprint 151 Update** of Azure DevOps, we improved the GitHub integration with Azure Boards by adding a GitHub Marketplace app to streamline the acquisition and configuration with your GitHub repositories.
 In addition, you can now link work items in Azure Boards with related issues in GitHub. For example, you can accept bug reports from your users in GitHub while organizing your team's work in Azure Boards.
 
 In addition, we added a new Azure Pipelines app for Microsoft Teams that allows you to easily monitor and manage your pipelines from Teams.
@@ -49,15 +49,13 @@ Azure Repos:
 
 Head over to Azure DevOps and take a look.
 
-> [!div class="nextstepaction"]
-> [Go to Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
+> [!div class="nextstepaction"][go to azure devops](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
 
 ## Feedback
 
 We would love to hear what you think about these features. Use the feedback menu to report a problem or provide a suggestion.
 
-> [!div class="mx-imgBorder"]
-> ![Make a suggestion](../media/make-a-suggestion.png)
+> [!div class="mx-imgBorder"] > ![Make a suggestion](../media/make-a-suggestion.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-devops).
 

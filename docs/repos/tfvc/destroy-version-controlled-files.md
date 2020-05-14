@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Destroy Version Controlled Files
 
@@ -26,58 +25,59 @@ The following procedure shows you how to destroy files and folders by using the 
 **Required Permissions**
 
 To use the **destroy** command, you must be a member of the **Team Foundation Administrators** security group. For more information, see [Permissions and groups reference](../../organizations/security/permissions.md).
+
 ## Prerequisites for Running tf destroy
+
 Before you run **tf destroy** without the **/keephistory** option, we recommend that you first delete the files you want to destroy. For more information, see [Delete Files and Folders from Version Control](delete-restore-files-folders.md). After you delete a file, its file name now includes a deletion ID. For example, if a file name is aFile.cs, after deletion the file name is aFile.cs;x123, where x123 is the deletion ID.
 
 After you delete the files, you can synchronize the Team Foundation warehouse. Otherwise the warehouse will not be synchronized with the destroyed items.
 
 ### To permanently destroy version-controlled files
 
--   Click **Start**, click **All Programs**, click **Microsoft Visual Studio 2008**, click **Visual Studio Tools**, and then click **Visual Studio Command Prompt**.
+- Click **Start**, click **All Programs**, click **Microsoft Visual Studio 2008**, click **Visual Studio Tools**, and then click **Visual Studio Command Prompt**.
 
-    -   To preview the file aFile.cs without destroying it, type at the command prompt:
+  - To preview the file aFile.cs without destroying it, type at the command prompt:
 
-        ```
-        >tf destroy /preview /i $/MyTeamProject/aFile.cs
-        ```
+    ```
+    >tf destroy /preview /i $/MyTeamProject/aFile.cs
+    ```
 
-        > [!NOTE]
-        > The text in the Command Prompt window displays &quot;Destroyed: $/MyTeamProject/aFile.cs&quot;, but the file is not actually destroyed when you use the **/preview** option.
+    > [!NOTE]
+    > The text in the Command Prompt window displays &quot;Destroyed: \$/MyTeamProject/aFile.cs&quot;, but the file is not actually destroyed when you use the **/preview** option.
 
-    -   To destroy the file, aFile.cs, type at the command prompt:
+  - To destroy the file, aFile.cs, type at the command prompt:
 
-        ```
-        >tf destroy /i $/MyTeamProject/aFile.cs
-        ```
+    ```
+    >tf destroy /i $/MyTeamProject/aFile.cs
+    ```
 
-        This command displays information about possible pending changes and shelvesets in the Command Prompt window. Because you specified **/i** (non-interactive), you are not prompted with a **Yes**, **No**, **Yes to all** dialog box before the files are permanently removed.
+    This command displays information about possible pending changes and shelvesets in the Command Prompt window. Because you specified **/i** (non-interactive), you are not prompted with a **Yes**, **No**, **Yes to all** dialog box before the files are permanently removed.
 
-    -   To destroy all the files in aFolder and, at the same time, retain their history, type:
+  - To destroy all the files in aFolder and, at the same time, retain their history, type:
 
-        ```
-        >tf destroy /keephistory $/MyTeamProject/aFolder
-        ```
+    ```
+    >tf destroy /keephistory $/MyTeamProject/aFolder
+    ```
 
-        > [!NOTE]
-        > **/preview** cannot be specified with **/keephistory**.
+    > [!NOTE] > **/preview** cannot be specified with **/keephistory**.
 
-        This action retains the historical information about all the files in aFolder. You can use the **tf history** command to view the history of a file. You can also view the history in Source Control Explorer. For more information, see [History Command](history-command.md) and [View Historical Data](https://msdn.microsoft.com/library/ms181415).
+    This action retains the historical information about all the files in aFolder. You can use the **tf history** command to view the history of a file. You can also view the history in Source Control Explorer. For more information, see [History Command](history-command.md) and [View Historical Data](https://msdn.microsoft.com/library/ms181415).
 
-    -   Use the **/stopat** option to retain the historical information up to and including a *versionSpec* value. The *versionSpec* value can be the latest version, a specific changeset, or a date. For more information about *versionspec* values, see [Command-Line Syntax (Version Control)](https://msdn.microsoft.com/library/56f7w6be).
+  - Use the **/stopat** option to retain the historical information up to and including a _versionSpec_ value. The _versionSpec_ value can be the latest version, a specific changeset, or a date. For more information about _versionspec_ values, see [Command-Line Syntax (Version Control)](https://msdn.microsoft.com/library/56f7w6be).
 
-        To destroy all the files in the project MyTeamProject and, at the same time, retain the history for the files up to and including 10/23/2005, type:
+    To destroy all the files in the project MyTeamProject and, at the same time, retain the history for the files up to and including 10/23/2005, type:
 
-        ```
-        >tf destroy $/MyTeamProject /keephistory /stopat:D10/23/2005
-        ```
+    ```
+    >tf destroy $/MyTeamProject /keephistory /stopat:D10/23/2005
+    ```
 
-    -   Use the **/startcleanup** option to immediately clean up the TFVC metadata of the files that are no longer referenced by Team Foundation Server. Without this option, those metadata are removed when the database is maintained by a SQL process that runs every 5 days. Seven days after the TFVC metadata deletion, the content of the destroyed files will be deleted by another SQL process.
+  - Use the **/startcleanup** option to immediately clean up the TFVC metadata of the files that are no longer referenced by Team Foundation Server. Without this option, those metadata are removed when the database is maintained by a SQL process that runs every 5 days. Seven days after the TFVC metadata deletion, the content of the destroyed files will be deleted by another SQL process.
 
-        To immediately destroy all the files in aFolder, type:
+    To immediately destroy all the files in aFolder, type:
 
-        ```
-        >tf destroy /startcleanup $/MyTeamProject/aFolder
-        ```
+    ```
+    >tf destroy /startcleanup $/MyTeamProject/aFolder
+    ```
 
 ## See Also
 

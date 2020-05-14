@@ -15,7 +15,6 @@ Module path: `VSS/Common/Contracts/FormInput`
 
 ### Values
 
-* `Equals` 
+- `Equals`
 
-* `NotEquals` 
-
+- `NotEquals`

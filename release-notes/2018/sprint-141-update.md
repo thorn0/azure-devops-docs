@@ -45,8 +45,7 @@ Administration:
 
 Read about the new features below and head over to Azure DevOps Services to try them for yourself.
 
-> [!div class="nextstepaction"]
-> [Go to Azure DevOps Services](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
+> [!div class="nextstepaction"][go to azure devops services](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
 
 ## General
 
@@ -60,45 +59,39 @@ We understand the importance of search and are bringing back the expanded search
 
 Here is the default search box:
 
-> [!div class="mx-imgBorder"]
-> ![Default search box](media/141_10.png)
+> [!div class="mx-imgBorder"] > ![Default search box](media/141_10.png)
 
 Once you type a "/", you'll see the expanded search box:
 
-> [!div class="mx-imgBorder"]
-> ![Expanded search box](media/141_09.png)
+> [!div class="mx-imgBorder"] > ![Expanded search box](media/141_09.png)
 
 ## Azure Pipelines
 
 ### Azure Policy compliance and security validations in Pipelines
 
-We want ensure stability and security of software early in the development process while bringing development, security, and operations together. ​​ To do so, we have added support for [Azure Policy](https://azure.microsoft.com/services/azure-policy/). 
- 
+We want ensure stability and security of software early in the development process while bringing development, security, and operations together. ​​ To do so, we have added support for [Azure Policy](https://azure.microsoft.com/services/azure-policy/).
+
 Azure Policy helps you manage and prevent IT issues with policy definitions that enforce rules and effects for your resources. When you use Azure Policy, resources stay compliant with your corporate standards and service level agreements.​
- 
-To comply with compliance and security guidelines as part of release process, we have enhanced our Azure resource group deployment experience. Now, we are failing the Azure Resource Group deployment task with relevant policy related errors in case of any violations while deploying ARM templates. 
 
-> [!div class="mx-imgBorder"]
-> ![Azure Policy](media/141_04.png)
+To comply with compliance and security guidelines as part of release process, we have enhanced our Azure resource group deployment experience. Now, we are failing the Azure Resource Group deployment task with relevant policy related errors in case of any violations while deploying ARM templates.
 
-Additionally, we have added Azure Policy Release definition template. This will allow users to create Azure policies and assign these policies to resources, subscriptions, or management groups from the release definition itself. 
+> [!div class="mx-imgBorder"] > ![Azure Policy](media/141_04.png)
 
-> [!div class="mx-imgBorder"]
-> ![Azure Policy template](media/141_03.png)
+Additionally, we have added Azure Policy Release definition template. This will allow users to create Azure policies and assign these policies to resources, subscriptions, or management groups from the release definition itself.
+
+> [!div class="mx-imgBorder"] > ![Azure Policy template](media/141_03.png)
 
 ### Simplified continuous delivery to Azure VMs
 
-In this release, we added a new wizard to simplify the process of setting up continuous delivery to Azure Virtual Machines. Once you specify an Azure DevOps organization and a deployment group to register the virtual machine, a release pipeline will automatically be created with a sample script step. If you need to provision additional Azure resources, run scripts, upgrade your application, or run additional validation tests, you can easily customize this release pipeline. 
+In this release, we added a new wizard to simplify the process of setting up continuous delivery to Azure Virtual Machines. Once you specify an Azure DevOps organization and a deployment group to register the virtual machine, a release pipeline will automatically be created with a sample script step. If you need to provision additional Azure resources, run scripts, upgrade your application, or run additional validation tests, you can easily customize this release pipeline.
 
-> [!div class="mx-imgBorder"]
-> ![CI to Azure VMs](media/141_05.png)
+> [!div class="mx-imgBorder"] > ![CI to Azure VMs](media/141_05.png)
 
 ### The Xcode task supports newly released Xcode 10
 
 Coinciding with Apple's release of Xcode 10, you can now set your projects to build or be tested specifically with Xcode 10. Your pipeline can also run jobs in parallel with a [matrix](https://docs.microsoft.com/azure/devops/pipelines/yaml-schema?view=azure-devops#matrix) of Xcode versions. You can use the Microsoft-hosted macOS agent pool to run these builds. See the [guidance](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/xcode?view=azure-devops) for using Xcode in Azure Pipelines.
 
-> [!div class="mx-imgBorder"]
-> ![Xcode 10](media/141_01.png)
+> [!div class="mx-imgBorder"] > ![Xcode 10](media/141_01.png)
 
 ### Performance improvements when queuing a build
 
@@ -106,21 +99,19 @@ When you use a hosted agent, you get a fresh VM for each job. This provides an e
 
 ### Create Azure service connection with service principal that authenticates with a certificate
 
-You can now define an Azure service connection in Azure Pipelines or Team Foundation Server (TFS) with a service principal and certificate for authentication. With the Azure service connection now supporting service principal that authenticates with a certificate, you can now deploy to [Azure Stack](https://docs.microsoft.com/azure/devops/pipelines/targets/azure-stack?view=azure-devops) configured with [AD FS](https://docs.microsoft.com/azure/azure-stack/azure-stack-identity-overview). To create a service principal with certificate authentication, refer to the article on [how to create a service principal that authenticates with a certificate](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-authenticate-service-principal#create-service-principal-with-self-signed-certificate). 
+You can now define an Azure service connection in Azure Pipelines or Team Foundation Server (TFS) with a service principal and certificate for authentication. With the Azure service connection now supporting service principal that authenticates with a certificate, you can now deploy to [Azure Stack](https://docs.microsoft.com/azure/devops/pipelines/targets/azure-stack?view=azure-devops) configured with [AD FS](https://docs.microsoft.com/azure/azure-stack/azure-stack-identity-overview). To create a service principal with certificate authentication, refer to the article on [how to create a service principal that authenticates with a certificate](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-authenticate-service-principal#create-service-principal-with-self-signed-certificate).
 
-> [!div class="mx-imgBorder"]
-> ![Connect with service principal](media/141_02.png)
+> [!div class="mx-imgBorder"] > ![Connect with service principal](media/141_02.png)
 
 ### View test analytics in Pipelines
 
-Tracking test quality over time and improving test collateral is key to maintaining a healthy pipeline. The test analytics feature provides near real-time visibility into your test data for builds and release pipelines. It helps improve the efficiency of your pipeline by identifying repetitive, high impact quality issues. 
+Tracking test quality over time and improving test collateral is key to maintaining a healthy pipeline. The test analytics feature provides near real-time visibility into your test data for builds and release pipelines. It helps improve the efficiency of your pipeline by identifying repetitive, high impact quality issues.
 
-You can group test results by various elements, identify key tests for your branch or test files, or drill down to a specific test to view trends and understand quality issues such as flakiness. 
+You can group test results by various elements, identify key tests for your branch or test files, or drill down to a specific test to view trends and understand quality issues such as flakiness.
 
 View test analytics for [builds](https://docs.microsoft.com/azure/devops/pipelines/test/test-analytics?view=azure-devops#view-test-analytics-for-builds) and [release](https://docs.microsoft.com/azure/devops/pipelines/test/test-analytics?view=azure-devops#view-test-analytics-for-releases), preview below:
 
-> [!div class="mx-imgBorder"]
-> ![Test analytics](media/141_08.png)
+> [!div class="mx-imgBorder"] > ![Test analytics](media/141_08.png)
 
 For more information, see our [documentation](https://docs.microsoft.com/azure/devops/pipelines/test/test-analytics?view=azure-devops).
 
@@ -130,15 +121,13 @@ For more information, see our [documentation](https://docs.microsoft.com/azure/d
 
 For most teams, nearly all pull requests target the same branch, such as `master` or `develop`. However, in the case where you do need to target a different branch, it's easy to forget to change the target branch from the default. With the new feature to change the target branch of an active pull request, this is now a simple action. Just click on the pencil icon near the target branch name in the pull request header.
 
-> [!div class="mx-imgBorder"]
-> ![Change target branch](media/141_06.png)
+> [!div class="mx-imgBorder"] > ![Change target branch](media/141_06.png)
 
-Beyond just correcting mistakes, the feature to change target branches also makes it easy to "retarget" a pull request when the target branch has been merged or deleted. Consider a scenario where you have a PR targeting a feature branch which contains some feature your changes are dependent upon. You want to review your dependent changes in isolation from other changes in the feature branch, so you initially target `features/new-feature`. Reviewers can then see just your changes and leave the appropriate comments. 
+Beyond just correcting mistakes, the feature to change target branches also makes it easy to "retarget" a pull request when the target branch has been merged or deleted. Consider a scenario where you have a PR targeting a feature branch which contains some feature your changes are dependent upon. You want to review your dependent changes in isolation from other changes in the feature branch, so you initially target `features/new-feature`. Reviewers can then see just your changes and leave the appropriate comments.
 
-Now, consider what would happen if the feature branch also had a PR active, and was merged into `master` before your changes? Previously, you'd have to abandon your changes and create a new PR into `master`, or merge your PR into `features/new-feature`, and then create another PR from `features/new-feature` to `master`. With this new action to update the target branch, you can simply change the target branch of the PR from `features/new-feature` into `master`, preserving all of the context and comments. Changing the target branch even creates a new update to the PR which makes it easy to look back at prior diffs before the target branch change.  
+Now, consider what would happen if the feature branch also had a PR active, and was merged into `master` before your changes? Previously, you'd have to abandon your changes and create a new PR into `master`, or merge your PR into `features/new-feature`, and then create another PR from `features/new-feature` to `master`. With this new action to update the target branch, you can simply change the target branch of the PR from `features/new-feature` into `master`, preserving all of the context and comments. Changing the target branch even creates a new update to the PR which makes it easy to look back at prior diffs before the target branch change.
 
-> [!div class="mx-imgBorder"]
-> ![Target branch update](media/141_07.png)
+> [!div class="mx-imgBorder"] > ![Target branch update](media/141_07.png)
 
 ### Protect Git repos with cross platform compatibility settings
 
@@ -150,9 +139,9 @@ To help teams protect their repo and its developers, we have added new repositor
 
 ### Support AAD users in MSA accounts
 
-Azure DevOps now supports AzureAD (AAD) users accessing organizations that are backed by MSA. For administrators, this means that if your Azure DevOps organization uses MSAs for corporate users, you can now have new employees access using their AAD credentials instead of creating a new MSA identity solely for use with Azure DevOps. 
+Azure DevOps now supports AzureAD (AAD) users accessing organizations that are backed by MSA. For administrators, this means that if your Azure DevOps organization uses MSAs for corporate users, you can now have new employees access using their AAD credentials instead of creating a new MSA identity solely for use with Azure DevOps.
 
-We still believe that the best experience is for corporate users to [connect Azure DevOps to AAD](https://aka.ms/DevOpsAADConnect), but we learned earlier this year that administrators needed more time to make that conversion. By allowing AAD users into MSA backed organizations, new users will be able to access Azure DevOps once Azure DevOps has prevented creation of new MSA users with custom domain names backed by AzureAD at the end of the month. 
+We still believe that the best experience is for corporate users to [connect Azure DevOps to AAD](https://aka.ms/DevOpsAADConnect), but we learned earlier this year that administrators needed more time to make that conversion. By allowing AAD users into MSA backed organizations, new users will be able to access Azure DevOps once Azure DevOps has prevented creation of new MSA users with custom domain names backed by AzureAD at the end of the month.
 
 For organizations that already use AAD identities with Azure DevOps, this feature does not apply. For organizations that currently use MSA identities, please note that all existing users can continue to sign in with their MSA identities as they do today. This only applies for users added in the future (who potentially can't create an MSA with their corporate email address).
 
@@ -164,8 +153,7 @@ See our [blog post](https://blogs.msdn.microsoft.com/devops/2018/09/27/using-azu
 
 We would love to hear what you think about these features. Use the feedback menu to report a problem or provide a suggestion.
 
-> [!div class="mx-imgBorder"]
-> ![Make a suggestion](../media/help-make-a-suggestion.png)
+> [!div class="mx-imgBorder"] > ![Make a suggestion](../media/help-make-a-suggestion.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/vsts).
 

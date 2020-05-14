@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `aggregatedResultsAnalysis`: [AggregatedResultsAnalysis](../../../TFS/TestManagement/Contracts/AggregatedResultsAnalysis.md). 
+- `aggregatedResultsAnalysis`: [AggregatedResultsAnalysis](../../../TFS/TestManagement/Contracts/AggregatedResultsAnalysis.md).
 
-* `build`: [BuildReference](../../../TFS/TestManagement/Contracts/BuildReference.md). 
+- `build`: [BuildReference](../../../TFS/TestManagement/Contracts/BuildReference.md).
 
-* `teamProject`: [TFS_Core_Contracts.TeamProjectReference](../../../TFS/DistributedTask/Contracts/TeamProjectReference.md). 
+- `teamProject`: [TFS_Core_Contracts.TeamProjectReference](../../../TFS/DistributedTask/Contracts/TeamProjectReference.md).
 
-* `testFailures`: [TestFailuresAnalysis](../../../TFS/TestManagement/Contracts/TestFailuresAnalysis.md). 
-
+- `testFailures`: [TestFailuresAnalysis](../../../TFS/TestManagement/Contracts/TestFailuresAnalysis.md).

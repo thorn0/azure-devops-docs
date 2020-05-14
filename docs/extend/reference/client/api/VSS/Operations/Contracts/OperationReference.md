@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `VSS/Operations/Contracts`
 
-
 ### Members
 
-* `id`: string. The identifier for this operation.
+- `id`: string. The identifier for this operation.
 
-* `status`: [OperationStatus](../../../VSS/Operations/Contracts/OperationStatus.md). The current status of the operation.
+- `status`: [OperationStatus](../../../VSS/Operations/Contracts/OperationStatus.md). The current status of the operation.
 
-* `url`: string. Url to get the full object.
-
+- `url`: string. Url to get the full object.

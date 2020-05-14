@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: XAML Build Overview | REST API Reference for Team Foundation Server
 description: Work with xaml builds programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: f92b9363-6b36-4576-98ad-6c2fbf09d536
@@ -21,11 +21,11 @@ Completed builds are assigned a [build quality](./qualities.md).
 
 ![Build resources](./media/build-resources.png)
 
-* [Builds](./builds.md)
-* [Definitions](./definitions.md)
-* [Qualities](./qualities.md)
-* [Queues](./queues.md)
-* [Requests](./requests.md)
+- [Builds](./builds.md)
+- [Definitions](./definitions.md)
+- [Qualities](./qualities.md)
+- [Queues](./queues.md)
+- [Requests](./requests.md)
 
 ## Common tasks
 
@@ -42,7 +42,7 @@ Before the build request has started, you can [cancel](./requests.md#cancelabuil
 ### Get a build
 
 1. Get a list of [builds](./builds.md) and find the ID of the build you're interested in.
-For example, find the build that you requested by using the request ID.
+   For example, find the build that you requested by using the request ID.
 2. Get the [details](./builds.md#getbuilddetails) about the build.
 
 ### Set the build quality
@@ -50,4 +50,3 @@ For example, find the build that you requested by using the request ID.
 1. If you don't know what qualities are available in your project, get the list of [qualities](./qualities.md).
 2. Set the [quality](./builds.md#setthebuildquality) of the build.
 3. You can also define what [qualities](./qualities.md#addaquality) are available.
-

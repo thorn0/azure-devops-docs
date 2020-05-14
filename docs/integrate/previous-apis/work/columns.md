@@ -1,8 +1,8 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Columns for Kanban boards | REST API Reference for Team Foundation Server
-description: Work with the columns on boards programmatically using the REST APIs for Team Foundation Server. 
+description: Work with the columns on boards programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: D2B3A527-C95C-4E56-ADC5-D53FEF16025D
 ms.topic: article
 ms.author: chcomley
@@ -19,21 +19,24 @@ ms.date: 08/04/2016
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get columns on a board
+
 <a name="getcolumnsonaboard" />
 
 ```no-highlight
 GET https://{instance}/defaultcollection/{project}/{team}/_apis/work/boards/{board}/columns?api-version={api-version}
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:------------ |:------------------------------
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
+
+
 | URL
-| instance  | string  | | TFS server name ({server:port}).
-| project   | string  | | Name or ID of a project.
-| team	    | string  | Project's default team Id| Name or ID of a team within the project.
-| board	| string  || Name or ID of the specific board.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of a project.
+| team | string | Project's default team Id| Name or ID of a team within the project.
+| board | string || Name or ID of the specific board.
 | Query
-| api-version | string  || [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string || [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 ### By ID
 
@@ -97,7 +100,6 @@ GET https://mytfsserver/DefaultCollection/Fabrikam/Fabrikam%20Team/_apis/work/bo
 }
 ```
 
-
 ### By name
 
 #### Sample request
@@ -160,8 +162,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam/Fabrikam%20Team/_apis/work/bo
 }
 ```
 
-
 ## Update columns on a board
+
 <a name="updatecolumnsonaboard" />
 Allow user to update or delete an existing board column, or add a new column to the board.
 
@@ -169,25 +171,27 @@ Allow user to update or delete an existing board column, or add a new column to 
 PUT https://{instance}/defaultcollection/{project}/{team}/_apis/work/boards/{board}/columns?api-version={api-version}
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:--------|:------------------------------
-| URL
-| instance  | string  |   | TFS server name ({server:port}).
-| project   | string  |  | Name or ID of a project.
-| team	    | string  | Project's default team Id| Name or ID of a team within the project.
-| board	| string  |  | Name or ID of the specific board.
-| Query
-| api-version | string  |  |[Version](../../concepts/rest-api-versioning.md) of the API to use.
-| Body
-| columns.id	| string	| null | ID of a column, required for update. The new columns have ID of null. (Optional)
-| columns.name	| string	|  | Name of a column.
-| columns.itemLimit		| int | 0 | For first and last column, this indicates the max number of items we display on the board. For other columns, this indicates the WIP limit.
-| columns.stateMappings	| name/value pair |  | The state of the item that should be mapping to the column.
-| columns.isSplit		| boolean | false | Indicates if the column should be split, not applicable for first and last columns.
-| columns.description	| string  | empty string | Definition of done for a column, not applicable for first and last columns.
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
 
+
+| URL
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of a project.
+| team | string | Project's default team Id| Name or ID of a team within the project.
+| board | string | | Name or ID of the specific board.
+| Query
+| api-version | string | |[Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Body
+| columns.id | string | null | ID of a column, required for update. The new columns have ID of null. (Optional)
+| columns.name | string | | Name of a column.
+| columns.itemLimit | int | 0 | For first and last column, this indicates the max number of items we display on the board. For other columns, this indicates the WIP limit.
+| columns.stateMappings | name/value pair | | The state of the item that should be mapping to the column.
+| columns.isSplit | boolean | false | Indicates if the column should be split, not applicable for first and last columns.
+| columns.description | string | empty string | Definition of done for a column, not applicable for first and last columns.
 
 Assumption:
+
 1. Column order is determined by the order of element presenting in post data.
 2. If a column ID is null, we treat it as a new column.
 3. Any existing column that is NOT on the post data will be deleted.
@@ -195,21 +199,23 @@ Assumption:
 For each column, all applicable parameters are required even if no change. If any of the field values are not valid, the board will not be updated.
 
 When update fails, it will return bad request. Four exceptions can be thrown depending on the errors:
+
 1. DeletedBoardColumnIsNotEmptyException
 2. BoardValidationFailureException
 3. BoardUpdateFailureException
 4. NoPermissionUpdateBoardColumnsException
 
 Status code: 400
+
 ```json
 {
-    "$id": "1",
-    "innerException": null,
-    "message": "TF401017: You cannot delete column: InProgress.  This column has 1 items in it. You must first move the items to another column, then try deleting the column again..",
-    "typeName": "Microsoft.TeamFoundation.Agile.Server.Exceptions.DeletedBoardColumnIsNotEmptyException, MMicrosoft.TeamFoundation.Agile.Server, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
-    "typeKey": "DeletedBoardColumnIsNotEmptyException",
-    "errorCode": 0,
-    "eventId": 3000
+  "$id": "1",
+  "innerException": null,
+  "message": "TF401017: You cannot delete column: InProgress.  This column has 1 items in it. You must first move the items to another column, then try deleting the column again..",
+  "typeName": "Microsoft.TeamFoundation.Agile.Server.Exceptions.DeletedBoardColumnIsNotEmptyException, MMicrosoft.TeamFoundation.Agile.Server, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a",
+  "typeKey": "DeletedBoardColumnIsNotEmptyException",
+  "errorCode": 0,
+  "eventId": 3000
 }
 ```
 
@@ -218,6 +224,7 @@ Status code: 400
 ```
 PUT https://mytfsserver/DefaultCollection/Fabrikam/Fabrikam%20Team/_apis/work/boards/Backlog%20items/columns?api-version=2.0-preview
 ```
+
 ```json
 [
   {
@@ -321,20 +328,21 @@ PUT https://mytfsserver/DefaultCollection/Fabrikam/Fabrikam%20Team/_apis/work/bo
 }
 ```
 
-
 ## Get available board columns
 
 ```no-highlight
 GET https://{instance}/defaultcollection/[{project}/]_apis/work/boardcolumns/?api-version={api-version}
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:------------ |:------------------------------
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
+
+
 | URL
-| instance  | string  | | TFS server name ({server:port}).
-| project   | string  | | Name or ID of a project.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of a project.
 | Query
-| api-version | string  || [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string || [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 ### For a project
 
@@ -365,7 +373,6 @@ GET mytfsserver/defaultcollection/fabrikam/_apis/work/boardColumns/?api-version=
   ]
 }
 ```
-
 
 ### For a collection
 
@@ -408,4 +415,3 @@ GET mytfsserver/defaultcollection/_apis/work/boardColumns/?api-version=2.0-previ
   ]
 }
 ```
-

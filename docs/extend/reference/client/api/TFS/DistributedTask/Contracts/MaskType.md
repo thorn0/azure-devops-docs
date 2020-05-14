@@ -16,5 +16,5 @@ Module path: `TFS/DistributedTask/Contracts`
 
 ### Values
 
-* `Variable` 
-* `Regex` 
+- `Variable`
+- `Regex`

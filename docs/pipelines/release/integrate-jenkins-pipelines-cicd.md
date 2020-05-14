@@ -8,7 +8,7 @@ ms.reviewer: vijayma
 ms.assetid: CE485C57-C26A-4B9D-9D75-2FDDFB3361D6
 ms.custom: "mvc, seodec18"
 ms.date: 01/15/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Continuously deploy from a Jenkins build
@@ -23,14 +23,14 @@ Azure Pipelines supports integration with Jenkins so that you can use
 Jenkins for Continuous Integration (CI) while gaining several DevOps benefits
 from an Azure Pipelines release pipeline that deploys to Azure:
 
-* Reuse your existing investments in Jenkins build jobs
-* Track work items and related code changes
-* Get end-to-end traceability for your CI/CD workflow
-* Consistently deploy to a range of cloud services
-* Enforce quality of builds by gating deployments
-* Define work flows such as manual approval processes and CI triggers  
-* Integrate Jenkins with JIRA and Azure Pipelines to show associated issues for each Jenkins job
-* Integrate with other service management tools such as [ServiceNow](approvals/servicenow.md)
+- Reuse your existing investments in Jenkins build jobs
+- Track work items and related code changes
+- Get end-to-end traceability for your CI/CD workflow
+- Consistently deploy to a range of cloud services
+- Enforce quality of builds by gating deployments
+- Define work flows such as manual approval processes and CI triggers
+- Integrate Jenkins with JIRA and Azure Pipelines to show associated issues for each Jenkins job
+- Integrate with other service management tools such as [ServiceNow](approvals/servicenow.md)
 
 A typical approach is to use Jenkins to build an app from source
 code hosted in a Git repository such as GitHub and then deploy it to
@@ -40,11 +40,11 @@ Azure using Azure Pipelines.
 
 ## Before you begin
 
-* You'll need the source code for your app hosted in a repository such as GitHub, Azure Repos, GitHub Enterprise Server,
+- You'll need the source code for your app hosted in a repository such as GitHub, Azure Repos, GitHub Enterprise Server,
   Bitbucket Cloud, or any another source control provider that Jenkins can interact with.
-* You'll need a Jenkins server where you run your CI builds. You can quickly
-  [set up a Jenkins server on Azure](/azure/developer/jenkins/configure-on-linux-vm). 
-* You'll need a Jenkins project that builds you app. For example, 
+- You'll need a Jenkins server where you run your CI builds. You can quickly
+  [set up a Jenkins server on Azure](/azure/developer/jenkins/configure-on-linux-vm).
+- You'll need a Jenkins project that builds you app. For example,
   you can [build a Java app with Maven](https://jenkins.io/doc/tutorials/build-a-java-app-with-maven/) on Jenkins.
 
 ## Link Jenkins with Azure Pipelines
@@ -60,11 +60,10 @@ If you are not familiar with the general concepts in this section, see
 [Accessing your project settings](https://docs.microsoft.com/azure/devops/project/navigation/go-to-service-page?view=azure-devops#open-project-settings)
 and [Creating and using a service connection](../library/service-endpoints.md).
 
-
 ## Add a Jenkins artifact
 
 Create a new release pipeline and add a Jenkins artifact to it.
-After you select the Jenkins service connection, you can select an existing Jenkins job to deploy. 
+After you select the Jenkins service connection, you can select an existing Jenkins job to deploy.
 
 It's possible to [store the output from a Jenkins build in Azure blob storage](/azure/developer/jenkins/azure-storage-blobs-as-build-artifact-repository).
 If you have configured this in your Jenkins project, choose **Download artifacts from Azure storage**
@@ -78,12 +77,13 @@ and [Release artifacts and artifact sources](artifacts.md).
 ## Define the deployment steps
 
 Add the tasks you require to deploy your app to your chosen target in the **Agent job** section in the **Tasks** page
-of your release pipeline. For example, add the **Azure App Service Deploy** task to deploy a web app. 
+of your release pipeline. For example, add the **Azure App Service Deploy** task to deploy a web app.
 
 #### [YAML](#tab/yaml/)
+
 ::: moniker range="azure-devops"
 
-Add the **Azure App Service Deploy** task YAML code to a job in the  `.yml` file at the root of the repository.
+Add the **Azure App Service Deploy** task YAML code to a job in the `.yml` file at the root of the repository.
 
 ```YAML
 
@@ -114,17 +114,19 @@ YAML builds aren't yet available on TFS.
 ::: moniker-end
 
 #### [Classic](#tab/classic/)
+
 1. In the **Tasks** page of your release pipeline, choose the **+**
-  (plus sign) in the **Agent job** section.
+   (plus sign) in the **Agent job** section.
 
 1. In the list of tasks, select **Azure App Service Deploy** and choose **Add**.
-  You can use the Search box to quickly find the required task.
+   You can use the Search box to quickly find the required task.
 
 1. Save the pipeline.
 
 For an example of using the classic editor, see [Deploy an Azure Web App](../targets/webapp.md?tabs=classic).
 
-* * *
+---
+
 Whenever you trigger your Azure release pipeline, the artifacts published by the Jenkins CI job
 are downloaded and made available for your deployment. You get full traceability of your workflow,
 including the commits associated with each job.
@@ -147,7 +149,7 @@ To enable continuous deployment for an Azure hosted or directly visible Jenkins 
 
 1. Change the setting to **Enabled**.
 
-1. Choose **Add** and select the branch you want to create the trigger for. Or select the default branch.  
+1. Choose **Add** and select the branch you want to create the trigger for. Or select the default branch.
 
 However, if you have an **on-premises** Jenkins server, or your Azure DevOps organization **does not** have direct visibility
 to your Jenkins Server, you can trigger a release for an Azure pipeline from a Jenkins project using the following steps:
@@ -170,8 +172,7 @@ Now a new CD release will be triggered every time your Jenkins CI job is complet
 
 ## See also
 
-* [Artifacts](artifacts.md)
-* [Stages](../process/stages.md)
-* [Triggers](triggers.md)
-* [YAML schema reference](../yaml-schema.md)
-
+- [Artifacts](artifacts.md)
+- [Stages](../process/stages.md)
+- [Triggers](triggers.md)
+- [YAML schema reference](../yaml-schema.md)

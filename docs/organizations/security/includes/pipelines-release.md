@@ -2,7 +2,7 @@
 ms.topic: include
 ---
 
-<!--- Updated to support Azure DevOps Services + Azure DevOps Server 2019 Pipelines Release only 
+<!--- Updated to support Azure DevOps Services + Azure DevOps Server 2019 Pipelines Release only
 
 Administer release permissions
 Create releases
@@ -18,7 +18,6 @@ View release pipeline
 View releases
 
 -->
-
 
 <table>
 <tr valign="bottom">
@@ -131,35 +130,3 @@ View releases
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 

@@ -4,7 +4,7 @@ description: Using a TFVC repository with Azure Pipelines
 ms.topic: reference
 ms.assetid: d88333c9-e964-4f91-9532-5d014edb8277
 ms.date: 04/14/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Build TFVC repositories
@@ -19,14 +19,13 @@ monikerRange: '>= tfs-2015'
 
 While editing a pipeline that uses a TFVC repo, you have the following options.
 
-| Feature | Azure Pipelines, TFS 2018, TFS 2017, TFS 2015.4 | TFS 2015 RTM |
-|---------|-------------------------------------------------|--------------|
-| Clean              |Yes|Yes|
-| Specify local path |Yes|No|
-| Label sources      |Yes|No|
+| Feature            | Azure Pipelines, TFS 2018, TFS 2017, TFS 2015.4 | TFS 2015 RTM |
+| ------------------ | ----------------------------------------------- | ------------ |
+| Clean              | Yes                                             | Yes          |
+| Specify local path | Yes                                             | No           |
+| Label sources      | Yes                                             | No           |
 
-> [!NOTE]
-> **Azure Pipelines, TFS 2017.2 and newer:** Click **Advanced settings** to see some of the following options.
+> [!NOTE] > **Azure Pipelines, TFS 2017.2 and newer:** Click **Advanced settings** to see some of the following options.
 
 ### Repository name
 
@@ -51,9 +50,10 @@ For more information on how to optimize a TFVC workspace, see [Optimize your wor
 [!INCLUDE [include](includes/build-clean-intro.md)]
 
 ::: moniker range="azure-devops"
+
 > [!NOTE]
 > Cleaning is not relevant if you are using a [Microsoft-hosted agent](../agents/hosted.md) because you get a new agent every time in that case.
-::: moniker-end
+> ::: moniker-end
 
 ::: moniker range=">= tfs-2017"
 
@@ -61,13 +61,13 @@ For more information on how to optimize a TFVC workspace, see [Optimize your wor
 
 If you want to clean the repo, then select **true**, and then select one of the following options:
 
-* **Sources**: The build pipeline performs an undo of any changes and scorches the current workspace under `$(Build.SourcesDirectory)`.
+- **Sources**: The build pipeline performs an undo of any changes and scorches the current workspace under `$(Build.SourcesDirectory)`.
 
-* **Sources and output directory**: Same operation as **Sources** option above, plus: Deletes and recreates `$(Build.BinariesDirectory)`.
+- **Sources and output directory**: Same operation as **Sources** option above, plus: Deletes and recreates `$(Build.BinariesDirectory)`.
 
-* **Sources directory**: Deletes and recreates `$(Build.SourcesDirectory)`.
+- **Sources directory**: Deletes and recreates `$(Build.SourcesDirectory)`.
 
-* **All build directories**: Deletes and recreates `$(Agent.BuildDirectory)`.
+- **All build directories**: Deletes and recreates `$(Agent.BuildDirectory)`.
 
 ::: moniker-end
 
@@ -85,7 +85,7 @@ If you select **True** then the build pipeline performs an undo of any changes a
 
 #### TFS 2015 RTM
 
-[//]: # (TODO: confirm this is correct for TFVC; clarify folder)
+[//]: # "TODO: confirm this is correct for TFVC; clarify folder"
 
 Select **true** to delete the repository folder.
 
@@ -116,10 +116,11 @@ Select this check box if you have many team members uploading changes often and 
 Select the version control paths you want to include and exclude. In most cases, you should make sure that these filters are consistent with your TFVC mappings. You can use path filters to reduce the set of files that you want to trigger a build.
 
 > **Tips:**
->  * Paths are always specified relative to the root of the workspace.
->  * If you don't set path filters, then the root folder of the workspace is implicitly included by default.
->  * If you exclude a path, you cannot also include it unless you qualify it to a deeper folder. For example if you exclude _/tools_ then you could include _/tools/trigger-runs-on-these_
->  * The order of path filters doesn't matter.
+>
+> - Paths are always specified relative to the root of the workspace.
+> - If you don't set path filters, then the root folder of the workspace is implicitly included by default.
+> - If you exclude a path, you cannot also include it unless you qualify it to a deeper folder. For example if you exclude _/tools_ then you could include _/tools/trigger-runs-on-these_
+> - The order of path filters doesn't matter.
 
 <h2 id="gated">Gated check-in</h2>
 
@@ -143,14 +144,14 @@ For details on the gated check-in experience, see [Check in to a folder that is 
 
 By default, CI builds are not run after the gated check-in process is complete and the changes are checked in.
 
-However, if you **do** want CI builds to run after a gated check-in, select the **Run CI triggers for committed changes** check box. When you do this, the build pipeline does not add **&#42;&#42;&#42;NO_CI&#42;&#42;&#42;** to the changeset description. As a result, CI builds that are affected by the check-in are run.
+However, if you **do** want CI builds to run after a gated check-in, select the **Run CI triggers for committed changes** check box. When you do this, the build pipeline does not add **\*\*\*NO_CI\*\*\*** to the changeset description. As a result, CI builds that are affected by the check-in are run.
 
 ### A few other things to know
 
-* Make sure the folders you include in your trigger are also included in your workspace mappings.
-* You can run gated builds on either a [Microsoft-hosted agent](../agents/hosted.md) or a [self-hosted agent](../agents/agents.md).
+- Make sure the folders you include in your trigger are also included in your workspace mappings.
+- You can run gated builds on either a [Microsoft-hosted agent](../agents/hosted.md) or a [self-hosted agent](../agents/agents.md).
 
-## Q & A  
+## Q & A
 
 <!-- BEGINSECTION class="md-qanda" -->
 

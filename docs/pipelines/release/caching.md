@@ -20,13 +20,13 @@ Caching is currently supported in CI and deployment jobs, but not classic releas
 
 Pipeline caching and [pipeline artifacts](../artifacts/pipeline-artifacts.md) perform similar functions but are designed for different scenarios and should not be used interchangeably. In general:
 
-* **Use pipeline artifacts** when you need to take specific files produced in one job and share them with other jobs (and these other jobs will likely fail without them).
+- **Use pipeline artifacts** when you need to take specific files produced in one job and share them with other jobs (and these other jobs will likely fail without them).
 
-* **Use pipeline caching** when you want to improve build time by reusing files from previous runs (and not having these files will not impact the job's ability to run).
+- **Use pipeline caching** when you want to improve build time by reusing files from previous runs (and not having these files will not impact the job's ability to run).
 
 ## Using the Cache task
 
-Caching is added to a pipeline using the `Cache` pipeline task. This task works like any other task and is added to the `steps` section of a job. 
+Caching is added to a pipeline using the `Cache` pipeline task. This task works like any other task and is added to the `steps` section of a job.
 
 When a cache step is encountered during a run, the task will restore the cache based on the provided inputs. If no cache is found, the step completes and the next step in the job is run. After all steps in the job have run and assuming a successful job status, a special "save cache" step is run for each "restore cache" step that was not skipped. This step is responsible for saving the cache.
 
@@ -35,7 +35,7 @@ When a cache step is encountered during a run, the task will restore the cache b
 
 ### Configuring the task
 
-The `Cache` task has two required inputs: `key` and `path`. 
+The `Cache` task has two required inputs: `key` and `path`.
 
 #### Path input
 
@@ -45,18 +45,19 @@ The `Cache` task has two required inputs: `key` and `path`.
 
 `key` should be set to the identifier for the cache you want to restore or save. Keys are composed of a combination of string values, file paths, or file patterns, where each segment is separated by a `|` character.
 
-* **Strings**: <br>
-fixed value (like the name of the cache or a tool name) or taken from an environment variable (like the current OS or current job name)
+- **Strings**: <br>
+  fixed value (like the name of the cache or a tool name) or taken from an environment variable (like the current OS or current job name)
 
-* **File paths**: <br>
-path to a specific file whose contents will be hashed. This file must exist at the time the task is run. Keep in mind that *any* key segment that "looks like a file path" will be treated like a file path. In particular, this includes segments containing a `.`. This could result in the task failing when this "file" does not exist. 
+- **File paths**: <br>
+  path to a specific file whose contents will be hashed. This file must exist at the time the task is run. Keep in mind that _any_ key segment that "looks like a file path" will be treated like a file path. In particular, this includes segments containing a `.`. This could result in the task failing when this "file" does not exist.
+
   > [!TIP]
   > To avoid a path-like string segment from being treated like a file path, wrap it with double quotes, for example: `"my.key" | $(Agent.OS) | key.file`
 
-* **File patterns**: <br>
-comma-separated list of glob-style wildcard pattern that must match at least one file. For example:
-  * `**/yarn.lock`: all yarn.lock files under the sources directory
-  * `*/asset.json, !bin/**`: all asset.json files located in a directory under the sources directory, except under the bin directory
+- **File patterns**: <br>
+  comma-separated list of glob-style wildcard pattern that must match at least one file. For example:
+  - `**/yarn.lock`: all yarn.lock files under the sources directory
+  - `*/asset.json, !bin/**`: all asset.json files located in a directory under the sources directory, except under the bin directory
 
 The contents of any file identified by a file path or file pattern is hashed to produce a dynamic cache key. This is useful when your project has file(s) that uniquely identify what is being cached. For example, files like `package-lock.json`, `yarn.lock`, `Gemfile.lock`, or `Pipfile.lock` are commonly referenced in a cache key since they all represent a unique set of dependencies.
 
@@ -71,16 +72,16 @@ variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
 
 steps:
-- task: Cache@2
-  inputs:
-    key: 'yarn | "$(Agent.OS)" | yarn.lock'
-    restoreKeys: |
-       yarn | "$(Agent.OS)"
-       yarn
-    path: $(YARN_CACHE_FOLDER)
-  displayName: Cache Yarn packages
+  - task: Cache@2
+    inputs:
+      key: 'yarn | "$(Agent.OS)" | yarn.lock'
+      restoreKeys: |
+        yarn | "$(Agent.OS)"
+        yarn
+      path: $(YARN_CACHE_FOLDER)
+    displayName: Cache Yarn packages
 
-- script: yarn --frozen-lockfile
+  - script: yarn --frozen-lockfile
 ```
 
 In this example, the cache key contains three parts: a static string ("yarn"), the OS the job is running on since this cache is unique per operating system, and the hash of the `yarn.lock` file that uniquely identifies the set of dependencies in the cache.
@@ -93,14 +94,14 @@ On the first run after the task is added, the cache step will report a "cache mi
 
 #### Required software on self-hosted agent
 
-|        | Windows | Linux | Mac |
-|--------|-------- |------ |-------|
-|GNU Tar | Required| Required | No |
-|BSD Tar | No | No | Required |
-|7-Zip    | Recommended | No | No |
+|         | Windows     | Linux    | Mac      |
+| ------- | ----------- | -------- | -------- |
+| GNU Tar | Required    | Required | No       |
+| BSD Tar | No          | No       | Required |
+| 7-Zip   | Recommended | No       | No       |
 
 The above executables need to be in a folder listed in the PATH environment variable.
-Please note that the hosted agents come with the software included, this is only applicable for self-hosted agents. 
+Please note that the hosted agents come with the software included, this is only applicable for self-hosted agents.
 
 **Example**:
 
@@ -111,16 +112,16 @@ variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
 
 steps:
-- task: Cache@2
-  inputs:
-    key: yarn | $(Agent.OS) | yarn.lock
-    path: $(YARN_CACHE_FOLDER)
-    restoreKeys: |
-      yarn | $(Agent.OS)
-      yarn
-  displayName: Cache Yarn packages
+  - task: Cache@2
+    inputs:
+      key: yarn | $(Agent.OS) | yarn.lock
+      path: $(YARN_CACHE_FOLDER)
+      restoreKeys: |
+        yarn | $(Agent.OS)
+        yarn
+    displayName: Cache Yarn packages
 
-- script: yarn --frozen-lockfile
+  - script: yarn --frozen-lockfile
 ```
 
 In this example, the cache task will attempt to find if the key exists in the cache. If the key does not exist in the cache, it will try to use the first restore key `yarn | $(Agent.OS)`.
@@ -139,27 +140,27 @@ When a cache step is encountered during a run, the cache identified by the key i
 
 ### CI, manual, and scheduled runs
 
-| Scope | Read | Write |
-|--------|------|-------|
-| Source branch | Yes | Yes |
-| Master branch | Yes | No |
+| Scope         | Read | Write |
+| ------------- | ---- | ----- |
+| Source branch | Yes  | Yes   |
+| Master branch | Yes  | No    |
 
 ### Pull request runs
 
-| Scope | Read | Write |
-|--------|------|-------|
-| Source branch | Yes | No |
-| Target branch | Yes | No |
-| Intermediate branch (e.g. `refs/pull/1/merge`) | Yes | Yes |
-| Master branch | Yes | No |
+| Scope                                          | Read | Write |
+| ---------------------------------------------- | ---- | ----- |
+| Source branch                                  | Yes  | No    |
+| Target branch                                  | Yes  | No    |
+| Intermediate branch (e.g. `refs/pull/1/merge`) | Yes  | Yes   |
+| Master branch                                  | Yes  | No    |
 
 ### Pull request fork runs
 
-| Branch | Read | Write |
-|--------|------|-------|
-| Target branch | Yes | No |
-| Intermediate branch (e.g. `refs/pull/1/merge`) | Yes | Yes |
-| Master branch | Yes | No |
+| Branch                                         | Read | Write |
+| ---------------------------------------------- | ---- | ----- |
+| Target branch                                  | Yes  | No    |
+| Intermediate branch (e.g. `refs/pull/1/merge`) | Yes  | Yes   |
+| Master branch                                  | Yes  | No    |
 
 > [!TIP]
 > Because caches are already scoped to a project, pipeline, and branch, there is no need to include any project, pipeline, or branch identifiers in the cache key.
@@ -172,17 +173,17 @@ In the following example, the `install-deps.sh` step is skipped when the cache i
 
 ```yaml
 steps:
-- task: Cache@2
-  inputs:
-    key: mykey | mylockfile
-    restoreKeys: mykey
-    path: $(Pipeline.Workspace)/mycache
-    cacheHitVar: CACHE_RESTORED
+  - task: Cache@2
+    inputs:
+      key: mykey | mylockfile
+      restoreKeys: mykey
+      path: $(Pipeline.Workspace)/mycache
+      cacheHitVar: CACHE_RESTORED
 
-- script: install-deps.sh
-  condition: ne(variables.CACHE_RESTORED, 'true')
+  - script: install-deps.sh
+    condition: ne(variables.CACHE_RESTORED, 'true')
 
-- script: build.sh
+  - script: build.sh
 ```
 
 ## Bundler
@@ -196,16 +197,16 @@ variables:
   BUNDLE_PATH: $(Pipeline.Workspace)/.bundle
 
 steps:
-- task: Cache@2
-  inputs:
-    key: 'gems | "$(Agent.OS)" | my.gemspec'
-    restoreKeys: | 
-      gems | "$(Agent.OS)"
-      gems
-    path: $(BUNDLE_PATH)
-  displayName: Cache gems
+  - task: Cache@2
+    inputs:
+      key: 'gems | "$(Agent.OS)" | my.gemspec'
+      restoreKeys: |
+        gems | "$(Agent.OS)"
+        gems
+      path: $(BUNDLE_PATH)
+    displayName: Cache gems
 
-- script: bundle install
+  - script: bundle install
 ```
 
 ## ccache (C/C++)
@@ -219,23 +220,22 @@ variables:
   CCACHE_DIR: $(Pipeline.Workspace)/ccache
 
 steps:
-- bash: |
-    sudo apt-get install ccache -y    
-    echo "##vso[task.prependpath]/usr/lib/ccache"
-  displayName: Install ccache and update PATH to use linked versions of gcc, cc, etc
+  - bash: |
+      sudo apt-get install ccache -y    
+      echo "##vso[task.prependpath]/usr/lib/ccache"
+    displayName: Install ccache and update PATH to use linked versions of gcc, cc, etc
 
-- task: Cache@2
-  inputs:
-    key: 'ccache | "$(Agent.OS)"'
-    path: $(CCACHE_DIR)
-  displayName: ccache
+  - task: Cache@2
+    inputs:
+      key: 'ccache | "$(Agent.OS)"'
+      path: $(CCACHE_DIR)
+    displayName: ccache
 ```
 
 > [!NOTE]
 > In this example, the key is a fixed value (the OS name) and because caches are immutable, once a cache with this key is created for a particular scope (branch), the cache cannot be updated. This means subsequent builds for the same branch will not be able to update the cache even if the cache's contents have changed. This problem will be addressed in an upcoming feature: [10842: Enable fallback keys in Pipeline Caching](https://github.com/microsoft/azure-pipelines-tasks/issues/10842)
 
-See [ccache configuration settings](
-https://ccache.dev/manual/latest.html#_configuration_settings) for more options, including settings to control compression level.
+See [ccache configuration settings](https://ccache.dev/manual/latest.html#_configuration_settings) for more options, including settings to control compression level.
 
 ## Gradle
 
@@ -248,22 +248,22 @@ variables:
   GRADLE_USER_HOME: $(Pipeline.Workspace)/.gradle
 
 steps:
-- task: Cache@2
-  inputs:
-    key: 'gradle | "$(Agent.OS)"'
-    restoreKeys: gradle
-    path: $(GRADLE_USER_HOME)
-  displayName: Gradle build cache
+  - task: Cache@2
+    inputs:
+      key: 'gradle | "$(Agent.OS)"'
+      restoreKeys: gradle
+      path: $(GRADLE_USER_HOME)
+    displayName: Gradle build cache
 
-- script: |
-    ./gradlew --build-cache build    
-    # stop the Gradle daemon to ensure no files are left open (impacting the save cache operation later)
-    ./gradlew --stop    
-  displayName: Build
+  - script: |
+      ./gradlew --build-cache build    
+      # stop the Gradle daemon to ensure no files are left open (impacting the save cache operation later)
+      ./gradlew --stop
+    displayName: Build
 ```
 
 > [!NOTE]
-> In this example, the key is a fixed value (the OS name) and because caches are immutable, once a cache with this key is created for a particular scope (branch), the cache cannot be updated. This means subsequent builds for the same branch will not be able to update the cache even if the cache's contents have changed. This problem will be addressed in an upcoming feature:  [10842: Enable fallback keys in Pipeline Caching](https://github.com/microsoft/azure-pipelines-tasks/issues/10842).
+> In this example, the key is a fixed value (the OS name) and because caches are immutable, once a cache with this key is created for a particular scope (branch), the cache cannot be updated. This means subsequent builds for the same branch will not be able to update the cache even if the cache's contents have changed. This problem will be addressed in an upcoming feature: [10842: Enable fallback keys in Pipeline Caching](https://github.com/microsoft/azure-pipelines-tasks/issues/10842).
 
 ## Maven
 
@@ -274,19 +274,19 @@ Maven has a local repository where it stores downloads and built artifacts. To e
 ```yaml
 variables:
   MAVEN_CACHE_FOLDER: $(Pipeline.Workspace)/.m2/repository
-  MAVEN_OPTS: '-Dmaven.repo.local=$(MAVEN_CACHE_FOLDER)'
+  MAVEN_OPTS: "-Dmaven.repo.local=$(MAVEN_CACHE_FOLDER)"
 
 steps:
-- task: Cache@2
-  inputs:
-    key: 'maven | "$(Agent.OS)" | **/pom.xml'
-    restoreKeys: |
-      maven | "$(Agent.OS)"
-      maven
-    path: $(MAVEN_CACHE_FOLDER)
-  displayName: Cache Maven local repo
+  - task: Cache@2
+    inputs:
+      key: 'maven | "$(Agent.OS)" | **/pom.xml'
+      restoreKeys: |
+        maven | "$(Agent.OS)"
+        maven
+      path: $(MAVEN_CACHE_FOLDER)
+    displayName: Cache Maven local repo
 
-- script: mvn install -B -e
+  - script: mvn install -B -e
 ```
 
 If you are using a [Maven task](../tasks/build/maven.md), make sure to also pass the `MAVEN_OPTS` variable because it gets overwritten otherwise:
@@ -294,8 +294,8 @@ If you are using a [Maven task](../tasks/build/maven.md), make sure to also pass
 ```yaml
 - task: Maven@3
   inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m $(MAVEN_OPTS)'
+    mavenPomFile: "pom.xml"
+    mavenOptions: "-Xmx3072m $(MAVEN_OPTS)"
 ```
 
 ## .NET/NuGet
@@ -309,13 +309,13 @@ variables:
   NUGET_PACKAGES: $(Pipeline.Workspace)/.nuget/packages
 
 steps:
-- task: Cache@2
-  inputs:
-    key: 'nuget | "$(Agent.OS)" | **/packages.lock.json,!**/bin/**'
-    restoreKeys: |
-       nuget | "$(Agent.OS)"
-    path: $(NUGET_PACKAGES)
-  displayName: Cache NuGet packages
+  - task: Cache@2
+    inputs:
+      key: 'nuget | "$(Agent.OS)" | **/packages.lock.json,!**/bin/**'
+      restoreKeys: |
+        nuget | "$(Agent.OS)"
+      path: $(NUGET_PACKAGES)
+    displayName: Cache NuGet packages
 ```
 
 See [Package reference in project files](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) for more details.
@@ -333,15 +333,15 @@ variables:
   npm_config_cache: $(Pipeline.Workspace)/.npm
 
 steps:
-- task: Cache@2
-  inputs:
-    key: 'npm | "$(Agent.OS)" | package-lock.json'
-    restoreKeys: |
-       npm | "$(Agent.OS)"
-    path: $(npm_config_cache)
-  displayName: Cache npm
+  - task: Cache@2
+    inputs:
+      key: 'npm | "$(Agent.OS)" | package-lock.json'
+      restoreKeys: |
+        npm | "$(Agent.OS)"
+      path: $(npm_config_cache)
+    displayName: Cache npm
 
-- script: npm ci
+  - script: npm ci
 ```
 
 If your project does not have a `package-lock.json` file, reference the `package.json` file in the cache key input instead.
@@ -360,15 +360,15 @@ variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
 
 steps:
-- task: Cache@2
-  inputs:
-    key: 'yarn | "$(Agent.OS)" | yarn.lock'
-    restoreKeys: |
-       yarn | "$(Agent.OS)"
-    path: $(YARN_CACHE_FOLDER)
-  displayName: Cache Yarn packages
+  - task: Cache@2
+    inputs:
+      key: 'yarn | "$(Agent.OS)" | yarn.lock'
+      restoreKeys: |
+        yarn | "$(Agent.OS)"
+      path: $(YARN_CACHE_FOLDER)
+    displayName: Cache Yarn packages
 
-- script: yarn --frozen-lockfile
+  - script: yarn --frozen-lockfile
 ```
 
 ## PHP/Composer
@@ -382,16 +382,16 @@ variables:
   COMPOSER_CACHE_DIR: $(Pipeline.Workspace)/.composer
 
 steps:
-- task: Cache@2
-  inputs:
-    key: 'composer | "$(Agent.OS)" | composer.lock'
-    restoreKeys: |
-      composer | "$(Agent.OS)"
-      composer
-    path: $(COMPOSER_CACHE_DIR)
-  displayName: Cache composer
+  - task: Cache@2
+    inputs:
+      key: 'composer | "$(Agent.OS)" | composer.lock'
+      restoreKeys: |
+        composer | "$(Agent.OS)"
+        composer
+      path: $(COMPOSER_CACHE_DIR)
+    displayName: Cache composer
 
-- script: composer install
+  - script: composer install
 ```
 
 ## Known issues and feedback

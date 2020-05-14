@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 04/13/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # About accessing your organization via Azure AD
@@ -62,9 +62,8 @@ A: [Restore the user](/azure/active-directory/active-directory-users-restore), r
 
 ## Related articles
 
-* [Add Azure DevOps Services users to Azure AD](add-users-to-azure-ad.md)
-* [Connect your organization to Azure AD](connect-organization-to-aad.md)
-* [Disconnect your organization from Azure AD](disconnect-organization-from-aad.md)
-* [Get a list of organizations backed by Azure AD](get-list-of-organizations-connected-to-azure-active-directory.md)
-* [Restrict organization creation with tenant policy](azure-ad-tenant-policy-restrict-org-creation.md)
-
+- [Add Azure DevOps Services users to Azure AD](add-users-to-azure-ad.md)
+- [Connect your organization to Azure AD](connect-organization-to-aad.md)
+- [Disconnect your organization from Azure AD](disconnect-organization-from-aad.md)
+- [Get a list of organizations backed by Azure AD](get-list-of-organizations-connected-to-azure-active-directory.md)
+- [Restrict organization creation with tenant policy](azure-ad-tenant-policy-restrict-org-creation.md)

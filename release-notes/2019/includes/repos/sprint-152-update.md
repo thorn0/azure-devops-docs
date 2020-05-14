@@ -6,15 +6,13 @@ ms.topic: include
 
 Pull requests let your team review code and give feedback on changes before merging them into the master branch. They have become an important part of many teams’ workflows since you can step through proposed changes, leave comments, and vote to approve or reject code changes.
 
-To make it easier for you to find your pull requests, we added a filtering option to let you search for PRs using the target branch. 
+To make it easier for you to find your pull requests, we added a filtering option to let you search for PRs using the target branch.
 
-> [!div class="mx-imgBorder"]
-> ![Badge](../../media/152_01.png "Azure Pipelines pull request filtering")
+> [!div class="mx-imgBorder"] > ![Badge](../../media/152_01.png "Azure Pipelines pull request filtering")
 
 You can also use the target branch filtering to customize the pull requests view in the **Mine** tab.
 
-> [!div class="mx-imgBorder"]
-> ![Badge](../../media/152_02.png "Customize pull request in Mine tab")
+> [!div class="mx-imgBorder"] > ![Badge](../../media/152_02.png "Customize pull request in Mine tab")
 
 ### Allow extensions to add syntax highlighting and autocomplete
 
@@ -28,10 +26,9 @@ In addition, we added support for [Kusto language](https://docs.microsoft.com/az
 
 ### Manage git references from the command line
 
-With the Azure Repos `ref command`, you can now create, list, delete references (branch/tag) and also lock or unlock a branch reference.  This makes it easier to tag a commit ID without having to checkout the whole repository when working with Azure Repos from the command line. 
+With the Azure Repos `ref command`, you can now create, list, delete references (branch/tag) and also lock or unlock a branch reference. This makes it easier to tag a commit ID without having to checkout the whole repository when working with Azure Repos from the command line.
 
 For more details on the commands and its syntax, see the documentation [here](https://docs.microsoft.com/cli/azure/ext/azure-devops/repos/ref?view=azure-cli-latest).
-
 
 ### Update repository name and default branch from the command line
 

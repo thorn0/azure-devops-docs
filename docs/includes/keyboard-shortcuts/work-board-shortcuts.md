@@ -2,22 +2,20 @@
 ms.topic: include
 ---
 
-
 <a id="kanban-board-shortcuts"></a>
 
 ::: moniker range=">= tfs-2015"
 
-You can use the following keyboard shortcuts from any Kanban board, that is, when working from **Boards>Boards** or **Work>Board** page.  
+You can use the following keyboard shortcuts from any Kanban board, that is, when working from **Boards>Boards** or **Work>Board** page.
 
 ::: moniker-end
 
 ::: moniker range="tfs-2015"
 
 > [!NOTE]  
-> The following shortcuts are available from the web portal for Azure DevOps Services and TFS 2015.2 and later versions. 
+> The following shortcuts are available from the web portal for Azure DevOps Services and TFS 2015.2 and later versions.
 
 ::: moniker-end
-
 
 ::: moniker range="azure-devops"
 
@@ -55,11 +53,9 @@ You can use the following keyboard shortcuts from any Kanban board, that is, whe
 </tbody>
 </table>
 
-
 ::: moniker-end
 
 ::: moniker range=">= tfs-2015 <= azure-devops-2019"
-
 
 <table>
 <tbody valign="top">
@@ -95,7 +91,4 @@ You can use the following keyboard shortcuts from any Kanban board, that is, whe
 </tbody>
 </table>
 
- 
 ::: moniker-end
-
- 

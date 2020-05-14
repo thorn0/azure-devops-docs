@@ -3,7 +3,7 @@ title: Release Views | REST API Reference for VSTS
 description: Work with release views programmatically using the REST APIs for VSTS .
 ms.assetid: AED5CC40-4B11-447E-BAE6-D9806687736E
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 ms.date: 10/10/2016
 ---
 
@@ -23,11 +23,13 @@ ms.date: 10/10/2016
 GET https://{account}.Feeds.VisualStudio.com/DefaultCollection/_apis/packaging/feeds/{feed}/views?api-version={version}
 ```
 
-| Parameter | Type    | Notes
-|:----------|:--------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account   | string  | VSTS organization.
-| feed      | string  | Name or ID of the feed.
+| account | string | VSTS organization.
+| feed | string | Name or ID of the feed.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -81,19 +83,20 @@ GET https://mytfsserver/DefaultCollection/_apis/packaging/feeds/fabrikam/views?a
 }
 ```
 
-
 ## Get a release view
 
 ```httprequest
 GET https://{account}.Feeds.VisualStudio.com/DefaultCollection/_apis/packaging/feeds/{feed}/views/{view}?api-version={version}
 ```
 
-| Parameter | Type    | Notes
-|:----------|:--------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account   | string  | VSTS organization.
-| feed        | string | Name or ID of the feed.
-| view        | string | Name or ID of the release view.
+| account | string | VSTS organization.
+| feed | string | Name or ID of the feed.
+| view | string | Name or ID of the release view.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -125,31 +128,33 @@ GET https://mytfsserver/DefaultCollection/_apis/packaging/feeds/fabrikam/views/A
 }
 ```
 
-
-
 ## Create a release view
+
 Release view names are limited to 64 characters and can only contain alphanumeric characters.
 
 ```httprequest
 POST https://{account}.Feeds.VisualStudio.com/DefaultCollection/_apis/packaging/feeds/{feed}/views?api-version={version}
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account     | string | VSTS organization.
-| feed        | string | Name or ID of the feed.
+| account | string | VSTS organization.
+| feed | string | Name or ID of the feed.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name        | string | Name of the release view to be created.
-| type        | string | Type of the release view to be created, currently only "release" views are supported.
+| name | string | Name of the release view to be created.
+| type | string | Type of the release view to be created, currently only "release" views are supported.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/_apis/packaging/feeds/fabrikam/views?api-version=3.0-preview
 ```
+
 ```json
 {
   "name": "Alpha",
@@ -179,29 +184,31 @@ POST https://mytfsserver/DefaultCollection/_apis/packaging/feeds/fabrikam/views?
 }
 ```
 
-
 ## Update a release view
 
 ```httprequest
 PATCH https://{account}.Feeds.VisualStudio.com/DefaultCollection/_apis/packaging/feeds/{feed}/views/{view}?api-version={version}
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account     | string | VSTS organization.
-| feed        | string | Name or ID of feed to be updated.
-| view        | string | Name or ID of the release view to be updated.
+| account | string | VSTS organization.
+| feed | string | Name or ID of feed to be updated.
+| view | string | Name or ID of the release view to be updated.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| name        | string | Updated name of the release view.
+| name | string | Updated name of the release view.
 
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/packaging/feeds/fabrikam/views/Alpha?api-version=3.0-preview
 ```
+
 ```json
 {
   "name": "Beta"
@@ -230,19 +237,20 @@ PATCH https://mytfsserver/DefaultCollection/_apis/packaging/feeds/fabrikam/views
 }
 ```
 
-
 ## Delete a release view
 
 ```httprequest
 DELETE https://{account}.Feeds.VisualStudio.com/DefaultCollection/_apis/packaging/feeds/{feed}/views/{view}?api-version={version}
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account     | string | VSTS organization.
-| feed        | string | Name or ID of the feed to be deleted.
-| view        | string | Name or ID of the release view to be deleted.
+| account | string | VSTS organization.
+| feed | string | Name or ID of the feed to be deleted.
+| view | string | Name or ID of the release view to be deleted.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -251,4 +259,3 @@ DELETE https://{account}.Feeds.VisualStudio.com/DefaultCollection/_apis/packagin
 ```
 DELETE https://mytfsserver/DefaultCollection/_apis/packaging/feeds/fabrikam/views/Beta?api-version=3.0-preview
 ```
-

@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `allowOverride`: boolean. 
+- `allowOverride`: boolean.
 
-* `isSecret`: boolean. 
+- `isSecret`: boolean.
 
-* `value`: string. 
-
+- `value`: string.

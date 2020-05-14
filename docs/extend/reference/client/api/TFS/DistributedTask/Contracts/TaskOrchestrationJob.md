@@ -18,17 +18,16 @@ Extends: [TaskOrchestrationItem](../../../TFS/DistributedTask/Contracts/TaskOrch
 
 ### Members
 
-* `demands`: any[]. 
+- `demands`: any[].
 
-* `executeAs`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `executeAs`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `executionTimeout`: any. 
+- `executionTimeout`: any.
 
-* `instanceId`: string. 
+- `instanceId`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `tasks`: [TaskInstance](../../../TFS/DistributedTask/Contracts/TaskInstance.md)[]. 
+- `tasks`: [TaskInstance](../../../TFS/DistributedTask/Contracts/TaskInstance.md)[].
 
-* `variables`: {[key: string]: string}. 
-
+- `variables`: {[key: string]: string}.

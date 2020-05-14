@@ -7,7 +7,7 @@ ms.technology: devops-migrate
 ms.date: 04/26/2018
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Explore how to progressively expose your Azure DevOps extension releases in production to validate, before impacting all users
@@ -17,9 +17,10 @@ monikerRange: '>= tfs-2013'
 In today's fast-paced, feature-driven markets, it's important to continuously deliver value and receive feedback on features quickly and continuously. Partnering with end users to get early versions of features vetted out is valuable.
 
 Are you planning to build and deploy Azure DevOps extensions to production? You probably have a few questions, such as:
-* How do you embrace DevOps to deliver changes and value faster?
-* How do you mitigate the risk of deploying to production?
-* How do you automate the build and deployment?
+
+- How do you embrace DevOps to deliver changes and value faster?
+- How do you mitigate the risk of deploying to production?
+- How do you automate the build and deployment?
 
 This topic aims to answer these questions and share learnings using rings with Azure DevOps extensions. For an insight into the Microsoft guidelines, read [Configuring your release pipelines for safe deployments](https://devblogs.microsoft.com/devops/configuring-your-release-pipelines-for-safe-deployments/).
 
@@ -30,18 +31,19 @@ Deployment rings were first discussed in [Jez Humble's book](https://www.continu
 ## Considerations
 
 Before you convert your deployment infrastructure to a ringed deployment model, it's important to consider:
-* Who are your primary types of users? For example, early adopters and users.
-* What's your application topology?
-* What's the value of embracing ringed deployment model?
-* What's the cost to convert your current infrastructure to a ringed deployment model?
+
+- Who are your primary types of users? For example, early adopters and users.
+- What's your application topology?
+- What's the value of embracing ringed deployment model?
+- What's the cost to convert your current infrastructure to a ringed deployment model?
 
 ## User types
 
 In the shown example, users fall into three general buckets in production:
 
-* **Canaries** who voluntarily test bleeding edge features as soon as they are available.
-* **Early adopters** who voluntarily preview releases, considered more refined than the canary bits.
-* **Users** who consume the products, after passing through canaries and early adopters.
+- **Canaries** who voluntarily test bleeding edge features as soon as they are available.
+- **Early adopters** who voluntarily preview releases, considered more refined than the canary bits.
+- **Users** who consume the products, after passing through canaries and early adopters.
 
 ![User Rings](./media/phase-rollout-with-rings/phase-rollout-with-rings-rings.png)
 
@@ -59,10 +61,11 @@ Next you need to map the topology of your application to the ringed deployment m
 > Start small, prototype, and continuously compare impact, value, and cost.
 
 At the application level, the composition of Azure DevOps extensions is innocuous, easy to digest, scale, and deploy independently. Each extension:
-* Has one of more web and script files
-* Interfaces with Core client
-* Interfaces with REST client and REST APIs
-* Persists state in cache or resilient storage
+
+- Has one of more web and script files
+- Interfaces with Core client
+- Interfaces with REST client and REST APIs
+- Persists state in cache or resilient storage
 
 ![Progressive exposure of the application layer](./media/phase-rollout-with-rings/phase-rollout-with-rings-app-layer.png)
 
@@ -71,19 +74,20 @@ At the infrastructure level, the extensions are published to the [Visual Studio 
 ![Progressive exposure of the infrastructure layer](./media/phase-rollout-with-rings/phase-rollout-with-rings-inf-layer.png)
 
 The extension topology is perfectly suited for the ring deployment model and to publish the extension to each deployment ring:
-*  A **private** development version for the canary ring
-*  A **private** preview version for the early adopter ring
-*  A **public** production version for the Users ring
+
+- A **private** development version for the canary ring
+- A **private** preview version for the early adopter ring
+- A **public** production version for the Users ring
 
 > [!TIP]
-> By publishing your extension as private, you're effectively limiting and controlling their exposure for users you explicitly invite. 
+> By publishing your extension as private, you're effectively limiting and controlling their exposure for users you explicitly invite.
 
 ## Moving changes through deployment rings
 
 Let's observe how a change triggers and moves through the ring-based deployment process, using the [Azure DevOps Developer Tools Build Tasks](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.vsts-developer-tools-build-tasks) extension.
 
 **Azure DevOps Developer Tools Build Tasks** extension is the secret sauce, used to package and publish Azure DevOps extensions to the Visual Studio Marketplace.
- 
+
 ![Extension rings](./media/phase-rollout-with-rings/phase-rollout-with-rings-pipeline.png)
 
 1. A developer from the [Countdown Widget extension](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.CountdownWidget) project commits a change to the [GitHub](https://github.com/ALM-Rangers/Countdown-Widget-Extension) repository.
@@ -93,12 +97,12 @@ Let's observe how a change triggers and moves through the ring-based deployment 
 4. The **Canaries** deployment publishes a private extension to the marketplace and shares it with predefined organizations. Only the **Canaries** are impacted by the change.
 5. The **Canaries** deployment triggers the **Early Adopter** environment deployment. A pre-deployment approval gate requires any one of the authorized users to approve the release.
 
-	![Pre-deployment approval for Early Adopter environment](./media/phase-rollout-with-rings/phase-rollout-with-rings-early-approval.png)
+   ![Pre-deployment approval for Early Adopter environment](./media/phase-rollout-with-rings/phase-rollout-with-rings-early-approval.png)
 
 6. The **Early Adopter** deployment publishes a private extension to the marketplace and shares it with predefined organizations. Both the **Canaries** and **Early Adopter** are impacted by the change.
 7. The **Early Adopter** deployment triggers the **Users** environment deployment. A stricter pre-deployment approval gate requires all of the authorized users to approve the release.
 
-	![Pre-deployment approval for User environment](./media/phase-rollout-with-rings/phase-rollout-with-rings-users-approval.png)
+   ![Pre-deployment approval for User environment](./media/phase-rollout-with-rings/phase-rollout-with-rings-users-approval.png)
 
 8. The **Users** deployment publishes a public extension to the marketplace. At this stage, everyone who has installed the extension in their organization is affected by the change.
 9. It's key to realize that the impact ("blast radius") increases as your change moves through the rings. Exposing the change to the **Canaries** and the **Early Adopters**, is giving two opportunities to validate the change and hotfix critical bugs before a release to production.
@@ -120,23 +124,24 @@ Using the [Team Project Health](https://marketplace.visualstudio.com/items?itemN
 
 ## What's the value?
 
-Using a ring-deployment strategy you can gather feedback to validate your hypothesis. You can decommission old releases and distribute new releases without the risk of affecting all users. 
+Using a ring-deployment strategy you can gather feedback to validate your hypothesis. You can decommission old releases and distribute new releases without the risk of affecting all users.
 
 Here's a summary of how the ALM | DevOps Ranger engineering process evolved with ring deployment models.
 
-| Before using Rings |   | With Rings |
-|--------------------|:-:|-----------:|
-|Manual and error prone|Build|Automated and consistent|
-|Manual and error prone|Release|Automated and consistent|
-|Hours|Time to build (TTB)|Seconds|
-|Days|Time to release (TTR)|Minutes|
-|Call from user|Issue detection|Proactive|
-|Days to weeks|Issue resolution|Minutes to days|
+| Before using Rings     |                       |               With Rings |
+| ---------------------- | :-------------------: | -----------------------: |
+| Manual and error prone |         Build         | Automated and consistent |
+| Manual and error prone |        Release        | Automated and consistent |
+| Hours                  |  Time to build (TTB)  |                  Seconds |
+| Days                   | Time to release (TTR) |                  Minutes |
+| Call from user         |    Issue detection    |                Proactive |
+| Days to weeks          |   Issue resolution    |          Minutes to days |
 
 Key takeaways:
-* Consistent and reliable automation
-* Reduced response times
-* Canaries experience the pain, not the users
+
+- Consistent and reliable automation
+- Reduced response times
+- Canaries experience the pain, not the users
 
 ## Is there a dependency on feature flags?
 
@@ -174,17 +179,17 @@ Refer to [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) to s
 
 ## Reference information
 
-* [CI/CD pipeline examples](https://devblogs.microsoft.com/visualstudio/tag/cicd/)
-* [Configuring your release pipelines for safe deployments](https://devblogs.microsoft.com/devops/configuring-your-release-pipelines-for-safe-deployments/)
-* [DevOps @ Microsoft](https://aka.ms/devops)
+- [CI/CD pipeline examples](https://devblogs.microsoft.com/visualstudio/tag/cicd/)
+- [Configuring your release pipelines for safe deployments](https://devblogs.microsoft.com/devops/configuring-your-release-pipelines-for-safe-deployments/)
+- [DevOps @ Microsoft](https://aka.ms/devops)
 
 > Authors: Josh Garverick, Willy Schaub | Find the origin of this article and connect with the ALM | DevOps Rangers [here](https://github.com/ALM-Rangers/Guidance/blob/master/README.md)
- 
-*(c) 2017 Microsoft Corporation. All rights reserved. This document is
+
+_(c) 2017 Microsoft Corporation. All rights reserved. This document is
 provided "as-is." Information and views expressed in this document,
 including URL and other Internet Web site references, may change without
-notice. You bear the risk of using it.*
+notice. You bear the risk of using it._
 
-*This document does not provide you with any legal rights to any
+_This document does not provide you with any legal rights to any
 intellectual property in any Microsoft product. You may copy and use
-this document for your internal, reference purposes.*
+this document for your internal, reference purposes._

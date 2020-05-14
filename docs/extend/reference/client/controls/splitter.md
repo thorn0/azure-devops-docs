@@ -6,7 +6,7 @@ ms.technology: devops-ecosystem
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -17,7 +17,8 @@ See [Use splitter](../../../develop/ui-controls/splittero.md) for basic usage an
 ## Create a splitter
 
 ### TypeScript
-``` javascript
+
+```javascript
   import Controls = require("VSS/Controls");
   import Splitter = require("VSS/Controls/Splitter");
 
@@ -26,11 +27,13 @@ See [Use splitter](../../../develop/ui-controls/splittero.md) for basic usage an
 ```
 
 ### JavaScript
-``` javascript
-  require(["VSS/Controls", "VSS/Controls/Splitter"], function(Controls, Splitter) {
-      // Create the splitter in a container element
-      var splitter = Controls.create(Splitter.Splitter, container, options);
-  });
+
+```javascript
+require(["VSS/Controls", "VSS/Controls/Splitter"], function (
+  Controls,
+  Splitter
+) {
+  // Create the splitter in a container element
+  var splitter = Controls.create(Splitter.Splitter, container, options);
+});
 ```
-
-

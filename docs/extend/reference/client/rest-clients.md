@@ -24,15 +24,14 @@ To get started with calling client methods from your extension, see [how to call
 1. Construct or acquire an instance of a client
 2. Call the method on the client instance, passing any necessary parameters
 3. Wait for the response
-   * All REST client methods are non-blocking and return a Promise object. A promise represents a future return value (or exception). Typically you call `then()` on the returned object, passing a function that you want to have called when the response is received.
+   - All REST client methods are non-blocking and return a Promise object. A promise represents a future return value (or exception). Typically you call `then()` on the returned object, passing a function that you want to have called when the response is received.
 
 ### Available clients
 
-* [Build](./api/TFS/Build/RestClient/BuildHttpClient2_2.md)
-* [Git](./api/TFS/VersionControl/GitRestClient/GitHttpClient2_2.md)
-* [Project and team](./api/TFS/Core/RestClient/CoreHttpClient2_2.md)
-* [Test management](./api/TFS/TestManagement/RestClient/TestHttpClient2_2.md)
-* [Version Control](./api/TFS/VersionControl/TfvcRestClient/TfvcHttpClient2_2.md)
-* [Work (agile)](./api/TFS/Work/RestClient/WorkHttpClient2_2.md)
-* [Work item tracking](./api/TFS/WorkItemTracking/RestClient/WorkItemTrackingHttpClient2_2.md)
-
+- [Build](./api/TFS/Build/RestClient/BuildHttpClient2_2.md)
+- [Git](./api/TFS/VersionControl/GitRestClient/GitHttpClient2_2.md)
+- [Project and team](./api/TFS/Core/RestClient/CoreHttpClient2_2.md)
+- [Test management](./api/TFS/TestManagement/RestClient/TestHttpClient2_2.md)
+- [Version Control](./api/TFS/VersionControl/TfvcRestClient/TfvcHttpClient2_2.md)
+- [Work (agile)](./api/TFS/Work/RestClient/WorkHttpClient2_2.md)
+- [Work item tracking](./api/TFS/WorkItemTracking/RestClient/WorkItemTrackingHttpClient2_2.md)

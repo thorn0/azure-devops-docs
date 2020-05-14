@@ -7,16 +7,16 @@ ms.topic: tutorial
 ms.author: sdanie
 author: steved0x
 ms.date: 12/07/2018
-monikerRange: '> tfs-2018'
+monikerRange: "> tfs-2018"
 ---
 
 # Tutorial: Load test your app before release
 
-[!INCLUDE [version-header-devops-services](../includes/version-header-devops-services.md)] 
+[!INCLUDE [version-header-devops-services](../includes/version-header-devops-services.md)]
 
 [!INCLUDE [loadtest-deprecated-include](../includes/loadtest-deprecated-include.md)]
 
-Find performance issues before you release your app by running load tests with Visual Studio 
+Find performance issues before you release your app by running load tests with Visual Studio
 Enterprise using [Cloud-based Load Testing](https://go.microsoft.com/fwlink/?LinkID=317257)
 to provide virtual machines in the cloud that generate the load of many users accessing your web site at the same time.
 All you need is an [Azure DevOps subscription](https://go.microsoft.com/fwlink/?LinkId=307137).
@@ -24,17 +24,19 @@ All you need is an [Azure DevOps subscription](https://go.microsoft.com/fwlink/?
 In this tutorial, you'll learn how to:
 
 > [!div class="checklist"]
-> * [Create a web performance and load test project](#createtests)
-> * [Record a web performance test](#recordtests)
-> * [Create a load test](#createload)
-> * [Run and analyze your load test](#runanalyze)
-> * [Improve your load tests](#improvetests)
+>
+> - [Create a web performance and load test project](#createtests)
+> - [Record a web performance test](#recordtests)
+> - [Create a load test](#createload)
+> - [Run and analyze your load test](#runanalyze)
+> - [Improve your load tests](#improvetests)
 
 <a name="createtests"></a>
+
 ## Create a web performance and load test project
 
-You first create web performance tests. These tests are used in your 
-load tests to simulate multiple users performing 
+You first create web performance tests. These tests are used in your
+load tests to simulate multiple users performing
 actions in your app at the same time.
 
 1. If you don't have Visual Studio Enterprise, get it [here](https://visualstudio.microsoft.com/downloads/).
@@ -50,6 +52,7 @@ actions in your app at the same time.
    ![Installing packages required for web performance and load testing](media/run-performance-tests-app-before-release/install-tools.png)
 
 <a name="recordtests"></a>
+
 ## Record a web performance test
 
 1. Create a web performance test.
@@ -81,6 +84,7 @@ actions in your app at the same time.
 1. Save the test.
 
 <a name="createload"></a>
+
 ## Create a load test
 
 1. Create a new load test in the web performance and load test project.
@@ -93,7 +97,7 @@ actions in your app at the same time.
 
 1. Change the load pattern to step load. This gradually adds users over time.
    [How many virtual users can I configure in my load test?](reference-qa.md#howmanyusers)
- 
+
    ![Configure the step pattern](media/run-performance-tests-app-before-release/change-load-pattern.png)
 
 1. Choose the test mix step.
@@ -118,12 +122,13 @@ actions in your app at the same time.
    ![Load test editor](media/run-performance-tests-app-before-release/web-perf-test-in-load-test-editor.png)
 
 <a name="runanalyze"></a>
+
 ## Run and analyze your load test
 
-You can run your load test locally, or you can run it in the cloud using Azure DevOps. 
-All you need is an [Azure DevOps subscription](../../organizations/accounts/set-up-vs.md). 
-If you run the load test in the cloud, you can generate more load without setting up test controllers and test agents. 
-To learn how easy it is to use Cloud-based Load Testing to run your load tests, go 
+You can run your load test locally, or you can run it in the cloud using Azure DevOps.
+All you need is an [Azure DevOps subscription](../../organizations/accounts/set-up-vs.md).
+If you run the load test in the cloud, you can generate more load without setting up test controllers and test agents.
+To learn how easy it is to use Cloud-based Load Testing to run your load tests, go
 [here](getting-started-with-performance-testing.md).
 
 Follow these steps to run your load test on your local machine.
@@ -146,7 +151,7 @@ Follow these steps to run your load test on your local machine.
 
    ![Load test summary](media/run-performance-tests-app-before-release/load-test-summary.png)
 
-1. Choose the detail view. By analyzing the step load pattern for users, 
+1. Choose the detail view. By analyzing the step load pattern for users,
    you can identify the user count where your performance fails to meet your requirements.
 
    ![Detail view with step load pattern](media/run-performance-tests-app-before-release/load-test-summary-details.png)
@@ -154,10 +159,11 @@ Follow these steps to run your load test on your local machine.
 1. Fix any performance issues in your application's code and rerun the test.
 
 <a name="improvetests"></a>
+
 ## Improve your load tests
 
-You can improve your test to better simulate 
-real-world loads by specifying various load test 
+You can improve your test to better simulate
+real-world loads by specifying various load test
 [scenario properties](/visualstudio/test/edit-load-test-scenarios)
 and [run settings properties](/visualstudio/test/load-test-run-settings-properties).
 For example, you can specify the number of new users that will use web cache data in your load test.
@@ -166,5 +172,4 @@ For example, you can specify the number of new users that will use web cache dat
 
 ## Next step
 
-> [!div class="nextstepaction"]
-> [Run URL-based load tests](get-started-simple-cloud-load-test.md)
+> [!div class="nextstepaction"][run url-based load tests](get-started-simple-cloud-load-test.md)

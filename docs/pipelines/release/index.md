@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: ronai
 author: RoopeshNair
 ms.date: 02/06/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Release pipelines
@@ -21,10 +21,10 @@ monikerRange: '>= tfs-2015'
 ::: moniker-end
 
 ::: moniker range="azure-devops"
-> [!NOTE] 
-> This topic covers classic release pipelines. If you want to use YAML to author CI/CD pipelines, then see [Create your first pipeline](../create-first-pipeline.md).
-::: moniker-end
 
+> [!NOTE]
+> This topic covers classic release pipelines. If you want to use YAML to author CI/CD pipelines, then see [Create your first pipeline](../create-first-pipeline.md).
+> ::: moniker-end
 
 **Release pipelines** in Azure Pipelines
 and Team Foundation Server (TFS 2015.2 and later) help your team **continuously deliver** software
@@ -37,11 +37,12 @@ semi-automated processes with **approvals** and **on-demand deployments**.
 
 [What's the difference between a release pipeline and a release?](releases.md)
 
-* **[Watch this video](https://channel9.msdn.com/events/Microsoft-Azure/Azure-DevOps-Launch-2018/A101)** - see Azure Pipelines releases in action.
+- **[Watch this video](https://channel9.msdn.com/events/Microsoft-Azure/Azure-DevOps-Launch-2018/A101)** - see Azure Pipelines releases in action.
 
   <p><iframe src="https://channel9.msdn.com/Events/Microsoft-Azure/Azure-DevOps-Launch-2018/A101/player" width="640" height="360" allowFullScreen="true" frameBorder="0"></iframe></p>
 
 <a name="howrmworks"></a>
+
 ## How do release pipelines work?
 
 Release pipelines store the data about your pipelines,
@@ -125,14 +126,13 @@ After all those deployments are successful, a second job is used to switch traff
 
 **Next:**
 
-* **[Create your first pipeline](../create-first-pipeline.md)**
+- **[Create your first pipeline](../create-first-pipeline.md)**
 
-* **[Set up a multi-stage managed release pipeline](define-multistage-release-process.md)**
-    
-* **[Manage deployments by using approvals and gates](deploy-using-approvals.md)**
-
+- **[Set up a multi-stage managed release pipeline](define-multistage-release-process.md)**
+- **[Manage deployments by using approvals and gates](deploy-using-approvals.md)**
 
 <a name="draftrelease"></a>
+
 ## What is a draft release?
 
 ::: moniker range="azure-devops"
@@ -151,17 +151,18 @@ Create a draft release using the "..." ellipses link in the list of releases:
 
 ![Create a draft release in the list of releases](media/what-is-release-management/draft-release.png)
 
-... or the **Release** drop-down in the pipeline definition page: 
+... or the **Release** drop-down in the pipeline definition page:
 
 ![Create a draft release in the pipeline definition page](media/what-is-release-management/new-draft-release.png)
 
-After you finish editing the draft release, choose **Start** from the draft release toolbar. 
+After you finish editing the draft release, choose **Start** from the draft release toolbar.
 
 ![Start a draft release](media/what-is-release-management/start-draft.png)
 
 ::: moniker-end
 
 <a name="editvariables"></a>
+
 ## How do I specify variables I want to edit when a release is created?
 
 In the **Variables** tab of a release pipeline, when you add new variables, set the **Settable at release time** option for those
@@ -174,6 +175,7 @@ Then, when you create a new release, you can edit the values for these variables
 ![Editing variables when a release is created and queued](media/what-is-release-management/populate-release-edit-variables.png)
 
 <a name="reportstatus"></a>
+
 ## How do I integrate and report release status?
 
 The current status for a release can be reported back in the source repository.
@@ -186,13 +188,13 @@ In the **Options** tab of a release pipeline, open the **Integrations** page.
 If your sources are in an Azure Repos Git repository in your project,
 this option displays a badge on the Azure Repos pages to indicate where the
 specific commit was deployed and whether the deployment is passing or failing.
-This improves the traceability from code commit to deployment. 
+This improves the traceability from code commit to deployment.
 
 The deployment status is displayed in the following sections of Azure Repos:
 
-* **Files**: Indicates the status of the latest deployment for the selected branch.
-* **Commits**: Indicates the deployment status for each commit (this requires the continuous integration (CD) trigger to be enabled for your release).
-* **Branches**: Indicates the status of the latest deployment for each branch.
+- **Files**: Indicates the status of the latest deployment for the selected branch.
+- **Commits**: Indicates the deployment status for each commit (this requires the continuous integration (CD) trigger to be enabled for your release).
+- **Branches**: Indicates the status of the latest deployment for each branch.
 
 If a commit is deployed to multiple release pipelines (with multiple stages), each has an entry in the badge
 with the status shown for each stage. By default, when you create a release pipeline, deployment status is
@@ -212,20 +214,21 @@ to the source when a release is complete.
 
 **Enable the deployment status badge**
 
-Select this option if you want to display the latest outcome of a stage deployment on an external website. 
+Select this option if you want to display the latest outcome of a stage deployment on an external website.
 
-1.	Select "Enable the deployment status badge".
+1. Select "Enable the deployment status badge".
 
-1.	Select the stages for which you want to display the outcome. By default, all the stages are selected.
+1. Select the stages for which you want to display the outcome. By default, all the stages are selected.
 
-1.	Save your pipeline.
+1. Save your pipeline.
 
-1.	Copy the badge URL for the required stage to the clipboard.
+1. Copy the badge URL for the required stage to the clipboard.
 
-1.	Use this badge URL as a source of an image in an external website.  
-    For example: `<img src="{URL you copied from the link}"/>`
+1. Use this badge URL as a source of an image in an external website.  
+   For example: `<img src="{URL you copied from the link}"/>`
 
 <a name="editrelease"></a>
+
 ## When should I edit a release instead of the pipeline that defines it?
 
 You can edit the approvals, tasks, and variables of a previously deployed release, instead of editing these
@@ -234,11 +237,12 @@ generated when you redeploy the artifacts. If you want your edits apply to all f
 choose the option to edit the release pipeline instead.
 
 <a name="abandonrelease"></a>
+
 ## When and why would I abandon a release?
 
 After you create a [release](releases.md), you can use it to redeploy the artifacts
 to any of the stages defined in that release.
-This is useful if you want to perform regular manual releases, or set up a 
+This is useful if you want to perform regular manual releases, or set up a
 continuous integration [stage trigger](triggers.md#env-triggers)
 that redeploys the artifacts using this release.
 
@@ -251,10 +255,11 @@ you can abandon the release using the shortcut menu that opens from the ellipses
 You cannot abandon a release when a deployment is in progress, you must cancel the deployment first.
 
 <a name="sendemail"></a>
+
 ## How do I send release summaries by email?
 
 After a release is triggered and completed, you may want to email the summary to stakeholders.
-Use the **Send Email** option on the menu that opens from the ellipses (**...**) icon in the **Pipeline** view of the pipeline. 
+Use the **Send Email** option on the menu that opens from the ellipses (**...**) icon in the **Pipeline** view of the pipeline.
 
 ![Emailing a release summary](media/what-is-release-management/email-release-summary.png)
 
@@ -262,6 +267,7 @@ In the **Send release summary mail** window, you can further customize the infor
 by selecting only certain sections of the release summary.
 
 <a name="numbering"></a>
+
 ## How do I manage the names for new releases?
 
 The names of releases for a release pipeline are, by default, sequentially numbered.
@@ -272,18 +278,18 @@ edit the **Release name format** property in the **General** page.
 
 When specifying the format mask, you can use the following pre-defined variables.
 
-| Variable | Description |
-|----------|-------------|
-| **Rev:rr** | An auto-incremented number with at least the specified number of digits. |
-| **Date / Date:MMddyy** | The current date, with the default format **MMddyy**. Any combinations of M/MM/MMM/MMMM, d/dd/ddd/dddd, y/yy/yyyy/yyyy, h/hh/H/HH, m/mm, s/ss are supported. |
-| **System.TeamProject** | The name of the project to which this build belongs. |
-| **Release.ReleaseId** | The ID of the release, which is unique across all releases in the project. |
-| **Release.DefinitionName** | The name of the release pipeline to which the current release belongs. |
-| **Build.BuildNumber** | The number of the build contained in the release. If a release has multiple builds, this is the number of the [primary build](artifacts.md#primary-source). |
-| **Build.DefinitionName** | The pipeline name of the build contained in the release. If a release has multiple builds, this is the pipeline name of the [primary build](artifacts.md#primary-source). |
-| **Artifact.ArtifactType** | The type of the artifact source linked with the release. For example, this can be **Azure Pipelines** or **Jenkins**. |
-| **Build.SourceBranch** | The branch of the [primary artifact source](artifacts.md#primary-source). For Git, this is of the form **master** if the branch is **refs/heads/master**. For Team Foundation Version Control, this is of the form **branch** if the root server path for the workspace is **$/teamproject/branch**. This variable is not set for Jenkins or other artifact sources. |
-| *Custom variable* | The value of a global configuration property defined in the release pipeline. |
+| Variable                   | Description                                                                                                                                                                                                                                                                                                                                                           |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Rev:rr**                 | An auto-incremented number with at least the specified number of digits.                                                                                                                                                                                                                                                                                              |
+| **Date / Date:MMddyy**     | The current date, with the default format **MMddyy**. Any combinations of M/MM/MMM/MMMM, d/dd/ddd/dddd, y/yy/yyyy/yyyy, h/hh/H/HH, m/mm, s/ss are supported.                                                                                                                                                                                                          |
+| **System.TeamProject**     | The name of the project to which this build belongs.                                                                                                                                                                                                                                                                                                                  |
+| **Release.ReleaseId**      | The ID of the release, which is unique across all releases in the project.                                                                                                                                                                                                                                                                                            |
+| **Release.DefinitionName** | The name of the release pipeline to which the current release belongs.                                                                                                                                                                                                                                                                                                |
+| **Build.BuildNumber**      | The number of the build contained in the release. If a release has multiple builds, this is the number of the [primary build](artifacts.md#primary-source).                                                                                                                                                                                                           |
+| **Build.DefinitionName**   | The pipeline name of the build contained in the release. If a release has multiple builds, this is the pipeline name of the [primary build](artifacts.md#primary-source).                                                                                                                                                                                             |
+| **Artifact.ArtifactType**  | The type of the artifact source linked with the release. For example, this can be **Azure Pipelines** or **Jenkins**.                                                                                                                                                                                                                                                 |
+| **Build.SourceBranch**     | The branch of the [primary artifact source](artifacts.md#primary-source). For Git, this is of the form **master** if the branch is **refs/heads/master**. For Team Foundation Version Control, this is of the form **branch** if the root server path for the workspace is **\$/teamproject/branch**. This variable is not set for Jenkins or other artifact sources. |
+| _Custom variable_          | The value of a global configuration property defined in the release pipeline.                                                                                                                                                                                                                                                                                         |
 
 For example, the release name format `Release $(Rev:rrr) for build $(Build.BuildNumber) $(Build.DefinitionName)` will create releases with names such as **Release 002 for build 20170213.2 MySampleAppBuild**.
 
@@ -296,14 +302,15 @@ You can customize how long releases of this pipeline must be retained. For more 
 Every time you save a release pipeline, Azure Pipelines keeps a copy of the changes. This allows you to compare the changes at a later point, especially when you are debugging a deployment failure.
 
 <a name="getstartednow"></a>
+
 ## Get started now!
 
 Follow these steps:
 
 1. **[Set up a multi-stage managed release pipeline](define-multistage-release-process.md)**
-    
+
 1. **[Manage deployments by using approvals and gates](deploy-using-approvals.md)**
 
 ## Related topics
 
-* [Sign up for Azure Pipelines](https://visualstudio.microsoft.com/products/visual-studio-team-services-vs)
+- [Sign up for Azure Pipelines](https://visualstudio.microsoft.com/products/visual-studio-team-services-vs)

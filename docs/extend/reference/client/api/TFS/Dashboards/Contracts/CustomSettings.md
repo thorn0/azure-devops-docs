@@ -13,11 +13,9 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Dashboards/WidgetContracts`
 
-
 ### Members
 
-* `data`: string. This is the user input in configuration pane that has been serialized to string. 
+- `data`: string. This is the user input in configuration pane that has been serialized to string.
 
-* `version`: This is a JSON object for the Semantic Version of the custom settings. For example: { major: 1, minor: 2, path: 0}.
-This is an optional field, if nothing is provided a default value of { major: 1, minor: 0, path: 0} is used by the framework.
-
+- `version`: This is a JSON object for the Semantic Version of the custom settings. For example: { major: 1, minor: 2, path: 0}.
+  This is an optional field, if nothing is provided a default value of { major: 1, minor: 0, path: 0} is used by the framework.

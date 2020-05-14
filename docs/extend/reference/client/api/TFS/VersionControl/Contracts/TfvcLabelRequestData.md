@@ -13,18 +13,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `includeLinks`: boolean. Whether to include the _links field on the shallow references
+- `includeLinks`: boolean. Whether to include the \_links field on the shallow references
 
-* `itemLabelFilter`: string. 
+- `itemLabelFilter`: string.
 
-* `labelScope`: string. 
+- `labelScope`: string.
 
-* `maxItemCount`: number. 
+- `maxItemCount`: number.
 
-* `name`: string. 
+- `name`: string.
 
-* `owner`: string. 
-
+- `owner`: string.

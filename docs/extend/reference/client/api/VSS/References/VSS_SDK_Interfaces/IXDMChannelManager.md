@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,10 +15,8 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Registry of XDM channels kept per target frame/window 
+Registry of XDM channels kept per target frame/window
 
 ### Members
 
-* `addChannel`: (window: Window, targetOrigin: string): [IXDMChannel](../../../VSS/References/VSS_SDK_Interfaces/IXDMChannel.md). Add an XDM channel for the given target window/iframe
-
+- `addChannel`: (window: Window, targetOrigin: string): [IXDMChannel](../../../VSS/References/VSS_SDK_Interfaces/IXDMChannel.md). Add an XDM channel for the given target window/iframe

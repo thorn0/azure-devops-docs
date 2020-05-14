@@ -13,10 +13,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Work/Contracts`
 
-
 ### Members
 
-* `id`: string. 
+- `id`: string.
 
-* `name`: string. 
-
+- `name`: string.

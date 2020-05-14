@@ -5,10 +5,8 @@ ms.assetid: 301f954f-a35a-4fe2-b7fd-c78e534d9b16
 ms.technology: devops-artifacts
 ms.topic: conceptual
 ms.date: 01/20/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
-
- 
 
 # Use packages from nuget.org
 
@@ -29,6 +27,7 @@ To learn more about the concept of upstream sources, please see the [concepts pa
 1. [Update your NuGet configuration](#update-nuget-configuration).
 
 <a name="existing-feed"></a>
+
 ## Enable the upstream on an existing feed
 
 > [!IMPORTANT]
@@ -59,7 +58,6 @@ To use your feed and upstream source, follow the instructions to [consume NuGet 
 
 You can see the packages you have saved in your feed by selecting the appropriate Source filter.
 
-
 ::: moniker range=">= azure-devops-2019"
 
 ![Viewing your cached packages](media/view-cached-packages-newnav.png)
@@ -77,6 +75,3 @@ You can see the packages you have saved in your feed by selecting the appropriat
 ![Viewing your cached packages](media/view-cached-packages.png)
 
 ::: moniker-end
-
-
-

@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `dataSourceName`: string. 
+- `dataSourceName`: string.
 
-* `endpointId`: string. 
+- `endpointId`: string.
 
-* `parameters`: {[key: string]: string}. 
+- `parameters`: {[key: string]: string}.
 
-* `target`: string. 
-
+- `target`: string.

@@ -2,7 +2,7 @@
 ms.topic: include
 ---
 
-<!--- Updated to support Azure DevOps Services + Azure DevOps Server 2019 Pipelines only 
+<!--- Updated to support Azure DevOps Services + Azure DevOps Server 2019 Pipelines only
 
 Administer task group permissions
 Delete task group
@@ -53,4 +53,3 @@ Edit task group
 </tr>
 </tbody>
 </table>
- 

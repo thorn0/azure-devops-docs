@@ -12,10 +12,10 @@ ms.technology: devops-cicd-tasks
 # Build with Apache Ant
 - task: Ant@1
   inputs:
-    #buildFile: 'build.xml' 
+    #buildFile: 'build.xml'
     #options: # Optional
     #targets: # Optional
-    #publishJUnitResults: true 
+    #publishJUnitResults: true
     #testResultsFiles: '**/TEST-*.xml' # Required when publishJUnitResults == True
     #testRunTitle: # Optional
     #codeCoverageToolOptions: 'None' # Optional. Options: none, cobertura, jaCoCo

@@ -2,4 +2,4 @@
 ms.topic: include
 ---
 
-**Azure DevOps Services | Azure DevOps Server | TFS**  
+**Azure DevOps Services | Azure DevOps Server | TFS**

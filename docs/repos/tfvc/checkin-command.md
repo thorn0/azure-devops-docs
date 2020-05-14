@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 10/31/2017
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Checkin command
 
@@ -23,8 +22,8 @@ Almost every change that you make to the files on your dev machine is stored in 
 **Requirements**: See [Permissions and groups reference](../../organizations/security/permissions.md).
 
 ```
-tf checkin [/author:author name] [/comment:("comment"|@comment file)] 
-[/noprompt] [/notes:("Note Name"="note text"|@notefile)] 
+tf checkin [/author:author name] [/comment:("comment"|@comment file)]
+[/noprompt] [/notes:("Note Name"="note text"|@notefile)]
 [/override:(reason|@reasonfile)] [/recursive] [/saved] [/validate] [itemspec] [/bypass] [/force] [/noautoresolve]  [/login:username,[password]] [/new]
 ```
 
@@ -182,15 +181,14 @@ c:\code\SiteApp\Main>tf checkin program.cs /noprompt
 
 Checks in your pending changes to program.cs. The **Check In** dialog box is not displayed, and if any conflicts block the check in, the system does not display the conflicts window.
 
-
 ## Work in Visual Studio
 
--    [Check in your work to the team's codebase](check-your-work-team-codebase.md)  Use Visual Studio to check in your changes to the server.
+- [Check in your work to the team's codebase](check-your-work-team-codebase.md) Use Visual Studio to check in your changes to the server.
 
 ## Tips
 
--   ![Tip](media/checkin-command/IC572374.png) To set aside changes (and perhaps also want to clean your workspace for another task), use the [Shelve Command](shelve-command.md).
+- ![Tip](media/checkin-command/IC572374.png) To set aside changes (and perhaps also want to clean your workspace for another task), use the [Shelve Command](shelve-command.md).
 
--   ![Tip](media/checkin-command/IC572374.png) If conflicts block your check-in, you can use the [Resolve Command](resolve-command.md) to resolve them.
+- ![Tip](media/checkin-command/IC572374.png) If conflicts block your check-in, you can use the [Resolve Command](resolve-command.md) to resolve them.
 
--   ![Tip](media/checkin-command/IC572374.png) If a machine and user account do not have a workspace mapped to the Project Collection that contains the shelveset, you can use the **/shelveset** and **/collection** options to check in a shelveset.
+- ![Tip](media/checkin-command/IC572374.png) If a machine and user account do not have a workspace mapped to the Project Collection that contains the shelveset, you can use the **/shelveset** and **/collection** options to check in a shelveset.

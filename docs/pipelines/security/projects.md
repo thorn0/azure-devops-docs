@@ -4,7 +4,7 @@ description: Learn how to use project structure to improve pipeline security.
 ms.assetid: 90fb461a-2315-4b60-a662-f022c9c770e2
 ms.reviewer: macoope
 ms.date: 02/04/2020
-monikerRange: '> azure-devops-2019'
+monikerRange: "> azure-devops-2019"
 ---
 
 # Recommendations to securely structure projects in your pipeline
@@ -23,13 +23,13 @@ A specific pipeline can't be granted access to an open resource.
 ## Separate projects
 
 Given the nature of open resources, you should consider managing each product and team in a separate project.
-This practice ensures that a pipeline from one product can't access open resources from another product. 
+This practice ensures that a pipeline from one product can't access open resources from another product.
 In this way, you prevent lateral exposure.
 When multiple teams or products share a project, you can't granularly isolate their resources from one another.
 
 If your Azure DevOps organization was created before August 2019, then runs might be able to access open resources in all of your organization's projects.
 Your organization administrator must review a key security setting in Azure Pipelines that enables project isolation for pipelines.
-You can find this setting at **Azure DevOps** > **Organization settings** > **Pipelines** > **Settings**. Or go directly to this Azure DevOps location: *https:\//dev.azure.com/ORG-NAME/_settings/pipelinessettings*.
+You can find this setting at **Azure DevOps** > **Organization settings** > **Pipelines** > **Settings**. Or go directly to this Azure DevOps location: _https:\//dev.azure.com/ORG-NAME/\_settings/pipelinessettings_.
 
 ![Screenshot of job authorization scope UI](media/job-auth-scope.png)
 

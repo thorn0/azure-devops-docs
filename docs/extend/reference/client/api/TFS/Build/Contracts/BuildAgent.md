@@ -14,36 +14,34 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `buildDirectory`: string. 
+- `buildDirectory`: string.
 
-* `controller`: [ShallowReference](./ShallowReference.md). 
+- `controller`: [ShallowReference](./ShallowReference.md).
 
-* `createdDate`: Date. 
+- `createdDate`: Date.
 
-* `description`: string. 
+- `description`: string.
 
-* `enabled`: boolean. 
+- `enabled`: boolean.
 
-* `id`: number. 
+- `id`: number.
 
-* `messageQueueUrl`: string. 
+- `messageQueueUrl`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `reservedForBuild`: string. 
+- `reservedForBuild`: string.
 
-* `server`: [ShallowReference](./ShallowReference.md). 
+- `server`: [ShallowReference](./ShallowReference.md).
 
-* `status`: [AgentStatus](./AgentStatus.md). 
+- `status`: [AgentStatus](./AgentStatus.md).
 
-* `statusMessage`: string. 
+- `statusMessage`: string.
 
-* `updatedDate`: Date. 
+- `updatedDate`: Date.
 
-* `uri`: string. 
+- `uri`: string.
 
-* `url`: string. 
-
+- `url`: string.

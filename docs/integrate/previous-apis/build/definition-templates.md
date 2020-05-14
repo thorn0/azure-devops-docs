@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Build Definition Templates | REST API Reference for Team Foundation Server
 description: Get build definition templates programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: E7D635DE-CDAB-449A-80C5-EC89610A5A5A
@@ -24,13 +24,15 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/{project}/_apis/build/definitions/templates?api-version={version}
 ```
 
-| Parameter     | Type                 | Notes
-|:--------------|:---------------------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string               | TFS server name ({server:port}).
-| project       | string               | [Project](../tfs/projects.md) ID or name.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
 | Query
-| api-version   | string               | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -726,21 +728,22 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
 }
 ```
 
-
 ## Get a build definition template
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/build/definition/templates/{templateId}?api-version={version}
 ```
 
-| Parameter    | Type   | Notes
-|:-------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance     | string | TFS server name ({server:port}).
-| project      | string | [Project](../tfs/projects.md) ID or name.
-| templateId   | int    | ID of the build definition template.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| templateId | int | ID of the build definition template.
 | Query
-| api-version  | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -848,28 +851,29 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
 }
 ```
 
-
-
 ## Create or update a build definition template
 
 ```no-highlight
 PUT https://{instance}/DefaultCollection/{project}/_apis/build/definitions/templates/{templateId}?api-version={version}
 ```
 
-| Parameter     | Type                 | Notes
-|:--------------|:---------------------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string               | TFS server name ({server:port}).
-| project       | string               | [Project](../tfs/projects.md) ID or name.
-| templateId    | int                  | ID of the build definition template.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| templateId | int | ID of the build definition template.
 | Query
-| api-version   | string               | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 PUT https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definitions/templates/myCustomTemplate?api-version=2.0
 ```
+
 ```json
 {
   "name": "My Custom Template",
@@ -1036,26 +1040,25 @@ PUT https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
 }
 ```
 
-
-
 ## Delete a build definition template
 
 ```no-highlight
 DELETE https://{instance}/DefaultCollection/{project}/_apis/build/definitions/templates/{templateId}?api-version={version}
 ```
 
-| Parameter     | Type                 | Notes
-|:--------------|:---------------------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string               | TFS server name ({server:port}).
-| project       | string               | [Project](../tfs/projects.md) ID or name.
-| templateId    | int                  | ID of the build definition template.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| templateId | int | ID of the build definition template.
 | Query
-| api-version   | string               | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 DELETE https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definitions/templates/myCustomTemplate?api-version=2.0
 ```
-

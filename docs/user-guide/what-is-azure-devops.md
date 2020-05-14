@@ -1,15 +1,15 @@
 ﻿---
 title: Plan, code, collaborate, ship applications
-titleSuffix: Azure DevOps 
+titleSuffix: Azure DevOps
 ms.custom: seodec18
 description: Get an integrated set of features to help you plan, code, collaborate, and ship your applications faster.
 ms.technology: devops-new-user
-ms.assetid:  
+ms.assetid:
 ms.author: chcomley
 author: chcomley
 ms.date: 11/08/2019
 ms.topic: overview
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # What is Azure DevOps?
@@ -32,7 +32,7 @@ You can also use collaboration tools such as:
 - Built-in wikis for sharing information
 - Configurable notifications
 
-Azure DevOps supports adding extensions and integrating with other popular services, such as: Campfire, Slack, Trello, UserVoice, and more, and developing your own custom extensions.  
+Azure DevOps supports adding extensions and integrating with other popular services, such as: Campfire, Slack, Trello, UserVoice, and more, and developing your own custom extensions.
 
 For information on the differences between the cloud versus on-premises platforms, see [Azure DevOps Services and Azure DevOps Server](about-azure-devops-services-tfs.md).
 
@@ -82,13 +82,13 @@ To learn more about managing Azure DevOps Server, see the [Administrative tasks 
 
 Many of the featured services in VSTS are now offered as standalone services in both Azure DevOps Services and Azure DevOps Server 2019. You can get services separately or all together as Azure DevOps Services. If you're an Azure DevOps subscriber, you have access to all of the services already.
 
-> | VSTS feature name    | Azure DevOps service name | Description |
-> |----------------------|----------------------|-------------|
-> | Build & release      | Azure Pipelines      | Continuous integration and continuous delivery (CI/CD) that works with any language, platform, and cloud. |
-> | Code                 | Azure Repos          | Unlimited cloud-hosted private Git and Team Foundation Version Control (TFVC) repositories for your project. |
-> | Work                 | Azure Boards         | Work tracking with Kanban boards, backlogs, team dashboards, and custom reporting. |
-> | Test                 | Azure Test Plans     | All-in-one planned and exploratory testing solution. |
-> | Packages (extension) | Azure Artifacts      | Maven, npm, and NuGet package feeds from public and private sources. |
+> | VSTS feature name    | Azure DevOps service name | Description                                                                                                  |
+> | -------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------ |
+> | Build & release      | Azure Pipelines           | Continuous integration and continuous delivery (CI/CD) that works with any language, platform, and cloud.    |
+> | Code                 | Azure Repos               | Unlimited cloud-hosted private Git and Team Foundation Version Control (TFVC) repositories for your project. |
+> | Work                 | Azure Boards              | Work tracking with Kanban boards, backlogs, team dashboards, and custom reporting.                           |
+> | Test                 | Azure Test Plans          | All-in-one planned and exploratory testing solution.                                                         |
+> | Packages (extension) | Azure Artifacts           | Maven, npm, and NuGet package feeds from public and private sources.                                         |
 
 Both Azure DevOps Services and Azure DevOps Server 2019 use the new navigation user interface, with a vertical sidebar to navigate to the main service areas: **Boards**, **Repos**, **Pipelines**, and more. To learn more, see [Web portal navigation in Azure DevOps](../project/navigation/index.md).
 
@@ -101,10 +101,10 @@ You can still use `visualstudio.com` to access Azure DevOps Services. We've move
 
 This content supports a platform/version selector. Toggle the Content version selector dropdown, located above the table of contents, to access the content that is specific to your version. The table of contents and content page refresh to show only that content specific to the selected version.
 
-   > [!div class="mx-imgBorder"]  
-   > ![Documentation version selector](../media/version-selector.png)
+> [!div class="mx-imgBorder"]  
+> ![Documentation version selector](../media/version-selector.png)
 
-## Next steps  
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Sign up for Azure DevOps Services](sign-up-invite-teammates.md) or [Install Azure DevOps Server](/azure/devops/server/install/single-server)
@@ -118,9 +118,8 @@ This content supports a platform/version selector. Toggle the Content version se
 - [Azure DevOps release notes](/azure/devops/release-notes/index)
 - [Azure DevOps blog](https://blogs.msdn.microsoft.com/devops/)
 
-
 <!---
-[Small teams can start for free!](https://visualstudio.microsoft.com/products/visual-studio-team-services-vs.aspx)  
+[Small teams can start for free!](https://visualstudio.microsoft.com/products/visual-studio-team-services-vs.aspx)
 [DevOps overview for Azure DevOps Services and TFS](index.md)
 
 
@@ -134,4 +133,4 @@ notice. You bear the risk of using it.*
 *This document does not provide you with any legal rights to any
 intellectual property in any Microsoft product. You may copy and use
 this document for your internal, reference purposes.*
---> 
+-->

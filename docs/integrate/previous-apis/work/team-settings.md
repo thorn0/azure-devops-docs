@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Team Settings | REST API Reference for Team Foundation Server
 description: Work with team settings programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 7e545cbe-a332-448e-95e6-6a56e9c48249
@@ -19,20 +19,23 @@ ms.date: 08/04/2016
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get a team's settings
+
 <a id="GetTeamSettings"></a>
 
 ```
 GET https://{instance}/DefaultCollection/{project}/{team}/_apis/Work/TeamSettings?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
 | Query
-| api-version | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -51,13 +54,7 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber/_apis/work/teamsettings
     "url": "https://mytfsserver/DefaultCollection/c1f04a4e-c4e5-4e0d-8096-e5f9fd214bfb/_apis/wit/classificationNodes/Iterations"
   },
   "bugsBehavior": "asRequirements",
-  "workingDays": [
-    "monday",
-    "tuesday",
-    "wednesday",
-    "thursday",
-    "friday"
-  ],
+  "workingDays": ["monday", "tuesday", "wednesday", "thursday", "friday"],
   "backlogVisibilities": {
     "Microsoft.EpicCategory": false,
     "Microsoft.FeatureCategory": true,
@@ -99,47 +96,45 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber/_apis/work/teamsettings
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetTeamSettings method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/Work/TeamSettingsSample.cs#L15)
+- [C# (GetTeamSettings method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/Work/TeamSettingsSample.cs#L15)
 
 ## Update a team's settings
+
 <a id="SetTeamSettings"></a>
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/{team}/_apis/Work/TeamSettings?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:----------------------------------------------------------------------------------------------------------------------------
-| URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team.
-| Query
-| api-version | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
 
-| Parameter  	| Allowed Values
-|:-----------	|:---------
-| bugBehavior	| AsRequirements, AsTasks, Off
-| workingDays   | monday, tuesday, wednesday, thursday, friday, saturday, sunday
-| backlogVisibilities | A dictionary of keys (Microsoft.EpicCategory, Microsoft.FeatureCategory, Microsoft.RequirementCategory) and boolean values.
+
+| URL
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
+| Query
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+
+| Parameter           | Allowed Values                                                                                                              |
+| :------------------ | :-------------------------------------------------------------------------------------------------------------------------- |
+| bugBehavior         | AsRequirements, AsTasks, Off                                                                                                |
+| workingDays         | monday, tuesday, wednesday, thursday, friday, saturday, sunday                                                              |
+| backlogVisibilities | A dictionary of keys (Microsoft.EpicCategory, Microsoft.FeatureCategory, Microsoft.RequirementCategory) and boolean values. |
 
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber/_apis/work/teamsettings?api-version=3.0-preview
 ```
+
 ```json
 {
   "bugsBehavior": "AsTasks",
-  "workingDays": [
-    "monday",
-    "tuesday",
-    "wednesday",
-    "thursday"
-  ],
+  "workingDays": ["monday", "tuesday", "wednesday", "thursday"],
   "defaultIteration": "8C2457E8-8936-4CDC-B3AA-17B20F56C76C"
 }
 ```
@@ -155,12 +150,7 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber/_apis/work/teamsettin
     "url": "https://mytfsserver/DefaultCollection/c1f04a4e-c4e5-4e0d-8096-e5f9fd214bfb/_apis/wit/classificationNodes/Iterations"
   },
   "bugsBehavior": "asTasks",
-  "workingDays": [
-    "monday",
-    "tuesday",
-    "wednesday",
-    "thursday"
-  ],
+  "workingDays": ["monday", "tuesday", "wednesday", "thursday"],
   "backlogVisibilities": {
     "Microsoft.EpicCategory": false,
     "Microsoft.FeatureCategory": true,
@@ -202,7 +192,6 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber/_apis/work/teamsettin
 }
 ```
 
-
 #### Sample code
 
-* [C# (UpdateTeamSettings method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/Work/TeamSettingsSample.cs#L34)
+- [C# (UpdateTeamSettings method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/Work/TeamSettingsSample.cs#L34)

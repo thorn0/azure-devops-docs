@@ -17,17 +17,16 @@ Extends: [ItemModel](../../../TFS/VersionControl/Contracts/ItemModel.md)
 
 ### Members
 
-* `changeDate`: Date. 
+- `changeDate`: Date.
 
-* `deletionId`: number. 
+- `deletionId`: number.
 
-* `hashValue`: string. MD5 hash as a base 64 string, applies to files only.
+- `hashValue`: string. MD5 hash as a base 64 string, applies to files only.
 
-* `isBranch`: boolean. 
+- `isBranch`: boolean.
 
-* `isPendingChange`: boolean. 
+- `isPendingChange`: boolean.
 
-* `size`: number. The size of the file, if applicable.
+- `size`: number. The size of the file, if applicable.
 
-* `version`: number. 
-
+- `version`: number.

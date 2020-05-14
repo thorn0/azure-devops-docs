@@ -16,8 +16,8 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `Low` Low priority.
-* `BelowNormal` Below normal priority.
-* `Normal` Normal priority.
-* `AboveNormal` Above normal priority.
-* `High` High priority.
+- `Low` Low priority.
+- `BelowNormal` Below normal priority.
+- `Normal` Normal priority.
+- `AboveNormal` Above normal priority.
+- `High` High priority.

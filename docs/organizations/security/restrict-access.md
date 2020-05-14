@@ -1,13 +1,13 @@
 ---
 title: Grant or restrict access to select features
 titleSuffix: Azure DevOps
-description: How to set permissions to grant or restrict access to select build, version control, or work tracking functions  
+description: How to set permissions to grant or restrict access to select build, version control, or work tracking functions
 ms.assetid: ee4c4a8f-0478-4ade-8b12-4e5ffd0054c7
 ms.topic: Conceptual
 ms.technology: devops-security
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 08/15/2019
 ---
 
@@ -19,41 +19,39 @@ You can grant or restrict access to resources that you manage in Azure DevOps. Y
 
 If you're new to administrating permissions and groups, review [About permissions and groups](about-permissions.md) to learn about permission states and inheritance.
 
-In this article you learn how to do the following tasks: 
+In this article you learn how to do the following tasks:
 
 > [!div class="checklist"]
-> * Recommended method for granting and restricting permissions
-> * Delegate tasks by assigning select permissions to specific roles
-> * Restrict access to view or modify objects
-> * Restrict modification of work items based on a user or group
+>
+> - Recommended method for granting and restricting permissions
+> - Delegate tasks by assigning select permissions to specific roles
+> - Restrict access to view or modify objects
+> - Restrict modification of work items based on a user or group
 
-
-
-> [!TIP]    
+> [!TIP]  
 > Because you set many permissions at an object-level, such as repositories and area paths, how you structure your project determines the areas you can open up or close down.
 
+## Recommended method for granting and restricting permissions
 
-## Recommended method for granting and restricting permissions 
+For maintenance purposes, we recommend you use either the built-in security groups or [custom security groups to manage permissions](change-individual-permissions.md).
 
-For maintenance purposes, we recommend you use either the built-in security groups or [custom security groups to manage permissions](change-individual-permissions.md). 
+You can't change the permission settings for the Project Administrators group or the Project Collection Administrators group, which is by design. However, for all other groups, you can change the permissions.
 
-You can't change the permission settings for the Project Administrators group or the Project Collection Administrators group, which is by design. However, for all other groups, you can change the permissions. 
-
-If you manage a small number of users, then you may find changing individual permissions a valid option. However, custom security groups allow you to better track roles and permissions assigned to those roles.  
-
+If you manage a small number of users, then you may find changing individual permissions a valid option. However, custom security groups allow you to better track roles and permissions assigned to those roles.
 
 ## Delegate tasks to specific roles
 
 As an administrator or account owner, it's a good idea to delegate administrative tasks to those team members who lead or manage an area. Several of the main built-in roles that come with default permissions and role assignments are:
-- Readers 
-- Contributors 
-- Team Administrator (role) 
+
+- Readers
+- Contributors
+- Team Administrator (role)
 - Project Administrators
-- Project Collection Administrators  
+- Project Collection Administrators
 
-For a summary of permissions for the above roles, see [Default permissions and access](permissions-access.md), or for the Project Collection Administrators, see [Add administrators](set-project-collection-level-permissions.md) 
+For a summary of permissions for the above roles, see [Default permissions and access](permissions-access.md), or for the Project Collection Administrators, see [Add administrators](set-project-collection-level-permissions.md)
 
-To delegate tasks to other members within your organization, consider creating a custom security group and then granting permissions as indicated in the following table.  
+To delegate tasks to other members within your organization, consider creating a custom security group and then granting permissions as indicated in the following table.
 
 <table>
 <tr>
@@ -127,10 +125,9 @@ For an account or collection, Edit instance-level (or collection-level) informat
 </tr>
 </table>
 
-## Restrict access to view or modify objects  
+## Restrict access to view or modify objects
 
-Azure DevOps is designed to enable all valid users to view all objects defined in the system. You can restrict access to resources by setting the permission state to **Deny**. You can set permissions for members that belong to a custom security group or for an individual user. To learn more about how to set these types of permissions, see [Change individual permissions, grant select access to specific functions](change-individual-permissions.md). 
-
+Azure DevOps is designed to enable all valid users to view all objects defined in the system. You can restrict access to resources by setting the permission state to **Deny**. You can set permissions for members that belong to a custom security group or for an individual user. To learn more about how to set these types of permissions, see [Change individual permissions, grant select access to specific functions](change-individual-permissions.md).
 
 <table>
 <tr>
@@ -161,80 +158,79 @@ See <a href="../../report/dashboards/dashboard-permissions.md" data-raw-source="
 
 <a id="restrict-modifications-wits" />
 
-## Restrict modification of work items based on a user or group  
+## Restrict modification of work items based on a user or group
 
 ::: moniker range="azure-devops"
 
-For the [Inheritance process model](../../organizations/settings/work/inheritance-process-model.md), you can customize work item types restrict who can modify a specific field for a work item type. 
+For the [Inheritance process model](../../organizations/settings/work/inheritance-process-model.md), you can customize work item types restrict who can modify a specific field for a work item type.
 
 For example, the Priority field, for the User Story work item type, becomes read-only for members of the Fabrikam Fiber\Voice group. When a user of this group opens a User Story, they are unable to change the value on the Priority field.
 
-You can restrict modification of work items by adding a custom rule to the work item type. To learn more, see [Add a rule to a work item type (Inheritance process)](../../organizations/settings/work/custom-rules.md#). 
+You can restrict modification of work items by adding a custom rule to the work item type. To learn more, see [Add a rule to a work item type (Inheritance process)](../../organizations/settings/work/custom-rules.md#).
 
 ::: moniker-end
 
 ::: moniker range="azure-devops-2019"
 
 > [!NOTE]
-> The ability to restrict modification of work items based on a user or group is only supported with the On-premises XML process model at this time for on-premises Azure DevOps. 
+> The ability to restrict modification of work items based on a user or group is only supported with the On-premises XML process model at this time for on-premises Azure DevOps.
 
 ::: moniker-end
 
 ::: moniker range="<= azure-devops-2019"
 
-For the [On-premises XML process model](../../reference/on-premises-xml-process-model.md), you can customize work item types to support these restriction requests: 
-- Restrict who can create or modify a work item 
-- Restrict who can create specific work item types, such as Epics or Features 
+For the [On-premises XML process model](../../reference/on-premises-xml-process-model.md), you can customize work item types to support these restriction requests:
 
-For example, you can restrict modification of work items by adding a rule to the work item type, usually within the **WORKFLOW** section. To learn more, see [Add a rule to a work item type, Apply or ignore rules based on user or group](../../reference/xml/apply-rule-work-item-field.md#apply-ignore). 
+- Restrict who can create or modify a work item
+- Restrict who can create specific work item types, such as Epics or Features
 
-You  restrict access to work tracking objects in one of two ways:
-- [Set a condition field rule](../../reference/xml/apply-rule-work-item-field.md), [a condition-based field rule](../../reference/xml/assign-conditional-based-values-and-rules.md) or a combination of the two that applies to a group. You can restrict changes from being made to a field by specifying a qualifying rule and making it apply for a specific group. Conditional rules can include **CANNOTLOSEVALUE**, **EMPTY**, **FROZEN**, **NOTSAMEAS**, **READONLY**, and **REQUIRED** elements. 
-- By [adding WITs to the Hidden Categories group](../../reference/xml/use-categories-to-group-work-item-types.md), you can prevent the majority of project contributors from creating them. You [can create a hyperlink to a template](../../boards/backlogs/work-item-template.md) that opens the work item form and share that link with those team members who you do want to create them. 
-   
+For example, you can restrict modification of work items by adding a rule to the work item type, usually within the **WORKFLOW** section. To learn more, see [Add a rule to a work item type, Apply or ignore rules based on user or group](../../reference/xml/apply-rule-work-item-field.md#apply-ignore).
+
+You restrict access to work tracking objects in one of two ways:
+
+- [Set a condition field rule](../../reference/xml/apply-rule-work-item-field.md), [a condition-based field rule](../../reference/xml/assign-conditional-based-values-and-rules.md) or a combination of the two that applies to a group. You can restrict changes from being made to a field by specifying a qualifying rule and making it apply for a specific group. Conditional rules can include **CANNOTLOSEVALUE**, **EMPTY**, **FROZEN**, **NOTSAMEAS**, **READONLY**, and **REQUIRED** elements.
+- By [adding WITs to the Hidden Categories group](../../reference/xml/use-categories-to-group-work-item-types.md), you can prevent the majority of project contributors from creating them. You [can create a hyperlink to a template](../../boards/backlogs/work-item-template.md) that opens the work item form and share that link with those team members who you do want to create them.
+
 ::: moniker-end
 
-## Restrict modification of closed work items 
+## Restrict modification of closed work items
 
 [!INCLUDE [temp](../../includes/restrict-modification-closed-wi.md)]
 
-
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Remove user accounts](remove-users-prohibit-access.md)
+> [!div class="nextstepaction"][remove user accounts](remove-users-prohibit-access.md)
 
 ## Related articles
 
-- [Default permissions and access](permissions-access.md) 
-- [Permission lookup guide](permissions-lookup-guide.md) 
+- [Default permissions and access](permissions-access.md)
+- [Permission lookup guide](permissions-lookup-guide.md)
 - [About permissions and groups](about-permissions.md)
 - [Permissions and groups reference](permissions.md)
 - [Set permissions at the project-level or project collection-level](set-project-collection-level-permissions.md)
 
+<!---
+This topic should provide useful steps to think about what they want to shut down, addressing the most common areas that admins have expressed that they want to shut down or open up. Also - consider how they might structure their project - repos, area paths, etc. and how that influences permissions
 
-<!--- 
-This topic should provide useful steps to think about what they want to shut down, addressing the most common areas that admins have expressed that they want to shut down or open up. Also - consider how they might structure their project - repos, area paths, etc. and how that influences permissions 
-
-Maybe consider this in a 2 or 3 step process: 
+Maybe consider this in a 2 or 3 step process:
 - what areas to open up/close down
-- Role and delegation 
-- Impact on project structure (what tends to get out of hand over time - sprawling set of teams, queries, iteration paths, area paths, etc.  
+- Role and delegation
+- Impact on project structure (what tends to get out of hand over time - sprawling set of teams, queries, iteration paths, area paths, etc.
 
 
 STEPS TO CONSIDER
-What do you want to restrict access to? Look up the permission associated with that feature - you can use the Reverse Lookup to determine if it is at the object-level, project-level, or collection-level. 
-Who do you want to restrict access?  Is it one or two folks, or a large number of users. 
-Create a custom security group 
-Add users to that group 
-Set the permissions to restrict access to a feature. 
+What do you want to restrict access to? Look up the permission associated with that feature - you can use the Reverse Lookup to determine if it is at the object-level, project-level, or collection-level.
+Who do you want to restrict access?  Is it one or two folks, or a large number of users.
+Create a custom security group
+Add users to that group
+Set the permissions to restrict access to a feature.
 
-Should we have a Concepts topic about restricting -- address things that we support/don't support. 
+Should we have a Concepts topic about restricting -- address things that we support/don't support.
 
-User Voice requests: 
+User Voice requests:
 * Hide Work Item Types (WITs) based on permission/security group
 
-If you have requirements where you want to restrict user views or select users ability to contribute within an area, you may want to create a separate project where you restrict access. 
+If you have requirements where you want to restrict user views or select users ability to contribute within an area, you may want to create a separate project where you restrict access.
 
-What you can do on TFS differs from what is available  from Azure DevOps 
+What you can do on TFS differs from what is available  from Azure DevOps
 -->

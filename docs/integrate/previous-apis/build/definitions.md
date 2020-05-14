@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Build Definitions | REST API Reference for Team Foundation Server
 description: Get build definitions programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 20BE109C-0350-4338-B6BC-522A2200F5CC
@@ -24,15 +24,17 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/{project}/_apis/build/definitions?api-version={version}[&name={string}][&type={string}]
 ```
 
-| Parameter     | Type                 | Notes
-|:--------------|:---------------------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string               | TFS server name ({server:port}).
-| project       | string               | [Project](../tfs/projects.md) ID or name.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
 | Query
-| api-version   | string               | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| name          | string               | Filters to definitions whose names equal this value. Append a `*` to filter to definitions whose names start with this value. For example: `MS*`.
-| type          | enum { build, xaml } | The type of the build definitions to retrieve. If not specified, all types will be returned.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| name | string | Filters to definitions whose names equal this value. Append a `*` to filter to definitions whose names start with this value. For example: `MS*`.
+| type | enum { build, xaml } | The type of the build definitions to retrieve. If not specified, all types will be returned.
 
 #### Sample request
 
@@ -168,22 +170,23 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
 }
 ```
 
-
 ## Get a build definition
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/build/definitions/{definitionId}?api-version={version}[&revision={int}]
 ```
 
-| Parameter    | Type   | Notes
-|:-------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance     | string | TFS server name ({server:port}).
-| project      | string | [Project](../tfs/projects.md) ID or name.
-| definitionId | int    | ID of the build definition.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| definitionId | int | ID of the build definition.
 | Query
-| api-version  | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| revision     | int    | The specific revision number of the definition to retrieve.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| revision | int | The specific revision number of the definition to retrieve.
 | propertyFilters | string | A comma-delimited list of extended properties to retrieve.
 
 #### Sample request
@@ -271,9 +274,7 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
   },
   "retentionRules": [
     {
-      "branches": [
-        "+refs/heads/*"
-      ],
+      "branches": ["+refs/heads/*"],
       "daysToKeep": 10,
       "deleteBuildRecord": true
     }
@@ -328,8 +329,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
 }
 ```
 
-
 ### By revision
+
 #### Sample request
 
 ```
@@ -415,9 +416,7 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
   },
   "retentionRules": [
     {
-      "branches": [
-        "+refs/heads/*"
-      ],
+      "branches": ["+refs/heads/*"],
       "daysToKeep": 10,
       "deleteBuildRecord": true
     }
@@ -472,7 +471,6 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
 }
 ```
 
-
 <a name="createabuilddefinition" />
 
 ## Create a build definition
@@ -481,19 +479,22 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
 POST https://{instance}/DefaultCollection/{project}/_apis/build/definitions?api-version={version}
 ```
 
-| Parameter     | Type                 | Notes
-|:--------------|:---------------------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string               | TFS server name ({server:port}).
-| project       | string               | [Project](../tfs/projects.md) ID or name.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
 | Query
-| api-version   | string               | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definitions?api-version=2.0
 ```
+
 ```json
 {
   "name": "myDefinition",
@@ -668,9 +669,7 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/defini
   },
   "retentionRules": [
     {
-      "branches": [
-        "+refs/heads/*"
-      ],
+      "branches": ["+refs/heads/*"],
       "daysToKeep": 10,
       "deleteBuildRecord": true
     }
@@ -726,30 +725,31 @@ POST https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/defini
 }
 ```
 
-
-
 ## Update a build definition
 
 ```no-highlight
 PUT https://{instance}/DefaultCollection/{project}/_apis/build/definitions/{definitionId}?api-version={version}
 ```
 
-| Parameter     | Type                 | Notes
-|:--------------|:---------------------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string               | TFS server name ({server:port}).
-| project       | string               | [Project](../tfs/projects.md) ID or name.
-| definitionId  | int                  | ID of the build definition.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| definitionId | int | ID of the build definition.
 | Query
-| api-version   | string               | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| revision      | int                  | The current revision number of the definition. If this doesn't match the current version, the update will fail.
+| revision | int | The current revision number of the definition. If this doesn't match the current version, the update will fail.
 
 #### Sample request
 
 ```
 PUT https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definitions/29?api-version=2.0
 ```
+
 ```json
 {
   "id": 29,
@@ -975,22 +975,22 @@ PUT https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
 }
 ```
 
-
-
 ## Delete a build definition
 
 ```no-highlight
 DELETE https://{instance}/DefaultCollection/{project}/_apis/build/definitions/{definitionId}?api-version={version}
 ```
 
-| Parameter     | Type                 | Notes
-|:--------------|:---------------------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string               | TFS server name ({server:port}).
-| project       | string               | [Project](../tfs/projects.md) ID or name.
-| definitionId  | int                  | ID of the build definition.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| definitionId | int | ID of the build definition.
 | Query
-| api-version   | string               | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -998,22 +998,22 @@ DELETE https://{instance}/DefaultCollection/{project}/_apis/build/definitions/{d
 DELETE https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definitions/29?api-version=2.0
 ```
 
-
-
 ## Get the history of a build definition
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/build/definitions/{definitionId}/revisions?api-version={version}
 ```
 
-| Parameter    | Type   | Notes
-|:-------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance     | string | TFS server name ({server:port}).
-| project      | string | [Project](../tfs/projects.md) ID or name.
-| definitionId | int    | ID of the build definition.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| definitionId | int | ID of the build definition.
 | Query
-| api-version  | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -1061,19 +1061,20 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/definit
 }
 ```
 
-
 ## Get build definition options
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/build/options?api-version={version}
 ```
 
-| Parameter    | Type   | Notes
-|:-------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance     | string | TFS server name ({server:port}).
+| instance | string | TFS server name ({server:port}).
 | Query
-| api-version  | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 

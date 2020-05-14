@@ -14,8 +14,6 @@ ms.date: 08/04/2016
 
 Module path: `VSS/Common/Contracts/FormInput`
 
-
 ### Members
 
-* `message`: string. The error message.
-
+- `message`: string. The error message.

@@ -14,18 +14,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `fields`: {[key: string]: string}. Fields of the information node
+- `fields`: {[key: string]: string}. Fields of the information node
 
-* `lastModifiedBy`: string. Process or person that last modified this node
+- `lastModifiedBy`: string. Process or person that last modified this node
 
-* `lastModifiedDate`: Date. Date this node was last modified
+- `lastModifiedDate`: Date. Date this node was last modified
 
-* `nodeId`: number. Node ID of this information node
+- `nodeId`: number. Node ID of this information node
 
-* `parentId`: number. ID of parent node (xml tree)
+- `parentId`: number. ID of parent node (xml tree)
 
-* `type`: string. The type of the information node
-
+- `type`: string. The type of the information node

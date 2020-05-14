@@ -1,16 +1,16 @@
 ﻿---
 title: Add, edit, reorder and manage wiki pages
-titleSuffix: Azure DevOps  
-description: Learn how to add, edit, reorder, and manage pages for your built-in project wiki in Azure DevOps.  
+titleSuffix: Azure DevOps
+description: Learn how to add, edit, reorder, and manage pages for your built-in project wiki in Azure DevOps.
 ms.technology: devops-collab
 ms.custom: wiki
-ms.assetid: BD03B9EE-D4DC-4EDC-B0BF-5C11B34E14C9 
+ms.assetid: BD03B9EE-D4DC-4EDC-B0BF-5C11B34E14C9
 ms.author: chcomley
 author: chcomley
 ms.reviewer: gopinach
 ms.topic: quickstart
-monikerRange: '>= tfs-2018'
-ms.date: 10/14/2019 
+monikerRange: ">= tfs-2018"
+ms.date: 10/14/2019
 ---
 
 # Quickstart: Add and edit wiki pages
@@ -19,17 +19,18 @@ ms.date: 10/14/2019
 
 When the [Wiki Git repository is provisioned](./wiki-create-repo.md) for your team project, you have a new page where you can add a title and content. There is a side-by-side edit and preview experience where you can edit the page and preview the content as you go.
 
-In this quickstart, learn how to do the following tasks:  
+In this quickstart, learn how to do the following tasks:
 
 > [!div class="checklist"]
-> * Open wiki
-> * Add a wiki page
-> * View revisions for a page
-> * Edit and delete wiki pages
-> * Reorder wiki pages
-> * Make a page the wiki home page
+>
+> - Open wiki
+> - Add a wiki page
+> - View revisions for a page
+> - Edit and delete wiki pages
+> - Reorder wiki pages
+> - Make a page the wiki home page
 
-While you author pages using [Markdown format](../../reference/markdown-guidance.md), you can also use the format pane for rich-text formatting and inserting images, attachments, and links.  
+While you author pages using [Markdown format](../../reference/markdown-guidance.md), you can also use the format pane for rich-text formatting and inserting images, attachments, and links.
 
 > [!div class="mx-imgBorder"]  
 > ![Wiki home page](media/wiki/wiki-edit.png)
@@ -43,13 +44,13 @@ As you edit the page, save it by entering **Ctrl+S**. To save with a custom revi
 
 ## Commands
 
-| Commands | Description |
-|---------|---------|
-| [az devops wiki show](#open-wiki) | Open a wiki |
-| [az devops wiki page show](#view-a-wiki-page) | Get the content of a page or open a page |
-| [az devops wiki page create](#add-a-wiki-page) | Add a new page |
-| [az devops wiki page update](#edit-wiki-page) | Edit a page |
-| [az devops wiki page delete](#delete-wiki-page) | Delete a page |
+| Commands                                        | Description                              |
+| ----------------------------------------------- | ---------------------------------------- |
+| [az devops wiki show](#open-wiki)               | Open a wiki                              |
+| [az devops wiki page show](#view-a-wiki-page)   | Get the content of a page or open a page |
+| [az devops wiki page create](#add-a-wiki-page)  | Add a new page                           |
+| [az devops wiki page update](#edit-wiki-page)   | Edit a page                              |
+| [az devops wiki page delete](#delete-wiki-page) | Delete a page                            |
 
 ::: moniker-end
 
@@ -60,25 +61,25 @@ As you edit the page, save it by entering **Ctrl+S**. To save with a custom revi
 
 ::: moniker-end
 
-
-<a id="prereq">  </a>
+<a id="prereq"> </a>
 
 ## Prerequisites
 
-* You must have a provisioned wiki. If your wiki hasn't yet been created, [do that now](wiki-create-repo.md).
-* You must be a member of the team project as a contributor to add or update wiki pages.
+- You must have a provisioned wiki. If your wiki hasn't yet been created, [do that now](wiki-create-repo.md).
+- You must be a member of the team project as a contributor to add or update wiki pages.
 
-<a id="open-wiki">  </a>
+<a id="open-wiki"> </a>
 
-[!INCLUDE  [temp](includes/open-wiki-hub.md)]
+[!INCLUDE [temp](includes/open-wiki-hub.md)]
 
 ::: moniker range="= azure-devops"
 
 ## View a wiki page
 
-To get the content of a page via the Azure DevOps CLI, enter the `az devops wiki show` command. 
+To get the content of a page via the Azure DevOps CLI, enter the `az devops wiki show` command.
 
 > [!div class="tabbedCodeSnippets"]
+
 ```CLI
 az devops wiki page show --path
                          --wiki
@@ -103,6 +104,7 @@ az devops wiki page show --path
 Get wiki page content with path 'my wiki' in a wiki named 'myprojectwiki'.
 
 > [!div class="tabbedCodeSnippets"]
+
 ```CLI
 az devops wiki page show --path 'my wiki' --wiki 'myprojectwiki' --content "Hello World"
 ```
@@ -113,7 +115,7 @@ az devops wiki page show --path 'my wiki' --wiki 'myprojectwiki' --content "Hell
 
 ## Add a wiki page
 
-#### [Browser](#tab/browser) 
+#### [Browser](#tab/browser)
 
 To add another page, choose **New page**. Or, to add a subpage, open the context menu of an existing page and select **Add subpage**.
 
@@ -128,9 +130,10 @@ You can also use keyboard shortcuts to add a new page by pressing **n** or add a
 
 ::: moniker range="azure-devops"
 
-To add a wiki page, enter the `az devops wiki page create` command. 
+To add a wiki page, enter the `az devops wiki page create` command.
 
 > [!div class="tabbedCodeSnippets"]
+
 ```Azure CLI
 az devops wiki page create --path
                            --wiki
@@ -144,20 +147,21 @@ az devops wiki page create --path
 
 ### Parameters
 
-- **--path**: Required. Path of the wiki page.  
+- **--path**: Required. Path of the wiki page.
 - **--wiki**: Required. Name or ID of the wiki.
--  **--comment**: Optional. Comment in the commit message of file add operation. Default value: Added a new page using Azure DevOps CLI.
--  **--content**: Optional. Content of the wiki page. Ignored if --file-path is specified. 
--  **--encoding**: Optional. Encoding of the file. Used in conjunction with --file-path parameter.
-accepted values: ascii, utf-16be, utf-16le, utf-8
--  **--file-path**: Optional. Path of the file input if content is specified in the file.    
--  **--project -p**: Required if not configured as default or picked up via git config. Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. 
+- **--comment**: Optional. Comment in the commit message of file add operation. Default value: Added a new page using Azure DevOps CLI.
+- **--content**: Optional. Content of the wiki page. Ignored if --file-path is specified.
+- **--encoding**: Optional. Encoding of the file. Used in conjunction with --file-path parameter.
+  accepted values: ascii, utf-16be, utf-16le, utf-8
+- **--file-path**: Optional. Path of the file input if content is specified in the file.
+- **--project -p**: Required if not configured as default or picked up via git config. Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID.
 
 ### Examples
 
 Create a new page with path 'my page' in a wiki named 'myprojectwiki' with inline content.
 
 > [!div class="tabbedCodeSnippets"]
+
 ```CLI
 az devops wiki page update --path 'my page' --wiki myprojectwiki --content "Hello World"
 ```
@@ -165,6 +169,7 @@ az devops wiki page update --path 'my page' --wiki myprojectwiki --content "Hell
 Update content of page with path 'my page' in a wiki with content from a file.
 
 > [!div class="tabbedCodeSnippets"]
+
 ```CLI
 az devops wiki page update --path 'my page' --wiki myprojectwiki --file-path a.txt --encoding utf-8
 ```
@@ -177,7 +182,7 @@ az devops wiki page update --path 'my page' --wiki myprojectwiki --file-path a.t
 
 ::: moniker-end
 
-* * *
+---
 
 <a id="page-title-names"></a>
 
@@ -187,9 +192,9 @@ az devops wiki page update --path 'my page' --wiki myprojectwiki --file-path a.t
 
 ## Edit and delete wiki pages
 
-#### [Browser](#tab/browser) 
+#### [Browser](#tab/browser)
 
-To edit an existing Wiki page, open the page and select **Edit**, or open the context menu and select **Edit**. You can also use keyboard shortcut **e** to quickly navigate to the edit of the current page. 
+To edit an existing Wiki page, open the page and select **Edit**, or open the context menu and select **Edit**. You can also use keyboard shortcut **e** to quickly navigate to the edit of the current page.
 
 For code wikis, you can edit wiki pages in Repos hub also by using the option **Edit in Repos**
 
@@ -199,7 +204,7 @@ For code wikis, you can edit wiki pages in Repos hub also by using the option **
 > [!NOTE]  
 > If you have branch policies in your code wiki, use "Edit in Repos" to create a branch and continue editing.
 
-To delete a page, open the context menu from the tree or the one inside the page and select **Delete**.  Confirm the delete in the dialog box that opens.
+To delete a page, open the context menu from the tree or the one inside the page and select **Delete**. Confirm the delete in the dialog box that opens.
 
 > [!NOTE]  
 > Deleting a page deletes the page along with all the metadata and all its sub pages (if any) in the hierarchy.
@@ -210,9 +215,10 @@ To delete a page, open the context menu from the tree or the one inside the page
 
 ### Edit wiki page
 
-To edit a wiki page, enter the `az devops wiki page update` command. 
+To edit a wiki page, enter the `az devops wiki page update` command.
 
 > [!div class="tabbedCodeSnippets"]
+
 ```CLI
 az devops wiki page update --path
                            --version
@@ -239,6 +245,7 @@ az devops wiki page update --path
 Update content of page with path 'my page' in a wiki named 'myprojectwiki' with inline content.
 
 > [!div class="tabbedCodeSnippets"]
+
 ```CLI
 az devops wiki page update --path 'my page' --wiki myprojectwiki --content "Hello World" --version 4ae78ad5835cb7dd55072fe210c9ee7eb6d6413b
 ```
@@ -246,15 +253,17 @@ az devops wiki page update --path 'my page' --wiki myprojectwiki --content "Hell
 Update content of page with path 'my page' in a wiki with content from a file.
 
 > [!div class="tabbedCodeSnippets"]
+
 ```CLI
 az devops wiki page update --path 'my page' --wiki myprojectwiki --file-path a.txt --encoding utf-8 --version 4ae78ad5835cb7dd55072fe210c9ee7eb6d6413b
 ```
 
 ### Delete wiki page
 
-To delete a wiki page, enter the `az devops wiki page delete` command. 
+To delete a wiki page, enter the `az devops wiki page delete` command.
 
 > [!div class="tabbedCodeSnippets"]
+
 ```CLI
 az devops wiki page delete --path
                            --wiki
@@ -262,7 +271,7 @@ az devops wiki page delete --path
                            [--project]
                            [--subscription]
                            [--yes]
-                          
+
 ```
 
 ### Parameters
@@ -281,6 +290,7 @@ az devops wiki page delete --path
 Delete a wiki page with path 'my wiki' in a wiki named 'myprojectwiki'.
 
 > [!div class="tabbedCodeSnippets"]
+
 ```CLI
 az devops wiki page delete --path 'my wiki' --wiki 'myprojectwiki'
 ```
@@ -293,14 +303,14 @@ az devops wiki page delete --path 'my wiki' --wiki 'myprojectwiki'
 
 ::: moniker-end
 
-* * *
+---
 
 ## Reorder a wiki page
 
 You can reorder pages within the wiki tree view to have pages appear in the order and hierarchy you want. You can drag-and-drop a page title in the tree view to perform the following operations:
 
-* Change the parent-child relationship of a page
-* Change the order of the page within the hierarchy
+- Change the parent-child relationship of a page
+- Change the order of the page within the hierarchy
 
 > [!NOTE]  
 > Moving a page in the hierarchy may break links to it from other pages. You can always fix the links manually after you move. Reordering a page within a hierarchy has no impact on page links.
@@ -319,7 +329,4 @@ By default, the first page you add when you create a wiki is set as the wiki hom
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [View wiki page history and revert](wiki-view-history.md)
-
-
+> [!div class="nextstepaction"][view wiki page history and revert](wiki-view-history.md)

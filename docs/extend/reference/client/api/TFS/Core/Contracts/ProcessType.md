@@ -16,6 +16,6 @@ Module path: `TFS/Core/Contracts`
 
 ### Values
 
-* `System` 
-* `Custom` 
-* `Inherited` 
+- `System`
+- `Custom`
+- `Inherited`

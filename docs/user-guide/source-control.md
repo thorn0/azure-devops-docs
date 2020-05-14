@@ -2,21 +2,21 @@
 title: Understand source control
 titleSuffix: Azure DevOps
 ms.custom: seodec18
-description: What is source control or version control in Azure DevOps & Team Foundation Server?  
-ms.technology: devops-new-user 
+description: What is source control or version control in Azure DevOps & Team Foundation Server?
+ms.technology: devops-new-user
 ms.assetid: 7E769466-2165-4223-96FA-80A687287EFC
 ms.author: chcomley
 author: chcomley
 ms.topic: conceptual
 ms.date: 04/25/2019
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # What is source control?
 
 [!INCLUDE [temp](../includes/version-vsts-tfs-all-versions.md)]
 
-A source control system, also called a *version control* system, allows developers to collaborate on code and track changes. Source control is an essential tool for multi-developer projects.  
+A source control system, also called a _version control_ system, allows developers to collaborate on code and track changes. Source control is an essential tool for multi-developer projects.
 
 Our systems support two types of source control: Git (distributed) and Team Foundation Version Control (TFVC). TFVC is a centralized, client-server system. In both Git and TFVC, you can check in files and organize files in folders, branches, and repositories.
 
@@ -33,14 +33,13 @@ Developers are able to commit each set of changes and perform version control op
 
 With TFVC, developers have only one version of each file on their dev machines. Historical data is maintained only on the server. Branches are path-based and are created on the server.
 
-## Next steps 
+## Next steps
 
-Start sharing your code or get your code by using source control.  
+Start sharing your code or get your code by using source control.
 
-> [!div class="nextstepaction"]
-> [Code with Git](code-with-git.md)
+> [!div class="nextstepaction"][code with git](code-with-git.md)
 
 ## Related articles
 
-* [Azure Repos documentation](../repos/index.yml)
-* [Git repositories documentation](../repos/git/index.yml)
+- [Azure Repos documentation](../repos/index.yml)
+- [Git repositories documentation](../repos/git/index.yml)

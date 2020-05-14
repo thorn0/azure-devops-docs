@@ -13,16 +13,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `objectId`: string. SHA1 hash of git object
+- `objectId`: string. SHA1 hash of git object
 
-* `size`: number. Sum of sizes of all children
+- `size`: number. Sum of sizes of all children
 
-* `treeEntries`: [GitTreeEntryRef](../../../TFS/VersionControl/Contracts/GitTreeEntryRef.md)[]. Blobs and trees under this tree
+- `treeEntries`: [GitTreeEntryRef](../../../TFS/VersionControl/Contracts/GitTreeEntryRef.md)[]. Blobs and trees under this tree
 
-* `url`: string. Url to tree
-
+- `url`: string. Url to tree

@@ -12,12 +12,12 @@ ms.technology: devops-cicd-tasks
 # Build an iOS app with Xamarin on macOS
 - task: XamariniOS@2
   inputs:
-    #solutionFile: '**/*.sln' 
-    #configuration: 'Release' 
+    #solutionFile: '**/*.sln'
+    #configuration: 'Release'
     #clean: false # Optional
-    #packageApp: true 
+    #packageApp: true
     #buildForSimulator: false # Optional
-    #runNugetRestore: false 
+    #runNugetRestore: false
     #args: # Optional
     #workingDirectory: # Optional
     #mdtoolFile: # Optional

@@ -1,18 +1,18 @@
 ---
 title: Additional configuration options
-titleSuffix: TFS 
-description: Options to configure or customize after you upgrade an on-premises Team Foundation Server to access all features  
+titleSuffix: TFS
+description: Options to configure or customize after you upgrade an on-premises Team Foundation Server to access all features
 ms.technology: devops-agile
 ms.assetid: F89F5890-31E6-47EF-810F-AB75E1AE7E00
 ms.author: kaelli
 author: KathrynEE
 ms.topic: conceptual
-monikerRange: '>= tfs-2013 <= azure-devops-2019'
+monikerRange: ">= tfs-2013 <= azure-devops-2019"
 ms.date: 04/05/2017
 ---
 
 <!---
-Supports the following FWLINK: Additional configuration options are available - changes: https://go.microsoft.com/fwlink/?LinkID=242982 - 
+Supports the following FWLINK: Additional configuration options are available - changes: https://go.microsoft.com/fwlink/?LinkID=242982 -
 -->
 
 # Additional configuration options post update
@@ -20,10 +20,9 @@ Supports the following FWLINK: Additional configuration options are available - 
 [!INCLUDE [temp](../includes/version-header-tfs-only.md)]
 
 > [!IMPORTANT]  
->This topic applies only to projects hosted on an on-premises Team Foundation Server (TFS). Projects defined on Azure DevOps Services [update automatically with each service upgrade](/azure/devops/release-notes/index). 
+> This topic applies only to projects hosted on an on-premises Team Foundation Server (TFS). Projects defined on Azure DevOps Services [update automatically with each service upgrade](/azure/devops/release-notes/index).
 
-
-After you update your project with the Configure Features wizard, you have access to the latest features. However, you may need to make some additional configurations or customizations to support your work tracking needs. Also, you have access to some features based on the source control setting selected when your project was created.  
+After you update your project with the Configure Features wizard, you have access to the latest features. However, you may need to make some additional configurations or customizations to support your work tracking needs. Also, you have access to some features based on the source control setting selected when your project was created.
 
 <table>
 <tbody valign="top">
@@ -94,11 +93,12 @@ In addition, you can customize the following options by modifying the <a href="x
 <li>Change the default columns and column sequence of backlogs</li>
 <li>Map metastates to customized WIT workflow states</li>
 <li>Change the fields used in Agile tools and charts </li>
-</ul> 
+</ul>
 
 For additional customization options, see <a href="customize-work.md" data-raw-source="[Customize work tracking objects](customize-work.md)">Customize work tracking objects</a>.<br/>
 
-If you've upgraded your TFS instance from [TFS 2010](#update-from-2010) or [TFS 2012](#update-from-2012), we recommend you update the workflow for select WITs to get the full functionality of your backlogs and boards. 
+If you've upgraded your TFS instance from [TFS 2010](#update-from-2010) or [TFS 2012](#update-from-2012), we recommend you update the workflow for select WITs to get the full functionality of your backlogs and boards.
+
 </td>
 </tr>
 <tr>
@@ -140,7 +140,6 @@ No additional configurations or customizations required.
 </td>
 </tr>
 
-
 <tr>
 <td>
 Test Plan and Test Suite
@@ -176,40 +175,42 @@ To get started, each team must choose their preference as described in <a href="
 </tbody>
 </table>
 
-## Related articles 
+## Related articles
 
 If you are the server administrator for TFS and don't actually contribute to a team, then you may want to [remove yourself as a member, and add a project lead as the team administrator](../organizations/security/add-users-team-project.md). (When you ran the Configure Features wizard, the system automatically added your user account as a team administrator for the project.)
 
 If you have updated a project based on v5.0 of MSF for Agile, do the manual updates described in [Update the Workflow for Agile Team Projects](xml/update-the-workflow-for-agile-team-projects.md).
 
-<a id="test-case-management">   </a> 
+<a id="test-case-management"> </a>
 
-### Test case management and custom workflow states 
-If you add or change the workflow states for the test plan or test suite type definitions, and you work from a Test Manager client provided with Visual Studio 2013.2 or earlier versions, you must also update the process configuration for the project as well. Otherwise, you'll encounter an **Application detected an unexpected fault** error when you connect to your project. 
+### Test case management and custom workflow states
 
-![Application fault error message after TFS upgrade](media/ALM_CF_AppFaultErrMsg.png)  
+If you add or change the workflow states for the test plan or test suite type definitions, and you work from a Test Manager client provided with Visual Studio 2013.2 or earlier versions, you must also update the process configuration for the project as well. Otherwise, you'll encounter an **Application detected an unexpected fault** error when you connect to your project.
 
-To resolve this error, see [Import and export process configuration [witadmin]](witadmin/witadmin-import-export-process-configuration.md).  
+![Application fault error message after TFS upgrade](media/ALM_CF_AppFaultErrMsg.png)
 
-<a id="update-from-2012">   </a> 
-### Recommended updates to projects created from TFS 2012 process templates 
+To resolve this error, see [Import and export process configuration [witadmin]](witadmin/witadmin-import-export-process-configuration.md).
+
+<a id="update-from-2012"> </a>
+
+### Recommended updates to projects created from TFS 2012 process templates
 
 There are no additional required customizations to make after updating from TFS 2012 to TFS 2015. However, there are some recommended updates to make to the workflow of specific WITs.
 
-The updates bring your project up to date with the workflow settings that are defined in the latest versions of the default process templates. 
+The updates bring your project up to date with the workflow settings that are defined in the latest versions of the default process templates.
 
-You might want to update the workflow of specific WITs to support missing transitions, additional reasons, and field assignments. Making this update revises the workflow for the following WITs to the latest version of their process template workflow: 
+You might want to update the workflow of specific WITs to support missing transitions, additional reasons, and field assignments. Making this update revises the workflow for the following WITs to the latest version of their process template workflow:
 
-* Scrum 2.0 to Scrum 2013: Product Backlog Item and Bug  
-* Agile 6.0 to Agile 2013: User Story  
-* CMMI 6.0 to CMMI 2013: Requirement  
+- Scrum 2.0 to Scrum 2013: Product Backlog Item and Bug
+- Agile 6.0 to Agile 2013: User Story
+- CMMI 6.0 to CMMI 2013: Requirement
 
 If you haven't customized your work item types or process configuration, you can update the items quickly by using **witadmin**. Just [download the latest version of the process template](../boards/work-items/guidance/manage-process-templates.md) that is compatible with the one used to create your project and then [import the updated WITs](witadmin/witadmin-import-export-manage-wits.md).
 
-<a id="update-from-2010">   </a> 
-### Recommended updates to projects created from TFS 2010 process templates 
+<a id="update-from-2010"> </a>
 
-If you've updated a project that was created with an MSF v 5.0 Agile process template, then you'll also want to [manually update the user story and task workflow assignments](xml/update-the-workflow-for-agile-team-projects.md). 
+### Recommended updates to projects created from TFS 2010 process templates
+
+If you've updated a project that was created with an MSF v 5.0 Agile process template, then you'll also want to [manually update the user story and task workflow assignments](xml/update-the-workflow-for-agile-team-projects.md).
 
 If you don't update the workflow, then the task board provides only two states, Active and Closed. This prevents you and your team from distinguishing between tasks that are in progress from those that haven't been started.
-

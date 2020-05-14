@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 02/27/2020
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Manage paid access for users
@@ -29,14 +29,14 @@ Visual Studio subscribers get access included with their subscription, and their
 
 Ensure the following is true:
 
-* [Billing is set up for your organization](set-up-billing-for-your-organization-vs.md)
-* You have [Project Collection Administrator or organization Owner permissions](../security/lookup-organization-owner-admin.md)
+- [Billing is set up for your organization](set-up-billing-for-your-organization-vs.md)
+- You have [Project Collection Administrator or organization Owner permissions](../security/lookup-organization-owner-admin.md)
 
 <a name="buy-access-vs-marketplace"></a>
 
 ## Assign users Basic or Basic + Test Plans
 
-The simplest way to control paid access is by manually assigning an access level when you [add a new user to your organization](../accounts/add-organization-users.md) and by [removing users](../accounts/delete-organization-users.md) when they leave your organization. 
+The simplest way to control paid access is by manually assigning an access level when you [add a new user to your organization](../accounts/add-organization-users.md) and by [removing users](../accounts/delete-organization-users.md) when they leave your organization.
 
 Keep the following information in mind:
 
@@ -47,11 +47,11 @@ Keep the following information in mind:
 
 ## Select the default access level for new users
 
-After you set up billing for your organization all new users get the free Stakeholder access if they're added directly to a Project. That way you aren't surprised by charges for new users who weren't added directly to the organization by a Project Collection Administrator. 
+After you set up billing for your organization all new users get the free Stakeholder access if they're added directly to a Project. That way you aren't surprised by charges for new users who weren't added directly to the organization by a Project Collection Administrator.
 
 To change the access level for new users added to projects, do the following tasks:
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
 2. Select ![gear icon](../../media/icons/gear-icon.png) **Organization settings**.
 
@@ -71,11 +71,11 @@ Larger organizations may want to automate access level assignments, so you don't
 
 ## Reduce charges for users who no longer need access
 
-Billing stops automatically when users are removed from your organization or are assigned the free Stakeholder access level. 
- 
+Billing stops automatically when users are removed from your organization or are assigned the free Stakeholder access level.
+
 To find out if you have users who are no longer using Azure DevOps, do the following tasks:
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
 2. Select ![gear icon](../../media/icons/gear-icon.png) **Organization settings**.
 
@@ -84,8 +84,8 @@ To find out if you have users who are no longer using Azure DevOps, do the follo
 3. Select **Users** and then sort by **Last Access**.
 
    :::image type="content" source="media/shared/last-access.png" alt-text="Select Users and then sort by Last Access":::
- 
-4. If you have users who've never signed in, you can find out how recently they were added by exporting the list of users and checking the **Date Created** column. 
+
+4. If you have users who've never signed in, you can find out how recently they were added by exporting the list of users and checking the **Date Created** column.
 
    :::image type="content" source="media/shared/export-users.png" alt-text="Export users":::
 
@@ -93,7 +93,7 @@ To find out if you have users who are no longer using Azure DevOps, do the follo
 
 If you have more than one Azure DevOps organization, you can turn on multi-organization billing and pay for each **Basic** or **Basic + Test Plan** user once, for all organizations under the same billing Azure subscription. For more details, see [multi-organization billing FAQs](billing-faq.md#multi-organization-billing). Complete the following steps.
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
 2. Select ![gear icon](../../media/icons/gear-icon.png) **Organization settings**.
 
@@ -104,7 +104,7 @@ If you have more than one Azure DevOps organization, you can turn on multi-organ
    ![Select Billing from Organization settings](media/shared/select-billing-organization-settings.png)
 
 4. Select **Configure user billing**.
-   
+
    ![Select Configure user billing](media/buy-more-basic-access/select-configure-user-billing.png)
 
 5. Select **Multi-organization**, and then select **Save**.
@@ -113,6 +113,4 @@ If you have more than one Azure DevOps organization, you can turn on multi-organ
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Buy CI/CD](buy-more-build-vs.md#prerequisites)
-
+> [!div class="nextstepaction"][buy ci/cd](buy-more-build-vs.md#prerequisites)

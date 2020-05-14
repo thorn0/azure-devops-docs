@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: macoope
 author: vtbassmatt
 ms.date: 03/05/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # PowerShell task
@@ -24,7 +24,7 @@ Use this task to run a PowerShell script.
 
 ## Demands
 
-* DotNetFramework
+- DotNetFramework
 
 ::: moniker range="> tfs-2018"
 
@@ -35,23 +35,23 @@ Use this task to run a PowerShell script.
 The Powershell task also has two shortcuts in YAML:
 
 ```yaml
-- powershell:  # inline script
-  workingDirectory:  #
-  displayName:  #
-  failOnStderr:  #
-  errorActionPreference:  #
-  ignoreLASTEXITCODE:  #
-  env:  # mapping of environment variables to add
+- powershell: # inline script
+  workingDirectory: #
+  displayName: #
+  failOnStderr: #
+  errorActionPreference: #
+  ignoreLASTEXITCODE: #
+  env: # mapping of environment variables to add
 ```
 
 ```yaml
-- pwsh:  # inline script
-  workingDirectory:  #
-  displayName:  #
-  failOnStderr:  #
-  errorActionPreference:  #
-  ignoreLASTEXITCODE:  #
-  env:  # mapping of environment variables to add
+- pwsh: # inline script
+  workingDirectory: #
+  displayName: #
+  failOnStderr: #
+  errorActionPreference: #
+  ignoreLASTEXITCODE: #
+  env: # mapping of environment variables to add
 ```
 
 Both of these resolve to the `PowerShell@2` task.
@@ -90,7 +90,7 @@ Both of these resolve to the `PowerShell@2` task.
 
 ### Hello World
 
-Create ```test.ps1``` at the root of your repo:
+Create `test.ps1` at the root of your repo:
 
 ```ps
 Write-Host "Hello World from $Env:AGENT_NAME."
@@ -106,15 +106,15 @@ Write-Host "Over and out."
 
 On the Build tab of a build pipeline, add this task:
 
-| Task | Arguments |
-| ---- | --------- |
+| Task                                                  | Arguments                                                |
+| ----------------------------------------------------- | -------------------------------------------------------- |
 | ![](media/powershell.png)<br/>**Utility: PowerShell** | Run test.ps1.<br /><br />**Script filename**: `test.ps1` |
 
 ### Write a warning
 
 Add the PowerShell task, set the **Type** to `inline`, and paste in this script:
 
- ```ps
+```ps
 # Writes a warning to build summary and to log in yellow text
 Write-Host  "##vso[task.LogIssue type=warning;]This is the warning"
 ```
@@ -123,17 +123,18 @@ Write-Host  "##vso[task.LogIssue type=warning;]This is the warning"
 
 Add the PowerShell task, set the **Type** to `inline`, and paste in this script:
 
- ```ps
+```ps
 # Writes an error to build summary and to log in red text
 Write-Host  "##vso[task.LogIssue type=error;]This is the error"
 ```
 
 > [!TIP]
-> 
+>
 > If you want this error to fail the build, then add this line:
->  ```ps
+>
+> ```ps
 > exit 1
-> ``` 
+> ```
 
 ### ApplyVersionToAssemblies.ps1
 

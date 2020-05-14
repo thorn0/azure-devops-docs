@@ -11,14 +11,14 @@ hide_comments: true
 
 # Azure DevOps Feature Timeline
 
-****
+---
 
-| <a href="https://aka.ms/azuredevops/releasenotes" target="blank">What's New</a> 
-| <a href="https://developercommunity.visualstudio.com/spaces/21/index.html" target="blank">Developer Community</a> 
-| <a href="https://devblogs.microsoft.com/devops/" target="blank">DevOps Blog</a> 
+| <a href="https://aka.ms/azuredevops/releasenotes" target="blank">What's New</a>
+| <a href="https://developercommunity.visualstudio.com/spaces/21/index.html" target="blank">Developer Community</a>
+| <a href="https://devblogs.microsoft.com/devops/" target="blank">DevOps Blog</a>
 | <a href="https://docs.microsoft.com/azure/devops/?view=azure-devops" target="blank">Documentation</a> |
 
-****
+---
 
 ## Features under development
 
@@ -75,7 +75,6 @@ This feature list is a peek into our roadmap. It identifies some of the signific
    </tr>
     </tbody>
 </table>
-
 
 ## Current features
 
@@ -4437,7 +4436,6 @@ Versions in the "Server" column are linked to the appropriate download location.
 
 We would love to hear what you think about these features. Report any problems or suggest a feature through [Developer Community](https://developercommunity.visualstudio.com/spaces/21/index.html).
 
-> [!div class="mx-imgBorder"]
-> ![Make a suggestion](media/help-make-a-suggestion.png)
+> [!div class="mx-imgBorder"] > ![Make a suggestion](media/help-make-a-suggestion.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-devops).

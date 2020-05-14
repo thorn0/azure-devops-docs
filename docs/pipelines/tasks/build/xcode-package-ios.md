@@ -6,9 +6,8 @@ ms.assetid: FF3E5771-481B-4D72-B3D5-ED9B3379E298
 ms.author: vijayma
 author: vijayma
 ms.date: 11/13/2017
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Xcode Package iOS task
 
@@ -17,6 +16,7 @@ monikerRange: '>= tfs-2015'
 Use this task to generate an .ipa file from Xcode build output.
 
 ## Deprecated
+
 **The Xcode Package iOS task has been deprecated.
 It is relevant only if you are using Xcode 6.4.
 Otherwise, use the latest version of the Xcode task.**
@@ -86,7 +86,6 @@ Make sure to specify the variable values on the <a href="../../build/variables.m
 </td>
 </tr>
 
-
 <tr>
 <th style="text-align: center" colspan="2"><a href="~/pipelines/process/tasks.md#controloptions" data-raw-source="[Control options](../../process/tasks.md#controloptions)">Control options</a></th>
 </tr>
@@ -98,6 +97,7 @@ Make sure to specify the variable values on the <a href="../../build/variables.m
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 [!INCLUDE [temp](../../includes/qa-agents.md)]

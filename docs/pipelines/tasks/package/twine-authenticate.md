@@ -1,10 +1,10 @@
 ---
 title: Python Twine Upload Authenticate
 ms.custom: seodec18
-description: Sets up authentication with twine to Python feeds so you can publish Python packages in your pipeline. 
+description: Sets up authentication with twine to Python feeds so you can publish Python packages in your pipeline.
 ms.topic: reference
 ms.date: 08/02/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Package: Python Twine Upload Authenticate
@@ -13,7 +13,7 @@ monikerRange: 'azure-devops'
 
 **Azure Pipelines**
 
-Provides `twine` credentials to a `PYPIRC_PATH` environment variable for the scope of the build. This enables you to publish Python packages to feeds with `twine` from your build. 
+Provides `twine` credentials to a `PYPIRC_PATH` environment variable for the scope of the build. This enables you to publish Python packages to feeds with `twine` from your build.
 
 ::: moniker range="> tfs-2018"
 
@@ -25,12 +25,11 @@ Provides `twine` credentials to a `PYPIRC_PATH` environment variable for the sco
 
 ## Arguments
 
-
-| Argument| Description|
-| --------| -----------|
-| `artifactFeed`<br/>My feed| (Optional) An Azure Artifacts feed name to authenticate with `twine`. |
+| Argument                                                             | Description                                                                                                                                                                                                                                                                                                                                                        |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `artifactFeed`<br/>My feed                                           | (Optional) An Azure Artifacts feed name to authenticate with `twine`.                                                                                                                                                                                                                                                                                              |
 | `pythonUploadServiceConnection`<br/>Feed from external organizations | (Optional) A <a href="~/pipelines/library/service-endpoints.md#sep-python-upload" data-raw-source="[twine service connection](~/pipelines/library/service-endpoints.md#sep-python-upload)">twine service connection</a> name from external organization to authenticate with `twine`. The credentials stored in the endpoint must have package upload permissions. |
-| [!INCLUDE [temp](../includes/control-options-arguments.md)] |
+| [!INCLUDE [temp](../includes/control-options-arguments.md)]          |
 
 ## Examples
 
@@ -38,22 +37,22 @@ Provides `twine` credentials to a `PYPIRC_PATH` environment variable for the sco
 
 In this example, we are setting authentication for publishing to a private Azure Artifacts Feed. The authenticate task creates a `.pypirc` file which contains the auth credentials required to publish a distribution to the feed.
 
-```YAML 
+```YAML
 # Install python distributions like wheel, twine etc
 - script: |
      pip install wheel
      pip install twine
-  
+ 
 # Build the python distribution from source
 - script: |
      python setup.py bdist_wheel
-   
+ 
 - task: TwineAuthenticate@1
   displayName: 'Twine Authenticate'
   inputs:
     # In this case, name of the feed is 'myTestFeed' in the project 'myTestProject'. Project is needed because the feed is project scoped.
     artifactFeed: myTestProject/myTestFeed
-  
+ 
 # Use command line script to 'twine upload', use -r to pass the repository name and --config-file to pass the environment variable set by the authenticate task.
 - script: |
      python -m twine upload -r myTestFeed --config-file $(PYPIRC_PATH) dist/*.whl
@@ -65,22 +64,22 @@ The 'artifactFeed' input will contain the project and the feed name if the feed 
 
 In this example, we are setting authentication for publishing to official python registry. Create a <a href="~/pipelines/library/service-endpoints.md#sep-python-upload" data-raw-source="[twine service connection](~/pipelines/library/service-endpoints.md#sep-python-upload)">twine service connection</a> entry for [pypi](https://pypi.org). The authenticate task uses that service connection to create a `.pypirc` file which contains the auth credentials required to publish the distribution.
 
-```YAML 
+```YAML
 # Install python distributions like wheel, twine etc
 - script: |
      pip install wheel
      pip install twine
-  
+ 
 # Build the python distribution from source
 - script: |
      python setup.py bdist_wheel
-   
+ 
 - task: TwineAuthenticate@1
   displayName: 'Twine Authenticate'
   inputs:
     # In this case, name of the service connection is "pypitest".
     pythonUploadServiceConnection: pypitest
-  
+ 
 # Use command line script to 'twine upload', use -r to pass the repository name and --config-file to pass the environment variable set by the authenticate task.
 - script: |
      python -m twine upload -r "pypitest" --config-file $(PYPIRC_PATH) dist/*.whl
@@ -92,10 +91,10 @@ In this example, we are setting authentication for publishing to official python
 
 ### Task: Twine Authenticate
 
-| Task version                                  | Azure Pipelines          | TFS                                           |
-|-----------------------------------------------|--------------------------|-----------------------------------------------|
-| 1.*                                           | Available                | Not supported                                 |
-| [0.*](./prev-versions/twine-authenticate-0.md)| Available                | Not supported                                 |
+| Task version                                    | Azure Pipelines | TFS           |
+| ----------------------------------------------- | --------------- | ------------- |
+| 1.\*                                            | Available       | Not supported |
+| [0.\*](./prev-versions/twine-authenticate-0.md) | Available       | Not supported |
 
 ## Open source
 

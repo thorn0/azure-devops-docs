@@ -12,8 +12,8 @@ ms.technology: devops-cicd-tasks
 # Deploy an Azure Service Fabric application to a cluster
 - task: ServiceFabricDeploy@1
   inputs:
-    applicationPackagePath: 
-    serviceConnectionName: 
+    applicationPackagePath:
+    serviceConnectionName:
     #publishProfilePath: # Optional
     #applicationParameterPath: # Optional
     #overrideApplicationParameter: false # Optional

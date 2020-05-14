@@ -4,11 +4,11 @@ ms.topic: conceptual
 title: Authorize Other Services | Azure DevOps Services
 description: Authorize other services to work with Azure DevOps Services
 ms.assetid: 314a28cd-b2ae-41a0-8dfb-330222c1aed0
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 2/08/2019
 ---
 
-#  Authorize other services to access your Azure DevOps Services account
+# Authorize other services to access your Azure DevOps Services account
 
 When you use a service that's integrated with Azure DevOps Services,
 we use the industry-standard OAuth 2.0 authorization framework to provide safe,
@@ -17,11 +17,11 @@ With OAuth, you grant a service the authorization to access your Azure DevOps Se
 resources such as work items, source code, build results.
 
 - Authorizations are bound to your credentials,
-so the service can use the authorization to access resources
-in any Azure DevOps Services account that you have access to.
+  so the service can use the authorization to access resources
+  in any Azure DevOps Services account that you have access to.
 
-- Use your Microsoft account (like ```me@live.com```) or your work account
-(your account in Azure AD - like ```me@my-workplace.com```) to authorize the service.
+- Use your Microsoft account (like `me@live.com`) or your work account
+  (your account in Azure AD - like `me@my-workplace.com`) to authorize the service.
 
 - The service that you authorize never has access to your Azure DevOps Services credentials.
 
@@ -32,7 +32,7 @@ in any Azure DevOps Services account that you have access to.
 A typical authorization flow might go like this:
 
 1. You're using a service that uses Azure DevOps Services resources,
-so the service requests authorization.
+   so the service requests authorization.
 
 2. If you're not already signed in, Azure DevOps Services will prompt you for your credentials.
 
@@ -52,7 +52,7 @@ To ensure an authorization request is legitimate:
 
 - Look for the Azure DevOps Services branding across the top of the authorization approval page.
 
-- Ensure the authorization approval page URL begins with ```https://app.vssps.visualstudio.com/```.
+- Ensure the authorization approval page URL begins with `https://app.vssps.visualstudio.com/`.
 
 - Pay attention to any HTTPS-related security warnings in your browser.
 

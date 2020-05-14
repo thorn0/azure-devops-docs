@@ -14,16 +14,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `depth`: number. 
+- `depth`: number.
 
-* `ignoreExternals`: boolean. 
+- `ignoreExternals`: boolean.
 
-* `localPath`: string. 
+- `localPath`: string.
 
-* `revision`: string. 
+- `revision`: string.
 
-* `serverPath`: string. 
-
+- `serverPath`: string.

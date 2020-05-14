@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Unlabel Command
 
@@ -65,11 +64,11 @@ You can specify more than one <em>itemspec</em> argument.
 </tbody>
 </table>
 
-| **Option** | **Description** |
-|---|---|
-| **/recursive** | Unlabels all items in the particular directory and all the subdirectories that match the *itemspec*. |
-| **/collection** | Specifies the project collection. |
-| **/login** | Specifies the user name and password to authenticate the user with Visual Studio Team Foundation Server. |
+| **Option**      | **Description**                                                                                          |
+| --------------- | -------------------------------------------------------------------------------------------------------- |
+| **/recursive**  | Unlabels all items in the particular directory and all the subdirectories that match the _itemspec_.     |
+| **/collection** | Specifies the project collection.                                                                        |
+| **/login**      | Specifies the user name and password to authenticate the user with Visual Studio Team Foundation Server. |
 
 ## Remarks
 

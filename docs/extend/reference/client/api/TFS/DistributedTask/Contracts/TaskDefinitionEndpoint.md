@@ -14,18 +14,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `connectionId`: string. An ID that identifies a service endpoint to be used for authenticating endpoint requests.
+- `connectionId`: string. An ID that identifies a service endpoint to be used for authenticating endpoint requests.
 
-* `keySelector`: string. An Json based keyselector to filter response returned by fetching the endpoint Url.A Json based keyselector must be prefixed with &quot;jsonpath:&quot;. KeySelector can be used to specify the filter to get the keys for the values specified with Selector.  The following keyselector defines an Json for extracting nodes named &#x27;ServiceName&#x27;.  endpoint.KeySelector = &quot;jsonpath://ServiceName&quot;;
+- `keySelector`: string. An Json based keyselector to filter response returned by fetching the endpoint Url.A Json based keyselector must be prefixed with &quot;jsonpath:&quot;. KeySelector can be used to specify the filter to get the keys for the values specified with Selector. The following keyselector defines an Json for extracting nodes named &#x27;ServiceName&#x27;. endpoint.KeySelector = &quot;jsonpath://ServiceName&quot;;
 
-* `scope`: string. The scope as understood by Connected Services. Essentially, a project-id for now.
+- `scope`: string. The scope as understood by Connected Services. Essentially, a project-id for now.
 
-* `selector`: string. An XPath/Json based selector to filter response returned by fetching the endpoint Url. An XPath based selector must be prefixed with the string &quot;xpath:&quot;. A Json based selector must be prefixed with &quot;jsonpath:&quot;.  The following selector defines an XPath for extracting nodes named &#x27;ServiceName&#x27;.  endpoint.Selector = &quot;xpath://ServiceName&quot;;
+- `selector`: string. An XPath/Json based selector to filter response returned by fetching the endpoint Url. An XPath based selector must be prefixed with the string &quot;xpath:&quot;. A Json based selector must be prefixed with &quot;jsonpath:&quot;. The following selector defines an XPath for extracting nodes named &#x27;ServiceName&#x27;. endpoint.Selector = &quot;xpath://ServiceName&quot;;
 
-* `taskId`: string. TaskId that this endpoint belongs to.
+- `taskId`: string. TaskId that this endpoint belongs to.
 
-* `url`: string. URL to GET.
-
+- `url`: string. URL to GET.

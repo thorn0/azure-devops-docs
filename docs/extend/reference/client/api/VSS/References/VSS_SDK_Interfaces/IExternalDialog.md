@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,15 +15,12 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-
 ### Members
 
-* `getContributionInstance`: (instanceId: string, contextData: any): IPromise&lt;T&gt;. Gets an object registered in the dialog&#x27;s contribution control.
+- `getContributionInstance`: (instanceId: string, contextData: any): IPromise&lt;T&gt;. Gets an object registered in the dialog&#x27;s contribution control.
 
-* `close`: (): any. Close the dialog
+- `close`: (): any. Close the dialog
 
-* `setTitle`: (title: string): any. Update the title of the dialog
+- `setTitle`: (title: string): any. Update the title of the dialog
 
-* `updateOkButton`: (enabled: boolean): any. Update the enablement of the OK button
-
+- `updateOkButton`: (enabled: boolean): any. Update the enablement of the OK button

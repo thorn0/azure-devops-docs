@@ -12,9 +12,9 @@ ms.technology: devops-cicd-tasks
 # Download artifacts from a file share, like \\share\drop
 - task: DownloadFileshareArtifacts@1
   inputs:
-    filesharePath: 
-    artifactName: 
+    filesharePath:
+    artifactName:
     #itemPattern: '**' # Optional
-    #downloadPath: '$(System.ArtifactsDirectory)' 
+    #downloadPath: '$(System.ArtifactsDirectory)'
     #parallelizationLimit: '8' # Optional
 ```

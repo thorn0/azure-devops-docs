@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 03/16/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Add a group rule to assign access levels and extensions
@@ -29,7 +29,7 @@ To assign an extension to a user or group, a PCA must first [install the extensi
 
 ## Add group rule
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
 2. Select ![gear icon](../../media/icons/gear-icon.png) **Organization settings**.
 
@@ -72,18 +72,18 @@ When you assign the same access level or extension to a user, the user consumes 
 
 - Verify that the resources are applied to each group and individual user. On the **All users** tab, highlight a user, and then select **Summary**.
 
-   :::image type="content" source="media/assign-access-levels/verify-user-summary.png" alt-text="Verify user summary for group rule":::
+  :::image type="content" source="media/assign-access-levels/verify-user-summary.png" alt-text="Verify user summary for group rule":::
 
 ## Remove direct assignments
 
 To manage a user's resources only by the groups that they're in, remove the direct assignments. Resources assigned to a user via individual assignment stay assigned to the user. This assignment stays whether the resources are assigned or taken away from the user's groups.
 
-> [!NOTE]   
+> [!NOTE]  
 > To enable the new user interface for the New user hub, see [Enable preview features](../../project/navigation/preview-features.md).
 
-#### [Preview page](#tab/preview-page) 
+#### [Preview page](#tab/preview-page)
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
 2. Select ![gear icon](../../media/icons/gear-icon.png) **Organization settings**.
 
@@ -108,7 +108,7 @@ Direct assignments are removed from the users.
 
 #### [Current page](#tab/current-page)
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
 2. Select ![gear icon](../../media/icons/gear-icon.png) **Organization settings**.
 
@@ -129,11 +129,9 @@ Direct assignments are removed from the users.
 > [!Note]
 > If a user isn't a member of any groups, then the user isn't affected.
 
-* * *
+---
 
 ## Related articles
 
-* [Buy and install extensions](../../marketplace/install-extension.md)
-* [Install Active Directory and Azure Active Directory users or groups to a built-in security group](../security/add-ad-aad-built-in-security-groups.md)
-
-
+- [Buy and install extensions](../../marketplace/install-extension.md)
+- [Install Active Directory and Azure Active Directory users or groups to a built-in security group](../security/add-ad-aad-built-in-security-groups.md)

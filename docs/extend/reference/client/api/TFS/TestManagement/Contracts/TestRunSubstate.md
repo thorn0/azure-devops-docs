@@ -16,12 +16,12 @@ Module path: `TFS/TestManagement/Contracts`
 
 ### Values
 
-* `None` 
-* `CreatingEnvironment` 
-* `RunningTests` 
-* `CanceledByUser` 
-* `AbortedBySystem` 
-* `TimedOut` 
-* `PendingAnalysis` 
-* `Analyzed` 
-* `CancellationInProgress` 
+- `None`
+- `CreatingEnvironment`
+- `RunningTests`
+- `CanceledByUser`
+- `AbortedBySystem`
+- `TimedOut`
+- `PendingAnalysis`
+- `Analyzed`
+- `CancellationInProgress`

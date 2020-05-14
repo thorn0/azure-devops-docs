@@ -8,7 +8,7 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 09/10/2018
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Working with Git tags
@@ -19,8 +19,8 @@ Azure DevOps Services and TFS support both annotated and lightweight tags. Light
 
 This article provides an overview of working with Git tags in Azure DevOps Services, TFS, and Visual Studio.
 
->[!IMPORTANT]
->The **Tags** view in Visual Studio was introduced in Visual Studio 2017 Update 6. If you are on versions earlier than this, you can view and create tags from the history and commit details views starting with Visual Studio 2015, but you won't be able to perform the operations in the **Tags** view as described in this article.
+> [!IMPORTANT]
+> The **Tags** view in Visual Studio was introduced in Visual Studio 2017 Update 6. If you are on versions earlier than this, you can view and create tags from the history and commit details views starting with Visual Studio 2015, but you won't be able to perform the operations in the **Tags** view as described in this article.
 
 ## View and filter tags
 
@@ -86,7 +86,7 @@ You can view tags in the **Tags** view and in the **History** view.
 
    ![Tags button](media/git-tags/navigate-tags-pane-vs.png)
 
-2. Tags are displayed under the currently connected repo name. 
+2. Tags are displayed under the currently connected repo name.
 
    ![View tags](media/git-tags/view-tags-vs.png)
 
@@ -118,7 +118,7 @@ To create a tag, you must have the [Create Tag](../../organizations/security/per
 
 You can create annotated tags using the web portal from both the **Tags** view and the **Commits** view.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > You can only create annotated tags in the web portal. To create a lightweight tag, you can use [Git command line](https://git-scm.com/book/en/v2/Git-Basics-Tagging) or [Visual Studio](git-tags.md?tabs=visual-studio#create-tag).
 
 ### Create tags from the Tags view
@@ -147,7 +147,7 @@ You can create annotated tags using the web portal from both the **Tags** view a
 
 You can create annotated tags using the web portal from both the **Tags** view and the **Commits** view.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > You can only create annotated tags in the web portal. To create a lightweight tag, you can use [Git command line](https://git-scm.com/book/en/v2/Git-Basics-Tagging) or [Visual Studio](git-tags.md?tabs=visual-studio#create-tag).
 
 ### Create tags from the Tags view
@@ -202,8 +202,8 @@ You can create both annotated and lightweight tags in Visual Studio from both th
 
 ## Delete tag
 
->[!IMPORTANT]
->Use caution when deleting tags from your repo. If the repo has been pulled, forked, or cloned by another user, the tag will still exist in their copy of the repo. You should only delete local tags, or if you are sure that the repo hasn't been pulled, cloned, or forked since you created your tag.
+> [!IMPORTANT]
+> Use caution when deleting tags from your repo. If the repo has been pulled, forked, or cloned by another user, the tag will still exist in their copy of the repo. You should only delete local tags, or if you are sure that the repo hasn't been pulled, cloned, or forked since you created your tag.
 
 To delete a tag, you must have the [Force Push](../../organizations/security/permissions.md#git-repository-object-level) permission at the **Repository** level or the **All tags** level (which inherits its permissions from the repository level if not explicitly set).
 
@@ -255,8 +255,8 @@ The steps in this procedure show you how to delete a tag in the local repo using
 
    ![Delete tag](media/git-tags/delete-tag-vs.png)
 
->[!IMPORTANT]
->If your tag has already been pushed to the remote repo, you should not delete it. If the repo has been pulled, forked, or cloned by another user, the tag will still exist in their copy of the repo. You should only delete local tags.
+> [!IMPORTANT]
+> If your tag has already been pushed to the remote repo, you should not delete it. If the repo has been pulled, forked, or cloned by another user, the tag will still exist in their copy of the repo. You should only delete local tags.
 
 ## Create branch from a tag
 

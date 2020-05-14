@@ -7,14 +7,14 @@ ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 02/20/2020
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # View your subscriptions, opt-out as needed
 
 [!INCLUDE [version-vsts-tfs-2017-on](../includes/version-tfs-2017-through-vsts.md)]
 
-If you want to stop receiving select email notifications, you can do so by unsubscribing from them. For a description of each default subscription, see [Default notifications](oob-built-in-notifications.md)  
+If you want to stop receiving select email notifications, you can do so by unsubscribing from them. For a description of each default subscription, see [Default notifications](oob-built-in-notifications.md)
 
 Start by opening your personal notification settings from your home page. Select the user settings icon ![user-settings-gear.png](../media/icons/user-settings-gear.png), and then select **Profile**. If you don't have a project yet, create one in [Azure DevOps](../organizations/accounts/set-up-vs.md).
 
@@ -26,7 +26,7 @@ Start by opening your personal notification settings from your home page. Select
 
    ![Open Azure DevOps profile](../media/open-user-settings-profile-preview.png)
 
-   The notifications you're subscribed to are indicated with the the blue toggle under State. 
+   The notifications you're subscribed to are indicated with the the blue toggle under State.
 
    ![Notifications turned On](media/notifications-turned-on.png)
 
@@ -36,35 +36,34 @@ Start by opening your personal notification settings from your home page. Select
 
    You can't modify an OOB subscription, but you can view its definition from its context menu.
 
-2. To unsubscribe, slide the toggle to the *Off* position.
+2. To unsubscribe, slide the toggle to the _Off_ position.
 
-    In the following image the "Build completes" subscription is turned off.
+   In the following image the "Build completes" subscription is turned off.
 
-    ![Notification is turned off](media/notification-turned-off.png)
+   ![Notification is turned off](media/notification-turned-off.png)
 
 ::: moniker-end
 
-::: moniker range="<= tfs-2018" 
+::: moniker range="<= tfs-2018"
 
 1. From the web portal, select the icon with your initials or picture, and select **Notification settings** from the drop-down menu.
 
     <img src="media/unsubscribe-open-notification-settings.png" alt="Open personal notification settings" style="border: 2px solid #C3C3C3;" />
 
-    The notifications you're subscribed to are indicated with the State as **On**.  
+   The notifications you're subscribed to are indicated with the State as **On**.
 
     <img src="media/unsubscribe-personal-notifications.png" alt="Personal notification subscriptions" style="border: 2px solid #C3C3C3;" />
 
-    The following image indicates a subscription is a default or out-of-the-box (OOB) subscription:
+   The following image indicates a subscription is a default or out-of-the-box (OOB) subscription:
 
    ![OOB notification](media/oob-notification.png)
 
-    You can't modify an OOB subscription, but you can view its definition from its context menu.
+   You can't modify an OOB subscription, but you can view its definition from its context menu.
 
-2. To unsubscribe, slide the state **On/Off** indicator to the *Off* position.
+2. To unsubscribe, slide the state **On/Off** indicator to the _Off_ position.
 
-    In the following image the "Build completes" subscription is turned off.
+   In the following image the "Build completes" subscription is turned off.
 
-    <img src="media/unsubscribe-from-build-completes.png" alt="Unsubscribe from Build completes subscription" style="border: 2px solid #C3C3C3;" />
+   <img src="media/unsubscribe-from-build-completes.png" alt="Unsubscribe from Build completes subscription" style="border: 2px solid #C3C3C3;" />
 
 ::: moniker-end
-

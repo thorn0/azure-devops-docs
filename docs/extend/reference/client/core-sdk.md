@@ -6,7 +6,7 @@ ms.technology: devops-ecosystem
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -16,8 +16,7 @@ The client SDK provides useful functions for web-based extensions.
 
 > [!IMPORTANT]
 > While we progress our documentation here at docs.microsoft.com, follow our latest and greatest guidance here: https://developer.microsoft.com/azure-devops/develop/extensions. 10/28/2019
-> 
 
-## VSS SDK Reference 
+## VSS SDK Reference
 
 [!INCLUDE [apis](../../../includes/extend/reference/client/api/VSS/SDK/VSS_SDK/VSS.md)]

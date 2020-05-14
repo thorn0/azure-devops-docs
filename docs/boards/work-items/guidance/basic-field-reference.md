@@ -4,26 +4,25 @@ titleSuffix: Azure Boards
 description: Index to those fields used in the Basic process for Azure Boards
 ms.custom: work-items, seodec18
 ms.technology: devops-agile
-ms.assetid:  
-ms.topic: reference  
+ms.assetid:
+ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '<= azure-devops'
+monikerRange: "<= azure-devops"
 ms.date: 12/20/2018
 ---
 
-# Index to system field descriptions 
+# Index to system field descriptions
 
 [!INCLUDE [temp](../../includes/version-vsts-only.md)]
 
 Use this index to look up a description of a field used to track an issue, task, or epic. This reference includes all fields defined for the Basic process. If you use another process&mdash;such as Agile, CMMI, or Scrum&mdash;see [Work item field index](work-item-field.md) for additional field definitions.
- 
-[!INCLUDE [temp](../../includes/basic-process-note.md)] 
 
-To support additional tracking needs, you can [define your own custom work item fields](../../../organizations/settings/work/customize-process.md). 
+[!INCLUDE [temp](../../includes/basic-process-note.md)]
 
-## Alphabetical index 
+To support additional tracking needs, you can [define your own custom work item fields](../../../organizations/settings/work/customize-process.md).
 
+## Alphabetical index
 
 <table>
 <tbody valign="top">
@@ -117,14 +116,12 @@ To support additional tracking needs, you can [define your own custom work item 
 <hr/>
 <br/>
 
+## Add and modify fields
 
-## Add and modify fields    
-To add fields to a process, modify select field attributes, and review fields added to a process, see [Customize a process](../../../organizations/settings/work/customize-process.md).  
+To add fields to a process, modify select field attributes, and review fields added to a process, see [Customize a process](../../../organizations/settings/work/customize-process.md).
 
-Also, you can [view the list of fields defined for an organization](../../../organizations/settings/work/customize-process.md) and the WITs which reference them. 
-
+Also, you can [view the list of fields defined for an organization](../../../organizations/settings/work/customize-process.md) and the WITs which reference them.
 
 ## Related articles
 
 - [Create managed queries](../../queries/example-queries.md)
-

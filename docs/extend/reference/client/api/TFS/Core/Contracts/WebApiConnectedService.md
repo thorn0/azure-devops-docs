@@ -18,17 +18,16 @@ Extends: [WebApiConnectedServiceRef](../../../tfs/distributedtask/contracts/weba
 
 ### Members
 
-* `authenticatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). The user who did the OAuth authentication to created this service
+- `authenticatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). The user who did the OAuth authentication to created this service
 
-* `description`: string. Extra description on the service.
+- `description`: string. Extra description on the service.
 
-* `friendlyName`: string. Friendly Name of service endpoint
+- `friendlyName`: string. Friendly Name of service endpoint
 
-* `id`: string. Id/Name of the connection service. For Ex: Subscription ID for Azure Connection
+- `id`: string. Id/Name of the connection service. For Ex: Subscription ID for Azure Connection
 
-* `kind`: string. The kind of service.
+- `kind`: string. The kind of service.
 
-* `project`: [TeamProjectReference](../../../TFS/DistributedTask/Contracts/TeamProjectReference.md). The project associated with this service
+- `project`: [TeamProjectReference](../../../TFS/DistributedTask/Contracts/TeamProjectReference.md). The project associated with this service
 
-* `serviceUri`: string. Optional uri to connect directly to the service such as https:\//windows.azure.com
-
+- `serviceUri`: string. Optional uri to connect directly to the service such as https:\//windows.azure.com

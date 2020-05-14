@@ -12,6 +12,6 @@ Install npm packages from your feed, and also from npmjs.com if you've configure
 
 1. Open a shell and navigate to the directory that contains your project's **package.json** file.
 
-1. Install a package by running `npm install --save <package>`. 
+1. Install a package by running `npm install --save <package>`.
 
 See the [npm CLI docs](https://docs.npmjs.com/cli/install) for more install options.

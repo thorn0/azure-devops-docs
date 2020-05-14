@@ -16,5 +16,5 @@ Module path: `TFS/TestManagement/Contracts`
 
 ### Values
 
-* `TestSuite` 
-* `TestPlan` 
+- `TestSuite`
+- `TestPlan`

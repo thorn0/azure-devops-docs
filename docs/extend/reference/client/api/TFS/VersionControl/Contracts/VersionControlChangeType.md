@@ -15,18 +15,18 @@ Module path: `TFS/VersionControl/Contracts`
 
 ### Values
 
-* `None` 
-* `Add` 
-* `Edit` 
-* `Encoding` 
-* `Rename` 
-* `Delete` 
-* `Undelete` 
-* `Branch` 
-* `Merge` 
-* `Lock` 
-* `Rollback` 
-* `SourceRename` 
-* `TargetRename` 
-* `Property` 
-* `All` 
+- `None`
+- `Add`
+- `Edit`
+- `Encoding`
+- `Rename`
+- `Delete`
+- `Undelete`
+- `Branch`
+- `Merge`
+- `Lock`
+- `Rollback`
+- `SourceRename`
+- `TargetRename`
+- `Property`
+- `All`

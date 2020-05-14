@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `automatedResultsRetentionDuration`: number. 
+- `automatedResultsRetentionDuration`: number.
 
-* `lastUpdatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `lastUpdatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `lastUpdatedDate`: Date. 
+- `lastUpdatedDate`: Date.
 
-* `manualResultsRetentionDuration`: number. 
-
+- `manualResultsRetentionDuration`: number.

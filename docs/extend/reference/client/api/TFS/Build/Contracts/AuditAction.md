@@ -16,6 +16,6 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `Add` 
-* `Update` 
-* `Delete` 
+- `Add`
+- `Update`
+- `Delete`

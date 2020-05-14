@@ -7,18 +7,19 @@ ms.topic: quickstart
 ms.author: sdanie
 author: steved0x
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Exploratory testing with the Test &amp; Feedback extension in Standalone mode
 
-[!INCLUDE [version-header](includes/version-header.md)] 
+[!INCLUDE [version-header](includes/version-header.md)]
 
-All teams can use the Test &amp; Feedback extension in **Standalone** mode. 
-Users don't need an Azure DevOps subscription 
+All teams can use the Test &amp; Feedback extension in **Standalone** mode.
+Users don't need an Azure DevOps subscription
 or Team Foundation Server connection to use this mode.
 
 <a name="testmode"></a>
+
 ## Start testing in Standalone mode
 
 1. If you haven't already, [install the Test &amp; Feedback extension](perform-exploratory-tests.md).
@@ -36,7 +37,7 @@ or Team Foundation Server connection to use this mode.
 
    ![Take a screenshot of the application issue](media/standalone-mode-exploratory-testing/standalonemode-03.png)
 
-1. You can annotate the screenshot using the tools available in the inline annotation toolbar. 
+1. You can annotate the screenshot using the tools available in the inline annotation toolbar.
 
    ![Annotate your screenshot if required](media/standalone-mode-exploratory-testing/standalonemode-04.png)
 
@@ -45,14 +46,15 @@ or Team Foundation Server connection to use this mode.
    ![Add notes about the issue if required](media/standalone-mode-exploratory-testing/standalonemode-05.png)
 
 <a name="createbug"></a>
+
 ## Create a bug
 
 1. When you have finished capturing information for an issue, choose **Create bug**.
 
    ![Create a bug from the captured information](media/standalone-mode-exploratory-testing/standalonemode-06.png)
 
-1. The bug form contains all your captured information. 
-   Enter a title for the bug and add any additional notes 
+1. The bug form contains all your captured information.
+   Enter a title for the bug and add any additional notes
    you require to the description. Then save the bug.
 
    ![Enter a title and description, then save the bug](media/standalone-mode-exploratory-testing/standalonemode-07.png)
@@ -64,27 +66,27 @@ or Team Foundation Server connection to use this mode.
    ![Review your captured information](media/standalone-mode-exploratory-testing/standalonemode-07a.png)
 
 <a name="endsession"></a>
+
 ## End your testing session
 
 1. Continue exploring the application. Create more bugs as you encounter
    issues with the app.
-   
+
 1. When you're done, stop your session.
 
    ![Stop the exploratory testing session](media/standalone-mode-exploratory-testing/standalonemode-08.png)
 
-   The extension automatically creates a session report that contains 
-   details of all the bugs created during the session, and any attachments. 
-  
+   The extension automatically creates a session report that contains
+   details of all the bugs created during the session, and any attachments.
+
    ![The exploratory testing report](media/standalone-mode-exploratory-testing/standalonemode-09.png)
 
-1. The report is saved in the default Downloads folder of your web browser. 
-   Share it with the rest of your team as an email attachment, or 
+1. The report is saved in the default Downloads folder of your web browser.
+   Share it with the rest of your team as an email attachment, or
    copy it to OneNote, Word, or in any other format you prefer.
 
 [How do I play the video recordings I created with the extension?](reference-qa.md#recording-playback)
 
 ## Next step
 
-> [!div class="nextstepaction"]
-> [Use the extension in Connected mode](connected-mode-exploratory-testing.md)
+> [!div class="nextstepaction"][use the extension in connected mode](connected-mode-exploratory-testing.md)

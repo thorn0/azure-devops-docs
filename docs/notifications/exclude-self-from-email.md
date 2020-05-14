@@ -1,14 +1,14 @@
 ---
 title: Prevent notification emails to yourself from events
-titleSuffix: Azure DevOps 
+titleSuffix: Azure DevOps
 description: Learn how to exclude the initiator of an event in Azure DevOps Services from receiving notification emails
 ms.technology: devops-collab
 ms.reviewer: wismythe
 ms.author: chcomley
 author: chcomley
 ms.topic: conceptual
-ms.date: 12/30/2019  
-monikerRange: '>= tfs-2017'
+ms.date: 12/30/2019
+monikerRange: ">= tfs-2017"
 ---
 
 # Exclude yourself from notification emails of events you started
@@ -21,14 +21,13 @@ For example, if your team has a subscription for a _pull request created_ event,
 
 This option is good for users who don't want notifications of events that they trigger. However, some users may feel left out when their teammates receive the email and they didn't. Let your team decide which option is best.
 
-> [!div class="mx-imgBorder"] 
-> ![New subscription skip initiator](media/new-sub-skip-initiator.png)
+> [!div class="mx-imgBorder"] > ![New subscription skip initiator](media/new-sub-skip-initiator.png)
 
 [!INCLUDE [note-smtp-server](includes/note-smtp-server.md)]
 
 #### Related articles
 
 - [Manage personal notification settings](manage-your-personal-notifications.md)
-- [Follow a specific work item](../boards/work-items/follow-work-items.md)  
-- [Manage notifications for a team](manage-team-notifications.md)  
+- [Follow a specific work item](../boards/work-items/follow-work-items.md)
+- [Manage notifications for a team](manage-team-notifications.md)
 - [Change your preferred email address](change-email-address.md)
