@@ -49,19 +49,18 @@ When you customize your project to support team fields, the Team field tab appea
 
    Add the global list definition for your team. Include a value you'll want to use for items not yet assigned to a team. If your global list is empty, simply copy the following code, paste into the XML file, and modify to support your team labels.
 
-
-    ```XML
-    <?xml version="1.0" encoding="utf-8"?>
-    <gl:GLOBALLISTS xmlns:gl="http://schemas.microsoft.com/VisualStudio/2005/workitemtracking/globallists">
-       <GLOBALLIST name="Teams">
-        <LISTITEM value="Unassigned"/>
-        <LISTITEM value="Team A"/>
-        <LISTITEM value="Team B"/>
-        <LISTITEM value="Team C"/>
-        <LISTITEM value="Team D"/>
-       </GLOBALLIST>
-    </gl:GLOBALLISTS>
-    ```
+   ```XML
+   <?xml version="1.0" encoding="utf-8"?>
+   <gl:GLOBALLISTS xmlns:gl="http://schemas.microsoft.com/VisualStudio/2005/workitemtracking/globallists">
+      <GLOBALLIST name="Teams">
+       <LISTITEM value="Unassigned"/>
+       <LISTITEM value="Team A"/>
+       <LISTITEM value="Team B"/>
+       <LISTITEM value="Team C"/>
+       <LISTITEM value="Team D"/>
+      </GLOBALLIST>
+   </gl:GLOBALLISTS>
+   ```
 
 1. Import the global list definition.
 

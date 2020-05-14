@@ -52,9 +52,11 @@ VSS.require(["VSS/Service", "TFS/Core/RestClient"], function (
 ) {
   var client = VSS_Service.getCollectionClient(Tfs_Core_WebApi.CoreHttpClient4);
 
-  client.getTeams(VSS.getWebContext().project.id).then(function (teams) {
-    console.log(teams);
-  });
+  client
+    .getTeams(VSS.getWebContext().project.id)
+    .then(function (teams) {
+      console.log(teams);
+    });
 });
 ```
 

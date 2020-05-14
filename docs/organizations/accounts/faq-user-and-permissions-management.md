@@ -46,11 +46,9 @@ If you have at least Basic access, you can find the current owner in your organi
 
 1.  Go to your **Organization settings**.
 
-
     ![Open Organization settings](/azure/devops/media/settings/open-admin-settings-vert.png)
 
 2.  Find the current owner.
-
 
     ![Find the current owner in organization information](/azure/devops/media/find-organization-owner.png)
 
@@ -183,8 +181,7 @@ A: A user can lose access for the following reasons (although the user can conti
 
 - Your organization has more users with Basic access than the number of users that you're paying for in Azure. Your organization includes five free users with Basic access. If you need to add more users with Basic access, you can [pay for these users](../../billing/buy-basic-access-add-users.md).
 
-
-    Otherwise, on the first day of the calendar month, users who haven't signed in to your organization for the longest time lose access first. If your organization has users who don't need access anymore, [remove them from your organization](delete-organization-users.md).
+  Otherwise, on the first day of the calendar month, users who haven't signed in to your organization for the longest time lose access first. If your organization has users who don't need access anymore, [remove them from your organization](delete-organization-users.md).
 
 <a name="change-app-access-policies"></a>
 

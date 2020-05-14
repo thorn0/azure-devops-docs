@@ -266,9 +266,13 @@ var $errorSingleLineInput = $(
 $singleLineInput.on("input", function () {
   if ($singleLineInput.val() == "") {
     $errorSingleLineInput.text("Please enter your name.");
-    $errorSingleLineInput.parent().css("visibility", "visible");
+    $errorSingleLineInput
+      .parent()
+      .css("visibility", "visible");
     return;
   }
-  $errorSingleLineInput.parent().css("visibility", "hidden");
+  $errorSingleLineInput
+    .parent()
+    .css("visibility", "hidden");
 });
 ```

@@ -59,11 +59,9 @@ A: If you're a new user, you can change your profile details. Change your profil
 
 1.  Confirm your profile details.
 
-
     ![Confirm profile details](media/sign-up-visual-studio-team-services/create-profile-msa.png)
 
 2.  Continue creating your organization.
-
 
     ![Create your organization](media/sign-up-visual-studio-team-services/my-info-new-organization.png)
 

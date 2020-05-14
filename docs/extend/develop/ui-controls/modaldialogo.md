@@ -154,7 +154,9 @@ function showConfirmationDialog(yesCallback: () => void) {
 $("#delete").click(() => {
   showConfirmationDialog(() => {
     // Do your delete job here
-    $("<p />").text(`${filename} deleted`).appendTo(".log");
+    $("<p />")
+      .text(`${filename} deleted`)
+      .appendTo(".log");
   });
 });
 ```
