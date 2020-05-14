@@ -117,7 +117,7 @@ Depending on the platform you work from to connect to GitHub, you have a choice 
 
     If connecting using PAT, see [Add a GitHub connection using PAT](#github-pat). If connecting to a GitHub Enterprise Server, see [Register Azure DevOps in GitHub as an OAuth App](#server-github-ent-oauth-register).
 
-1.        If this is your first time connecting to GitHub from Azure Boards, you will be asked to sign in using your GitHub credentials. Choose an account for which you are an administrator for the repositories you want to connect to.
+1.         If this is your first time connecting to GitHub from Azure Boards, you will be asked to sign in using your GitHub credentials. Choose an account for which you are an administrator for the repositories you want to connect to.
 
     > [!div class="mx-imgBorder"]  
     > ![GitHub sign in dialog](media/github/github-dialog-sign-in.png)  
