@@ -26,7 +26,6 @@ go to the Service Hooks page.
 
    <img alt="View the activity" src="./media/troubleshoot/devops-service-hooks.png" />
 
-
 2. To view detailed activity for a subscription, including full request, response,
 and event payload data, select a subscription in the table and click **History**.
 

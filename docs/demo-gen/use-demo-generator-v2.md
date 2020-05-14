@@ -31,24 +31,23 @@ ms.date: 10/10/2019
 
    > [!div class="mx-imgBorder"]![](media/templateselection.png "Azure DevOps Demo Generator template selection screen")](media/templateselection.png#lightbox)
 
+   The default template is **SmartHotel360**, which contains complete ASP.NET 2 web mobile and desktop business apps for a hotel, and can be deployed using Docker containers.
 
-    The default template is **SmartHotel360**, which contains complete ASP.NET 2 web mobile and desktop business apps for a hotel, and can be deployed using Docker containers.
+   There are several other templates available, including **MyHealthClinic**, which defines a team project for an ASP.NET Core app that deploys to Azure App Service; **PartsUnlimited**, which defines an ASP.NET app with customized CI/CD pipelines; and **MyShuttle**, which defines a Java app and Azure App service deployment. If you are following a lab from [Azure DevOps Labs](https://www.azuredevopslabs.com), select the **DevOps Labs** tab to choose the template
 
-    There are several other templates available, including **MyHealthClinic**, which defines a team project for an ASP.NET Core app that deploys to Azure App Service; **PartsUnlimited**, which defines an ASP.NET app with customized CI/CD pipelines; and **MyShuttle**, which defines a Java app and Azure App service deployment. If you are following a lab from [Azure DevOps Labs](https://www.azuredevopslabs.com), select the **DevOps Labs** tab to choose the template
+   > [!NOTE]
+   > All templates provide fictional Azure DevOps users and pre-populated Agile planning and tracking work items and data, along with source code in an Azure Repos Git repo, as well as access to Azure Pipelines.
 
-    > [!NOTE]
-    > All  templates provide fictional Azure DevOps users and pre-populated Agile planning and tracking work items and data, along with source code in an Azure Repos Git repo, as well as access to Azure Pipelines.
-
-1. Some templates may require additional extensions to be installed to your organization. The demo generation process checks to see if these extensions are already installed. If the extension is already installed, a green check will be displayed in front of the extension name. If the extension is **not** installed, select the empty check boxes to install the extension(s) to your account. When ready, click on **Create Project** button.
+5. Some templates may require additional extensions to be installed to your organization. The demo generation process checks to see if these extensions are already installed. If the extension is already installed, a green check will be displayed in front of the extension name. If the extension is **not** installed, select the empty check boxes to install the extension(s) to your account. When ready, click on **Create Project** button.
 
    > [!NOTE]
    > If you want to manually install the extensions, click on the provided link for a specific extension, which takes you to the extension's page on Azure DevOps Marketplace. From there, you can install the extension.
 
-2. Your project may take a couple of minutes for the Demo Generator to provision. When it completes, you will be provided with a link to the demo project.
+6. Your project may take a couple of minutes for the Demo Generator to provision. When it completes, you will be provided with a link to the demo project.
 
    > [!div class="mx-imgBorder"]![](media/projectcreated.png "Azure DevOps Demo Generator project created screen")](media/projectcreated.png#lightbox)
 
-3. Select the link to go to the new demo Azure DevOps Services project and confirm it was successfully provisioned.
+7. Select the link to go to the new demo Azure DevOps Services project and confirm it was successfully provisioned.
 
    > [!div class="mx-imgBorder"]![](media/projecthomepage.png "Azure DevOps Demo Generator provision confirmation screen")](media/projecthomepage.png#lightbox)
 

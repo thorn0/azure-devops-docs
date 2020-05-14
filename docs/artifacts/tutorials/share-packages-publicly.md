@@ -24,21 +24,18 @@ To learn more about feeds and their scopes, check out our [feeds documentation](
 
 1. Go to **Azure Artifacts** in a public project:
 
-   > [!div class="mx-imgBorder"]
-   > ![Go to Azure Artifacts](../media/goto-feed-hub-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![Go to Azure Artifacts](../media/goto-feed-hub-azure-devops-newnav.png)
 
 1. Select **+ New public feed**:
 
-   > [!div class="mx-imgBorder"]
-   > ![New feed button](../media/new-public-feed-button-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![New feed button](../media/new-public-feed-button-azure-devops-newnav.png)
 
 1. In the dialog box:
 
    - Give the feed a name.
    - Select **Create feed**.
 
-   > [!div class="mx-imgBorder"]
-   > ![New feed dialog box](../media/new-public-feed-dialog-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![New feed dialog box](../media/new-public-feed-dialog-azure-devops-newnav.png)
 
 ## Publish your packages
 
@@ -78,8 +75,7 @@ Sample feed URL: `https://dev.azure.com/<org_name>/<project_name>/_packaging?_a=
 
 As long as your project is public, anonymous and guest users will be greeted by the feed UX where they can see the available packages and learn how to consume them. Anonymous users will not have access to all features. E.g. Creating new feeds or accessing the recycle bin.
 
-> [!div class="mx-imgBorder"]
-> ![Feed UX from an anonymous or guest user with certain commands greyed out, except Connect to Feed](../media/anonymous-public-feeds.png)
+> [!div class="mx-imgBorder"] > ![Feed UX from an anonymous or guest user with certain commands greyed out, except Connect to Feed](../media/anonymous-public-feeds.png)
 
 You can also [share individual packages with badges](../package-badges.md) which look like the example below.
 

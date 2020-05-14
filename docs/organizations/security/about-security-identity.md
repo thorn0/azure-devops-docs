@@ -60,12 +60,11 @@ Other applications and services can integrate with services and resources in Azu
 - [Personal access tokens](../accounts/use-personal-access-tokens-to-authenticate.md)
   to generate tokens for:
 
-
-    *    Accessing specific resources or activities, like builds or work items
-    *    Clients like Xcode and Nuget that require usernames and passwords
-        as basic credentials and don't support Microsoft account
-        and Azure Active Directory features like multi-factor authentication
-    *    Accessing [Azure DevOps REST APIs](../../integrate/get-started/rest/basics.md)
+  - Accessing specific resources or activities, like builds or work items
+  - Clients like Xcode and Nuget that require usernames and passwords
+    as basic credentials and don't support Microsoft account
+    and Azure Active Directory features like multi-factor authentication
+  - Accessing [Azure DevOps REST APIs](../../integrate/get-started/rest/basics.md)
 
 - [OAuth](/azure/devops/integrate/get-started/Authentication/oauth)
   to generate tokens for accessing [REST APIs](/azure/devops/integrate/get-started/rest/basics). The [Accounts](/rest/api/azure/devops/account)

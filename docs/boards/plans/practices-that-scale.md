@@ -25,9 +25,9 @@ Enterprise organizations adopt Agile practices for a number of reasons. Prime am
 As your organization grows, you'll want to scale your practices to remain agile and meet changing goals. To do that, consider these two guiding principles:
 
 - **What does success look like** to you, your teams, and your organization? What's of most interest: On-time delivery? Product quality? Predictability? Customer satisfaction?
-- **Return to first principles**, return to the principles and shared values enumerated in the [Agile manifesto](http://www.agilemanifesto.org/principles.html) As noted by [Ken Schwaber](https://kenschwaber.wordpress.com), one of the founders of Scrum:  
-   - "Values and principles scale, but practices are context sensitive."  
-   - "Keep the values, keep the principles, think for yourself. A core premise of Agile is that the people doing the work are the people who can best figure out how to do it."
+- **Return to first principles**, return to the principles and shared values enumerated in the [Agile manifesto](http://www.agilemanifesto.org/principles.html) As noted by [Ken Schwaber](https://kenschwaber.wordpress.com), one of the founders of Scrum:
+  - "Values and principles scale, but practices are context sensitive."
+  - "Keep the values, keep the principles, think for yourself. A core premise of Agile is that the people doing the work are the people who can best figure out how to do it."
 
 ## Create rhythm and flow
 
@@ -92,7 +92,7 @@ You improve organizational effectiveness by attending to the culture you want to
   - In-house wikis
   - In-house distribution lists
   - Hackathon weeks or 10% hack time
-  - Internal Agile support team to support teams adopt Agile practices  
+  - Internal Agile support team to support teams adopt Agile practices
 
     [The Culture Game](https://www.amazon.com/The-Culture-Game-Tools-Manager/dp/0984875301) provides a good resource for Agile managers to help teams adopt Agile and share best practices.
 

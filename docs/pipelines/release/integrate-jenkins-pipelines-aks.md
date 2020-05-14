@@ -133,7 +133,7 @@ The YAML file contains deployment settings for pulling the docker image from the
 
 1. Name the file **K8sDeploy.yaml** and select **Create**.
 
-1. Copy and paste the following contents into the **K8sDeploy.yaml** file. Ensure the image prefix `<yourACRName>` is replaced with the name of your ACR appended with _.azurecr.io_. Also, notice that the image is tagged with ****Build.BuildId****. This is a token that will be automatically replaced during the Azure Pipelines release so that it's set to the current Jenkins build id. For example, if the current Jenkins build id is 5, the full name of an image that will be pulled during the Azure Pipelines release will look similar to: yourACRName.azurecr.io/gs-spring-boot-docker:5.
+1. Copy and paste the following contents into the **K8sDeploy.yaml** file. Ensure the image prefix `<yourACRName>` is replaced with the name of your ACR appended with _.azurecr.io_. Also, notice that the image is tagged with \***\*Build.BuildId\*\***. This is a token that will be automatically replaced during the Azure Pipelines release so that it's set to the current Jenkins build id. For example, if the current Jenkins build id is 5, the full name of an image that will be pulled during the Azure Pipelines release will look similar to: yourACRName.azurecr.io/gs-spring-boot-docker:5.
 
    ```yaml
    apiVersion: extensions/v1beta1
@@ -322,7 +322,7 @@ You must also configure two Jenkins service hooks so you can execute CI builds v
 
 A release pipeline specifies the steps that Azure Pipelines executes to deploy the app. In this example, you deploy your app that originates from the Jenkins CI system. You deploy to a Docker image running Tomcat and a Spring Boot app to an AKS cluster.
 
-Before you create the release pipeline, you need to install an Azure Pipelines extension that will be used to replace the **K8sDeploy.yaml** file's ****Build.BuildId**** token with the current Jenkins build id.
+Before you create the release pipeline, you need to install an Azure Pipelines extension that will be used to replace the **K8sDeploy.yaml** file's \***\*Build.BuildId\*\*** token with the current Jenkins build id.
 
 1. In your Azure DevOps organization, on the top right-hand side of the browser, Select the **Browse Marketplace** menu item. (The icon appears as a shopping bag.)
 
@@ -348,7 +348,7 @@ Add two tasks to the release pipeline. The first task updates the **K8sDeploy.ya
 
 1. Search for the **Tokenize with XPath/Regular expressions** task which was added with the extension that was installed in the previous step. Select **Add** to add the task.
 
-1. Set the **Source filename** to the **K8sDeploy.yaml** that is archived by the Jenkins job during the build. This task automatically replaces the ****Build.BuildId**** token with the current Jenkins build id.
+1. Set the **Source filename** to the **K8sDeploy.yaml** that is archived by the Jenkins job during the build. This task automatically replaces the \***\*Build.BuildId\*\*** token with the current Jenkins build id.
 
 The second task deploys to the AKS cluster:
 

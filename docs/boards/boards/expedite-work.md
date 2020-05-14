@@ -146,8 +146,7 @@ Once you've identified one or two, add them to your Kanban board.
 
    **For TFS 2015**  
    ![Add a swimlane](media/ALM_SW.AddLane.png)  
-   The default lane is automatically renamed to Standard when you add a second lane. You can rename it to anything you like, however, you can't delete it.  
-
+   The default lane is automatically renamed to Standard when you add a second lane. You can rename it to anything you like, however, you can't delete it.
 
 10. To reorder your swimlanes, simply grab the lane and move it up or down.  
      <img src="media/ALM_EW_ReorderLanes.png" alt="Kanban board, Open swimlanes" style="border: 2px solid #C3C3C3;" />

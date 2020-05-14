@@ -366,7 +366,7 @@ steps:
       Write-Host "This does not work either: $env:GLOBAL_MYSECRET"
 
       # Using the global var mapped in the pipeline. It is not a secret var:
-      Write-Host "This works: $env:GLOBAL_MY_MAPPED_ENV_VAR" 
+      Write-Host "This works: $env:GLOBAL_MY_MAPPED_ENV_VAR"
 
       # Using the mapped env var:
       Write-Host "This works: $env:MY_MAPPED_ENV_VAR"    # Recommended

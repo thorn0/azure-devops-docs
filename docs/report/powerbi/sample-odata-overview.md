@@ -45,23 +45,19 @@ Get started quickly with the following steps which embed the OData query in the 
 
 1. Select **Get Data**, and then **Blank Query**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI - Blank Query](media/BlankQuery.png)
+   > [!div class="mx-imgBorder"] > ![Power BI - Blank Query](media/BlankQuery.png)
 
 2. From the Power BI Query editor, select **Advanced Editor**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI - Select Advanced Editor](media/AdvancedEditor.png)
+   > [!div class="mx-imgBorder"] > ![Power BI - Select Advanced Editor](media/AdvancedEditor.png)
 
 3. The Advanced Editor window opens.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI - Advanced Editor](media/odatapowerbi-advancededitor.png)
+   > [!div class="mx-imgBorder"] > ![Power BI - Advanced Editor](media/odatapowerbi-advancededitor.png)
 
 4. Replace the contents with one of the sample queries provided in the linked articles listed at the top of this article.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI - Advanced Editor - Pasted Query](media/odatapowerbi-advancededitor-pasted.png)
+   > [!div class="mx-imgBorder"] > ![Power BI - Advanced Editor - Pasted Query](media/odatapowerbi-advancededitor-pasted.png)
 
 5. The sample queries have strings that must be substituted with your values, such as {organization} and {project}.
 
@@ -74,8 +70,7 @@ Get started quickly with the following steps which embed the OData query in the 
    - {iterationpath} - Your Iteration path. Format: Project\Level1\Level2
    - {startdate} - The date to start your trend report on. Format: YYYY-MM-DDZ. Example: 2019-04-01Z represents 2019-April-01. Do not enclose in quotes.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI - Advanced Editor - Replace strings in query](media/odatapowerbi-advancededitor-replaced.png)
+   > [!div class="mx-imgBorder"] > ![Power BI - Advanced Editor - Replace strings in query](media/odatapowerbi-advancededitor-replaced.png)
 
 6. To execute the query, select **Done**.
 

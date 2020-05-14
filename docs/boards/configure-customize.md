@@ -78,10 +78,14 @@ One of the main choices teams have is choosing the work item types they use to t
 :::row-end:::
 :::row:::
 :::column span="":::
-----------------------------
+
+---
+
 :::column-end:::
 :::column span="2":::
-----------------------------
+
+---
+
 :::column-end:::
 :::row-end:::
 :::row:::
@@ -99,14 +103,15 @@ Requirements with child-dependent tasks
 :::column-end:::
 :::column span="2":::
 **Supports Scrum methods**  
- Recommended for teams that follow Scrum methods and want to track time associated with work.  
- - Quickly define and prioritize backlog items: [Product backlog](backlogs/create-your-backlog.md)</li> - Forecast sprints using team velocity: [Forecast](sprints/forecast.md)  
- - Plan sprints: [Backlog Planning tool](sprints/assign-work-sprint.md)  
- - Plan and track capacity: [Sprint capacity tool](sprints/set-capacity.md) - Track estimated and remaining work: [Taskboard](sprints/adjust-work.md) - Monitor sprint burndown based on remaining work such as hours or days: [Sprint burndown](/azure/devops/report/dashboards/configure-sprint-burndown?toc=/azure/devops/boards/toc.json&bc=/azure/devops/boards/breadcrumb/toc.json) - Conduct daily scrums, update and monitor task status: [Sprint Taskboard](sprints/task-board.md)  
- - Estimate work: [Define Story Points, Effort, or Size](backlogs/create-your-backlog.md#add-details-and-estimates) - View progress bars, counts, or sums of rollup on tasks: [Rollup](backlogs/display-rollup.md)  
- - Track dependencies across teams and projects: [Dependency Tracker](extensions/dependency-tracker.md)
+ Recommended for teams that follow Scrum methods and want to track time associated with work.
 
-     Many teams start out using Scrum methods to track and plan their work using the tools available through the Sprints hub. The Sprints tools support estimating and tracking remaining work and use of capacity planning. If you don't plan on using these tools, then adding child-dependent tasks is optional. Developers might add them simply as a checklist of items they need to complete a user story or backlog requirement.
+- Quickly define and prioritize backlog items: [Product backlog](backlogs/create-your-backlog.md)</li> - Forecast sprints using team velocity: [Forecast](sprints/forecast.md)
+- Plan sprints: [Backlog Planning tool](sprints/assign-work-sprint.md)
+- Plan and track capacity: [Sprint capacity tool](sprints/set-capacity.md) - Track estimated and remaining work: [Taskboard](sprints/adjust-work.md) - Monitor sprint burndown based on remaining work such as hours or days: [Sprint burndown](/azure/devops/report/dashboards/configure-sprint-burndown?toc=/azure/devops/boards/toc.json&bc=/azure/devops/boards/breadcrumb/toc.json) - Conduct daily scrums, update and monitor task status: [Sprint Taskboard](sprints/task-board.md)
+- Estimate work: [Define Story Points, Effort, or Size](backlogs/create-your-backlog.md#add-details-and-estimates) - View progress bars, counts, or sums of rollup on tasks: [Rollup](backlogs/display-rollup.md)
+- Track dependencies across teams and projects: [Dependency Tracker](extensions/dependency-tracker.md)
+
+  Many teams start out using Scrum methods to track and plan their work using the tools available through the Sprints hub. The Sprints tools support estimating and tracking remaining work and use of capacity planning. If you don't plan on using these tools, then adding child-dependent tasks is optional. Developers might add them simply as a checklist of items they need to complete a user story or backlog requirement.
 
 :::column-end:::
 :::row-end:::
@@ -116,33 +121,34 @@ Requirements only, such as user stories (Agile), issues (Basic), product backlog
  :::column-end:::
 :::column span="2":::
 **Supports Kanban and Scrumban methods**  
- Recommended for teams that follow Kanban or Scrumban methods, estimate work using Story Points, Effort, or Size, and don't track time associated with work.  
- - Quickly define and prioritize backlog items: [Product backlog](backlogs/create-your-backlog.md)  
- - Plan sprints: [Backlog Planning tool](sprints/assign-work-sprint.md)  
- - Estimate work: [Define Story Points, Effort, or Size](backlogs/create-your-backlog.md#add-details-and-estimates)  
- - Forecast sprints using team velocity: [Forecast](sprints/forecast.md)  
- - Monitor sprint burndown based on requirement estimates: [Sprint burndown](/azure/devops/report/dashboards/configure-sprint-burndown?toc=/azure/devops/boards/toc.json&bc=/azure/devops/boards/breadcrumb/toc.json)  
- - Update requirement status: [Kanban board](boards/kanban-quickstart.md)  
- - Track dependencies across teams and projects: [Dependency Tracker](extensions/dependency-tracker.md)
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-Requirements grouped under portfolio work item types, such as epics and features
-:::column-end:::
-:::column span="2":::
-**Supports calendar views, cross-team views, and portfolio planning**  
- Recommended for organizations with several teams that want to view rollups and calendar views associated with multiple teams, and take advantage of all portfolio planning tools.  
- - Quickly define and prioritize portfolio items: [Portfolio backlogs](backlogs/define-features-epics.md)  
- - Quickly define child user stories of portfolio items: [Portfolio checklists](boards/kanban-epics-features-stories.md)  
- - Map work items to features and epics: [Mapping tool](backlogs/organize-backlog.md)  
- - View cross-team progress calendar view: [Delivery plans](plans/review-team-plans.md)  
- - View calendar view of all team features: [Feature Timeline](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.workitem-feature-timeline-extension)  
- - View calendar view of a specific epic: [Epic Roadmap](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.workitem-feature-timeline-extension)  
- - View progress bars, counts, or sums of rollup on child items: [Rollup](backlogs/display-rollup.md)  
- - Track dependencies across teams and projects:[Dependency Tracker](extensions/dependency-tracker.md)  
- :::column-end:::
-:::row-end:::
+ Recommended for teams that follow Kanban or Scrumban methods, estimate work using Story Points, Effort, or Size, and don't track time associated with work.
+
+- Quickly define and prioritize backlog items: [Product backlog](backlogs/create-your-backlog.md)
+- Plan sprints: [Backlog Planning tool](sprints/assign-work-sprint.md)
+- Estimate work: [Define Story Points, Effort, or Size](backlogs/create-your-backlog.md#add-details-and-estimates)
+- Forecast sprints using team velocity: [Forecast](sprints/forecast.md)
+- Monitor sprint burndown based on requirement estimates: [Sprint burndown](/azure/devops/report/dashboards/configure-sprint-burndown?toc=/azure/devops/boards/toc.json&bc=/azure/devops/boards/breadcrumb/toc.json)
+- Update requirement status: [Kanban board](boards/kanban-quickstart.md)
+- Track dependencies across teams and projects: [Dependency Tracker](extensions/dependency-tracker.md)
+  :::column-end:::
+  :::row-end:::
+  :::row:::
+  :::column span="":::
+  Requirements grouped under portfolio work item types, such as epics and features
+  :::column-end:::
+  :::column span="2":::
+  **Supports calendar views, cross-team views, and portfolio planning**  
+   Recommended for organizations with several teams that want to view rollups and calendar views associated with multiple teams, and take advantage of all portfolio planning tools.
+- Quickly define and prioritize portfolio items: [Portfolio backlogs](backlogs/define-features-epics.md)
+- Quickly define child user stories of portfolio items: [Portfolio checklists](boards/kanban-epics-features-stories.md)
+- Map work items to features and epics: [Mapping tool](backlogs/organize-backlog.md)
+- View cross-team progress calendar view: [Delivery plans](plans/review-team-plans.md)
+- View calendar view of all team features: [Feature Timeline](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.workitem-feature-timeline-extension)
+- View calendar view of a specific epic: [Epic Roadmap](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.workitem-feature-timeline-extension)
+- View progress bars, counts, or sums of rollup on child items: [Rollup](backlogs/display-rollup.md)
+- Track dependencies across teams and projects:[Dependency Tracker](extensions/dependency-tracker.md)  
+   :::column-end:::
+  :::row-end:::
 
 ## Configure and customization options
 
@@ -314,12 +320,11 @@ To use the following tools, teams must subscribe to area paths.
 - [Backlogs> all tools](backlogs/backlogs-overview.md)
 - [Sprints> all tools](sprints/scrum-overview.md)
 - [Analytics> all](../report/dashboards/overview.md#in-context-reports-work-tracking) and [Rollup](#rollup)
-- Portfolio planning tools  
-   - [Delivery plans](plans/review-team-plans.md), provides individual team and cross-team progress calendar views  
-   - [Feature Timeline](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.workitem-feature-timeline-extension), provides a calendar view of team epics and features with the ability to drill down into child items  
-   - [Epic Roadmap](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.workitem-feature-timeline-extension), provides a calendar view of a selected team epic and features with the ability to drill down into child items  
-   - [Dependency Tracker](extensions/dependency-tracker.md), provides list and calendar views of dependencies being produced or consumed by teams  
-
+- Portfolio planning tools
+  - [Delivery plans](plans/review-team-plans.md), provides individual team and cross-team progress calendar views
+  - [Feature Timeline](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.workitem-feature-timeline-extension), provides a calendar view of team epics and features with the ability to drill down into child items
+  - [Epic Roadmap](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.workitem-feature-timeline-extension), provides a calendar view of a selected team epic and features with the ability to drill down into child items
+  - [Dependency Tracker](extensions/dependency-tracker.md), provides list and calendar views of dependencies being produced or consumed by teams
 
 ### Area paths and team assignments
 
@@ -327,8 +332,7 @@ A default team and default area path are defined for each project. For small tea
 
 Here is an example of area paths and their assignment to teams, which support portfolio management views for the Account Management and Service Delivery teams.
 
-> [!div class="mx-imgBorder"]
-> ![Area paths and team assignments](media/config-custom/area-path-team-assignments.png)
+> [!div class="mx-imgBorder"] > ![Area paths and team assignments](media/config-custom/area-path-team-assignments.png)
 
 - You create hierarchical area paths to support sub categories of features and product areas
 - To provide portfolio views, you assign two or more area paths and include sub-areas to a portfolio management team
@@ -390,7 +394,7 @@ Here we show **Progress by all Work Items** which displays progress bars for asc
 
 
 Consider how your selection impacts rollup
-If your development team uses tasks 
+If your development team uses tasks
 -->
 
 <a id="iteration-path" />
@@ -466,7 +470,7 @@ Each process supports a default workflow. This workflow defines the default colu
 Sometimes, teams want to track the status of their work that go beyond these default states. Support is provided for this in one of two ways:
 
 - Add custom workflow states to the work item type\
-   - This option impacts all teams and requires that they update their Kanban board configuration
+  - This option impacts all teams and requires that they update their Kanban board configuration
 - Add columns to a Kanban board - This option only impacts the team that adds the columns
 
 Both workflow states and Kanban columns appear in the Cumulative Flow diagram for a team. Individuals can choose which columns appear in the chart.

@@ -28,15 +28,13 @@ A default set of Analytics views are provided, as shown below.
 
 ::: moniker-end
 
-> [!div class="mx-imgBorder"]
-> ![Default Analytics views](./media/default-views/default-views.png)
+> [!div class="mx-imgBorder"] > ![Default Analytics views](./media/default-views/default-views.png)
 
 [!INCLUDE [temp](../includes/analytics-image-differences.md)]
 
 These views are immediately available from Power BI, as shown in the Navigator dialog illustrated below, and are a great way to get started.
 
-> [!div class="mx-imgBorder"]
-> ![Azure DevOps Power BI Data Connector - Default Analytics views](media/default-views/navigator-dialog-default-views.png)
+> [!div class="mx-imgBorder"] > ![Azure DevOps Power BI Data Connector - Default Analytics views](media/default-views/navigator-dialog-default-views.png)
 
 Each default Analytics view provides a combination of options for work item types and historical data. The following tables describe each set of options.
 

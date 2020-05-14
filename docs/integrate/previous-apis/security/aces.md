@@ -32,7 +32,7 @@ POST https://{instance}/_apis/accesscontrolentries/{securitynamespace}/?api-vers
 | :-------- | :--- | :------ | :---- |
 
 
-| URL   
+| URL  
 | instance | string | | TFS server name ({server:port}).
 | securitynamespace | guid | | ID of the security namespace.
 | Query
@@ -138,7 +138,7 @@ DELETE https://{instance}/_apis/accesscontrolentries/{securitynamespace}/?api-ve
 | :-------- | :--- | :------ | :---- |
 
 
-| URL   
+| URL  
 | instance | string | | TFS server name ({server:port}).
 | securitynamespace | guid | | ID of the security namespace.
 | Query

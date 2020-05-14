@@ -41,7 +41,7 @@ You can add custom work item types (WITs) or modify existing WITs to add fields,
 
 <img src="media/process/cwit-create-wit-ticket.png" alt="Create new work item type dialog" style="border: 1px solid #C3C3C3;" />
 
-3) From the Layout page, you can add fields, groups, or pages to specify the form and fields you want to track. Each new WIT comes predefined with a Details page with the Description field, and Discussion, Development, and Related Work groups. For details, see [Add and manage fields](customize-process-field.md) or [Customize the web layout for a process](customize-process-form.md).
+3. From the Layout page, you can add fields, groups, or pages to specify the form and fields you want to track. Each new WIT comes predefined with a Details page with the Description field, and Discussion, Development, and Related Work groups. For details, see [Add and manage fields](customize-process-field.md) or [Customize the web layout for a process](customize-process-form.md).
 
    > [!div class="mx-imgBorder"]  
    > ![New WIT, customize layout](media/process/cpwit-new-ticket-define.png)
@@ -50,19 +50,19 @@ You can add custom work item types (WITs) or modify existing WITs to add fields,
 
    ![WIT header details](media/process/weblayout-system-controls-details-page.png)
 
-4) Open the States page to view the default workflow states. Optionally, [customize the workflow states](customize-process-workflow.md).  
+4. Open the States page to view the default workflow states. Optionally, [customize the workflow states](customize-process-workflow.md).  
    <a id="backlog"> </a>
 
-5) Optional. To add the WIT to a backlog, see [Customize your backlogs or boards for a process](customize-process-backlogs-boards.md). By default, custom WITs aren't added to any backlog. To learn more about different backlog levels, see [Backlogs, boards, and plans](../../../boards/backlogs/backlogs-boards-plans.md).
+5. Optional. To add the WIT to a backlog, see [Customize your backlogs or boards for a process](customize-process-backlogs-boards.md). By default, custom WITs aren't added to any backlog. To learn more about different backlog levels, see [Backlogs, boards, and plans](../../../boards/backlogs/backlogs-boards-plans.md).
 
-6) Verify the custom work item type appears as expected. Open the **Work>Work Items** page (user context) and choose **New Work Item** and select the WIT you customized. Here we choose **Ticket**.
+6. Verify the custom work item type appears as expected. Open the **Work>Work Items** page (user context) and choose **New Work Item** and select the WIT you customized. Here we choose **Ticket**.
 
    > [!div class="mx-imgBorder"]  
    > ![Work>Work Items page, add new work item, Ticket](media/process/add-custom-wit-verify-ticket.png)
 
    If you don't see the custom WIT, refresh your browser to make sure it registers all the custom changes you've made.
 
-7) Verify that the field you added appears on the form. Note that the ![ ](../../../media/icons/required-icon.png) (exclamation mark) icon indicates the field is required.
+7. Verify that the field you added appears on the form. Note that the ![ ](../../../media/icons/required-icon.png) (exclamation mark) icon indicates the field is required.
 
    > [!div class="mx-imgBorder"]  
    > ![Ticket form, Customer Ticket field added to Customer Focus group](media/process/add-custom-field-verify-ticket-form.png)

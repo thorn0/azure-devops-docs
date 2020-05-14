@@ -163,7 +163,7 @@ The user making the UserType change must have the following items:
    ![Administrator action in Windows PowerShell](media/faq/Administrator-action-Windows-PowerShell.png)
 
 6. Once the installation completes, execute `Connect-AzureAD`. You're prompted to sign in to the Azure AD. Be sure to use an ID that meets the criteria above.
-7. Execute `Get-AzureADuser -SearchString "<display_name>"`, where <display_name> is part of the entire display name for the user, as seen inside the Azure portal). The command returns four columns for the user found - ObjectId, DisplayName, UserPrincipalName, UserType - and the UserType should say _guest_.
+7. Execute `Get-AzureADuser -SearchString "<display_name>"`, where <display*name> is part of the entire display name for the user, as seen inside the Azure portal). The command returns four columns for the user found - ObjectId, DisplayName, UserPrincipalName, UserType - and the UserType should say \_guest*.
 8. Execute `Set-AzureADUser -ObjectID <string> -UserType Member`, where <string> is the value of ObjectId returned by the previous command. The user is set to member status.
 9. Execute `Get-AzureADuser -SearchString "<display_name>"` again to verify the UserType has changed. You can also verify in the Azure Active Directory section of the Azure portal.
    While not the norm, we've seen it takes several hours or even days before this change is reflected inside Azure DevOps. If it doesn't fix your Azure DevOps issue immediately, give it some time and keep trying.

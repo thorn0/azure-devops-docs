@@ -26,8 +26,8 @@ In the plug-in file, you specify one or more tasks and their dependencies. In ge
 
 ## Plug-in name and location
 
-The names of the file, the folder, and the plug-in for the default process templates are as follows:  
-  
+The names of the file, the folder, and the plug-in for the default process templates are as follows:
+
 **File name**: WorkItems.xml  
 **Folder name**: WorkItem Tracking folder
 **Plug-in name**: Microsoft.ProjectCreationWizard.WorkItemTracking

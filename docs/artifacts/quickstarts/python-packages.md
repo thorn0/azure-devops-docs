@@ -79,8 +79,7 @@ The Python Credential Provider is a manual interaction. If you want to set up au
 
 1. From your feed in **Azure Artifacts**, select **Connect to feed**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Connect to feed button on the upper right of the page](../media/connect-to-feed-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![Connect to feed button on the upper right of the page](../media/connect-to-feed-azure-devops-newnav.png)
 
 2. Choose either **pip** or **twine** under the Python header.
 

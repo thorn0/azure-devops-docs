@@ -304,8 +304,7 @@ Here, Jamal divides his time between Deployment and Development.
 If you work on more than one team, you'll want to specify your sprint capacity for each team. For example, both Christie and Raisa split their time between the Web and Phone teams. They therefore allocate 3 hours a day to the Web team, and 3 hours a day to the Phone team.
 
 > [!div class="mx-imgBorder"]  
-> ![Allocate capacity for team Web](media/capacity/set-capacity-web-team.png)
-> <br/> > [!div class="mx-imgBorder"]  
+> ![Allocate capacity for team Web](media/capacity/set-capacity-web-team.png) > <br/> > [!div class="mx-imgBorder"]  
 > ![Allocate capacity for team Phone](media/capacity/set-capacity-phone-team.png)
 
 If your name isn't listed in the capacity view, you need to be added as a team member.

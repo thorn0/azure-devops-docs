@@ -22,17 +22,16 @@ This article shows you how to get the execution state of one or more Test Plans 
 
 The report generated is similar to following image and the Summary chart of the [Track test status - Progress report](../../test/track-test-status.md).
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Overall Execution State - Report](media/odatapowerbi-overallexecution.png)
+> [!div class="mx-imgBorder"] > ![Sample - Overall Execution State - Report](media/odatapowerbi-overallexecution.png)
 
 This report displays two donut charts that summarize Test Plans executed and not executed, and the status of executed Test Plans.
 
-- **Executed vs Not executed** - **Executed**: The percentage of test plans defined which have run.  
-   - **NotExecuted**: The percentage of test plans defined which haven't run.
-- **Split by outcome** - **Blocked**: Percentage of test cases that are currently blocked from running.  
-   - **Failed**: Percentage of test cases that failed.  
-   - **NotApplicable**: Percentage of test cases that didn't run.  
-   - **Passed**: Percentage of test cases that passed.
+- **Executed vs Not executed** - **Executed**: The percentage of test plans defined which have run.
+  - **NotExecuted**: The percentage of test plans defined which haven't run.
+- **Split by outcome** - **Blocked**: Percentage of test cases that are currently blocked from running.
+  - **Failed**: Percentage of test cases that failed.
+  - **NotApplicable**: Percentage of test cases that didn't run.
+  - **Passed**: Percentage of test cases that passed.
 
 ## Questions the report answers
 
@@ -134,8 +133,7 @@ Power BI shows you the fields you can report on.
 > [!NOTE]  
 > The example below assumes that no one renamed any columns.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Overall Execution - Fields](media/odatapowerbi-overallexecution-fields.png)
+> [!div class="mx-imgBorder"] > ![Sample - Overall Execution - Fields](media/odatapowerbi-overallexecution-fields.png)
 
 To create the report, do the following steps:
 
@@ -148,8 +146,7 @@ To create the report, do the following steps:
 
 Your report should appear similar to the following image.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Overall Execution State - Report](media/odatapowerbi-overallexecution.png)
+> [!div class="mx-imgBorder"] > ![Sample - Overall Execution State - Report](media/odatapowerbi-overallexecution.png)
 
 ## Full list of Test Plans sample reports
 

@@ -136,8 +136,7 @@ Choose the process that provides the best fit for your team.
 If you need more than two or three backlog levels, you can add more based on the process model you use:
 
 - **Inheritance**: [Customize your backlogs or boards for a process](../../../organizations/settings/work/customize-process-backlogs-boards.md)
-- **Hosted XML or On-premises XML**: [Add portfolio backlogs](../../../reference/add-portfolio-backlogs.md).  
-
+- **Hosted XML or On-premises XML**: [Add portfolio backlogs](../../../reference/add-portfolio-backlogs.md).
 
 <a id="main-distinctions"></a>
 

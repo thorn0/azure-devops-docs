@@ -583,8 +583,7 @@ To check how much concurrency you have:
 
    You can also reach this page by navigating to `https://dev.azure.com/{org}/_settings/buildqueue?_a=concurrentJobs`, or choosing **manage parallel jobs** from the logs.
 
-   ![Manage parallel jobs](media/troubleshooting/manage-parallel-jobs.png)  
-
+   ![Manage parallel jobs](media/troubleshooting/manage-parallel-jobs.png)
 
 2. Determine which pool you want to check concurrency on (Microsoft hosted or self hosted pools), and choose **View in-progress jobs**.
 

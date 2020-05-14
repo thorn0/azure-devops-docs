@@ -164,8 +164,8 @@ Velocity reports are available for each backlog level, both product and portfoli
 
    With the following assignments made to the color bars. All work items counted are assigned to the sprint or iteration.
 
-   - **Planned** - calculated based on the amount of work assigned to the sprint prior to the start of the sprint. This count includes work that was moved to a different sprint after the start of the sprint, but doesn't include work that was added later after the sprint started. > [!TIP]  
-      > To list the work items included in the count, click the velocity bar. A query results page will open with the list of work items included.
+   - **Planned** - calculated based on the amount of work assigned to the sprint prior to the start of the sprint. This count includes work that was moved to a different sprint after the start of the sprint, but doesn't include work that was added later after the sprint started. > [!TIP]
+     > To list the work items included in the count, click the velocity bar. A query results page will open with the list of work items included.
    - **Completed** - calculated based on the amount of work assigned to the sprint prior to the start of the sprint and completed prior to the sprint end date..
    - **Completed Late** - calculated based on the amount of work assigned to the sprint prior to the start of the sprint but was completed after the end of the sprint.
    - **Incomplete** - Amount of work not completed, calculated based on the amount of work assigned to the sprint prior to the start of the sprint and has not been set to completed.

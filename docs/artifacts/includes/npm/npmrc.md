@@ -22,8 +22,7 @@ The **Connect to feed** dialog box generates an appropriately formatted token th
 
 4. Select **Generate npm credentials**. Copy the credentials to add them to your user .npmrc file manually:
 
-   > [!div class="mx-imgBorder"]
-   > ![Connect to feed from Azure Artifacts Linux/Mac credentials](../../media/connect-to-feed-npm-creds-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![Connect to feed from Azure Artifacts Linux/Mac credentials](../../media/connect-to-feed-npm-creds-azure-devops-newnav.png)
 
 ::: moniker-end
 

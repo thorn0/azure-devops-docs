@@ -18,8 +18,7 @@ ms.date: 08/07/2019
 
 This article shows you how to display average lead time or cycle time for a given set of User Stories. The following image shows an example for average lead time. To learn more about lead and cycle time, see [Cumulative flow, lead time, and cycle time guidance](../dashboards/cumulative-flow-cycle-lead-time-guidance.md).
 
-> [!div class="mx-imgBorder"]
-> ![Power BI + OData - Lead Cycle Report by Priority](media/odatapowerbi-leadcycle-report.png)
+> [!div class="mx-imgBorder"] > ![Power BI + OData - Lead Cycle Report by Priority](media/odatapowerbi-leadcycle-report.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
 
@@ -117,8 +116,7 @@ Power BI shows you the fields you can report on.
 > [!NOTE]  
 > The example below assumes that no one renamed any columns.
 
-> [!div class="mx-imgBorder"]
-> ![Power BI + OData - Lead Cycle Fields](media/odatapowerbi-leadcycle-fields.png)
+> [!div class="mx-imgBorder"] > ![Power BI + OData - Lead Cycle Fields](media/odatapowerbi-leadcycle-fields.png)
 
 For a simple report, do the following steps:
 
@@ -131,13 +129,11 @@ For a simple report, do the following steps:
 
 The example report:
 
-> [!div class="mx-imgBorder"]
-> ![Power BI + OData - Lead Cycle Report by Priority](media/odatapowerbi-leadcycle-report.png)
+> [!div class="mx-imgBorder"] > ![Power BI + OData - Lead Cycle Report by Priority](media/odatapowerbi-leadcycle-report.png)
 
 To pivot the report by Area Path (representing teams), add the field "Area.AreaPath" to **Legend**, replacing "Priority"
 
-> [!div class="mx-imgBorder"]
-> ![Power BI + OData - Lead Cycle Report by Teams](media/odatapowerbi-leadcycle-report2.png)
+> [!div class="mx-imgBorder"] > ![Power BI + OData - Lead Cycle Report by Teams](media/odatapowerbi-leadcycle-report2.png)
 
 [!INCLUDE [temp](includes/sample-multipleteams.md)]
 

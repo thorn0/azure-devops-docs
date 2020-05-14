@@ -221,7 +221,7 @@ variables:
 
 steps:
   - bash: |
-      sudo apt-get install ccache -y    
+      sudo apt-get install ccache -y
       echo "##vso[task.prependpath]/usr/lib/ccache"
     displayName: Install ccache and update PATH to use linked versions of gcc, cc, etc
 
@@ -256,7 +256,7 @@ steps:
     displayName: Gradle build cache
 
   - script: |
-      ./gradlew --build-cache build    
+      ./gradlew --build-cache build
       # stop the Gradle daemon to ensure no files are left open (impacting the save cache operation later)
       ./gradlew --stop
     displayName: Build

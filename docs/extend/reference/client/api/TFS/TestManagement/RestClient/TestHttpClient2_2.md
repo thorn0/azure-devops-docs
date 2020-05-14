@@ -1640,7 +1640,7 @@ Returns a test run attachment
 
 <h2 class='method'>updateCodeCoverageSummary()</h2>
 
-http://(tfsserver):8080/tfs/DefaultCollection/_apis/test/CodeCoverage?buildId=10 Request: Json of code coverage summary
+http://(tfsserver):8080/tfs/DefaultCollection/\_apis/test/CodeCoverage?buildId=10 Request: Json of code coverage summary
 
 ### Syntax
 

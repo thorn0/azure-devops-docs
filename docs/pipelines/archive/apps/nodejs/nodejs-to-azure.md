@@ -68,6 +68,7 @@ On the **Tasks** or **Build** tab, add these tasks.
 <img src="../../../tasks/package/media/npm.png" alt="Package: npm install"/>
 
 <br/><strong>Package: npm install</strong></td>
+
 <td>
 
 <p>Install your npm package dependencies.</p>
@@ -82,6 +83,7 @@ On the **Tasks** or **Build** tab, add these tasks.
 <img src="../../../tasks/build/media/gulp.png" alt="Build: gulp"/>
 
 <br/><strong>Build: gulp</strong></td>
+
 <td>
 
 <p>Pack your files into a .zip file.</p>
@@ -104,6 +106,7 @@ On the **Tasks** or **Build** tab, add these tasks.
 <img src="../../../tasks/package/media/npm.png" alt="Package: npm test"/>
 
 <br/><strong>Package: npm test</strong></td>
+
 <td>
 
 <p>(Optional) Test your application.</p>
@@ -119,6 +122,7 @@ On the **Tasks** or **Build** tab, add these tasks.
 <img src="../../../tasks/build/media/publish-build-artifacts.png" alt="Build: Publish Build Artifacts"/>
 
 <br/><strong>Build: Publish Build Artifacts</strong></td>
+
 <td>
 
 <p>(Optional) Drop some of the build outputs, such as the .zip file as we do in the example below.</p>

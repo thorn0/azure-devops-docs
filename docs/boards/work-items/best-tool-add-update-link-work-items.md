@@ -114,19 +114,19 @@ You can quickly add and prioritize your product and portfolio backlogs, which li
 **Additional supported tasks**:  
 ::: moniker range=">= azure-devops-2019"
 
-- [Bulk modifying work items](../backlogs/bulk-modify-work-items.md)  
-   - [Change work item type](../backlogs/move-change-type.md#change-type)  
-   - [Move work item to a different project](../backlogs/move-change-type.md#move)  
-   - [Assign work items, change the iteration](../backlogs/bulk-modify-work-items.md#assign-to)  
-   - [Add or remove tags](../queries/add-tags-to-work-items.md#bulk-add-or-remove-tags) - [Delete work items](../backlogs/remove-delete-work-items.md#delete)
+- [Bulk modifying work items](../backlogs/bulk-modify-work-items.md)
+  - [Change work item type](../backlogs/move-change-type.md#change-type)
+  - [Move work item to a different project](../backlogs/move-change-type.md#move)
+  - [Assign work items, change the iteration](../backlogs/bulk-modify-work-items.md#assign-to)
+  - [Add or remove tags](../queries/add-tags-to-work-items.md#bulk-add-or-remove-tags) - [Delete work items](../backlogs/remove-delete-work-items.md#delete)
 - [Creating a Git branch from one or more work items](../backlogs/connect-work-items-to-git-dev-ops.md)
 - [Monitoring team velocity](../../report/dashboards/team-velocity.md)  
   ::: moniker-end
 
 ::: moniker range=">= tfs-2017 <= tfs-2018"
 
-- [Bulk modifying work items](../backlogs/bulk-modify-work-items.md) - [Assign work items, change the iteration](../backlogs/bulk-modify-work-items.md#assign-to) - [Delete work items](../backlogs/remove-delete-work-items.md#delete)  
-   - [Add or remove tags](../queries/add-tags-to-work-items.md#bulk-add-or-remove-tags)
+- [Bulk modifying work items](../backlogs/bulk-modify-work-items.md) - [Assign work items, change the iteration](../backlogs/bulk-modify-work-items.md#assign-to) - [Delete work items](../backlogs/remove-delete-work-items.md#delete)
+  - [Add or remove tags](../queries/add-tags-to-work-items.md#bulk-add-or-remove-tags)
 - [Creating a Git branch from one or more work items](../backlogs/connect-work-items-to-git-dev-ops.md)
 - [Restoring work items from the recycle bin](../backlogs/remove-delete-work-items.md#restore-work-items)
 - [Monitoring team velocity](../../report/dashboards/team-velocity.md)

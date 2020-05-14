@@ -73,31 +73,31 @@ Opens this work item for modification by loading only the latest revision of thi
 <!---
 
 <a data-toggle="collapse" href="#expando-agent-pools">C# ▼</a>
-<div class="collapse" id="expando-queues"> 
+<div class="collapse" id="expando-queues">
 ```public void PartialOpen()```
 </div>
 
 <a data-toggle="collapse" href="#expando-agent-pools">C++ ▼</a>
-<div class="collapse" id="expando-queues"> 
-```public:  
+<div class="collapse" id="expando-queues">
+```public:
 void PartialOpen()```
 </div>
 
 
 <a data-toggle="collapse" href="#expando-agent-pools">F# ▼</a>
-<div class="collapse" id="expando-queues"> 
+<div class="collapse" id="expando-queues">
 ```member PartialOpen : unit -> unit```
 </div>
 
 
 <a data-toggle="collapse" href="#expando-agent-pools">JScript ▼</a>
-<div class="collapse" id="expando-queues"> 
+<div class="collapse" id="expando-queues">
 ```public function PartialOpen()```
 </div>
 
 <a data-toggle="collapse" href="#expando-agent-pools">VB ▼</a>
-<div class="collapse" id="expando-queues"> 
-```'Declaration  
+<div class="collapse" id="expando-queues">
+```'Declaration
 Public Sub PartialOpen```
 </div>
 

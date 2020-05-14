@@ -692,8 +692,6 @@ ignore the case or convert test names to lower case.
     </system.diagnostics>
     ```
 
-
-
 1.  Restart Visual Studio and reproduce the issue.
     You can then review the log file or share it with Support. You can find the log file at `%Temp%\ELSClient\`.
 

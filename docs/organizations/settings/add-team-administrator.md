@@ -59,7 +59,7 @@ If you need to add a team, see [Add teams](add-teams.md).
 
    > [!div class="mx-imgBorder"] > ![Team profile, Add a team admin](media/add-team-admin/settings-add-team-administrator-preview.png)
 
-3. Enter the identities you want to add to the administrator role, and then select **Save**.  
+3. Enter the identities you want to add to the administrator role, and then select **Save**.
 
    > [!div class="mx-imgBorder"] > ![Add team administrator dialog](media/add-team-admin/add-team-administrator-dialog-preview.png)
 
@@ -75,7 +75,7 @@ From the web portal, open the admin page for the team.
 
    > [!div class="mx-imgBorder"] > ![Team profile, Add a team admin](media/add-team-admin/settings-add-team-administrator.png)
 
-3. Enter the identities you want to add to the administrator role, and then select **Save**.  
+3. Enter the identities you want to add to the administrator role, and then select **Save**.
 
    > [!div class="mx-imgBorder"] > ![Add team administrator dialog](media/add-team-admin/add-administrators-dialog.png)
 
@@ -93,8 +93,7 @@ From the web portal, open the admin page for the team.
 
    > [!div class="mx-imgBorder"] > ![Team profile, Add a team admin](media/add-team-admin/team-profile-choose-add-admin.png)
 
-3. Enter the identities you want to add to the team administrator role.  
-
+3. Enter the identities you want to add to the team administrator role.
 
    > [!div class="mx-imgBorder"] > ![Add team administrator dialog](media/add-team-admin/add-team-admin-dialog.png)
 

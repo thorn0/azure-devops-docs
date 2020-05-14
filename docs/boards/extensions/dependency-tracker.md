@@ -16,7 +16,7 @@ ms.date: 12/02/2019
 
 [!INCLUDE [temp](../includes/version-vsts-only.md)]
 
-<!--- Suggest link to tutorial be changed from https://osgwiki.com/wiki/Dependency 
+<!--- Suggest link to tutorial be changed from https://osgwiki.com/wiki/Dependency
 
 https://microsoft.visualstudio.com/OS/_apps/hub/wdgeswm.dependencytracker.dependencytracker-hub#b4cd1b1c9c7ce3dfbaa3fabc9532a040
 

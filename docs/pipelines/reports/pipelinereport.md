@@ -77,8 +77,7 @@ The **Pipeline duration** report shows how long your pipeline typically takes to
 
 The **Test failures** report provides a granular view of the top failing tests in the pipeline, along with the failure details. For more information on this report, see [Test failures](../test/test-analytics.md#test-failures).
 
-> [!div class="mx-imgBorder"]
-> ![Test analytics detail view](../test/media/test-analytics/test-failures.png)
+> [!div class="mx-imgBorder"] > ![Test analytics detail view](../test/media/test-analytics/test-failures.png)
 
 ## Filters
 

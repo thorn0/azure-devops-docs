@@ -27,4 +27,4 @@ Structure to specify current navigation context of the executing request. The na
 
 - `currentParameters`: string. Current parameters route value (the path after the controller and action in the url)
 
-- `topMostLevel`: [NavigationContextLevels](../../../VSS/References/SDK_Interfaces/NavigationContextLevels.md). Flag to show top most navigation context. For example the URL http://server:port/collection/project/_controller/action sets the Project bit while the URL http://server:port/collection/project/_admin/_controller/action sets also sets the area property to Admin.
+- `topMostLevel`: [NavigationContextLevels](../../../VSS/References/SDK_Interfaces/NavigationContextLevels.md). Flag to show top most navigation context. For example the URL http://server:port/collection/project/\_controller/action sets the Project bit while the URL http://server:port/collection/project/\_admin/\_controller/action sets also sets the area property to Admin.

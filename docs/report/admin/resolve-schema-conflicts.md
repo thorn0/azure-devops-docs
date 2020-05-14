@@ -45,9 +45,10 @@ Schema conflicts occur when a project administrator performs one of the followin
 
 - Adds a reportable field to a work item type in one project collection, and the attributes that are assigned to that field do not match those in other project collections.
 
-- Changes an attribute that is assigned to a work item field that is used in more than one project collection, even though those changes conflict with the assignments in other collections.  
-   > [!NOTE]  
-   > A project administrator can avoid the errors in the previous list only by reviewing the attribute assignments for fields that are defined across multiple project collections in a deployment.
+- Changes an attribute that is assigned to a work item field that is used in more than one project collection, even though those changes conflict with the assignments in other collections.
+
+  > [!NOTE]  
+  > A project administrator can avoid the errors in the previous list only by reviewing the attribute assignments for fields that are defined across multiple project collections in a deployment.
 
       	Errors result when a field has either the same reference name or the same reporting reference name in multiple project collections and one or more of the following attributes for that field does not match in two or more collections:
 

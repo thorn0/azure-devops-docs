@@ -71,7 +71,7 @@ To switch to the [product backlog](/azure/devops/boards/backlogs/create-your-bac
    > ![Select another team](/azure/devops/boards/sprints/media/assign-items-sprint/team-selector-backlogs-standard.png)
 
    Your Kanban board appears.
-     
+
    ![Kanban board, Agile template](/azure/devops/boards/boards/media/kanban-basics-intro.png)
 
 ::: moniker-end

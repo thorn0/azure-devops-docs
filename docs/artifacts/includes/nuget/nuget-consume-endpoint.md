@@ -12,15 +12,13 @@ ms.date: 02/19/2020
 
 2. Select **Connect to feed**:
 
-   > [!div class="mx-imgBorder"]
-   > ![Connect to feed button on the upper right of the page](../../media/connect-to-feed-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![Connect to feed button on the upper right of the page](../../media/connect-to-feed-azure-devops-newnav.png)
 
 3. Select the **Visual Studio** tab under the **NuGet** header
 
 4. Follow the instructions under **Machine setup**
 
-   > [!div class="mx-imgBorder"]
-   > ![Copy Name and Source feed for Visual Studio](../../media/nuget-visual-studio-newnav.png)
+   > [!div class="mx-imgBorder"] > ![Copy Name and Source feed for Visual Studio](../../media/nuget-visual-studio-newnav.png)
 
 ::: moniker-end
 

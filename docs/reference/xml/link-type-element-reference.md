@@ -111,7 +111,6 @@ The topology types described in the following table determine the restrictions p
 </tbody>
 </table>
 
-
 <a id="custom-link-type"></a>
 
 ## Create a custom link type

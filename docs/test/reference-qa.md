@@ -321,11 +321,11 @@ against that build.
 You can insert, move, or delete steps.
 Or you can edit the text itself. Use the edit icon next to the test
 step number to do this.
-  
+
 ![Select the edit icon to edit test steps](media/run-manual-tests/RunTest_11.png)
 
 The tool to edit the test steps is shown.
-  
+
 ![Fix test steps when you run a test](media/run-manual-tests/RunTest_9.png)
 
 ### Q: Can I add a screenshot to the test results when I am running a test?

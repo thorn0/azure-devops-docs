@@ -146,7 +146,7 @@ Where:
 
 Using the `$apply` extension, you can obtain counts, sums, and additional information when you query your work tracking data.
 
-<!---  Commenting these examples out as they are currently not supported. 
+<!---  Commenting these examples out as they are currently not supported.
 
 **Return the count of work items:**
 
@@ -164,7 +164,7 @@ https://analytics.dev.azure.com/{OrganizationName}/_odata/{version}/Areas?
   $apply=aggregate($count as Count)
 ```
 
- 
+
 -->
 
 **Return the sum of all remaining work**

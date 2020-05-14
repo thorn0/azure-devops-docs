@@ -71,8 +71,7 @@ Choose **Contains** or **Does Not Contain** to search against exact or partial m
 
 For example, specify **Contains Words** and <strong>inform\*</strong> to filter on a text field that contains _inform_ or _information_ or _informational_.
 
-> [!div class="mx-imgBorder"]
-> ![Use wild card with Contains Words](media/text-queries/contains-word-wildcard.png)
+> [!div class="mx-imgBorder"] > ![Use wild card with Contains Words](media/text-queries/contains-word-wildcard.png)
 
 [!INCLUDE [temp](../includes/query-clause-tip.md)]
 
@@ -96,8 +95,7 @@ You can find work items where no **Description** has been entered. Using the **I
 
 For example, the following query filters will list all work items where some entries have been made into the **Description** field.
 
-> [!div class="mx-imgBorder"]
-> ![Filter based non-empty HTML fields](media/example-queries/is-not-empty-query.png)
+> [!div class="mx-imgBorder"] > ![Filter based non-empty HTML fields](media/example-queries/is-not-empty-query.png)
 
 ::: moniker-end
 

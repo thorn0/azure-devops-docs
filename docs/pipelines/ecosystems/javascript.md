@@ -983,7 +983,7 @@ steps: # Checking out connected repo
     displayName: "Publish npm artifact"
 
   - script: | # Config can be set in .npmrc
-      npm config set //registry.npmjs.org/:_authToken=$(MAP_NPMTOKEN) 
+      npm config set //registry.npmjs.org/:_authToken=$(MAP_NPMTOKEN)
       npm config set scope "@myscope"
       # npm config list
       # npm --version
