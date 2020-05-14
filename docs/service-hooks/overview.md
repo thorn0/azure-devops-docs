@@ -51,7 +51,7 @@ look at the information on the service that you're interested in.
 
 <img alt="Open the admin page" src="./media/devops-service-hooks.png" />
 
-2.       Create a subscription by running the wizard.
+2.        Create a subscription by running the wizard.
 
 <img alt="Click the link to run the subscription wizard" src="./media/devops-create-subscription.png" style="border: 1px solid #CCCCCC" />
 
@@ -84,7 +84,7 @@ look at the information on the service that you're interested in.
 
 <img alt="Open the admin page" src="./media/openadmin.png" style="border: 1px solid #CCCCCC" />
 
-2.       Create a subscription by running the wizard.
+2.        Create a subscription by running the wizard.
 
 <img alt="Click the link to run the subscription wizard" src="./media/createfirst.png" style="border: 1px solid #CCCCCC" />
 
@@ -158,7 +158,7 @@ A: Yes. For more information, see [Create a service hooks subscription](create-s
 
 A: Yes. You can revoke authorizations from your profile.
 
-1.       Go to your profile page from https://visualstudio.com.
+1.        Go to your profile page from https://visualstudio.com.
 
     Make sure you start from the Visual Studio site (https://visualstudio.com)
     instead of your organization (`https://dev.azure.com/{orgName}`) because, right now,
