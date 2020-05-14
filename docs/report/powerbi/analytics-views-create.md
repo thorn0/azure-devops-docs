@@ -94,8 +94,7 @@ Specify filters to reduce the number of results returned by your view. In the wo
 
   In addition to all previous filter criteria, you can add filters based on different work item fields. You specify these fields in the same way you do for fields you add to a work item query. As shown in the following example, you can filter to show only high Priority bugs with the specific "Hotfix" tag.
 
-  > [!div class="mx-imgBorder"]
-  > ![Filter by Bugs, Priority, and Tags example](media/editable-views/field-criteria.png)
+  > [!div class="mx-imgBorder"] > ![Filter by Bugs, Priority, and Tags example](media/editable-views/field-criteria.png)
 
       	For details about working with tags, see [Add work item tags to categorize and filter lists and boards](../../boards/queries/add-tags-to-work-items.md).
 

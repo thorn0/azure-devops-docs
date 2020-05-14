@@ -99,7 +99,7 @@ To avoid hitting these limits, we recommend:
 - Saving work item changes in batches, rather than one at a time.
 - Reducing the frequency of running applications which make many WIT requests.
 
-As discussed above, we expect to add additional rate limits over time. And we always reserve the right to slow down or block usage which we believe to be abusive.  
+As discussed above, we expect to add additional rate limits over time. And we always reserve the right to slow down or block usage which we believe to be abusive.
 -->
 
 ## User experience

@@ -84,11 +84,11 @@ _Active Bugs_ shared query provided with the Agile process template. Examples ar
    > If you're working in Visual Studio Team Explorer, open the **Work** page to access your queries and shared queries. If Team Explorer isn't visible, choose **View>Team Explorer** from the top level menu.
 
 1. Edit the query to find closed bugs and then run the query.
-   Use ![Insert new filter line](media/3.png) to insert a clause above the current clause. Use ![Remove this filter line](media/4.png) to delete a clause. Queries are automatically scoped to the current project. To find work items defined in several projects, see [Query across projects](using-queries.md#across-projects).  
+   Use ![Insert new filter line](media/3.png) to insert a clause above the current clause. Use ![Remove this filter line](media/4.png) to delete a clause. Queries are automatically scoped to the current project. To find work items defined in several projects, see [Query across projects](using-queries.md#across-projects).
 
    ![Web portal, Queries page, Editor view of a Flat List Query](media/query-active-bugs-editor-vso.png)
 
-1. Save the query to your **My Queries** folder.  
+1. Save the query to your **My Queries** folder.
 
    ![Save Query As](media/6.png)
 

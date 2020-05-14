@@ -82,7 +82,6 @@ Here we move the Customer ticket field to the Details page and the Customer focu
 
 <img src="media/process/cpform-move-field-to-custom-group.png" alt="Edit field dialog, Move field to custom group" style="border: 2px solid #C3C3C3;" />
 
-
 <a id="show-hide-remove-field"></a>
 
 ## Remove a field from a form
@@ -90,17 +89,17 @@ Here we move the Customer ticket field to the Details page and the Customer focu
 You can only remove custom fields from a form. For inherited fields, you can hide them from showing on the form. To learn more, see [Customize a field for a process, Show, hide, or remove a field](customize-process-field.md#show-hide-remove-field).
 
 <!---
-For a custom field, open the field's &hellip; context menu, and then choose the ![Delete icon](../../../media/icons/delete_icon.png) **Remove** option.   
+For a custom field, open the field's &hellip; context menu, and then choose the ![Delete icon](../../../media/icons/delete_icon.png) **Remove** option.
 
-For an inherited field, open the field's &hellip; context menu, and then choose the **Hide from layout** option.   
+For an inherited field, open the field's &hellip; context menu, and then choose the **Hide from layout** option.
 
-Here we remove the Severity inherited field from appearing on the Bug form.   
+Here we remove the Severity inherited field from appearing on the Bug form.
 
 <img src="media/process/cpform-hide-layout.png" alt="Layout, Inherited Field, Context Menu, Hide from layout" style="border: 2px solid #C3C3C3;" />
 
-Removing a custom field from a form removes tracking data for the WIT. You can re-add a custom field to a WIT by adding it to a form as an existing field. 
+Removing a custom field from a form removes tracking data for the WIT. You can re-add a custom field to a WIT by adding it to a form as an existing field.
 
-Removing an inherited field from a form simply hides the field from displaying on the form; it remains defined for the WIT. Hidden fields display on the admin layout page with a strikethrough. You can re-add these fields to the form through their context menu. 
+Removing an inherited field from a form simply hides the field from displaying on the form; it remains defined for the WIT. Hidden fields display on the admin layout page with a strikethrough. You can re-add these fields to the form through their context menu.
 
 -->
 

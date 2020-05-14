@@ -18,8 +18,7 @@ ms.date: 03/06/2020
 
 This article shows you how to display the percentage complete by rollup of Story Points for a given set of active Features. An example is shown in the following image.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Feature Progress - Report](media/odatapowerbi-featureprogress-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Feature Progress - Report](media/odatapowerbi-featureprogress-report.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
 
@@ -86,10 +85,14 @@ The following table describes each part of the query.
 :::row-end:::
 :::row:::
 :::column span="":::
-----------------
+
+---
+
 :::column-end:::
 :::column span="2":::
-----------------
+
+---
+
 :::column-end:::
 :::row-end:::
 :::row:::
@@ -189,18 +192,15 @@ The Descendants column contains a table with two fields: State and TotalStoryPoi
 
 1. Select the expand button on the Descendants column.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - expanding an entity column](media/odatapowerbi-expanddescendants.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - expanding an entity column](media/odatapowerbi-expanddescendants.png)
 
 2. Check all the fields and choose **OK**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - expanding an entity column](media/odatapowerbi-expanddescendants2.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - expanding an entity column](media/odatapowerbi-expanddescendants2.png)
 
 3. Table now contains rollup fields.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - expanding an entity column](media/odatapowerbi-expanddescendants3.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - expanding an entity column](media/odatapowerbi-expanddescendants3.png)
 
 ### Pivot Descendants.StateCategory column
 
@@ -211,8 +211,7 @@ The Descendants column contains a table with two fields: State and TotalStoryPoi
 1. Press **OK**.
    Power BI creates a column for every StateCategory value.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - expanding an entity column](media/odatapowerbi-expanddescendants4.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - expanding an entity column](media/odatapowerbi-expanddescendants4.png)
 
 ### Replace Nulls in the pivoted columns
 
@@ -250,8 +249,7 @@ Power BI shows you the fields you can report on.
 > [!NOTE]  
 > The example below assumes that no one renamed any columns.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Feature Progress - Fields](media/odatapowerbi-featureprogress-fields.png)
+> [!div class="mx-imgBorder"] > ![Sample - Feature Progress - Fields](media/odatapowerbi-featureprogress-fields.png)
 
 For a simple report, do the following steps:
 
@@ -265,8 +263,7 @@ For a simple report, do the following steps:
 
 The example report displays.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Feature Progress - Report](media/odatapowerbi-featureprogress-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Feature Progress - Report](media/odatapowerbi-featureprogress-report.png)
 
 [!INCLUDE [temp](includes/sample-multipleteams.md)]
 

@@ -12,8 +12,7 @@ ms.date: 04/06/2020
 
 1. Select **Connect to feed**:
 
-   > [!div class="mx-imgBorder"]
-   > ![Connect to feed button on the upper right of the page](../../media/connect-to-feed-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![Connect to feed button on the upper right of the page](../../media/connect-to-feed-azure-devops-newnav.png)
 
 1. Select **NuGet.exe** under the **NuGet** header.
 
@@ -27,8 +26,7 @@ ms.date: 04/06/2020
 
 1. To publish your package to your feed, run the command in the **Restore packages** section in an elevated PowerShell window. Don't forget to specify your local package path (for example: ..\HelloWorld\NuGetPackage\HelloWorld1.0.0.nupkg).
 
-   > [!div class="mx-imgBorder"]
-   > ![NuGet publish instructions in Connect to feed dialog box](../../media/nuget-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![NuGet publish instructions in Connect to feed dialog box](../../media/nuget-azure-devops-newnav.png)
 
 > [!NOTE]
 >

@@ -124,8 +124,7 @@ Choose the package from the **Packages** page in the **Build and Release** page 
 
    ::: moniker range=">= azure-devops-2019"
 
-   > [!div class="mx-imgBorder"]
-   > ![Connect to feed button in the upper-right of the page](../media/connect-to-feed-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![Connect to feed button in the upper-right of the page](../media/connect-to-feed-azure-devops-newnav.png)
 
    ::: moniker-end
 

@@ -40,8 +40,8 @@ The tasks that you specify in the plug-in for SharePoint Products are run only w
 
 ## Portal plug-in name and location
 
-The names of the file, the folder, and the plug-in for the default process templates are as follows:  
-  
+The names of the file, the folder, and the plug-in for the default process templates are as follows:
+
 **File name**: WssTasks.xml  
 **Folder name**: Windows SharePoint Services  
 **Plug-in name**: Microsoft.ProjectCreationWizard.Portal

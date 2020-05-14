@@ -16,8 +16,8 @@ ms.date: 09/08/2017
 
 You can customize a project's initial security configuration for activities that are performed by using Visual Studio Lab Management. The lab.xml plug-in file specifies the security permissions for lab management activities of all projects that are created with the same process template. It also specifies the task to upload the default template file for Lab Management, which is named LabDefaultTemplate.xaml. This file is uploaded to the database for the project.
 
-The names of the file, the folder, and the plug-in for the default process templates are as follows:  
-  
+The names of the file, the folder, and the plug-in for the default process templates are as follows:
+
 **File name**: Lab.xml  
 **Folder name**: Lab  
 **Plug-in name**: Microsoft.ProjectCreationWizard.Lab

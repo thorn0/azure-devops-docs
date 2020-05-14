@@ -26,8 +26,8 @@ By using the plug-in for version control, you can configure a project's initial 
 
 In the XML file, you specify one or more tasks and their dependencies. Generally, you need only one task to configure settings for version control. For an example of a task that specifies these settings, see the VersionControl.xml file that is defined for the default process templates.
 
-The names of the file, the folder, and the plug-in for the default process templates are as follows:  
-  
+The names of the file, the folder, and the plug-in for the default process templates are as follows:
+
 **File name**: VersionControl.xml  
 **Folder name**: Version Control  
 **Plug-in name**: Microsoft.ProjectCreationWizard.VersionControl

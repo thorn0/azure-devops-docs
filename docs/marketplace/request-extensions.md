@@ -102,8 +102,7 @@ To approve extensions, you must have [**edit collection-level information** perm
 
 3. Review and approve your requested extensions.
 
-   > [!div class="mx-imgBorder"]
-   > ![Extensions tab, requested extensions](media/get-tfs-extensions/connected/approve-request-tfs.png)
+   > [!div class="mx-imgBorder"] > ![Extensions tab, requested extensions](media/get-tfs-extensions/connected/approve-request-tfs.png)
 
    After you approve extension requests, the extensions are automatically installed.
 
@@ -123,8 +122,7 @@ To approve extensions, you must have [**edit collection-level information** perm
 
 3. Review and approve your requested extensions.
 
-   > [!div class="mx-imgBorder"]
-   > ![Extensions tab, requested extensions](media/get-tfs-extensions/connected/approve-request-tfs.png)
+   > [!div class="mx-imgBorder"] > ![Extensions tab, requested extensions](media/get-tfs-extensions/connected/approve-request-tfs.png)
 
    After you approve extension requests, the extensions are automatically installed.
 

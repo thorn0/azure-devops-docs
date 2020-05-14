@@ -279,95 +279,97 @@ Enter a description of 255 characters or less. You can always modify the title l
 [Assigned To](/azure/devops/boards/queries/query-by-workflow-changes)
 :::column-end:::
 :::column span="3":::
-Assign the work item to the team member responsible for performing the work. Depending on the context you are working in, the drop-down menu will list only team members or contributors to the project.  
- > [!NOTE]  
- > You can only assign work to a single user. If you need to assign work to more than one user, add a work item for each user and distinguish the work to be done by title and description. The Assigned To field only accepts user accounts that have been [added to a project or team](../../organizations/security/add-users-team-project.md).
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[State](/azure/devops/boards/queries/query-by-workflow-changes)
-:::column-end:::
-:::column span="3":::
-When the work item is created, the State defaults to the first state in the workflow. As work progresses, update it to reflect the current state.
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Reason](/azure/devops/boards/queries/query-by-workflow-changes)
-:::column-end:::
-:::column span="3":::
-Use the default first. Update it when you change state as need. Each State is associated with a default reason.
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Area](/azure/devops/organizations/settings/set-area-paths)
-:::column-end:::
-:::column span="3":::
-Choose the area path associated with the product or team, or leave blank until assigned during a planning meeting. To change the dropdown list of areas, see [Define area paths and assign to a team](../../organizations/settings/set-area-paths.md).
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Iteration](/azure/devops/organizations/settings/set-area-paths)
-:::column-end:::
-:::column span="3":::
-Choose the sprint or iteration in which the work is to be completed, or leave it blank and assign it later during a planning meeting. To change the drop-down list of iterations, see [Define iteration (sprint) paths and configure team iterations](../../organizations/settings/set-iteration-paths-sprints.md).
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Description](../queries/titles-ids-descriptions.md)
-:::column-end:::
-:::column span="3":::
-Provide enough detail to create shared understanding of scope and support estimation efforts. Focus on the user, what they want to accomplish, and why. Don't describe how to develop the product. Do provide sufficient details so that your team can write tasks and test cases to implement the item.
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Acceptance Criteria](../queries/titles-ids-descriptions.md)
-:::column-end:::
-:::column span="3":::
-Define what &quot;Done&quot; means by describing the criteria for the team to use to verify whether the PBI or the bug fix is fully implemented.</p>
-Before work begins on a PBI or bug, describe the [criteria for customer acceptance](../backlogs/best-practices-product-backlog.md#acceptance) as clearly as possible. Have conversations between the team and customers to determine the acceptance criteria. These criteria help ensure a common understanding within the team to meet customers' expectations. Also, this information provides the basis for acceptance testing.
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Impact Assessment](../work-items/guidance/cmmi/guidance-requirements-field-reference-cmmi.md) (CMMI only)
-:::column-end:::
-:::column span="3":::
-Describes the customer impact of not implementing the requirement. You might include details from the Kano model about whether this requirement is in the surprise, required, or obvious categories.
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Priority](../queries/planning-ranking-priorities.md)
-:::column-end:::
-:::column span="3":::
-A subjective rating of the issue or task it relates to the business. You can specify the following values:  
- - **1**: Product cannot ship without the successful resolution of the work item, and it should be addressed as soon as possible. - **2**: Product cannot ship without the successful resolution of the work item, but it does not need to be addressed immediately. - **3**: Resolution of the work item is optional based on resources, time, and risk. - **4**: Resolution of the work item is not required.
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Effort](../queries/query-numeric.md), [Story Points](../queries/query-numeric.md), [Size](../queries/query-numeric.md)
-:::column-end:::
-:::column span="3":::
-Provide a relative estimate of the amount of work required to complete a PBI. For user stories and requirements, you capture estimates in **Story Points** and **Size**. For product backlog items or issues (Basic process), you specify **Effort**.
-Most Agile methods recommend that you set estimates for backlog items based on relative size of work. Such methods include powers of 2 (1, 2, 4, 8) and the Fibonacci sequence (1, 2, 3, 5, 8, etc.). Use any numeric unit of measurement your team prefers.  
- The estimates you set for **Effort**, **Size**, or **Story Points** are used to calculate [velocity](../../report/dashboards/team-velocity.md) and [forecast sprints](../sprints/forecast.md).
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Business Value](../queries/query-numeric.md)
-:::column-end:::
-:::column span="3":::
-Specify a priority that captures the relative value of a PBI compared to other PBIs. The higher the number, the greater the business value.<br />Use this field when you want to capture a priority separate from the changeable backlog stack ranking.
-:::column-end:::
-:::row-end:::
+Assign the work item to the team member responsible for performing the work. Depending on the context you are working in, the drop-down menu will list only team members or contributors to the project.
+
+> [!NOTE]  
+> You can only assign work to a single user. If you need to assign work to more than one user, add a work item for each user and distinguish the work to be done by title and description. The Assigned To field only accepts user accounts that have been [added to a project or team](../../organizations/security/add-users-team-project.md).
+> :::column-end:::
+> :::row-end:::
+> :::row:::
+> :::column span="":::
+> [State](/azure/devops/boards/queries/query-by-workflow-changes)
+> :::column-end:::
+> :::column span="3":::
+> When the work item is created, the State defaults to the first state in the workflow. As work progresses, update it to reflect the current state.
+> :::column-end:::
+> :::row-end:::
+> :::row:::
+> :::column span="":::
+> [Reason](/azure/devops/boards/queries/query-by-workflow-changes)
+> :::column-end:::
+> :::column span="3":::
+> Use the default first. Update it when you change state as need. Each State is associated with a default reason.
+> :::column-end:::
+> :::row-end:::
+> :::row:::
+> :::column span="":::
+> [Area](/azure/devops/organizations/settings/set-area-paths)
+> :::column-end:::
+> :::column span="3":::
+> Choose the area path associated with the product or team, or leave blank until assigned during a planning meeting. To change the dropdown list of areas, see [Define area paths and assign to a team](../../organizations/settings/set-area-paths.md).
+> :::column-end:::
+> :::row-end:::
+> :::row:::
+> :::column span="":::
+> [Iteration](/azure/devops/organizations/settings/set-area-paths)
+> :::column-end:::
+> :::column span="3":::
+> Choose the sprint or iteration in which the work is to be completed, or leave it blank and assign it later during a planning meeting. To change the drop-down list of iterations, see [Define iteration (sprint) paths and configure team iterations](../../organizations/settings/set-iteration-paths-sprints.md).
+> :::column-end:::
+> :::row-end:::
+> :::row:::
+> :::column span="":::
+> [Description](../queries/titles-ids-descriptions.md)
+> :::column-end:::
+> :::column span="3":::
+> Provide enough detail to create shared understanding of scope and support estimation efforts. Focus on the user, what they want to accomplish, and why. Don't describe how to develop the product. Do provide sufficient details so that your team can write tasks and test cases to implement the item.
+> :::column-end:::
+> :::row-end:::
+> :::row:::
+> :::column span="":::
+> [Acceptance Criteria](../queries/titles-ids-descriptions.md)
+> :::column-end:::
+> :::column span="3":::
+> Define what &quot;Done&quot; means by describing the criteria for the team to use to verify whether the PBI or the bug fix is fully implemented.</p>
+> Before work begins on a PBI or bug, describe the [criteria for customer acceptance](../backlogs/best-practices-product-backlog.md#acceptance) as clearly as possible. Have conversations between the team and customers to determine the acceptance criteria. These criteria help ensure a common understanding within the team to meet customers' expectations. Also, this information provides the basis for acceptance testing.
+> :::column-end:::
+> :::row-end:::
+> :::row:::
+> :::column span="":::
+> [Impact Assessment](../work-items/guidance/cmmi/guidance-requirements-field-reference-cmmi.md) (CMMI only)
+> :::column-end:::
+> :::column span="3":::
+> Describes the customer impact of not implementing the requirement. You might include details from the Kano model about whether this requirement is in the surprise, required, or obvious categories.
+> :::column-end:::
+> :::row-end:::
+> :::row:::
+> :::column span="":::
+> [Priority](../queries/planning-ranking-priorities.md)
+> :::column-end:::
+> :::column span="3":::
+> A subjective rating of the issue or task it relates to the business. You can specify the following values:
+
+- **1**: Product cannot ship without the successful resolution of the work item, and it should be addressed as soon as possible. - **2**: Product cannot ship without the successful resolution of the work item, but it does not need to be addressed immediately. - **3**: Resolution of the work item is optional based on resources, time, and risk. - **4**: Resolution of the work item is not required.
+  :::column-end:::
+  :::row-end:::
+  :::row:::
+  :::column span="":::
+  [Effort](../queries/query-numeric.md), [Story Points](../queries/query-numeric.md), [Size](../queries/query-numeric.md)
+  :::column-end:::
+  :::column span="3":::
+  Provide a relative estimate of the amount of work required to complete a PBI. For user stories and requirements, you capture estimates in **Story Points** and **Size**. For product backlog items or issues (Basic process), you specify **Effort**.
+  Most Agile methods recommend that you set estimates for backlog items based on relative size of work. Such methods include powers of 2 (1, 2, 4, 8) and the Fibonacci sequence (1, 2, 3, 5, 8, etc.). Use any numeric unit of measurement your team prefers.  
+   The estimates you set for **Effort**, **Size**, or **Story Points** are used to calculate [velocity](../../report/dashboards/team-velocity.md) and [forecast sprints](../sprints/forecast.md).
+  :::column-end:::
+  :::row-end:::
+  :::row:::
+  :::column span="":::
+  [Business Value](../queries/query-numeric.md)
+  :::column-end:::
+  :::column span="3":::
+  Specify a priority that captures the relative value of a PBI compared to other PBIs. The higher the number, the greater the business value.<br />Use this field when you want to capture a priority separate from the changeable backlog stack ranking.
+  :::column-end:::
+  :::row-end:::
 
 ## Update status
 
@@ -578,52 +580,53 @@ In addition to the fields you can define for a backlog item&mdash;user story, is
 [Activity](../queries/query-numeric.md)
 :::column-end:::
 :::column span="3":::
-The type of activity that is required to perform a task.To learn more about how this field is used, see [Capacity planning](../sprints/set-capacity.md). Allowed values are:  
- - **Deployment** - **Design** - **Development** - **Documentation** - **Requirements** - **Testing**
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Discipline](../queries/query-numeric.md) (CMMI process)
-:::column-end:::
-:::column span="3":::
-The type of activity that is required to perform a task.To learn more about how this field is used, see [Capacity planning](../sprints/set-capacity.md). Allowed values are:  
- - **Analysis** - **Development** - **Test** - **User Education** - **User Experience**
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Original Estimate](../queries/query-numeric.md)
-:::column-end:::
-:::column span="3":::
-The amount of estimated work required to complete a task. Typically, this field doesn't change after it is assigned.
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Remaining Work](../queries/query-numeric.md)
-:::column-end:::
-:::column span="3":::
-The amount of work that remains to finish a task. You can specify work in hours or in days. As work progresses, update this field. It's used to calculate [capacity charts](../sprints/set-capacity.md) and the [sprint burndown chart](../../report/dashboards/configure-sprint-burndown.md).  
- If you divide a task into subtasks, specify Remaining Work for the subtasks only.
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Completed Work](../queries/query-numeric.md)
-:::column-end:::
-:::column span="3":::
-The amount of work spent implementing a task. Enter a value for this field when you complete the task.
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="":::
-[Task Type](../work-items/guidance/cmmi/guidance-requirements-field-reference-cmmi.md) (CMMI only)
-:::column-end:::
-:::column span="3":::
-Select the kind of task to implement from the allowed values:</p> - **Corrective Action** - **Mitigation Action** - **Planned**
-:::column-end:::
-:::row-end:::
+The type of activity that is required to perform a task.To learn more about how this field is used, see [Capacity planning](../sprints/set-capacity.md). Allowed values are:
+
+- **Deployment** - **Design** - **Development** - **Documentation** - **Requirements** - **Testing**
+  :::column-end:::
+  :::row-end:::
+  :::row:::
+  :::column span="":::
+  [Discipline](../queries/query-numeric.md) (CMMI process)
+  :::column-end:::
+  :::column span="3":::
+  The type of activity that is required to perform a task.To learn more about how this field is used, see [Capacity planning](../sprints/set-capacity.md). Allowed values are:
+- **Analysis** - **Development** - **Test** - **User Education** - **User Experience**
+  :::column-end:::
+  :::row-end:::
+  :::row:::
+  :::column span="":::
+  [Original Estimate](../queries/query-numeric.md)
+  :::column-end:::
+  :::column span="3":::
+  The amount of estimated work required to complete a task. Typically, this field doesn't change after it is assigned.
+  :::column-end:::
+  :::row-end:::
+  :::row:::
+  :::column span="":::
+  [Remaining Work](../queries/query-numeric.md)
+  :::column-end:::
+  :::column span="3":::
+  The amount of work that remains to finish a task. You can specify work in hours or in days. As work progresses, update this field. It's used to calculate [capacity charts](../sprints/set-capacity.md) and the [sprint burndown chart](../../report/dashboards/configure-sprint-burndown.md).  
+   If you divide a task into subtasks, specify Remaining Work for the subtasks only.
+  :::column-end:::
+  :::row-end:::
+  :::row:::
+  :::column span="":::
+  [Completed Work](../queries/query-numeric.md)
+  :::column-end:::
+  :::column span="3":::
+  The amount of work spent implementing a task. Enter a value for this field when you complete the task.
+  :::column-end:::
+  :::row-end:::
+  :::row:::
+  :::column span="":::
+  [Task Type](../work-items/guidance/cmmi/guidance-requirements-field-reference-cmmi.md) (CMMI only)
+  :::column-end:::
+  :::column span="3":::
+  Select the kind of task to implement from the allowed values:</p> - **Corrective Action** - **Mitigation Action** - **Planned**
+  :::column-end:::
+  :::row-end:::
 
 [!INCLUDE [temp](../includes/discussion-tip.md)]
 

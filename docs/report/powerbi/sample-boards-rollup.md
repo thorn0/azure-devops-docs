@@ -18,8 +18,7 @@ ms.date: 08/07/2019
 
 This article shows you how to generate the rollup count of User Stories and total Story Points for a given set of Features. An example is shown in the following image.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Boards - Rollup - Report](media/odatapowerbi-featurerollup-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Boards - Rollup - Report](media/odatapowerbi-featurerollup-report.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
 
@@ -101,18 +100,15 @@ The following table describes each part of the query.
 
 1. Choose the expand button, and select the columns to report on:
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - expanding an entity column](media/odatapowerbi-expanddescendants.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - expanding an entity column](media/odatapowerbi-expanddescendants.png)
 
 2. Check all the columns and choose **OK**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - expanding Descendants](media/odatapowerbi-expandrollup.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - expanding Descendants](media/odatapowerbi-expandrollup.png)
 
 3. The Descendants entity is flattened to the selected columns:
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - expanded Descendants](media/odatapowerbi-expandedrollup.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - expanded Descendants](media/odatapowerbi-expandedrollup.png)
 
 ### Replace null values in rollup fields
 
@@ -133,8 +129,7 @@ Power BI shows you the fields you can report on.
 > [!NOTE]  
 > The example below assumes that no one renamed any columns.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Boards - Rollup - Fields](media/odatapowerbi-featurerollup-fields.png)
+> [!div class="mx-imgBorder"] > ![Sample - Boards - Rollup - Fields](media/odatapowerbi-featurerollup-fields.png)
 
 For a simple report, do the following steps:
 
@@ -149,8 +144,7 @@ For a simple report, do the following steps:
 
 The example report displays:
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Boards - Rollup - Report](media/odatapowerbi-featurerollup-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Boards - Rollup - Report](media/odatapowerbi-featurerollup-report.png)
 
 [!INCLUDE [temp](includes/sample-multipleteams.md)]
 

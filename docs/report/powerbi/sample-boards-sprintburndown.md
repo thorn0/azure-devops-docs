@@ -18,8 +18,7 @@ ms.date: 08/07/2019
 
 This article shows you how to display the current sprint's burndown of User Stories. The following example shows a burndown of both a sum of Story Points and a count of User Stories.
 
-> [!div class="mx-imgBorder"]
-> ![sprint burndown by total story points and count of user stories](media/odatapowerbi-sprintburndown-report.png)
+> [!div class="mx-imgBorder"] > ![sprint burndown by total story points and count of user stories](media/odatapowerbi-sprintburndown-report.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
 
@@ -119,8 +118,7 @@ Power BI shows you the fields you can report on.
 > [!NOTE]  
 > The example below assumes that no one renamed any columns.
 
-> [!div class="mx-imgBorder"]
-> ![Power BI + OData - expanding an entity column](media/odatapowerbi-sprintburndown-fields.png)
+> [!div class="mx-imgBorder"] > ![Power BI + OData - expanding an entity column](media/odatapowerbi-sprintburndown-fields.png)
 
 For a simple report, do the following steps:
 
@@ -132,8 +130,7 @@ For a simple report, do the following steps:
 
 The example report, which displays burndown on both Story Points and Count of Stories.
 
-> [!div class="mx-imgBorder"]
-> ![sprint burndown by total story points and count of user stories](media/odatapowerbi-sprintburndown-report.png)
+> [!div class="mx-imgBorder"] > ![sprint burndown by total story points and count of user stories](media/odatapowerbi-sprintburndown-report.png)
 
 [!INCLUDE [temp](includes/sample-multipleteams.md)]
 

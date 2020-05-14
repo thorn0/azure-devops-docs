@@ -59,8 +59,8 @@ The following table describes each plug-in file and whether or not it is support
 (![supported](../../media/icons/checkmark.png)- Supported; ![not supported](../../media/icons/delete_icon.png) - Not supported)
 
 <!---
-> [!IMPORTANT]  
-> Starting with TFS 2018 and later versions, you will only be able to create a project creation from the web portal. No custom plug-ins are supported.  
+> [!IMPORTANT]
+> Starting with TFS 2018 and later versions, you will only be able to create a project creation from the web portal. No custom plug-ins are supported.
 -->
 
 <table>

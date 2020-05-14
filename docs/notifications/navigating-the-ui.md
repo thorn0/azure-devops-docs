@@ -64,11 +64,9 @@ https://dev.azure.com/{organization}/usersSettings/notifications
 https://dev.azure.com/{organization}/_notifications
 ```
 
-> [!div class="mx-imgBorder"]
-> ![Navigate to personal notifications page](media/nav-personal-notifications-hub-newnav.png)
+> [!div class="mx-imgBorder"] > ![Navigate to personal notifications page](media/nav-personal-notifications-hub-newnav.png)
 
-> [!div class="mx-imgBorder"]
-> ![View personal notifications page](media/view-personal-notification-hub-newnav.png)
+> [!div class="mx-imgBorder"] > ![View personal notifications page](media/view-personal-notification-hub-newnav.png)
 
 ::: moniker-end
 
@@ -78,8 +76,7 @@ https://dev.azure.com/{organization}/_notifications
 https://dev.azure.com/{organization}/_notifications
 ```
 
-> [!div class="mx-imgBorder"]
-> ![Navigate to personal notifications page](media/nav-personal-notifications-hub.png)
+> [!div class="mx-imgBorder"] > ![Navigate to personal notifications page](media/nav-personal-notifications-hub.png)
 
 ::: moniker-end
 
@@ -104,11 +101,9 @@ https://dev.azure.com/{organization}/{project}/_settings/notifications
 https://dev.azure.com/{organization}/{project}/_admin/_notifications
 ```
 
-> [!div class="mx-imgBorder"]
-> ![Navigate to team notifications page](media/nav-team-notifications-hub.png)
+> [!div class="mx-imgBorder"] > ![Navigate to team notifications page](media/nav-team-notifications-hub.png)
 
-> [!div class="mx-imgBorder"]
-> ![View team level notifications page](media/view-team-notification-hub.png)
+> [!div class="mx-imgBorder"] > ![View team level notifications page](media/view-team-notification-hub.png)
 
 ::: moniker-end
 
@@ -134,11 +129,9 @@ https://dev.azure.com/{organization}/_settings/notifications
 https://dev.azure.com/{organization}/_admin/_notifications
 ```
 
-> [!div class="mx-imgBorder"]
-> ![Navigate to organization notifications page](media/nav-organization-notifications-hub.png)
+> [!div class="mx-imgBorder"] > ![Navigate to organization notifications page](media/nav-organization-notifications-hub.png)
 
-> [!div class="mx-imgBorder"]
-> ![View organization level notifications page](media/view-organization-notification-hub.png)
+> [!div class="mx-imgBorder"] > ![View organization level notifications page](media/view-organization-notification-hub.png)
 
 ::: moniker-end
 

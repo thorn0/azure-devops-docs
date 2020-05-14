@@ -147,10 +147,7 @@ In this step, you will create a bare repository and make its default branch matc
 
 3.  Rename "trunk" branch to "master"
     Your main development branch will be named "trunk", which matches the name it was in Subversion. You'll want to rename it to Git's standard "master" branch using:
-        ```
-        cd c:\new-bare.git
-        git branch -m trunk master
-        ```
+    `cd c:\new-bare.git git branch -m trunk master`
 4.  Clean up branches and tags
     git-svn makes all of Subversions tags into very-short branches in Git of the form "tags/name". You'll want to convert all those branches into actual Git tags or delete them.
 

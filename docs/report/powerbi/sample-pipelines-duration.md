@@ -22,8 +22,7 @@ This article shows you how to get pipeline duration, or the time taken to run a 
 
 An example of the pipeline duration report is shown in the following image.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Pipelines duration - Report](media/odatapowerbi-pipelines/duration-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Pipelines duration - Report](media/odatapowerbi-pipelines/duration-report.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
 
@@ -131,8 +130,7 @@ The query doesn't return all the columns in the format in which you can directly
 
 1. Change the type of columns **Duration50thPercentileInSeconds, Duration80thPercentileInSeconds** and **Duration95thPercentileInSeconds** to **Decimal Number**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - change column type](media/odatapowerbi-pipelines/duration-changecolumntype1.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - change column type](media/odatapowerbi-pipelines/duration-changecolumntype1.png)
 
 ### Rename fields and query
 
@@ -140,18 +138,15 @@ When finished, you may choose to rename columns.
 
 1. Right-click a column header and select **Rename...**
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI Rename Columns](media/odatapowerbi-pipelines/duration-renamerightclick.png)
+   > [!div class="mx-imgBorder"] > ![Power BI Rename Columns](media/odatapowerbi-pipelines/duration-renamerightclick.png)
 
 1. You also may want to rename the query from the default **Query1**, to something more meaningful.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI Rename Query](media/odatapowerbi-pipelines/renamequery.png)
+   > [!div class="mx-imgBorder"] > ![Power BI Rename Query](media/odatapowerbi-pipelines/renamequery.png)
 
 1. Once done, choose **Close & Apply** to save the query and return to Power BI.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI Close & Apply](media/odatapowerbi-pipelines/closeandapply.png)
+   > [!div class="mx-imgBorder"] > ![Power BI Close & Apply](media/odatapowerbi-pipelines/closeandapply.png)
 
 ## Create the report
 
@@ -159,8 +154,7 @@ Power BI shows you the fields you can report on.
 
 > [!NOTE]  
 > The example below assumes that no one renamed any columns.
-> [!div class="mx-imgBorder"]
-> ![Sample - Pipelines Duration - Fields](media/odatapowerbi-pipelines/duration-fields.png)
+> [!div class="mx-imgBorder"] > ![Sample - Pipelines Duration - Fields](media/odatapowerbi-pipelines/duration-fields.png)
 
 For a simple report, do the following steps:
 
@@ -174,8 +168,7 @@ For a simple report, do the following steps:
 
 Your report should appear similar to the following image.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Pipelines Duration - Report](media/odatapowerbi-pipelines/duration-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Pipelines Duration - Report](media/odatapowerbi-pipelines/duration-report.png)
 
 ## Additional queries
 

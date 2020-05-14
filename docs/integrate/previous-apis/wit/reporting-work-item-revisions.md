@@ -20,9 +20,7 @@ This API provides access to all work item revisions in your project or collectio
 
 The response of the API contains a batch of work item revisions ("values"), a URL to the next batch of work item revisions ("nextLink") and a boolean that tells you whether you have read all currently available work item revisions ("isLastBatch").
 
-> The results of this API are impacted when using Move Work Item and/or Change Work Item Type features in conjunction with "project" in the url and/or "types" in the query string.<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;- Project-scoped requests will only return work item revisions from the specified project.<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;- Types-scoped requests will only return work item revisions of the specified type(s).
+> The results of this API are impacted when using Move Work Item and/or Change Work Item Type features in conjunction with "project" in the url and/or "types" in the query string.<br/> > &nbsp;&nbsp;&nbsp;&nbsp;- Project-scoped requests will only return work item revisions from the specified project.<br/> > &nbsp;&nbsp;&nbsp;&nbsp;- Types-scoped requests will only return work item revisions of the specified type(s).
 
 The workflow for building your warehouse is as follows:
 

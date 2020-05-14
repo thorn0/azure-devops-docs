@@ -23,8 +23,8 @@ You can customize a project's initial build permissions that are used by Team Fo
 > Instead, default permissions are set for project-level and collection-level  
 >  security groups for [build pipelines (object-level)](../../organizations/security/permissions.md#build).
 
-The names of the file, the folder, and the plug-in for the default process templates are as follows:  
-  
+The names of the file, the folder, and the plug-in for the default process templates are as follows:
+
 **File name**: Build.xml  
 **Folder name**: Build
 **Plug-in name**: Microsoft.ProjectCreationWizard.Build

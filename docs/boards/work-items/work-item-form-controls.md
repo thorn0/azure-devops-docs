@@ -26,8 +26,7 @@ As the following image shows, each work item form comes with a number of control
 ::: moniker range="azure-devops"
 
 > [!NOTE]  
-> Depending on the process chosen when the project was created&mdash;
-> [Agile](./guidance/agile-process.md), [Basic](../get-started/plan-track-work.md), [Scrum](./guidance/scrum-process.md), or [CMMI](./guidance/cmmi-process.md)&mdash;the types of work items you can create will differ. For example, backlog items may be called user stories (Agile), product backlog items (Scrum), or requirements (CMMI). All three are similar: they describe the customer value to deliver and the work to be performed.
+> Depending on the process chosen when the project was created&mdash; > [Agile](./guidance/agile-process.md), [Basic](../get-started/plan-track-work.md), [Scrum](./guidance/scrum-process.md), or [CMMI](./guidance/cmmi-process.md)&mdash;the types of work items you can create will differ. For example, backlog items may be called user stories (Agile), product backlog items (Scrum), or requirements (CMMI). All three are similar: they describe the customer value to deliver and the work to be performed.
 >
 > For an overview of these processes, see [Choose a process](./guidance/choose-process.md).
 
@@ -36,8 +35,7 @@ As the following image shows, each work item form comes with a number of control
 ::: moniker range="<= azure-devops-2019"
 
 > [!NOTE]  
-> Depending on the process chosen when the project was created&mdash;
-> [Agile](./guidance/agile-process.md), [Scrum](./guidance/scrum-process.md), or [CMMI](./guidance/cmmi-process.md)&mdash;the types of work items you can create will differ. For example, backlog items may be called user stories (Agile), product backlog items (Scrum), or requirements (CMMI). All three are similar: they describe the customer value to deliver and the work to be performed.
+> Depending on the process chosen when the project was created&mdash; > [Agile](./guidance/agile-process.md), [Scrum](./guidance/scrum-process.md), or [CMMI](./guidance/cmmi-process.md)&mdash;the types of work items you can create will differ. For example, backlog items may be called user stories (Agile), product backlog items (Scrum), or requirements (CMMI). All three are similar: they describe the customer value to deliver and the work to be performed.
 >
 > For an overview of the three default processes, see [Choose a process](./guidance/choose-process.md).
 

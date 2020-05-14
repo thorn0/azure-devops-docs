@@ -18,8 +18,7 @@ ms.date: 08/07/2019
 
 This article shows you how to list a given set of User Stories and their linked User Stories. An example is shown in the following image.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Direct Links - Report](media/odatapowerbi-directlinks-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Direct Links - Report](media/odatapowerbi-directlinks-report.png)
 
 Other sample queries include listing bugs with a Duplicate link to another bug, and listing bugs which don't contain a Duplicate link to another bug.
 
@@ -106,28 +105,23 @@ The following table describes each part of the query.
 
 1. Click the expand button on the Links column.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - expanding a Links column](media/odatapowerbi-expandlinks.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - expanding a Links column](media/odatapowerbi-expandlinks.png)
 
 1. Select all the fields to flatten.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - expanding a Links column](media/odatapowerbi-expandlinks2.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - expanding a Links column](media/odatapowerbi-expandlinks2.png)
 
 1. Click the expand button on the Links.TargetWorkItem column.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - expanding a Links column](media/odatapowerbi-expandlinks3.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - expanding a Links column](media/odatapowerbi-expandlinks3.png)
 
 1. Select the fields of the Target Work Item to flatten.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - expanding a Links column](media/odatapowerbi-expandlinks4.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - expanding a Links column](media/odatapowerbi-expandlinks4.png)
 
    The Table now contains flattened Link and Target Work Item field(s).
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - expanding a Links column](media/odatapowerbi-expandlinks5.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - expanding a Links column](media/odatapowerbi-expandlinks5.png)
 
 > [!NOTE]
 > If the link represents a one-to-many or many-to-many relationship, then multiple links will
@@ -146,8 +140,7 @@ Power BI shows you the fields you can report on.
 > [!NOTE]  
 > The example below assumes that no one renamed any columns.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Direct Links - Fields](media/odatapowerbi-directlinks-fields.png)
+> [!div class="mx-imgBorder"] > ![Sample - Direct Links - Fields](media/odatapowerbi-directlinks-fields.png)
 
 For a simple report, do the following steps:
 
@@ -166,8 +159,7 @@ The resulting example report is shown in the following image.
 > [!NOTE]
 > Note how work item 233464 is represented by two rows, one for each linked work item.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Direct Links - Report](media/odatapowerbi-directlinks-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Direct Links - Report](media/odatapowerbi-directlinks-report.png)
 
 [!INCLUDE [temp](includes/sample-multipleteams.md)]
 

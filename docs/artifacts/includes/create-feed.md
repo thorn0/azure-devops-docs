@@ -14,13 +14,11 @@ You consume and publish packages through a particular feed.
 
 1. Go to **Azure Artifacts**:
 
-   > [!div class="mx-imgBorder"]
-   > ![Go to Azure Artifacts](../media/goto-feed-hub-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![Go to Azure Artifacts](../media/goto-feed-hub-azure-devops-newnav.png)
 
 2. Select **+ New feed**:
 
-   > [!div class="mx-imgBorder"]
-   > ![New feed button](../media/new-feed-button-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![New feed button](../media/new-feed-button-azure-devops-newnav.png)
 
 3. In the dialog box:
 
@@ -34,8 +32,7 @@ You consume and publish packages through a particular feed.
    > [!NOTE]  
    > There are some important things to consider when publishing packages that involve upstream sources. Check out the documentation on [overriding a package from an upstream source](../concepts/upstream-sources.md#overriding-a-package-from-an-upstream-source) for more information.
 
-   > [!div class="mx-imgBorder"]
-   > ![New feed dialog box](../media/new-feed-dialog.png)
+   > [!div class="mx-imgBorder"] > ![New feed dialog box](../media/new-feed-dialog.png)
 
 ::: moniker-end
 

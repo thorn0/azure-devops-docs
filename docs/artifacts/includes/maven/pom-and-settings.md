@@ -12,8 +12,7 @@ To talk to Azure Artifact feeds, you'll need a token on your local machine that 
 
 1. From the **Azure Artifacts** page, select **Connect to Feed**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Connect to feed button on the upper right of the page](../../media/connect-to-feed-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![Connect to feed button on the upper right of the page](../../media/connect-to-feed-azure-devops-newnav.png)
 
    ::: moniker-end
 
@@ -47,7 +46,6 @@ To talk to Azure Artifact feeds, you'll need a token on your local machine that 
 
 5. Follow the **Project setup** section including generating a personal access token.
 
-   > [!div class="mx-imgBorder"]
-   > ![Set up Maven authentication](../../media/maven-azure-devops-newnav.png)
+   > [!div class="mx-imgBorder"] > ![Set up Maven authentication](../../media/maven-azure-devops-newnav.png)
 
 You can find more information about the settings.xml file in the [settings.xml reference](https://maven.apache.org/settings.html).

@@ -39,8 +39,7 @@ Select **Permissions**.
 
 ::: moniker range=">= azure-devops-2019"
 
-> [!div class="mx-imgBorder"]
-> ![Editing a feed's permissions](media/editfeeddialog-azure-devops-newnav.png)
+> [!div class="mx-imgBorder"] > ![Editing a feed's permissions](media/editfeeddialog-azure-devops-newnav.png)
 
 ::: moniker-end
 

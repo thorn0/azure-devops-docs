@@ -450,8 +450,7 @@ Use the `witadmin destroywi` command to permanently remove work items from the d
 
    `cd %programfiles(x86)%\Microsoft Visual Studio 14.0\Common7\IDE`
 
-   > [!NOTE]
-   > **Required permissions:** For TFS 2015.2 or later versions, you must have [Permanently delete work items permission set to Allow](../../organizations/security/set-permissions-access-work-tracking.md#move-delete-permissions). For TFS 2015.1 or earlier versions, you must be a member of the Project Administrators group of have Edit project-level information permissions set to Allow.
+   > [!NOTE] > **Required permissions:** For TFS 2015.2 or later versions, you must have [Permanently delete work items permission set to Allow](../../organizations/security/set-permissions-access-work-tracking.md#move-delete-permissions). For TFS 2015.1 or earlier versions, you must be a member of the Project Administrators group of have Edit project-level information permissions set to Allow.
 
    On a 32-bit edition of Windows, replace %programfiles(x86)% with %programfiles%.
 

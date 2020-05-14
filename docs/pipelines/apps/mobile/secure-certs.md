@@ -183,9 +183,9 @@ Follow these steps:
 
    1. Open a terminal or command prompt and go to where your keystore is located.
    2. Type the following:
-      ````
+      ```
       openssl des3 -in release.keystore -out release.keystore.enc
-      ````
+      ```
    3. Enter a passphrase to encrypt the certificate when prompted and note this as you will use it later.
 
 3. Next, add the encrypted keystore to source control. This is secure particularly if you are using a private repository since a malicious user would need access to the repository, the encryption passphrase, the keystore password, and the alias password to be able to use your information without permission.

@@ -24,10 +24,10 @@ The following image shows how an information message is displayed. Users can can
 
 You can only manage banners using the Azure DevOps Command Line Interface (CLI), [`az devops admin banner commands`](/cli/azure/ext/azure-devops/devops/admin/banner). To get started, see [Get started with Azure DevOps CLI](../../cli/index.md).
 
-<!--- QUESTIONS 
-Is there a limit to the message text string? 
-Is there any way to show multiple banners?  
-Could not update the expiration date to a null value 
+<!--- QUESTIONS
+Is there a limit to the message text string?
+Is there any way to show multiple banners?
+Could not update the expiration date to a null value
 -->
 
 ## Prerequisites

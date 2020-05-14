@@ -53,8 +53,7 @@ Follow the steps below to get started using the Azure DevOps Power BI Data Conne
 
     You can either choose **Get Data** button in the splash screen that opens up when you launch _Power BI._
 
-    > [!div class="mx-imgBorder"]
-    > ![Power BI desktop splash screen, Get data button](media/data-connector/get-data-splash-screen.png)
+    > [!div class="mx-imgBorder"] > ![Power BI desktop splash screen, Get data button](media/data-connector/get-data-splash-screen.png)
 
     Or, you can find a similar button in the ribbon in the **Home** section.
 
@@ -99,8 +98,7 @@ Choose between the following authentication options:
 
     You can either choose **Get Data** button in the splash screen that opens up when you launch _Power BI._
 
-    > [!div class="mx-imgBorder"]
-    > ![Power BI desktop splash screen, Get data button](media/data-connector/get-data-splash-screen.png)
+    > [!div class="mx-imgBorder"] > ![Power BI desktop splash screen, Get data button](media/data-connector/get-data-splash-screen.png)
 
     Or, you can find a similar button in the ribbon in the **Home** section.
 
@@ -208,8 +206,7 @@ This error typically occurs when your project has a large number of work items. 
 
 **A:** You can encounter this error if you try to access a project to which you don't have permissions. To get access, see [Set permissions to access Analytics and Analytics views](analytics-security.md).
 
-> [!div class="mx-imgBorder"]
-> ![The user was not authorized.](media/AccessDeniedError.png)
+> [!div class="mx-imgBorder"] > ![The user was not authorized.](media/AccessDeniedError.png)
 
 <a id="AnalyticsAccessCheckException"></a>
 

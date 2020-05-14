@@ -58,12 +58,12 @@ You'll first export your work tracking definition files, update them, and then i
 
 - If you aren't a member of the Project Administrator or Project Collection Administrator's group, [get added](../organizations/security/set-project-collection-level-permissions.md).
 - Update your project to [enable the latest features](configure-features-after-upgrade.md)
-- [Export the following objects from your project](#import-export): - WIT you want to add to backlogs and boards (if you haven't created it, [do that now](customize-work.md)) - [Categories definition](xml/apply-rule-work-item-field.md#apply-ignore)  
-   - ProcessConfiguration
-- If you're new to customizing work tracking objects, familiarize yourself with the following resources:  
-   - [Add or modify a field](add-modify-field.md)  
-   - [Add or modify a work item type](add-modify-wit.md)  
-   - [ProcessConfiguration XML reference](xml/process-configuration-xml-element.md).
+- [Export the following objects from your project](#import-export): - WIT you want to add to backlogs and boards (if you haven't created it, [do that now](customize-work.md)) - [Categories definition](xml/apply-rule-work-item-field.md#apply-ignore)
+  - ProcessConfiguration
+- If you're new to customizing work tracking objects, familiarize yourself with the following resources:
+  - [Add or modify a field](add-modify-field.md)
+  - [Add or modify a work item type](add-modify-wit.md)
+  - [ProcessConfiguration XML reference](xml/process-configuration-xml-element.md).
 
 <a id="wits-as-requirements"> </a>
 

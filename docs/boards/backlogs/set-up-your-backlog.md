@@ -28,10 +28,10 @@ The first thing you need to understand is that your product **Backlog** and **Bo
 
 ::: moniker range=">= azure-devops-2019"
 
-- Work item type belongs to the Requirements category. The types differ depending on the process selected for your project:  
-   - [Basic](../get-started/plan-track-work.md) : Issue, Backlog name=<strong>Issues</strong>  
-   - [Agile](../work-items/guidance/agile-process.md): User Story, Backlog name=<strong>Stories</strong>  
-   - [Scrum](../work-items/guidance/scrum-process.md): Product Backlog Item, Backlog name=<strong>Backlog items</strong> - [CMMI](../work-items/guidance/cmmi-process.md): Requirement, Backlog name=<strong>Requirements</strong>
+- Work item type belongs to the Requirements category. The types differ depending on the process selected for your project:
+  - [Basic](../get-started/plan-track-work.md) : Issue, Backlog name=<strong>Issues</strong>
+  - [Agile](../work-items/guidance/agile-process.md): User Story, Backlog name=<strong>Stories</strong>
+  - [Scrum](../work-items/guidance/scrum-process.md): Product Backlog Item, Backlog name=<strong>Backlog items</strong> - [CMMI](../work-items/guidance/cmmi-process.md): Requirement, Backlog name=<strong>Requirements</strong>
 - Work item <strong>Area Path</strong> matches one of the selected team's Area Paths
 - Work item <strong>Iteration Path</strong> is under the team's Default Iteration Path
 
@@ -41,8 +41,8 @@ The first thing you need to understand is that your product **Backlog** and **Bo
 
 ::: moniker range="<= tfs-2018"
 
-- Work item type belongs to the Requirements category. The types differ depending on the process selected for your project: - [Agile](../work-items/guidance/agile-process.md): User Story, Backlog name=<strong>Stories</strong>  
-   - [Scrum](../work-items/guidance/scrum-process.md): Product Backlog Item, Backlog name=<strong>Backlog items</strong> - [CMMI](../work-items/guidance/cmmi-process.md): Requirement, Backlog name=<strong>Requirements</strong>
+- Work item type belongs to the Requirements category. The types differ depending on the process selected for your project: - [Agile](../work-items/guidance/agile-process.md): User Story, Backlog name=<strong>Stories</strong>
+  - [Scrum](../work-items/guidance/scrum-process.md): Product Backlog Item, Backlog name=<strong>Backlog items</strong> - [CMMI](../work-items/guidance/cmmi-process.md): Requirement, Backlog name=<strong>Requirements</strong>
 - Work item <strong>Area Path</strong> matches one of the selected team's Area Paths
 - Work item <strong>Iteration Path</strong> is under the team's Default Iteration Path
   ::: moniker-end

@@ -22,8 +22,7 @@ This report builds on the [Requirements tracking report](sample-stories-overview
 
 An example is shown in the following image.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Stories Overview Rollup Report](media/odatapowerbi-storiesoverview-rollup.png)
+> [!div class="mx-imgBorder"] > ![Sample - Stories Overview Rollup Report](media/odatapowerbi-storiesoverview-rollup.png)
 
 [!INCLUDE [stories-overview-info](includes/sample-stories-overview-info.md)]
 
@@ -245,13 +244,11 @@ To create the report, perform the following steps:
 1. Create a Power BI visualization **Table**.
 1. Add the columns you are interested in from the three Power BI queries.
 1. Select **Sum** as aggregation for additive columns like **Passed tests** etc.
-   > [!div class="mx-imgBorder"]
-   > ![Power BI select Sum as aggregation](/azure/devops/report/powerbi/media/powerbi-sum-aggregation.png)
+   > [!div class="mx-imgBorder"] > ![Power BI select Sum as aggregation](/azure/devops/report/powerbi/media/powerbi-sum-aggregation.png)
 
 Here, **Authentication scenarios** is a parent feature of two User Stories.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Stories Overview Rollup Report](media/odatapowerbi-storiesoverview-rollup.png)
+> [!div class="mx-imgBorder"] > ![Sample - Stories Overview Rollup Report](media/odatapowerbi-storiesoverview-rollup.png)
 
 ## Related articles
 

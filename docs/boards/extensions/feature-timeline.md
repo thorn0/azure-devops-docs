@@ -43,9 +43,9 @@ The Feature Timeline is designed to display features and the progress made to th
 To gain the most from the Feature Timeline view, make the following definitions:
 
 - Define teams and area paths to support the rollup of the team's work into features and epics.
-- Define sprints with dates for the project. Select sprints for the team.  
-   > [!NOTE]  
-   > Make sure you assign work items to a flat set of sprints. Assigning features to one hierarchy of sprints and child items to another won't display correctly in the Feature Timeline view.
+- Define sprints with dates for the project. Select sprints for the team.
+  > [!NOTE]  
+  > Make sure you assign work items to a flat set of sprints. Assigning features to one hierarchy of sprints and child items to another won't display correctly in the Feature Timeline view.
 - For work to be performed in some future iteration, you can leave the dates unset and it will appear as the last sprint in the roadmap.
 - Make sure the team is subscribed to the sprints of interest.
 - Define features and child work items. If no child work items are defined, then assign the feature to a sprint.
@@ -113,9 +113,9 @@ Here we open Boards.
    > ![Select another team](../sprints/media/assign-items-sprint/team-selector-backlogs-standard.png)
 
    Your Kanban board appears.
-     
-    > [!div class="mx-imgBorder"]  
-    > ![Kanban board, Agile template](../boards/media/kanban-basics-intro.png)
+
+   > [!div class="mx-imgBorder"]  
+   > ![Kanban board, Agile template](../boards/media/kanban-basics-intro.png)
 
 ::: moniker-end
 

@@ -370,6 +370,6 @@ You will need to perform the following steps:
     If TWA is already open, then refresh your browser to refresh the cache.
 
 2.  Verify that the task board columns now display **New**, **Active**, and **Closed**.
-         ![Agile task board with updated workflow](media/alm_vrf_taskboard_agile_v6.png "ALM_VRF_TaskBoard_Agile_V6")
+    ![Agile task board with updated workflow](media/alm_vrf_taskboard_agile_v6.png "ALM_VRF_TaskBoard_Agile_V6")
     Task board for an Agile project with the updated workflow states
-         To learn more about using the task board, see [Sprint planning](../../boards/sprints//assign-work-sprint.md).
+    To learn more about using the task board, see [Sprint planning](../../boards/sprints//assign-work-sprint.md).

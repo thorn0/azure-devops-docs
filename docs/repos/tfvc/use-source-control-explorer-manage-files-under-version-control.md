@@ -47,7 +47,7 @@ You can also use the command prompt to manage your files in TFVC. See [Use Team 
 ### Q: How do I change the local path?
 
 ![Editing workspaces from Source Control Explorer](media/use-source-control-explorer-manage-files-under-version-control/IC698934.png)
-  
+
 See [Create and work with workspaces](create-work-workspaces.md)
 
 ### Q: How do I toggle the folders pane?

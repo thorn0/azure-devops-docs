@@ -353,7 +353,7 @@ Displays the list of work items currently assigned to the currently logged in us
 
 ### Burndown chart
 
-<a id="burndown-analytics-widget"></a>  
+<a id="burndown-analytics-widget"></a>
 
 ![Burndown chart widget](media/widget-burndown-chart.png)
 

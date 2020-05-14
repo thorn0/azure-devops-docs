@@ -105,7 +105,7 @@ On a 64-bit edition of Windows, replace **%programfiles%** with **%programfiles(
 
     - Agile
     - CMMI
-    - Scrum  
+    - Scrum
 
       To overwrite reports that were previously uploaded, specify the **/force** option.
 

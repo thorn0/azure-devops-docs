@@ -22,8 +22,7 @@ When multiple testers are executing test cases, it may be possible that few have
 
 The report generated is similar to following image.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Tester by Outcome matrix - Report](media/odatapowerbi-testerbyoutcome.png)
+> [!div class="mx-imgBorder"] > ![Sample - Tester by Outcome matrix - Report](media/odatapowerbi-testerbyoutcome.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
 
@@ -97,23 +96,19 @@ When finished, you may choose to rename columns.
 
    - Choose the expand button.
 
-     > [!div class="mx-imgBorder"]
-     > ![Power BI Expand Tester](media/powerbi-expand-tester.png)
+     > [!div class="mx-imgBorder"] > ![Power BI Expand Tester](media/powerbi-expand-tester.png)
 
    - Select the fields to flatten.
 
-     > [!div class="mx-imgBorder"]
-     > ![Power BI select fields to flatten](media/powerbi-tester-flatten.png)
+     > [!div class="mx-imgBorder"] > ![Power BI select fields to flatten](media/powerbi-tester-flatten.png)
 
    - The table now contains entity field of <code>Tester.UserName</code>.
 
-     > [!div class="mx-imgBorder"]
-     > ![Power BI expanded tester](media/powerbi-expanded-tester.png)
+     > [!div class="mx-imgBorder"] > ![Power BI expanded tester](media/powerbi-expanded-tester.png)
 
 1. Right-click a column header and select **Rename...**
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI Rename Columns](media/powerbi-rename-columns.png)
+   > [!div class="mx-imgBorder"] > ![Power BI Rename Columns](media/powerbi-rename-columns.png)
 
 1. Change the type of count columns to **Whole Number** and percentage fields to **Decimal Number**.
 
@@ -121,13 +116,11 @@ When finished, you may choose to rename columns.
 
 1. You also may want to rename the query from the default **Query1**, to something more meaningful.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI Rename Query](media/powerbi-rename-query.png)
+   > [!div class="mx-imgBorder"] > ![Power BI Rename Query](media/powerbi-rename-query.png)
 
 1. Once done, choose **Close & Apply** to save the query and return to Power BI.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI Close & Apply](media/powerbi-close-apply.png)
+   > [!div class="mx-imgBorder"] > ![Power BI Close & Apply](media/powerbi-close-apply.png)
 
 ## Create the report
 
@@ -143,13 +136,11 @@ To create the report, do the following steps:
 1. Add the field **LastResultOutcome** to **Columns**.
 1. Add the field **Count** to **Values**.
 1. Select **Sum** as aggregation for **Count**.
-   > [!div class="mx-imgBorder"]
-   > ![Power BI select Sum as aggregation](media/powerbi-sum-aggregation.png)
+   > [!div class="mx-imgBorder"] > ![Power BI select Sum as aggregation](media/powerbi-sum-aggregation.png)
 
 Your report should look similar to the following image.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Tester by Outcome matrix - Report](media/odatapowerbi-testerbyoutcome.png)
+> [!div class="mx-imgBorder"] > ![Sample - Tester by Outcome matrix - Report](media/odatapowerbi-testerbyoutcome.png)
 
 ## Full list of sample reports for Test Plans
 

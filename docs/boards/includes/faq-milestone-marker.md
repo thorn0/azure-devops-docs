@@ -7,8 +7,7 @@ ms.topic: include
 ms.date: 02/21/2020
 ---
 
-<a id="milestone" /> 
-
+<a id="milestone" />
 
 ### Q: How to mark a task or work item as a milestone task?
 

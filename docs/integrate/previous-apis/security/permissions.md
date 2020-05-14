@@ -33,7 +33,7 @@ GET https://{instance}/_apis/permissions/{securitynamespace}/{permissions}/?api-
 | :-------- | :--- | :------ | :---- |
 
 
-| URL   
+| URL  
 | instance | string | | TFS server name ({server:port}).
 | securitynamespace | guid | | ID of the security namespace.
 | permissions | int | | The permission bits to demand.
@@ -82,7 +82,7 @@ GET https://{instance}/_apis/permissions/{securitynamespace}/{permissions}/?api-
 | :-------- | :--- | :------ | :---- |
 
 
-| URL   
+| URL  
 | instance | string | | TFS server name ({server:port}).
 | securitynamespace | guid | | ID of the security namespace.
 | permissions | int | | The permission bits to demand.
@@ -119,7 +119,7 @@ POST https://{instance}/_apis/security/permissionevaluationbatch/?api-version={v
 | :-------- | :--- | :------ | :---- |
 
 
-| URL   
+| URL  
 | instance | string | | TFS server name ({server:port}).
 | Query
 | api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use. Works with Version 3.0 and above.
@@ -207,7 +207,7 @@ DELETE https://{instance}/_apis/permissions/{securitynamespace}/{permissions}/?t
 | :-------- | :--- | :------ | :---- |
 
 
-| URL   
+| URL  
 | instance | string | | TFS server name ({server:port}).
 | securitynamespace | guid | | ID of the security namespace.
 | permissions | int | | The permission bits to remove from the ACE's allow and deny bitmasks.

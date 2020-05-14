@@ -250,7 +250,7 @@ Keep your local files and tokenized files synchronized.
 filter on the **Configuration Variables** tab.
 
 ![Component, Configuration Variables tab](media/trigger-release-08.png)
-  
+
 The deployment agent you specified for the component uses pattern matching to
 scan the set of files that need tokens replaced with variables. Separate two
 or more file extensions using a semi-colon (**;**).

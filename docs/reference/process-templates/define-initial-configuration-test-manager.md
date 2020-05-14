@@ -21,8 +21,8 @@ The test management plug-in file is provided with the default process templates.
 > [!NOTE]  
 >  You can customize the initial security configuration for test activities by assigning them in the GroupsandPermissions.xml plug-in file. For more information, see [Configure initial groups, teams, members, and permissions](configure-initial-groups-teams-members-permissions.md).
 
-The names of the file, the folder, and the plug-in for the default process templates are as follows:  
-  
+The names of the file, the folder, and the plug-in for the default process templates are as follows:
+
 **File name**: testmanagement.xml  
 **Folder name**: Test Management  
 **Plug-in name**: Microsoft.ProjectCreationWizard.TestManagement

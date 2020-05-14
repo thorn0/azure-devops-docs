@@ -10,6 +10,6 @@ ms.topic: include
 <img alt="Go to Azure DevOps Services home, open your profile, go to Security" src="./media/my-profile.png" style="border: 1px solid #CCCCCC" />
 
 3.  Enable alternate authentication credentials for this account.
-Then provide a secondary username and password.
+    Then provide a secondary username and password.
 
    <img alt="Enable alternate authentication credentials link on the user profile page" src="./media/enable-alternate-credentials.png" style="border: 1px solid #CCCCCC" />

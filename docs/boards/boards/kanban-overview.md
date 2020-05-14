@@ -70,19 +70,19 @@ Your Kanban board is highly configurable to support your team's workflow. Each t
 
 ::: moniker range=">= tfs-2017"
 
-- Configure boards: - [Add columns](add-columns.md)  
-   - [Set WIP limits](wip-limits.md)  
-   - [Set Definition of Done](definition-of-done.md)  
-   - [Add swimlanes](expedite-work.md) - [Define card reordering](reorder-cards.md) - [Enable backlog and board levels](../../organizations/settings/select-backlog-navigation-levels.md) - [Working with bugs](../../organizations/settings/show-bugs-on-backlog.md)
+- Configure boards: - [Add columns](add-columns.md)
+  - [Set WIP limits](wip-limits.md)
+  - [Set Definition of Done](definition-of-done.md)
+  - [Add swimlanes](expedite-work.md) - [Define card reordering](reorder-cards.md) - [Enable backlog and board levels](../../organizations/settings/select-backlog-navigation-levels.md) - [Working with bugs](../../organizations/settings/show-bugs-on-backlog.md)
 - Configure card displays: - [Add or remove fields from cards](customize-cards.md) - [Define card styles](customize-cards.md#style-rule) - [Apply tag colors](customize-cards.md#color-tags) - [Enable/disable annotations](customize-cards.md#annotations) - [Define inline test behavior on cards](customize-cards.md#tests)
 
 ::: moniker-end
 
 ::: moniker range="tfs-2015"
 
-- Configure boards: - [Add columns](add-columns.md) - [Set WIP limits](wip-limits.md)  
-   - [Set Definition of Done](definition-of-done.md)  
-   - [Add swimlanes](expedite-work.md) - [Define card reordering](reorder-cards.md) - [Enable backlog and board levels](../../organizations/settings/select-backlog-navigation-levels.md) - [Working with bugs](../../organizations/settings/show-bugs-on-backlog.md)
+- Configure boards: - [Add columns](add-columns.md) - [Set WIP limits](wip-limits.md)
+  - [Set Definition of Done](definition-of-done.md)
+  - [Add swimlanes](expedite-work.md) - [Define card reordering](reorder-cards.md) - [Enable backlog and board levels](../../organizations/settings/select-backlog-navigation-levels.md) - [Working with bugs](../../organizations/settings/show-bugs-on-backlog.md)
 - Configure card displays: - [Add or remove fields from cards](customize-cards.md) - [Define card styles](customize-cards.md#style-rule) - [Apply tag colors](customize-cards.md#color-tags)
 
 ::: moniker-end

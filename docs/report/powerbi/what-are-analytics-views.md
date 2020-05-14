@@ -40,8 +40,7 @@ As set of default Analytics views are provided. The default views and are immedi
 
 Here we show the default views created for a project based on the Agile process. To learn how to open this view in your web portal, see [Manage Analytics views](analytics-views-manage.md).
 
-> [!div class="mx-imgBorder"]
-> ![Default Analytics views](./media/default-views/default-views.png)
+> [!div class="mx-imgBorder"] > ![Default Analytics views](./media/default-views/default-views.png)
 
 [!INCLUDE [temp](../includes/analytics-image-differences.md)]
 

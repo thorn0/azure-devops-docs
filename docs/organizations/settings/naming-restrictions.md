@@ -710,7 +710,6 @@ Must be unique within the organization or project collection
 </tr>
 </table>
 
-
 ### Field, link type, and category reference names
 
 Define a reference name whenever you add or create a work item field, link type, or category. Each work item field has an associated field reference name. The field reference name uniquely identifies each field and can't be changed after it's assigned.
@@ -795,7 +794,7 @@ Customers and partners can create their own field namespaces for custom work ite
 For descriptions of system fields and fields defined in the default process templates, see [Index of work item fields](../../boards/work-items/guidance/work-item-field.md).
 
 <a id="ExamplesFieldReferenceNames"> </a>
-  
+
 **Examples of field reference names**
 
 The following examples show valid field reference names, in various namespaces. Customers and partners can also define their own namespaces to support their custom work item types.

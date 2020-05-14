@@ -57,8 +57,7 @@ The Analytics-based Sprint Burndown widget adds a team's burndown chart for a sp
 
 **Sprint Burndown widget**
 
-> [!div class="mx-imgBorder"]
-> ![Sprint Burndown Widget - Sprint Burndown Example](media/sprint-burndown/sprint-burndown-widget.png)
+> [!div class="mx-imgBorder"] > ![Sprint Burndown Widget - Sprint Burndown Example](media/sprint-burndown/sprint-burndown-widget.png)
 
 To learn more, see [Configure and monitor sprint burndown ](configure-sprint-burndown.md).
 

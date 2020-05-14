@@ -140,8 +140,7 @@ In the widget catalog, you'll find two versions of the Sprint Burndown widget: t
 
 The Analytics-based Sprint Burndown widget provides an easy way to monitor progress for a team by showing work remaining for a given sprint. Work remaining is the vertical axis and time is the horizontal axis. You can define remaining work based on Stories or Tasks, and by counting the work items or summing a field.
 
-> [!div class="mx-imgBorder"]
-> ![Sprint Burndown Widget - Sprint Burndown Example](media/sprint-burndown/sprint-burndown-widget.png)
+> [!div class="mx-imgBorder"] > ![Sprint Burndown Widget - Sprint Burndown Example](media/sprint-burndown/sprint-burndown-widget.png)
 
 To help you answer the question: _Are we on track to complete this set of work by the end a sprint?_, the charts provide these useful metrics:
 
@@ -154,8 +153,7 @@ To help you answer the question: _Are we on track to complete this set of work b
 
 The **Sprint Burndown (Legacy)** widget adds a chart based on Remaining Work defined for tasks in a team's current sprint. Choose this version when you don't have access to Analytics. Configuration options include team selection, and widget size.
 
-> [!div class="mx-imgBorder"]
-> ![Sprint Burndown Legacy Widget - Sprint Burndown Example](media/burndown/sprint-burndown-legacy-devops.png)
+> [!div class="mx-imgBorder"] > ![Sprint Burndown Legacy Widget - Sprint Burndown Example](media/burndown/sprint-burndown-legacy-devops.png)
 
 If your dashboard already has a legacy version available, you can easily upgrade the widget by editing the widget's configuration, and checking **Try the new version now**. You can always go back to the legacy version by unchecking the box.
 
@@ -165,8 +163,7 @@ If your dashboard already has a legacy version available, you can easily upgrade
 
 The **Sprint Burndown** widget adds a chart based on Remaining Work defined for tasks in the team's current sprint. There are no configuration options for this widget.
 
-> [!div class="mx-imgBorder"]
-> ![Sprint Burndown Widget - Configuration](media/burndown/sprint-burndown-widget-no-config.png)
+> [!div class="mx-imgBorder"] > ![Sprint Burndown Widget - Configuration](media/burndown/sprint-burndown-widget-no-config.png)
 
 ::: moniker-end
 
@@ -458,8 +455,7 @@ You can add the Sprint Burndown widget to a dashboard and select the team whose 
 
 1. To configure the widget, choose the ![  ](../../media/icons/actions-icon.png) actions icon and select the **Configure** option.
 
-   > [!div class="mx-imgBorder"]
-   > ![Sprint Burndown Widget - Configuration](media/sprint-burndown/sprint-burndown-config.png)
+   > [!div class="mx-imgBorder"] > ![Sprint Burndown Widget - Configuration](media/sprint-burndown/sprint-burndown-config.png)
 
 1. Modify the **Title** of the widget and select your preferred **Size**. The Sprint Burndown widget can scale up to 10x10.
 
@@ -488,8 +484,7 @@ You can add the Sprint Burndown widget to a dashboard and select the team whose 
 
 1. To configure the widget, choose the ![  ](../../media/icons/actions-icon.png) actions icon and select the **Configure** option.
 
-   > [!div class="mx-imgBorder"]
-   > ![Sprint Burndown Legacy Widget - Configuration - Legacy Version](media/sprint-burndown/sprint-burndown-legacy-config.png)
+   > [!div class="mx-imgBorder"] > ![Sprint Burndown Legacy Widget - Configuration - Legacy Version](media/sprint-burndown/sprint-burndown-legacy-config.png)
 
    If your dashboard already has a legacy version available, you can easily upgrade the widget by editing the widget's configuration, and checking **Try the new version now**. You can always go back to the legacy version by unchecking the box.
 

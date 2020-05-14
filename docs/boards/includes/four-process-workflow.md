@@ -13,8 +13,7 @@ ms.topic: include
 
 **Workflow states: Issue, Basic process**
 
-> [!div class="mx-imgBorder"]
-> ![Issue workflow states, Basic process](/azure/devops/boards/get-started/media/track-issues/basic-process-workflow.png)
+> [!div class="mx-imgBorder"] > ![Issue workflow states, Basic process](/azure/devops/boards/get-started/media/track-issues/basic-process-workflow.png)
 
 > [!NOTE]  
 > The Basic process is available when you create a new project from Azure DevOps Services or [Azure DevOps Server 2019.1](https://go.microsoft.com/fwlink/?LinkId=2097609). For earlier on-premises deployments, choose Agile, Scrum, or CMMI process.

@@ -119,8 +119,7 @@ A subscription lets you control what your team should be notified about and how 
 
 1. Open the Notifications page under team settings: `https://dev.azure.com/{organization}/{project}/_admin/_notifications?view=contents`
 
-   > [!div class="mx-imgBorder"]
-   > ![Navigate to team notifications page](media/nav-team-notifications-hub.png)
+   > [!div class="mx-imgBorder"] > ![Navigate to team notifications page](media/nav-team-notifications-hub.png)
 
 2. Select **New subscription**. If you're not a team administrator, [get added as one](../organizations/settings/add-team-administrator.md). You need to be a team, project, or project collection administrator to create team alerts.
 

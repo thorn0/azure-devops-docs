@@ -41,8 +41,6 @@ The commit details view provides information regarding all the changes made as p
 
   ![Build status](media/commit-details/4BuildStatus.png)
 
-
-
 ## What actions can you perform?
 
 You can perform the following actions on the commit details page.
@@ -53,7 +51,7 @@ You can perform the following actions on the commit details page.
   ![Cherry pick](media/commit-details/7CherryPick.png)
 - Revert - Click on **Revert** to revert the changes of a commit . A topic branch is created with the reverted changes and then you will be prompted to create a pull request to the target branch.
   ![Revert](media/commit-details/8Revertcommit.png)
-- New branch - Click on **New branch** to create a new branch from a commit.  
+- New branch - Click on **New branch** to create a new branch from a commit.
 
   ![Create branch](media/commit-details/9CreateBranch.png)
 

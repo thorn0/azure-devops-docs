@@ -123,8 +123,8 @@ Each filter condition is composed of three parts, each of which must conform to 
 
 - **Field**: You can specify either the reference name or friendly name. The following examples are valid WIQL syntax: - Reference name with spaces: `SELECT [System.AssignedTo] ...` - Friendly name with spaces: `SELECT [Assigned To] ...` - Names without spaces don't require square brackets: `SELECT ID, Title ...`
 - **Comparison operator**: Valid values are specified in the [Operators](#operators) section later in this article. -
-- **Field value**: You can specify one of the following three values depending on the field specified.  
-   - A _literal value_ must match the data type of the field value. - A _variable or macro_ which indicates a certain value. For example, @Me indicates the person who is running the query. For more information, see [Macros and variables](#macros) later in this article. - The name of another _field_. For example, you can use `[Assigned to] = [Changed by]` to find work items that are assigned to the person who changed the work item most recently.
+- **Field value**: You can specify one of the following three values depending on the field specified.
+  - A _literal value_ must match the data type of the field value. - A _variable or macro_ which indicates a certain value. For example, @Me indicates the person who is running the query. For more information, see [Macros and variables](#macros) later in this article. - The name of another _field_. For example, you can use `[Assigned to] = [Changed by]` to find work items that are assigned to the person who changed the work item most recently.
 
 For a description and reference names of all system-defined fields, see [Work item field index](../work-items/guidance/work-item-field.md).
 

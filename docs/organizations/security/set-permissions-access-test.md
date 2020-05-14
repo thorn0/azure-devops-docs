@@ -21,8 +21,8 @@ You set manual test permissions for area paths and at the project-level. You set
 
 ::: moniker range=">= tfs-2017"
 
-- **Object-level, Area path level**  
-   - Manage test plans - Manage test suites
+- **Object-level, Area path level**
+  - Manage test plans - Manage test suites
 - **Project-level** - Manage test configurations - Manage test environments - Create test runs - Delete test runs
 - **Organization or collection-level** - Manage test controllers
 
@@ -30,8 +30,8 @@ You set manual test permissions for area paths and at the project-level. You set
 
 ::: moniker range="< tfs-2017"
 
-- **Object-level, Area path level**  
-   - Manage test plans - Manage test suites
+- **Object-level, Area path level**
+  - Manage test plans - Manage test suites
 - **Project-level** - Manage test configurations - Manage test environments - Create test runs
 - **Organization or collection-level** - Manage test controllers
 

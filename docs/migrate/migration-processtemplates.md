@@ -28,9 +28,9 @@ The data migration tool could flag errors which need to be corrected before you 
 During the validation, the data migration tool will determine the target process model for each project. If the project was created with the Agile, Scrum, or CMMI process template, and was never customized, the project will use the Inheritance process model. In all other cases, the data migration tool considers the project as customized, and the project will use the Hosted XML process model. When the Hosted XML process is the targeted process model, the data migration tool validates if the customizations can be migrated. The data migration tool generates two files during the validation:
 
 **DataMigrationTool.log** - Contains the set of process validation errors found in the collection. You must fix all these process errors to proceed with your migration.
-  
+
 **TryMatchOobProcesses.log** - Lists for each project the target process model - Inheritance or Hosted XML. For projects that are set to target the Hosted XML process model, it explains why they are considered to be customized. You don't have to fix these errors, but they give you guidance what to do in case you want to migrate into the Inheritance process model. Note that once a collection is imported, it is not possible to migrate a project to the Inheritance process model. That is on our roadmap for end of 2018.
-  
+
 Most customers have a mix of projects that have been customized (i.e. custom fields) and projects that are using an OOB process template. The data migration tool checks each project and validates it accordingly. It is very possible you will have some projects that will be mapped to an OOB process and some projects will use the Hosted XML for their process customization.
 
 We recommend that for any project that has not been customized, that you review the TryMatchOobProcesses.log to determine if there are any errors. If so, make the adjustments accordingly so that the project can be mapped to an OOB process upon data import.

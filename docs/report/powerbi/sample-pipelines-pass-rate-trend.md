@@ -22,8 +22,7 @@ This article shows you how to create a report that shows a pipeline's daily pass
 
 The following image shows an example of such a trend.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Pipelines Pass rate trend - Report](media/odatapowerbi-pipelines/passratetrend-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Pipelines Pass rate trend - Report](media/odatapowerbi-pipelines/passratetrend-report.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
 
@@ -163,18 +162,15 @@ After closing the Advanced Editor and while remaining in the Power Query Editor,
 
 1. Choose the expand button
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - Choose expand button](media/odatapowerbi-pipelines/passratetrend-expand1.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - Choose expand button](media/odatapowerbi-pipelines/passratetrend-expand1.png)
 
 1. Select the checkbox "(Select All Columns)" to expand
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - Select all columns](media/odatapowerbi-pipelines/passratetrend-expand2.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - Select all columns](media/odatapowerbi-pipelines/passratetrend-expand2.png)
 
 1. The table now contains the expanded entity **CompletedOn.Date**
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - Expanded entity](media/odatapowerbi-pipelines/passratetrend-expand3.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - Expanded entity](media/odatapowerbi-pipelines/passratetrend-expand3.png)
 
 ### Change column type
 
@@ -182,13 +178,11 @@ The query doesn't return all the columns in the format in which you can directly
 
 1. Change the type of columns **PassRate, FailRate** and **PartiallySuccessfulRate** to **Decimal Number**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - change column type](media/odatapowerbi-pipelines/passratetrend-changecolumntype1.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - change column type](media/odatapowerbi-pipelines/passratetrend-changecolumntype1.png)
 
 1. Change the type of column **TotalCount** to **Whole Number**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI + OData - change column type](media/odatapowerbi-pipelines/passratetrend-changecolumntype2.png)
+   > [!div class="mx-imgBorder"] > ![Power BI + OData - change column type](media/odatapowerbi-pipelines/passratetrend-changecolumntype2.png)
 
 ### Rename fields and query, then Close & Apply
 
@@ -196,18 +190,15 @@ When finished, you may choose to rename columns.
 
 1. Right-click a column header and select **Rename...**
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI Rename Columns](media/odatapowerbi-pipelines/passratetrend-renamerightclick.png)
+   > [!div class="mx-imgBorder"] > ![Power BI Rename Columns](media/odatapowerbi-pipelines/passratetrend-renamerightclick.png)
 
 1. You also may want to rename the query from the default **Query1**, to something more meaningful.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI Rename Query](media/odatapowerbi-pipelines/renamequery.png)
+   > [!div class="mx-imgBorder"] > ![Power BI Rename Query](media/odatapowerbi-pipelines/renamequery.png)
 
 1. Once done, choose **Close & Apply** to save the query and return to Power BI.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI Close & Apply](media/odatapowerbi-pipelines/closeandapply.png)
+   > [!div class="mx-imgBorder"] > ![Power BI Close & Apply](media/odatapowerbi-pipelines/closeandapply.png)
 
 ## Create the report
 
@@ -215,8 +206,7 @@ Power BI shows you the fields you can report on.
 
 > [!NOTE]  
 > The example below assumes that no one renamed any columns.
-> [!div class="mx-imgBorder"]
-> ![Sample - Pipelines pass rate trend - Fields](media/odatapowerbi-pipelines/passratetrend-fields.png)
+> [!div class="mx-imgBorder"] > ![Sample - Pipelines pass rate trend - Fields](media/odatapowerbi-pipelines/passratetrend-fields.png)
 
 For a simple report, do the following steps:
 
@@ -228,8 +218,7 @@ For a simple report, do the following steps:
 
 Your report should look like this.
 
-> [!div class="mx-imgBorder"]
-> ![Sample - Pipelines Pass rate trend - Report](media/odatapowerbi-pipelines/passratetrend-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Pipelines Pass rate trend - Report](media/odatapowerbi-pipelines/passratetrend-report.png)
 
 ## Additional queries
 
