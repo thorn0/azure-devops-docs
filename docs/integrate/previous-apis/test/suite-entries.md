@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Test Suite Entries| REST API Reference for Team Foundation Server
 description: Work with test suite entries programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 357368C6-6A97-4685-A154-ED665713B201
@@ -24,14 +24,15 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/{project}/_apis/test/suiteEntry/{suiteId}?api-version={version}
 ```
 
-| Parameter   | Type   | Notes
-|:------------|:-------|:-----------
-| URL
-| instance    | string | TFS server name ({server:port}). 
-| project     | string | Name or ID of the project.
-| suiteId     | int    | ID of the parent suite of the suite entries to get.
-| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
 
+
+| URL
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| suiteId | int | ID of the parent suite of the suite entries to get.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -61,16 +62,16 @@ GET https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/suiteentry/339?api
 }
 ```
 
-
-
 ## Reorder suite entries in a test suite
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/_apis/test/suiteEntry/{suiteId}?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
   "testCaseId": { int },
@@ -80,24 +81,27 @@ Content-Type: application/json
 }
 ```
 
-| Parameter       | Type   |Default Value | Notes
-|:----------------|:-------|:------------ |:------------------------------
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
+
+
 | URL
-| instance        | string |               |TFS server name ({server:port}). 
-| project         | string |               |Name or ID of the project.
-| suiteId         | int    |               |ID of the parent suite of the suite entries to reorder.
-| api-version     | string |               |[Version](../../concepts/rest-api-versioning.md) of the API to use.
+| instance | string | |TFS server name ({server:port}).
+| project | string | |Name or ID of the project.
+| suiteId | int | |ID of the parent suite of the suite entries to reorder.
+| api-version | string | |[Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| testCaseId      | int    | 0             |ID of the test case.
-| childSuiteId    | int    | 0             |ID of child suite.
-| sequenceNumber  | int    |               |New sequence number of the suite entry in suite.
-| suiteId         | int    |               |ID of the parent suite of the suite entry.
+| testCaseId | int | 0 |ID of the test case.
+| childSuiteId | int | 0 |ID of child suite.
+| sequenceNumber | int | |New sequence number of the suite entry in suite.
+| suiteId | int | |ID of the parent suite of the suite entry.
 
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam/_apis/test/suiteentry/339?api-version=3.0-preview.1
 ```
+
 ```json
 [
   {

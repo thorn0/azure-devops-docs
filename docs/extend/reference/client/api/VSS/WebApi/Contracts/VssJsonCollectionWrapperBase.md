@@ -14,8 +14,6 @@ ms.date: 08/04/2016
 
 Module path: `VSS/WebApi/Contracts`
 
-
 ### Members
 
-* `count`: number. 
-
+- `count`: number.

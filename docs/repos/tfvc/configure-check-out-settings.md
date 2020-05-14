@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Configure Check-Out Settings
 
@@ -21,7 +20,9 @@ Administrators of Team Foundation version control can configure source control c
 **Required Permissions**
 
 To configure check-out settings, you must have the **Edit project-level information** set to **Allow**. For more information, see [Permissions and groups reference](../../organizations/security/permissions.md).
+
 ## Procedure
+
 ### To configure checkout settings
 
 1.  In **Team Explorer**, select the project for which you want to configure check-out settings.

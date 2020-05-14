@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Compare folders and files
 
@@ -20,17 +19,17 @@ This section explains how to compare folders and files. You can compare server f
 
 ## In This Section
 
-   [Compare files](compare-files.md)     
+[Compare files](compare-files.md)  
 Describes how to view the differences between two server files, two local files, or a server file and a local file.
 
-   [Compare folders](compare-folders.md)     
+[Compare folders](compare-folders.md)  
 Describes how to compare two server folders, two local folders, or a server folder and a local folder.
 
-   [Folder comparison filters](folder-comparison-filters.md)     
+[Folder comparison filters](folder-comparison-filters.md)  
 Describes the name filters that are used to match the names of files or folders you are comparing.
 
-   [Reconcile differences between two folders](reconcile-differences-between-two-folders.md)     
+[Reconcile differences between two folders](reconcile-differences-between-two-folders.md)  
 Describes how to reconcile the differences between a server folder and local folder, and how to resolve conflicting pending changes in your local folder.
 
-   [Associate a file type with a file-comparison tool](associate-file-type-file-comparison-tool.md)     
+[Associate a file type with a file-comparison tool](associate-file-type-file-comparison-tool.md)  
 Describes how to associate a specific file type with a third-party compare or difference tool.

@@ -1,39 +1,38 @@
 ---
-title: Manually add features after an upgrade 
+title: Manually add features after an upgrade
 titleSuffix: TFS
-description: Manually update an existing project to access new features after upgrading Team Foundation Server  
+description: Manually update an existing project to access new features after upgrading Team Foundation Server
 ms.technology: devops-agile
 ms.assetid: 21AB0EE7-FB48-43E6-89EA-EC438C5D4F21
 ms.author: kaelli
 author: KathrynEE
 ms.topic: conceptual
-monikerRange: '<= azure-devops-2019'
-ms.date: 11/27/2018  
+monikerRange: "<= azure-devops-2019"
+ms.date: 11/27/2018
 ---
 
-# Add updates to projects manually  
+# Add updates to projects manually
 
 **TFS 2017 | TFS 2015 | TFS 2013**
 
 > [!IMPORTANT]  
-> This article applies only to projects defined on an on-premises Team Foundation Server (TFS). Projects defined on Azure DevOps Services [update automatically with each service upgrade](/azure/devops/release-notes/index). 
+> This article applies only to projects defined on an on-premises Team Foundation Server (TFS). Projects defined on Azure DevOps Services [update automatically with each service upgrade](/azure/devops/release-notes/index).
 >
->For an overview of customization options, see [Customize your work tracking experience](customize-work.md)
+> For an overview of customization options, see [Customize your work tracking experience](customize-work.md)
 
-You can update projects that were created in earlier versions of Team Foundation Server (TFS) to use new features added with the upgrade to TFS. These new features are delivered through new work item type definitions or updates to the process configuration. You should update projects by using the [Configure Features wizard](configure-features-after-upgrade.md). However, if the wizard is unable to add a feature, you can add it manually.  
+You can update projects that were created in earlier versions of Team Foundation Server (TFS) to use new features added with the upgrade to TFS. These new features are delivered through new work item type definitions or updates to the process configuration. You should update projects by using the [Configure Features wizard](configure-features-after-upgrade.md). However, if the wizard is unable to add a feature, you can add it manually.
 
-> [!NOTE]     
+> [!NOTE]  
 > If you're upgrading a project that was based on a Microsoft Solutions Framework (MSF) version 4.2 process template, follow the procedures provided in [Update a project based on a MSF v4.2 process template](xml/update-a-team-project-v4-dot-2-process-template.md). If you have several projects you need to update, see [apply updates programmatically](configure-features-after-upgrade.md#program-updates).
 
+## Update a project
 
-## Update a project 
-Prior to manually adding or editing a work tracking object, first [download the latest process template](#download-latest-pt). You'll use the definition files from the process template that most closely matches your existing project. 
+Prior to manually adding or editing a work tracking object, first [download the latest process template](#download-latest-pt). You'll use the definition files from the process template that most closely matches your existing project.
 
-Several features, such as Code Review and Feedback, simply require importing WITs from the process template that you download, and updating the Categories and ProcessConfiguration file. Other features, however, may require more extensive changes depending on the customizations you've made to your project.  
+Several features, such as Code Review and Feedback, simply require importing WITs from the process template that you download, and updating the Categories and ProcessConfiguration file. Other features, however, may require more extensive changes depending on the customizations you've made to your project.
 
-> [!NOTE]    
->Follow the links for each step to detail procedures provide later in this topic. 
-
+> [!NOTE]  
+> Follow the links for each step to detail procedures provide later in this topic.
 
 <table>
 <tbody valign="top">
@@ -66,7 +65,6 @@ Code Review
 
 </td>
 </tr>
-
 
 <tr>
 <td>
@@ -254,78 +252,80 @@ Bug Behavior
 </tbody>
 </table>
 
-<a id="download-latest-pt">   </a>  
+<a id="download-latest-pt"> </a>
 
-## Get the latest version of the most compatible process template  
+## Get the latest version of the most compatible process template
 
-The quickest way to make many of these updates is to copy definition files from the latest process template and import them to your project.   
+The quickest way to make many of these updates is to copy definition files from the latest process template and import them to your project.
 
 > [!IMPORTANT]  
 > If you are connecting to Azure DevOps Services, you can't export a process template. Instead, you customize your work tracking experience using the inheritance process. For details, see [Process customization and inherited processes](../organizations/settings/work/inheritance-process-model.md).
 
-1.  Open the same version of Visual Studio or Team Explorer as the on-premises TFS that you connect to. For example, if you connect to a TFS 2017 instance, you must connect from Visual Studio 2017, Visual Studio Community 2017, or Visual Studio Team Explorer 2017.  
+1.  Open the same version of Visual Studio or Team Explorer as the on-premises TFS that you connect to. For example, if you connect to a TFS 2017 instance, you must connect from Visual Studio 2017, Visual Studio Community 2017, or Visual Studio Team Explorer 2017.
 
     You can always download a free version of Visual Studio and Team Explorer from the [Visual Studio download site](https://visualstudio.microsoft.com/downloads/).
 
-    If you aren't a member of the Project Collection Administrators group, [get added as one](../organizations/security/set-project-collection-level-permissions.md). 
+    If you aren't a member of the Project Collection Administrators group, [get added as one](../organizations/security/set-project-collection-level-permissions.md).
 
-2.  Open the Process Template Manager from the **Team>Team Project Collection Settings** menu. 
+2.  Open the Process Template Manager from the **Team>Team Project Collection Settings** menu.
 
-     ![Open Process Template Manager](../boards/work-items/guidance/media/open-process-template-manager.png)
+    ![Open Process Template Manager](../boards/work-items/guidance/media/open-process-template-manager.png)
 
-    You'll see a list of each process template that has been uploaded to the project collection.  
+    You'll see a list of each process template that has been uploaded to the project collection.
 
-     ![Select process template to work with](../boards/work-items/guidance/media/process-template-manager.png)
+    ![Select process template to work with](../boards/work-items/guidance/media/process-template-manager.png)
 
-    The **Upload**, **Download**, **Make Default**, and **Delete** buttons are disabled when you don't have the necessary permissions to manage process templates. 
+    The **Upload**, **Download**, **Make Default**, and **Delete** buttons are disabled when you don't have the necessary permissions to manage process templates.
 
-3.  Download the process template to a local computer, select a folder where the process template will be downloaded. 
+3.  Download the process template to a local computer, select a folder where the process template will be downloaded.
 
-    Choose the process that corresponds to the one you used previously to create your project. For example, if you're updating a project based on the Scrum process template, then select **Scrum**. Note that all version numbers have been removed from the process templates. If you don't see Agile, CMMI, or Scrum, then you need to [update TFS](https://visualstudio.microsoft.com/downloads/download-visual-studio-vs). 
+    Choose the process that corresponds to the one you used previously to create your project. For example, if you're updating a project based on the Scrum process template, then select **Scrum**. Note that all version numbers have been removed from the process templates. If you don't see Agile, CMMI, or Scrum, then you need to [update TFS](https://visualstudio.microsoft.com/downloads/download-visual-studio-vs).
 
 You can determine which process template to select based on the [work item types defined for your existing project](../boards/work-items/guidance/manage-process-templates.md#wit_correlation).
 
 To learn more about managing process templates, see, [Upload or download a process template](../boards/work-items/guidance/manage-process-templates.md).
 
-<a id="import-wit">   </a>
+<a id="import-wit"> </a>
 
-## Import a WIT 
+## Import a WIT
 
-[!INCLUDE [temp](../includes/witadmin-run-tool-example.md)]  
+[!INCLUDE [temp](../includes/witadmin-run-tool-example.md)]
 
-1. Enter the ```witadmin importwitd``` command, substituting your data for the arguments that are shown.   
+1. Enter the `witadmin importwitd` command, substituting your data for the arguments that are shown.
 
-    ```
-    witadmin importwitd /collection:CollectionURL /p:"ProjectName" /f:"DirectoryPath\WITDefinitionFile.xml"
-    ```
+   ```
+   witadmin importwitd /collection:CollectionURL /p:"ProjectName" /f:"DirectoryPath\WITDefinitionFile.xml"
+   ```
 
-    For *CollectionURL* specify the URL of a project collection and for *ProjectName* specify the name of a project defined within the collection. You must specify the URL in the following format: ```http://ServerName:Port/VirtualDirectoryName/CollectionName```.  
+   For _CollectionURL_ specify the URL of a project collection and for _ProjectName_ specify the name of a project defined within the collection. You must specify the URL in the following format: `http://ServerName:Port/VirtualDirectoryName/CollectionName`.
 
-    For *DirectoryPath*, specify the path to the ```WorkItem Tracking/TypeDefinitions``` folder that holds the process template that you downloaded. The directory path must follow this structure: ```Drive:\TemplateFolder\WorkItem Tracking\TypeDefinitions```.
+   For _DirectoryPath_, specify the path to the `WorkItem Tracking/TypeDefinitions` folder that holds the process template that you downloaded. The directory path must follow this structure: `Drive:\TemplateFolder\WorkItem Tracking\TypeDefinitions`.
 
-    For  example,  import the Feedback Request WIT:
+   For example, import the Feedback Request WIT:
 
-    ```
-    witadmin importwitd /collection:"http://MyServer:8080/tfs/DefaultCollection"/p:MyProject /f:"C:\MyTemplates\WorkItem Tracking\TypeDefinitions\FeedbackRequest.xml"
-    ``` 
+   ```
+   witadmin importwitd /collection:"http://MyServer:8080/tfs/DefaultCollection"/p:MyProject /f:"C:\MyTemplates\WorkItem Tracking\TypeDefinitions\FeedbackRequest.xml"
+   ```
 
-Here's a checklist of WITs to import to support new features:   
--   **Portfolio Backlogs**: Epic and Feature
--   **Code Review**: Code Review Request and Code Review Response
--   **Feedback**: Feedback Request and Feedback Response 
--   **Shared Parameters**: Shared Parameters
--   **Test Plan and Test Suite**:  Test Plan and Test Suite 
+Here's a checklist of WITs to import to support new features:
 
-<a id="edit-wit">   </a>
+- **Portfolio Backlogs**: Epic and Feature
+- **Code Review**: Code Review Request and Code Review Response
+- **Feedback**: Feedback Request and Feedback Response
+- **Shared Parameters**: Shared Parameters
+- **Test Plan and Test Suite**: Test Plan and Test Suite
 
-## Edit a WIT  
-Depending on the customizations that you've made and the features you want to enable, you may need to update one or more WIT definition files. If you haven't customized a WIT, simply import the latest version. Otherwise, you can copy XML syntax from the WIT files you've downloaded from the latest process template. 
+<a id="edit-wit"> </a>
 
-1. Export the WITs that you have defined for the corresponding category.  
+## Edit a WIT
 
-   ```witadmin exportwitd /collection:CollectionURL /p:ProjectName /n:TypeName [/f:FileName]```
+Depending on the customizations that you've made and the features you want to enable, you may need to update one or more WIT definition files. If you haven't customized a WIT, simply import the latest version. Otherwise, you can copy XML syntax from the WIT files you've downloaded from the latest process template.
 
-2. Make the updates required to support your project and add new features.  
+1. Export the WITs that you have defined for the corresponding category.
+
+   `witadmin exportwitd /collection:CollectionURL /p:ProjectName /n:TypeName [/f:FileName]`
+
+2. Make the updates required to support your project and add new features.
 
    Here's a checklist of updates to make:
    <table>
@@ -419,37 +419,36 @@ Depending on the customizations that you've made and the features you want to en
    </tr>
    </tbody>
    </table>
-   <sup>1</sup>  Don&#39;t add the Backlog Priority or Stack Rank fields to the <code>FORM</code> section. These fields support ordering of backlog items and aren&#39;t meant to be set manually. 
+   <sup>1</sup>  Don&#39;t add the Backlog Priority or Stack Rank fields to the <code>FORM</code> section. These fields support ordering of backlog items and aren&#39;t meant to be set manually.
 
 3. Import your WIT file.  
-   ```witadmin importwitd /collection:CollectionURL [/p:Project] /f:FileName "```  
+   `witadmin importwitd /collection:CollectionURL [/p:Project] /f:FileName "`
 
+<a id="update-categories"> </a>
 
-
-<a id="update-categories">   </a>  
-
-## Update Categories  
+## Update Categories
 
 > [!TIP]  
-> See also [Use categories to group work items](xml/use-categories-to-group-work-item-types.md) and [Import and export categories](witadmin/witadmin-import-export-categories.md).  
+> See also [Use categories to group work items](xml/use-categories-to-group-work-item-types.md) and [Import and export categories](witadmin/witadmin-import-export-categories.md).
 
-1. Export your categories file. 
+1. Export your categories file.
 
-   ```witadmin exportcategories /collection:CollectionURL /p:ProjectName /f:"DirectoryPath\categories.xml"```
+   `witadmin exportcategories /collection:CollectionURL /p:ProjectName /f:"DirectoryPath\categories.xml"`
 
-   If you don't have a categories file, then copy the one from a default process template. Categories were introduced with TFS 2012 to more easily manage multiple work item types (WITs) as a group. 
+   If you don't have a categories file, then copy the one from a default process template. Categories were introduced with TFS 2012 to more easily manage multiple work item types (WITs) as a group.
 
-2. Make the updates required to support your project and add new features. 
-   Here's a checklist of categories to import to add or verify to support new features:   
+2. Make the updates required to support your project and add new features.
+   Here's a checklist of categories to import to add or verify to support new features:
 
-   -   **Code Review**: Code Review Request Category and Code Review Response Category
-   -   **Feedback**: Feedback Request Category and Feedback Response Category
-   -   **Planning Tools**: Requirement Category, Task Category, Bug Category, and Hidden Types Category
-   -   **Shared Parameters**: Shared Parameters Category
-   -   **Portfolio Backlogs**: Epic Category and Feature Category
-   -   **Test Plan and Test Suite**:  Test Plan Category and Test Suite Category 
+   - **Code Review**: Code Review Request Category and Code Review Response Category
+   - **Feedback**: Feedback Request Category and Feedback Response Category
+   - **Planning Tools**: Requirement Category, Task Category, Bug Category, and Hidden Types Category
+   - **Shared Parameters**: Shared Parameters Category
+   - **Portfolio Backlogs**: Epic Category and Feature Category
+   - **Test Plan and Test Suite**: Test Plan Category and Test Suite Category
 
-   If you use custom WITs to support requirements or tasks, then you'll want to add or modify the Requirement Category and Task Category. For example, Fabrikam Fiber uses the following definitions to support their requirement tracking: 
+   If you use custom WITs to support requirements or tasks, then you'll want to add or modify the Requirement Category and Task Category. For example, Fabrikam Fiber uses the following definitions to support their requirement tracking:
+
    ```xml
     <CATEGORY name="Requirement Category" refname="Microsoft.RequirementCategory">
        <DEFAULTWORKITEMTYPE name="Customer App" />
@@ -459,17 +458,16 @@ Depending on the customizations that you've made and the features you want to en
 
 3. Import your categories file.
 
-   ```witadmin importcategories /collection:CollectionURL /p:ProjectName /f:"DirectoryPath\categories.xml"```
-
+   `witadmin importcategories /collection:CollectionURL /p:ProjectName /f:"DirectoryPath\categories.xml"`
 
 > **Additional resources:** [Use categories to group work items](xml/use-categories-to-group-work-item-types.md), [Import and export categories](witadmin/witadmin-import-export-categories.md)
 
-<a id="update-processconfig">   </a>
-<a id="edit-processconfig">   </a>
+<a id="update-processconfig"> </a>
+<a id="edit-processconfig"> </a>
 
-## Update ProcessConfiguration 
+## Update ProcessConfiguration
 
-Agile planning tools and Portfolio Backlogs depend on the WITs, categories, and process configuration definitions that are made. These definitions are interdependent. Always add new WITs, update categories, and then update the ProcessConfiguration in that order.  
+Agile planning tools and Portfolio Backlogs depend on the WITs, categories, and process configuration definitions that are made. These definitions are interdependent. Always add new WITs, update categories, and then update the ProcessConfiguration in that order.
 
 <ol>
 <li>Export your ProcessConfiguration file. <br/>
@@ -577,26 +575,26 @@ Add the <code>Properties</code> section.  For example: <br/>
 </ol>
 
 > [!TIP]  
->See also [ProcessConfiguration XML element reference](xml/process-configuration-xml-element.md). 
+> See also [ProcessConfiguration XML element reference](xml/process-configuration-xml-element.md).
 
-
-<a id="run-tfsconfig">   </a>
+<a id="run-tfsconfig"> </a>
 
 ## Migrate existing test plans and suites
 
-Migrate existing test plans and suites to work item based test plans and suites.  
+Migrate existing test plans and suites to work item based test plans and suites.
 
-1.  Open a Command Prompt window on the TFS application-tier server. For example:   
-    ```cd %programfiles%\TFS 14.0\Tools```
+1.  Open a Command Prompt window on the TFS application-tier server. For example:  
+    `cd %programfiles%\TFS 14.0\Tools`
 
-2.  Run the ```TfsConfig TCM``` command.
-    ```TFSConfig TCM /upgradeTestPlans /CollectionName:CollectionName /TeamProject:TeamProjectName```
+2.  Run the `TfsConfig TCM` command.
+    `TFSConfig TCM /upgradeTestPlans /CollectionName:CollectionName /TeamProject:TeamProjectName`
 
     For example:
 
-    ```TFSConfig TCM /upgradeTestPlans /CollectionName:"Fabrikam Fiber Collection" /TeamProject:"Fabrikam Fiber"```
+    `TFSConfig TCM /upgradeTestPlans /CollectionName:"Fabrikam Fiber Collection" /TeamProject:"Fabrikam Fiber"`
 
 3.  Respond to the questions that appear.
+
     ```
     Logging sent to file C:\ProgramData\Microsoft\Team Foundation\Server Configuration\Logs\TPC_UPG_AT_0515_143821.log
     Microsoft (R) TfsConfig - Team Foundation Server Configuration Tool
@@ -614,24 +612,26 @@ Migrate existing test plans and suites to work item based test plans and suites.
 
     Test plan migration job successfully scheduled.
     ```
+
 4.  If you're migrating a large quantity of test plans and test suites, you can run the following command to monitor the progress of data migration.
 
-    ```TFSConfig TCM /upgradeStatus /collectionName:CollectionName /TeamProject:TeamProjectName```
+    `TFSConfig TCM /upgradeStatus /collectionName:CollectionName /TeamProject:TeamProjectName`
 
 After a successful data migration, all test management data should be available for use. For more information about this utility, go here.
 
 ## Review and verify access to new features
-After you update your project manually, you have access to the latest features. However, you still might want to make some additional configurations or customizations to support your work tracking needs. 
 
-See [Additional configuration options](additional-configuration-options.md) for information on how to verify or activate each feature. 
+After you update your project manually, you have access to the latest features. However, you still might want to make some additional configurations or customizations to support your work tracking needs.
 
+See [Additional configuration options](additional-configuration-options.md) for information on how to verify or activate each feature.
 
-## Related articles 
-You can learn more about the objects used to track work and support Agile tools from these topics:  
+## Related articles
 
-- [Choose a process](../boards/work-items/guidance/choose-process.md) 
+You can learn more about the objects used to track work and support Agile tools from these topics:
+
+- [Choose a process](../boards/work-items/guidance/choose-process.md)
 - [Customize your work tracking experience](customize-work.md)
-- [Customize a process template](process-templates/customize-process.md) 
+- [Customize a process template](process-templates/customize-process.md)
 - [Overview of process template files](process-templates/overview-process-template-files.md)
 
 If you need to rename a WIT, use **witadmin renamewitd** command to change the name, and then update the Categories definition file. See [Add or modify a work item type](add-modify-wit.md).

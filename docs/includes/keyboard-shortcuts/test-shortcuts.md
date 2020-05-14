@@ -2,13 +2,12 @@
 ms.topic: include
 ---
 
-
 <a id="test-shortcuts"></a>
 
-You can use the following keyboard shortcuts when working in **Test Plans** or **Test**.  
+You can use the following keyboard shortcuts when working in **Test Plans** or **Test**.
 
 > [!NOTE]  
-> The following shortcuts are available from the web portal for Azure DevOps Services and TFS 2015.2 or later versions. 
+> The following shortcuts are available from the web portal for Azure DevOps Services and TFS 2015.2 or later versions.
 
 <table width="70%">
 <tbody valign="top">
@@ -36,9 +35,10 @@ You can use the following keyboard shortcuts when working in **Test Plans** or *
 &nbsp;&nbsp;&nbsp;**t,p**&nbsp;&nbsp;&nbsp;Pass selected tests<br/>
 &nbsp;&nbsp;&nbsp;**t,r**&nbsp;&nbsp;&nbsp;Reset tests to active<br/>
 <br/>
-**Ctrl+Shift+f**&nbsp;&nbsp;&nbsp;&nbsp;Filter results<br/> 
+**Ctrl+Shift+f**&nbsp;&nbsp;&nbsp;&nbsp;Filter results<br/>
 &nbsp;&nbsp;&nbsp;**v,g**&nbsp;&nbsp;&nbsp;View grid<br/>
 <br/>
+
 </td> 
 </tr>
 <tr><br/><td><img src="/azure/devops/media/keyboard-shortcuts/test-parameters-shortcuts.png" alt="Test parameter shortcuts"/></td>

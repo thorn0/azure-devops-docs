@@ -15,7 +15,7 @@ Module path: `TFS/VersionControl/Contracts`
 
 ### Values
 
-* `None` Only return the specified item.
-* `OneLevel` Return the specified item and its direct children.
-* `OneLevelPlusNestedEmptyFolders` Return the specified item and its direct children, as well as recursive chains of nested child folders that only contain a single folder.
-* `Full` Return specified item and all descendants
+- `None` Only return the specified item.
+- `OneLevel` Return the specified item and its direct children.
+- `OneLevelPlusNestedEmptyFolders` Return the specified item and its direct children, as well as recursive chains of nested child folders that only contain a single folder.
+- `Full` Return specified item and all descendants

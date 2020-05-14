@@ -14,16 +14,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `endpoints`: [ServiceEndpoint](../../../TFS/DistributedTask/Contracts/ServiceEndpoint.md)[]. 
+- `endpoints`: [ServiceEndpoint](../../../TFS/DistributedTask/Contracts/ServiceEndpoint.md)[].
 
-* `mask`: [MaskHint](../../../TFS/DistributedTask/Contracts/MaskHint.md)[]. 
+- `mask`: [MaskHint](../../../TFS/DistributedTask/Contracts/MaskHint.md)[].
 
-* `options`: {[key: number]: [JobOption](../../../TFS/DistributedTask/Contracts/JobOption.md)}. 
+- `options`: {[key: number]: [JobOption](../../../TFS/DistributedTask/Contracts/JobOption.md)}.
 
-* `systemConnection`: [ServiceEndpoint](../../../TFS/DistributedTask/Contracts/ServiceEndpoint.md). Gets or sets the endpoint used for communicating back to the calling service.
+- `systemConnection`: [ServiceEndpoint](../../../TFS/DistributedTask/Contracts/ServiceEndpoint.md). Gets or sets the endpoint used for communicating back to the calling service.
 
-* `variables`: {[key: string]: string}. 
-
+- `variables`: {[key: string]: string}.

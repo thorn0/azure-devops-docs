@@ -12,4 +12,3 @@ ms.topic: include
 - [Showing associated CD pipeline info in CI pipeline](#showing-associated-cd-pipelines-info-in-ci-pipelines)
 - [Cross-project sharing of service connections is now public](#cross-project-sharing-of-service-connections-is-now-public)
 - [Pipeline resource version picker in the create run dialogue](#pipeline-resource-version-picker-in-the-create-run-dialogue)
-

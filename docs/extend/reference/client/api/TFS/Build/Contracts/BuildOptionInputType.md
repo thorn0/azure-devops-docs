@@ -16,9 +16,9 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `String` 
-* `Boolean` 
-* `StringList` 
-* `Radio` 
-* `PickList` 
-* `MultiLine` 
+- `String`
+- `Boolean`
+- `StringList`
+- `Radio`
+- `PickList`
+- `MultiLine`

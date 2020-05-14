@@ -1,24 +1,24 @@
 ﻿---
-title: Quick reference to dashboards, charts, & widgets 
-titleSuffix: Azure DevOps  
-description: Index to dashboard, charts&, and widgets tasks for Azure Boards, Azure DevOps, & Team Foundation Server 
+title: Quick reference to dashboards, charts, & widgets
+titleSuffix: Azure DevOps
+description: Index to dashboard, charts&, and widgets tasks for Azure Boards, Azure DevOps, & Team Foundation Server
 ms.custom: dashboards
 ms.assetid: 7BAD53A1-080E-40E8-8866-24EC00395D39
 ms.technology: devops-analytics
 ms.author: kaelli
 author: KathrynEE
 ms.topic: overview
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ms.date: 10/23/2019
 ---
 
-# Dashboards, reports, & widgets quick reference 
+# Dashboards, reports, & widgets quick reference
 
-[!INCLUDE [temp](../includes/version-ts-tfs-2015-2016.md)] 
+[!INCLUDE [temp](../includes/version-ts-tfs-2015-2016.md)]
 
-Use this index to quickly access information on tasks for configuring or accessing dashboards, charts, reports, and widgets.  
+Use this index to quickly access information on tasks for configuring or accessing dashboards, charts, reports, and widgets.
 
-[!INCLUDE [temp](../../includes/version-selector-minimize.md)] 
+[!INCLUDE [temp](../../includes/version-selector-minimize.md)]
 
 ## Tasks
 
@@ -89,7 +89,6 @@ Use this index to quickly access information on tasks for configuring or accessi
 ---
 
 ::: moniker-end
-
 
 ::: moniker range="azure-devops-2019"
 
@@ -214,19 +213,17 @@ Use this index to quickly access information on tasks for configuring or accessi
 
 ::: moniker-end
 
-
 ## In-context reports
 
 ::: moniker range="azure-devops"
 
-In context reports appear on the **Analytics** tab of these specific service pages: **Boards>Boards**, **Boards>Backlogs**, **Boards>Sprints**, and **Pipelines>Builds**. 
-
+In context reports appear on the **Analytics** tab of these specific service pages: **Boards>Boards**, **Boards>Backlogs**, **Boards>Sprints**, and **Pipelines>Builds**.
 
 ::: moniker-end
 
 ::: moniker range="azure-devops-2019"
 
-In-context reports appear on specific service pages, such as **Boards>Boards**, **Boards>Backlogs**, **Boards>Sprints**,and **Pipelines>Builds>Analytics**. These reports derive data from the Analytics service. 
+In-context reports appear on specific service pages, such as **Boards>Boards**, **Boards>Backlogs**, **Boards>Sprints**,and **Pipelines>Builds>Analytics**. These reports derive data from the Analytics service.
 
 ::: moniker-end
 
@@ -267,7 +264,7 @@ In-context reports appear on specific service pages, such as **Boards>Boards**, 
 
 ::: moniker range=">= tfs-2015 <= tfs-2018"
 
-In-context reports appear on specific service pages, such as **Work>Backlog**, **Work>Backlogs** and **Build and Release>Builds**. 
+In-context reports appear on specific service pages, such as **Work>Backlog**, **Work>Backlogs** and **Build and Release>Builds**.
 
 <table valign="top">
 <tbody valign="top">
@@ -298,31 +295,31 @@ In-context reports appear on specific service pages, such as **Work>Backlog**, *
 
 ::: moniker-end
 
-
 ::: moniker range=">= tfs-2015"
 
-## Widgets 
+## Widgets
 
-Widgets provide a quick way to quickly add charts to dashboards. Many widgets are configurable or are scoped to a team or to the current user identity. For a description of each widget, see the [Widget catalog](widget-catalog.md). 
+Widgets provide a quick way to quickly add charts to dashboards. Many widgets are configurable or are scoped to a team or to the current user identity. For a description of each widget, see the [Widget catalog](widget-catalog.md).
 
 ::: moniker-end
 
 ::: moniker range=">= azure-devops-2019"
-- **Analytics**: indicates data is derived from [Analytics data](../powerbi/what-is-analytics.md)  
-- **Project**: indicates you can select the project and team when configuring the widget
-- **Team**: Indicates a widget that is scoped to a team  
-- **User**: Indicates you widget that is scoped to a user identity 
-::: moniker-end
 
+- **Analytics**: indicates data is derived from [Analytics data](../powerbi/what-is-analytics.md)
+- **Project**: indicates you can select the project and team when configuring the widget
+- **Team**: Indicates a widget that is scoped to a team
+- **User**: Indicates you widget that is scoped to a user identity
+  ::: moniker-end
 
 ::: moniker range=">=tfs-2015 <= tfs-2018"
-- **Team**: Indicates a widget that is scoped to a team  
-- **User**: Indicates you widget that is scoped to a user identity 
-::: moniker-end
+
+- **Team**: Indicates a widget that is scoped to a team
+- **User**: Indicates you widget that is scoped to a user identity
+  ::: moniker-end
 
 ::: moniker range=">= azure-devops-2019"
 
-<!--- capture which widgets can support cross project/cross-team data --> 
+<!--- capture which widgets can support cross project/cross-team data -->
 
 <table valign="top">
 <tbody valign="top">
@@ -389,7 +386,6 @@ Widgets provide a quick way to quickly add charts to dashboards. Many widgets ar
 
 ::: moniker-end
 
-
 ::: moniker range="tfs-2018"
 
 <table valign="top">
@@ -448,8 +444,6 @@ Widgets provide a quick way to quickly add charts to dashboards. Many widgets ar
 
 ::: moniker-end
 
-
-
 ::: moniker range="tfs-2017"
 
 <table valign="top">
@@ -505,7 +499,6 @@ Widgets provide a quick way to quickly add charts to dashboards. Many widgets ar
 
 ::: moniker-end
 
-
 ::: moniker range="tfs-2015"
 
 <table valign="top">
@@ -553,4 +546,3 @@ Widgets provide a quick way to quickly add charts to dashboards. Many widgets ar
 </table>
 
 ::: moniker-end
-

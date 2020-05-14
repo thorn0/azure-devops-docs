@@ -84,7 +84,7 @@ First, Release Management now supports linking repositories (both Git and Team F
 
 Additionally, you’ll find these new features:
 
--**Copy, Export, Import.** We’ve published a [new extension](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.rm-clone-rd) in the Marketplace that lets you copy, import, and export release definitions. These features will be available in the product soon, but this extension should help fill the gap until they show up natively. 
+-**Copy, Export, Import.** We’ve published a [new extension](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.rm-clone-rd) in the Marketplace that lets you copy, import, and export release definitions. These features will be available in the product soon, but this extension should help fill the gap until they show up natively.
 
 ![Cloning a release definition](media/5_06_10.png)
 
@@ -92,12 +92,12 @@ Additionally, you’ll find these new features:
 
 -**Release Management REST APIs.** You can now use the REST APIs for Release Management service. They are published at: [/azure/devops/integrate/](/azure/devops/integrate/). Most of these APIs work with the on-premises releases of RM features in TFS 2015 Update 2 as well (changes between TFS and Team Services versions are indicated in the API docs). You can find some basic examples on how to use these APIs in this [blog post](https://docs.microsoft.com/archive/blogs/chandananjani/using-releasemanagement-rest-apis).
 
--**Simplified Release Definition Wizard.** We’ve simplified the wizard to create release definitions. You can enter most of the inputs to setup a definition with a single environment in this wizard. We have also simplified the process for adding more environments into a definition or to clone an environment. 
- 
+-**Simplified Release Definition Wizard.** We’ve simplified the wizard to create release definitions. You can enter most of the inputs to setup a definition with a single environment in this wizard. We have also simplified the process for adding more environments into a definition or to clone an environment.
+
 ![Simplified release definition wizard](media/5_06_11.png)
 
--**New Job Execution Variables.** Below are a set of variables now available that let you access information about artifact sources when executing deployment jobs. These variables are available in the format: RELEASE_ARTIFACTS_<Alias>_<VariableName>. <Alias> represents the artifact source that is included in the release definition. You can find the name of the alias in the Artifacts tab of a release definition. <VariableName> will be one of the following: 
- 
+-**New Job Execution Variables.** Below are a set of variables now available that let you access information about artifact sources when executing deployment jobs. These variables are available in the format: RELEASE*ARTIFACTS*<Alias>\_<VariableName>. <Alias> represents the artifact source that is included in the release definition. You can find the name of the alias in the Artifacts tab of a release definition. <VariableName> will be one of the following:
+
 DEFINITIONID
 BUILDNUMBER
 BUILDID

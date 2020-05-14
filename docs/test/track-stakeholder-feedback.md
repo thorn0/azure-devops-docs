@@ -7,22 +7,23 @@ ms.topic: conceptual
 ms.author: sdanie
 author: steved0x
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Track stakeholder feedback using the Test &amp; Feedback extension
 
-[!INCLUDE [version-header](includes/version-header.md)] 
+[!INCLUDE [version-header](includes/version-header.md)]
 
-[!INCLUDE [feedback-header-text](includes/feedback-header-text.md)] 
+[!INCLUDE [feedback-header-text](includes/feedback-header-text.md)]
 
 <a name="track"></a>
+
 ## Track feedback requests
 
 1. Select your project and open the **Queries** page of the **Agile** section in Azure DevOps or the **Work** hub in TFS.
    [Web portal navigation](../project/navigation/index.md)
 
-1. In the list of shared queries, select **Feedback**. 
+1. In the list of shared queries, select **Feedback**.
    This query displays a list of all the feedback responses received.
 
    ![Viewing the feedback responses](media/track-stakeholder-feedback/track-stakeholder-feedback-31.png)
@@ -31,10 +32,10 @@ monikerRange: '>= tfs-2017'
 
 ## See also
 
-* [Request stakeholder feedback using the Test &amp; Feedback extension](request-stakeholder-feedback.md#request)
-* [Provide stakeholder feedback using the Test &amp; Feedback extension](provide-stakeholder-feedback.md#provide)
-* [Voluntary stakeholder feedback using the Test &amp; Feedback extension](voluntary-stakeholder-feedback.md#voluntary)
-* [Exploratory test and submit feedback directly from your browser](perform-exploratory-tests.md)
-* [Overview of manual and exploratory testing](index.yml)
+- [Request stakeholder feedback using the Test &amp; Feedback extension](request-stakeholder-feedback.md#request)
+- [Provide stakeholder feedback using the Test &amp; Feedback extension](provide-stakeholder-feedback.md#provide)
+- [Voluntary stakeholder feedback using the Test &amp; Feedback extension](voluntary-stakeholder-feedback.md#voluntary)
+- [Exploratory test and submit feedback directly from your browser](perform-exploratory-tests.md)
+- [Overview of manual and exploratory testing](index.yml)
 
-[!INCLUDE [help-and-support-footer](includes/help-and-support-footer.md)] 
+[!INCLUDE [help-and-support-footer](includes/help-and-support-footer.md)]

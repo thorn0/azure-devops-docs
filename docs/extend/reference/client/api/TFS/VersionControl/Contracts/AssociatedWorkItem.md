@@ -13,20 +13,18 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `assignedTo`: string. 
+- `assignedTo`: string.
 
-* `id`: number. 
+- `id`: number.
 
-* `state`: string. 
+- `state`: string.
 
-* `title`: string. 
+- `title`: string.
 
-* `url`: string. REST url
+- `url`: string. REST url
 
-* `webUrl`: string. 
+- `webUrl`: string.
 
-* `workItemType`: string. 
-
+- `workItemType`: string.

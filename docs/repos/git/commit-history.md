@@ -4,14 +4,13 @@ titleSuffix: Azure Repos
 description: View Git commit history in Visual Studio
 ms.assetid: f1ceefae-192f-49ee-af52-b9a29852bf85
 toc: show
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: sancha
 author: apawast
 ms.topic: reference
 ms.date: 03/14/2018
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
-
 
 # Commit history
 
@@ -19,44 +18,41 @@ monikerRange: '>= tfs-2017'
 
 ## Commit history view
 
-The commit history view shows you the history of all the commits for a particular branch in a repository. By default, all results are shown in reverse chronological order. 
- 
+The commit history view shows you the history of all the commits for a particular branch in a repository. By default, all results are shown in reverse chronological order.
+
 ![Commit history page](media/commit-history/1-CommitHistory.png)
 
 For each commit, you can view the following key elements:
 
-* Author details - You can view the author and committer of each commit along with the associated time. 
+- Author details - You can view the author and committer of each commit along with the associated time.
 
-    ![Author details for a commit](media/commit-history/2-AuthorDetails.png)
+  ![Author details for a commit](media/commit-history/2-AuthorDetails.png)
 
-* Complete commit message - If the commit message is too long, you can click on the down-arrow to expand the commit message to view the entire commit message. 
+- Complete commit message - If the commit message is too long, you can click on the down-arrow to expand the commit message to view the entire commit message.
 
-    ![Expanded commit message](media/commit-history/3-CommitMessage.png)
-	
-* Copy commit SHA - You can copy the 40 character commit SHA by clicking on the **Copy full SHA to clipboard** button. You can click on a commit ID or commit message to open the commit details page.
-	
-    ![Copy 40 character commit ID](media/commit-history/4-CopyCommitSHA.png)	
-	
-* Build and PR information - You can view the pull request that brought this commit to the branch selected on the page, and view the build status of the current commit.
+  ![Expanded commit message](media/commit-history/3-CommitMessage.png)
 
-    ![Build and PR details on commit history](media/commit-history/5-BuildandPRInfo.png)
+- Copy commit SHA - You can copy the 40 character commit SHA by clicking on the **Copy full SHA to clipboard** button. You can click on a commit ID or commit message to open the commit details page.
+  ![Copy 40 character commit ID](media/commit-history/4-CopyCommitSHA.png)
+- Build and PR information - You can view the pull request that brought this commit to the branch selected on the page, and view the build status of the current commit.
 
-* You can select a repository from the repository picker to view the history of a particular repository.
+  ![Build and PR details on commit history](media/commit-history/5-BuildandPRInfo.png)
 
-    ![repository picker](media/commit-history/6-RepoPicker.png)
+- You can select a repository from the repository picker to view the history of a particular repository.
 
-* You can select a particular branch or tag from the branch picker to view associated history.
+  ![repository picker](media/commit-history/6-RepoPicker.png)
 
-    ![Branch picker](media/commit-history/7-BranchPicker.png)
+- You can select a particular branch or tag from the branch picker to view associated history.
 
-* You can further filter the results by selecting a particular file from the code explorer. 
+  ![Branch picker](media/commit-history/7-BranchPicker.png)
 
-    ![Code explorer](media/commit-history/8-CodeExplorer.png)
+- You can further filter the results by selecting a particular file from the code explorer.
 
-* You can also find a file or folder to view its history. In the following example, when you type "get", you see results of all files and folders in the repository that contain the word **src**.
+  ![Code explorer](media/commit-history/8-CodeExplorer.png)
 
-    ![Find a file](media/commit-history/9-FindaFile.png)
+- You can also find a file or folder to view its history. In the following example, when you type "get", you see results of all files and folders in the repository that contain the word **src**.
 
+  ![Find a file](media/commit-history/9-FindaFile.png)
 
 ## History result filtering
 
@@ -80,15 +76,10 @@ You can also search for a commit using its Commit ID. You can search for all com
 
 ## Commit for file renames
 
-In case a file or folder is renamed, you will see all commits until the file or folder got renamed. You will also see a link suggesting **Show rename history**. 
+In case a file or folder is renamed, you will see all commits until the file or folder got renamed. You will also see a link suggesting **Show rename history**.
 
 ![Show rename files or folder history](media/commit-history/renamefiles.png)
 
 When you click on **Show rename history** you can view all the commits of the file or folder before the rename.
 
 ![Showing commits before file or folder rename](media/commit-history/Showrenamefiles.png)
-
-
-
-
-

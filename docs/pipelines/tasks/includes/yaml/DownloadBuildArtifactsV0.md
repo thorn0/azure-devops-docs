@@ -24,6 +24,6 @@ ms.technology: devops-cicd-tasks
     #downloadType: 'single' # Choose whether to download a single artifact or all artifacts of a specific build. Options: single, specific
     #artifactName: # Required when downloadType == Single
     #itemPattern: '**' # Optional
-    #downloadPath: '$(System.ArtifactsDirectory)' 
+    #downloadPath: '$(System.ArtifactsDirectory)'
     #parallelizationLimit: '8' # Optional
 ```

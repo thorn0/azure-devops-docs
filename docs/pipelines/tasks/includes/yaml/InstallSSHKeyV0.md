@@ -12,8 +12,8 @@ ms.technology: devops-cicd-tasks
 # Install an SSH key prior to a build or deployment
 - task: InstallSSHKey@0
   inputs:
-    knownHostsEntry: 
-    sshPublicKey: 
+    knownHostsEntry:
+    sshPublicKey:
     #sshPassphrase: # Optional
-    sshKeySecureFile: 
+    sshKeySecureFile:
 ```

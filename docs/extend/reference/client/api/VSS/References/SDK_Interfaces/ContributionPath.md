@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,12 +15,10 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Item representing a contribution path. Can be of type default, resource or bundle 
+Item representing a contribution path. Can be of type default, resource or bundle
 
 ### Members
 
-* `pathType`: [ContributionPathType](../../../VSS/References/SDK_Interfaces/ContributionPathType.md). Type if this contribution path
+- `pathType`: [ContributionPathType](../../../VSS/References/SDK_Interfaces/ContributionPathType.md). Type if this contribution path
 
-* `value`: string. Replace value for this contribution path
-
+- `value`: string. Replace value for this contribution path

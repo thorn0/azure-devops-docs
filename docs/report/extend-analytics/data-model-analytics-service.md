@@ -1,19 +1,18 @@
 ---
 title: Data model for Analytics
-titleSuffix: Azure DevOps 
-description: Describes the data entities and relationships provided by Analytics for Azure DevOps  
+titleSuffix: Azure DevOps
+description: Describes the data entities and relationships provided by Analytics for Azure DevOps
 ms.technology: devops-analytics
-ms.assetid: 032FB76F-DC43-4863-AFC6-F8D67963B177  
+ms.assetid: 032FB76F-DC43-4863-AFC6-F8D67963B177
 ms.reviewer: angurusw
 ms.author: kaelli
 author: KathrynEE
 ms.topic: reference
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ms.date: 04/05/2019
 ---
 
-# Data model for Analytics  
-
+# Data model for Analytics
 
 [!INCLUDE [temp](../includes/version-azure-devops.md)]
 
@@ -21,26 +20,27 @@ Analytics data model for Azure DevOps consists of entity sets, whose members (en
 
 [!INCLUDE [temp](../includes/analytics-preview.md)]
 
-
 <a id="entities" />
 
-## Entities  
+## Entities
 
 > [!NOTE]  
->Entity sets are described in OData metadata, and vary by project. A complete list of entity sets, entity types, and properties can be discovered by requesting the OData metadata for your project: 
+> Entity sets are described in OData metadata, and vary by project. A complete list of entity sets, entity types, and properties can be discovered by requesting the OData metadata for your project:
 
 ::: moniker range="azure-devops"
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```OData
 > https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}/$metadata
-> ``` 
+> ```
 
 ::: moniker-end
 
 ::: moniker range="azure-devops-2019"
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```OData
 > https://{servername}:{port}/tfs/{OrganizationName}/{ProjectName}/_odata/{version}/$metadata
 > ```
@@ -58,20 +58,19 @@ The following EntitySets are supported with the indicated API versions. For the 
 > |-----------|-------------|------|------|--------------|
 > |Areas | The work item Area Paths, with properties for grouping and filtering by area hierarchy | ✔️|✔️|✔️ |
 > |Iterations | The work item Iteration Paths, with properties for grouping and filtering by iteration hierarchy |✔️|✔️|✔️ |  
-> |BoardLocations | The Kanban board cell locations, as identified by board column, lane, and split, includes historic board settings| ✔️|✔️|✔️ | 
-> |Dates | The dates used to filter and group other entities using relationships | ✔️|✔️|✔️ | 
+> |BoardLocations | The Kanban board cell locations, as identified by board column, lane, and split, includes historic board settings| ✔️|✔️|✔️ |
+> |Dates | The dates used to filter and group other entities using relationships | ✔️|✔️|✔️ |
 > |Projects | All projects defined for an organization |✔️|✔️|✔️ |
-> |Processes | Backlog information - used to expand or filter work items and work item types|  |✔️|✔️ | 
-> |Tags | All work item tags for each project | ✔️|✔️|✔️ | 
-> |Teams | All teams defined for the project (To add a team, see [Add teams](../../organizations/settings/add-teams.md)) | ✔️|✔️|✔️ | 
-> |Users | User information that is used to expand or filter various work item properties (e.g. Assigned To, Created By)| ✔️|✔️|✔️ | 
-> |WorkItems | The current state of work items| ✔️|✔️|✔️ | 
-> |WorkItemLinks | The links between work items (e.g. child, parent, related) - includes only latest revision of links (no history) - hyperlinks not included | ✔️|✔️|✔️ | 
-> |WorkItemRevisions | All historic work item revisions, including the current revision - does not include deleted work items| ✔️|✔️|✔️ | 
-> |WorkItemSnapshot | (Composite) The state of each work item on each calendar date - used for trend reporting| ✔️|✔️|✔️ | 
-> |WorkItemBoardSnapshot | (Composite) The state of each work item on each calendar date, including Kanban board location - used for trend reporting| ✔️|✔️|✔️ | 
-> |WorkItemTypeFields | The work item properties for each work item type and process - used for report building| ✔️|✔️|✔️ | 
-
+> |Processes | Backlog information - used to expand or filter work items and work item types| |✔️|✔️ |
+> |Tags | All work item tags for each project | ✔️|✔️|✔️ |
+> |Teams | All teams defined for the project (To add a team, see [Add teams](../../organizations/settings/add-teams.md)) | ✔️|✔️|✔️ |
+> |Users | User information that is used to expand or filter various work item properties (e.g. Assigned To, Created By)| ✔️|✔️|✔️ |
+> |WorkItems | The current state of work items| ✔️|✔️|✔️ |
+> |WorkItemLinks | The links between work items (e.g. child, parent, related) - includes only latest revision of links (no history) - hyperlinks not included | ✔️|✔️|✔️ |
+> |WorkItemRevisions | All historic work item revisions, including the current revision - does not include deleted work items| ✔️|✔️|✔️ |
+> |WorkItemSnapshot | (Composite) The state of each work item on each calendar date - used for trend reporting| ✔️|✔️|✔️ |
+> |WorkItemBoardSnapshot | (Composite) The state of each work item on each calendar date, including Kanban board location - used for trend reporting| ✔️|✔️|✔️ |
+> |WorkItemTypeFields | The work item properties for each work item type and process - used for report building| ✔️|✔️|✔️ |
 
 ## Branch, Pipelines, and Test EntitySets
 
@@ -80,18 +79,15 @@ The following EntitySets are only supported with the **v3.0-preview** API versio
 > [!div class="mx-tdCol2BreakAll"]  
 > | EntitySet | Description | v3.0-preview |
 > |-----------|-------------|------|
-> |Branches | Basic information about branches used in tests or pipelines |  ✔️ |
-> |Pipelines| Properties for a pipeline |  ✔️ |
-> |PipelineTasks | Properties for tasks that are used within a pipeline |  ✔️ |
-> |PipelineRunActivityResults | Merged log of all the stages/steps/jobs/tasks within a specific pipeline execution |   ✔️ |
-> |PipelineRuns | Execution information for pipelines |  ✔️ |
-> |TestResultsDaily | A daily snapshot aggregate of TestResult executions, grouped by Test (not TestRun) |  ✔️ |
-> |TestRuns | Execution information for tests run under a pipeline with aggregate TestResult |  ✔️ |
+> |Branches | Basic information about branches used in tests or pipelines | ✔️ |
+> |Pipelines| Properties for a pipeline | ✔️ |
+> |PipelineTasks | Properties for tasks that are used within a pipeline | ✔️ |
+> |PipelineRunActivityResults | Merged log of all the stages/steps/jobs/tasks within a specific pipeline execution | ✔️ |
+> |PipelineRuns | Execution information for pipelines | ✔️ |
+> |TestResultsDaily | A daily snapshot aggregate of TestResult executions, grouped by Test (not TestRun) | ✔️ |
+> |TestRuns | Execution information for tests run under a pipeline with aggregate TestResult | ✔️ |
 > |Tests | Properties for a test | ✔️ |
-> |TestResults | Individual execution results for a specific Test associated with a TestRun |  ✔️ |
-
-
-
+> |TestResults | Individual execution results for a specific Test associated with a TestRun | ✔️ |
 
 ## Composite entities
 
@@ -111,33 +107,30 @@ Some navigation properties result in a single entity, while others result in a c
 
 ## Relationship keys
 
- Entity relationships are also represented as foreign keys so that external tools can join entities. These properties have the suffix "SK", and are either integer or GUID data types. Date properties have corresponding integer date key properties with the following format: YYYYMMDD.
+Entity relationships are also represented as foreign keys so that external tools can join entities. These properties have the suffix "SK", and are either integer or GUID data types. Date properties have corresponding integer date key properties with the following format: YYYYMMDD.
 
 ## Entity Properties
 
 The following table provides a partial list of the WorkItemRevision entity properties to illustrate some common details. The last three properties&mdash;CreatedDate, CreatedDateSK, CreatedOn&mdash;show that the same value is often expressed in multiple properties, each designed for different scenarios.
 
-| Property | Type | Description|  
-|--------|------------|------------|  
-|WorkItemRevisionSK | Int32 | The Analytics unique key for the work item revision - used by external tools to join related entities.
-|WorkItemId | Int32 | The Id for the work item.
-|Revision | Int32 | The revision of the work item. 
-|Title | String | The work item title. 
-|WorkItemType | String | The work item type (e.g. Bug, Task, User Story).
-|StoryPoints | Double | The points assigned to this work item - commonly aggregated as a sum.
-| Tags | Navigation | Navigation property to a Tag entity collection. Commonly used in ```$expand``` statements to access the Name property for multiple work item tags.
-|CreatedDate | DateTimeOffset | The date the work item was created, expressed in the [time zone defined for the organization](../../organizations/accounts/change-organization-location.md). Commonly used for filtering and for display.
-|CreatedDateSK | Int32 | The date the work item was created, expressed as YYYYMMDD in the time zone defined for the organization. Used by external tools to join related entities.
-|CreatedOn | Navigation | Navigation property to the Date entity for the date the work item was created, in the time zone defined for the organization. Commonly used to reference properties from the Date entity in ```groupby``` statements.
+| Property           | Type           | Description                                                                                                                                                                                                       |
+| ------------------ | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| WorkItemRevisionSK | Int32          | The Analytics unique key for the work item revision - used by external tools to join related entities.                                                                                                            |
+| WorkItemId         | Int32          | The Id for the work item.                                                                                                                                                                                         |
+| Revision           | Int32          | The revision of the work item.                                                                                                                                                                                    |
+| Title              | String         | The work item title.                                                                                                                                                                                              |
+| WorkItemType       | String         | The work item type (e.g. Bug, Task, User Story).                                                                                                                                                                  |
+| StoryPoints        | Double         | The points assigned to this work item - commonly aggregated as a sum.                                                                                                                                             |
+| Tags               | Navigation     | Navigation property to a Tag entity collection. Commonly used in `$expand` statements to access the Name property for multiple work item tags.                                                                    |
+| CreatedDate        | DateTimeOffset | The date the work item was created, expressed in the [time zone defined for the organization](../../organizations/accounts/change-organization-location.md). Commonly used for filtering and for display.         |
+| CreatedDateSK      | Int32          | The date the work item was created, expressed as YYYYMMDD in the time zone defined for the organization. Used by external tools to join related entities.                                                         |
+| CreatedOn          | Navigation     | Navigation property to the Date entity for the date the work item was created, in the time zone defined for the organization. Commonly used to reference properties from the Date entity in `groupby` statements. |
 
 > [!NOTE]
->Changes to custom work item fields will affect the shape of your data model and will affect all work item revisions. For instance, if you add a new field, queries on pre-existing revision data will reflect the presence of the new field. 
+> Changes to custom work item fields will affect the shape of your data model and will affect all work item revisions. For instance, if you add a new field, queries on pre-existing revision data will reflect the presence of the new field.
 
+## Related articles
 
-## Related articles 
-
-- [WIT analytics](wit-analytics.md)  
+- [WIT analytics](wit-analytics.md)
 - [Aggregate data](aggregated-data-analytics.md)
-- [Exploring Analytics OData metadata](analytics-metadata.md) 
-
-
+- [Exploring Analytics OData metadata](analytics-metadata.md)

@@ -7,7 +7,7 @@ ms.author: chcomley
 author: chcomley
 ms.date: 07/11/2019
 ms.topic: conceptual
-monikerRange: '>= tfs-2015 <= tfs-2018'
+monikerRange: ">= tfs-2015 <= tfs-2018"
 ---
 
 # Uninstall or disable extensions in Team Foundation Server
@@ -17,29 +17,28 @@ monikerRange: '>= tfs-2015 <= tfs-2018'
 When you no longer need an extension, you can uninstall or disable it. This article shows you how.
 
 > [!NOTE]
-> Charges continue for a paid extension until you [reduce all users to zero (0) for this extension](./change-paid-extension-users.md). 
+> Charges continue for a paid extension until you [reduce all users to zero (0) for this extension](./change-paid-extension-users.md).
 
 ## Prerequisites
 
-[Project Collection Administrators](../../organizations/security/set-project-collection-level-permissions.md) 
-with [**Edit collection-level information** permissions](../../organizations/security/permissions.md#collection) 
-can uninstall or disable extensions. 
+[Project Collection Administrators](../../organizations/security/set-project-collection-level-permissions.md)
+with [**Edit collection-level information** permissions](../../organizations/security/permissions.md#collection)
+can uninstall or disable extensions.
 
-1. From your TFS home page (```https://{server}:8080/tfs/```), go to the project collection where you want to uninstall or disable the extension.
+1.  From your TFS home page (`https://{server}:8080/tfs/`), go to the project collection where you want to uninstall or disable the extension.
 
-2. Select **Manage extensions**.
+2.  Select **Manage extensions**.
 
-   **TFS 2015 Update 3**
+    **TFS 2015 Update 3**
 
-   <img alt="Manage extensions" src="../media/manage-extensions.png" style="border: 1px solid #CCCCCC" />
-	
-   **TFS 2017**
+    <img alt="Manage extensions" src="../media/manage-extensions.png" style="border: 1px solid #CCCCCC" />
+    	
+    **TFS 2017**
 
-   <img alt="Manage extensions" src="../media/manage-extensions2-new.png" style="border: 1px solid #CCCCCC" />
+    <img alt="Manage extensions" src="../media/manage-extensions2-new.png" style="border: 1px solid #CCCCCC" />
 
-3. On the extensions tab, select the extension, and then uninstall or disable it.
+3.  On the extensions tab, select the extension, and then uninstall or disable it.
 
-	<img alt="Uninstall or disable an extension" src="../media/uninstall-disable.png" style="border: 1px solid #CCCCCC" />
+        	<img alt="Uninstall or disable an extension" src="../media/uninstall-disable.png" style="border: 1px solid #CCCCCC" />
 
-   [[Need help?](../faq-extensions.md#q-how-do-i-get-support-for-the-visual-studio-marketplace)]
-
+    [[Need help?](../faq-extensions.md#q-how-do-i-get-support-for-the-visual-studio-marketplace)]

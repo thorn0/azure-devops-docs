@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,12 +15,10 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-AMD javascript module loader shim configuration 
+AMD javascript module loader shim configuration
 
 ### Members
 
-* `deps`: string[]. 
+- `deps`: string[].
 
-* `exports`: string. 
-
+- `exports`: string.

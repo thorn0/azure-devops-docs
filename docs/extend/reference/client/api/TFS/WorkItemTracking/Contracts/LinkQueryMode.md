@@ -15,10 +15,10 @@ Module path: `TFS/WorkItemTracking/Contracts`
 
 ### Values
 
-* `WorkItems` 
-* `LinksOneHopMustContain` 
-* `LinksOneHopMayContain` 
-* `LinksOneHopDoesNotContain` 
-* `LinksRecursiveMustContain` 
-* `LinksRecursiveMayContain` 
-* `LinksRecursiveDoesNotContain` 
+- `WorkItems`
+- `LinksOneHopMustContain`
+- `LinksOneHopMayContain`
+- `LinksOneHopDoesNotContain`
+- `LinksRecursiveMustContain`
+- `LinksRecursiveMayContain`
+- `LinksRecursiveDoesNotContain`

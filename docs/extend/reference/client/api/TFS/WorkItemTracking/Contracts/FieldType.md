@@ -15,13 +15,13 @@ Module path: `TFS/WorkItemTracking/Contracts`
 
 ### Values
 
-* `String` 
-* `Integer` 
-* `DateTime` 
-* `PlainText` 
-* `Html` 
-* `TreePath` 
-* `History` 
-* `Double` 
-* `Guid` 
-* `Boolean` 
+- `String`
+- `Integer`
+- `DateTime`
+- `PlainText`
+- `Html`
+- `TreePath`
+- `History`
+- `Double`
+- `Guid`
+- `Boolean`

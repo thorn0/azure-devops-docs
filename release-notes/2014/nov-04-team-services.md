@@ -19,7 +19,7 @@ This one has been a long time coming, but you can now configure (per team) wheth
 
 ![Bugs displayed in the backlog](media/11_04_01.png)
 
-Click the admin gear icon and navigate to the settings view for each team in your project to toggle bugs on or off. 
+Click the admin gear icon and navigate to the settings view for each team in your project to toggle bugs on or off.
 
 ![Selecting bugs in project settings](media/11_04_02.png)
 

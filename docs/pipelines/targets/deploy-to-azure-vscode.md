@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: puagarw
 author: pulkitaggarwl
 ms.date: 03/19/2020
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Deploy to Azure App Service using Visual Studio Code
@@ -25,7 +25,7 @@ This tutorial walks you through setting up a CI/CD pipeline for deploying Node.j
 - A GitHub account, where you can create a repository. If you don't have one, you can [create one for free](https://github.com/).
 
 > [!IMPORTANT]
-> Ensure that you have all the prerequisites installed and configured. 
+> Ensure that you have all the prerequisites installed and configured.
 > In VS Code, you should see your Azure email address in the Status Bar.
 
 ## Create Node.js application
@@ -34,15 +34,13 @@ Create a Node.js application that can be deployed to the Cloud. This tutorial us
 
 > [!TIP]
 > If you have already completed the [Node.js](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial) tutorial, you can skip ahead to [Setup CI/CD Pipeline](#setup-cicd-pipeline).
-> 
 
-### Install the Express Generator 
+### Install the Express Generator
 
 [Express](https://www.expressjs.com/) is a popular framework for building and running Node.js applications. You can scaffold (create) a new Express application using the [Express Generator](https://expressjs.com/en/starter/generator.html) tool. The Express Generator is shipped as an npm module and installed by using the npm command-line tool `npm`.
 
 > [!TIP]
 > To test that you've got `npm` correctly installed on your computer, type npm --help from a terminal and you should see the usage documentation.
-> 
 
 Install the Express Generator by running the following from a terminal:
 
@@ -71,11 +69,11 @@ At this point, we should test that our application runs. The generated Express a
 
 1. From a terminal in the Express application folder, run:
 
-    `npm start`
+   `npm start`
 
-    The Node.js web server will start and you can browse to http://localhost:3000 to see the running application.
+   The Node.js web server will start and you can browse to http://localhost:3000 to see the running application.
 
-1. Follow [this link](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line) to push this project to GitHub using the command line. 
+1. Follow [this link](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line) to push this project to GitHub using the command line.
 
 1. Open your application folder in VS Code and get ready to deploy to Azure.
 
@@ -85,17 +83,17 @@ At this point, we should test that our application runs. The generated Express a
 
 1. Search for **Deploy to Azure** extension and install.
 
-    ![deploy to azure](media/deploy-to-azure/deploy-to-azure.png)
+   ![deploy to azure](media/deploy-to-azure/deploy-to-azure.png)
 
 1. After the installation is complete, the extension will be located in enabled extension space.
 
-    ![extension installed](media/deploy-to-azure/extension-installed.png)
+   ![extension installed](media/deploy-to-azure/extension-installed.png)
 
 ## Setup CI/CD Pipeline
 
 Now you can deploy to Azure App Services, Azure Function App and AKS using VS code. This VS Code extension helps you set up continuous build and deployment for Azure App Services without leaving VS Code.
 
-To use this service, you need to install the extension on VS Code. You can browse and install extensions from within VS Code. 
+To use this service, you need to install the extension on VS Code. You can browse and install extensions from within VS Code.
 
 ### Combination of workflows
 
@@ -105,40 +103,40 @@ We support GitHub Actions and Azure Pipelines for GitHub & Azure Repos correspon
 
 1. To set up a pipeline, choose `Deploy to Azure: Configure CI/CD Pipeline` from the command palette (Ctrl/Cmd + Shift + P) or right-click on the file explorer.
 
-    ![configure CI/CD](media/deploy-to-azure/configure.png)
+   ![configure CI/CD](media/deploy-to-azure/configure.png)
 
-    > [!NOTE]
-    > If the code is not opened in the workspace, it will ask for folder location. Similarly, if the code in the workspace has more than one folder, it will ask for folder.
+   > [!NOTE]
+   > If the code is not opened in the workspace, it will ask for folder location. Similarly, if the code in the workspace has more than one folder, it will ask for folder.
 
 1. Select a pipeline template you want to create from the list. Since we're targeting `Node.js`, select `Node.js with npm to App Service.`
 
-    ![pipeline template selection](media/deploy-to-azure/pipeline-template-selection.png)
+   ![pipeline template selection](media/deploy-to-azure/pipeline-template-selection.png)
 
 1. Select the target Azure Subscription to deploy your application.
 
-    ![Azure subscription](media/deploy-to-azure/azure-subscription.png)
+   ![Azure subscription](media/deploy-to-azure/azure-subscription.png)
 
 1. Select the target Azure resource to deploy your application.
 
-    ![target app](media/deploy-to-azure/target-app.png)
+   ![target app](media/deploy-to-azure/target-app.png)
 
 1. Enter GitHub personal access token (PAT), required to populate secrets that are used in GitHub workflows. Set the scope to `repo` and `admin:repo_hook`.
 
-    ![pat scope](media/deploy-to-azure/github-pat-scope.png)
+   ![pat scope](media/deploy-to-azure/github-pat-scope.png)
 
-    > [!TIP]
-    >If the code is in Azure Repos, you need different permissions.
+   > [!TIP]
+   > If the code is in Azure Repos, you need different permissions.
 
 1. The configuration of GitHub workflow or Azure Pipeline happens based on the extension setting. The guided workflow will generate a starter YAML file defining the build and deploy process. **Commit & push** the YAML file to proceed with the deployment.
 
-    ![commit YAML](media/deploy-to-azure/commit-push.png)
+   ![commit YAML](media/deploy-to-azure/commit-push.png)
 
-    > [!TIP]
-    > You can customize the pipeline using all the features offered by [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) and [GitHub Actions](https://github.com/features/actions/).
+   > [!TIP]
+   > You can customize the pipeline using all the features offered by [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) and [GitHub Actions](https://github.com/features/actions/).
 
 1. Navigate to your GitHub repo to see the actions in progress.
 
-    ![actions](media/deploy-to-azure/action-in-progress.png)
+   ![actions](media/deploy-to-azure/action-in-progress.png)
 
 1. Navigate to your site running in Azure using the Web App URL `http://{web_app_name}.azurewebsites.net`, and verify its contents.
 
@@ -160,47 +158,47 @@ When you open the settings editor, you can search and discover settings you are 
 
 1. To set up a pipeline, choose `Deploy to Azure: Configure CI/CD Pipeline` from the command palette (Ctrl/Cmd + Shift + P) or right-click on the file explorer.
 
-    ![configure CI/CD](media/deploy-to-azure/configure.png)
+   ![configure CI/CD](media/deploy-to-azure/configure.png)
 
-    > [!NOTE]
-    > If the code is not opened in the workspace, it will ask for folder location. Similarly, if the code in the workspace has more than one folder, it will ask for folder.
+   > [!NOTE]
+   > If the code is not opened in the workspace, it will ask for folder location. Similarly, if the code in the workspace has more than one folder, it will ask for folder.
 
 1. Select a pipeline template you want to create from the list. Since we're targeting `Node.js`, select `Node.js with npm to App Service.`
 
-    ![pipeline template selection](media/deploy-to-azure/pipeline-template-selection.png)
+   ![pipeline template selection](media/deploy-to-azure/pipeline-template-selection.png)
 
 1. Select the target Azure Subscription to deploy your application.
 
-    ![Azure subscription](media/deploy-to-azure/azure-subscription.png)
+   ![Azure subscription](media/deploy-to-azure/azure-subscription.png)
 
 1. Select the target Azure resource to deploy your application.
 
-    ![target app](media/deploy-to-azure/target-app.png)
+   ![target app](media/deploy-to-azure/target-app.png)
 
 1. Enter GitHub personal access token (PAT), required to populate secrets that are used in GitHub workflows. Set the scope to `repo` and `admin:repo_hook`.
 
-    ![pat scope](media/deploy-to-azure/github-pat.png)
+   ![pat scope](media/deploy-to-azure/github-pat.png)
 
-    ![pat scope](media/deploy-to-azure/github-pat-scope.png)
+   ![pat scope](media/deploy-to-azure/github-pat-scope.png)
 
 1. Select an Azure DevOps organization.
 
-    ![org](media/deploy-to-azure/azure-devops-org.png)
+   ![org](media/deploy-to-azure/azure-devops-org.png)
 
 1. Select an Azure DevOps project.
 
-    ![project](media/deploy-to-azure/azure-devops-project.png)
+   ![project](media/deploy-to-azure/azure-devops-project.png)
 
 1. The configuration of GitHub workflow or Azure Pipeline happens based on the extension setting. The guided workflow will generate a starter YAML file defining the build and deploy process. **Commit & push** the YAML file to proceed with the deployment.
 
-    ![commit YAML](media/deploy-to-azure/azure-starter-yml.png)
+   ![commit YAML](media/deploy-to-azure/azure-starter-yml.png)
 
-    > [!TIP]
-    > You can customize the pipeline using all the features offered by [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) and [GitHub Actions](https://github.com/features/actions/).
+   > [!TIP]
+   > You can customize the pipeline using all the features offered by [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) and [GitHub Actions](https://github.com/features/actions/).
 
 1. Navigate to your Azure DevOps project to see the pipeline in progress.
 
-    ![actions](media/deploy-to-azure/pipeline-in-progress.png)
+   ![actions](media/deploy-to-azure/pipeline-in-progress.png)
 
 1. Navigate to your site running in Azure using the Web App URL `http://{web_app_name}.azurewebsites.net`, and verify its contents.
 
@@ -208,33 +206,33 @@ When you open the settings editor, you can search and discover settings you are 
 
 1. To set up a pipeline, choose `Deploy to Azure: Configure CI/CD Pipeline` from the command palette (Ctrl/Cmd + Shift + P) or right-click on the file explorer.
 
-    ![configure CI/CD](media/deploy-to-azure/configure.png)
+   ![configure CI/CD](media/deploy-to-azure/configure.png)
 
-    > [!NOTE]
-    > If the code is not opened in the workspace, it will ask for folder location. Similarly, if the code in the workspace has more than one folder, it will ask for folder.
+   > [!NOTE]
+   > If the code is not opened in the workspace, it will ask for folder location. Similarly, if the code in the workspace has more than one folder, it will ask for folder.
 
 1. Select a pipeline template you want to create from the list. Since we're targeting `Node.js`, select `Node.js with npm to App Service.`
 
-    ![pipeline template selection](media/deploy-to-azure/pipeline-template-selection.png)
+   ![pipeline template selection](media/deploy-to-azure/pipeline-template-selection.png)
 
 1. Select the target Azure Subscription to deploy your application.
 
-    ![Azure subscription](media/deploy-to-azure/azure-subscription.png)
+   ![Azure subscription](media/deploy-to-azure/azure-subscription.png)
 
 1. Select the target Azure resource to deploy your application.
 
-    ![target app](media/deploy-to-azure/target-app.png)
+   ![target app](media/deploy-to-azure/target-app.png)
 
 1. The configuration of GitHub workflow or Azure Pipeline happens based on the extension setting. The guided workflow will generate a starter YAML file defining the build and deploy process. **Commit & push** the YAML file to proceed with the deployment.
 
-    ![commit YAML](media/deploy-to-azure/pipelines-commit-push.png)
+   ![commit YAML](media/deploy-to-azure/pipelines-commit-push.png)
 
-    > [!TIP]
-    > You can customize the pipeline using all the features offered by [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) and [GitHub Actions](https://github.com/features/actions/).
+   > [!TIP]
+   > You can customize the pipeline using all the features offered by [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) and [GitHub Actions](https://github.com/features/actions/).
 
 1. Navigate to your Azure DevOps project to see the pipeline in progress.
 
-    ![actions](media/deploy-to-azure/azure-pipelines-in-progress.png)
+   ![actions](media/deploy-to-azure/azure-pipelines-in-progress.png)
 
 1. Navigate to your site running in Azure using the Web App URL `http://{web_app_name}.azurewebsites.net`, and verify its contents.
 
@@ -243,4 +241,3 @@ When you open the settings editor, you can search and discover settings you are 
 Try the workflow with a Docker file in a repo.
 
 [!INCLUDE [rm-help-support-shared](../includes/rm-help-support-shared.md)]
-

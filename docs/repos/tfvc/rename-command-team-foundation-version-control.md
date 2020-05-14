@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Rename Command (Team Foundation Version Control)
 
@@ -30,6 +29,7 @@ tf rename [/lock:(none|checkout|checkin)] [/login:username,[password]] olditem n
 ```
 
 ## Parameters<table>
+
 <thead>
 <tr>
 <th><p><strong>Argument</strong></p></th>
@@ -79,34 +79,37 @@ tf rename [/lock:(none|checkout|checkin)] [/login:username,[password]] olditem n
 </table>
 
 ## Remarks
+
 You can use the **rename** command of the **tf** command-line utility to move or rename a version-controlled item in your workspace. Use the **rename** command to move multiple files by specifying wildcard characters. The ability to rename multiple version-controlled files or folders, is only available from the command-line.
 
 Use Rename to do the following:
 
--   Rename the *olditem* to the *newitem*, such as `tf rename 314.cs 315.cs`.
+- Rename the _olditem_ to the _newitem_, such as `tf rename 314.cs 315.cs`.
 
--   Move the *olditem* to a new location in the Team Foundation version control server by providing a *newitem* whose path differs from that of the *olditem*, such as ** **`tf rename 314.cs ..\\newdir\\314.cs`.
+- Move the _olditem_ to a new location in the Team Foundation version control server by providing a _newitem_ whose path differs from that of the _olditem_, such as \*\* \*\*`tf rename 314.cs ..\\newdir\\314.cs`.
 
-If you provide a *newitem* that specifies a non-existent folder, the **rename** command creates the destination folder. If *newitem* is a folder, *olditem* becomes a child of *newitem*.
+If you provide a _newitem_ that specifies a non-existent folder, the **rename** command creates the destination folder. If _newitem_ is a folder, _olditem_ becomes a child of _newitem_.
 
 You cannot rename an item if:
 
--   You have already deleted it before it was checked in to the same workspace.
+- You have already deleted it before it was checked in to the same workspace.
 
--   The new name already exists in the Team Foundation version control server and is not a folder.
+- The new name already exists in the Team Foundation version control server and is not a folder.
 
--   You have already added, branched, or renamed the pending check-in of the item.
+- You have already added, branched, or renamed the pending check-in of the item.
 
--   The item is mapped in the workspace but not available on the local disk.
+- The item is mapped in the workspace but not available on the local disk.
 
--   The item is cloaked.
+- The item is cloaked.
 
 You can rename an item for which another file of the same name has been added pending check-in but you cannot rename an item that has been branched but not yet checked in. When you rename a file that has pending edits, the edits are preserved.
 
-An item that is explicitly mapped cannot be renamed without first changing the mapping. For example, if there is a working folder mapping of $/ProjectX/MyApp to c:\\MyApp, you cannot rename MyApp. You can rename items under *MyApp* but not *MyApp* itself.
+An item that is explicitly mapped cannot be renamed without first changing the mapping. For example, if there is a working folder mapping of \$/ProjectX/MyApp to c:\\MyApp, you cannot rename MyApp. You can rename items under _MyApp_ but not _MyApp_ itself.
 
 For more information on how to find the **tf** command-line utility, see [Tf Command-Line Utility Commands](https://msdn.microsoft.com/library/z51z7zy0).
+
 ## Examples
+
 The following example changes the name of 314.c to 1254.c.
 
 ```

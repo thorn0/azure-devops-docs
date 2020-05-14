@@ -8,7 +8,7 @@ ms.custom: seodec18
 ms.author: puagarw
 author: pulkitaggarwl
 ms.date: 9/18/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Deploy a Function App Container
@@ -52,12 +52,12 @@ YAML pipelines aren't available on TFS.
 
 ::: moniker range="< azure-devops"
 
-> [!TIP] 
+> [!TIP]
 > If you're new to Azure DevOps Server or TFS, then see [Create your first pipeline](../create-first-pipeline.md) before you start.
 
 ::: moniker-end
 
-To get started: 
+To get started:
 
 1. Fork this repo in GitHub, or import it into Azure Repos:
 
@@ -73,7 +73,7 @@ To get started:
 
 5. Link the build pipeline to this release pipeline as an artifact. Save the release pipeline and create a release to see it in action.
 
-* * *
+---
 
 Now that the build pipeline is in place, you will learn a few more common configurations to customize the deployment of the Azure Function App Container.
 
@@ -91,12 +91,12 @@ input. The Azure service connection stores the credentials to connect from Azure
 You must supply an Azure service connection to the `AzureFunctionAppContainer` task. Add the following YAML snippet to your existing **azure-pipelines.yaml** file. Make sure you add the service connection details in the variables section as shown below.
 
 ```yaml
-variables: 
+variables:
   ## Add this under variables section in the pipeline
   azureSubscription: <Name of the Azure subscription>
   appName: <Name of the function App>
   containerRegistry: <Name of the Azure container registry>
-```    
+```
 
 ::: moniker-end
 
@@ -122,7 +122,7 @@ To learn how to create an Azure service connection, see [Create an Azure service
 
 ::: moniker-end
 
-* * *
+---
 
 ## Configure registry credentials in Function App
 
@@ -151,7 +151,7 @@ variables:
   containerRegistry: <Name of the Azure container registry>
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
-  
+
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
@@ -178,7 +178,7 @@ The simplest way to deploy to an Azure Function App Container is to use the **Az
 This task is added to the release pipeline when you select the deployment task for Azure Function App on Container deployment.
 Templates exist for apps developed in various programming languages. If you can't find a template for your language, select the generic **Azure App Service Deployment** template.
 
-* * *
+---
 
 ## Deploy to a slot
 
@@ -222,4 +222,4 @@ YAML pipelines aren't available on TFS.
 You can configure the Azure Function App for container to have multiple slots. Slots allow you to safely deploy your app and test it before making it available to your customers.
 Use the option **Deploy to Slot** in the **Azure Function App Container** task to specify the slot to deploy to. You can swap the slots by using the **Azure App Service Manage** task.
 
-* * *
+---

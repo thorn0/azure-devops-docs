@@ -2,15 +2,14 @@
 title: Git limits
 titleSuffix: Azure Repos
 description: Resource limits applied to Git operations
-ms.assetid: 
-ms.technology: devops-code-git 
+ms.assetid:
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 04/23/2018
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
-
 
 # Git limits
 
@@ -59,4 +58,5 @@ We don't intend to block imports, even of very large repositories.
 If the repository is more than 5GB, then you must use the web to [Import the repository](import-git-repository.md) instead of the command line.
 
 ### Push size for LFS objects
-[Git LFS](https://git-lfs.github.com/) doesn't count towards the 5GB repo limit. The 5GB limit is only for files in the actual repo, not blobs stored as part of LFS. If you get failing pushes on the 5GB limit verify your ````.gitattributes```` file includes the extensions of the files you mean to track using LFS and that this file was saved and staged before you staged the large files to be tracked.
+
+[Git LFS](https://git-lfs.github.com/) doesn't count towards the 5GB repo limit. The 5GB limit is only for files in the actual repo, not blobs stored as part of LFS. If you get failing pushes on the 5GB limit verify your `.gitattributes` file includes the extensions of the files you mean to track using LFS and that this file was saved and staged before you staged the large files to be tracked.

@@ -15,5 +15,5 @@ steps:
     dockerRegistryServiceConnection: 'Container_dockerHub'
     repository: adma/hellodocker
     tag: v1
-    configFile: /home/user/cstfiles/fileexisttest.yaml  
+    configFile: /home/user/cstfiles/fileexisttest.yaml
 ```

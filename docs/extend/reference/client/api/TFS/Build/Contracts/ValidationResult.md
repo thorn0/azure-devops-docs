@@ -16,6 +16,6 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `OK` 
-* `Warning` 
-* `Error` 
+- `OK`
+- `Warning`
+- `Error`

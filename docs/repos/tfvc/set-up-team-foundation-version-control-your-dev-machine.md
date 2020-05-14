@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Set up Team Foundation Version Control on your dev machine
 
@@ -20,9 +19,9 @@ To set up Team Foundation Version Control (TFVC) on your dev machine, you just n
 
 **Before you start**
 
--   If you don't have Visual Studio, [get it here](https://visualstudio.microsoft.com/).
+- If you don't have Visual Studio, [get it here](https://visualstudio.microsoft.com/).
 
--   If you don't have a project, [create](../../organizations/projects/create-project.md) or [get access](../../organizations/public/invite-users-public.md) to one.
+- If you don't have a project, [create](../../organizations/projects/create-project.md) or [get access](../../organizations/public/invite-users-public.md) to one.
 
 ## Create a workspace and get the code
 
@@ -30,7 +29,7 @@ From Visual Studio, go to the Team Explorer Connect page (Keyboard: Ctrl + 0, C)
 
 ![Create a workspace and get the code](media/set-up-team-foundation-version-control-your-dev-machine/IC750752.png)
 
-(If the project you want to open is not listed, choose **Select Projects** and then 
+(If the project you want to open is not listed, choose **Select Projects** and then
 [connect to the project](../../organizations/projects/connect-to-projects.md).)
 
 Map the project to a folder on your dev machine.
@@ -74,6 +73,7 @@ When your team decides to branch the codebase, you can convert the Main folder t
 If you've got an idea for a new app, you can use version control from the start. Create a new code project (Keyboard: Ctrl + Shift + N), and add it to TFVC version control:
 
 ![Create a new solution under version control](media/set-up-team-foundation-version-control-your-dev-machine/IC696635.png)
+
 > [!TIP]
 > We suggest that you put your new project in **c:\Users\\**<em>YourName</em>**\Source\Workspaces\\**.
 
@@ -99,18 +99,18 @@ You've already got an app in progress and you want to begin working on it under 
 
 ## Q & A
 
--   **Q: I'm really new to all this; can I get more help?**
+- **Q: I'm really new to all this; can I get more help?**
 
-    **A:** Yes, [let us walk you step by step to get started](share-your-code-in-tfvc-vs.md).
+  **A:** Yes, [let us walk you step by step to get started](share-your-code-in-tfvc-vs.md).
 
--   **Q: Is your folder structure complex or do you use branches?**
+- **Q: Is your folder structure complex or do you use branches?**
 
-    **A:** If so, you can [create one or more workspaces](create-work-workspaces.md) and then [optimize them to meet your needs](optimize-your-workspace.md).
+  **A:** If so, you can [create one or more workspaces](create-work-workspaces.md) and then [optimize them to meet your needs](optimize-your-workspace.md).
 
 ## Try this next
 
- [Set up a CI build](../../pipelines/build/triggers.md) 
+[Set up a CI build](../../pipelines/build/triggers.md)
 
 ## Dig deeper
 
- [Develop your app in Team Foundation version control](develop-your-app-team-foundation-version-control.md) 
+[Develop your app in Team Foundation version control](develop-your-app-team-foundation-version-control.md)

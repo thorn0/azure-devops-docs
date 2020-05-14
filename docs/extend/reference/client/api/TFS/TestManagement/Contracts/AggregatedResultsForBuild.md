@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `build`: [BuildReference](../../../TFS/TestManagement/Contracts/BuildReference.md). 
+- `build`: [BuildReference](../../../TFS/TestManagement/Contracts/BuildReference.md).
 
-* `duration`: any. This is tests execution duration in a build.
+- `duration`: any. This is tests execution duration in a build.
 
-* `resultsByOutcome`: {[key: number]: [AggregatedResultsByOutcome](../../../TFS/TestManagement/Contracts/AggregatedResultsByOutcome.md)}. 
-
+- `resultsByOutcome`: {[key: number]: [AggregatedResultsByOutcome](../../../TFS/TestManagement/Contracts/AggregatedResultsByOutcome.md)}.

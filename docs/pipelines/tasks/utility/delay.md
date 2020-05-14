@@ -1,13 +1,13 @@
 ---
 title: Delay task
-description: Pause execution of a build or release pipeline for a fixed delay time 
+description: Pause execution of a build or release pipeline for a fixed delay time
 ms.assetid: 1EFDAB02-66D7-4B8A-A8BC-43AF2C43F282
 ms.topic: reference
 ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 02/12/2020
-monikerRange: '> tfs-2018'
+monikerRange: "> tfs-2018"
 ---
 
 # Delay task
@@ -30,9 +30,9 @@ Can be used in only an [agentless job](../../process/phases.md#server-jobs) of a
 
 ## Arguments
 
-| Arguments | Description |
-| --- | --- |
-| `delayForMinutes`<br/>Delay Time (minutes)| (Required) Delay the execution of the workflow by specified time in minutes. <br/>0 value means that workflow execution will start without delay <br/>Default value: `0`|
+| Arguments                                  | Description                                                                                                                                                              |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `delayForMinutes`<br/>Delay Time (minutes) | (Required) Delay the execution of the workflow by specified time in minutes. <br/>0 value means that workflow execution will start without delay <br/>Default value: `0` |
 
 Also see this task on [GitHub](https://github.com/Microsoft/azure-pipelines-tasks/tree/master/Tasks/DelayV1).
 

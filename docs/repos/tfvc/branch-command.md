@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Branch Command
 
@@ -31,15 +30,15 @@ tf branch olditem newitem [/version:versionspec] [/noget] [/lock:(none|checkin|c
 
 ## Parameters
 
-|     **Argument**      |                                                                                                                                                                                      **Description**                                                                                                                                                                                       |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|       *olditem*       |                                                                                                                      Specifies the name of the source file or folder being branched. The *olditem* may also contain version information in the format *item;version*.                                                                                                                      |
-|       *newitem*       | Specifies the name of the destination file or folder or the parent folder for the destination. If *newitem* already exists and is a Team Foundation version control server folder, Team Foundation creates the branched items within it. Otherwise, *newitem* specifies the name of the destination file or folder. Conflicts can occur during check-in if the destination already exists. |
-|     *versionspec*     |                                                            Provides a value for the **/version** option. For more information about how Team Foundation parses a version specification to determine which items are within its scope, see [Command-Line Syntax (Version Control)](https://msdn.microsoft.com/library/56f7w6be).                                                            |
-|       *comment*       |                                                                                                                                                                            Provides a comment about the branch.                                                                                                                                                                            |
-| <em>@commentfile</em> |                                                                                                                                                    Specifies the path of a file that contains the comment that is used for the branch.                                                                                                                                                     |
-|     *authorname*      |                                                                                                                                                                    The user-provided value for the **/author** option.                                                                                                                                                                     |
-|      *username*       |                                                                                                                                 Provides a value to the **/login** option. You can specify a username value as either *DOMAIN*\*UserName\* or *UserName*.                                                                                                                                  |
+| **Argument**          | **Description**                                                                                                                                                                                                                                                                                                                                                                            |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| _olditem_             | Specifies the name of the source file or folder being branched. The _olditem_ may also contain version information in the format _item;version_.                                                                                                                                                                                                                                           |
+| _newitem_             | Specifies the name of the destination file or folder or the parent folder for the destination. If _newitem_ already exists and is a Team Foundation version control server folder, Team Foundation creates the branched items within it. Otherwise, _newitem_ specifies the name of the destination file or folder. Conflicts can occur during check-in if the destination already exists. |
+| _versionspec_         | Provides a value for the **/version** option. For more information about how Team Foundation parses a version specification to determine which items are within its scope, see [Command-Line Syntax (Version Control)](https://msdn.microsoft.com/library/56f7w6be).                                                                                                                       |
+| _comment_             | Provides a comment about the branch.                                                                                                                                                                                                                                                                                                                                                       |
+| <em>@commentfile</em> | Specifies the path of a file that contains the comment that is used for the branch.                                                                                                                                                                                                                                                                                                        |
+| _authorname_          | The user-provided value for the **/author** option.                                                                                                                                                                                                                                                                                                                                        |
+| _username_            | Provides a value to the **/login** option. You can specify a username value as either _DOMAIN_\*UserName\* or _UserName_.                                                                                                                                                                                                                                                                  |
 
 <table><thead>
 <tr><th><p><strong>Option</strong></p></th><th><p><strong>Description</strong></p></th></tr></thead><tbody>
@@ -76,13 +75,16 @@ tf branch olditem newitem [/version:versionspec] [/noget] [/lock:(none|checkin|c
 </table>
 
 ## Remarks
-If you specify a local path such as c:\\00101 but do not specify a *versionspec*, Team Foundation uses the local workspace version as the basis for creating the new branch.
 
-However, if you specify a server path such as $/00101/\*.cs and do not specify a *versionspec*, Team Foundation uses the latest Team Foundation version control server version as the basis for creating the new branch instead.
+If you specify a local path such as c:\\00101 but do not specify a _versionspec_, Team Foundation uses the local workspace version as the basis for creating the new branch.
+
+However, if you specify a server path such as \$/00101/\*.cs and do not specify a _versionspec_, Team Foundation uses the latest Team Foundation version control server version as the basis for creating the new branch instead.
 
 For more information on how to find the **tf** command-line utility, see [Tf Command-Line Utility Commands](https://msdn.microsoft.com/library/z51z7zy0).
+
 ## Examples
-The following example creates a branch file that contains the latest workspace version of 314.cs, names it "314\_branch", and saves it to the current directory on disk and also to the Team Foundation version control server folder to which it maps.
+
+The following example creates a branch file that contains the latest workspace version of 314.cs, names it "314_branch", and saves it to the current directory on disk and also to the Team Foundation version control server folder to which it maps.
 
 ```
 c:\projects>tf branch 314.cs 314_branch
@@ -94,19 +96,19 @@ The following example copies all the files without pending edits in the workspac
 c:\projects>tf branch C:\314.cs $/testdata
 ```
 
-The following example copies all the files without pending edits in the current workspace version of the testfiles folder and the files it contains for all items from its current Team Foundation version control server folder into the testfiles\_branch Team Foundation version control server folder and from c:\\testfiles into the local folder that maps to the testfiles\_branch Team Foundation version control server folder.
+The following example copies all the files without pending edits in the current workspace version of the testfiles folder and the files it contains for all items from its current Team Foundation version control server folder into the testfiles_branch Team Foundation version control server folder and from c:\\testfiles into the local folder that maps to the testfiles_branch Team Foundation version control server folder.
 
 ```
 c:\projects>tf branch C:\testfiles $/testfiles_branch
 ```
 
-The following example creates a branch of 314.cs as it existed in changeset \#4 for the file. In the working folder on disk, as in the Team Foundation version control server, a branch file titled csharp\_branch is created.
+The following example creates a branch of 314.cs as it existed in changeset \#4 for the file. In the working folder on disk, as in the Team Foundation version control server, a branch file titled csharp_branch is created.
 
 ```
 c:\projects>tf branch C:\314.cs;C4 csharp_branch
 ```
 
-The following example creates a new branch of 314.cs as it was on 12/12/03. In the working folder on disk as in the Team Foundation version control server, a branch file titled 314\_branch is created.
+The following example creates a new branch of 314.cs as it was on 12/12/03. In the working folder on disk as in the Team Foundation version control server, a branch file titled 314_branch is created.
 
 ```
 c:\projects>tf branch 314.cs;D12/12/03 314_branch

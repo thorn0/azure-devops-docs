@@ -13,7 +13,7 @@ ms.technology: devops-cicd-tasks
 - task: PublishTestResults@2
   inputs:
     #testResultsFormat: 'JUnit' # Options: JUnit, NUnit, VSTest, xUnit, cTest
-    #testResultsFiles: '**/TEST-*.xml' 
+    #testResultsFiles: '**/TEST-*.xml'
     #searchFolder: '$(System.DefaultWorkingDirectory)' # Optional
     #mergeTestResults: false # Optional
     #failTaskOnFailedTests: false # Optional

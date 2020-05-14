@@ -5,7 +5,7 @@ ms.assetid: 60a3f33a-d8bc-436a-a676-c1bd4b3066e7
 ms.technology: devops-artifacts
 ms.topic: conceptual
 ms.date: 02/16/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Share your NuGet, npm, and Maven packages from Azure DevOps Services with badges
@@ -20,13 +20,13 @@ Example NuGet package badge:
 > [!NOTE]
 > Package badges can only be created and shared for released versions of packages; the criteria for what is considered a released version depends on the protocol type. Prereleased versions will not be displayed in badges, instead the badge will show the latest release version.
 
-## Enable package sharing  
+## Enable package sharing
 
 To start sharing your Azure DevOps Services-hosted packages with badges you'll first have to turn on **Package sharing** in your feed settings.
 
 > Only feed administrators can edit the feed.
 
-1. Go to your Feed settings page by clicking on the gear icon from your feed page: 
+1. Go to your Feed settings page by clicking on the gear icon from your feed page:
 
    ::: moniker range=">= azure-devops-2019"
 
@@ -40,7 +40,7 @@ To start sharing your Azure DevOps Services-hosted packages with badges you'll f
 
    ::: moniker-end
 
-2. Find the **Package sharing** section and select *Enable package badges*.
+2. Find the **Package sharing** section and select _Enable package badges_.
 
 This will enable the **Create badge** button for every package in that feed.
 
@@ -60,10 +60,10 @@ This will enable the **Create badge** button for every package in that feed.
 
 You can create a badge for any package that is in a feed with package sharing enabled. You can only create a badge for the latest version of each package.
 
-1. Go to your package in Azure DevOps Services and click the **Create badge** option. 
+1. Go to your package in Azure DevOps Services and click the **Create badge** option.
 
-2. Select a *Feed view* for your package badge. If you're using release views, select the view that contains the packages you want to share; otherwise, just use `No view`.
+2. Select a _Feed view_ for your package badge. If you're using release views, select the view that contains the packages you want to share; otherwise, just use `No view`.
 
-3. You'll see a preview of your badge. You can copy the Markdown version of your badge that includes alt text, or a direct image link. 
+3. You'll see a preview of your badge. You can copy the Markdown version of your badge that includes alt text, or a direct image link.
 
 Add the markdown or direct image link to your README or any other place you want to share your package!

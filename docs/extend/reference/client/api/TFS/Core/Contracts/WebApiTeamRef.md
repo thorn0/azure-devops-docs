@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Core/Contracts`
 
-
 ### Members
 
-* `id`: string. Team (Identity) Guid. A Team Foundation ID.
+- `id`: string. Team (Identity) Guid. A Team Foundation ID.
 
-* `name`: string. Team name
+- `name`: string. Team name
 
-* `url`: string. Team REST API Url
-
+- `url`: string. Team REST API Url

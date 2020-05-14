@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `changeType`: [AuditAction](./AuditAction.md). 
+- `changeType`: [AuditAction](./AuditAction.md).
 
-* `definition`: [BuildDefinition](./BuildDefinition.md). 
-
+- `definition`: [BuildDefinition](./BuildDefinition.md).

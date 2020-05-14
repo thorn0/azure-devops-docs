@@ -17,19 +17,18 @@ Extends: [TfvcChangesetRef](../../../TFS/VersionControl/Contracts/TfvcChangesetR
 
 ### Members
 
-* `accountId`: string. 
+- `accountId`: string.
 
-* `changes`: [TfvcChange](../../../TFS/VersionControl/Contracts/TfvcChange.md)[]. 
+- `changes`: [TfvcChange](../../../TFS/VersionControl/Contracts/TfvcChange.md)[].
 
-* `checkinNotes`: [CheckinNote](../../../TFS/VersionControl/Contracts/CheckinNote.md)[]. 
+- `checkinNotes`: [CheckinNote](../../../TFS/VersionControl/Contracts/CheckinNote.md)[].
 
-* `collectionId`: string. 
+- `collectionId`: string.
 
-* `hasMoreChanges`: boolean. 
+- `hasMoreChanges`: boolean.
 
-* `policyOverride`: [TfvcPolicyOverrideInfo](../../../TFS/VersionControl/Contracts/TfvcPolicyOverrideInfo.md). 
+- `policyOverride`: [TfvcPolicyOverrideInfo](../../../TFS/VersionControl/Contracts/TfvcPolicyOverrideInfo.md).
 
-* `teamProjectIds`: string[]. 
+- `teamProjectIds`: string[].
 
-* `workItems`: [AssociatedWorkItem](../../../TFS/VersionControl/Contracts/AssociatedWorkItem.md)[]. 
-
+- `workItems`: [AssociatedWorkItem](../../../TFS/VersionControl/Contracts/AssociatedWorkItem.md)[].

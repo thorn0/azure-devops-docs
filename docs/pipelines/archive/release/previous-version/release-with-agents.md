@@ -7,37 +7,38 @@ ms.topic: conceptual
 ms.author: ronai
 author: RoopeshNair
 ms.date: 07/16/2018
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Release your app to environments with deployment agents
 
 [!INCLUDE [previous-version-header](../includes/previous-version-header.md)]
 
-If you want to use PowerShell, DSC or Chef to deploy your app, you must 
-use vNext environments; go 
+If you want to use PowerShell, DSC or Chef to deploy your app, you must
+use vNext environments; go
 **[here](release-without-agents.md)** for instructions.
 Otherwise if you are using deployment agents, follow these steps.
 
-If you haven't already done so, 
-**[connect to release management](manage-your-release.md#ConnectRMUrl)** 
-and **[add stages](manage-your-release.md#AddStages)** 
+If you haven't already done so,
+**[connect to release management](manage-your-release.md#ConnectRMUrl)**
+and **[add stages](manage-your-release.md#AddStages)**
 for your release.
 
 <a name="SetupEnv"></a>
+
 ## Set up servers and environments
 
-1. **[Install and configure a deployment agent](install-release-management/install-deployment-agent.md)** 
+1. **[Install and configure a deployment agent](install-release-management/install-deployment-agent.md)**
    on any machine that will be part of the environment used to deploy your app.
 
 1. Scan for new servers that already have deployment agents installed.
-   If the server you want to use is not in the list, 
-   check that the service for the deployment agent (Microsoft Deployment Agent) 
+   If the server you want to use is not in the list,
+   check that the service for the deployment agent (Microsoft Deployment Agent)
    is started on that machine.
 
    ![Scan for servers](media/release-with-agents-01.png)
 
-1. Register the servers to use for your environments. You will deploy your app to 
+1. Register the servers to use for your environments. You will deploy your app to
    the servers in an environment as part of your release pipeline.
 
    ![Register your server to use in the release pipeline](media/release-with-agents-02.png)
@@ -49,6 +50,7 @@ for your release.
    An environment can contain multiple servers.
 
 <a name="CreateReleaseTemplate"></a>
+
 ## Create a release template
 
 Check the code for your app has been added to version control.
@@ -65,16 +67,16 @@ You also need a build definition that builds your app.
 
 1. Create a release template and use the release path that you just added.
    Link your build definition to this release template to have access to the build.
-   
+
    ![Add a release template](media/release-with-agents-06.png)
 
    Next you define the sequence of actions that deploys your app for each stage.
-   
+
    ![From the Release Templates page add the deployment sequence](media/release-with-agents-07.png)
 
-   The deployment agent must have sufficient permissions to perform 
+   The deployment agent must have sufficient permissions to perform
    any of the actions in your sequence.
-   For example, to remove a web site the deployment agent service must 
+   For example, to remove a web site the deployment agent service must
    run as a local administrator on that machine.
 
 ## Next steps
@@ -90,7 +92,7 @@ You also need a build definition that builds your app.
 
 ![Configure Apps tab, Components](media/release-with-agents-08.png)
 
-Add the component to the release template. Now you can add this 
+Add the component to the release template. Now you can add this
 component to any stage that needs it.
 
 ![Configure Apps tab, Release Templates, right-click Components and choose Add](media/release-with-agents-09.png)
@@ -102,20 +104,20 @@ component to any stage that needs it.
 ### Q: How do I copy a deployment sequence of one stage to another?
 
 **A**: Use the shortcut menu of a sequence to copy it.
-Select the sequence where you want to paste it, 
-and use its shortcut menu to **Paste Deployment Sequence**.  
+Select the sequence where you want to paste it,
+and use its shortcut menu to **Paste Deployment Sequence**.
 
 ![Release template with deployment sequence selected](media/release-with-agents-10.png)
 
 ## Related topics
 
-* [Overview of Release Management](release-management-overview.md)
-* [Install Release Management](install-release-management.md)
-* [Manage your release](manage-your-release.md)
-* [Release without deployment agents](release-without-agents.md)
-* [Trigger a release from a build](trigger-a-release.md)
-* [Deploy continuously to Azure](deploy-continuously-to-azure.md) 
- 
+- [Overview of Release Management](release-management-overview.md)
+- [Install Release Management](install-release-management.md)
+- [Manage your release](manage-your-release.md)
+- [Release without deployment agents](release-without-agents.md)
+- [Trigger a release from a build](trigger-a-release.md)
+- [Deploy continuously to Azure](deploy-continuously-to-azure.md)
+
 [!INCLUDE [wpfver-back-to-index-shared](../includes/wpfver-back-to-index-shared.md)]
- 
+
 [!INCLUDE [wpfver-support-shared](../includes/wpfver-support-shared.md)]

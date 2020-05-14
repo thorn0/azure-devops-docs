@@ -15,5 +15,5 @@ Module path: `TFS/VersionControl/Contracts`
 
 ### Values
 
-* `RawText` 
-* `Base64Encoded` 
+- `RawText`
+- `Base64Encoded`

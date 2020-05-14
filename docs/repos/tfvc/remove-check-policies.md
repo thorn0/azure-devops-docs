@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Remove Check-In Policies
 
@@ -21,7 +20,9 @@ Administrators of Team Foundation version control can add check-in policy requir
 **Required Permissions**
 
 To complete this procedure, you must have the **Edit project-level information** permission set to **Allow**. For more information, see [Permissions and groups reference](../../organizations/security/permissions.md).
+
 ## Procedure
+
 ### To remove a check-in policy
 
 1.  From the **Team** menu, choose **Project Settings**, and then select **Source Control**.

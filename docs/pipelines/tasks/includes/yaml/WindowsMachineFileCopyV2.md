@@ -12,11 +12,11 @@ ms.technology: devops-cicd-tasks
 # Copy files to remote Windows machines
 - task: WindowsMachineFileCopy@2
   inputs:
-    sourcePath: 
+    sourcePath:
     #machineNames: # Optional
     #adminUserName: # Optional
     #adminPassword: # Optional
-    targetPath: 
+    targetPath:
     #cleanTargetBeforeCopy: false # Optional
     #copyFilesInParallel: true # Optional
     #additionalArguments: # Optional

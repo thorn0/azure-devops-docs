@@ -4,19 +4,19 @@ titleSuffix: Azure Repos
 description: Using Version Control for your project in Azure DevOps
 ms.assetid: F1DE1F34-50BD-49A6-BF67-D27F884944F4
 toc: show
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: conceptual
-ms.date: 09/10/2018 
-monikerRange: '>= tfs-2015'
+ms.date: 09/10/2018
+monikerRange: ">= tfs-2015"
 ---
 
+# Use Git and TFVC repos in the same project
 
-#  Use Git and TFVC repos in the same project
 #### Azure Repos | Azure DevOps Server 2019 | TFS 2018 | TFS 2017 | TFS 2015 Update 1
 
-In Team Foundation Server 2015 Update 1, a project administrator can add a Git repo to a project created with Team Foundation Version Control (TFVC). You can also add a TFVC repo to a project created with Git. This allows you to adopt a new version control system while preserving all the data in your project. 
+In Team Foundation Server 2015 Update 1, a project administrator can add a Git repo to a project created with Team Foundation Version Control (TFVC). You can also add a TFVC repo to a project created with Git. This allows you to adopt a new version control system while preserving all the data in your project.
 
 ## Enable access to the new repo type
 
@@ -27,30 +27,30 @@ Because permissions are applied at project creation time by a process template, 
 If your TFVC project was created prior to TFS 2015 Update 1, a project administrator will need to apply some project-level permissions once the first Git repo is created. Go to the Version Control administration page and select the "Git repositories" node in the tree. To set up the same group permissions as any of our default process templates (Agile, Scrum, CMMI), add the following TFS groups and permissions:
 
 1. [_ProjectName_]\Readers
-	- Allow: Read
-	- Not set: All others
+   - Allow: Read
+   - Not set: All others
 2. [_ProjectName_]\Contributors
-	- Allow: Branch creation, Contribute, Note management, Read, Tag creation
-	- Not set: All others
+   - Allow: Branch creation, Contribute, Note management, Read, Tag creation
+   - Not set: All others
 3. [_ProjectName_]\Build Administrators
-	- Allow: Branch creation, Contribute, Note management, Read, Tag creation
-	- Not set: All others
+   - Allow: Branch creation, Contribute, Note management, Read, Tag creation
+   - Not set: All others
 
 If your TFVC project was created **after** TFS 2015 Update 1, these permissions have already been applied for you, and no action is necessary except creating the repository.
 
 ### Add a Team Foundation Version Control repo to a Git project
 
-The project administrator will need to apply some project folder-level permissions when the project folder is created. Go to the Version Control administration page and select the "$/_ProjectName_" node in the tree. To set up the same groups as any of our default process templates (Agile, Scrum, CMMI), add the following TFS groups and permissions:
+The project administrator will need to apply some project folder-level permissions when the project folder is created. Go to the Version Control administration page and select the "\$/_ProjectName_" node in the tree. To set up the same groups as any of our default process templates (Agile, Scrum, CMMI), add the following TFS groups and permissions:
 
 1. [_ProjectName_]\Readers
-	- Allow: Read
-	- Not set: All others
+   - Allow: Read
+   - Not set: All others
 2. [_ProjectName_]\Contributors
-	- Allow: Check in, Check out, Label, Lock, Merge, Read
-	- Not set: All others
+   - Allow: Check in, Check out, Label, Lock, Merge, Read
+   - Not set: All others
 3. [_ProjectName_]\Build Administrators
-	- Allow: Check in, Check out, Label, Lock, Merge, Read
-	- Not set: All others
+   - Allow: Check in, Check out, Label, Lock, Merge, Read
+   - Not set: All others
 
 ## Projects with multiple repo types in Visual Studio
 

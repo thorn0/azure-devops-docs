@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.assetid: 09E36E4D-D94B-4F5B-BE4D-9E7B4E7B68E2
 ms.reviewer: chrispat
 ms.date: 10/15/2018
-monikerRange: '>= tfs-2017 < azure-devops'
+monikerRange: ">= tfs-2017 < azure-devops"
 ---
 
 # Run the agent with a self-signed certificate
@@ -25,11 +25,13 @@ An error occurred while sending the request.
 ```
 
 Agent diagnostic log shows:
+
 ```
 [2017-11-06 20:55:33Z ERR  AgentServer] System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.Http.WinHttpException: A security error occurred
 ```
 
 This error may indicate the server certificate you used on your TFS server is not trusted by the build machine. Make sure you install your self-signed ssl server certificate into the OS certificate store.
+
 ```
 Windows: Windows certificate store
 Linux: OpenSSL certificate store
@@ -39,9 +41,10 @@ macOS: OpenSSL certificate store for agent version 2.124.0 or below
 
 You can easily verify whether the certificate has been installed correctly by running few commands.
 You should be good as long as SSL handshake finished correctly even you get a 401 for the request.
+
 ```
-Windows: PowerShell Invoke-WebRequest -Uri https://corp.tfs.com/tfs -UseDefaultCredentials 
-Linux: curl -v https://corp.tfs.com/tfs 
+Windows: PowerShell Invoke-WebRequest -Uri https://corp.tfs.com/tfs -UseDefaultCredentials
+Linux: curl -v https://corp.tfs.com/tfs
 macOS: curl -v https://corp.tfs.com/tfs (agent version 2.124.0 or below, curl needs to be built for OpenSSL)
        curl -v https://corp.tfs.com/tfs (agent version 2.125.0 or above, curl needs to be built for Secure Transport)
 ```
@@ -50,29 +53,33 @@ If somehow you can't successfully install certificate into your machine's certif
 The agent version 2.125.0 or above has the ability to ignore SSL server certificate validation error.
 
 > [!IMPORTANT]
-> 
+>
 > This is not secure and not recommended, we highly suggest you to install the certificate into your machine certificate store.
 
 Pass `--sslskipcertvalidation` during agent configuration
+
 ```
 ./config.cmd/sh --sslskipcertvalidation
 ```
 
 > [!NOTE]
-> 
+>
 > There is limitation of using this flag on Linux and macOS  
 > The libcurl library on your Linux or macOS machine needs to built with OpenSSL, [More Detail](https://github.com/dotnet/corefx/issues/9728)
 
 ### Git get sources fails with SSL certificate problem (Windows agent only)
+
 We ship command-line Git as part of the Windows agent.
 We use this copy of Git for all Git related operation.
 When you have a self-signed SSL certificate for your on-premises TFS server, make sure to configure the Git we shipped to allow that self-signed SSL certificate.
 There are 2 approaches to solve the problem.
 
 1. Set the following git config in global level by the agent's run as user.
+
    ```bash
    git config --global http."https://tfs.com/".sslCAInfo certificate.pem
    ```
+
    > [!NOTE]
    >
    > Setting system level Git config is not reliable on Windows. The system .gitconfig file is stored with the copy of Git we packaged, which will get replaced whenever the agent is upgraded to a new version.
@@ -94,23 +101,27 @@ IIS has a SSL setting that requires all incoming requests to TFS must present cl
 When that IIS SSL setting enabled, you need to use `2.125.0` or above version agent and follow these extra steps in order to configure the build machine against your TFS server.
 
 - Prepare all required certificate information
-  - CA certificate(s) in `.pem` format (This should contains the public key and signature of the CA certificate, you need put the root ca certificate and all your intermediate ca certificates into one `.pem` file)  
-  - Client certificate in `.pem` format (This should contains the public key and signature of the Client certificate)  
-  - Client certificate private key in `.pem` format (This should contains only the private key of the Client certificate)  
-  - Client certificate archive package in `.pfx` format (This should contains the signature, public key and private key of the Client certificate)  
-  - Use `SAME` password to protect Client certificate private key and Client certificate archive package, since they both have client certificate's private key  
+
+  - CA certificate(s) in `.pem` format (This should contains the public key and signature of the CA certificate, you need put the root ca certificate and all your intermediate ca certificates into one `.pem` file)
+  - Client certificate in `.pem` format (This should contains the public key and signature of the Client certificate)
+  - Client certificate private key in `.pem` format (This should contains only the private key of the Client certificate)
+  - Client certificate archive package in `.pfx` format (This should contains the signature, public key and private key of the Client certificate)
+  - Use `SAME` password to protect Client certificate private key and Client certificate archive package, since they both have client certificate's private key
 
 - Install CA certificate(s) into machine certificate store
+
   - Linux: OpenSSL certificate store
   - macOS: System or User Keychain
   - Windows: Windows certificate store
 
-- Pass `--sslcacert`, `--sslclientcert`, `--sslclientcertkey`. `--sslclientcertarchive` and `--sslclientcertpassword` during agent configuration.   
+- Pass `--sslcacert`, `--sslclientcert`, `--sslclientcertkey`. `--sslclientcertarchive` and `--sslclientcertpassword` during agent configuration.
+
   ```
   .\config.cmd/sh --sslcacert ca.pem --sslclientcert clientcert.pem --sslclientcertkey clientcert-key-pass.pem --sslclientcertarchive clientcert-archive.pfx --sslclientcertpassword "mypassword"
   ```
 
-  Your client certificate private key password is securely stored on each platform.  
+  Your client certificate private key password is securely stored on each platform.
+
   ```
   Linux: Encrypted with a symmetric key based on the machine ID
   macOS: macOS Keychain

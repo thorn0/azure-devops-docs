@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,15 +15,12 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-
 ### Members
 
-* `culture`: string. 
+- `culture`: string.
 
-* `theme`: string. 
+- `theme`: string.
 
-* `timeZoneId`: string. 
+- `timeZoneId`: string.
 
-* `timezoneOffset`: number. 
-
+- `timezoneOffset`: number.

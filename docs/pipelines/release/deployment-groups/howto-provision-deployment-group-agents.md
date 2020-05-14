@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: ronai
 author: RoopeshNair
 ms.date: 08/24/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Provision agents for deployment groups
@@ -24,15 +24,15 @@ and install and provision the agent on each virtual or physical machine in your 
 
 You can install the agent in any one of these ways:
 
-* [Run the script](#runscript) that is generated automatically when you create a deployment group.
-* [Install the **Azure Pipelines Agent** Azure VM extension](#azureext) on each of the VMs.
-* [Use the **Azure Resource Group Deployment** task](#deploytask) in your release pipeline.
+- [Run the script](#runscript) that is generated automatically when you create a deployment group.
+- [Install the **Azure Pipelines Agent** Azure VM extension](#azureext) on each of the VMs.
+- [Use the **Azure Resource Group Deployment** task](#deploytask) in your release pipeline.
 
 For information about agents and pipelines, see:
 
-* [Parallel jobs in Team Foundation Server](../../licensing/concurrent-pipelines-tfs.md).
-* [Parallel jobs in Azure Pipelines](../../licensing/concurrent-jobs.md).
-* [Pricing for Azure Pipelines features](https://visualstudio.microsoft.com/team-services/pricing/)
+- [Parallel jobs in Team Foundation Server](../../licensing/concurrent-pipelines-tfs.md).
+- [Parallel jobs in Azure Pipelines](../../licensing/concurrent-jobs.md).
+- [Pricing for Azure Pipelines features](https://visualstudio.microsoft.com/team-services/pricing/)
 
 <a name="runscript"></a>
 
@@ -51,22 +51,22 @@ For information about agents and pipelines, see:
 1. Log onto each target machine in turn using the account with the [appropriate permissions](../../agents/v2-windows.md#permissions) and:
 
    - Open an Administrator PowerShell command prompt, paste in the script you copied, then execute it to register the machine with this group.
- 
+
    - If you get an error when running the script that a secure channel could not be created, execute this command at the Administrator PowerShell prompt:
 
-     `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12` 
-   
+     `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+
    - When prompted to configure tags for the agent, press `Y` and enter any tags you will use to identify subsets of the machines in the group for partial deployments.
 
-     > Tags you assign allow you to limit deployment to specific servers when 
-     the deployment group is used in a [**Run on machine group** job](../../process/deployment-group-phases.md).
+     > Tags you assign allow you to limit deployment to specific servers when
+     > the deployment group is used in a [**Run on machine group** job](../../process/deployment-group-phases.md).
 
-   - When prompted for the user account, press *Return* to accept the defaults.
+   - When prompted for the user account, press _Return_ to accept the defaults.
 
    - Wait for the script to finish with the message `Service vstsagent.{organization-name}.{computer-name} started successfully`.<p />
 
 1. In the **Deployment groups** page of **Azure Pipelines**, open the **Machines** tab and verify that the agents are running. If the tags you configured are not visible, refresh the page.
- 
+
 <a name="azureext"></a>
 
 ## Install the Azure Pipelines Agent Azure VM extension
@@ -83,14 +83,14 @@ For information about agents and pipelines, see:
 1. In the **Install extension** blade, specify the name of the Azure Pipelines subscription to use. For example, if the URL is `https://dev.azure.com/contoso`, just specify **contoso**.
 
 1. Specify the project name and the deployment group name.
-   
+
 1. Optionally, specify a name for the agent. If not specified, it uses the VM name appended with `-DG`.
 
 1. Enter the [Personal Access Token (PAT)](https://go.microsoft.com/fwlink/?linkid=844181) to use for authentication against Azure Pipelines.
 
 1. Optionally, specify a comma-separated list of tags that will be configured on the agent.
    Tags are not case-sensitive, and each must no more than 256 characters.
-   
+
 1. Choose **OK** to begin installation of the agent on this VM.
 
 1. Add the extension to any other VMs you want to include in this deployment group.
@@ -148,12 +148,12 @@ For a Windows VM, create an ARM template and add a resources element under the
 
 where:
 
-* **VSTSAccountName** is required. The Azure Pipelines subscription to use. Example: If your URL is `https://dev.azure.com/contoso`, just specify `contoso`
-* **TeamProject** is required. The project that has the deployment group defined within it
-* **DeploymentGroup** is required. The deployment group against which deployment agent will be registered
-* **AgentName** is optional. If not specified, the VM name with `-DG` appended will be used
-* **Tags** is optional. A comma-separated list of tags that will be set on the agent. Tags are not case sensitive and each must be no more than 256 characters
-* **PATToken** is required. The Personal Access Token that will be used to authenticate against Azure Pipelines to download and configure the agent
+- **VSTSAccountName** is required. The Azure Pipelines subscription to use. Example: If your URL is `https://dev.azure.com/contoso`, just specify `contoso`
+- **TeamProject** is required. The project that has the deployment group defined within it
+- **DeploymentGroup** is required. The deployment group against which deployment agent will be registered
+- **AgentName** is optional. If not specified, the VM name with `-DG` appended will be used
+- **Tags** is optional. A comma-separated list of tags that will be set on the agent. Tags are not case sensitive and each must be no more than 256 characters
+- **PATToken** is required. The Personal Access Token that will be used to authenticate against Azure Pipelines to download and configure the agent
 
 > [!NOTE]
 > If you are deploying to a Linux VM, ensure that the `type` parameter in the code is `TeamServicesAgentLinux`.
@@ -184,19 +184,19 @@ To use the template:
 1. Select the task and expand the **Advanced deployment options for virtual machines** section.
    Configure the parameters in this section as follows:
 
-   * **Enable Prerequisites**: select **Configure with Deployment Group Agent**.
+   - **Enable Prerequisites**: select **Configure with Deployment Group Agent**.
 
-   * **Azure Pipelines/TFS endpoint**: Select an existing Team Foundation Server/TFS service connection that points
+   - **Azure Pipelines/TFS endpoint**: Select an existing Team Foundation Server/TFS service connection that points
      to your target. Agent registration for deployment groups requires access to your Visual
      Studio project. If you do not have an existing service connection, choose **Add** and create one now.
      Configure it to use a [Personal Access Token (PAT)](https://go.microsoft.com/fwlink/?linkid=844181)
      with scope restricted to **Deployment Group**.
 
-   * **Project**: Specify the project containing the deployment group.
+   - **Project**: Specify the project containing the deployment group.
 
-   * **Deployment Group**: Specify the name of the deployment group against which the agents will be registered.  
+   - **Deployment Group**: Specify the name of the deployment group against which the agents will be registered.
 
-   * **Copy Azure VM tags to agents**: When set (ticked), any tags already configured on the Azure VM will
+   - **Copy Azure VM tags to agents**: When set (ticked), any tags already configured on the Azure VM will
      be copied to the corresponding deployment group agent. By default, all
      [Azure tags](/azure/azure-resource-manager/resource-group-using-tags)
      are copied using the format `Key: Value`. For example, `Role: Web`.
@@ -208,9 +208,9 @@ To use the template:
 
 ## Related topics
 
-* [Run on machine group job](../../process/deployment-group-phases.md)
-* [Deploy an agent on Windows](../../agents/v2-windows.md)
-* [Deploy an agent on macOS](../../agents/v2-osx.md)
-* [Deploy an agent on Linux](../../agents/v2-linux.md)
+- [Run on machine group job](../../process/deployment-group-phases.md)
+- [Deploy an agent on Windows](../../agents/v2-windows.md)
+- [Deploy an agent on macOS](../../agents/v2-osx.md)
+- [Deploy an agent on Linux](../../agents/v2-linux.md)
 
 [!INCLUDE [rm-help-support-shared](../../includes/rm-help-support-shared.md)]

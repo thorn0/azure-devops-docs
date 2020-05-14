@@ -1,45 +1,45 @@
 ---
 title: Change the maximum attachment size for work items
 titleSuffix: TFS
-description: Use the TFS web service to increase the size of files you attach for Team Foundation Server 
+description: Use the TFS web service to increase the size of files you attach for Team Foundation Server
 ms.technology: devops-agile
 ms.assetid: a37734d7-8db0-44e5-9e4a-31ddf9261e9e
 ms.author: kaelli
 author: KathrynEE
 ms.topic: conceptual
-monikerRange: '<= azure-devops'
-ms.date: 05/10/2017  
+monikerRange: "<= azure-devops"
+ms.date: 05/10/2017
 ---
 
 # Change the maximum attachment size for work items
 
 [!INCLUDE [temp](../../includes/version-header-tfs-only.md)]
 
-By default, Azure DevOps and Team Foundation Server (TFS) limit the size of work item attachments to 4 MB. For on-premises deployments, you can use the web service to increase the size of files you attach to up to 2GB. 
-  
-1.  If you're not a member of the TFS **Administrators** group, [get added as one](../../organizations/security/set-project-collection-level-permissions.md).    
-  
-2.  Log on to the application-tier server for TFS.  
-  
-3.  In a supported web browser, open the following URL:  
-  
-     `http://localhost:8080/tfs/DefaultCollection/WorkItemTracking/v1.0/ConfigurationSettingsService.asmx?op=SetMaxAttachmentSize`  
-  
-     If the project resides on a different project collection, specify the name of the collection in place of *DefaultCollection*.  
-  
-4.  Enter the size in bytes, and then choose **Invoke**.  
-  
-     ![SetMaxAttachmentSize, ConfigurationSettingsService](media/alm_wit_attachsize.png "ALM_WIT_AttachSize")  
-  
-     The maximum size you can specify is 2 gigabytes (or `2000000000`).  
+By default, Azure DevOps and Team Foundation Server (TFS) limit the size of work item attachments to 4 MB. For on-premises deployments, you can use the web service to increase the size of files you attach to up to 2GB.
 
-## Alternative solutions to increasing the attachment size   
+1.  If you're not a member of the TFS **Administrators** group, [get added as one](../../organizations/security/set-project-collection-level-permissions.md).
 
-Increasing the attachment size increases the amount of data in storage and the time it takes to save a work item. To work around the size limit, add the attachment to source control and [add a link in the work item to the source control file](../../boards/queries/link-work-items-support-traceability.md) using the *Versioned Item* link type.  
+2.  Log on to the application-tier server for TFS.
+
+3.  In a supported web browser, open the following URL:
+
+    `http://localhost:8080/tfs/DefaultCollection/WorkItemTracking/v1.0/ConfigurationSettingsService.asmx?op=SetMaxAttachmentSize`
+
+    If the project resides on a different project collection, specify the name of the collection in place of _DefaultCollection_.
+
+4.  Enter the size in bytes, and then choose **Invoke**.
+
+    ![SetMaxAttachmentSize, ConfigurationSettingsService](media/alm_wit_attachsize.png "ALM_WIT_AttachSize")
+
+    The maximum size you can specify is 2 gigabytes (or `2000000000`).
+
+## Alternative solutions to increasing the attachment size
+
+Increasing the attachment size increases the amount of data in storage and the time it takes to save a work item. To work around the size limit, add the attachment to source control and [add a link in the work item to the source control file](../../boards/queries/link-work-items-support-traceability.md) using the _Versioned Item_ link type.
 
 ## Federal Information Processing Standard (FIPS) exception
 
-If you receive an error message similar to the one listed below, you may need to disable the FIPS service in order to avoid the exception. To learn more, see [System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing" security setting effects in Windows XP and in later versions of Windows](https://support.microsoft.com/help/811833/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashi). 
+If you receive an error message similar to the one listed below, you may need to disable the FIPS service in order to avoid the exception. To learn more, see [System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing" security setting effects in Windows XP and in later versions of Windows](https://support.microsoft.com/help/811833/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashi).
 
 ```
 Application: csc.exe
@@ -62,7 +62,6 @@ Exception Info: System.Reflection.TargetInvocationException
    at Microsoft.CodeAnalysis.CSharp.CommandLine.Program.Main(System.String[])
 ```
 
-  
 ## Related articles
 
 - [Requirements and compatibility, Supported web browsers](/azure/devops/server/compatibility#supported-browsers)

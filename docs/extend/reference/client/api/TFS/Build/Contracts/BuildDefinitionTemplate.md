@@ -14,20 +14,18 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `canDelete`: boolean. 
+- `canDelete`: boolean.
 
-* `category`: string. 
+- `category`: string.
 
-* `description`: string. 
+- `description`: string.
 
-* `iconTaskId`: string. 
+- `iconTaskId`: string.
 
-* `id`: string. 
+- `id`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `template`: [BuildDefinition](./BuildDefinition.md). 
-
+- `template`: [BuildDefinition](./BuildDefinition.md).

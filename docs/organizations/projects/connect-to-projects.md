@@ -7,8 +7,8 @@ ms.topic: quickstart
 ms.assetid: 1372e56c-b34f-42c2-b72c-94b57620c75c
 ms.author: sdanie
 author: steved0x
-ms.date: 11/15/2019 
-monikerRange: '>= tfs-2013'
+ms.date: 11/15/2019
+monikerRange: ">= tfs-2013"
 ---
 
 # Quickstart: Connect to a project in Azure DevOps
@@ -16,12 +16,12 @@ monikerRange: '>= tfs-2013'
 [!INCLUDE [temp](../../includes/version-vsts-tfs-all-versions.md)]
 
 In this quickstart, you learn how to connect to a project to share code, build apps, track work, and collaborate with team members. You can use any of the following clients:
-  
-- [Web portal](#web-portal)  
-- [Visual Studio or Team Explorer](#visual-studio)  
+
+- [Web portal](#web-portal)
+- [Visual Studio or Team Explorer](#visual-studio)
 - [Eclipse/Team Explorer Everywhere](../../repos/git/share-your-code-in-git-eclipse.md)
-- [Android Studio with the Azure DevOps Services Plugin for Android Studio](../../java/download-android-studio-plug-in.md)  
-- [IntelliJ with the Azure DevOps Services Plugin for IntelliJ](../../java/download-intellij-plug-in.md) 
+- [Android Studio with the Azure DevOps Services Plugin for Android Studio](../../java/download-android-studio-plug-in.md)
+- [IntelliJ with the Azure DevOps Services Plugin for IntelliJ](../../java/download-intellij-plug-in.md)
 - [Visual Studio Code](../../java/vscode-extension.md)
 
 A project defines a process and data storage in which you manage your software projects from planning to deployment. When you connect to a project, you connect to an organization or project collection. One or more projects may be defined within a collection. There must be at least one project. For more information, see [About projects and scaling your organization](about-projects.md).
@@ -36,20 +36,21 @@ A project defines a process and data storage in which you manage your software p
 
 - To get started with a code base, [set up Git](../../repos/git/gitquickstart.md) or [set up TFVC](../../repos/tfvc/overview.md).
 
-<a id="web-portal">  </a>
+<a id="web-portal"> </a>
 
 ## Connect from the web portal
 
-1. If you're not a member of a security group, ask your Project Administrator to add you.  
+1. If you're not a member of a security group, ask your Project Administrator to add you.
 
-1. Open a browser and enter a URL that uses the following form:  
+1. Open a browser and enter a URL that uses the following form:
 
    ::: moniker range="azure-devops"
    <pre><code>https://dev.azure.com/<i>OrganizationName</i>/<i>ProjectName</i> </code></pre>
+
    ::: moniker-end
 
-   ::: moniker range=">= tfs-2013 <= azure-devops-2019" 
-   <pre><code>http://<i>ServerName</i>:8080/tfs/DefaultCollection/<i>ProjectName</i></code></pre> 
+   ::: moniker range=">= tfs-2013 <= azure-devops-2019"
+   <pre><code>http://<i>ServerName</i>:8080/tfs/DefaultCollection/<i>ProjectName</i></code></pre>
 
    For example, to connect to the server named **FabrikamPrime**, type: **http://FabrikamPrime:8080/tfs/**.
 
@@ -63,31 +64,31 @@ A project defines a process and data storage in which you manage your software p
 
 1. Choose your project, team, or page of interest.
 
-    ::: moniker range=">= azure-devops-2019"
+   ::: moniker range=">= azure-devops-2019"
 
-    From the project summary page, hover over a service and then choose the page you want. To choose another project, choose **Azure DevOps**. ![Azure DevOps logo](../../media/icons/project-icon.png)
+   From the project summary page, hover over a service and then choose the page you want. To choose another project, choose **Azure DevOps**. ![Azure DevOps logo](../../media/icons/project-icon.png)
 
-	> [!div class="mx-imgBorder"]  
-	> ![Choose a service page, horizontal nav](media/connect-projects/project-summary-page-choose-app-vert.png)  
+   > [!div class="mx-imgBorder"]  
+   > ![Choose a service page, horizontal nav](media/connect-projects/project-summary-page-choose-app-vert.png)
 
-    ::: moniker-end
- 
-    ::: moniker range=">= tfs-2017 <=tfs-2018"
+   ::: moniker-end
 
-    From the project summary page, hover over a service and then choose the page you want. To choose another project, choose the ![Azure DevOps logo](../../media/icons/project-icon.png) Azure DevOps logo.
+   ::: moniker range=">= tfs-2017 <=tfs-2018"
 
-	> [!div class="mx-imgBorder"]  
-	> ![Choose a service page, horizontal nav](media/connect-projects/project-summary-page-choose-app-horz.png)  
+   From the project summary page, hover over a service and then choose the page you want. To choose another project, choose the ![Azure DevOps logo](../../media/icons/project-icon.png) Azure DevOps logo.
 
-    ::: moniker-end
+   > [!div class="mx-imgBorder"]  
+   > ![Choose a service page, horizontal nav](media/connect-projects/project-summary-page-choose-app-horz.png)
 
-    ::: moniker range=">= tfs-2013 <= tfs-2015"
+   ::: moniker-end
 
-    Choose your project or team from the set of available links, or choose **Browse** to access all projects and teams.
+   ::: moniker range=">= tfs-2013 <= tfs-2015"
 
-	![Web portal, TFS, Overview](media/connect-tp-tfs-web-portal.png) 
+   Choose your project or team from the set of available links, or choose **Browse** to access all projects and teams.
 
-    ::: moniker-end
+   ![Web portal, TFS, Overview](media/connect-tp-tfs-web-portal.png)
+
+   ::: moniker-end
 
 To learn more about each page and the tasks you can do, see [Web portal navigation](../../project/navigation/index.md).
 
@@ -99,11 +100,11 @@ To learn more about each page and the tasks you can do, see [Web portal navigati
 
 1. Open Windows Security from the context menu associated with your name.
 
-    ![Sign in As link in user profile menu](media/connect-tp-open-profile.png)
+   ![Sign in As link in user profile menu](media/connect-tp-open-profile.png)
 
 1. Enter your credentials.
 
-    ![Enter user name and password to access TFS](media/connect-projects-tfs/IC657077.png)
+   ![Enter user name and password to access TFS](media/connect-projects-tfs/IC657077.png)
 
 ::: moniker-end
 
@@ -111,8 +112,8 @@ To learn more about each page and the tasks you can do, see [Web portal navigati
 
 1. Open your profile menu and choose **Sign out**.
 
-    > [!div class="mx-imgBorder"]  
-	> ![Sign out](media/sign-out.png)
+   > [!div class="mx-imgBorder"]  
+   > ![Sign out](media/sign-out.png)
 
 1. Choose **Sign in** and enter your credentials.
 
@@ -124,7 +125,7 @@ Open the web portal from the home page.
 
 ![Connect to the web portal](media/connect-tp-open-web-portal.png)
 
-<a id="visual-studio">  </a>
+<a id="visual-studio"> </a>
 
 ## Connect from Visual Studio or Team Explorer
 
@@ -138,7 +139,7 @@ If you're not a member of an Azure DevOps security group, [get added to one](../
 
 1. Select the **Manage Connections** button in Team Explorer to open the **Connect** page. Choose **Connect to a Project** to select a project to connect to.
 
-   ![connect to projects](media/te-connect-page-connect-to-project-vs2019.png)  
+   ![connect to projects](media/te-connect-page-connect-to-project-vs2019.png)
 
    **Connect to a Project** shows the projects you can connect to, along with the repos in those projects.
 
@@ -146,7 +147,7 @@ If you're not a member of an Azure DevOps security group, [get added to one](../
 
 1. Select **Add Azure DevOps Server** to connect to a project in Azure DevOps Services. Enter the URL to your server and select **Add**.
 
-   ![ALM\_EXL\_AddServer](media/connect-projects-tfs/vs2017_add_tfs_server.png)
+   ![ALM_EXL_AddServer](media/connect-projects-tfs/vs2017_add_tfs_server.png)
 
 1. Select a project from the list and select **Connect**.
 
@@ -158,7 +159,7 @@ If you're not a member of an Azure DevOps security group, [get added to one](../
 
 1. Select the **Manage Connections** button in Team Explorer to open the **Connect** page. Choose the **Connect to Team Project** link to select a project to connect to.
 
-   ![connect to projects](media/te-connect-page-connect-to-team-project.png)  
+   ![connect to projects](media/te-connect-page-connect-to-team-project.png)
 
    **Connect to a Project** shows the projects you can connect to, along with the repos in those projects.
 
@@ -166,7 +167,7 @@ If you're not a member of an Azure DevOps security group, [get added to one](../
 
 1. Select **Add Server** to connect to a project in Team Foundation Server. Enter the URL to your TFS server and select **Add**.
 
-   ![ALM\_EXL\_AddServer](media/connect-projects-tfs/vs2017_add_tfs_server.png)
+   ![ALM_EXL_AddServer](media/connect-projects-tfs/vs2017_add_tfs_server.png)
 
 1. Select a project from the list and select **Connect**.
 
@@ -175,7 +176,7 @@ If you're not a member of an Azure DevOps security group, [get added to one](../
 ### Visual Studio 2015
 
 <a id="connect-dialog" /> 
-<a id="vs-2015-connect-dialog" /> 
+<a id="vs-2015-connect-dialog" />
 
 1. Select the **Manage Connections** button in Team Explorer to open the **Connect** page. Choose **Connect to Team Project** to select a different organization, TFS, or project to connect to.
 
@@ -187,14 +188,14 @@ If you're not a member of an Azure DevOps security group, [get added to one](../
 
    If it's your first time connecting, add TFS to the list of recognized servers.
 
-   ![ALM\_EXL\_AddServer](media/connect-projects-tfs/IC658167.png)
+   ![ALM_EXL_AddServer](media/connect-projects-tfs/IC658167.png)
 
 If you selected just one project, you'll see the **Home** page for that project. The pages differ based on the resources enabled and the source control system selected for your project.
 
 Team Explorer displays the **Home** page for that project. The pages that appear differ based on the resources enabled and the source control system selected for your project.
 
 > [!div class="mx-tdBreakAll"]  
-> |Home page with Git  |Home page with TFVC  |
+> |Home page with Git |Home page with TFVC |
 > |-------------|----------|
 > |<img src="media/te-home-page-git-repo.png" title="Team Explorer Home page with Git as source control" alt="Team Explorer Home page with Git as source control" />|<img src="media/te-home-page-tfvc-repo.png" title="Team Explorer Home page w/ TFVC as source control" alt="Team Explorer Home page w/ TFVC as source control" />|
 
@@ -212,11 +213,11 @@ Your client remembers the set of connections you've configured. You can switch f
 
 1. From **Connect**, choose the **Connect to a Project** link to sign in with different credentials.
 
-   ![connect to projects](media/te-connect-page-connect-to-project-vs2019.png)  
+   ![connect to projects](media/te-connect-page-connect-to-project-vs2019.png)
 
 1. Select a different user or select **Add an account** to access a project using different credentials.
 
-   ![Connect with VS using different credentials to sign in](media/connect-projects-tfs/choose-different-user-vs2017.png) 
+   ![Connect with VS using different credentials to sign in](media/connect-projects-tfs/choose-different-user-vs2017.png)
 
 1. Sign in using an account that is associated with an Azure DevOps project, either a valid Microsoft account or GitHub account.
 
@@ -229,7 +230,7 @@ Your client remembers the set of connections you've configured. You can switch f
 
 1. From **Connect**, choose **Connect to Team Project** to sign in with different credentials.
 
-   ![connect to projects](media/te-connect-page-connect-to-team-project.png)  
+   ![connect to projects](media/te-connect-page-connect-to-team-project.png)
 
 1. Select a different user from the drop-down or select **Add an account** to access a project using different credentials.
 
@@ -243,9 +244,9 @@ Your client remembers the set of connections you've configured. You can switch f
 
 1. From **Connect**, choose **Connect to Team Project** to sign in with different credentials.
 
-   ![connect to projects](media/te-connect-page-connect-to-team-project.png)  
+   ![connect to projects](media/te-connect-page-connect-to-team-project.png)
 
-   The **Switch User** link appears only when you're actively connected to a project on Azure DevOps Services.  
+   The **Switch User** link appears only when you're actively connected to a project on Azure DevOps Services.
 
    ![Connect to Team Foundation Server dialog box](media/connect-projects-tfs/IC719958.png)
 
@@ -255,9 +256,9 @@ Your client remembers the set of connections you've configured. You can switch f
 
 ### Use different Visual Studio credentials
 
-You can run Visual Studio with credentials different from your current Windows user account. Find *devenv.exe* under the *Program Files (86)* folder for your version of Visual Studio.
+You can run Visual Studio with credentials different from your current Windows user account. Find _devenv.exe_ under the _Program Files (86)_ folder for your version of Visual Studio.
 
-Select Shift and right-click *devenv.exe*, then select **Run as different user**.
+Select Shift and right-click _devenv.exe_, then select **Run as different user**.
 
 ![Context menu for Visual Studio devenv.exe](media/connect-projects-tfs/IC719959.png)
 
@@ -266,7 +267,7 @@ Select Shift and right-click *devenv.exe*, then select **Run as different user**
 To connect to a project, you need your user account added to the project. The [organization owner (Azure DevOps Services)](../accounts/add-organization-users.md) or a [Project Administrator](../security/set-project-collection-level-permissions.md) usually does adds user accounts.
 
 ::: moniker range="azure-devops"
-Azure DevOps Services provides access to the first five account users free. After that, you need to [pay for more users](../../billing/buy-basic-access-add-users.md). 
+Azure DevOps Services provides access to the first five account users free. After that, you need to [pay for more users](../../billing/buy-basic-access-add-users.md).
 ::: moniker-end
 
 ::: moniker range=">= tfs-2013 <= tfs-2018"
@@ -287,13 +288,13 @@ If your remote team uses a [Azure DevOps Proxy Server](/azure/devops/server/inst
 
 1. From the Visual Studio **Tools** menu, select **Options**, then select **Source Control** > **Plug-in Selection**. Select **Visual Studio Team Foundation Server**.
 
-    ![Plug-in Selection page, Options dialog box](media/connect-projects-tfs/plug-in-selection-for-visual-studio.png)
+   ![Plug-in Selection page, Options dialog box](media/connect-projects-tfs/plug-in-selection-for-visual-studio.png)
 
 1. For **Visual Studio Team Foundation Server**, enter the name and port number for the Azure DevOps Proxy Server. Select **Use SSL encryption (https) to connect**.
 
-    ![VS TFVC proxy configuration page, Options dialog](media/connect-projects-tfs/visual-studio-proxy-server-options.png)
+   ![VS TFVC proxy configuration page, Options dialog](media/connect-projects-tfs/visual-studio-proxy-server-options.png)
 
-    Make sure you specify the port number that your administrator assigned to TFS Proxy.
+   Make sure you specify the port number that your administrator assigned to TFS Proxy.
 
 To associate a file type with a compare or merge tool, see [Associate a file type with a file-comparison tool](../../repos/tfvc/associate-file-type-file-comparison-tool.md) or [Associate a file type with a merge tool](../../repos/tfvc/associate-file-type-merge-tool.md).
 
@@ -302,10 +303,10 @@ To associate a file type with a compare or merge tool, see [Associate a file typ
 Besides connecting through a web browser, Visual Studio, Eclipse, Excel, and Project you can connect to a project from these clients:
 
 - [Visual Studio Code](https://code.visualstudio.com/Docs)
-- [Visual Studio Community](https://visualstudio.microsoft.com/products/visual-studio-community-vs.aspx) 
-- [Eclipse: Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in) 
+- [Visual Studio Community](https://visualstudio.microsoft.com/products/visual-studio-community-vs.aspx)
+- [Eclipse: Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in)
 - [Azure Test Plans](../../test/mtm/guidance-mtm-usage.md) (formerly Test Manager)
-- [Microsoft Feedback Client](../../project/feedback/give-feedback.md) 
+- [Microsoft Feedback Client](../../project/feedback/give-feedback.md)
 
 ### Requirements and client compatibility
 
@@ -319,11 +320,11 @@ See [Feedback and support](../../user-guide/provide-feedback.md#platform-version
 
 Learn more about how to:
 
-- [Work in web portal](../../project/navigation/index.md)  
-- [Work in Team Explorer](../../user-guide/work-team-explorer.md) 
+- [Work in web portal](../../project/navigation/index.md)
+- [Work in Team Explorer](../../user-guide/work-team-explorer.md)
 - [Work in Office Excel or Project](../../boards/backlogs/office/track-work.md)
-- [Troubleshoot connection](../../user-guide/troubleshoot-connection.md)  
+- [Troubleshoot connection](../../user-guide/troubleshoot-connection.md)
 
-If all you need is a code repository and bug tracking solution, then start with the [Get Started with Azure Repos](../../repos/git/gitquickstart.md) and [Manage bugs](../../boards/backlogs/manage-bugs.md).  
+If all you need is a code repository and bug tracking solution, then start with the [Get Started with Azure Repos](../../repos/git/gitquickstart.md) and [Manage bugs](../../boards/backlogs/manage-bugs.md).
 
-To start planning and tracking work, see [Get started with Agile tools to plan and track work](../../boards/get-started/what-is-azure-boards.md). 
+To start planning and tracking work, see [Get started with Agile tools to plan and track work](../../boards/get-started/what-is-azure-boards.md).

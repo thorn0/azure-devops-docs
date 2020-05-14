@@ -3,7 +3,7 @@ title: Release Definitions | VSTS REST API Reference
 description: Get release definitions programmatically using the REST APIs for VSTS.
 ms.assetid: e61ec615-19fb-4ce9-a704-5b5e27221d5e
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 ms.topic: article
 ms.author: chcomley
 author: chcomley
@@ -16,7 +16,7 @@ ms.date: 08/04/2016
 
 [!INCLUDE [API_version](../_data/version3-preview1.md)]
 
-**On-premises use** : An earlier, and slightly different version of the Release Management API is available in Team Foundation Server 2015 Update 2. To use this earlier version, you must specify an API version of **2.2-preview.1**.   
+**On-premises use** : An earlier, and slightly different version of the Release Management API is available in Team Foundation Server 2015 Update 2. To use this earlier version, you must specify an API version of **2.2-preview.1**.
 
 ## Get a list of release definitions
 
@@ -24,14 +24,16 @@ ms.date: 08/04/2016
 GET https://{account}.vsrm.visualstudio.com/defaultcollection/{project}/_apis/release/definitions?api-version={version}[&$expand={enum}]
 ```
 
-| Parameter     | Type   | Notes
-|:--------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account       | string | Your VSTS organization.
-| project       | string | [Project](../tfs/projects.md) ID or name.
+| account | string | Your VSTS organization.
+| project | string | [Project](../tfs/projects.md) ID or name.
 | Query
-| api-version   | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| $expand		| enum {<br/>&nbsp;&nbsp;environments,<br/>&nbsp;&nbsp;artifacts,<br/>&nbsp;&nbsp;none<br/>} | The property that should be expanded in the list of Release Definition.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| \$expand | enum {<br/>&nbsp;&nbsp;environments,<br/>&nbsp;&nbsp;artifacts,<br/>&nbsp;&nbsp;none<br/>} | The property that should be expanded in the list of Release Definition.
 
 #### Sample request
 
@@ -99,8 +101,8 @@ GET https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
 }
 ```
 
-
 ### With environments details expanded
+
 #### Sample request
 
 ```
@@ -231,8 +233,8 @@ GET https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
 }
 ```
 
-
 ### With artifacts details expanded
+
 #### Sample request
 
 ```
@@ -333,21 +335,22 @@ GET https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
 }
 ```
 
-
 ## Get a release definition
 
 ```no-highlight
 GET https://{account}.vsrm.visualstudio.com/defaultcollection/{project}/_apis/release/definitions/{definitionid}?api-version={version}
 ```
 
-| Parameter    | Type   | Notes
-|:-------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account      | string | Your VSTS organization.
-| project      | string | [Project](../tfs/projects.md) ID or name.
-| definitionId | int    | ID of the release definition.
+| account | string | Your VSTS organization.
+| project | string | [Project](../tfs/projects.md) ID or name.
+| definitionId | int | ID of the release definition.
 | Query
-| api-version  | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -454,9 +457,7 @@ GET https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
         "skipArtifactsDownload": false,
         "timeoutInMinutes": 0
       },
-      "demands": [
-        "Agent.Version -gtVersion 1.87"
-      ],
+      "demands": ["Agent.Version -gtVersion 1.87"],
       "conditions": [
         {
           "name": "ReleaseStarted",
@@ -539,9 +540,7 @@ GET https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
         "skipArtifactsDownload": false,
         "timeoutInMinutes": 0
       },
-      "demands": [
-        "Agent.Version -gtVersion 1.87"
-      ],
+      "demands": ["Agent.Version -gtVersion 1.87"],
       "conditions": [
         {
           "name": "ReleaseStarted",
@@ -624,9 +623,7 @@ GET https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
         "skipArtifactsDownload": false,
         "timeoutInMinutes": 0
       },
-      "demands": [
-        "Agent.Version -gtVersion 1.87"
-      ],
+      "demands": ["Agent.Version -gtVersion 1.87"],
       "conditions": [
         {
           "name": "Dev",
@@ -675,26 +672,28 @@ GET https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
 }
 ```
 
-
 ## Create a release definition
 
 ```no-highlight
 POST https://{account}.vsrm.visualstudio.com/defaultcollection/{project}/_apis/release/definitions?api-version={version}
 ```
 
-| Parameter    | Type   | Notes
-|:-------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account      | string | Your VSTS organization.
-| project      | string | [Project](../tfs/projects.md) ID or name.
+| account | string | Your VSTS organization.
+| project | string | [Project](../tfs/projects.md) ID or name.
 | Query
-| api-version  | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_apis/release/definitions?api-version=3.0-preview.1
 ```
+
 ```json
 {
   "name": "Fabrikam.CD",
@@ -816,7 +815,6 @@ POST https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/
 }
 ```
 
-
 ## Update a release definition
 
 ```no-highlight
@@ -828,6 +826,7 @@ PUT https://{account}.vsrm.visualstudio.com/defaultcollection/{project}/_apis/re
 ```
 PUT https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_apis/release/definitions/28?api-version=3.0-preview.1
 ```
+
 ```json
 {
   "id": 28,
@@ -989,9 +988,7 @@ PUT https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
         "skipArtifactsDownload": false,
         "timeoutInMinutes": 0
       },
-      "demands": [
-        "Agent.Version -gtVersion 1.87"
-      ],
+      "demands": ["Agent.Version -gtVersion 1.87"],
       "conditions": [],
       "executionPolicy": {
         "concurrencyCount": 0,
@@ -1024,31 +1021,32 @@ PUT https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
 }
 ```
 
-
 ## Delete a release definition
 
 ```no-highlight
 DELETE https://{account}.vsrm.visualstudio.com/defaultcollection/{project}/_apis/release/definitions/{definitionid}?api-version={version}
 ```
 
-| Parameter     | Type   | Notes
-|:--------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account       | string | Your VSTS organization.
-| project       | string | [Project](../tfs/projects.md) ID or name.
-| definitionId  | int    | ID of the release definition.
+| account | string | Your VSTS organization.
+| project | string | [Project](../tfs/projects.md) ID or name.
+| definitionId | int | ID of the release definition.
 | Query
-| api-version   | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 DELETE https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_apis/release/definitions/28?api-version=3.0-preview.1
 ```
+
 ```json
 {}
 ```
-
 
 ## Get revision history for a release definition
 
@@ -1056,14 +1054,16 @@ DELETE https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b1836
 GET https://{account}.vsrm.visualstudio.com/defaultcollection/{project}/_apis/release/definitions/{definitionid}/revisions?api-version={version}
 ```
 
-| Parameter     | Type   | Notes
-|:--------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account       | string | Your VSTS organization.
-| project       | string | [Project](../tfs/projects.md) ID or name.
-| definitionId  | int    | ID of the release definition.
+| account | string | Your VSTS organization.
+| project | string | [Project](../tfs/projects.md) ID or name.
+| definitionId | int | ID of the release definition.
 | Query
-| api-version   | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -1109,22 +1109,23 @@ GET https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
 }
 ```
 
-
 ## Get a particular revision history
 
 ```no-highlight
 GET https://{account}.vsrm.visualstudio.com/defaultcollection/{project}/_apis/release/definitions/{definitionid}/revisions/{revisionid}?api-version={version}
 ```
 
-| Parameter     | Type   | Notes
-|:--------------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| account       | string | Your VSTS organization.
-| project       | string | [Project](../tfs/projects.md) ID or name.
-| definitionId  | int    | ID of the release definition.
-| revisionId  | int    | ID of the revision
+| account | string | Your VSTS organization.
+| project | string | [Project](../tfs/projects.md) ID or name.
+| definitionId | int | ID of the release definition.
+| revisionId | int | ID of the revision
 | Query
-| api-version   | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -1204,9 +1205,7 @@ GET https://mytfsserver/DefaultCollection/ff213d65-d61d-447c-b39d-d16f21b18364/_
         "skipArtifactsDownload": false,
         "timeoutInMinutes": 0
       },
-      "demands": [
-        "Agent.Version -gtVersion 1.87"
-      ],
+      "demands": ["Agent.Version -gtVersion 1.87"],
       "conditions": [],
       "executionPolicy": {
         "concurrencyCount": 0,

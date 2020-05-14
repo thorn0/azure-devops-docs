@@ -13,18 +13,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `date`: Date. 
+- `date`: Date.
 
-* `pushCorrelationId`: string. 
+- `pushCorrelationId`: string.
 
-* `pushedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `pushedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `pushId`: number. 
+- `pushId`: number.
 
-* `url`: string. 
-
+- `url`: string.

@@ -1,30 +1,28 @@
 ---
-title: What settings are supported? 
+title: What settings are supported?
 titleSuffix: Azure DevOps
 description: Configure team, project, collection, and organizational-level settings in Azure DevOps
 ms.technology: devops-settings
 ms.topic: overview
-ms.assetid: 
+ms.assetid:
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 10/28/2019
 ---
 
-
-
-# About settings at the user, team, project, or organization-level 
+# About settings at the user, team, project, or organization-level
 
 [!INCLUDE [temp](../../includes/version-vsts-tfs-all-versions.md)]
 
 ::: moniker range="azure-devops"
 
-You configure resources either for yourself, your team, a project, or your organization from an administrative **Settings** page. The settings you can configure depend on the security group or administrative role you belong to. 
+You configure resources either for yourself, your team, a project, or your organization from an administrative **Settings** page. The settings you can configure depend on the security group or administrative role you belong to.
 
 If you're just getting started as a Project Administrator, see [Get started as an administrator](../../user-guide/project-admin-tutorial.md).
 
 > [!NOTE]  
-> You can delegate several tasks to a user with Stakeholder or Basic access by adding them to the [Project Collection Administrators group](../security/set-project-collection-level-permissions.md). To learn more about Stakeholder access, see [About access levels, Stakeholder access](../security/access-levels.md#stakeholder-access). 
+> You can delegate several tasks to a user with Stakeholder or Basic access by adding them to the [Project Collection Administrators group](../security/set-project-collection-level-permissions.md). To learn more about Stakeholder access, see [About access levels, Stakeholder access](../security/access-levels.md#stakeholder-access).
 
 ::: moniker-end
 
@@ -32,12 +30,11 @@ If you're just getting started as a Project Administrator, see [Get started as a
 
 You configure resources either for yourself, your team, a project, or your project collection from a **Settings** page. The settings you can configure depend on the security group or administrative role you belong to.
 
-::: moniker-end  
+::: moniker-end
 
 ## User settings
 
 Individual contributors can set their user preferences, enable features that are in preview, and manage their favorites and notifications.
-
 
 <table>
 <tbody valign="top">
@@ -91,15 +88,13 @@ Individual contributors can set their user preferences, enable features that are
 </tbody>
 </table>
 
-
 <a id="team" />
 
 ## Team Administrator role and managing teams
 
-Team administrators are tasked with configuring team resources which mostly correspond to Agile tools and dashboards. To configure team resources, you must be added as a [team administrator for the specific team](../../organizations/settings/add-team-administrator.md), or be a member of the Project Administrators or Project Collection Administrators groups.  
+Team administrators are tasked with configuring team resources which mostly correspond to Agile tools and dashboards. To configure team resources, you must be added as a [team administrator for the specific team](../../organizations/settings/add-team-administrator.md), or be a member of the Project Administrators or Project Collection Administrators groups.
 
-For a complete overview of all Agile tools that you can configure, see [Manage teams and configure team tools](manage-teams.md).  
-
+For a complete overview of all Agile tools that you can configure, see [Manage teams and configure team tools](manage-teams.md).
 
 <table>
 <tbody valign="top">
@@ -157,13 +152,12 @@ See also [Get started as an administrator](../../user-guide/project-admin-tutori
 ::: moniker range=">= azure-devops-2019"
 
 **Project settings**  
-From the administrative **Project settings** pages, you can configure settings available from the tabs shown in the following image. 
+From the administrative **Project settings** pages, you can configure settings available from the tabs shown in the following image.
 
 > [!div class="mx-imgBorder"]  
-> ![Project settings, new nav](media/about/project-settings-new-nav.png) 
+> ![Project settings, new nav](media/about/project-settings-new-nav.png)
 
 ::: moniker-end
-
 
 ::: moniker range="<= tfs-2018"
 
@@ -176,10 +170,9 @@ From the administrative **Project settings** pages, you can configure settings a
 ::: moniker range=">= tfs-2013 <= tfs-2018"
 
 > [!NOTE]  
-> Project settings differ depending on your on-premises TFS version. Some settings aren't available for earlier versions of TFS. 
+> Project settings differ depending on your on-premises TFS version. Some settings aren't available for earlier versions of TFS.
 
 ::: moniker-end
-
 
 <table>
 <tbody valign="top">
@@ -302,34 +295,31 @@ From the administrative **Project settings** pages, you can configure settings a
 
 <a id="admin" />
 
-## Project Collection Administrator (PCA) role and managing collections of projects 
+## Project Collection Administrator (PCA) role and managing collections of projects
 
-Members of the [Project Collection Administrators group](../security/set-project-collection-level-permissions.md) are tasked with configuring resources for all projects defined for an organization or collection. They also can perform all tasks to add projects, manage projects, and manage permissions for the collection, a project, or an object.   
-
+Members of the [Project Collection Administrators group](../security/set-project-collection-level-permissions.md) are tasked with configuring resources for all projects defined for an organization or collection. They also can perform all tasks to add projects, manage projects, and manage permissions for the collection, a project, or an object.
 
 ::: moniker range=">= azure-devops-2019"
-  
+
 **Organization settings**  
 From the administrative **Organization settings** pages, you can configure settings available from the tabs shown in the following image.
 
 > [!div class="mx-imgBorder"]  
-> ![Organization settings, new nav](media/about/collection-settings-new-nav.png) 
+> ![Organization settings, new nav](media/about/collection-settings-new-nav.png)
 
 ::: moniker-end
-
 
 ::: moniker range="<= tfs-2018"
 
 **Project collection-level settings**  
-From the administrative pages for a collection, you can configure the settings shown in the following image. 
+From the administrative pages for a collection, you can configure the settings shown in the following image.
 
 > [!NOTE]  
-> Project collection settings differ depending on your on-premises TFS version. Some settings aren't available for earlier versions of TFS. 
+> Project collection settings differ depending on your on-premises TFS version. Some settings aren't available for earlier versions of TFS.
 
-![Collection settings, TFS, conceptual](media/about/collection-settings-tfs-nav.png) 
+![Collection settings, TFS, conceptual](media/about/collection-settings-tfs-nav.png)
 
 ::: moniker-end
-
 
 ::: moniker range="azure-devops"
 
@@ -459,7 +449,6 @@ For an overview of managing your organization, see [About organization managemen
 
 For an overview of managing collections, see [Configure and manage Azure DevOps Server resources](/azure/devops/server/admin/admin-quick-ref).
 
-
 <table>
 <tbody valign="top">
 <tr>
@@ -542,7 +531,6 @@ For an overview of managing collections, see [Configure and manage Azure DevOps 
 
 For an overview of managing collections, see [Configure and manage TFS resources](/azure/devops/server/admin/admin-quick-ref).
 
-
 <table>
 <tbody valign="top">
 <tr>
@@ -613,16 +601,15 @@ For an overview of managing collections, see [Configure and manage TFS resources
 
 ::: moniker-end
 
-
 ::: moniker range="<= azure-devops-2019"
 
 <a id="admin" />
 
-## Server Administrator role 
+## Server Administrator role
 
-Members of the [Team Foundation Server Administrators group](/azure/devops/server/admin/add-administrator) are tasked with configuring resources for all project collections. They also can perform all tasks to administer projects, collections, and server instances.     
+Members of the [Team Foundation Server Administrators group](/azure/devops/server/admin/add-administrator) are tasked with configuring resources for all project collections. They also can perform all tasks to administer projects, collections, and server instances.
 
-The main task they perform from the web portal is to set access levels for a user or security group. See [Change access levels](../security/change-access-levels.md). 
+The main task they perform from the web portal is to set access levels for a user or security group. See [Change access levels](../security/change-access-levels.md).
 
 For additional information, see [Team Foundation Server Administration Documentation](/azure/devops/server/server).
 
@@ -630,6 +617,6 @@ For additional information, see [Team Foundation Server Administration Documenta
 
 ## Related articles
 
-- [Resources granted to project members](../accounts/resources-granted-to-project-members.md) 
-- [Permissions and groups reference](../security/permissions.md) 
+- [Resources granted to project members](../accounts/resources-granted-to-project-members.md)
+- [Permissions and groups reference](../security/permissions.md)
 - [Rate limits](../../integrate/concepts/rate-limits.md)

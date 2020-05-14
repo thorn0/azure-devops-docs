@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,18 +15,16 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Model representing a hub group in Azure DevOps Services pages&#x27; navigation menu 
+Model representing a hub group in Azure DevOps Services pages&#x27; navigation menu
 
 ### Members
 
-* `hasHubs`: boolean. 
+- `hasHubs`: boolean.
 
-* `id`: string. 
+- `id`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `order`: any. 
+- `order`: any.
 
-* `uri`: string. 
-
+- `uri`: string.

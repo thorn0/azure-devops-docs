@@ -3,12 +3,12 @@ title: Create a new Git repo in your project
 titleSuffix: Azure Repos
 description: Create a new Git repo in an Azure DevOps Services or Team Foundation Server Project
 ms.assetid: 9c6fabfa-ae17-4e65-93a2-9e476f9f88ba
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: quickstart
 ms.date: 11/02/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Create a new Git repo in your project
@@ -19,13 +19,13 @@ Azure DevOps Services and TFS projects contain Git repositories, work items, bui
 
 ## Prerequisites
 
-* An organization in Azure DevOps. If you don't have one, you can [sign up](../../organizations/accounts/create-organization.md) for one for free. Each organization includes free, unlimited private Git repositories.
-* Git command-line tools:
-  * [Install Git for Windows](https://git-scm.com/download/win), which includes [Git Credential Manager - Windows](set-up-credential-managers.md#windows)
-  * [Install Git for macOS and Linux](https://git-scm.com/downloads).
-    * For macOS and Linux, we recommend [configuring SSH authentication](../git/use-ssh-keys-to-authenticate.md)
+- An organization in Azure DevOps. If you don't have one, you can [sign up](../../organizations/accounts/create-organization.md) for one for free. Each organization includes free, unlimited private Git repositories.
+- Git command-line tools:
+  - [Install Git for Windows](https://git-scm.com/download/win), which includes [Git Credential Manager - Windows](set-up-credential-managers.md#windows)
+  - [Install Git for macOS and Linux](https://git-scm.com/downloads).
+    - For macOS and Linux, we recommend [configuring SSH authentication](../git/use-ssh-keys-to-authenticate.md)
 
-## Create a repo using the web portal 
+## Create a repo using the web portal
 
 ::: moniker range=">= azure-devops-2019"
 
@@ -43,10 +43,10 @@ Azure DevOps Services and TFS projects contain Git repositories, work items, bui
 
 4. When you're happy with the repo name and choices, select **Create**.
 
-   A new empty Git repo is now created in your project. 
+   A new empty Git repo is now created in your project.
 
-    - If you created an empty repo (no README or .gitignore), you'll see instructions on how to [clone](clone.md) the repo to your computer or [push](pushing.md) code in an existing repo into the newly created one.
-    - In this example you created a README and a .gitignore, so you'll see an overview of the files in your repo, and you can [clone](clone.md) the repo using the **Clone** link on the upper right of the page to get working with a local copy of the repo immediately. 
+   - If you created an empty repo (no README or .gitignore), you'll see instructions on how to [clone](clone.md) the repo to your computer or [push](pushing.md) code in an existing repo into the newly created one.
+   - In this example you created a README and a .gitignore, so you'll see an overview of the files in your repo, and you can [clone](clone.md) the repo using the **Clone** link on the upper right of the page to get working with a local copy of the repo immediately.
 
 ::: moniker-end
 
@@ -54,7 +54,7 @@ Azure DevOps Services and TFS projects contain Git repositories, work items, bui
 
 1. Navigate to your project by browsing to `https://dev.azure.com/<your organization name>` and selecting the name of your project. You can select it from the **All projects** list, or from the **Recent** projects list at the top if you have accessed it recently.
 
-   ![Select project](media/repo-mgmt/select-vsts-project.png) 
+   ![Select project](media/repo-mgmt/select-vsts-project.png)
 
 2. In the **Project** area in the web portal, select **Code**, then select the drop-down next to the current repo name and choose **New Repository**.
 
@@ -66,10 +66,10 @@ Azure DevOps Services and TFS projects contain Git repositories, work items, bui
 
 4. When you're happy with the repo name and choices, select **Create**.
 
-   A new empty Git repo is now created in your project. 
+   A new empty Git repo is now created in your project.
 
-    - If you created an empty repo (no README or .gitignore), you'll see instructions on how to [clone](clone.md) the repo to your computer or [push](pushing.md) code in an existing repo into the newly created one.
-    - In this example you created a README and a .gitignore, so you'll see an overview of the files in your repo, and you can [clone](clone.md) the repo using the **Clone** link on the upper right of the page to get working with a local copy of the repo immediately. 
+   - If you created an empty repo (no README or .gitignore), you'll see instructions on how to [clone](clone.md) the repo to your computer or [push](pushing.md) code in an existing repo into the newly created one.
+   - In this example you created a README and a .gitignore, so you'll see an overview of the files in your repo, and you can [clone](clone.md) the repo using the **Clone** link on the upper right of the page to get working with a local copy of the repo immediately.
 
 ::: moniker-end
 
@@ -79,7 +79,7 @@ To work with a Git repo, you clone it to your computer. Cloning a repo creates a
 
 ::: moniker range=">= azure-devops-2019"
 
-1. From your web browser, open the team project for your organization in Azure DevOps and select **Repos** > **Files**. If you don't have a team project, [create one now](../get-started/sign-up-invite-teammates.md). 
+1. From your web browser, open the team project for your organization in Azure DevOps and select **Repos** > **Files**. If you don't have a team project, [create one now](../get-started/sign-up-invite-teammates.md).
 
    ![Repos files](../get-started/media/clone-repo/repos-files.png)
 
@@ -116,7 +116,7 @@ To work with a Git repo, you clone it to your computer. Cloning a repo creates a
    ```
    git clone https://fabrikam-fiber.visualstudio.com/DefaultCollection/MyFirstProject/_git/
    ```
-  
+
    After running the previous command, Git downloads a copy of the code, including all [commits](commits.md) and [branches](branches.md) from the repo, into a new folder for you to work with.
 
    Keep this command window open, as you'll use it in the following steps.
@@ -131,7 +131,7 @@ In this step, we'll make a change to the files on your computer, commit the chan
 
 2. Make some changes, for example add `This is my first edit.` to the file, and save and close the file.
 
-3. In the Git command window, navigate to the `fabrikam-fiber` directory by entering the following command: 
+3. In the Git command window, navigate to the `fabrikam-fiber` directory by entering the following command:
 
    ```
    cd fabrikam-fiber
@@ -157,12 +157,10 @@ In this step, we'll make a change to the files on your computer, commit the chan
 
 7. Switch to the **Files** tab and click on the README file to view your changes.
 
-   ![View changed file](media/repo-mgmt/readme-changed-file.png)  
+   ![View changed file](media/repo-mgmt/readme-changed-file.png)
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [New to Git repos? Learn more](/azure/devops/learn/git/set-up-a-git-repository)
+> [!div class="nextstepaction"][new to git repos? learn more](/azure/devops/learn/git/set-up-a-git-repository)
 
-> [!div class="nextstepaction"]
-> [Learn more about using Git in the Git tutorial](gitworkflow.md)
+> [!div class="nextstepaction"][learn more about using git in the git tutorial](gitworkflow.md)

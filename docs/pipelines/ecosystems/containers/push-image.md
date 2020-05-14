@@ -6,7 +6,7 @@ ms.assetid: 3ce59600-a7f8-4a5a-854c-0ced7fdaaa82
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 08/28/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Push an image
@@ -45,6 +45,7 @@ Choose the Docker Hub option under [Docker registry service connection](../../li
 ## Google Container Registry
 
 The following steps walk through the creation of Docker registry service connection associated with Google Container Registry:
+
 1. Open your project in the GCP Console and then open Cloud Shell
 2. To save time typing your project ID and Compute Engine zone options, set default configuration values by running the following commands:
 
@@ -82,7 +83,7 @@ The following steps walk through the creation of Docker registry service connect
    AZURE_PIPELINES_PUBLISHER=$(gcloud iam service-accounts list \
        --filter="displayName:Azure Pipelines Publisher" \
        --format='value(email)')
-    
+
    gcloud projects add-iam-policy-binding \
        $(gcloud config get-value core/project) \
        --member serviceAccount:$AZURE_PIPELINES_PUBLISHER \
@@ -97,10 +98,10 @@ The following steps walk through the creation of Docker registry service connect
 
    tr -d '\n' < azure-pipelines-publisher.json > azure-pipelines-publisher-oneline.json
    ```
+
    Launch Code Editor by clicking the button in the upper-right corner of Cloud Shell:
 
-   > [!div class="mx-imgBorder"]
-   > ![Badge](../media/gcp-code-editor.png "GCP code editor")
+   > [!div class="mx-imgBorder"] > ![Badge](../media/gcp-code-editor.png "GCP code editor")
 
 8. Open the file `named azure-pipelines-publisher-oneline.json`. You'll need the content of this file in one of the following steps:
 
@@ -110,10 +111,9 @@ The following steps walk through the creation of Docker registry service connect
 
 11. In the dialog, enter values for the following fields:
 
-   - **Docker Registry:** `https://gcr.io/[PROJECT-ID]`, where `[PROJECT-ID]` is the name of your GCP project.
-   - ****Docker ID:** `_json_key`
-   - **Docker Password:** Paste the contents of `azure-pipelines-publisher-oneline.json`
-   - **Service connection name:** `gcrServiceConnection`
+- **Docker Registry:** `https://gcr.io/[PROJECT-ID]`, where `[PROJECT-ID]` is the name of your GCP project.
+- \***\*Docker ID:** `_json_key`
+- **Docker Password:** Paste the contents of `azure-pipelines-publisher-oneline.json`
+- **Service connection name:** `gcrServiceConnection`
 
 12. Click **Save** to create the service connection
-

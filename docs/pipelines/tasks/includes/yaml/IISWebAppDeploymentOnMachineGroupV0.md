@@ -12,9 +12,9 @@ ms.technology: devops-cicd-tasks
 # Deploy a website or web application using Web Deploy
 - task: IISWebAppDeploymentOnMachineGroup@0
   inputs:
-    webSiteName: 
+    webSiteName:
     #virtualApplication: # Optional
-    #package: '$(System.DefaultWorkingDirectory)\**\*.zip' 
+    #package: '$(System.DefaultWorkingDirectory)\**\*.zip'
     #setParametersFile: # Optional
     #removeAdditionalFilesFlag: false # Optional
     #excludeFilesFromAppDataFlag: false # Optional

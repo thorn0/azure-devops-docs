@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Build Tags | REST API Reference for  Azure DevOps Services and Team Foundation Server
 description: Get build tags using the REST APIs for VSTS.
 ms.assetid: f5a3bb49-f843-4f51-a29a-6ca1c226fbe2
@@ -26,10 +26,12 @@ Builds can be [tagged](./builds.md#addatagtoabuild) for easy searching.
 GET https://{instance}/DefaultCollection/_apis/build/queues?api-version={version}[&name={string}][&type={string}]
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
+| instance | string | TFS server name ({server:port}).
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -44,14 +46,6 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/tags?ap
 ```json
 {
   "count": 6,
-  "value": [
-    "myTag",
-    "existing tag",
-    "important",
-    "tag1",
-    "tag2",
-    "tag3"
-  ]
+  "value": ["myTag", "existing tag", "important", "tag1", "tag2", "tag3"]
 }
 ```
-

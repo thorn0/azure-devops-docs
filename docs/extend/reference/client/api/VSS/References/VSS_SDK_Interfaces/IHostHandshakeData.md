@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,16 +15,14 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Data passed from the host to an extension frame via the initial handshake 
+Data passed from the host to an extension frame via the initial handshake
 
 ### Members
 
-* `pageContext`: [PageContext](../../../VSS/References/SDK_Interfaces/PageContext.md). Static context information about the current page
+- `pageContext`: [PageContext](../../../VSS/References/SDK_Interfaces/PageContext.md). Static context information about the current page
 
-* `initialConfig`: any. Optional. Initial configuration for the extension frame
+- `initialConfig`: any. Optional. Initial configuration for the extension frame
 
-* `extensionContext`: [IExtensionContext](../../../VSS/References/VSS_SDK_Interfaces/IExtensionContext.md). Context information about the extension
+- `extensionContext`: [IExtensionContext](../../../VSS/References/VSS_SDK_Interfaces/IExtensionContext.md). Context information about the extension
 
-* `contribution`: [Contribution](../../../VSS/References/SDK_Interfaces/Contribution.md). The contribution that caused the extension frame to be loaded.
-
+- `contribution`: [Contribution](../../../VSS/References/SDK_Interfaces/Contribution.md). The contribution that caused the extension frame to be loaded.

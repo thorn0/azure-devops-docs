@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Core/Contracts`
 
-
 ### Members
 
-* `name`: string. 
+- `name`: string.
 
-* `url`: string. 
-
+- `url`: string.

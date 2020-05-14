@@ -15,7 +15,7 @@ We have some exciting new features this sprint!
 
 ## View work item attachments
 
-Continuing to improve the work item attachment experience, you can now view attached images without leaving the work item. When you click an image in the attachment grid, we will create a lightbox to view the image. 
+Continuing to improve the work item attachment experience, you can now view attached images without leaving the work item. When you click an image in the attachment grid, we will create a lightbox to view the image.
 
 ## Work item type layout improvements
 
@@ -23,7 +23,7 @@ Our layout admin page for work item types has been improved so that group and pa
 
 ![wit layout admin](media/9_21_01.png)
 
-Another improvement in this area is the ability to add custom controls to your work item form. Developers can target this contribution and you will be able to add and configure them for your different work item types. 
+Another improvement in this area is the ability to add custom controls to your work item form. Developers can target this contribution and you will be able to add and configure them for your different work item types.
 
 ![custom controls](media/9_21_02.png)
 
@@ -38,7 +38,8 @@ To disable a work item type, go to the work item type’s **Overview** tab on th
 Customers can now import a Git repository from GitHub, Bitbucket, GitLab, or other locations. You can import into either a new or an existing empty repository.
 
 ### Import into a new repository
-From the repository selector drop-down, click **Import repository**. 
+
+From the repository selector drop-down, click **Import repository**.
 
 ![import new repo](media/9_21_09.png)
 
@@ -50,7 +51,7 @@ However, if the source repository is a private repository and can be accessed us
 
 ### Import into an existing empty repository
 
-On the **Files page**, click the **Import repository** button and provide the clone URL. You will need to provide credentials if the source repository is private and requires authentication. 
+On the **Files page**, click the **Import repository** button and provide the clone URL. You will need to provide credentials if the source repository is private and requires authentication.
 
 ![import existing repo](media/9_21_11.png)
 
@@ -64,9 +65,9 @@ To prevent accidental repository deletions, you now have to type the name of the
 
 ## Add .gitignore during repo creation
 
-While creating a new Git repository, customers can now add and associate a .gitignore file with their repository. A .gitignore file specifies files that Git should ignore while performing a commit. 
+While creating a new Git repository, customers can now add and associate a .gitignore file with their repository. A .gitignore file specifies files that Git should ignore while performing a commit.
 
-The dialog allows users to select one of the many available .gitignore templates. 
+The dialog allows users to select one of the many available .gitignore templates.
 
 ![gitignore](media/9_21_04.png)
 
@@ -82,7 +83,7 @@ You can now format your xcodebuild output with [xcpretty](https://github.com/sup
 
 ![xcpretty](media/9_21_03.png)
 
-## Publish Jenkins test and code coverage results 
+## Publish Jenkins test and code coverage results
 
 The **Jenkins Queue Job** build and release task can now retrieve test and code coverage results from a Jenkins job or pipeline. This requires installation of the TFS Plugin for Jenkins 5.2.0 or later on your Jenkins server and configuring the post-build action **Collect Results for TFS/Team Services**. After results are retrieved from Jenkins, they can be published to Team Services with the **Publish Test Results** or **Publish Code Coverage** build tasks.
 

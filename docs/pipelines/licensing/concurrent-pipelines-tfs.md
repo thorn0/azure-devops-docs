@@ -6,12 +6,10 @@ ms.topic: conceptual
 ms.assetid: 8C578915-5C23-4563-957E-7AD1C6FB80FF
 ms.author: jukullam
 ms.date: 08/14/2019
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 ---
 
 # Parallel release jobs in Team Foundation Server
-
-
 
 **[Azure Pipelines](concurrent-jobs.md) | Azure DevOps Server 2019 | TFS 2018 | TFS 2017**
 
@@ -19,7 +17,7 @@ This article describes the licensing model for Azure Pipelines in Team Foundatio
 
 A TFS _parallel job_ gives you the ability to run a single release at a time in a project collection. You can keep hundreds or even thousands of release jobs in your collection. But, to run more than one release at a time, you need additional parallel jobs.
 
-One free parallel job is included with every collection in a Team Foundation server. Every Visual Studio Enterprise subscriber in a Team Foundation server contributes one additional parallel job. 
+One free parallel job is included with every collection in a Team Foundation server. Every Visual Studio Enterprise subscriber in a Team Foundation server contributes one additional parallel job.
 
 ::: moniker range="< azure-devops-2019"
 
@@ -69,7 +67,7 @@ For example, suppose your collection has three parallel jobs. You can have more 
 
 ## Parallel jobs in an organization
 
-For example, here's an organization that has multiple  Team Foundation Servers. Two of their users have Visual Studio Enterprise subscriptions that they can use at the same time across all their on-premises servers and in each collection so long as the customer adds them as users to both the servers as explained below.
+For example, here's an organization that has multiple Team Foundation Servers. Two of their users have Visual Studio Enterprise subscriptions that they can use at the same time across all their on-premises servers and in each collection so long as the customer adds them as users to both the servers as explained below.
 
 ![Parallel jobs in an organization example](media/concurrent-pipelines-tfs/concurrent-pipelines-in-an-organization-example.png)
 
@@ -85,9 +83,9 @@ A simple rule of thumb: Estimate that you'll need one parallel job for every 10 
 
 In the following scenarios you might need multiple parallel jobs:
 
-* If you have multiple teams, if each of them require a CI build, and if each of the CI builds is configured to trigger a release, then you'll likely need a parallel job for each team.
+- If you have multiple teams, if each of them require a CI build, and if each of the CI builds is configured to trigger a release, then you'll likely need a parallel job for each team.
 
-* If you develop multiple applications in one collection, then you'll likely need additional parallel jobs: one to deploy each application at the same time.
+- If you develop multiple applications in one collection, then you'll likely need additional parallel jobs: one to deploy each application at the same time.
 
 ## Use your Visual Studio Enterprise subscription benefit
 
@@ -105,8 +103,6 @@ Users who have Visual Studio Enterprise subscriptions are assigned to **VS Enter
 
 After you've added these users, additional licenses will appear on the resource limits page described below.
 
-
-
 ## Purchase additional parallel jobs
 
 If you need to run more parallel releases, you can [buy additional private jobs from the Visual Studio marketplace](https://marketplace.visualstudio.com/items?itemName=ms.build-release-private-pipelines). Since there is no way to directly purchase parallel jobs from Marketplace for a TFS instance at present, you must first buy parallel jobs for an Azure DevOps organization. After you buy the private jobs for an Azure DevOps organization, you enter the number of purchased parallel jobs manually on the resource limits page described below.
@@ -120,8 +116,6 @@ If you need to run more parallel releases, you can [buy additional private jobs 
    URL example: `http://{your_server}:8080/tfs/DefaultCollection/_admin/_buildQueue?_a=resourceLimits`
 
 2. View or edit the number of purchased parallel jobs.
-
-
 
 ## Q&A
 

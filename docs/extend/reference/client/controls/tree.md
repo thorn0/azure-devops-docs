@@ -6,7 +6,7 @@ ms.technology: devops-ecosystem
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -17,7 +17,8 @@ See [Use treeview](../../../develop/ui-controls/treeviewo.md) for basic usage an
 ## Create a treeview
 
 ### TypeScript
-``` javascript
+
+```javascript
 import Controls = require("VSS/Controls");
 import TreeView = require("VSS/Controls/TreeView");
 
@@ -26,9 +27,13 @@ var treeview = Controls.create(TreeView.TreeView, container, options);
 ```
 
 ### JavaScript
-``` javascript
-require(["VSS/Controls", "VSS/Controls/TreeView"], function(Controls, TreeView) {
-    // Create the treeView in a container element
-    var treeview = Controls.create(TreeView.TreeView, container, options);
+
+```javascript
+require(["VSS/Controls", "VSS/Controls/TreeView"], function (
+  Controls,
+  TreeView
+) {
+  // Create the treeView in a container element
+  var treeview = Controls.create(TreeView.TreeView, container, options);
 });
 ```

@@ -2,7 +2,7 @@
 ms.topic: include
 ---
 
-<!--- Azure DevOps Server 2019 Pipelines Build only 
+<!--- Azure DevOps Server 2019 Pipelines Build only
 
 Administer build permissions
 Delete build pipeline
@@ -22,7 +22,6 @@ View builds
 
 
 -->
- 
 
 <table>
 <tr valign="bottom">
@@ -153,10 +152,3 @@ View builds
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
- 

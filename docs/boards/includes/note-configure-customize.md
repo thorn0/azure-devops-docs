@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-agile
-ms.assetid: 
+ms.assetid:
 ms.manager: mijacobs
 ms.author: kaelli
 author: KathrynEE
@@ -10,7 +10,7 @@ ms.date: 01/24/2020
 
 ::: moniker range=">= azure-devops-2019"
 
-> [!NOTE]   
-> For guidance on configuring and customizing your project and teams to support your business needs, review [Configuration and customization of Azure Boards](/azure/devops/boards/configure-customize).  
+> [!NOTE]  
+> For guidance on configuring and customizing your project and teams to support your business needs, review [Configuration and customization of Azure Boards](/azure/devops/boards/configure-customize).
 
 ::: moniker-end

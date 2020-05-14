@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Check out and edit files
 
@@ -28,18 +27,19 @@ You must be one of the **Contributors** for your project. See [Team Foundation S
 1. In [Solution Explorer](develop-code-manage-pending-changes.md) or in [Source Control Explorer](use-source-control-explorer-manage-files-under-version-control.md), select the files that you want to edit, open their shortcut menu, and choose **Check Out for Edit**.
 
 2. (Optional) You can lock the file.
-   >**Important:**  
-   >As a best practice, use the **Lock type** option with discretion and notify your teammates why you are locking an item, and when you plan to remove the lock.
 
-   On the **Lock type** menu, choose:  
+   > **Important:**  
+   > As a best practice, use the **Lock type** option with discretion and notify your teammates why you are locking an item, and when you plan to remove the lock.
 
-   -   **Unchanged**: Do not apply a lock to the items.  
-   -   **Check Out**: Prevent other users from checking out and checking in the items until you check in and unlock them.
+   On the **Lock type** menu, choose:
 
-       > [!NOTE]
-       > In Visual Studio Team Foundation Server 2012 this option is not available if you are using a [local workspace](decide-between-using-local-server-workspace.md). Also, this lock is not enforceable because other users might be using local workspaces. See [Understand lock types](understand-lock-types.md).
+   - **Unchanged**: Do not apply a lock to the items.
+   - **Check Out**: Prevent other users from checking out and checking in the items until you check in and unlock them.
 
-   -   **Check In**: Allow other users to check out the items you are checking out, but prevent them from checking in their changes until you check in your changes and unlock the items.
+     > [!NOTE]
+     > In Visual Studio Team Foundation Server 2012 this option is not available if you are using a [local workspace](decide-between-using-local-server-workspace.md). Also, this lock is not enforceable because other users might be using local workspaces. See [Understand lock types](understand-lock-types.md).
+
+   - **Check In**: Allow other users to check out the items you are checking out, but prevent them from checking in their changes until you check in your changes and unlock the items.
 
    > [!NOTE]
    > The **Lock type** menu is not available if:
@@ -55,12 +55,12 @@ In Solution Explorer and in Source Control Explorer, a check mark ![TFSC Checked
 
 ## Work from the command prompt
 
--    [Get command](get-command.md)  Get files from the server.  
--    [Checkout (or Edit) command](checkout-or-edit-command.md)  Check out files from the server.
+- [Get command](get-command.md) Get files from the server.
+- [Checkout (or Edit) command](checkout-or-edit-command.md) Check out files from the server.
 
 ## Tips
 
--   If you are beginning a new task, it's probably a good idea for you to [download the latest files from the server](download-get-files-from-server.md) before you check out files and begin your work.  
--   To help you and your team organize and track your work, you should use the My Work or Pending Changes page to associate a task or a bug with the work you are doing. See [Develop code and manage pending changes](develop-code-manage-pending-changes.md).  
--   If you use a [server workspace](decide-between-using-local-server-workspace.md), files that you have not checked out are read-only.  
--   You can [review and manage your work](develop-code-manage-pending-changes.md), [suspend your work](suspend-your-work-manage-your-shelvesets.md), and ultimately [contribute your work to the team's codebase](check-your-work-team-codebase.md).
+- If you are beginning a new task, it's probably a good idea for you to [download the latest files from the server](download-get-files-from-server.md) before you check out files and begin your work.
+- To help you and your team organize and track your work, you should use the My Work or Pending Changes page to associate a task or a bug with the work you are doing. See [Develop code and manage pending changes](develop-code-manage-pending-changes.md).
+- If you use a [server workspace](decide-between-using-local-server-workspace.md), files that you have not checked out are read-only.
+- You can [review and manage your work](develop-code-manage-pending-changes.md), [suspend your work](suspend-your-work-manage-your-shelvesets.md), and ultimately [contribute your work to the team's codebase](check-your-work-team-codebase.md).

@@ -99,7 +99,7 @@ You can now request a PMD analysis in the Maven build task and see the number of
 
 ## Build – SonarQube with a Gradle build task
 
-You can now trigger a SonarQube analysis in the Gradle build task by checking **Run SonarQube Analysis**, and providing the endpoint, the SonarQube project name, the project key and the version. More information is available at this [blog post](https://devblogs.microsoft.com/devops/the-gradle-build-task-now-supports-sonarqube-analysis/). 
+You can now trigger a SonarQube analysis in the Gradle build task by checking **Run SonarQube Analysis**, and providing the endpoint, the SonarQube project name, the project key and the version. More information is available at this [blog post](https://devblogs.microsoft.com/devops/the-gradle-build-task-now-supports-sonarqube-analysis/).
 
 ![SonarQube analysis in the Gradle build task](media/6_17_11.png)
 
@@ -111,13 +111,13 @@ You might often need to run custom PS scripts in Release Management, which invok
 
 Here is a simple example on how to get a build definition:
 
-$url = "$($env:SYSTEM_TEAMFOUNDATIONCOLLECTIONURI)$env:SYSTEM_TEAMPROJECTID/_apis/build/definitions/$($env:SYSTEM_DEFINITIONID)?api-version=2.0"
- Write-Host "URL: $url"
+$url = "$($env:SYSTEM_TEAMFOUNDATIONCOLLECTIONURI)$env:SYSTEM_TEAMPROJECTID/\_apis/build/definitions/$($env:SYSTEM_DEFINITIONID)?api-version=2.0"
+Write-Host "URL: $url"
  $definition = Invoke-RestMethod -Uri $url -Headers @{
  Authorization = "Bearer $env:SYSTEM_ACCESSTOKEN"
- }
- Write-Host "Definition = $($definition | ConvertTo-Json -Depth 1000)"
- 
+}
+Write-Host "Definition = $($definition | ConvertTo-Json -Depth 1000)"
+
 ## Build – Enable path filters for Git CI triggers
 
 CI triggers for hosted Git repositories can include or exclude certain paths. This enables you to configure a build definition to run only when files in specific paths have changed.

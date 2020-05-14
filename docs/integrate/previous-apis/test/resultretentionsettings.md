@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Result Retention Settings | REST API Reference for Team Foundation Server
 description: Work with test result retention settings programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 8A82A554-48F3-4A0B-A119-8C76A7E966DD
@@ -26,13 +26,15 @@ Below APIs fetch or update result retention settings for a project. To get list 
 GET https://{instance}/DefaultCollection/{project}/_apis/test/resultretentionsettings?api-version={version}
 ```
 
-| Parameter               | Type     | Notes
-|:------------------------|:---------|:-----------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance                | string   | TFS server name ({server:port}).
-| project                 | string   | Name or ID of the project.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
 | Query
-| version	              | string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -57,8 +59,6 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-TFVC/_apis/test/resultr
 }
 ```
 
-
-
 ## Update result retention settings
 
 ```no-highlight
@@ -72,13 +72,15 @@ PATCH https://{instance}/DefaultCollection/{project}/_apis/test/resultretentions
 }
 ```
 
-| Parameter               | Type   | Notes
-|:------------------------|:-------|:------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance                | string | TFS server name ({server:port}).
-| project                 | string | Name or ID of the project.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
 | Query
-| version                 | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
 | automatedResultsRetentionDuration | int | Number of days to retain automated test results. Set -1 to retain indefinitely.
 | manualResultsRetentionDuration | int | Number of days to retain manual test results. Set -1 to retain indefinitely.
@@ -88,6 +90,7 @@ PATCH https://{instance}/DefaultCollection/{project}/_apis/test/resultretentions
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-TFVC/_apis/test/resultretentionsettings?api-version=2.0-preview
 ```
+
 ```json
 {
   "automatedResultsRetentionDuration": 30,
@@ -111,4 +114,3 @@ PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber-TFVC/_apis/test/resul
   "lastUpdatedDate": "2016-07-13T10:15:13.367Z"
 }
 ```
-

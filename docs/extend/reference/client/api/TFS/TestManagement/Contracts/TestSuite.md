@@ -14,52 +14,50 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `areaUri`: string. 
+- `areaUri`: string.
 
-* `children`: [TestSuite](../../../TFS/TestManagement/Contracts/TestSuite.md)[].
+- `children`: [TestSuite](../../../TFS/TestManagement/Contracts/TestSuite.md)[].
 
-* `defaultConfigurations`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md)[]. 
+- `defaultConfigurations`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md)[].
 
-* `id`: number. 
+- `id`: number.
 
-* `inheritDefaultConfigurations`: boolean. 
+- `inheritDefaultConfigurations`: boolean.
 
-* `lastError`: string. 
+- `lastError`: string.
 
-* `lastPopulatedDate`: Date. 
+- `lastPopulatedDate`: Date.
 
-* `lastUpdatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `lastUpdatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `lastUpdatedDate`: Date. 
+- `lastUpdatedDate`: Date.
 
-* `name`: string. 
+- `name`: string.
 
-* `parent`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `parent`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `plan`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `plan`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `project`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `project`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `queryString`: string. 
+- `queryString`: string.
 
-* `requirementId`: number. 
+- `requirementId`: number.
 
-* `revision`: number. 
+- `revision`: number.
 
-* `state`: string. 
+- `state`: string.
 
-* `suites`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md)[]. 
+- `suites`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md)[].
 
-* `suiteType`: string. 
+- `suiteType`: string.
 
-* `testCaseCount`: number. 
+- `testCaseCount`: number.
 
-* `testCasesUrl`: string. 
+- `testCasesUrl`: string.
 
-* `text`: string. 
+- `text`: string.
 
-* `url`: string. 
-
+- `url`: string.

@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.author: sdanie
 author: steved0x
 ms.date: 11/15/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Create test plans and test suites
 
-[!INCLUDE [version-header](includes/version-header.md)] 
+[!INCLUDE [version-header](includes/version-header.md)]
 
 Create test plans and test suites to track manual testing for sprints or milestones.
 That way, you can see when the testing for a specific sprint or milestone is complete.
@@ -23,23 +23,23 @@ For more information about manual testing, see [Planned manual testing](overview
 ## What are test plans, test suites, and test cases?
 
 [!INCLUDE [test-hub-include](includes/test-hub-include.md)] provides three main types of test management artifacts: test plans, test suites, and test cases.
-These elements are stored in your work repository as special types of work items. 
+These elements are stored in your work repository as special types of work items.
 You can export and share them with your team, and benefit from close integration for all of your DevOps tasks.
 
-* **Test plans** group test suites and individual test cases together.
+- **Test plans** group test suites and individual test cases together.
   Test plans include static test suites, requirement-based suites, and [query-based suites](reference-qa.md#query-based-suites).
 
-* **Test suites** group test cases into separate testing scenarios within a single test plan.
+- **Test suites** group test cases into separate testing scenarios within a single test plan.
   Grouping test cases makes it easier to see which scenarios are complete.
 
-* **Test cases** validate individual parts of your code or app deployment.
+- **Test cases** validate individual parts of your code or app deployment.
   You can ensure your code works correctly, has no errors, and meets business and customer requirements.
   You can add individual test cases to a test plan without creating a test suite, if you wish.
   More than one test suite or test plan can refer to a test case.
   You can effectively reuse test cases without needing to copy or clone them for each suite or plan.
   See [Create manual test cases](create-test-cases.md).
 
-For example, you're building version 1.* of your product and you might create several test cases for that version.
+For example, you're building version 1.\* of your product and you might create several test cases for that version.
 Each of these test cases can be updated, and more added, at any time.
 For each development cycle and release of your product, you create a test plan and import the existing test cases into that plan.
 You can also, if you wish, divide the test cases into separate test suites within the plan to enable easier management and monitoring of these separate sets of test cases.
@@ -87,9 +87,9 @@ To create and edit a test artifact, you must have one of the following access le
 
 Test artifacts include test plan, test suite, test case, test configuration, shared step, and shared parameter.
 
->[!NOTE]
+> [!NOTE]
 > Stakeholders can't create or manage test cases. You must have at least Basic access.
-See [Default manual testing permissions and access](manual-test-permissions.md).
+> See [Default manual testing permissions and access](manual-test-permissions.md).
 
 ::: moniker-end
 
@@ -107,26 +107,27 @@ You need a project. For more information, see [create your project](../organizat
    ![Opening the list of test plans page](media/create-a-test-plan/goto-test-plans-page.png)
 
 1. In the **Test Plans** page, choose **New Test Plan** to create a test plan for your current sprint.
- 
+
    ![Creating a new test plan](media/create-a-test-plan/CreateATestPlan1a.png)
 
 1. In **New Test Plan**, enter a name for the test plan.
    Verify that the area path and iteration are set correctly, then choose **Create**.
 
-   ![Adding test plan details](media/create-a-test-plan/CreateATestPlan2.png) 
+   ![Adding test plan details](media/create-a-test-plan/CreateATestPlan2.png)
 
 > [!TIP]
 > You can also create a test plan and a test suite automatically when you create a test from a User Story work item in Azure Boards or Azure DevOps Server.
 > Open the shortcut menu for the work item and choose **Add test**.
 
 <a name="backlog"></a>
+
 ## Add a requirement-based test suite and select backlog items to test
 
 Now add test suites for the backlog items that need manual tests. These tests could be user stories, requirements, or other work items based your project.
 
 1. To add a suite to a test plan, select the **+** new drop-down list and choose a type of test suite.
 
-   ![Creating a requirement-based test suite](media/create-a-test-plan/AddRequirementSuitesToTestPlan.png) 
+   ![Creating a requirement-based test suite](media/create-a-test-plan/AddRequirementSuitesToTestPlan.png)
 
    You use requirement-based suites to group your test cases together.
    That way, you can track the testing status of a backlog item.
@@ -143,19 +144,19 @@ Now add test suites for the backlog items that need manual tests. These tests co
    ![Adding requirement-based suites for your backlog items](media/create-a-test-plan/AddRequirementSuitesToTestPlan3.png)
 
 <a name="findplan"></a>
+
 ## Find a test case in a test plan
 
 In **Test Plans** for your test plan, use the ![filter-icon](media/create-a-test-plan/filter-icon.png) filter icon (**1**) to show the search and filter lists (**2**) that help you find the tests you want to work with.
 Or filter the list of tests using **Outcome**, **Tester**, and **Configuration** (**3**).
 
-  ![Finding a test plan](media/create-a-test-plan/select-test-plan.png)
-  
-##  Next steps
+![Finding a test plan](media/create-a-test-plan/select-test-plan.png)
 
-> [!div class="nextstepaction"]
-> [Create manual test cases](create-test-cases.md#test-cases) 
+## Next steps
+
+> [!div class="nextstepaction"][create manual test cases](create-test-cases.md#test-cases)
 
 ## See also
 
-* [FAQs for manual testing](reference-qa.md#testplans)
-* [Link test cases to work items](../boards/queries/link-work-items-support-traceability.md)
+- [FAQs for manual testing](reference-qa.md#testplans)
+- [Link test cases to work items](../boards/queries/link-work-items-support-traceability.md)

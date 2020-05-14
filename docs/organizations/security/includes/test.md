@@ -1,4 +1,3 @@
-
 <table>
 <tr valign="bottom">
 <th width="310px">Task</th>

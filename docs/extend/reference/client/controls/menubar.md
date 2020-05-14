@@ -6,7 +6,7 @@ ms.technology: devops-ecosystem
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -17,7 +17,8 @@ See [Use menubar](../../../develop/ui-controls/menubaro.md) for basic usage and 
 ## Create a menubar
 
 ### TypeScript
-``` javascript
+
+```javascript
 import Controls = require("VSS/Controls");
 import Menus = require("VSS/Controls/Menus");
 
@@ -26,9 +27,10 @@ var menubar = Controls.create<Menus.MenuBar, any>(Menus.MenuBar, container, opti
 ```
 
 ### JavaScript
-``` javascript
-require(["VSS/Controls", "VSS/Controls/Menus"], function(Controls, MenuBar) {
-    // Create the menubar in a container element
-    var menubar = Controls.create(Menus.MenuBar, container, options);
+
+```javascript
+require(["VSS/Controls", "VSS/Controls/Menus"], function (Controls, MenuBar) {
+  // Create the menubar in a container element
+  var menubar = Controls.create(Menus.MenuBar, container, options);
 });
 ```

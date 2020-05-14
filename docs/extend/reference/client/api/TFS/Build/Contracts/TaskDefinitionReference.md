@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `id`: string. 
+- `id`: string.
 
-* `versionSpec`: string. 
-
+- `versionSpec`: string.

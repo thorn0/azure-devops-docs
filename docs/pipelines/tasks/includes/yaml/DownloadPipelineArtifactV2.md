@@ -22,5 +22,5 @@ ms.technology: devops-cicd-tasks
     #tags: # Optional
     #artifact: # Optional
     #patterns: '**' # Optional
-    #path: '$(Pipeline.Workspace)' 
+    #path: '$(Pipeline.Workspace)'
 ```

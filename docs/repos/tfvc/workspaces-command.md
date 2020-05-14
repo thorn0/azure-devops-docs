@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Workspaces Command
 
@@ -22,14 +21,14 @@ Displays information about workspaces in the system and updates cached informati
 To use the **workspaces** command, you must have the **Read** permission set to **Allow**. For more information, see [Permissions and groups reference](../../organizations/security/permissions.md).
 
 ```
-tf workspaces [/owner:ownername] [/computer:computername] 
-[/collection:TeamProjectCollectionUrl] [/format:(brief|detailed)] 
-[/updateUserName:oldUserName] [/updateComputerName:oldComputerName] 
+tf workspaces [/owner:ownername] [/computer:computername]
+[/collection:TeamProjectCollectionUrl] [/format:(brief|detailed)]
+[/updateUserName:oldUserName] [/updateComputerName:oldComputerName]
 [workspacename][/login:username,[password]]
 ```
 
 ```
-tf workspaces /remove:(*|workspace1[,workspace2,...]) 
+tf workspaces /remove:(*|workspace1[,workspace2,...])
 /collection:(*|TeamProjectCollectionUrl)
 ```
 
@@ -118,12 +117,15 @@ tf workspaces /remove:(*|workspace1[,workspace2,...])
 </table>
 
 ## Remarks
+
 The **workspaces** command of the **tf** command-line utility displays information about [workspaces](create-work-workspaces.md) on the current computer, owned by a specified user, or for all workspaces associated with a specific Team Foundation Server. For each workspace, Team Foundation displays the name, owner, comment, and computer name. With detailed output, it also shows the workspace mappings. Unless you provide a filter such as owner, computer or workspace name, Team Foundation only displays information about the workspaces that you have created.
 
 For more information about how to edit workspace properties, see [Workspace Command](workspace-command.md).
 
 For more information on how to find the **tf** command-line utility, see [Tf Command-Line Utility Commands](https://msdn.microsoft.com/library/z51z7zy0).
+
 ## Examples
+
 The following example displays a list of all workspaces for the current user on the current computer.
 
 ```
@@ -160,11 +162,13 @@ c:\projects>tf workspaces /remove:* /collection:http://myserver:8080/tfs/Default
 
 [Command-Line Syntax (Version Control)](https://msdn.microsoft.com/library/56f7w6be)  
 [Workspace Command](workspace-command.md)  
-[Workfold Command](workfold-command.md)  
+[Workfold Command](workfold-command.md)
+
 ### Concepts
 
-[Create a Workspace to Work with your Project](create-work-workspaces.md)  
+[Create a Workspace to Work with your Project](create-work-workspaces.md)
+
 ### Other Resources
 
 [Tf Command-Line Utility Commands](https://msdn.microsoft.com/library/z51z7zy0)  
-[Create a Workspace and Get Files for the First Time](set-up-team-foundation-version-control-your-dev-machine.md)  
+[Create a Workspace and Get Files for the First Time](set-up-team-foundation-version-control-your-dev-machine.md)

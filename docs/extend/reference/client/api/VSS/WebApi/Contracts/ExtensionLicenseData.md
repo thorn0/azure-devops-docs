@@ -14,16 +14,14 @@ ms.date: 08/04/2016
 
 Module path: `VSS/WebApi/Contracts`
 
-
 ### Members
 
-* `createdDate`: Date. 
+- `createdDate`: Date.
 
-* `extensionId`: string. 
+- `extensionId`: string.
 
-* `isFree`: boolean. 
+- `isFree`: boolean.
 
-* `minimumRequiredAccessLevel`: VSS_Licensing_Contracts.VisualStudioOnlineServiceLevel. 
+- `minimumRequiredAccessLevel`: VSS_Licensing_Contracts.VisualStudioOnlineServiceLevel.
 
-* `updatedDate`: Date. 
-
+- `updatedDate`: Date.

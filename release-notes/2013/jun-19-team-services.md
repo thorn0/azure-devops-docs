@@ -15,7 +15,7 @@ We’ve got a few updates to share as a part of today’s deployment.
 
 ## Agile Portfolio Management
 
-1. First, we made a couple of usability updates to the Agile Portfolio Management features announced and released back on June 3rd. 
+1. First, we made a couple of usability updates to the Agile Portfolio Management features announced and released back on June 3rd.
 
 Each backlog in the backlog explorer is now adorned with a clickable color bar that allows you to drill up or down between backlogs. In the screenshot below, you can see that I’m on the Features backlog and that I’ve drilled down to see related Backlog items and Tasks. This provides a very quick and easy way to traverse the relationships between backlogs. The view filter on the right side of the toolbar has also been updated to include the color bars and a clearer description.
 
@@ -31,13 +31,13 @@ You can now easily transition from the Test hub on the web directly to Microsoft
 
 ![Opening MTM from the web](media/6_19_03.png)
 
-And, you can now edit the values for parameters in test steps directly through the test runner.  While running a test, double-click the value of a parameter to change its value.
+And, you can now edit the values for parameters in test steps directly through the test runner. While running a test, double-click the value of a parameter to change its value.
 
 ![Editing parameters during test execution](media/6_19_04.png)
 
 ## Out with the Red
 
-Since the inception of the service we’ve used the color red to denote the administrative portion of the web interface.  Well, after listening to many of you tell us that red was not the right color (typically using very colorful language), we’ve gone ahead and made a change. The administrative pages of the service now use our standard blue color.
+Since the inception of the service we’ve used the color red to denote the administrative portion of the web interface. Well, after listening to many of you tell us that red was not the right color (typically using very colorful language), we’ve gone ahead and made a change. The administrative pages of the service now use our standard blue color.
 
 ![New blue admin color](media/6_19_05.png)
 
@@ -49,6 +49,6 @@ Finally, you will notice after today’s update that we’re asking each user of
 
 That’s it for Sprint 49.
 
-Thanks! 
+Thanks!
 
 Aaron Bjork

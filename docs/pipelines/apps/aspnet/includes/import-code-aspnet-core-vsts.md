@@ -9,8 +9,8 @@ ms.date: 02/12/2020
 
 Azure Repos is a full-featured Git server for hosting your team's source code. You'll import code for a sample ASP.NET Core app into Azure Repos Git repository. This is the app that you'll configure CI/CD for.
 
-[//]: # (> [!NOTE])
-[//]: # (> If you already have an ASP.NET Core application checked into your Azure Repos Git repository, you can use that for this quickstart, so long as your app does not depend on a database.)
+[//]: # "> [!NOTE]"
+[//]: # "> If you already have an ASP.NET Core application checked into your Azure Repos Git repository, you can use that for this quickstart, so long as your app does not depend on a database."
 
 1. In Azure Repos, on the **Code** page for your project, select the option to **Import repository**.
 

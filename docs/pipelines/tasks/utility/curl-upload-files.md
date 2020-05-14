@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: vijayma
 author: vijayma
 ms.date: 02/12/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # cURL Upload Files task
@@ -31,23 +31,24 @@ curl
 
 ## Arguments
 
-|Argument|Description|
-|--- |--- |
-|`files`<br/>Files|(Required) File(s) to be uploaded. Wildcards can be used. <br/>For example, **`**/*.zip`** for all ZIP files in all subfolders|
-|authType<br/>Authentication Method| Default value: `ServiceEndpoint`|
-|`serviceEndpoint`<br/>Service Connection| (Required) The service connection with the credentials for the server authentication. <br/>Use the Generic service connection type for the service connection| 
-|`username`<br/>Username|(Optional) Specify the username for server authentication.|
-|`password`<br/>Password|(Optional) Specify the password for server authentication. <br/>**Important**: Use a [secret variable](../../build/variables.md) to avoid exposing this value|
-|`url`<br/>URL|(Required) URL to the location where you want to upload the files. <br/>If you are uploading to a folder, make sure to end the argument with a trailing slash. <br/><br/>Acceptable URL protocols include `DICT://, FILE://, FTP://, FTPS://, GOPHER://, HTTP://, HTTPS://, IMAP://, IMAPS://, LDAP://, LDAPS://, POP3://, POP3S://, RTMP://, RTSP://, SCP://, SFTP://, SMTP://, SMTPS://, TELNET://,` and `TFTP://`|
-|`remotePath`<br/>Remote Directory|(Optional) If supplied, this is the sub-folder on the remote server for the URL supplied in the credentials <br/>Default value: `upload/$(Build.BuildId)/`|
-|`options`<br/>Optional Arguments|(Optional) Arguments to pass to cURL.|
-|`redirectStderr`<br/>Redirect Standard Error to Standard Out|Adds **`--stderr -`** as an argument to cURL. By default, cURL writes its progress bar to stderr, which is interpreted by the build as error output. Enabling this checkbox suppresses that behavior <br/>Default value: `true`|
+| Argument                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `files`<br/>Files                                            | (Required) File(s) to be uploaded. Wildcards can be used. <br/>For example, **`**/\*.zip`\*\* for all ZIP files in all subfolders                                                                                                                                                                                                                                                                                    |
+| authType<br/>Authentication Method                           | Default value: `ServiceEndpoint`                                                                                                                                                                                                                                                                                                                                                                                     |
+| `serviceEndpoint`<br/>Service Connection                     | (Required) The service connection with the credentials for the server authentication. <br/>Use the Generic service connection type for the service connection                                                                                                                                                                                                                                                        |
+| `username`<br/>Username                                      | (Optional) Specify the username for server authentication.                                                                                                                                                                                                                                                                                                                                                           |
+| `password`<br/>Password                                      | (Optional) Specify the password for server authentication. <br/>**Important**: Use a [secret variable](../../build/variables.md) to avoid exposing this value                                                                                                                                                                                                                                                        |
+| `url`<br/>URL                                                | (Required) URL to the location where you want to upload the files. <br/>If you are uploading to a folder, make sure to end the argument with a trailing slash. <br/><br/>Acceptable URL protocols include `DICT://, FILE://, FTP://, FTPS://, GOPHER://, HTTP://, HTTPS://, IMAP://, IMAPS://, LDAP://, LDAPS://, POP3://, POP3S://, RTMP://, RTSP://, SCP://, SFTP://, SMTP://, SMTPS://, TELNET://,` and `TFTP://` |
+| `remotePath`<br/>Remote Directory                            | (Optional) If supplied, this is the sub-folder on the remote server for the URL supplied in the credentials <br/>Default value: `upload/$(Build.BuildId)/`                                                                                                                                                                                                                                                           |
+| `options`<br/>Optional Arguments                             | (Optional) Arguments to pass to cURL.                                                                                                                                                                                                                                                                                                                                                                                |
+| `redirectStderr`<br/>Redirect Standard Error to Standard Out | Adds **`--stderr -`** as an argument to cURL. By default, cURL writes its progress bar to stderr, which is interpreted by the build as error output. Enabling this checkbox suppresses that behavior <br/>Default value: `true`                                                                                                                                                                                      |
 
 ## Open source
 
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 [!INCLUDE [include](../includes/qa-minimatch.md)]

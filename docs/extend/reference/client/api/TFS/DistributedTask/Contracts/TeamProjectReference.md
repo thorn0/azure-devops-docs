@@ -14,18 +14,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `abbreviation`: string. Project abbreviation.
+- `abbreviation`: string. Project abbreviation.
 
-* `description`: string. The project&#x27;s description (if any).
+- `description`: string. The project&#x27;s description (if any).
 
-* `id`: string. Project identifier.
+- `id`: string. Project identifier.
 
-* `name`: string. Project name.
+- `name`: string. Project name.
 
-* `state`: any. Project state.
+- `state`: any. Project state.
 
-* `url`: string. Url to the full version of the object.
-
+- `url`: string. Url to the full version of the object.

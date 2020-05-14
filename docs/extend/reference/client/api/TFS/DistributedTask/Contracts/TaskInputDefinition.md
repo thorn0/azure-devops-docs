@@ -14,26 +14,24 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `defaultValue`: string. 
+- `defaultValue`: string.
 
-* `groupName`: string. 
+- `groupName`: string.
 
-* `helpMarkDown`: string. 
+- `helpMarkDown`: string.
 
-* `label`: string. 
+- `label`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `options`: {[key: string]: string}. 
+- `options`: {[key: string]: string}.
 
-* `properties`: {[key: string]: string}. 
+- `properties`: {[key: string]: string}.
 
-* `required`: boolean. 
+- `required`: boolean.
 
-* `type`: string. 
+- `type`: string.
 
-* `visibleRule`: string. 
-
+- `visibleRule`: string.

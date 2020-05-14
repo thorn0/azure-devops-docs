@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Git Pull Request Work Item Linking | REST API Reference for Team Foundation Server
 description: Work with Git pull requests programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: BFED54AE-D618-48D7-9F0E-11D4C107232E
@@ -26,15 +26,17 @@ ms.date: 11/3/2016
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pullRequests/{pullRequest}/workitems?api-version={version}
 ```
 
-| Parameter   | Type    | Notes
-|:------------|:--------|:---------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance    | string  | TFS server name ({server:port}).
-| project     | string  | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository  | string  | ID of the [repository](../repositories.md).
+| instance | string | TFS server name ({server:port}).
+| project | string | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | ID of the [repository](../repositories.md).
 | pullRequest | integer | ID of the pull request.
 | Query
-| api-version | string  | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
 
 [!INCLUDE [ID_vs_Name](../_data/id_or_name.md)]
 
@@ -58,7 +60,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-4
 }
 ```
 
-
 ## Adding and removing work item links to a pull request
 
 See [Work Item Tracking](../../wit/overview.md) for more information.
@@ -72,6 +73,7 @@ The URL is the artifact ID of a pull request which can be retrieved from the [Pu
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workItems/1?api-version=3.0
 ```
+
 ```json
 [
   {
@@ -163,7 +165,6 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workItems/1?api-version=3.
 }
 ```
 
-
 ### Remove a work item link
 
 #### Sample request
@@ -171,6 +172,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workItems/1?api-version=3.
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/wit/workItems/1?api-version=3.0
 ```
+
 ```json
 [
   {
@@ -247,5 +249,3 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workItems/1?api-version=3.
   "url": "https://mytfsserver/DefaultCollection/_apis/wit/workItems/1"
 }
 ```
-
-

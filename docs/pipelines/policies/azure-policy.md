@@ -17,7 +17,7 @@ monikerRange: azure-devops
 Azure Policy helps you manage and prevent IT issues by using policy definitions
 that enforce rules and effects for your resources. When you use Azure Policy,
 resources stay compliant with your corporate standards and service level agreements.
-Policies can be applied to an entire subscription, a management group, or a resource group. 
+Policies can be applied to an entire subscription, a management group, or a resource group.
 
 This tutorial guides you in enforcing compliance policies on your resources before and after deployment during the release process through Azure Pipelines.
 

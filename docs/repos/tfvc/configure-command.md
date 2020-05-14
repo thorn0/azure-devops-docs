@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Configure Command
 
@@ -18,11 +17,11 @@ monikerRange: '>= tfs-2015'
 
 Enables an administrator to view and change the following configuration settings for a project in the **Source Control Settings** dialog box:
 
--   Check-out settings
+- Check-out settings
 
--   Check-in policies
+- Check-in policies
 
--   Check-in notes
+- Check-in notes
 
 **Required Permissions**
 
@@ -34,26 +33,26 @@ tf configure [PathOfTeamProject] [/collection:TeamProjectCollectionUrl][/login:u
 
 ## Parameters
 
-|**Argument**|**Description**|
-|---|---|
-|*PathOfTeamProject*|Path of the project whose configuration settings an administrator can view, change, or both.|
-|*TeamProjectCollectionUrl*|The URL of the project collection that contains the project that you specified (for example, http://myserver:8080/tfs/DefaultCollection).|
-|*username*|Provides a value to the **/login** option. You can specify a username value as either *DOMAIN\UserName* or *UserName.*|
+| **Argument**               | **Description**                                                                                                                           |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| _PathOfTeamProject_        | Path of the project whose configuration settings an administrator can view, change, or both.                                              |
+| _TeamProjectCollectionUrl_ | The URL of the project collection that contains the project that you specified (for example, http://myserver:8080/tfs/DefaultCollection). |
+| _username_                 | Provides a value to the **/login** option. You can specify a username value as either _DOMAIN\UserName_ or _UserName._                    |
 
-|**Option**|**Description**|
-|---|---|
-|**/collection**|Specifies the project collection.|
-|**/login**|Specifies the user name and password to authenticate the user with Team Foundation Server.|
+| **Option**      | **Description**                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| **/collection** | Specifies the project collection.                                                          |
+| **/login**      | Specifies the user name and password to authenticate the user with Team Foundation Server. |
 
 ## Remarks
 
 You can manage the following project settings using the **configure** command:
 
--   **Check-out settings** can be used to determine whether multiple users can edit files at the same time. Also, they can be used to configure the get latest on check-out behavior.
+- **Check-out settings** can be used to determine whether multiple users can edit files at the same time. Also, they can be used to configure the get latest on check-out behavior.
 
--   **Check-in policies** provide controls that are invoked at check-in time, to make sure that defined criteria are met before a user checks in pending changes.
+- **Check-in policies** provide controls that are invoked at check-in time, to make sure that defined criteria are met before a user checks in pending changes.
 
--   **Check-in notes** define custom fields into which users provide information during the check-in process. Check-in notes can be either required or optional.
+- **Check-in notes** define custom fields into which users provide information during the check-in process. Check-in notes can be either required or optional.
 
 The settings are configured in the **Source Control Settings** dialog box which appears after you run the **configure** command. When you complete your changes, click **OK** to save them to the server.
 
@@ -74,7 +73,7 @@ c:\projects>tf configure
 The following example displays the myproj project settings in the project collection at `http://myserver:8080/tfs/DefaultCollection`.
 
 ```
-c:\projects>tf configure $/myproj / http://myserver:8080/tfs/DefaultCollection 
+c:\projects>tf configure $/myproj / http://myserver:8080/tfs/DefaultCollection
 ```
 
 ## See Also

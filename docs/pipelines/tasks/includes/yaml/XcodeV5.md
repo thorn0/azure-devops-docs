@@ -12,14 +12,14 @@ ms.technology: devops-cicd-tasks
 # Build, test, or archive an Xcode workspace on macOS. Optionally package an app.
 - task: Xcode@5
   inputs:
-    #actions: 'build' 
+    #actions: 'build'
     #configuration: '$(Configuration)' # Optional
     #sdk: '$(SDK)' # Optional
     #xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace' # Optional
     #scheme: # Optional
     #xcodeVersion: 'default' # Optional. Options: 8, 9, 10, default, specifyPath
     #xcodeDeveloperDir: # Optional
-    packageApp: 
+    packageApp:
     #archivePath: # Optional
     #exportPath: 'output/$(SDK)/$(Configuration)' # Optional
     #exportOptions: 'auto' # Optional. Options: auto, plist, specify

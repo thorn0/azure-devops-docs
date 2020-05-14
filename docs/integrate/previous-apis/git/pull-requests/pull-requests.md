@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Git Pull Requests | REST API Reference for Team Foundation Server
 description: Work with Git pull requests programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: AD95CA6B-A2DC-4236-ACA8-387621E83FE8
@@ -26,21 +26,23 @@ ms.date: 11/3/2016
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pullRequests?api-version={version}[&status={string}&creatorId={GUID}&reviewerId={GUID}&sourceRefName={string}&targetRefName={string}&$top={integer}&$skip={integer}]
 ```
 
-| Parameter     | Type                                   | Default | Notes
-|:--------------|:---------------------------------------|:--------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance      | string                                 |         | TFS server name ({server:port}).
-| project       | string                                 |         | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository    | string                                 |         | ID of the [repository](../repositories.md).
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | | ID of the [repository](../repositories.md).
 | Query
-| api-version   | string                                 |         | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
-| status        | enum { Active, Abandoned, Completed }  | Active  | Return pull requests with a specific status.
-| creatorId     | Guid                                   |         | Filter by creator. See [team members](../../tfs/teams.md#get-a-teams-members).
-| reviewerId    | Guid                                   |         | Filter by reviewer. See [team members](../../tfs/teams.md#get-a-teams-members).
-| sourceRefName | string                                 |         | Filter by source [branch](../refs.md) name. Example: refs/heads/topic/sometopic
-| targetRefName | string                                 |         | Filter by target [branch](../refs.md) name. Example: refs/heads/master
+| api-version | string | | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
+| status | enum { Active, Abandoned, Completed } | Active | Return pull requests with a specific status.
+| creatorId | Guid | | Filter by creator. See [team members](../../tfs/teams.md#get-a-teams-members).
+| reviewerId | Guid | | Filter by reviewer. See [team members](../../tfs/teams.md#get-a-teams-members).
+| sourceRefName | string | | Filter by source [branch](../refs.md) name. Example: refs/heads/topic/sometopic
+| targetRefName | string | | Filter by target [branch](../refs.md) name. Example: refs/heads/master
 | $top          | integer                                |         | Number of pull requests to return.
-| $skip         | integer                                |         | Number of pull requests to skip.
+| $skip | integer | | Number of pull requests to skip.
 
 [!INCLUDE [ID_vs_Name](../_data/id_or_name.md)]
 
@@ -225,7 +227,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-4
 }
 ```
 
-
 ### By status
 
 #### Sample request
@@ -300,7 +301,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-4
 }
 ```
 
-
 ### By target branch
 
 #### Sample request
@@ -374,28 +374,29 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-4
 }
 ```
 
-
 ## Get a list of pull requests in the project
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/pullRequests?api-version={version}[&status={string}&creatorId={GUID}&reviewerId={GUID}&sourceRefName={string}&targetRefName={string}&$top={integer}&$skip={integer}]
 ```
 
-| Parameter     | Type                                   | Default | Notes
-|:--------------|:---------------------------------------|:--------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance      | string                                 |         | TFS server name ({server:port}).
-| project       | string                                 |         | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
 | Query
-| api-version   | string                                 |         | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
-| project       | string                                 |         | Return pull requests in a specific project
-| status        | enum { Active, Abandoned, Completed }  | Active  | Return pull requests with a specific status.
-| creatorId     | Guid                                   |         | Filter by creator. See [team members](../../tfs/teams.md#get-a-teams-members).
-| reviewerId    | Guid                                   |         | Filter by reviewer. See [team members](../../tfs/teams.md#get-a-teams-members).
-| sourceRefName | string                                 |         | Filter by source [branch](../refs.md) name. Example: refs/heads/topic/sometopic
-| targetRefName | string                                 |         | Filter by target [branch](../refs.md) name. Example: refs/heads/master
+| api-version | string | | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
+| project | string | | Return pull requests in a specific project
+| status | enum { Active, Abandoned, Completed } | Active | Return pull requests with a specific status.
+| creatorId | Guid | | Filter by creator. See [team members](../../tfs/teams.md#get-a-teams-members).
+| reviewerId | Guid | | Filter by reviewer. See [team members](../../tfs/teams.md#get-a-teams-members).
+| sourceRefName | string | | Filter by source [branch](../refs.md) name. Example: refs/heads/topic/sometopic
+| targetRefName | string | | Filter by target [branch](../refs.md) name. Example: refs/heads/master
 | $top          | integer                                |         | Number of pull requests to return.
-| $skip         | integer                                |         | Number of pull requests to skip.
+| $skip | integer | | Number of pull requests to skip.
 
 #### Sample request
 
@@ -576,27 +577,28 @@ GET https://mytfsserver/DefaultCollection/2016_10_31/_apis/git/pullRequests?api-
 }
 ```
 
-
 ## Get a list of pull requests in the account
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/pullRequests?api-version={version}[&status={string}&creatorId={GUID}&reviewerId={GUID}&sourceRefName={string}&targetRefName={string}&$top={integer}&$skip={integer}]
 ```
 
-| Parameter     | Type                                   | Default | Notes
-|:--------------|:---------------------------------------|:--------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance      | string                                 |         | TFS server name ({server:port}).
-| project       | string                                 |         | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
 | Query
-| api-version   | string                                 |         | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
-| status        | enum { Active, Abandoned, Completed }  | Active  | Return pull requests with a specific status.
-| creatorId     | Guid                                   |         | Filter by creator. See [team members](../../tfs/teams.md#get-a-teams-members).
-| reviewerId    | Guid                                   |         | Filter by reviewer. See [team members](../../tfs/teams.md#get-a-teams-members).
-| sourceRefName | string                                 |         | Filter by source [branch](../refs.md) name. Example: refs/heads/topic/sometopic
-| targetRefName | string                                 |         | Filter by target [branch](../refs.md) name. Example: refs/heads/master
+| api-version | string | | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
+| status | enum { Active, Abandoned, Completed } | Active | Return pull requests with a specific status.
+| creatorId | Guid | | Filter by creator. See [team members](../../tfs/teams.md#get-a-teams-members).
+| reviewerId | Guid | | Filter by reviewer. See [team members](../../tfs/teams.md#get-a-teams-members).
+| sourceRefName | string | | Filter by source [branch](../refs.md) name. Example: refs/heads/topic/sometopic
+| targetRefName | string | | Filter by target [branch](../refs.md) name. Example: refs/heads/master
 | $top          | integer                                |         | Number of pull requests to return.
-| $skip         | integer                                |         | Number of pull requests to skip.
+| $skip | integer | | Number of pull requests to skip.
 
 #### Sample request
 
@@ -777,22 +779,22 @@ GET https://mytfsserver/DefaultCollection/_apis/git/pullRequests?api-version=3.0
 }
 ```
 
-
-
 ### By pull request ID
 
 ```
 GET  https://{instance}/DefaultCollection/{project}/_apis/repos/git/pullRequests/{pullrequest}?api-version={version}
 ```
 
-| Parameter   | Type     | Default | Notes
-|:------------|:---------|:--------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance    | string   |         | TFS server name ({server:port}).
-| project     | string   |         | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
-| pullRequest | integer  |         | ID of the pull request.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
+| pullRequest | integer | | ID of the pull request.
 | Query
-| api-version | string   |         | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -875,22 +877,23 @@ GET https://mytfsserver/DefaultCollection/_apis/git/pullRequests/22?api-version=
 }
 ```
 
-
 ## Get a pull request
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pullRequests/{pullRequest}?api-version={version}
 ```
 
-| Parameter   | Type     | Default | Notes
-|:------------|:---------|:--------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance    | string   |         | TFS server name ({server:port}).
-| project     | string   |         | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository  | string   |         | ID of the [repository](../repositories.md).
-| pullRequest | integer  |         | ID of the pull request.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | | ID of the [repository](../repositories.md).
+| pullRequest | integer | | ID of the pull request.
 | Query
-| api-version | string   |         | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -1002,22 +1005,23 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-4
 }
 ```
 
-
 ## Get commits for the pull request
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pullRequests/{pullRequest}/commits?api-version={version}
 ```
 
-| Parameter   | Type     | Default | Notes
-|:------------|:---------|:--------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance    | string   |         | TFS server name ({server:port}).
-| project     | string   |         | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository  | string   |         | ID of the [repository](../repositories.md).
-| pullRequest | integer  |         | ID of the pull request.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | | ID of the [repository](../repositories.md).
+| pullRequest | integer | | ID of the pull request.
 | Query
-| api-version | string   |         | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -1080,18 +1084,18 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-4
 }
 ```
 
-
 ## Create a pull request
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pullRequests?api-version={version}
 ```
+
 ```json
 {
-  "sourceRefName": {string},
-  "targetRefName": {string},
-  "title": {string},
-  "description": {string},
+  "sourceRefName": { string },
+  "targetRefName": { string },
+  "title": { string },
+  "description": { string },
   "reviewers": [
     {
       "id": { GUID }
@@ -1100,27 +1104,30 @@ POST https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories
 }
 ```
 
-| Parameter     | Type     | Notes
-|:--------------|:---------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance      | string   | TFS server name ({server:port}).
-| project       | string   | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository    | string   | ID of the [repository](../repositories.md).
-| pullRequest   | integer  | ID of the pull request.
+| instance | string | TFS server name ({server:port}).
+| project | string | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | ID of the [repository](../repositories.md).
+| pullRequest | integer | ID of the pull request.
 | Query
-| api-version   | string   | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| sourceRefName | string   | The name of the source [branch](../refs.md). Example: refs/heads/topic/sometopic
-| targetRefName | string   | The name of the target [branch](../refs.md). Example: refs/heads/master
-| title         | string   | Title of the pull request.
-| description   | string   | Description of the pull request.
-| reviewers.id  | integer  | ID(s) of the initial reviewer(s).
+| sourceRefName | string | The name of the source [branch](../refs.md). Example: refs/heads/topic/sometopic
+| targetRefName | string | The name of the target [branch](../refs.md). Example: refs/heads/master
+| title | string | Title of the pull request.
+| description | string | Description of the pull request.
+| reviewers.id | integer | ID(s) of the initial reviewer(s).
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-464f-9615-0b527bc66719/pullRequests?api-version=3.0
 ```
+
 ```json
 {
   "sourceRefName": "refs/heads/npaulk/my_work",
@@ -1224,40 +1231,39 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-
 }
 ```
 
-
 ## Update a pull request
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/pullrequests/{pullRequest}?api-version={version}
 ```
 
-| Parameter             | Type     | Notes
-|:----------------------|:---------|:------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance              | string   | TFS server name ({server:port}).
-| project               | string   | ID or name of the [project](../../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository            | string   | ID of the [repository](../repositories.md).
-| pullRequest           | integer  | ID of the pull request.
+| instance | string | TFS server name ({server:port}).
+| project | string | ID or name of the [project](../../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | ID of the [repository](../repositories.md).
+| pullRequest | integer | ID of the pull request.
 | Query
-| api-version           | string   | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../../concepts/rest-api-versioning.md) of the API to use.
 | Body
-| title                 | string   | Title of the pull request
-| description           | string   | Description of the pull request
-| status                | string   | State of the pull request.  Possible values are: "active", "abandoned" and "completed".
-| lastMergeSourceCommit | Commit   | ID of the commit to merge into the target branch.  Must be the latest commit to the source branch to ensure the correct commit is merged.  (only required when setting status to "completed")
-| autoCompleteSetBy     | ID       | ID of the user who requested auto complete.  Set to zero to cancel auto-complete
-| completionOptions     | CompletionOptions | see below
+| title | string | Title of the pull request
+| description | string | Description of the pull request
+| status | string | State of the pull request. Possible values are: "active", "abandoned" and "completed".
+| lastMergeSourceCommit | Commit | ID of the commit to merge into the target branch. Must be the latest commit to the source branch to ensure the correct commit is merged. (only required when setting status to "completed")
+| autoCompleteSetBy | ID | ID of the user who requested auto complete. Set to zero to cancel auto-complete
+| completionOptions | CompletionOptions | see below
 
+_CompletionOptions_
 
-*CompletionOptions*
-
-| Member      | Type    | Notes
-|:------------|:--------|:---------------------------------------------------------------------------------------
-| mergeCommitMessage | string | Commit message for the merge commit
-| deleteSourceBranch | boolean | When true, the source branch will be deleted after the pull request is completed
-| squashMerge | boolean | When true, a squash merge is used when the pull request is completed.  When false, a fast-forward merge is used
-| bypassPolicy | boolean | When true, if the user is [exempt from policy enforcement](https://go.microsoft.com/fwlink/?linkid=841587) for the target branch, the merge will bypass policy requirements.
-
+| Member             | Type    | Notes                                                                                                                                                                        |
+| :----------------- | :------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mergeCommitMessage | string  | Commit message for the merge commit                                                                                                                                          |
+| deleteSourceBranch | boolean | When true, the source branch will be deleted after the pull request is completed                                                                                             |
+| squashMerge        | boolean | When true, a squash merge is used when the pull request is completed. When false, a fast-forward merge is used                                                               |
+| bypassPolicy       | boolean | When true, if the user is [exempt from policy enforcement](https://go.microsoft.com/fwlink/?linkid=841587) for the target branch, the merge will bypass policy requirements. |
 
 ### Title
 
@@ -1266,6 +1272,7 @@ PATCH https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositorie
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-464f-9615-0b527bc66719/pullRequests/22?api-version=3.0
 ```
+
 ```json
 {
   "title": "Updated pull request title"
@@ -1376,7 +1383,6 @@ PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa
 }
 ```
 
-
 ### description
 
 #### Sample request
@@ -1384,6 +1390,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-464f-9615-0b527bc66719/pullRequests/22?api-version=3.0
 ```
+
 ```json
 {
   "description": "Updated pull request description"
@@ -1494,7 +1501,6 @@ PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa
 }
 ```
 
-
 ### Status
 
 #### Sample request
@@ -1502,6 +1508,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-464f-9615-0b527bc66719/pullRequests/22?api-version=3.0
 ```
+
 ```json
 {
   "status": "completed",
@@ -1608,7 +1615,6 @@ PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa
 }
 ```
 
-
 ### Auto-complete
 
 #### Sample request
@@ -1616,6 +1622,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa-464f-9615-0b527bc66719/pullRequests/21?api-version=3.0
 ```
+
 ```json
 {
   "autoCompleteSetBy": {
@@ -1743,5 +1750,3 @@ PATCH https://mytfsserver/DefaultCollection/_apis/git/repositories/3411ebc1-d5aa
   "artifactId": "vstfs:///Git/PullRequestId/a7573007-bbb3-4341-b726-0c4148a07853%2f3411ebc1-d5aa-464f-9615-0b527bc66719%2f21"
 }
 ```
-
-

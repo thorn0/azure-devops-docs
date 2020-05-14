@@ -12,7 +12,7 @@ ms.technology: devops-cicd-tasks
 # Security and compliance assessment for Azure Policy
 - task: AzurePolicyCheckGate@0
   inputs:
-    azureSubscription: 
+    azureSubscription:
     #resourceGroupName: # Optional
     #resources: # Optional
 ```

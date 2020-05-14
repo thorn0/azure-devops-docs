@@ -16,12 +16,12 @@ ms.technology: devops-cicd-tasks
     #testAssemblyVer2: | # Required when testSelector == TestAssemblies
     #  **\*test*.dll
     #  !**\*TestAdapter.dll
-    #  !**\obj\** 
+    #  !**\obj\**
     #testPlan: # Required when testSelector == TestPlan
     #testSuite: # Required when testSelector == TestPlan
     #testConfiguration: # Required when testSelector == TestPlan
     #tcmTestRun: '$(test.RunId)' # Optional
-    #searchFolder: '$(System.DefaultWorkingDirectory)' 
+    #searchFolder: '$(System.DefaultWorkingDirectory)'
     #testFiltercriteria: # Optional
     #runOnlyImpactedTests: False # Optional
     #runAllTestsAfterXBuilds: '50' # Optional

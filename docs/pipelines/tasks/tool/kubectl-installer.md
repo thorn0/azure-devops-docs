@@ -7,7 +7,7 @@ ms.assetid: 2773400c-3701-48b7-b56a-a5b612719687
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 04/17/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Kubectl installer task
@@ -37,21 +37,21 @@ This task can be used for installing a specific version of kubectl binary on age
   </tr>
 </table>
 
-The following YAML example showcases the installation of latest version of kubectl binary on the agent - 
+The following YAML example showcases the installation of latest version of kubectl binary on the agent -
 
 ```YAML
 - task: KubectlInstaller@0
   displayName: Kubectl installer
-  inputs: 
+  inputs:
     kubectlVersion: latest
 ```
 
-The following YAML example demonstrates the use of an explicit version string rather than installing the latest version available at the time of task execution - 
+The following YAML example demonstrates the use of an explicit version string rather than installing the latest version available at the time of task execution -
 
 ```YAML
 - task: KubectlInstaller@0
   displayName: Kubectl installer
-  inputs: 
+  inputs:
     kubectlVersion: 1.15.0
 ```
 

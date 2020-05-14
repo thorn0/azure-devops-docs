@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 10/11/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
-
 
 # Require branches to be created in folders
 
@@ -28,17 +27,17 @@ Azure Repos and TFS can enforce the correct use of branch folders.
 Decide on the folder structure you want to allow.
 As an example, we'll set our repository to enforce the following rules:
 
-* Only `master` can exist at the repository root.
-* All users will be allowed to create branches under the `features/` and `users/` folders.
-* Administrators will be able to create branches under the `releases/` folder.
+- Only `master` can exist at the repository root.
+- All users will be allowed to create branches under the `features/` and `users/` folders.
+- Administrators will be able to create branches under the `releases/` folder.
 
->[!NOTE]
->For more examples and information about branch naming strategies, see [Adopt a Git branching strategy](git-branching-guidance.md).
+> [!NOTE]
+> For more examples and information about branch naming strategies, see [Adopt a Git branching strategy](git-branching-guidance.md).
 
 ## Preparation
 
-* You will need the Team Foundation version control command (`tf.exe`).
-* You will need the URL of your account or collection, the name of the project, and the name of the repository. For this example, we'll use `https://fabrikam-fiber.visualstudio.com`, `FabrikamProject`, and `FabrikamRepo`.
+- You will need the Team Foundation version control command (`tf.exe`).
+- You will need the URL of your account or collection, the name of the project, and the name of the repository. For this example, we'll use `https://fabrikam-fiber.visualstudio.com`, `FabrikamProject`, and `FabrikamRepo`.
 
 > [!NOTE]
 > The command `tf.exe` is installed by default with Visual Studio. For additional options, download [Team Explorer](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=TeamExplorer).
@@ -76,19 +75,20 @@ Finally, allow administrators to create a branch called `master` (in case it eve
 tf git permission /allow:CreateBranch /group:"[FabrikamProject]\Project Administrators" /collection:https://dev.azure.com/fabrikam-fiber/ /teamproject:FabrikamProject /repository:FabrikamRepo /branch:master
 ```
 
->[!NOTE]
->For more information, see [tf git permission](../../repos/tfvc/git-permission-command.md). You can also access help for these commands from the command line by running `tf git /?` and `tf git permission /?`.
+> [!NOTE]
+> For more information, see [tf git permission](../../repos/tfvc/git-permission-command.md). You can also access help for these commands from the command line by running `tf git /?` and `tf git permission /?`.
 
 ## Rename old branches
 
 #### [Browser](#tab/browser/)
+
 1. Open your repo on the web and [select the **Branches** view](manage-your-branches.md).
 2. Locate your existing branch. If you don't see it, you may need to look on the **All** tab.
 3. Choose its context menu (the `...` button) and choose **New branch**.
 
    ![Create branch menu](media/require-branch-folders/create-new-branch-menu.png)
 
-4. Type the new name of the branch, for example *users/frank/readme-fix*. Choose **Create branch**.
+4. Type the new name of the branch, for example _users/frank/readme-fix_. Choose **Create branch**.
 
    ![Create new branch](media/require-branch-folders/create-new-branch.png)
 
@@ -96,11 +96,11 @@ tf git permission /allow:CreateBranch /group:"[FabrikamProject]\Project Administ
 
    ![Delete old branch](media/require-branch-folders/delete-old-branch.png)
 
-
->[!NOTE] 
->Any custom permissions or branch policies you had set up will not be migrated.
+> [!NOTE]
+> Any custom permissions or branch policies you had set up will not be migrated.
 
 #### [Command Line](#tab/command-line/)
+
 First, make sure you have the latest set of branches:
 
 ```
@@ -116,7 +116,7 @@ git push origin {new_branch_name}
 git push origin --delete {old_branch_name}
 ```
 
->[!NOTE]
->Any custom permissions or branch policies you had set up will not be migrated.
+> [!NOTE]
+> Any custom permissions or branch policies you had set up will not be migrated.
 
-* * *
+---

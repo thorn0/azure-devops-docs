@@ -1,5 +1,5 @@
 ---
-title: Azure Policy task 
+title: Azure Policy task
 description: Security and compliance assessment with Azure policies
 ms.assetid: 80CE5090-EF14-4640-A833-5C43271FB6EA
 ms.topic: reference
@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 03/12/2019
-monikerRange: '> tfs-2018'
+monikerRange: "> tfs-2018"
 ---
 
 # Security and Compliance Assessment task

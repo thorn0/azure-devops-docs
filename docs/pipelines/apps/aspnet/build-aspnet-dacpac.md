@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.custom: seodec18
 description: Define a continuous integration (CI) build for your SQL server database in Azure Pipelines or Team Foundation Server (TFS)
 ms.date: 01/02/2017
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Build your SQL server database
@@ -30,7 +30,6 @@ For the instructions in this topic, you need a SQL server database project in Vi
 ### Create the build pipeline
 
 <ol>
-
 
 <li><p><a data-toggle="collapse" href="#expando-begin-create-build-definition-open-team-project">Open your project in your web browser &#x25BC;</a></p>
 <div class="collapse" id="expando-begin-create-build-definition-open-team-project">
@@ -68,9 +67,9 @@ Save the build pipeline and queue a new build by selecting the **Queue new build
 
 After you've run the build, you're ready to create a release pipeline to deploy your database to:
 
-* <a href="../../targets/azure-sqldb.md"><img src="../../tasks/deploy/media/azure-sql-database-deployment-icon.png"/> Azure SQL Server</a>
+- <a href="../../targets/azure-sqldb.md"><img src="../../tasks/deploy/media/azure-sql-database-deployment-icon.png"/> Azure SQL Server</a>
 
-* <a href="../cd/howto-webdeploy-iis-deploygroups.md#database"><img src="../../tasks/deploy/media/sql-server-database-deployment-icon.png"/> SQL Server</a>
+- <a href="../cd/howto-webdeploy-iis-deploygroups.md#database"><img src="../../tasks/deploy/media/sql-server-database-deployment-icon.png"/> SQL Server</a>
 
 ## Q & A
 

@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Day in the life of a devops developer: write new code for a user story
 
@@ -34,29 +33,30 @@ Peter briefly reviews his backlog and selects the task he will work on today. He
 In **Team Explorer**, Peter opens the **My Work** page. The team has agreed that, during the current sprint, Peter will work on **Evaluate invoice status**, a top-priority item in the product backlog. Peter decides to start with **Implement math functions**, a child task of the top-priority backlog item. He drags this task from the **Available Work Items** list into the **In Progress Work Items & Changes** list.
 
 ### To review personal backlog and prepare tasks to begin work
-  
- ![To Do List on My Work Page in Team Navigator](media/day-life-alm-developer-write-new-code-user-story/IC591023.png)  
 
-1.  In **Team Explorer**:  
-    1.  If you are not already connected to the project that you want to work in, then [connect to the project](../../organizations/projects/connect-to-projects.md).  
-    2.  Choose ![Home icon](media/day-life-alm-developer-write-new-code-user-story/IC547418.png) **Home**, and then choose ![My Work icon](media/day-life-alm-developer-write-new-code-user-story/IC588354.png) **My Work**.  
+![To Do List on My Work Page in Team Navigator](media/day-life-alm-developer-write-new-code-user-story/IC591023.png)
+
+1.  In **Team Explorer**:
+    1.  If you are not already connected to the project that you want to work in, then [connect to the project](../../organizations/projects/connect-to-projects.md).
+    2.  Choose ![Home icon](media/day-life-alm-developer-write-new-code-user-story/IC547418.png) **Home**, and then choose ![My Work icon](media/day-life-alm-developer-write-new-code-user-story/IC588354.png) **My Work**.
 2.  On the **My Work** page, drag the task from the **Available Work Items** list to the **In Progress Work Items** section.
 
     You can also select a task in the **Available Work Items** list and then choose **Start**.
 
 ### Draft Incremental Work Plan
-  
+
 Peter usually develops code in a series of small steps. Each step typically takes no longer than an hour, and might take as little as ten minutes. In each step, he writes a new unit test and changes the code that he is developing so that it passes the new test, in addition to the tests he has already written. Sometimes he writes the new test before changing the code, and sometimes he changes the code before writing the test. Sometimes he refactors. That is, he just improves the code without adding new tests. He never changes a test that passes, unless he decides that it did not correctly represent a requirement.
 
 At the end of every small step, he runs all the unit tests that are relevant to this area of the code. He does not consider the step complete until every test passes.
 
 However, he will not check the code into Team Foundation Server until he has finished the entire task.
 
-Peter writes down a rough plan for this sequence of small steps. He knows that the exact details and order of the later ones will probably change as he works. Here is his initial list of steps for this particular task:  
-1.  Create test method stub-that is, just the signature of the method.  
-2.  Satisfy one specific typical case.  
-3.  Test broad range. Make sure that the code responds correctly to a large range of values.  
-4.  Exception on negative. Deal gracefully with incorrect parameters.  
+Peter writes down a rough plan for this sequence of small steps. He knows that the exact details and order of the later ones will probably change as he works. Here is his initial list of steps for this particular task:
+
+1.  Create test method stub-that is, just the signature of the method.
+2.  Satisfy one specific typical case.
+3.  Test broad range. Make sure that the code responds correctly to a large range of values.
+4.  Exception on negative. Deal gracefully with incorrect parameters.
 5.  [Code coverage](day-life-alm-developer-write-new-code-user-story.md#coverage). Make sure that at least 80% of the code is exercised by the unit tests.
 
 Some of his colleagues write this kind of plan in comments in their test code. Others just memorize their plan. Peter finds it useful to write his list of steps in the Description field of the Task work item. If he should have to switch temporarily to a more urgent task, he knows where to find the list when he is able to return to it.
@@ -67,7 +67,7 @@ Peter begins by creating a unit test. He begins with the unit test because he wa
 
 This is the first unit test for the class library that he is testing, so he creates a new unit test project. He opens the **New Project** dialog box and chooses **Visual C\#**, **Test**, and then **Unit Test Project**.
 
-![Unit Test selected in New Project dialog](media/day-life-alm-developer-write-new-code-user-story/IC591729.png)  
+![Unit Test selected in New Project dialog](media/day-life-alm-developer-write-new-code-user-story/IC591729.png)
 
 The unit test project provides a C\# file into which he can write his example. At this stage, he just wants to illustrate how one of his new methods will be invoked:
 
@@ -108,50 +108,50 @@ Usually you would create a new test project for each project that is being teste
 
 This procedure uses the Visual Studio Unit Test Framework, but you can also use frameworks from other providers. Test Explorer works equally well with other frameworks, provided you install the appropriate adapter.
 
--   Create a Test project, if it does not already exist.  
-    -   In the **New Project** dialog box, choose a language such as **Visual Basic**, **Visual C++** or **Visual C\#**. Choose **Test** and then **Unit Test Project**.  
--   Add your tests to the test class that is provided. Each unit test is one method.
+- Create a Test project, if it does not already exist.
+  - In the **New Project** dialog box, choose a language such as **Visual Basic**, **Visual C++** or **Visual C\#**. Choose **Test** and then **Unit Test Project**.
+- Add your tests to the test class that is provided. Each unit test is one method.
 
-    Each unit test must be prefixed by the `TestMethod` attribute, and the unit test method should have no parameters. You can use any name that you want for a unit test method:
+  Each unit test must be prefixed by the `TestMethod` attribute, and the unit test method should have no parameters. You can use any name that you want for a unit test method:
 
-    ```csharp
-    [TestMethod]
-    public void SignatureTest()
-    {...}
-    ```
+  ```csharp
+  [TestMethod]
+  public void SignatureTest()
+  {...}
+  ```
 
-    ```vb
-    <TestMethod()>
-    Public Sub SignatureTest()
-    ...
-    End Sub
-    ```
+  ```vb
+  <TestMethod()>
+  Public Sub SignatureTest()
+  ...
+  End Sub
+  ```
 
--   Each test method should call a method of the `Assert` class, to indicate whether it has passed or failed. Typically, you verify that the expected and actual results of an operation are equal:
+- Each test method should call a method of the `Assert` class, to indicate whether it has passed or failed. Typically, you verify that the expected and actual results of an operation are equal:
 
-    ```csharp
-    Assert.AreEqual(expectedResult, actualResult);
-    ```
+  ```csharp
+  Assert.AreEqual(expectedResult, actualResult);
+  ```
 
-    ```vb
-    Assert.AreEqual(expectedResult, actualResult)
-    ```
+  ```vb
+  Assert.AreEqual(expectedResult, actualResult)
+  ```
 
--   Your test methods can call other ordinary methods that do not have the `TestMethod` attribute.  
--   You can organize your tests into more than one class. Each class must be prefixed by the `TestClass` attribute.
+- Your test methods can call other ordinary methods that do not have the `TestMethod` attribute.
+- You can organize your tests into more than one class. Each class must be prefixed by the `TestClass` attribute.
 
-    ```csharp
-    [TestClass]
-    public class UnitTest1
-    { ... }
-    ```
+  ```csharp
+  [TestClass]
+  public class UnitTest1
+  { ... }
+  ```
 
-    ```vb
-    <TestClass()>
-    Public Class UnitTest1
-    ...
-    End Class
-    ```
+  ```vb
+  <TestClass()>
+  Public Class UnitTest1
+  ...
+  End Class
+  ```
 
 For more information about how to write unit tests in C++, see [Writing Unit tests for C/C++ with the Microsoft Unit Testing Framework for C++](https://msdn.microsoft.com/library/hh598953).
 
@@ -159,7 +159,7 @@ For more information about how to write unit tests in C++, see [Writing Unit tes
 
 Next, Peter creates a class library project for his new code. There is now a project for the code under development and a project for the unit tests. He adds a project Reference from the test project to the code under development.
 
-![Solution Explorer with Test and Class projects](media/day-life-alm-developer-write-new-code-user-story/IC612257.png)  
+![Solution Explorer with Test and Class projects](media/day-life-alm-developer-write-new-code-user-story/IC612257.png)
 
 In the new project, he adds the new class and a minimal version of the method that will at least allow the test to build successfully. The quickest way to do that is to generate a class and method stub from the invocation in the test.
 
@@ -176,18 +176,18 @@ First, create the project where you want to add the new class, unless it already
 
 #### To generate a class
 
-1.  Place the cursor on an example of the class you want to generate, for example, `LocalMath`. On the shortcut menu, choose **Generate Code**, **New Type**.  
+1.  Place the cursor on an example of the class you want to generate, for example, `LocalMath`. On the shortcut menu, choose **Generate Code**, **New Type**.
 2.  In the **New Type** dialog box, set **Project** to the class library project. In this example, it is **Fabrikam.Math**.
 
 #### To generate a method
 
--   Place the cursor on a call to the method, for example, `SquareRoot`. On the shortcut menu, choose **Generate Code**, **Method Stub**.
+- Place the cursor on a call to the method, for example, `SquareRoot`. On the shortcut menu, choose **Generate Code**, **Method Stub**.
 
 ## Run the first test
 
 Peter builds and runs the test by pressing CTRL+R, T. The test result shows a red Failed indicator and the test appears under the list of **Failed Tests**.
 
-![Unit Test Explorer showing one failed test](media/day-life-alm-developer-write-new-code-user-story/IC675817.png)  
+![Unit Test Explorer showing one failed test](media/day-life-alm-developer-write-new-code-user-story/IC675817.png)
 
 He makes a simple change to the code:
 
@@ -200,23 +200,22 @@ public double SquareRoot(double p)
 
 He runs the test again and it passes:
 
-![Unit Test Explorer with one passed test](media/day-life-alm-developer-write-new-code-user-story/IC675818.png)  
+![Unit Test Explorer with one passed test](media/day-life-alm-developer-write-new-code-user-story/IC675818.png)
 
 ### To run unit tests
 
+![Test Explorer showing Run All button](media/day-life-alm-developer-write-new-code-user-story/IC675819.png)
 
-![Test Explorer showing Run All button](media/day-life-alm-developer-write-new-code-user-story/IC675819.png)  
+- On the **Test** menu, choose **Run**, **All Tests**.
+  - - or -
+- If Test Explorer is open, choose **Run All**.
+  - - or -
+- Place the cursor in a test code file and press **CTRL+R, T**.
+- If a test appears under **Failed Tests**:
 
--   On the **Test** menu, choose **Run**, **All Tests**.  
-    - - or -  
--   If Test Explorer is open, choose **Run All**.  
-    - - or -  
--   Place the cursor in a test code file and press **CTRL+R, T**.  
--   If a test appears under **Failed Tests**:
+  Open the test, for example, by double-clicking the name.
 
-    Open the test, for example, by double-clicking the name.
-
-    The point at which the test failed is displayed.
+  The point at which the test failed is displayed.
 
 **To see a full list of tests,** choose **Show All**. To return to the summary, choose the **HOME** view.
 
@@ -267,7 +266,7 @@ public void QuickNonZero()
 Peter follows a cycle in which he repeatedly writes a test and confirms that it fails, writes code to make the test pass, and then considers refactoring-that is, improving the code without changing the tests.
 
 ### Red
-  
+
 Peter presses CTRL+R, T to run the new test that he created with Julia. After he writes any test, he always runs it to make sure that it fails before he writes the code that makes it pass. This is a practice he learned after he forgot to place assertions in some tests he'd written. Seeing the Fail result gives him confidence that when he makes it pass, the test result correctly indicates that a requirement has been satisfied.
 
 Another useful practice is to set **Run Tests after Build**. This option runs the tests in the background every time you build the solution, so that you have a continual report of the test status of your code. Peter was at first suspicious that it might make Visual Studio slow to respond, but he finds that this rarely happens.
@@ -275,7 +274,7 @@ Another useful practice is to set **Run Tests after Build**. This option runs th
 ![Unit Test Explorer with one failed test](media/day-life-alm-developer-write-new-code-user-story/IC675829.png)
 
 ### Green
-  
+
 Peter writes his first attempt at the code of the method that he is developing:
 
 ```csharp
@@ -294,13 +293,12 @@ public class LocalMath
     }
 ```
 
-
 Peter runs the tests again and all the tests pass:
 
 ![Unit Test Explorer with two passed tests](media/day-life-alm-developer-write-new-code-user-story/IC675830.png)
 
 ### Refactor
-  
+
 Now that the code performs its main function, Peter looks at the code to find ways of making it perform better, or to make it easier to change in the future. He realizes that he can reduce the number of calculations performed in the loop:
 
 ```csharp
@@ -312,7 +310,7 @@ public class LocalMath
         double previousEstimate = -x;
         while (System.Math.Abs(estimate - previousEstimate) > estimate / 1000)
         {
-            previousEstimate = estimate; 
+            previousEstimate = estimate;
             estimate = (estimate + x / estimate) / 2;
             //was: estimate = (estimate * estimate - x) / (2 * estimate);
         }
@@ -337,7 +335,7 @@ He verifies that the tests still pass:
 > Run the tests after every change.
 
 ### ... and repeat
-  
+
 Peter continues his series of extension and refactoring steps, using his list of small steps as a rough guide. He doesn't always perform a refactoring step after each extension, and he sometimes performs more than one refactoring step in succession. But he always runs the unit tests after each change to the code.
 
 Sometimes he adds a test that requires no change to the code, but that adds to his confidence that his code works correctly. For example, he wants to make sure that the function works over a broad range of inputs. He writes more tests, such as this one:
@@ -364,7 +362,7 @@ private void VerifyOneRootValue(LocalMath math, double expectedResult)
 
 This test passes the first time it runs:
 
-![Unit Test Explorer with three passed tests](media/day-life-alm-developer-write-new-code-user-story/IC675831.png)  
+![Unit Test Explorer with three passed tests](media/day-life-alm-developer-write-new-code-user-story/IC675831.png)
 
 Just to make sure this result is not a mistake, he temporarily introduces a small error into his test to make it fail. After seeing the failure, he fixes it again.
 
@@ -372,7 +370,7 @@ Just to make sure this result is not a mistake, he temporarily introduces a smal
 > Always make a test fail before you make it pass.
 
 ### Exceptions
-  
+
 Peter now moves on to writing tests for exceptional inputs:
 
 ```csharp
@@ -414,17 +412,17 @@ Peter then updates the code to deal with this exceptional case:
 ```csharp
 public double SquareRoot(double x)
 {
-    if (x <= 0.0) 
+    if (x <= 0.0)
     {
         throw new ArgumentOutOfRangeException();
     }
 ```
 
 ### Regression
-  
+
 The new test passes, but there is a regression. A test that used to pass now fails:
 
-![Unit Test failed which previously passed](media/day-life-alm-developer-write-new-code-user-story/IC675832.png)  
+![Unit Test failed which previously passed](media/day-life-alm-developer-write-new-code-user-story/IC675832.png)
 
 Peter finds and fixes the mistake:
 
@@ -456,7 +454,7 @@ Good coverage is not a guarantee that the full functionality of the component ha
 
 To get a code coverage report, on the **Tests** menu, choose **Run**, **Analyze Code Coverage for All Tests**. Then run all the tests again.
 
-![Code Coverage result and Show Color button](media/day-life-alm-developer-write-new-code-user-story/IC592882.png)  
+![Code Coverage result and Show Color button](media/day-life-alm-developer-write-new-code-user-story/IC592882.png)
 
 Peter gets a total coverage of 86%. When he expands the total in the report, it shows that the code he is developing has coverage of 100%. This is very satisfactory, because the important score is for the code under test. The uncovered sections are actually in the tests themselves. By toggling the **Show Code Coverage Coloring** button, Peter can see which parts of the test code have not been exercised. However, he decides that these sections are unimportant for coverage because they are in the test code and would only be used if an error is detected.
 
@@ -464,24 +462,27 @@ To verify that a specific test reaches into specific branches of the code, you c
 
 ## When are we done?
 
-Peter continues to update the code in small steps until he is satisfied that:  
--   All the available unit tests pass.
+Peter continues to update the code in small steps until he is satisfied that:
 
-    In a project with a very large set of unit tests, it can be impractical for a developer to wait for them all to run. Instead, the project operates a gated check-in service, in which all the automated tests are run for each checked-in shelveset before it is merged into the source tree. The check-in is rejected if the run fails. This allows the developer to run a minimal set of unit tests on his own machine, and then proceed with other work, without running the risk of breaking the build. For more information, see [Use a gated check-in build process to validate changes](../../pipelines/build/repository.md).  
--   Code coverage meets the team's standard. 75% is a typical project requirement.  
--   His unit tests simulate every aspect of the behavior that is required, including both typical and exceptional inputs.  
--   His code is easy to understand and extend.
+- All the available unit tests pass.
+
+  In a project with a very large set of unit tests, it can be impractical for a developer to wait for them all to run. Instead, the project operates a gated check-in service, in which all the automated tests are run for each checked-in shelveset before it is merged into the source tree. The check-in is rejected if the run fails. This allows the developer to run a minimal set of unit tests on his own machine, and then proceed with other work, without running the risk of breaking the build. For more information, see [Use a gated check-in build process to validate changes](../../pipelines/build/repository.md).
+
+- Code coverage meets the team's standard. 75% is a typical project requirement.
+- His unit tests simulate every aspect of the behavior that is required, including both typical and exceptional inputs.
+- His code is easy to understand and extend.
 
 When all these criteria are met, Peter is ready to check his code into source control.
 
 ### Principles of code development with unit tests
-  
-Peter applies the following principles while developing code:  
--   Develop unit tests along with the code, and run them frequently during development. The unit tests represent the specification of your component.  
--   Don't change unit tests, unless the requirements have changed or the tests were wrong. Add new tests gradually as you extend the functionality of the code.  
--   Aim for at least 75% of your code to be covered by the tests. Look at the code coverage results at intervals, and before you check in source code.  
--   Check in your unit tests along with the code, so that they will be run by the continuous or regular server builds.  
--   Where practical, for each piece of functionality, write the unit test first. Do this before you develop the code that satisfies it.
+
+Peter applies the following principles while developing code:
+
+- Develop unit tests along with the code, and run them frequently during development. The unit tests represent the specification of your component.
+- Don't change unit tests, unless the requirements have changed or the tests were wrong. Add new tests gradually as you extend the functionality of the code.
+- Aim for at least 75% of your code to be covered by the tests. Look at the code coverage results at intervals, and before you check in source code.
+- Check in your unit tests along with the code, so that they will be run by the continuous or regular server builds.
+- Where practical, for each piece of functionality, write the unit test first. Do this before you develop the code that satisfies it.
 
 ## Check in the changes
 
@@ -492,8 +493,8 @@ Peter checks in all changes he has made, including the both the tests and the co
 Peter is notified when the build is completed. In the build results window, he sees that the build succeeded and all the tests passed.
 
 ### To check in the changes
-  
- ![Checking in the pending changes](media/day-life-alm-developer-write-new-code-user-story/IC591276.png)  
+
+![Checking in the pending changes](media/day-life-alm-developer-write-new-code-user-story/IC591276.png)
 
 1.  On the menu bar, choose **View**, **Team Explorer**.
 
@@ -503,9 +504,9 @@ Peter is notified when the build is completed. In the build results window, he s
 
 4.  Review the contents of the **Pending Changes** page to make sure that:
 
-    -   All relevant changes are listed in **Included Changes**
+    - All relevant changes are listed in **Included Changes**
 
-    -   All relevant work items are listed in **Related Work Items**.
+    - All relevant work items are listed in **Related Work Items**.
 
 5.  Specify a **Comment** to help your team understand the purpose of these changes when they look at the version control history of the changed files and folders.
 
@@ -517,8 +518,8 @@ For more information about how to define a continuous integration build process,
 
 ![Peter is notified that CI Build succeeded](media/day-life-alm-developer-write-new-code-user-story/IC558300.png)
 
-![CI Build results](media/day-life-alm-developer-write-new-code-user-story/IC591277.png)  
+![CI Build results](media/day-life-alm-developer-write-new-code-user-story/IC591277.png)
 
 For more information, see [Run, monitor, and manage builds](../../pipelines/overview.md).
- 
+
 [Next (Suspend work, fix a bug, and conduct a code review)](day-life-alm-developer-suspend-work-fix-bug-conduct-code-review.md)

@@ -15,7 +15,7 @@ author: vijayma
 
 **Azure Pipelines**
 
-Use a pipeline to automatically build and test your PHP projects. 
+Use a pipeline to automatically build and test your PHP projects.
 
 ## Create your first pipeline
 
@@ -46,20 +46,20 @@ On the Microsoft-hosted Ubuntu agent, multiple versions of PHP are installed. A 
 ```yaml
 # https://docs.microsoft.com/azure/devops/pipelines/ecosystems/php
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: "ubuntu-16.04"
 
 variables:
   phpVersion: 7.2
 
 steps:
-- script: |
-    sudo update-alternatives --set php /usr/bin/php$(phpVersion)
-    sudo update-alternatives --set phar /usr/bin/phar$(phpVersion)
-    sudo update-alternatives --set phpdbg /usr/bin/phpdbg$(phpVersion)
-    sudo update-alternatives --set php-cgi /usr/bin/php-cgi$(phpVersion)
-    sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
-    php -version
-  displayName: 'Use PHP version $(phpVersion)'
+  - script: |
+      sudo update-alternatives --set php /usr/bin/php$(phpVersion)
+      sudo update-alternatives --set phar /usr/bin/phar$(phpVersion)
+      sudo update-alternatives --set phpdbg /usr/bin/phpdbg$(phpVersion)
+      sudo update-alternatives --set php-cgi /usr/bin/php-cgi$(phpVersion)
+      sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
+      php -version
+    displayName: "Use PHP version $(phpVersion)"
 ```
 
 ### Install dependencies
@@ -68,7 +68,7 @@ To use Composer to install dependencies, add the following snippet to your `azur
 
 ```yaml
 - script: composer install --no-interaction --prefer-dist
-  displayName: 'composer install'
+  displayName: "composer install"
 ```
 
 ### Test with phpunit
@@ -77,7 +77,7 @@ To run tests with phpunit, add the following snippet to your `azure-pipelines.ym
 
 ```yaml
 - script: phpunit
-  displayName: 'Run tests with phpunit'
+  displayName: "Run tests with phpunit"
 ```
 
 ### Retain the PHP app with the build record
@@ -88,20 +88,20 @@ Optionally, customize the value of **rootFolderOrFile** to alter what is include
 ```yaml
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(system.defaultWorkingDirectory)'
+    rootFolderOrFile: "$(system.defaultWorkingDirectory)"
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
 ```
 
 ### Using a custom composer location
 
-If your composer.json is in a subfolder instead of the root directory, you can leverage the ```--working-dir``` argument to tell composer what directory to use. For example, if your composer.json is inside the subfolder ```pkgs```
+If your composer.json is in a subfolder instead of the root directory, you can leverage the `--working-dir` argument to tell composer what directory to use. For example, if your composer.json is inside the subfolder `pkgs`
 
-```composer install --no-interaction --working-dir=pkgs```
+`composer install --no-interaction --working-dir=pkgs`
 
 You can also specify the absolute path, using the built-in system variables:
 
-```composer install --no-interaction --working-dir='$(system.defaultWorkingDirectory)/pkgs'```
+`composer install --no-interaction --working-dir='$(system.defaultWorkingDirectory)/pkgs'`
 
 ## Build image and push to container registry
 

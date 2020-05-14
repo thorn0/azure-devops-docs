@@ -53,8 +53,7 @@ Administration:
 
 Read about the new features below and head over to Azure DevOps Services to try them for yourself.
 
-> [!div class="nextstepaction"]
-> [Go to Azure DevOps Services](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
+> [!div class="nextstepaction"][go to azure devops services](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
 
 ## Azure Pipelines
 
@@ -62,14 +61,13 @@ Read about the new features below and head over to Azure DevOps Services to try 
 
 A new **Azure Pipelines** app [in the GitHub Marketplace](https://github.com/marketplace/azure-pipelines/) expands integration with GitHub repositories and streamlines parallel job purchases.
 
-Previously, you could enable continuous integration with GitHub repositories through OAuth authentication. Using OAuth, Azure Pipelines uses __an individual's GitHub identity__ to fetch code and update build status on GitHub. However, since the members of your team may change over time, it can be less-desirable to use an individual’s GitHub identity and permissions. By installing the Azure Pipelines app, you can authorize **the app** to perform actions instead.
+Previously, you could enable continuous integration with GitHub repositories through OAuth authentication. Using OAuth, Azure Pipelines uses **an individual's GitHub identity** to fetch code and update build status on GitHub. However, since the members of your team may change over time, it can be less-desirable to use an individual’s GitHub identity and permissions. By installing the Azure Pipelines app, you can authorize **the app** to perform actions instead.
 
 Also, when you use the app, build results are made available in GitHub’s new [Checks](https://blog.github.com/2018-05-07-introducing-checks-api/) feature with a detailed view of build, test, and code coverage results.
 
 To get started, install the app [from the GitHub Marketplace](https://github.com/marketplace/azure-pipelines/) into your GitHub account or organization. You can also purchase additional parallel jobs with an existing GitHub payment account instead of a separate Azure account. Pricing is the same either way.
 
-> [!div class="mx-imgBorder"]
-> ![Azure Pipelines app in GitHub Marketplace](media/launch_02.png)
+> [!div class="mx-imgBorder"] > ![Azure Pipelines app in GitHub Marketplace](media/launch_02.png)
 
 ### Build open source projects with Azure Pipelines for free
 
@@ -82,7 +80,6 @@ See the [build public repositories](/azure/devops/pipelines/build/ci-public?toc=
 > [!IMPORTANT]
 > To use this capability, you must have the **Build YAML pipelines** [preview feature](/azure/devops/project/navigation/preview-features) enabled on your organization.
 
-
 YAML-based build pipelines are now broadly available. Automate your continuous integration pipeline using a [YAML file checked into the repository](/azure/devops/pipelines/get-started-yaml?view=azure-devops) alongside the rest of your code. It's easy to get started with a single-job build. As your needs grow, easily scale out using [multiple jobs](/azure/devops/pipelines/process/multiple-phases?tabs=yaml&view=azure-devops), [external templates](/azure/devops/pipelines/yaml-schema?view=azure-devops), and [matrix execution](/azure/devops/pipelines/process/phases?view=azure-devops&tabs=yaml#multi-job-configuration).
 
 ### Create YAML build pipelines using the new wizard
@@ -92,8 +89,7 @@ YAML-based build pipelines are now broadly available. Automate your continuous i
 
 A new wizard simplifies this process of creating YAML-based build pipelines with GitHub and Azure Repos. Once you choose a repository to build, a pipeline will automatically be created if it contains a YAML file. Otherwise, Azure Pipelines will analyze your repository and recommend a YAML-based template for building your project. Just click **Save and run** to create a pull request for the suggested YAML and run the first build. Continuous integration and pull request triggers will be enabled automatically.
 
-> [!div class="mx-imgBorder"]
-> ![New pipeline wizard](media/launch_01.png)
+> [!div class="mx-imgBorder"] > ![New pipeline wizard](media/launch_01.png)
 
 ### Manage build pipelines using the new Builds page
 
@@ -102,8 +98,7 @@ A new wizard simplifies this process of creating YAML-based build pipelines with
 
 We are making several improvements and rolling out a new version of the **Builds** page. This new version combines the directory of all your build pipelines and the list of current builds so that you can quickly navigate across your project's builds to see their status. It also includes a preview of test analytics for the selected pipeline.
 
-> [!div class="mx-imgBorder"]
-> ![New Builds page](media/launch_03.png)
+> [!div class="mx-imgBorder"] > ![New Builds page](media/launch_03.png)
 
 ### Rebuild GitHub pull request builds
 
@@ -141,8 +136,7 @@ In this update, several build, test, and deployment tools have been added to the
 
 Knowing the changes that are getting deployed with a release is important to track improvements to the app. Now you can get the list of commits made in GitHub repos and the associated GitHub issues that are being deployed with a release.
 
-> [!div class="mx-imgBorder"]
-> ![Commits for a release](media/launch_05.png)
+> [!div class="mx-imgBorder"] > ![Commits for a release](media/launch_05.png)
 
 ### Manage build and deployment completion emails better using improved formatting
 
@@ -164,20 +158,20 @@ Throughout builds and releases, different terms have been used historically for 
 
 Terminology has been unified in Azure Pipelines to clarify its concepts. You'll now see the following unified terms:
 
-Previous term | Unified term | Meaning
---------------- | -------------- | ----------
-Hosted agent | Microsoft-hosted agent | A build/release agent that runs on cloud-hosted infrastructure managed by Microsoft.
-Private agent | Self-hosted agent | A build/release agent that runs on a machine provided and managed by you.
-Agent pool | Agent pool | An organization-level set of agent machines that can run builds or releases.
-Agent queue | Agent pool | A project-level set of agent machines that can run builds or releases. It is linked to an organization-level agent pool.
-Build definition | Build pipeline | An end-to-end set of build steps for an application.
-Build | Build | An instance of a build pipeline that is running or has run.
-Phase | Job | A series of tasks that run sequentially or in parallel on an agent. A build or release pipeline can contain one job or a graph of multiple jobs.
-Release definition | Release pipeline | An end-to-end set of release steps for an application to be deployed across various stages.
-Release | Release | An instance of a release pipeline that is running or has run.
-Environment | Stage | A logical and independent entity that represents where you want to deploy a release generated from a release pipeline.
-Concurrent job/pipeline | Parallel job |  A parallel job gives you the ability to run a single build or release job at a time in your organization. With more parallel jobs available, you can run more build and release jobs at the same time.
-Service endpoint | Service connection | A group of settings, such as credentials, used to connect to external services to execute tasks in a build or release.
+| Previous term           | Unified term           | Meaning                                                                                                                                                                                                |
+| ----------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Hosted agent            | Microsoft-hosted agent | A build/release agent that runs on cloud-hosted infrastructure managed by Microsoft.                                                                                                                   |
+| Private agent           | Self-hosted agent      | A build/release agent that runs on a machine provided and managed by you.                                                                                                                              |
+| Agent pool              | Agent pool             | An organization-level set of agent machines that can run builds or releases.                                                                                                                           |
+| Agent queue             | Agent pool             | A project-level set of agent machines that can run builds or releases. It is linked to an organization-level agent pool.                                                                               |
+| Build definition        | Build pipeline         | An end-to-end set of build steps for an application.                                                                                                                                                   |
+| Build                   | Build                  | An instance of a build pipeline that is running or has run.                                                                                                                                            |
+| Phase                   | Job                    | A series of tasks that run sequentially or in parallel on an agent. A build or release pipeline can contain one job or a graph of multiple jobs.                                                       |
+| Release definition      | Release pipeline       | An end-to-end set of release steps for an application to be deployed across various stages.                                                                                                            |
+| Release                 | Release                | An instance of a release pipeline that is running or has run.                                                                                                                                          |
+| Environment             | Stage                  | A logical and independent entity that represents where you want to deploy a release generated from a release pipeline.                                                                                 |
+| Concurrent job/pipeline | Parallel job           | A parallel job gives you the ability to run a single build or release job at a time in your organization. With more parallel jobs available, you can run more build and release jobs at the same time. |
+| Service endpoint        | Service connection     | A group of settings, such as credentials, used to connect to external services to execute tasks in a build or release.                                                                                 |
 
 See the [Concepts](/azure/devops/pipelines/?view=azure-devops) documentation for more information.
 
@@ -193,8 +187,7 @@ As an extension contributor you will notice that extension categories have been 
 
 Although we've moved to the new `dev.azure.com` domain name as the URL for new organizations, you'll be able to continue accessing your organization using the `visualstudio.com` domain, as usual. If you'd like to change your URL to be based on `dev.azure.com`, an organization administrator (Project Collection Administrator) can change this from the organization settings page. Although adopting the new domain name won't redirect every request, any request to the root URL of the organization and links from many email and web-based links will change.
 
-> [!div class="mx-imgBorder"]
-> ![Org URL setting](media/launch_04.png)
+> [!div class="mx-imgBorder"] > ![Org URL setting](media/launch_04.png)
 
 We will make the move to the new URL gradually based on customer feedback. It will start as opt-in, then later we will make it the default for organizations. We have yet to set a timeline for deliberately moving organizations away from the `visualstudio.com` domain.
 
@@ -219,8 +212,7 @@ See the [Provide Stakeholders access to edit build and release pipelines](/azure
 
 We would love to hear what you think about these features. Use the feedback menu to report a problem or provide a suggestion.
 
-> [!div class="mx-imgBorder"]
-> ![Make a suggestion](../media/help-make-a-suggestion.png)
+> [!div class="mx-imgBorder"] > ![Make a suggestion](../media/help-make-a-suggestion.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/vsts).
 

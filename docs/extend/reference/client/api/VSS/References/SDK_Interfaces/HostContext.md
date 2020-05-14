@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/25/2016
 ---
 
@@ -15,15 +15,12 @@ ms.date: 08/25/2016
 
 Defined in vss.d.ts
 
-
-
 ### Members
 
-* `id`: string. 
+- `id`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `relativeUri`: string. 
+- `relativeUri`: string.
 
-* `uri`: string. 
-
+- `uri`: string.

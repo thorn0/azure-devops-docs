@@ -16,6 +16,6 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `Unknown` The state is not known.
-* `Failed` The build phase completed unsuccessfully.
-* `Succeeded` The build phase completed successfully.
+- `Unknown` The state is not known.
+- `Failed` The build phase completed unsuccessfully.
+- `Succeeded` The build phase completed successfully.

@@ -17,4 +17,4 @@ Module path: `TFS/Dashboards/WidgetContracts`
 
 ### Properties
 
-* `data`: Data associated with the event. 
+- `data`: Data associated with the event.

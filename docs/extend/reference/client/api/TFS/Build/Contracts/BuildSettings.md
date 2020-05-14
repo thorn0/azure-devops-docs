@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `defaultRetentionPolicy`: [RetentionPolicy](./RetentionPolicy.md). 
+- `defaultRetentionPolicy`: [RetentionPolicy](./RetentionPolicy.md).
 
-* `maximumRetentionPolicy`: [RetentionPolicy](./RetentionPolicy.md). 
-
+- `maximumRetentionPolicy`: [RetentionPolicy](./RetentionPolicy.md).

@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Git Commits | REST API Reference for Team Foundation Server
 description: Work with Git commits programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: DD768682-3DC8-4E00-85E8-699633A93EB2
@@ -24,23 +24,25 @@ ms.date: 10/31/2019
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/commits?api-version={version}[&branch={string}&commit={string}&itemPath={string}&committer={string}&author={string}&fromDate={dateTime}&toDate={dateTime}[&$top={integer}&$skip={integer}]
 ```
 
-| Parameter  | Type     | Default | Notes
-|:-----------|:---------|:--------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance   | string   |         | TFS server name ({server:port}).
-| project    | string   |         | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository | string   |         | ID of the [repository](./repositories.md).
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | | ID of the [repository](./repositories.md).
 | Query
-| api-version| string   |         | Version of the API to use.
-| branch     | string   |         | The name of a branch in the repository. (Can't combine with commit parameter.)
-| commit     | string   |         | The ID of a commit in the repository. (Can't combine with branch parameter.)
-| itemPath   | string   | /       | Path of an item in the repository.
-| committer  | string   |         | Name of the person who committed the change.
-| author     | string   |         | Name of the author.
-| fromDate   | [DateTime](https://msdn.microsoft.com/library/az4se3k1.aspx) |         | Start date to search from.
-| toDate     | [DateTime](https://msdn.microsoft.com/library/az4se3k1.aspx) |         | End date to search to.
+| api-version| string | | Version of the API to use.
+| branch | string | | The name of a branch in the repository. (Can't combine with commit parameter.)
+| commit | string | | The ID of a commit in the repository. (Can't combine with branch parameter.)
+| itemPath | string | / | Path of an item in the repository.
+| committer | string | | Name of the person who committed the change.
+| author | string | | Name of the author.
+| fromDate | [DateTime](https://msdn.microsoft.com/library/az4se3k1.aspx) | | Start date to search from.
+| toDate | [DateTime](https://msdn.microsoft.com/library/az4se3k1.aspx) | | End date to search to.
 | $skip      | integer  | 0       | Number of commits to skip.
-| $top       | integer  | 100     | Number of commits to return.
+| $top | integer | 100 | Number of commits to return.
 
 [!INCLUDE [ID_vs_Name](_data/id_or_name.md)]
 
@@ -425,7 +427,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ### In the history of a commit
 
 To return the commits in the history of a specific commit, use the `commit` parameter.
@@ -730,7 +731,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
   ]
 }
 ```
-
 
 ### In the history of a branch
 
@@ -1037,7 +1037,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 You can also send a POST request and send the [items version](./items.md#getaspecificversion) in the request body.
 
 #### Sample request
@@ -1045,6 +1044,7 @@ You can also send a POST request and send the [items version](./items.md#getaspe
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4b63-824a-2ba458937249/commitsBatch?api-version=1.0
 ```
+
 ```json
 {
   "itemVersion": {
@@ -1102,10 +1102,9 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-
 }
 ```
 
-
 ### For an item
 
-Get all the commits that included changes to an item. *Note:* When specifying `itemPath`, if you do not also specify a branch or commit, then the search will begin at the default branch (or any branch, if no default branch exists).
+Get all the commits that included changes to an item. _Note:_ When specifying `itemPath`, if you do not also specify a branch or commit, then the search will begin at the default branch (or any branch, if no default branch exists).
 
 #### Sample request
 
@@ -1173,7 +1172,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 #### Sample request
 
 ```
@@ -1239,7 +1237,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
   ]
 }
 ```
-
 
 ### By the committer
 
@@ -1337,7 +1334,6 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ### By the author
 
 Get the commits based on who authored the files that were committed to the repository.
@@ -1434,8 +1430,8 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ### In a date range
+
 <a name="inadaterange" />
 
 #### Sample request
@@ -1473,8 +1469,8 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ### A page at a time
+
 <a name="apageatatime" />
 
 #### Sample request
@@ -1531,10 +1527,9 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ### From a push
 
-Get the commits that were introduced to the repo by a push. It doesn't include commits that already existed in the repo, for instance on another branch. 
+Get the commits that were introduced to the repo by a push. It doesn't include commits that already existed in the repo, for instance on another branch.
 
 #### Sample request
 
@@ -1582,27 +1577,26 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ## Get a batch of commits
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/_apis/git/repositories/{repository}/commitsBatch?api-version={version}
 ```
 
-| Parameter  | Type     | Default | Notes
-|:-----------|:---------|:--------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance   | string   |         | TFS server name ({server:port}).
-| project    | string   |         | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository | string   |         | ID of the [repository](./repositories.md).
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | | ID of the [repository](./repositories.md).
 | Query
-| api-version| string   |         | Version of the API to use.
+| api-version| string | | Version of the API to use.
 
 ### By a list of commit IDs
 
 Send a POST request with a list of IDs you want.
-
-
 
 ### Between two versions
 
@@ -1613,6 +1607,7 @@ To return the set of commits in the history of one version that are _not_ in the
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4b63-824a-2ba458937249/commitsBatch?api-version=1.0
 ```
+
 ```json
 {
   "itemVersion": {
@@ -1959,23 +1954,24 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-
 }
 ```
 
-
 ## Get a single commit
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/git/repositories/{repository}/commits/{commitId}?api-version={version}[&changeCount={integer}]
 ```
 
-| Parameter   | Type    | Default | Notes
-|:------------|:--------|:--------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance    | string  |         | TFS server name ({server:port}).
-| project     | string  |         | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.*
-| repository  | string  |         | ID of the [repository](./repositories.md).
-| commitId    | string  |         | ID of the commit.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._
+| repository | string | | ID of the [repository](./repositories.md).
+| commitId | string | | ID of the commit.
 | Query
-| api-version | string  |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| changeCount | integer | 0       | The number of changes in the commit to include in the response.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| changeCount | integer | 0 | The number of changes in the commit to include in the response.
 
 ### Just the commit
 
@@ -2036,8 +2032,8 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ### With changed items
+
 <a name="withchangeditems" />
 
 #### Sample request
@@ -2189,8 +2185,8 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
 }
 ```
 
-
 ## Commit status
+
 <a name="commit_status" />
 
 Commit status allows you to mark commits with status information from other systems.
@@ -2201,6 +2197,7 @@ For instance, it's used in VSTS to surface build status in the web UI.
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/_apis/git/repositories/{repository}/commits/{commit}/statuses?api-version={version}
 ```
+
 ```
 {
   "state": {string},
@@ -2213,12 +2210,11 @@ POST https://{instance}/DefaultCollection/{project}/_apis/git/repositories/{repo
 }
 ```
 
-
 | Parameter     | Type                                       | Notes                                                                                           |
-|:--------------|:-------------------------------------------|:------------------------------------------------------------------------------------------------|
+| :------------ | :----------------------------------------- | :---------------------------------------------------------------------------------------------- |
 | URL           |                                            |                                                                                                 |
 | instance      | string                                     | TFS server name ({server:port}).                                                                |
-| project       | string                                     | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.* |
+| project       | string                                     | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._ |
 | Query         |                                            |                                                                                                 |
 | api-version   | string                                     | [Version](../../concepts/rest-api-versioning.md) of the API to use.                             |
 | Body          |                                            |                                                                                                 |
@@ -2233,6 +2229,7 @@ POST https://{instance}/DefaultCollection/{project}/_apis/git/repositories/{repo
 ```
 POST https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4b63-824a-2ba458937249/commits/67cae2b029dff7eb3dc062b49403aaedca5bad8d/statuses?api-version=2.1
 ```
+
 ```json
 {
   "state": "succeeded",
@@ -2267,19 +2264,17 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-
 }
 ```
 
-
 ### Get statuses
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/git/repositories/{repository}/commits/{commit}/statuses?api-version={version}
 ```
 
-
 | Parameter   | Type   | Notes                                                                                           |
-|:------------|:-------|:------------------------------------------------------------------------------------------------|
+| :---------- | :----- | :---------------------------------------------------------------------------------------------- |
 | URL         |        |                                                                                                 |
 | instance    | string | TFS server name ({server:port}).                                                                |
-| project     | string | ID or name of the [project](../tfs/projects.md). *Optional if specifying an ID for repository.* |
+| project     | string | ID or name of the [project](../tfs/projects.md). _Optional if specifying an ID for repository._ |
 | Query       |        |                                                                                                 |
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.                             |
 
@@ -2315,5 +2310,3 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
   ]
 }
 ```
-
-

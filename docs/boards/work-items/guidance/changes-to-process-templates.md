@@ -1,26 +1,25 @@
 ---
 title: Changes made to process templates
-titleSuffix: Azure Boards  
-description: Summary of changes made to Agile, Scrum, and CMMI process templates to support updating existing projects after a TFS upgrade  
+titleSuffix: Azure Boards
+description: Summary of changes made to Agile, Scrum, and CMMI process templates to support updating existing projects after a TFS upgrade
 ms.technology: devops-agile
-ms.assetid: 1541C32C-FD7A-4415-A282-06DF14D1F688 
-ms.topic: reference 
+ms.assetid: 1541C32C-FD7A-4415-A282-06DF14D1F688
+ms.topic: reference
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.date: 04/11/2019
 ---
 
-# Changes made to process templates  
+# Changes made to process templates
 
 [!INCLUDE [temp](../../includes/version-vsts-tfs-all-versions.md)]
 
 To support the addition of new features, changes are introduced periodically to the core system processes or process template&mdash;[Agile](agile-process.md), [Scrum](scrum-process.md), or [CMMI](cmmi-process.md). A process&mdash;used by the Inheritance process model&mdash;determines the building blocks used to track work. A process template&mdash;used by the Hosted XML and On-premises XML process models&mdash;specifies an interdependent-related set of XML definition files that provide the building blocks and initial configuration for tracking work and other functional areas. For an overview of process models and customization options, see [Customize your work tracking experience](../../../reference/customize-work.md).
 
-> [!NOTE]    
-> This article describes changes made to the core system processes with updates made to the on-premises Azure DevOps Server, formerly named Team Foundation Server (TFS). These processes are available for both cloud and on-premises versions of Azure Boards. Projects hosted on Azure Boards [update automatically with each service upgrade](/azure/devops/release-notes/index). Whereas, updates to projects defined on-premises may require running the Configure Feature Wizard after upgrading to a later version.  The Configure Features Wizard has been deprecated for Azure DevOps Server 2019. You can only run the wizard on TFS 2018 and earlier versions.        
-If you've customized your project and haven't upgraded your on-premises deployment for a while, you may need to manually apply some changes to gain access to new features. Review the following table to determine which changes may apply to your situation. See [New features added when you upgrade](../../../reference/new-features-added.md) for a description of each feature added with the updates. 
-
+> [!NOTE]  
+> This article describes changes made to the core system processes with updates made to the on-premises Azure DevOps Server, formerly named Team Foundation Server (TFS). These processes are available for both cloud and on-premises versions of Azure Boards. Projects hosted on Azure Boards [update automatically with each service upgrade](/azure/devops/release-notes/index). Whereas, updates to projects defined on-premises may require running the Configure Feature Wizard after upgrading to a later version. The Configure Features Wizard has been deprecated for Azure DevOps Server 2019. You can only run the wizard on TFS 2018 and earlier versions.  
+> If you've customized your project and haven't upgraded your on-premises deployment for a while, you may need to manually apply some changes to gain access to new features. Review the following table to determine which changes may apply to your situation. See [New features added when you upgrade](../../../reference/new-features-added.md) for a description of each feature added with the updates.
 
 <table>
 <tbody valign="top">
@@ -203,6 +202,7 @@ If you've customized your project and haven't upgraded your on-premises deployme
 </ul>
 
 <img src="media/tfs-vso-state-diagram-product-backlog-item.png" alt="State diagram for Product Backlog Item"/><br/>
+
 <p>To apply the changes to your existing projects, you need to replace the <strong>WORKFLOW</strong> sections defined for each of the updated work item types with the new definitions. You can do this by modifying the work item type definition. See <a href="../../../reference/xml/change-workflow-wit.md" data-raw-source="[Design the Workflow](../../../reference/xml/change-workflow-wit.md)">Design the Workflow</a> and <a href="../../../reference/witadmin/witadmin-import-export-manage-wits.md" data-raw-source="[Import, export, and manage Work Item Types](../../../reference/witadmin/witadmin-import-export-manage-wits.md
 )">Import, export, and manage Work Item Types</a> .</p>
 </td>
@@ -281,12 +281,11 @@ Removed the Sprint type definition and All Sprints query, whose functionality ha
 </tbody>
 </table>
 
-
 ## Related upgrade notes
 
-To update your existing projects hosted on an on-premises Azure DevOps to access new features, [run the Configure Features wizard](../../../reference/configure-features-after-upgrade.md). In the event that you're upgrading from a much earlier version of TFS or you've customized your project, you'll need to make some manual updates.  
+To update your existing projects hosted on an on-premises Azure DevOps to access new features, [run the Configure Features wizard](../../../reference/configure-features-after-upgrade.md). In the event that you're upgrading from a much earlier version of TFS or you've customized your project, you'll need to make some manual updates.
 
-See the following resources as they relate to updating your project:  
+See the following resources as they relate to updating your project:
 
 - [Update a customized process template to access new features](../../../reference/update-customized-process-template.md)
 - [Add features using a manual update process](../../../reference/add-features-manually.md)

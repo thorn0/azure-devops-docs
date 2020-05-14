@@ -13,18 +13,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `countFailed`: number. 
+- `countFailed`: number.
 
-* `countSucceeded`: number. 
+- `countSucceeded`: number.
 
-* `pushCorrelationId`: string. 
+- `pushCorrelationId`: string.
 
-* `pushIds`: {[key: number]: number}. 
+- `pushIds`: {[key: number]: number}.
 
-* `pushTime`: Date. 
+- `pushTime`: Date.
 
-* `results`: [GitRefUpdateResult](../../../TFS/VersionControl/Contracts/GitRefUpdateResult.md)[]. 
-
+- `results`: [GitRefUpdateResult](../../../TFS/VersionControl/Contracts/GitRefUpdateResult.md)[].

@@ -17,5 +17,4 @@ Extends: [WorkItemReference](../../../TFS/WorkItemTracking/Contracts/WorkItemRef
 
 ### Members
 
-* `rev`: number. 
-
+- `rev`: number.

@@ -17,11 +17,10 @@ Extends: [WorkItemTrackingResource](../../../TFS/WorkItemTracking/Contracts/Work
 
 ### Members
 
-* `defaultWorkItemType`: [WorkItemTypeReference](../../../TFS/WorkItemTracking/Contracts/WorkItemTypeReference.md). 
+- `defaultWorkItemType`: [WorkItemTypeReference](../../../TFS/WorkItemTracking/Contracts/WorkItemTypeReference.md).
 
-* `name`: string. 
+- `name`: string.
 
-* `referenceName`: string. 
+- `referenceName`: string.
 
-* `workItemTypes`: [WorkItemTypeReference](../../../TFS/WorkItemTracking/Contracts/WorkItemTypeReference.md)[]. 
-
+- `workItemTypes`: [WorkItemTypeReference](../../../TFS/WorkItemTracking/Contracts/WorkItemTypeReference.md)[].

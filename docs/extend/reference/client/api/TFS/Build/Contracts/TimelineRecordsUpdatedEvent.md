@@ -18,5 +18,4 @@ Extends: [RealtimeBuildEvent](./RealtimeBuildEvent.md)
 
 ### Members
 
-* `timelineRecords`: [TimelineRecord](../../DistributedTask/Contracts/TimelineRecord.md)[]. 
-
+- `timelineRecords`: [TimelineRecord](../../DistributedTask/Contracts/TimelineRecord.md)[].

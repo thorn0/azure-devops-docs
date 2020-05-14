@@ -2,12 +2,12 @@
 title: Troubleshoot authenticating and inviting GitHub users
 description: Troubleshoot authenticating with a GitHub identity, as well as inviting other GitHub users to Azure DevOps
 ms.technology: devops-security
-ms.assetid: 
+ms.assetid:
 ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 07/23/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Troubleshoot authenticating & inviting GitHub users
@@ -32,5 +32,5 @@ A: Only organization or project administrators can invite new users to join the 
 
 ## Related articles
 
-* [Sign up, sign in to Azure DevOps](../../user-guide/sign-up-invite-teammates.md)
-* [Add organization users to Azure DevOps](../accounts/add-organization-users.md)
+- [Sign up, sign in to Azure DevOps](../../user-guide/sign-up-invite-teammates.md)
+- [Add organization users to Azure DevOps](../accounts/add-organization-users.md)

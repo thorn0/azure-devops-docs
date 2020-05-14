@@ -7,7 +7,7 @@ ms.manager: shashban
 ms.author: shashban
 author: shashankbansal
 ms.date: 11/05/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Artifact policy checks
@@ -29,16 +29,16 @@ To support structured document models like JSON, Rego extends Datalog. Rego quer
 
 Below are the sample policies shared. Based on your requirements, you can build your own set of policies.
 
-### Check specific project/pipeline 
+### Check specific project/pipeline
 
-This policy checks if the images are built by Azure Pipelines and Pipeline-foo. For this to work, the pipeline definition should override the name field to something like: **AzureDevOps_$(BuildDefinitionName)_$(Date:yyyyMMdd)$(Rev:.r)**. See more about naming pipeline runs [here.](../process/run-number.md)
+This policy checks if the images are built by Azure Pipelines and Pipeline-foo. For this to work, the pipeline definition should override the name field to something like: **AzureDevOps*\$(BuildDefinitionName)*$(Date:yyyyMMdd)$(Rev:.r)**. See more about naming pipeline runs [here.](../process/run-number.md)
 
 ```
 allowedBuilder := "AzureDevOps_pipeline-foo"
 
 checkBuilder[errors] {
     trace("Check if images are built by Azure Pipelines")
-    resourceUri := values[index].build.resourceUri    
+    resourceUri := values[index].build.resourceUri
     image := fetchImage(resourceUri)
     builder := values[index].build.build.provenance.builderVersion
     trace(sprintf("%s: builder", [builder]))
@@ -73,7 +73,7 @@ checkregistries[errors] {
     registry := fetchRegistry(resourceUri)
     image := fetchImage(resourceUri)
     not whitelist[registry]
-    errors := sprintf("%s: source registry not permitted", [image]) 
+    errors := sprintf("%s: source registry not permitted", [image])
 }
 
 fetchRegistry(uri) = reg {
@@ -123,7 +123,7 @@ fetchImage(uri) = img {
 
 ### Check prior deployments
 
-This policy checks if the image has been pre-deployed to one/more of the environments before being deployed to specific environment/resources with Check configured. 
+This policy checks if the image has been pre-deployed to one/more of the environments before being deployed to specific environment/resources with Check configured.
 
 ```
 predeployedEnvironments = {

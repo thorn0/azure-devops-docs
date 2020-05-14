@@ -1,5 +1,5 @@
 ---
-title: Release Burndown sample Power BI report 
+title: Release Burndown sample Power BI report
 titleSuffix: Azure DevOps
 description: Sample Power BI queries to generate a Release Burndown report
 ms.technology: devops-analytics
@@ -8,7 +8,7 @@ ms.author: kaelli
 ms.custom: powerbisample
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ms.date: 08/07/2019
 ---
 
@@ -17,12 +17,10 @@ ms.date: 08/07/2019
 [!INCLUDE [temp](../includes/version-azure-devops.md)]
 
 This article shows you how to display the burndown of User Stories for a release based on work items tagged with a release tag. The following image shows a burndown both by Story Points and User Stories count.
- 
-> [!div class="mx-imgBorder"] 
-> ![Sample - Release Burndown - Report](media/odatapowerbi-releaseburndown-report.png)
+
+> [!div class="mx-imgBorder"] > ![Sample - Release Burndown - Report](media/odatapowerbi-releaseburndown-report.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
-
 
 ## Sample queries
 
@@ -44,7 +42,7 @@ let
             &"(DateValue,State,Area/AreaPath), "
             &"aggregate ($count as Count, StoryPoints with sum as TotalStoryPoints) "
         &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -68,21 +66,20 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-***
+---
 
 ### Substitution strings
 
 [!INCLUDE [temp](includes/sample-query-substitutions.md)]
+
 - {areapath} - Your Area Path. Example format: Project\Level1\Level2
 - {tag} - A tag that represents your release. All work items tagged with {tagname} are included in the report
 - {startdate} - The date to start the burndown report
 - {enddate} - The date to end the burndown report.
 
-
 ### Query breakdown
 
 The following table describes each part of the query.
-
 
 <table width="90%">
 <tbody valign="top">
@@ -101,55 +98,48 @@ The following table describes each part of the query.
 </tbody>
 </table>
 
-
 ## Power BI transforms
 
 [!INCLUDE [temp](includes/sample-expandcolumns.md)]
 
 [!INCLUDE [temp](includes/sample-finish-query.md)]
 
-
 ## Create the report
 
-Power BI shows you the fields you can report on. 
+Power BI shows you the fields you can report on.
 
-> [!NOTE]   
-> The example below assumes that no one renamed any columns. 
+> [!NOTE]  
+> The example below assumes that no one renamed any columns.
 
-
-> [!div class="mx-imgBorder"] 
-> ![Sample -Release Burndown - Fields](media/odatapowerbi-releaseburndown-fields.png)
+> [!div class="mx-imgBorder"] > ![Sample -Release Burndown - Fields](media/odatapowerbi-releaseburndown-fields.png)
 
 For a simple report, do the following steps:
 
-1. Select Power BI Visualization **Clustered column chart**. 
+1. Select Power BI Visualization **Clustered column chart**.
 1. Add the field "DateValue" to **Axis**
-    - Right-click "DateValue" and select "DateValue", rather than Date Hierarchy
+   - Right-click "DateValue" and select "DateValue", rather than Date Hierarchy
 1. Add the field "TotalStoryPoints" to **Values**
 1. Add the field "Count" to **Values**
 
 The example report displays burndown on both Story Points and Count of Stories.
 
-> [!div class="mx-imgBorder"] 
-> ![Sample - Release Burndown - Report](media/odatapowerbi-releaseburndown-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Release Burndown - Report](media/odatapowerbi-releaseburndown-report.png)
 
 To pivot burndown by Area Path, do the following steps:
 
-1. Select Power BI Visualization **Stacked barchart**. 
+1. Select Power BI Visualization **Stacked barchart**.
 1. Add the field "DateValue" to **Axis**.
-    - Right-click "DateValue" and select "DateValue", rather than Date Hierarchy.
+   - Right-click "DateValue" and select "DateValue", rather than Date Hierarchy.
 1. Add the field "TotalStoryPoints" or "Count" to **Values**. You cannot have two fields in Values.
 1. Add the field "Area.AreaPath" to **Legend**.
 
 The example report displays burndown pivoted by Area Path.
 
-> [!div class="mx-imgBorder"] 
-> ![Sample - Release Burndown - Report](media/odatapowerbi-releaseburndown-report2.png)
+> [!div class="mx-imgBorder"] > ![Sample - Release Burndown - Report](media/odatapowerbi-releaseburndown-report2.png)
 
 To pivot the burndown by State, add the field "State" to **Values**, replacing "Area.AreaPath".
 
-> [!div class="mx-imgBorder"] 
-> ![Sample - Release Burndown - Report](media/odatapowerbi-releaseburndown-report3.png)
+> [!div class="mx-imgBorder"] > ![Sample - Release Burndown - Report](media/odatapowerbi-releaseburndown-report3.png)
 
 [!INCLUDE [temp](includes/sample-multipleteams.md)]
 
@@ -159,7 +149,7 @@ You can use the following additional queries to create different but similar rep
 
 ### Filter by Teams, rather than Area Path
 
-This query is the same as the one used above, except it filters by Team Name rather than Area Path. 
+This query is the same as the one used above, except it filters by Team Name rather than Area Path.
 
 #### [Power BI query](#tab/powerbi/)
 
@@ -179,7 +169,7 @@ let
             &"(DateValue,State,Area/AreaPath), "
             &"aggregate ($count as Count, StoryPoints with sum as TotalStoryPoints) "
         &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -203,11 +193,11 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-* * *
+---
 
 ### Burndown with a snapshot every Friday
 
-Using a weekly snapshot reduces the amount of data pulled into Power BI, and increases query performance. 
+Using a weekly snapshot reduces the amount of data pulled into Power BI, and increases query performance.
 
 #### [Power BI query](#tab/powerbi/)
 
@@ -228,7 +218,7 @@ let
             &"(DateValue,State,Area/AreaPath,AreaSK), "
             &"aggregate ($count as Count, StoryPoints with sum as TotalStoryPoints) "
         &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -253,8 +243,7 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-***
-
+---
 
 ### Burndown based off an Iteration Path
 
@@ -278,7 +267,7 @@ let
             &"(DateValue,StateCategory,State,Area/AreaPath,AreaSK), "
             &"aggregate ($count as Count, StoryPoints with sum as TotalStoryPoints) "
         &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -302,7 +291,7 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-***
+---
 
 ### Burndown based off a custom field
 
@@ -328,7 +317,7 @@ let
             &"(DateValue,StateCategory,State,Area/AreaPath,AreaSK), "
             &"aggregate ($count as Count, StoryPoints with sum as TotalStoryPoints) "
         &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -352,7 +341,7 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-* * *
+---
 
 ## Full list of sample reports
 

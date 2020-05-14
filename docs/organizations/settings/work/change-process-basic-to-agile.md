@@ -17,16 +17,16 @@ ms.date: 06/28/2019
 
 [!INCLUDE [temp](../../../includes/version-vsts-only.md)]
 
-You can change a project based on the Basic process to use to use an inherited Agile process.  This article provides the steps needed to make this change. 
+You can change a project based on the Basic process to use to use an inherited Agile process. This article provides the steps needed to make this change.
 
 [!INCLUDE [temp](../includes/cloud-only-feature.md)]
 
 Prior to making this change, we recommend you familiarize yourself with the process you are changing to. The Task and Epic work item types are the same for both Basic and Agile processes. Most State and Reason field values, however, are different.
 
-|  Process | Work item types | Workflow |
-|------|---------|---------|
-|**Basic** | ![Basic work item types](../../../boards/get-started/media/about-boards/basic-process-epics-issues-tasks-2.png)|![basic workflow](../../../boards/get-started/media/track-issues/basic-process-workflow.png)|
-|**Agile** | ![Agile work item types](media/scrum-to-agile/agile-process-plan-wits.png)|![Agile workflow](../../../boards/get-started/media/about-boards/agile-process-workflow.png)|
+|   Process | Work item types                                                                                                 | Workflow                                                                                     |
+| --------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **Basic** | ![Basic work item types](../../../boards/get-started/media/about-boards/basic-process-epics-issues-tasks-2.png) | ![basic workflow](../../../boards/get-started/media/track-issues/basic-process-workflow.png) |
+| **Agile** | ![Agile work item types](media/scrum-to-agile/agile-process-plan-wits.png)                                      | ![Agile workflow](../../../boards/get-started/media/about-boards/agile-process-workflow.png) |
 
 For an overview of all processes, see [Choose a process](../../../boards/work-items/guidance/choose-process.md).
 
@@ -69,13 +69,14 @@ Reasons you might want to change your process from Basic to Agile:
 
 1. Upon completion, the wizard displays the following information. Make a note of the steps to follow and then choose **Close**.
 
-    > [!div class="mx-imgBorder"]  
-    > ![Step 3 of 3 of change process dialog](media/change-process/change-process-basic-to-agile-wizard-choose-agile-complete.png)
+   > [!div class="mx-imgBorder"]  
+   > ![Step 3 of 3 of change process dialog](media/change-process/change-process-basic-to-agile-wizard-choose-agile-complete.png)
 
-    Steps to manually update your work items and board settings:
-    - Update the column to state mapping for each team Kanban board.
-    - Update existing work items using the work item types set by the target process.
-    - Update existing work items using the correct state model of the target process.
+   Steps to manually update your work items and board settings:
+
+   - Update the column to state mapping for each team Kanban board.
+   - Update existing work items using the work item types set by the target process.
+   - Update existing work items using the correct state model of the target process.
 
 ## Update Kanban board column-to-state settings
 
@@ -156,7 +157,7 @@ Your next step is to bulk update work items. The recommended sequence is:
 
 <!---
 
-  > [!div class="mx-imgBorder"]  
+  > [!div class="mx-imgBorder"]
   > ![Update Work Items](media/change-process/change-process-basic-to-agile-update-work-items.gif)
 
 -->

@@ -18,15 +18,14 @@ Extends: [ShallowReference](./ShallowReference.md)
 
 ### Members
 
-* `createdDate`: Date. The date the definition was created
+- `createdDate`: Date. The date the definition was created
 
-* `project`: [TFS_Core_Contracts.TeamProjectReference](../../../TFS/DistributedTask/Contracts/TeamProjectReference.md). The project.
+- `project`: [TFS_Core_Contracts.TeamProjectReference](../../../TFS/DistributedTask/Contracts/TeamProjectReference.md). The project.
 
-* `queueStatus`: [DefinitionQueueStatus](./DefinitionQueueStatus.md). If builds can be queued from this definition
+- `queueStatus`: [DefinitionQueueStatus](./DefinitionQueueStatus.md). If builds can be queued from this definition
 
-* `revision`: number. The definition revision number.
+- `revision`: number. The definition revision number.
 
-* `type`: [DefinitionType](./DefinitionType.md). The type of the definition.
+- `type`: [DefinitionType](./DefinitionType.md). The type of the definition.
 
-* `uri`: string. The URI of the definition
-
+- `uri`: string. The URI of the definition

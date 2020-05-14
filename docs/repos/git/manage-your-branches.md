@@ -3,19 +3,19 @@ title: Manage branches in your Git repo
 titleSuffix: Azure Repos
 description: Find your work and search for branches using the branches page in Azure DevOps Services/TFS
 ms.assetid: 17722c33-e156-49f1-acad-5fcf4bc3c4fc
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 09/13/2018
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Manage branches
 
 #### Azure Repos | Azure DevOps Server 2019 | TFS 2018 | TFS 2017
 
-Manage the work in your team's Git repo from the **Branches** view on the web. 
+Manage the work in your team's Git repo from the **Branches** view on the web.
 Customize the view to track the branches you care most about so you can stay on top of changes made by your team.
 
 ::: moniker range=">= azure-devops-2019"
@@ -47,14 +47,14 @@ Filter the listed branches in any of the branch views by entering a specific nam
 ![Search and filter branches viewed using the search all branches field](media/branches/search_branches.png)  
 If your team uses a forward slash separator in your branch names, you'll see a collapsible tree view for those branches.
 
->[!TIP]   
-> Using a naming convention for your branches is highly recommended. For suggestions on how to name your branches, see [Adopt a Git branching strategy](git-branching-guidance.md).   
+> [!TIP]  
+> Using a naming convention for your branches is highly recommended. For suggestions on how to name your branches, see [Adopt a Git branching strategy](git-branching-guidance.md).
 
 <a name="mark-favorites"></a>
 
 ### Add favorite branches
 
-Add branches from the **All** view to the **Mine** view by selecting the star icon to favorite the branch. 
+Add branches from the **All** view to the **Mine** view by selecting the star icon to favorite the branch.
 Mark multiple branches as favorites by selecting the star icon on the tree view next to a folder on the tree.
 Remove favorites by toggling the star off or by selecting the **...** to the right of the star to open the branch context menu, then selecting **Remove from my favorites**.
 
@@ -76,22 +76,22 @@ If the branch has a pull request open, you can see its pull request ID. Select t
 The ahead and behind numbers listed for each branch are in comparison with the branch currently labeled **Compare** on the Branches page. Update your compare branch to see how far ahead or behind
 your branches shown on the page are to another branch in your repo:
 
-1. Select the **...** next to the branch you want to set as the baseline for comparison.   
+1. Select the **...** next to the branch you want to set as the baseline for comparison.
 2. Select **Set as compare branch**.
 
 The **Compare** label will move to this branch and the other branches on the page will have the number of commits ahead/behind updated to reflect the new comparison.
 
 ## View branch history
 
-Review the files in a branch or history by selecting the **...** icon next to the branch name and choosing **View files** or **View history**. **View files** opens up the **Files** view on the web so you can 
+Review the files in a branch or history by selecting the **...** icon next to the branch name and choosing **View files** or **View history**. **View files** opens up the **Files** view on the web so you can
 browse the files based on the most recent commit on the branch. **View history** shows each commit in the branch history. Select a commit from this history to see the file changes made in that commit.
 
 ![Access the view files and review history from the branches context menu](media/branches/branches_context_menu.png)
 
 ## Change your default branch
 
->[!NOTE]
->This step requires [Edit Policies permissions](../../organizations/security/set-git-tfvc-repository-permissions.md#git-repository) on your Git repo. 
+> [!NOTE]
+> This step requires [Edit Policies permissions](../../organizations/security/set-git-tfvc-repository-permissions.md#git-repository) on your Git repo.
 
 Configure your Git repo to use a different default branch to merge code into when your team creates new pull requests.
 This is useful when you want to use a branch other than `master` for new changes or need to change your main line of development in your repo.
@@ -115,7 +115,7 @@ This is useful when you want to use a branch other than `master` for new changes
 1. Select the settings icon while you have your project open to bring up the project administration page.
 
    ![open up the administrative area of the Azure DevOps Services web portal for your project](media/pull-requests/gear_icon_settings.png)
-   
+
 1. Select **Version Control**.
 
 1. Select your Git repository. Your branches are displayed under your repo.

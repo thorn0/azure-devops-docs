@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Test Overview | REST API Reference for Team Foundation Server
 description: Work with test management programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 82EB89BA-B237-453B-8F15-E2747458C790
@@ -16,8 +16,6 @@ ms.date: 08/04/2016
 
 [!INCLUDE [API_version](../_data/version.md)]
 
-
-
 A [test case](./cases.md) describes the steps to take when you run a test.
 [Test suites](./suites.md) are groups of test cases, and a [test plan](./plans.md) is the collection of test suites that need to be run for a particular iteration or release.
 [Test points](./points.md) are the pairings of test cases with test configurations that need to be run for the test plan.
@@ -25,29 +23,31 @@ A [test run](./runs.md) consists of a set of test points. The [results](./result
 
 ![Test management resources](./media/test-resources.png)
 
-* [Attachments](./attachments.md)
-* [Cases](./cases.md)
-* [Configurations](./configurations.md)
-* [Code coverage](./code-coverage.md)
-* [Plans](./plans.md)
-* [Points](./points.md)
-* [Result retention settings](./resultretentionsettings.md)
-* [Results](./results.md)
-* [Results (1.0)](./results_1_0.md)
-* [Runs](./runs.md)
-* [Suites](./suites.md)
-* [SuiteEntries](./suite-entries.md)
-* [Suite/Plan clone operations](./cloneOperations.md)
-* [Sessions](./sessions.md)
-* [Variables](./variables.md)
+- [Attachments](./attachments.md)
+- [Cases](./cases.md)
+- [Configurations](./configurations.md)
+- [Code coverage](./code-coverage.md)
+- [Plans](./plans.md)
+- [Points](./points.md)
+- [Result retention settings](./resultretentionsettings.md)
+- [Results](./results.md)
+- [Results (1.0)](./results_1_0.md)
+- [Runs](./runs.md)
+- [Suites](./suites.md)
+- [SuiteEntries](./suite-entries.md)
+- [Suite/Plan clone operations](./cloneOperations.md)
+- [Sessions](./sessions.md)
+- [Variables](./variables.md)
 
 ## Common tasks
 
 ### Create a test plan
+
 1. Get the [project](../tfs/projects.md) that you're working in.
 2. Create the [test plan](./plans.md#createatestplan).
 
 ### Create a test suite with test cases
+
 You need to have some test cases already created to do this.
 
 1. Create a [test suite](./suites.md#createatestsuite).
@@ -62,6 +62,7 @@ After you've run some tests...
 3. You can also get [statistics](./runs.md#gettestrunstatistic) for the run.
 
 ## Licensing requirements
+
 Test resources are subject to specific licensing and access restrictions. Please refer to the documentation links below for ensuring that the REST APIs are accessed with the appropriate user context.
 
 [Access Levels for Test Manager](https://visualstudio.microsoft.com/docs/work/connect/change-access-levels#test-manager)

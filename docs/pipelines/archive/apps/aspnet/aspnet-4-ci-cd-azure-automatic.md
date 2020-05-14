@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: ronai
 author: RoopeshNair
 ms.date: 01/02/2017
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Use Azure to automatically generate a CI/CD pipeline to deploy an ASP.NET app
@@ -26,13 +26,13 @@ runs tests, and deploy to a staging slot and then to production.
 
 ## Code
 
-You must store your app's source code in a 
-[Azure Repos Git](../../../../repos/git/gitquickstart.md), 
+You must store your app's source code in a
+[Azure Repos Git](../../../../repos/git/gitquickstart.md),
 [GitHub](https://help.github.com/articles/create-a-repo),
 or any other Git repository to use Azure Continuous Delivery.
 Team Foundation Version Control (TFVC) repositories are not supported at present.
 
-Carry out the following steps to create a simple 
+Carry out the following steps to create a simple
 .NET MVC app to deploy.
 
 1. Create a new **ASP.NET Web Application** project in
@@ -45,9 +45,9 @@ Carry out the following steps to create a simple
 
 1. Commit the solution to your chosen repository.
 
->For more information about publishing your project, see 
-[Get Started with Git and Azure Repos](../../../../repos/git/gitquickstart.md)
-or [Create a repo (GitHub)](https://help.github.com/articles/create-a-repo).
+> For more information about publishing your project, see
+> [Get Started with Git and Azure Repos](../../../../repos/git/gitquickstart.md)
+> or [Create a repo (GitHub)](https://help.github.com/articles/create-a-repo).
 
 ## Configure
 
@@ -55,7 +55,7 @@ or [Create a repo (GitHub)](https://help.github.com/articles/create-a-repo).
    web app. If you haven't yet created a web app, do this now by choosing
    the "**+**" icon, selecting **Web App** from the **Web + Mobile** category,
    and providing a name and a resource group.
-   
+
    ![Creating a new Azure Web App](media/continuous-app-service/new-web-app.png)
 
 1. In your app's menu blade, choose **Continuous Delivery (Preview)** and then choose **Configure**.
@@ -67,38 +67,38 @@ or [Create a repo (GitHub)](https://help.github.com/articles/create-a-repo).
    (a Git type repository not hosted in Azure Pipelines or GitHub).
 
    ![Specifying the type of source code repository](media/continuous-app-service/02.png)
- 
+
 1. Select the project, repository, and branch to deploy from. When you're done, choose **OK**.
 
    ![Specifying details of the source repository and branch](media/continuous-app-service/03.png)
- 
+
    If you chose to use GitHub, complete the authorization steps.
    If you chose to use an external Git repository, enter the repository name, branch, and (if required) your credentials.
- 
-   >If you encounter a service endpoint error while configuring Continuous Delivery, see
-   [Troubleshoot Azure Resource Manager service endpoints](../../../release/azure-rm-endpoint.md).
- 
+
+   > If you encounter a service endpoint error while configuring Continuous Delivery, see
+   > [Troubleshoot Azure Resource Manager service endpoints](../../../release/azure-rm-endpoint.md).
+
 1. Select **Configure Continuous Delivery** and choose the web application framework
    you used to develop your app. This choice influences the way that Azure Continuous Delivery builds
    and packages the app for deployment. At present, ASP.NET, ASP.NET Core, PHP, Python, and Node.js
    are supported. When you're done, choose **OK**.
 
    ![Specifying the app framework type](media/continuous-app-service/04.png)
- 
+
 1. Select **Set up load test** and decide if you want to run a load test on your app
    before deploying the latest changes to production. The default is **NO**.
    If you want to set up a load test (25 virtual users concurrently accessing
-   the app for 60 seconds), choose **YES** then specify whether to use an existing 
+   the app for 60 seconds), choose **YES** then specify whether to use an existing
    Azure App Service instance, or create a new one in a new App Service plan.
    When you're done, choose **OK**.
- 
+
    ![Specifying whether and how to run a load test before deployment](media/continuous-app-service/05.png)
 
-   >The new Azure App Service instance is created at the lowest
-   pricing tier possible. For example, if your current App Service
-   is in the S2 Standard pricing tier, the new App Service
-   Plan for the load test will use the S1 Standard pricing tier.
-   [Pricing details](https://azure.microsoft.com/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/).
+   > The new Azure App Service instance is created at the lowest
+   > pricing tier possible. For example, if your current App Service
+   > is in the S2 Standard pricing tier, the new App Service
+   > Plan for the load test will use the S1 Standard pricing tier.
+   > [Pricing details](https://azure.microsoft.com/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/).
 
 1. Select **Configure deployment** and decide if you want to deploy your latest changes
    first to staging, and then promote to production. The default is **NO**.
@@ -117,22 +117,22 @@ or [Create a repo (GitHub)](https://help.github.com/articles/create-a-repo).
    ![Completing the Continuous Delivery configuration](media/continuous-app-service/07.png)
 
    The following sequence of events occurs:
- 
+
    - Azure Continuous Delivery creates a build and a release pipeline in the Azure Pipelines subscription
      you specified, together with a service endpoint to connect to Azure.
- 
+
    - If you chose to create a new Azure App Service instance for load tests, and/or a new slot for
      staging, these are created in your Azure subscription.
- 
+
    - After setup has completed successfully, a build is triggered that builds and packages the
      application for deployment.
- 
+
    - After the build has completed successfully, a new release is created and the deployment triggered.
- 
+
    - If you chose to include a load test, the latest changes are first deployed to the Azure App Service
      you selected, and then the load test is executed after the deployment succeeds.
- 
-   - If you chose to use a staging slot, the latest changes are deployed to the staging slot and then a 
+
+   - If you chose to use a staging slot, the latest changes are deployed to the staging slot and then a
      slot swap is performed to complete the continuous delivery workflow.<p />
 
 1. After all these actions have completed, the Azure portal shows the results in the **Activity Log**.
@@ -146,8 +146,8 @@ or [Create a repo (GitHub)](https://help.github.com/articles/create-a-repo).
    ![Viewing the newly created build pipeline](media/continuous-app-service/09.png)
 
    Different tasks are added to the build pipeline depending on the app framework you selected.
-   For example, a **Visual Studio Build** task is added for ASP.NET apps, while a 
-   **.NET Core** task is used for  ASP.NET Core apps.
+   For example, a **Visual Studio Build** task is added for ASP.NET apps, while a
+   **.NET Core** task is used for ASP.NET Core apps.
 
 1. In the "Successfully set up Continuous Delivery..." item, choose the **Release pipeline**
    link to open the project containing your app in Azure Pipelines, and see the list of releases for this pipeline.
@@ -162,19 +162,19 @@ or [Create a repo (GitHub)](https://help.github.com/articles/create-a-repo).
    selected for load testing, and **Cloud-based Web Performance** task execute the load test.
 
    The **Production** environment, shown below, has an **Azure App Service Deploy** task.
-   If you chose to use a staging deployment, the latest changes are deployed to the staging 
+   If you chose to use a staging deployment, the latest changes are deployed to the staging
    slot and then an **Azure App Service Manage** task performs a slot swap between staging
    and production slots.
 
    ![Viewing the Production environment in the newly created release pipeline](media/continuous-app-service/11.png)
 
    If you opted out of both load test and a staging deployment, your release pipeline
-   will have a single environment with just one **Azure App Service Deploy** task 
+   will have a single environment with just one **Azure App Service Deploy** task
    to deploy the latest changes to your Azure App Service.
 
-   There are also links in other items in the **Activity Log** that open commits, 
+   There are also links in other items in the **Activity Log** that open commits,
    builds, build reports, releases, deployment slots, and the deployed app itself,
-   in relevant windows or apps.  
+   in relevant windows or apps.
 
 1. Verify that continuous deployment is occurring from the repository containing your
    app by pushing a change to the repository. Your app should update to reflect the
@@ -187,13 +187,13 @@ or [Create a repo (GitHub)](https://help.github.com/articles/create-a-repo).
 
    ![Stopping a deployment](media/continuous-app-service/12.png)
 
-   >To ensure the build and release history is preserved, the build and release definitions
-   are not deleted from Azure Pipelines when you disconnect.
+   > To ensure the build and release history is preserved, the build and release definitions
+   > are not deleted from Azure Pipelines when you disconnect.
 
 ## Next steps
 
 You can easily add another Azure App Service to the pipeline to validate
-your changes before they reach production. This validation can be by 
+your changes before they reach production. This validation can be by
 running load or functional tests at each step. Further customization
 can be through provisioning additional Azure resources, running custom
 scripts, or upgrading a database. In addition, you can extend this
@@ -202,24 +202,25 @@ to execute during deployment. You can even choose to deploy automatically,
 or set up manual approval for any deployment to production.
 
 <a name="faq"></a>
+
 ## Notes
 
 The Azure Continuous Delivery feature is a preview version. You
 may encounter the following known issues:
 
-* If you do not have relevant permission to create build and release definitions 
+- If you do not have relevant permission to create build and release definitions
   in Azure Pipelines, the Continuous Delivery configuration will fail
-  with an appropriate error message. See 
+  with an appropriate error message. See
   [Manage users and access in Azure Pipelines](../../../../organizations/accounts/add-organization-users.md).
-  
-* Continuous Delivery supports only applications developed by using
+
+- Continuous Delivery supports only applications developed by using
   [ASP.NET](https://www.asp.net/) and [ASP.NET Core](https://www.microsoft.com/net/core#windows).
-  
-* If you encounter the error "Failed to create an Azure service connection"
+
+- If you encounter the error "Failed to create an Azure service connection"
   while deploying to Azure App Service, see
   [Troubleshoot Azure Resource Manager service endpoints](../../../release/azure-rm-endpoint.md).
-  
-* There is a known issue where users are able to see their Azure Pipelines information within the [Azure classic portal](https://manage.windowsazure.com/),
+
+- There is a known issue where users are able to see their Azure Pipelines information within the [Azure classic portal](https://manage.windowsazure.com/),
   but not in the [Azure dashboard](https://portal.azure.com/). You may see a
   "No accounts found" message in this situation. To resolve this, you can
   configure Azure Pipelines to be backed by an Azure Active Directory (Azure AD) instance. For information on how to do this, see

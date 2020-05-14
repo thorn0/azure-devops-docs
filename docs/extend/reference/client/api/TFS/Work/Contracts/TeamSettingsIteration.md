@@ -18,11 +18,10 @@ Extends: [TeamSettingsDataContractBase](../../../TFS/Work/Contracts/TeamSettings
 
 ### Members
 
-* `attributes`: [TeamIterationAttributes](../../../TFS/Work/Contracts/TeamIterationAttributes.md). Attributes such as start and end date
+- `attributes`: [TeamIterationAttributes](../../../TFS/Work/Contracts/TeamIterationAttributes.md). Attributes such as start and end date
 
-* `id`: string. ID of the resource
+- `id`: string. ID of the resource
 
-* `name`: string. Name of the resource
+- `name`: string. Name of the resource
 
-* `path`: string. Relative path of the iteration
-
+- `path`: string. Relative path of the iteration

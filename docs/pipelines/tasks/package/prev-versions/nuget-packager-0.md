@@ -7,7 +7,7 @@ ms.assetid: E725F98F-8753-4946-A3D0-B7B0C92AFF22
 ms.date: 08/10/2016
 ---
 
-# NuGet Packager task version 0.*
+# NuGet Packager task version 0.\*
 
 **Azure Pipelines (deprecated) | TFS 2017 Update 2 and below (deprecated in TFS 2018)**
 
@@ -44,7 +44,8 @@ None
 <td>Path/Pattern to nuspec files</td>
 <td>
 
-Specify .csproj files (for example, <code>**\*.csproj</code>) for simple projects. In this case:
+Specify .csproj files (for example, <code>\*\*\*.csproj</code>) for simple projects. In this case:
+
 <ul>
 <li>The packager compiles the .csproj files for packaging.</li>
 <li>You must specify <strong>Configuration to Package</strong> (see below).</li>

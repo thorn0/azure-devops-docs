@@ -16,4 +16,3 @@ Module path: `TFS/Work/Contracts`
 Extends: [ShallowReference](../../../TFS/Work/Contracts/ShallowReference.md)
 
 ### Members
-

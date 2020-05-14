@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Merge Command
 
@@ -23,22 +22,22 @@ The **merge** command applies changes from one branch into another.
 
 **Required Permissions**
 
-To use the **merge** command, you must have the **Check out** permission set to **Allow** for the workspace folder that contains the *destination* and you must have the **Read** permission set to **Allow** for the workspace folder that contains the source. For more information, see [Permissions and groups reference](../../organizations/security/permissions.md).
+To use the **merge** command, you must have the **Check out** permission set to **Allow** for the workspace folder that contains the _destination_ and you must have the **Read** permission set to **Allow** for the workspace folder that contains the source. For more information, see [Permissions and groups reference](../../organizations/security/permissions.md).
 
 ```
-tf merge [/recursive] [/force] [/candidate] [/discard] 
-[/version:versionspec] [/lock:none|checkin|checkout] [/preview] 
+tf merge [/recursive] [/force] [/candidate] [/discard]
+[/version:versionspec] [/lock:none|checkin|checkout] [/preview]
 [/baseless] [/nosummary] [/noimplicitbaseless] [/conservative] [/format:(brief|detailed)] [/noprompt] [/login:username,[password]] source destination
 ```
 
 ## Parameters
 
-|**Argument**|**Description**|
-|---|---|
-|*versionspec*|Provides a value such as C2 for the **/version** option. For more information about how Team Foundation parses a version specification to determine which items are within its scope, see [Command-Line Syntax (Version Control)](https://msdn.microsoft.com/library/56f7w6be).|
-|*source*|Specifies the file or folder to act as the source of the merge.|
-|*destination*|Specifies the file or folder to act as the destination of the merge.|
-|*username*|Provides a value to the **/login** option. You can specify a username value as either *DOMAIN*\*UserName* or *UserName*.|
+| **Argument**  | **Description**                                                                                                                                                                                                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _versionspec_ | Provides a value such as C2 for the **/version** option. For more information about how Team Foundation parses a version specification to determine which items are within its scope, see [Command-Line Syntax (Version Control)](https://msdn.microsoft.com/library/56f7w6be). |
+| _source_      | Specifies the file or folder to act as the source of the merge.                                                                                                                                                                                                                 |
+| _destination_ | Specifies the file or folder to act as the destination of the merge.                                                                                                                                                                                                            |
+| _username_    | Provides a value to the **/login** option. You can specify a username value as either _DOMAIN_\*UserName* or *UserName\*.                                                                                                                                                       |
 
 <table><thead>
 <tr><th><p><strong>Option</strong></p></th><th><p><strong>Description</strong></p></th></tr></thead><tbody>
@@ -89,6 +88,7 @@ Baseless merges cannot delete files in the target. You can manually carry over s
 </table>
 
 ## Remarks
+
 You can use the **merge** command of the **tf** command-line utility to apply changes in an existing source branch to an existing target branch. You can merge an individual revision or a complete changeset to the target branch. You can merge changes from the source to the target branch or from the destination to the source branch.
 
 The **merge** command also lets you query for changes in a source branch which have not been migrated to the target branch. Additionally, it lets you indicate that certain changes will never be merged from the source to the destination and should no longer be displayed as candidates for a merge operation.
@@ -102,8 +102,10 @@ Use baseless merge to merge items that are not directly branched from each other
 When you run **tf** **merge**, Team Foundation performs an implicit baseless merge between items that have the same relative name in two previously related version-controlled trees. For example, you might want to merge the related branches $SRC\\ and $TGT. Both branches contain an unrelated file that is named a.txt. When you run **tf** **merge**, Team Foundation establishes a relationship between the two a.txt files if the two files are the same, if FIPS-compliant encryption is disabled, and if the source file is not related to any other file in the target.
 
 If you run **tf merge** with the **/noimplicitbaseless** option set, when Team Foundation tries to merge the two branches, the two a.txt files will create a namespace conflict when you try to check in the changes. To resolve the conflict, you must rename one of the files.
+
 ## Examples
-The following example merges changes from MyFile\_beta1 that have not been merged into MyFile\_RTM.
+
+The following example merges changes from MyFile_beta1 that have not been merged into MyFile_RTM.
 
 ```
 c:\projects>tf merge MyFile_beta1 MyFile_RTM /recursive

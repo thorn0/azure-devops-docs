@@ -17,5 +17,4 @@ Extends: [WorkItemTrackingResourceReference](../../../TFS/WorkItemTracking/Contr
 
 ### Members
 
-* `_links`: any. 
-
+- `_links`: any.

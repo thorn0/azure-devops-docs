@@ -14,48 +14,46 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `assignedTo`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `assignedTo`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `automated`: boolean. 
+- `automated`: boolean.
 
-* `comment`: string. 
+- `comment`: string.
 
-* `configuration`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `configuration`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `failureType`: string. 
+- `failureType`: string.
 
-* `id`: number. 
+- `id`: number.
 
-* `lastResolutionStateId`: number. 
+- `lastResolutionStateId`: number.
 
-* `lastResult`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `lastResult`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `lastResultDetails`: [LastResultDetails](../../../TFS/TestManagement/Contracts/LastResultDetails.md). 
+- `lastResultDetails`: [LastResultDetails](../../../TFS/TestManagement/Contracts/LastResultDetails.md).
 
-* `lastRunBuildNumber`: string. 
+- `lastRunBuildNumber`: string.
 
-* `lastTestRun`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `lastTestRun`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `lastUpdatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `lastUpdatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `lastUpdatedDate`: Date. 
+- `lastUpdatedDate`: Date.
 
-* `outcome`: string. 
+- `outcome`: string.
 
-* `revision`: number. 
+- `revision`: number.
 
-* `state`: string. 
+- `state`: string.
 
-* `suite`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `suite`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `testCase`: [WorkItemReference](../../../TFS/TestManagement/Contracts/WorkItemReference.md). 
+- `testCase`: [WorkItemReference](../../../TFS/TestManagement/Contracts/WorkItemReference.md).
 
-* `testPlan`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `testPlan`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `url`: string. 
+- `url`: string.
 
-* `workItemProperties`: any[]. 
-
+- `workItemProperties`: any[].

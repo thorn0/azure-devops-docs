@@ -13,16 +13,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `path`: string. Path to item
+- `path`: string. Path to item
 
-* `recursionLevel`: [VersionControlRecursionType](../../../TFS/VersionControl/Contracts/VersionControlRecursionType.md). Specifies whether to include children (OneLevel), all descendants (Full), or None
+- `recursionLevel`: [VersionControlRecursionType](../../../TFS/VersionControl/Contracts/VersionControlRecursionType.md). Specifies whether to include children (OneLevel), all descendants (Full), or None
 
-* `version`: string. Version string (interpretation based on VersionType defined in subclass
+- `version`: string. Version string (interpretation based on VersionType defined in subclass
 
-* `versionOptions`: [GitVersionOptions](../../../TFS/VersionControl/Contracts/GitVersionOptions.md). Version modifiers (e.g. previous)
+- `versionOptions`: [GitVersionOptions](../../../TFS/VersionControl/Contracts/GitVersionOptions.md). Version modifiers (e.g. previous)
 
-* `versionType`: [GitVersionType](../../../TFS/VersionControl/Contracts/GitVersionType.md). How to interpret version (branch,tag,commit)
-
+- `versionType`: [GitVersionType](../../../TFS/VersionControl/Contracts/GitVersionType.md). How to interpret version (branch,tag,commit)

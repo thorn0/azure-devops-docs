@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 12/06/2018
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Delete users from your organization connected to Azure Active Directory

@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Build Overview | REST API Reference for Team Foundation Server
 description: Work with VSTS builds programmatically using the REST APIs.
 ms.assetid: 6C2E7900-891E-4C9E-9FD1-4798E37019FB
@@ -16,9 +16,9 @@ ms.date: 08/04/2016
 
 [!INCLUDE [API_version](../_data/version2.md)]
 
-* [Builds](./builds.md)
-* [Definitions](./definitions.md)
-* [Definition Templates](./definition-templates.md)
+- [Builds](./builds.md)
+- [Definitions](./definitions.md)
+- [Definition Templates](./definition-templates.md)
 
 ## Common tasks
 
@@ -40,4 +40,3 @@ ms.date: 08/04/2016
 2. View the [tags](./builds.md#gettagsforabuild) associated with the build.
 3. You can search [builds](./builds.md#getbuildswithatag) by tags
 4. You can also see all [tags](./tags.md) across all builds.
-

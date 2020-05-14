@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 05/12/2017
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Create and work with workspaces
 
@@ -24,19 +23,19 @@ In some cases, you might want to modify your workspace or create multiple worksp
 
 After you have [connected to the project](../../organizations/projects/connect-to-projects.md) (Keyboard: Ctrl + 0, C), you can manage your workspaces from the Team Explorer home page (Keyboard: Ctrl + 0, H)
 
-![Manage workspaces from Team Explorer](media/create-work-workspaces/IC698935.png)   
-   
-or from [Source Control Explorer](use-source-control-explorer-manage-files-under-version-control.md).   
+![Manage workspaces from Team Explorer](media/create-work-workspaces/IC698935.png)
+
+or from [Source Control Explorer](use-source-control-explorer-manage-files-under-version-control.md).
 
 ![Editing workspaces from Source Control Explorer](media/create-work-workspaces/IC698934.png)
 
-![Manage Workspaces dialog box](media/create-work-workspaces/IC698937.png)   
+![Manage Workspaces dialog box](media/create-work-workspaces/IC698937.png)
 
 Choose **Show remote workspaces** if you want to view all the workspaces you own (including those on other computers).
 
 After you choose **Add** or **Edit** you can modify working folders in a new or an existing workspace.
 
-![Edit Workspace dialog box](media/create-work-workspaces/IC720118.png)   
+![Edit Workspace dialog box](media/create-work-workspaces/IC720118.png)
 
 If you want to remove the workspace, before you do so, make sure there are no pending changes (Keyboard: Ctrl + 0, P). If you have pending changes, you can either [check them in](check-your-work-team-codebase.md) or [shelve them](suspend-your-work-manage-your-shelvesets.md).
 
@@ -60,7 +59,6 @@ You can create and manage your workspaces from the command prompt. You can also 
 
 ## Q & A
 
- 
 #### Q: Why would I need to change the working folders? How should I do it?
 
 **A:** In general, you should map your entire project to a single local folder under **c:\\Users\\**<em>YourName</em>**\\Source\\Workspaces\\**. For example:
@@ -68,9 +66,9 @@ You can create and manage your workspaces from the command prompt. You can also 
 ![Edit Workspace dialog box](media/create-work-workspaces/IC720118.png)
 Some tips on effective folder names:
 
--   Keep all folder, sub-folder, and file names short to simplify your work and avoid potential long-path issues that can occur with some types of code projects.
+- Keep all folder, sub-folder, and file names short to simplify your work and avoid potential long-path issues that can occur with some types of code projects.
 
--   Avoid whitespace if you want make command-line operations a little easier to perform.
+- Avoid whitespace if you want make command-line operations a little easier to perform.
 
 If your team has a large and complex codebase or if you want your workspace to contain only the files you need to improve performance, you can [optimize your workspace](optimize-your-workspace.md).
 
@@ -90,30 +88,30 @@ If your team has a large and complex codebase or if you want your workspace to c
 
 **A:** When you choose the **Advanced** button, some additional options appear.
 
--   **Owner**: Only the owner of a workspace can use it.
+- **Owner**: Only the owner of a workspace can use it.
 
-    > [!TIP]
-    > Instead of changing the owner of your workspace when someone else needs to continue your work you can [suspend (or shelve)](suspend-your-work-manage-your-shelvesets.md) your work and then share the shelveset with them.
+  > [!TIP]
+  > Instead of changing the owner of your workspace when someone else needs to continue your work you can [suspend (or shelve)](suspend-your-work-manage-your-shelvesets.md) your work and then share the shelveset with them.
 
--   **Computer**: This box identifies the dev machine where the workspace exists, and it is read-only. You cannot move a workspace from one computer to another. However, if the name of your dev machine has changed and you want that change to appear in this field, run [tf workspaces /updatecomputername](workspaces-command.md).
+- **Computer**: This box identifies the dev machine where the workspace exists, and it is read-only. You cannot move a workspace from one computer to another. However, if the name of your dev machine has changed and you want that change to appear in this field, run [tf workspaces /updatecomputername](workspaces-command.md).
 
--   **Permissions**: For a workspace you are using on a dev machine for a single developer, set this to **Private workspace**. Choose **Public workspace** if you want to use a single computer for a team to collaborate on an effort such as resolving a large number of conflicts. If you want any team member to be able to use a workspace but not check in their work, choose **Public workspace (limited)**. This option reserves check-in permission for the **Owner**.
+- **Permissions**: For a workspace you are using on a dev machine for a single developer, set this to **Private workspace**. Choose **Public workspace** if you want to use a single computer for a team to collaborate on an effort such as resolving a large number of conflicts. If you want any team member to be able to use a workspace but not check in their work, choose **Public workspace (limited)**. This option reserves check-in permission for the **Owner**.
 
--   **Location**: **Local** is the best choice in most cases. See [Decide between using a local or a server workspace](decide-between-using-local-server-workspace.md).
+- **Location**: **Local** is the best choice in most cases. See [Decide between using a local or a server workspace](decide-between-using-local-server-workspace.md).
 
--   **File Time**:
+- **File Time**:
 
-    -   Choose **Checkin** if you want the date and time stamp of each file to generally match the stamp of the changeset of the version in your workspace. A few issues and exceptions are:
+  - Choose **Checkin** if you want the date and time stamp of each file to generally match the stamp of the changeset of the version in your workspace. A few issues and exceptions are:
 
-        -   When you modify the local file, the date and time stamp will match the date and time when you modified the file.
+    - When you modify the local file, the date and time stamp will match the date and time when you modified the file.
 
-        -   This feature is available only if you are using Visual Studio 2012 or later and Visual Studio Team Foundation Server 2012 or later.
+    - This feature is available only if you are using Visual Studio 2012 or later and Visual Studio Team Foundation Server 2012 or later.
 
-        -   The setting does not apply to folders, unless there is a pending add or delete operation to a file contained by the folder.
+    - The setting does not apply to folders, unless there is a pending add or delete operation to a file contained by the folder.
 
-        -   You might not be able to build your code project incrementally. Instead, you will have to rebuild).
+    - You might not be able to build your code project incrementally. Instead, you will have to rebuild).
 
-    -   Choose **Current** if you want the date and time stamp to match the date and time when you last modified the local file. For example, a team member checked in the latest change to the file on Monday. On Tuesday, you perform a get operation to update the file. The date and time stamp is set to Tuesday.
+  - Choose **Current** if you want the date and time stamp to match the date and time when you last modified the local file. For example, a team member checked in the latest change to the file on Monday. On Tuesday, you perform a get operation to update the file. The date and time stamp is set to Tuesday.
 
 #### Q: Can I use the same workspace in multiple instances of Visual Studio?
 

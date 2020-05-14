@@ -40,15 +40,15 @@ A simple example of using [container jobs](container-phases.md):
 ```yaml
 resources:
   containers:
-  - container: my_container
-    image: ubuntu:16.04
-  - container: nginx
-    image: nginx
-  - container: redis
-    image: redis
+    - container: my_container
+      image: ubuntu:16.04
+    - container: nginx
+      image: nginx
+    - container: redis
+      image: redis
 
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: "ubuntu-16.04"
 
 container: my_container
 
@@ -57,11 +57,11 @@ services:
   redis: redis
 
 steps:
-- script: |
-    apt install -y curl
-    curl nginx
-    apt install redis-tools
-    redis-cli -h redis ping
+  - script: |
+      apt install -y curl
+      curl nginx
+      apt install redis-tools
+      redis-cli -h redis ping
 ```
 
 This pipeline fetches the latest `nginx` and `redis` containers from [Docker Hub](https://hub.docker.com)
@@ -77,37 +77,37 @@ You can also use service containers without a job container. A simple example:
 ```yaml
 resources:
   containers:
-  - container: nginx
-    image: nginx
-    ports:
-    - 8080:80
-    env:
-      NGINX_PORT: 80
-  - container: redis
-    image: redis
-    ports:
-    - 6379
+    - container: nginx
+      image: nginx
+      ports:
+        - 8080:80
+      env:
+        NGINX_PORT: 80
+    - container: redis
+      image: redis
+      ports:
+        - 6379
 
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: "ubuntu-16.04"
 
 services:
   nginx: nginx
   redis: redis
 
 steps:
-- script: |
-    curl localhost:8080
-    redis-cli -p "${AGENT_SERVICES_REDIS_PORTS_6379}" ping
+  - script: |
+      curl localhost:8080
+      redis-cli -p "${AGENT_SERVICES_REDIS_PORTS_6379}" ping
 ```
 
 This pipeline starts the latest `nginx` and `redis` containers,
 and then publishes the specified ports to the host. Since the job is not running in a container, there's no automatic name resolution.
-This example shows how you can instead reach services by using `localhost`. 
+This example shows how you can instead reach services by using `localhost`.
 In the above example we provide the port explicitly (for example, `8080:80`).
 
 An alternative approach is to let a random
-port get assigned dynamically at runtime. You can then access these dynamic ports by using [variables](variables.md). 
+port get assigned dynamically at runtime. You can then access these dynamic ports by using [variables](variables.md).
 In a Bash script, you can access a variable by using the process environment. These variables take the form: `agent.services.<serviceName>.ports.<port>`.
 In the above example, `redis` is assigned a random available port on the host.
 The `agent.services.redis.ports.6379` variable contains the port number.
@@ -120,15 +120,15 @@ In the following example, the same steps run against multiple versions of Postgr
 ```yaml
 resources:
   containers:
-  - container: my_container
-    image: ubuntu:16.04
-  - container: pg11
-    image: postgres:11
-  - container: pg10
-    image: postgres:10
+    - container: my_container
+      image: ubuntu:16.04
+    - container: pg11
+      image: postgres:11
+    - container: pg10
+      image: postgres:10
 
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: "ubuntu-16.04"
 
 strategy:
   matrix:
@@ -142,9 +142,9 @@ container: my_container
 services:
   postgres: $[ variables['postgresService'] ]
 steps:
-- script: |
-    apt install -y postgresql-client
-    psql --host=postgres --username=postgres --command="SELECT 1;"
+  - script: |
+      apt install -y postgresql-client
+      psql --host=postgres --username=postgres --command="SELECT 1;"
 ```
 
 ## Ports
@@ -154,17 +154,17 @@ When specifying a container resource or an inline container, you can specify an 
 ```yaml
 resources:
   container:
-  - container: my_service
-    image: my_service:latest
-    ports:
-    - 8080:80
-    - 5432
+    - container: my_service
+      image: my_service:latest
+      ports:
+        - 8080:80
+        - 5432
 
 services:
   redis:
     image: redis
     ports:
-    - 6379/tcp
+      - 6379/tcp
 ```
 
 Specifying `ports` is not required if your job is running in a container because containers on the same Docker network automatically expose all ports
@@ -187,9 +187,9 @@ services:
   my_service:
     image: myservice:latest
     volumes:
-    - mydockervolume:/data/dir
-    - /data/dir
-    - /src/dir:/dst/dir
+      - mydockervolume:/data/dir
+      - /data/dir
+      - /src/dir:/dst/dir
 ```
 
 Volumes take the form `<source>:<destinationPath>`, where `<source>` can be a named volume or an absolute path on the host machine, and `<destinationPath>` is

@@ -1,8 +1,8 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Work Item Revisions | REST API Reference for Team Foundation Server
-description: Work with work item revisions programmatically using the REST APIs for Team Foundation Server. 
+description: Work with work item revisions programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 19599ABC-A720-43DA-9CDA-FA8C91CD687E
 ms.topic: article
 ms.author: chcomley
@@ -26,16 +26,18 @@ A revision is a complete work item as it appeared at one point in time. By contr
 GET https://{instance}/DefaultCollection/_apis/wit/workitems/{id}/revisions?api-version={version}[&$top={int}&$skip={int}&$expand={enum{relations}]
 ```
 
-| Parameter | Type    | Default | Notes	
-|:----------|:--------|:--------|:--------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance  | string  |         | TFS server name ({server:port}).
-| id        | int     |         | ID of the work item.
+| instance | string | | TFS server name ({server:port}).
+| id | int | | ID of the work item.
 | Query
-| api-version | string |        | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | $top      | integer | 200     | Number of revisions to return, up to 200.
-| $skip     | integer | 0       | Number of revisions to skip.
-| $expand   | enum { all, relations, none }		| none    | Gets work item relationships (work item links, hyperlinks and file attachments).
+| $skip | integer | 0 | Number of revisions to skip.
+| \$expand | enum { all, relations, none } | none | Gets work item relationships (work item links, hyperlinks and file attachments).
 
 #### Sample request
 
@@ -210,10 +212,9 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/revisions?api-
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetListOfWorkItemRevisions method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RevisionsSample.cs#L19)
+- [C# (GetListOfWorkItemRevisions method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RevisionsSample.cs#L19)
 
 ### A page at a time
 
@@ -278,10 +279,9 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/revisions?$ski
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetListOfWorkItemRevisionsPaged method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RevisionsSample.cs#L48)
+- [C# (GetListOfWorkItemRevisionsPaged method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RevisionsSample.cs#L48)
 
 ## Get a work item revision
 
@@ -289,15 +289,17 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/revisions?$ski
 GET https://{instance}/DefaultCollection/_apis/wit/workitems/{id}/revisions/{revision}?api-version={version}[&$expand={enum{relations}]
 ```
 
-| Parameter | Type    | Notes	
-|:----------|:--------|:--------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string  | TFS server name ({server:port}).
-| id        | int     | ID of the work item.
-| revision  | int     | Revision of the work item.<br/>When a work item is created, the revision is 0, and each time it's updated, the revision is incremented.
+| instance | string | TFS server name ({server:port}).
+| id | int | ID of the work item.
+| revision | int | Revision of the work item.<br/>When a work item is created, the revision is 0, and each time it's updated, the revision is incremented.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| $expand	| enum { all, relations, none }	| Gets work item relationships (work item links, hyperlinks and file attachments).
+| \$expand | enum { all, relations, none } | Gets work item relationships (work item links, hyperlinks and file attachments).
 
 #### Sample request
 
@@ -343,12 +345,11 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/revisions/2?ap
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetWorkItemRevision method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RevisionsSample.cs#L78)
+- [C# (GetWorkItemRevision method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RevisionsSample.cs#L78)
 
-###  With links and attachments
+### With links and attachments
 
 #### Sample request
 
@@ -416,5 +417,3 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/revisions/2?$e
   "url": "https://mytfsserver/DefaultCollection/_apis/wit/workItems/299/revisions/2"
 }
 ```
-
-

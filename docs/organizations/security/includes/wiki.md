@@ -1,5 +1,3 @@
-
-
 ::: moniker range=">= tfs-2018"
 
 <table>
@@ -143,15 +141,12 @@
 </tbody>
 </table>
 
-
 #### Notes
 
 1. Can view project READMEs, but not READMEs defined for a repository.
 2. Project Admins or Team Admins with contribute permission can publish code as wiki. Project Admins have this permission by default.
 
 ::: moniker-end
-
-
 
 ::: moniker range="tfs-2017"
 
@@ -296,14 +291,9 @@
 </tbody>
 </table>
 
-
 #### Notes
+
 1. Can view project READMEs, but not READMEs defined for a repository.
 2. Project Admins or Team Admins with contribute permission can publish code as wiki. Project Admins have this permission by default.
 
-::: moniker-end  
-
-
-  
-
-
+::: moniker-end

@@ -7,7 +7,7 @@ ms.manager: atulmal
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 02/28/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Kubernetes manifest task
@@ -41,7 +41,7 @@ The following list shows the key benefits of this task:
   - **Service Mesh Interface**: [Service Mesh Interface](https://smi-spec.io/) (SMI) abstraction allows configuration with service mesh providers like Linkerd and Istio. The Kubernetes Manifest task maps SMI TrafficSplit objects to the stable, baseline, and canary services during the life cycle of the deployment strategy.
 
     Canary deployments that are based on a service mesh and use this task are more accurate. This accuracy comes because service mesh providers enable the granular percentage-based split of traffic. The service mesh uses the service registry and sidecar containers that are injected into pods. This injection occurs alongside application containers to achieve the granular traffic split.
-  
+
   - **Kubernetes with no service mesh**: In the absence of a service mesh, you might not get the exact percentage split you want at the request level. But you can possibly do canary deployments by using baseline and canary variants next to the stable variant.
 
     The service sends requests to pods of all three workload variants as the selector-label constraints are met. Kubernetes Manifest honors these requests when creating baseline and canary variants. This routing behavior achieves the intended effect of routing only a portion of total requests to the canary.
@@ -176,7 +176,8 @@ In the above example, the task tries to find matches for the images <code>foo/de
 > While you can author deploy, promote, and reject actions with YAML input related to deployment strategy, support for a Manual Intervention task is currently unavailable for build pipelines.
 >
 > For release pipelines, we advise you to use actions and input related to deployment strategy in the following sequence:
-> 1. A deploy action specified with <code>strategy: canary</code> and <code>percentage: $(<i>someValue</i>)</code>.
+>
+> 1. A deploy action specified with <code>strategy: canary</code> and <code>percentage: \$(<i>someValue</i>)</code>.
 > 1. A Manual Intervention task so that you can pause the pipeline and compare the baseline variant with the canary variant.
 > 1. A promote action that runs if a Manual Intervention task is resumed and a reject action that runs if a Manual Intervention task is rejected.
 
@@ -291,13 +292,13 @@ In the above example, the task tries to find matches for the images <code>foo/de
   </tr>
 </table>
 
-The following YAML code shows a sample creation of Docker registry secrets by using [Docker Registry service connection](../../library/service-endpoints.md#sep-docreg): 
+The following YAML code shows a sample creation of Docker registry secrets by using [Docker Registry service connection](../../library/service-endpoints.md#sep-docreg):
 
 ```YAML
 steps:
 - task: KubernetesManifest@0
   displayName: Create secret
-  inputs: 
+  inputs:
     action: createSecret
     secretType: dockerRegistry
     secretName: foobar
@@ -312,7 +313,7 @@ This YAML code shows a sample creation of generic secrets:
 steps:
 - task: KubernetesManifest@0
   displayName: Create secret
-  inputs: 
+  inputs:
     action: createSecret
     secretType: generic
     secretName: some-secret
@@ -459,7 +460,7 @@ The following YAML code shows an example of scaling objects:
 steps:
 - task: KubernetesManifest@0
   displayName: Scale
-  inputs: 
+  inputs:
     action: scale
     kind: deployment
     name: bootcamp-demo
@@ -469,6 +470,7 @@ steps:
 ```
 
 ## Patch action
+
 <table>
   <thead>
     <tr>
@@ -545,7 +547,7 @@ The following YAML code shows an example of object patching:
 steps:
 - task: KubernetesManifest@0
   displayName: Patch
-  inputs: 
+  inputs:
     action: patch
     kind: pod
     name: demo-5fbc4d6cd9-pgxn4

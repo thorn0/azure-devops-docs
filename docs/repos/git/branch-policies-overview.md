@@ -1,15 +1,15 @@
 ---
 title: Branch policies
-titleSuffix: Azure Repos    
-description: Learn about branch policies in Azure DevOps Services & TFS  
-ms.technology: devops-code-git 
-ms.assetid: 36A4986E-BFB8-422B-BFC9-8A0CB75D0603    
+titleSuffix: Azure Repos
+description: Learn about branch policies in Azure DevOps Services & TFS
+ms.technology: devops-code-git
+ms.assetid: 36A4986E-BFB8-422B-BFC9-8A0CB75D0603
 ms.author: apawast
 author: apawast
 ms.topic: overview
 ms.date: 09/18/2018
 layout: LandingPage
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Branch policies
@@ -18,12 +18,12 @@ monikerRange: '>= tfs-2015'
 
 Branch policies are an important part of the Git workflow and enable you to:
 
-* Isolate work in progress from the completed work in your master branch
-* Guarantee changes build before they get to master
-* Limit who can contribute to specific branches
-* Enforce who can create branches and the naming guidelines for the branches
-* Automatically include the right reviewers for every code change
-* Enforce best practices with required code reviewers
+- Isolate work in progress from the completed work in your master branch
+- Guarantee changes build before they get to master
+- Limit who can contribute to specific branches
+- Enforce who can create branches and the naming guidelines for the branches
+- Automatically include the right reviewers for every code change
+- Enforce best practices with required code reviewers
 
 ## Adopt a Git branching strategy
 
@@ -34,10 +34,10 @@ Developers pushing changes directly to the protected branches will have their pu
 Keep your branch strategy simple by building your strategy from these three concepts:
 
 1. Use feature branches for all new features and bug fixes.
-2. Merge feature branches into the master branch using pull requests. 
-3. Keep a high quality, up-to-date master branch.  
+2. Merge feature branches into the master branch using pull requests.
+3. Keep a high quality, up-to-date master branch.
 
-A strategy that extends these concepts and avoids contradictions will result in a version control workflow for your team that is consistent and easy to follow. 
+A strategy that extends these concepts and avoids contradictions will result in a version control workflow for your team that is consistent and easy to follow.
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -228,5 +228,3 @@ Learn how to perform common tasks when working with branches.
         </a>
     </li>
 </ul>
-
-

@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: shashban
 author: azooinmyluggage
 ms.date: 01/10/2019
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Integrate with ServiceNow change management
@@ -22,12 +22,12 @@ while gaining all DevOps benefits from Azure Pipelines.
 
 This topic covers:
 
-* Configuring ServiceNow for integrating with Azure Pipelines
-* Including ServiceNow change management process as a release gate
-* Monitoring change management process from releases
-* Keeping ServiceNow change requests updated with deployment result
+- Configuring ServiceNow for integrating with Azure Pipelines
+- Including ServiceNow change management process as a release gate
+- Monitoring change management process from releases
+- Keeping ServiceNow change requests updated with deployment result
 
-## Prerequisites 
+## Prerequisites
 
 This tutorial extends the tutorial [Use approvals and gates](../deploy-using-approvals.md).
 **You must have completed that tutorial first**.
@@ -64,39 +64,39 @@ of [ServiceNow](https://www.servicenow.com/) to which applications can be instal
 ## Configure a release pipeline
 
 1. In your release pipeline, add a pre-deployment gate for ServiceNow Change Management.
- 
+
    ![Adding a pre-deployment gate for ServiceNow Change Management](media/servicenow-04.png)
 
-1. Select the ServiceNow service connection you created earlier and enter the values for the properties of the change request. 
+1. Select the ServiceNow service connection you created earlier and enter the values for the properties of the change request.
 
    ![Entering the values for properties of the change request](media/servicenow-05.png)
 
    **Inputs for the gate:**
 
-   * Short description: A summary of the change.
-   * Description: A detailed description of the change.
-   * Category: The category of the change. For example, `Hardware`, `Network`, `Software`.
-   * Priority: The priority of the change.
-   * Risk: The risk level for the change.
-   * Impact: The effect that the change has on the business.
-   * Configuration Item: The configuration item (CI) that the change applies to.
-   * Assignment group: The group that the change is assigned to.
-   * Schedule of change request: The schedule of the change.
+   - Short description: A summary of the change.
+   - Description: A detailed description of the change.
+   - Category: The category of the change. For example, `Hardware`, `Network`, `Software`.
+   - Priority: The priority of the change.
+   - Risk: The risk level for the change.
+   - Impact: The effect that the change has on the business.
+   - Configuration Item: The configuration item (CI) that the change applies to.
+   - Assignment group: The group that the change is assigned to.
+   - Schedule of change request: The schedule of the change.
      The date and time should be in the UTC format **yyyy-MM-ddTHH:mm:ssZ**. For example, `2018-01-31T07:56:59Z`
-   * Additional change request parameters: Additional properties of the change request you want set.
+   - Additional change request parameters: Additional properties of the change request you want set.
      Name must be the field name (not the label) prefixed with `u_`. For example, `u_backout_plan`.
      The value must be a valid to be accepted value in ServiceNow. Invalid entries are ignored.
 
    **Gate success criteria:**
 
-   * Desired state: The gate will succeed, and the pipeline continues when the change request status is the same as the value you specify.
+   - Desired state: The gate will succeed, and the pipeline continues when the change request status is the same as the value you specify.
 
    **Gate output variables:**
-   
-   * CHANGE_REQUEST_NUMBER : Number of the change request created in ServiceNow.
-   * CHANGE_SYSTEM_ID : System ID of the change request created in ServiceNow.
 
-   The ServiceNow gate produces output variables. 
+   - CHANGE_REQUEST_NUMBER : Number of the change request created in ServiceNow.
+   - CHANGE_SYSTEM_ID : System ID of the change request created in ServiceNow.
+
+   The ServiceNow gate produces output variables.
    You must specify the reference name to be able to use these output variables in the deployment workflow.
    Gate variables can be accessed by using **PREDEPLOYGATE** as a prefix. For example, when the reference name is set to `gate1`,
    the change number can be obtained as `$(PREDEPLOYGATE.gate1.CHANGE_REQUEST_NUMBER)`.
@@ -107,17 +107,17 @@ of [ServiceNow](https://www.servicenow.com/) to which applications can be instal
 
    **Inputs for Update change request task:**
 
-   * Change request number: The number of the change request that you want to update.
-   * Updated status of change request : The status of the change request that you want to update.
-   * Close code and notes: Closure information for the change request.
-   * Additional change request parameters: Additional properties of the change request you want to set.
+   - Change request number: The number of the change request that you want to update.
+   - Updated status of change request : The status of the change request that you want to update.
+   - Close code and notes: Closure information for the change request.
+   - Additional change request parameters: Additional properties of the change request you want to set.
 
 ## Execute a release
 
 1. Create a new release from the configured release pipeline in Azure DevOps
 
 1. After completing the Dev stage, the pipeline creates a new change request in ServiceNow
-   for the release and waits for it to reach the desired state. 
+   for the release and waits for it to reach the desired state.
 
    ![Creating a new change request in ServiceNow for the release](media/servicenow-07.png)
 
@@ -125,22 +125,22 @@ of [ServiceNow](https://www.servicenow.com/) to which applications can be instal
 
    ![Viewing the change parameter in the logs](media/servicenow-08.png)
 
-1. The ServiceNow change owner will see the release in the queue as a new change. 
+1. The ServiceNow change owner will see the release in the queue as a new change.
 
    ![Viewing the change release in the queue](media/servicenow-09.png)
 
 1. The release that caused the change to be requested can be tracked from the **Azure DevOps Pipeline metadata** section of the change.
 
    ![Tracking the release that caused the change to be requested](media/servicenow-10.png)
- 
-1. The change goes through its normal life cycle: Approval, Scheduled, and more until it is ready for implementation. 
+
+1. The change goes through its normal life cycle: Approval, Scheduled, and more until it is ready for implementation.
 
 1. When the change is ready for implementation (it is in the Implement state), the release in Azure DevOps proceeds.
    The gates status will be as shown here:
 
    ![Viewing the gate status](media/servicenow-11.png)
 
-1. After the deployment, the change request is closed automatically. 
+1. After the deployment, the change request is closed automatically.
 
 ## FAQs
 
@@ -171,19 +171,19 @@ and [Update change request states](https://docs.servicenow.com/bundle/istanbul-i
 
 ## Related topics
 
-* [Approvals and gates overview](index.md)
-* [Manual intervention](../deploy-using-approvals.md#configure-maninter)
-* [Use approvals and gates to control your deployment](../../release/deploy-using-approvals.md)
-* [Stages](../../process/stages.md)
-* [Triggers](../triggers.md)
+- [Approvals and gates overview](index.md)
+- [Manual intervention](../deploy-using-approvals.md#configure-maninter)
+- [Use approvals and gates to control your deployment](../../release/deploy-using-approvals.md)
+- [Stages](../../process/stages.md)
+- [Triggers](../triggers.md)
 
 ## See also
 
-* [Video: Deploy quicker and safer with gates in Azure Pipelines](https://channel9.msdn.com/Events/Connect/2017/T181)
-* [Configure your release pipelines for safe deployments](https://devblogs.microsoft.com/devops/configuring-your-release-pipelines-for-safe-deployments/)
-* [Tutorial: Use approvals and gates to control your deployment](../deploy-using-approvals.md)
-* [Twitter sentiment as a release gate](https://blogs.msdn.microsoft.com/bharry/2017/12/15/twitter-sentiment-as-a-release-gate/)
-* [GitHub issues as a release gate](https://www.visualstudiogeeks.com/DevOps/github-issues-as-deployment-gate-in-vsts-rm)
-* [Author custom gates](https://github.com/Microsoft/azure-pipelines-tasks/blob/master/docs/authoring/gates.md). [Library with examples](https://github.com/Microsoft/vsts-rm-extensions/tree/master/ServerTaskHelper/DistributedTask.ServerTask.Remote.Common) 
+- [Video: Deploy quicker and safer with gates in Azure Pipelines](https://channel9.msdn.com/Events/Connect/2017/T181)
+- [Configure your release pipelines for safe deployments](https://devblogs.microsoft.com/devops/configuring-your-release-pipelines-for-safe-deployments/)
+- [Tutorial: Use approvals and gates to control your deployment](../deploy-using-approvals.md)
+- [Twitter sentiment as a release gate](https://blogs.msdn.microsoft.com/bharry/2017/12/15/twitter-sentiment-as-a-release-gate/)
+- [GitHub issues as a release gate](https://www.visualstudiogeeks.com/DevOps/github-issues-as-deployment-gate-in-vsts-rm)
+- [Author custom gates](https://github.com/Microsoft/azure-pipelines-tasks/blob/master/docs/authoring/gates.md). [Library with examples](https://github.com/Microsoft/vsts-rm-extensions/tree/master/ServerTaskHelper/DistributedTask.ServerTask.Remote.Common)
 
 [!INCLUDE [rm-help-support-shared](../../includes/rm-help-support-shared.md)]

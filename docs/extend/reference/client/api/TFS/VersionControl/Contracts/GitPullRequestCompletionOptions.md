@@ -13,12 +13,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `deleteSourceBranch`: boolean. 
+- `deleteSourceBranch`: boolean.
 
-* `mergeCommitMessage`: string. 
+- `mergeCommitMessage`: string.
 
-* `squashMerge`: boolean. 
-
+- `squashMerge`: boolean.

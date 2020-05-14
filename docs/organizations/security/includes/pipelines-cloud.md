@@ -2,7 +2,7 @@
 ms.topic: include
 ---
 
-<!--- Updated to support Azure DevOps Services + Azure DevOps Services Build and Release 
+<!--- Updated to support Azure DevOps Services + Azure DevOps Services Build and Release
 
 Administer build permissions
 Delete build pipeline
@@ -176,5 +176,3 @@ View builds
 </tr>
 </tbody>
 </table>
- 
- 

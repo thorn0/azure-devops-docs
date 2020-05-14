@@ -7,7 +7,7 @@ ms.author: sdanie
 author: steved0x
 ms.reviewer: macoope
 ms.date: 2/18/2020
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ---
 
 # YAML schema reference
@@ -20,7 +20,7 @@ It includes a catalog of all supported YAML capabilities and the available optio
 ::: moniker range="azure-devops"
 
 > The best way to get started with YAML pipelines is to read the
-[quickstart guide](create-first-pipeline.md).
+> [quickstart guide](create-first-pipeline.md).
 > After that, to learn how to configure your YAML pipeline for your needs, see conceptual topics like [Build variables](process/variables.md) and [Jobs](process/phases.md).
 
 ::: moniker-end
@@ -97,14 +97,14 @@ And because many options shown in this article aren't required and have good def
 
 Here are the syntax conventions used in this article:
 
-* To the left of `:` is a literal keyword used in pipeline definitions.
-* To the right of `:` is a data type.
+- To the left of `:` is a literal keyword used in pipeline definitions.
+- To the right of `:` is a data type.
   The data type can be a primitive type like **string** or a reference to a rich structure defined elsewhere in this article.
-* The notation `[` *datatype* `]` indicates an array of the mentioned data type.
+- The notation `[` _datatype_ `]` indicates an array of the mentioned data type.
   For instance, `[ string ]` is an array of strings.
-* The notation `{` *datatype* `:` *datatype* `}` indicates a mapping of one data type to another.
+- The notation `{` _datatype_ `:` _datatype_ `}` indicates a mapping of one data type to another.
   For instance, `{ string: string }` is a mapping of strings to strings.
-* The symbol `|` indicates there are multiple data types available for the keyword.
+- The symbol `|` indicates there are multiple data types available for the keyword.
   For instance, `job | templateReference` means either a job definition or a template reference is allowed.
 
 ### YAML basics
@@ -122,29 +122,29 @@ Also, unlike standard YAML, Azure Pipelines depends on seeing `stage`, `job`, `t
 ::: moniker range="> azure-devops-2019"
 
 ```yaml
-name: string  # build numbering format
+name: string # build numbering format
 resources:
-  pipelines: [ pipelineResource ]
-  containers: [ containerResource ]
-  repositories: [ repositoryResource ]
+  pipelines: [pipelineResource]
+  containers: [containerResource]
+  repositories: [repositoryResource]
 variables: # several syntaxes, see specific section
 trigger: trigger
 pr: pr
-stages: [ stage | templateReference ]
+stages: [stage | templateReference]
 ```
 
 If you have a single [stage](#stage), you can omit the `stages` keyword and directly specify the [jobs](#job) keyword:
 
 ```yaml
 # ... other pipeline-level keywords
-jobs: [ job | templateReference ]
+jobs: [job | templateReference]
 ```
 
 If you have a single stage and a single job, you can omit the `stages` and `jobs` keywords and directly specify the [steps](#steps) keyword:
 
 ```yaml
 # ... other pipeline-level keywords
-steps: [ script | bash | pwsh | powershell | checkout | task | templateReference ]
+steps: [script | bash | pwsh | powershell | checkout | task | templateReference]
 ```
 
 ::: moniker-end
@@ -152,21 +152,21 @@ steps: [ script | bash | pwsh | powershell | checkout | task | templateReference
 ::: moniker range="azure-devops-2019"
 
 ```yaml
-name: string  # build numbering format
+name: string # build numbering format
 resources:
-  containers: [ containerResource ]
-  repositories: [ repositoryResource ]
+  containers: [containerResource]
+  repositories: [repositoryResource]
 variables: # several syntaxes, see specific section
 trigger: trigger
 pr: pr
-jobs: [ job | templateReference ]
+jobs: [job | templateReference]
 ```
 
 If you have a single job, you can omit the `jobs` keyword and directly specify the [steps](#steps) keyword:
 
 ```yaml
 # ... other pipeline-level keywords
-steps: [ script | bash | pwsh | powershell | checkout | task | templateReference ]
+steps: [script | bash | pwsh | powershell | checkout | task | templateReference]
 ```
 
 ::: moniker-end
@@ -178,12 +178,12 @@ name: $(Date:yyyyMMdd)$(Rev:.r)
 variables:
   var1: value1
 jobs:
-- job: One
-  steps:
-  - script: echo First step!
+  - job: One
+    steps:
+      - script: echo First step!
 ```
 
-* * *
+---
 
 Learn more about:
 
@@ -204,7 +204,7 @@ Each stage starts only after the preceding stage is complete.
 Use approval checks to manually control when a stage should run.
 These checks are commonly used to control deployments to production environments.
 
-Checks are a mechanism available to the *resource owner*.
+Checks are a mechanism available to the _resource owner_.
 They control when a stage in a pipeline consumes a resource.
 As an owner of a resource like an environment, you can define checks that are required before a stage that consumes the resource can start.
 
@@ -215,12 +215,12 @@ For more information, see [Approvals](process/approvals.md).
 
 ```yaml
 stages:
-- stage: string  # name of the stage (A-Z, a-z, 0-9, and underscore)
-  displayName: string  # friendly name to display in the UI
-  dependsOn: string | [ string ]
-  condition: string
-  variables: # several syntaxes, see specific section
-  jobs: [ job | templateReference]
+  - stage: string # name of the stage (A-Z, a-z, 0-9, and underscore)
+    displayName: string # friendly name to display in the UI
+    dependsOn: string | [ string ]
+    condition: string
+    variables: # several syntaxes, see specific section
+    jobs: [job | templateReference]
 ```
 
 # [Example](#tab/example)
@@ -230,24 +230,24 @@ The middle stage runs two jobs in parallel.
 
 ```yaml
 stages:
-- stage: Build
-  jobs:
-  - job: BuildJob
-    steps:
-    - script: echo Building!
-- stage: Test
-  jobs:
-  - job: TestOnWindows
-    steps:
-    - script: echo Testing on Windows!
-  - job: TestOnLinux
-    steps:
-    - script: echo Testing on Linux!
-- stage: Deploy
-  jobs:
-  - job: Deploy
-    steps:
-    - script: echo Deploying the code!
+  - stage: Build
+    jobs:
+      - job: BuildJob
+        steps:
+          - script: echo Building!
+  - stage: Test
+    jobs:
+      - job: TestOnWindows
+        steps:
+          - script: echo Testing on Windows!
+      - job: TestOnLinux
+        steps:
+          - script: echo Testing on Linux!
+  - stage: Deploy
+    jobs:
+      - job: Deploy
+        steps:
+          - script: echo Deploying the code!
 ```
 
 This example runs two stages in parallel.
@@ -255,16 +255,17 @@ For brevity, the jobs and steps are omitted.
 
 ```yaml
 stages:
-- stage: BuildWin
-  displayName: Build for Windows
-- stage: BuildMac
-  displayName: Build for Mac
-  dependsOn: [] # by specifying an empty array, this stage doesn't depend on the stage before it
+  - stage: BuildWin
+    displayName: Build for Windows
+  - stage: BuildMac
+    displayName: Build for Mac
+    dependsOn: [] # by specifying an empty array, this stage doesn't depend on the stage before it
 ```
 
 ---
 
 Learn more about [stages](process/stages.md), [conditions](process/conditions.md?tabs=yaml), and [variables](#variables).
+
 <!-- TODO: link to info about stage dependencies -->
 
 ::: moniker-end
@@ -272,30 +273,31 @@ Learn more about [stages](process/stages.md), [conditions](process/conditions.md
 ## Job
 
 A [job](process/phases.md?tabs=yaml) is a collection of [steps](#steps) run by an [agent](agents/agents.md) or on a [server](#server).
-Jobs can run [conditionally](process/phases.md?tabs=yaml#conditions) and  might [depend on earlier jobs](process/phases.md?tabs=yaml#dependencies).
+Jobs can run [conditionally](process/phases.md?tabs=yaml#conditions) and might [depend on earlier jobs](process/phases.md?tabs=yaml#dependencies).
 
 # [Schema](#tab/schema)
 
 ```yaml
 jobs:
-- job: string  # name of the job (A-Z, a-z, 0-9, and underscore)
-  displayName: string  # friendly name to display in the UI
-  dependsOn: string | [ string ]
-  condition: string
-  strategy:
-    parallel: # parallel strategy; see the following "Parallel" topic
-    matrix: # matrix strategy; see the following "Matrix" topic
-    maxParallel: number # maximum number of matrix jobs to run simultaneously
-  continueOnError: boolean  # 'true' if future jobs should run even if this job fails; defaults to 'false'
-  pool: pool # see the following "Pool" schema
-  workspace:
-    clean: outputs | resources | all # what to clean up before the job runs
-  container: containerReference # container to run this job inside of
-  timeoutInMinutes: number # how long to run the job before automatically cancelling
-  cancelTimeoutInMinutes: number # how much time to give 'run always even if cancelled tasks' before killing them
-  variables: # several syntaxes, see specific section
-  steps: [ script | bash | pwsh | powershell | checkout | task | templateReference ]
-  services: { string: string | container } # container resources to run as a service container
+  - job: string # name of the job (A-Z, a-z, 0-9, and underscore)
+    displayName: string # friendly name to display in the UI
+    dependsOn: string | [ string ]
+    condition: string
+    strategy:
+      parallel: # parallel strategy; see the following "Parallel" topic
+      matrix: # matrix strategy; see the following "Matrix" topic
+      maxParallel: number # maximum number of matrix jobs to run simultaneously
+    continueOnError: boolean # 'true' if future jobs should run even if this job fails; defaults to 'false'
+    pool: pool # see the following "Pool" schema
+    workspace:
+      clean: outputs | resources | all # what to clean up before the job runs
+    container: containerReference # container to run this job inside of
+    timeoutInMinutes: number # how long to run the job before automatically cancelling
+    cancelTimeoutInMinutes: number # how much time to give 'run always even if cancelled tasks' before killing them
+    variables: # several syntaxes, see specific section
+    steps:
+      [script | bash | pwsh | powershell | checkout | task | templateReference]
+    services: { string: string | container } # container resources to run as a service container
 ```
 
 For more information about workspaces, including clean options, see the [workspace](process/phases.md#workspace) topic in [Jobs](process/phases.md).
@@ -304,13 +306,13 @@ For more information about workspaces, including clean options, see the [workspa
 
 ```yaml
 jobs:
-- job: MyJob
-  displayName: My First Job
-  continueOnError: true
-  workspace:
-    clean: outputs
-  steps:
-  - script: echo My first job
+  - job: MyJob
+    displayName: My First Job
+    continueOnError: true
+    workspace:
+      clean: outputs
+    steps:
+      - script: echo My first job
 ```
 
 ---
@@ -332,40 +334,40 @@ container: string # Docker Hub image reference or resource alias
 
 ```yaml
 container:
-  image: string  # container image name
-  options: string  # arguments to pass to container at startup
-  endpoint: string  # endpoint for a private container registry
-  env: { string: string }  # list of environment variables to add
+  image: string # container image name
+  options: string # arguments to pass to container at startup
+  endpoint: string # endpoint for a private container registry
+  env: { string: string } # list of environment variables to add
 ```
 
 # [Example](#tab/example)
 
 ```yaml
 jobs:
-- job: RunsInContainer
-  container: ubuntu:16.04 # Docker Hub image reference
+  - job: RunsInContainer
+    container: ubuntu:16.04 # Docker Hub image reference
 ```
 
 ```yaml
 jobs:
-- job: RunsInContainer
-  container: # inline container specification
-    image: ubuntu:16.04
-    options: --hostname container-test --ip 192.168.0.1
+  - job: RunsInContainer
+    container: # inline container specification
+      image: ubuntu:16.04
+      options: --hostname container-test --ip 192.168.0.1
 ```
 
 ```yaml
 resources:
   containers:
-  - container: linux # reusable alias
-    image: ubuntu:16.04
+    - container: linux # reusable alias
+      image: ubuntu:16.04
 
 jobs:
-- job: a
-  container: linux # reference
+  - job: a
+    container: linux # reference
 
-- job: b
-  container: linux # reference
+  - job: b
+    container: linux # reference
 ```
 
 ---
@@ -387,9 +389,9 @@ strategy:
   maxParallel: number
 ```
 
-For each occurrence of *string1* in the matrix, a copy of the job is generated.
-The name *string1* is the copy's name and is appended to the name of the job.
-For each occurrence of *string2*, a variable called *string2* with the value *string3* is available to the job.
+For each occurrence of _string1_ in the matrix, a copy of the job is generated.
+The name _string1_ is the copy's name and is appended to the name of the job.
+For each occurrence of _string2_, a variable called _string2_ with the value _string3_ is available to the job.
 
 > [!NOTE]
 > Matrix configuration names must contain only basic Latin alphabet letters (A-Z and a-z), digits (0-9), and underscores (`_`).
@@ -415,16 +417,16 @@ If `maxParallel` is unspecified, no limit is applied.
 
 ```yaml
 jobs:
-- job: Build
-  strategy:
-    matrix:
-      Python35:
-        PYTHON_VERSION: '3.5'
-      Python36:
-        PYTHON_VERSION: '3.6'
-      Python37:
-        PYTHON_VERSION: '3.7'
-    maxParallel: 2
+  - job: Build
+    strategy:
+      matrix:
+        Python35:
+          PYTHON_VERSION: "3.5"
+        Python36:
+          PYTHON_VERSION: "3.6"
+        Python37:
+          PYTHON_VERSION: "3.7"
+      maxParallel: 2
 ```
 
 This matrix creates three jobs: "Build Python35," "Build Python36," and "Build Python37."
@@ -433,7 +435,7 @@ In "Build Python35," the variable is set to "3.5".
 It's likewise set to "3.6" in "Build Python36."
 Only two jobs run simultaneously.
 
-* * *
+---
 
 > [!NOTE]
 > The `matrix` syntax doesn't support automatic job scaling but you can implement similar
@@ -456,9 +458,9 @@ strategy:
 
 ```yaml
 jobs:
-- job: SliceItFourWays
-  strategy:
-    parallel: 4
+  - job: SliceItFourWays
+    strategy:
+      parallel: 4
 ```
 
 ---
@@ -516,6 +518,7 @@ jobs:
         steps:
         - script: echo my first deployment
 ```
+
 ::: moniker-end
 
 ---
@@ -529,20 +532,20 @@ This behavior means environment variables aren't preserved between steps but fil
 # [Schema](#tab/schema)
 
 ```yaml
-steps: [ script | bash | pwsh | powershell | checkout | task | templateReference ]
+steps: [script | bash | pwsh | powershell | checkout | task | templateReference]
 ```
 
 # [Example](#tab/example)
 
 ```yaml
 steps:
-- script: echo This runs in the default shell on any machine
-- bash: |
-    echo This multiline script always runs in Bash.
-    echo Even on Windows machines!
-- pwsh: |
-    Write-Host "This multiline script always runs in PowerShell Core."
-    Write-Host "Even on non-Windows machines!"
+  - script: echo This runs in the default shell on any machine
+  - bash: |
+      echo This multiline script always runs in Bash.
+      echo Even on Windows machines!
+  - pwsh: |
+      Write-Host "This multiline script always runs in PowerShell Core."
+      Write-Host "Even on non-Windows machines!"
 ```
 
 ---
@@ -584,20 +587,20 @@ To include variable groups, switch to this sequence syntax:
 
 ```yaml
 variables:
-- name: string  # name of a variable
-  value: string # value of the variable
-- group: string # name of a variable group
+  - name: string # name of a variable
+    value: string # value of the variable
+  - group: string # name of a variable group
 ```
 
 You can repeat `name`/`value` pairs and `group`.
 
-Variables can also be set as read only to [enhance security](security/inputs.md#variables). 
+Variables can also be set as read only to [enhance security](security/inputs.md#variables).
 
 ```yaml
 variables:
-- name: myReadOnlyVar
-  value: myValue
-  readonly: true
+  - name: myReadOnlyVar
+    value: myValue
+    readonly: true
 ```
 
 ::: moniker range="azure-devops"
@@ -613,21 +616,21 @@ Mapping syntax:
 ::: moniker range="> azure-devops-2019"
 
 ```yaml
-variables:      # pipeline-level
-  MY_VAR: 'my value'
-  ANOTHER_VAR: 'another value'
+variables: # pipeline-level
+  MY_VAR: "my value"
+  ANOTHER_VAR: "another value"
 
 stages:
-- stage: Build
-  variables:    # stage-level
-    STAGE_VAR: 'that happened'
+  - stage: Build
+    variables: # stage-level
+      STAGE_VAR: "that happened"
 
-  jobs:
-  - job: FirstJob
-    variables:  # job-level
-      JOB_VAR: 'a job var'
-    steps:
-    - script: echo $(MY_VAR) $(STAGE_VAR) $(JOB_VAR)
+    jobs:
+      - job: FirstJob
+        variables: # job-level
+          JOB_VAR: "a job var"
+        steps:
+          - script: echo $(MY_VAR) $(STAGE_VAR) $(JOB_VAR)
 ```
 
 ::: moniker-end
@@ -635,16 +638,16 @@ stages:
 ::: moniker range="azure-devops-2019"
 
 ```yaml
-variables:      # pipeline-level
-  MY_VAR: 'my value'
-  ANOTHER_VAR: 'another value'
+variables: # pipeline-level
+  MY_VAR: "my value"
+  ANOTHER_VAR: "another value"
 
 jobs:
-- job: FirstJob
-  variables:  # job-level
-    JOB_VAR: 'a job var'
-  steps:
-  - script: echo $(MY_VAR) $(STAGE_VAR) $(JOB_VAR)
+  - job: FirstJob
+    variables: # job-level
+      JOB_VAR: "a job var"
+    steps:
+      - script: echo $(MY_VAR) $(STAGE_VAR) $(JOB_VAR)
 ```
 
 ::: moniker-end
@@ -653,13 +656,13 @@ Sequence syntax:
 
 ```yaml
 variables:
-- name: MY_VARIABLE           # hard-coded value
-  value: some value
-- group: my-variable-group-1  # variable group
-- group: my-variable-group-2  # another variable group
+  - name: MY_VARIABLE # hard-coded value
+    value: some value
+  - group: my-variable-group-1 # variable group
+  - group: my-variable-group-2 # another variable group
 ```
 
-* * *
+---
 
 ## Template references
 
@@ -668,17 +671,19 @@ variables:
 
 ::: moniker range="> azure-devops-2019"
 
-You can export reusable sections of your pipeline to a separate file. 
-These separate files are known as templates. 
+You can export reusable sections of your pipeline to a separate file.
+These separate files are known as templates.
 Azure Pipelines supports four kinds of templates:
 
 Azure Pipelines supports four kinds of templates:
+
 - [Stage](#stage-templates)
 - [Job](#job-templates)
 - [Step](#step-templates)
 - [Variable](#variable-templates)
 
 You can also use templates to control what is allowed in a pipeline and to define how parameters can be used.
+
 - [Parameter](#parameters)
 
 ::: moniker-end
@@ -716,7 +721,7 @@ In the included template:
 
 ```yaml
 parameters: { string: any } # expected parameters
-stages: [ stage ]
+stages: [stage]
 ```
 
 # [Example](#tab/example)
@@ -728,42 +733,43 @@ The stage itself is specified only once.
 # File: stages/test.yml
 
 parameters:
-  name: ''
-  testFile: ''
+  name: ""
+  testFile: ""
 
 stages:
-- stage: Test_${{ parameters.name }}
-  jobs:
-  - job: ${{ parameters.name }}_Windows
-    pool:
-      vmImage: vs2017-win2016
-    steps:
-    - script: npm install
-    - script: npm test -- --file=${{ parameters.testFile }}
-  - job: ${{ parameters.name }}_Mac
-    pool:
-      vmImage: macos-10.14
-    steps:
-    - script: npm install
-    - script: npm test -- --file=${{ parameters.testFile }}
+  - stage: Test_${{ parameters.name }}
+    jobs:
+      - job: ${{ parameters.name }}_Windows
+        pool:
+          vmImage: vs2017-win2016
+        steps:
+          - script: npm install
+          - script: npm test -- --file=${{ parameters.testFile }}
+      - job: ${{ parameters.name }}_Mac
+        pool:
+          vmImage: macos-10.14
+        steps:
+          - script: npm install
+          - script: npm test -- --file=${{ parameters.testFile }}
 ```
 
 ```yaml
 # File: azure-pipelines.yml
 
 stages:
-- template: stages/test.yml  # Template reference
-  parameters:
-    name: Mini
-    testFile: tests/miniSuite.js
+  - template: stages/test.yml # Template reference
+    parameters:
+      name: Mini
+      testFile: tests/miniSuite.js
 
-- template: stages/test.yml  # Template reference
-  parameters:
-    name: Full
-    testFile: tests/fullSuite.js
+  - template: stages/test.yml # Template reference
+    parameters:
+      name: Full
+      testFile: tests/fullSuite.js
 ```
 
 ---
+
 ::: moniker-end
 
 ### Job templates
@@ -783,7 +789,7 @@ In the included template:
 
 ```yaml
 parameters: { string: any } # expected parameters
-jobs: [ job ]
+jobs: [job]
 ```
 
 # [Example](#tab/example)
@@ -795,42 +801,42 @@ The job itself is specified only once.
 # File: jobs/build.yml
 
 parameters:
-  name: ''
-  pool: ''
+  name: ""
+  pool: ""
   sign: false
 
 jobs:
-- job: ${{ parameters.name }}
-  pool: ${{ parameters.pool }}
-  steps:
-  - script: npm install
-  - script: npm test
-  - ${{ if eq(parameters.sign, 'true') }}:
-    - script: sign
+  - job: ${{ parameters.name }}
+    pool: ${{ parameters.pool }}
+    steps:
+      - script: npm install
+      - script: npm test
+      - ${{ if eq(parameters.sign, 'true') }}:
+          - script: sign
 ```
 
 ```yaml
 # File: azure-pipelines.yml
 
 jobs:
-- template: jobs/build.yml  # Template reference
-  parameters:
-    name: macOS
-    pool:
-      vmImage: 'macOS-10.14'
+  - template: jobs/build.yml # Template reference
+    parameters:
+      name: macOS
+      pool:
+        vmImage: "macOS-10.14"
 
-- template: jobs/build.yml  # Template reference
-  parameters:
-    name: Linux
-    pool:
-      vmImage: 'ubuntu-16.04'
+  - template: jobs/build.yml # Template reference
+    parameters:
+      name: Linux
+      pool:
+        vmImage: "ubuntu-16.04"
 
-- template: jobs/build.yml  # Template reference
-  parameters:
-    name: Windows
-    pool:
-      vmImage: 'vs2017-win2016'
-    sign: true  # Extra step on Windows only
+  - template: jobs/build.yml # Template reference
+    parameters:
+      name: Windows
+      pool:
+        vmImage: "vs2017-win2016"
+      sign: true # Extra step on Windows only
 ```
 
 ---
@@ -847,15 +853,15 @@ In the main pipeline:
 
 ```yaml
 steps:
-- template: string  # reference to template
-  parameters: { string: any } # provided parameters
+  - template: string # reference to template
+    parameters: { string: any } # provided parameters
 ```
 
 In the included template:
 
 ```yaml
 parameters: { string: any } # expected parameters
-steps: [ script | bash | pwsh | powershell | checkout | task | templateReference ]
+steps: [script | bash | pwsh | powershell | checkout | task | templateReference]
 ```
 
 # [Example](#tab/example)
@@ -864,32 +870,32 @@ steps: [ script | bash | pwsh | powershell | checkout | task | templateReference
 # File: steps/build.yml
 
 steps:
-- script: npm install
-- script: npm test
+  - script: npm install
+  - script: npm test
 ```
 
 ```yaml
 # File: azure-pipelines.yml
 
 jobs:
-- job: macOS
-  pool:
-    vmImage: 'macOS-10.14'
-  steps:
-  - template: steps/build.yml # Template reference
+  - job: macOS
+    pool:
+      vmImage: "macOS-10.14"
+    steps:
+      - template: steps/build.yml # Template reference
 
-- job: Linux
-  pool:
-    vmImage: 'ubuntu-16.04'
-  steps:
-  - template: steps/build.yml # Template reference
+  - job: Linux
+    pool:
+      vmImage: "ubuntu-16.04"
+    steps:
+      - template: steps/build.yml # Template reference
 
-- job: Windows
-  pool:
-    vmImage: 'vs2017-win2016'
-  steps:
-  - template: steps/build.yml # Template reference
-  - script: sign              # Extra step on Windows only
+  - job: Windows
+    pool:
+      vmImage: "vs2017-win2016"
+    steps:
+      - template: steps/build.yml # Template reference
+      - script: sign # Extra step on Windows only
 ```
 
 ---
@@ -907,15 +913,15 @@ You can define a set of variables in one file and use it multiple times in other
 In the main pipeline:
 
 ```yaml
-- template: string            # name of template file to include
+- template: string # name of template file to include
   parameters: { string: any } # provided parameters
 ```
 
 In the included template:
 
 ```yaml
-parameters: { string: any }   # expected parameters
-variables: [ variable ]
+parameters: { string: any } # expected parameters
+variables: [variable]
 ```
 
 > [!NOTE]
@@ -933,52 +939,51 @@ The variables are specified only once.
 ```yaml
 # File: variables/build.yml
 variables:
-- name: vmImage
-  value: vs2017-win2016
-- name: arch
-  value: x64
-- name: config
-  value: debug
+  - name: vmImage
+    value: vs2017-win2016
+  - name: arch
+    value: x64
+  - name: config
+    value: debug
 ```
 
 ```yaml
 # File: component-x-pipeline.yml
 variables:
-- template: variables/build.yml  # Template reference
+  - template: variables/build.yml # Template reference
 pool:
   vmImage: ${{ variables.vmImage }}
 steps:
-- script: build x ${{ variables.arch }} ${{ variables.config }}
+  - script: build x ${{ variables.arch }} ${{ variables.config }}
 ```
 
 ```yaml
 # File: component-y-pipeline.yml
 variables:
-- template: variables/build.yml  # Template reference
+  - template: variables/build.yml # Template reference
 pool:
   vmImage: ${{ variables.vmImage }}
 steps:
-- script: build y ${{ variables.arch }} ${{ variables.config }}
+  - script: build y ${{ variables.arch }} ${{ variables.config }}
 ```
 
 ---
 
 ## Parameters
 
-You can use parameters in templates and pipelines. 
+You can use parameters in templates and pipelines.
 
 ### [Schema](#tab/parameter-schema)
 
 The type and name fields are required when defining parameters. See all [parameter data types](process/runtime-parameters.md#parameter-data-types).
 
-
 ```yaml
 parameters:
-- name: string          # name of the parameter; required
-  type: enum            # data types, see below
-  default: any          # default value; if no default, then the parameter MUST be given by the user at runtime
-  values: [ string ]    # allowed list of values (for some data types)
-  secret: bool          # whether to treat this value as a secret; defaults to false
+  - name: string # name of the parameter; required
+    type: enum # data types, see below
+    default: any # default value; if no default, then the parameter MUST be given by the user at runtime
+    values: [string] # allowed list of values (for some data types)
+    secret: bool # whether to treat this value as a secret; defaults to false
 ```
 
 ### Types
@@ -987,31 +992,31 @@ parameters:
 
 ### [YAML Example](#tab/yaml-example)
 
-```yaml
+````yaml
 # File: azure-pipelines.yml
 parameters:
-- name: image
-  displayName: Pool Image
-  type: string
-  default: ubuntu-latest
-  values:
-  - windows-latest
-  - vs2017-win2016
-  - ubuntu-latest
-  - ubuntu-16.04
-  - macOS-latest
-  - macOS-10.14
+  - name: image
+    displayName: Pool Image
+    type: string
+    default: ubuntu-latest
+    values:
+      - windows-latest
+      - vs2017-win2016
+      - ubuntu-latest
+      - ubuntu-16.04
+      - macOS-latest
+      - macOS-10.14
 
 trigger: none
 
 jobs:
-- job: build
-  displayName: build
-  pool: 
-    vmImage: ${{ parameters.image }}
-  steps:
-  - script: echo The image parameter is ${{ parameters.image }}```
-```
+  - job: build
+    displayName: build
+    pool:
+      vmImage: ${{ parameters.image }}
+    steps:
+      - script: echo The image parameter is ${{ parameters.image }}```
+````
 
 ### [Template Example](#tab/template-example)
 
@@ -1020,23 +1025,23 @@ You can use a parameters to extend a template. In this example, the pipeline usi
 ```yaml
 # File: simple-param.yml
 parameters:
-- name: yesNo # name of the parameter; required
-  type: boolean # data type of the parameter; required
-  default: false
+  - name: yesNo # name of the parameter; required
+    type: boolean # data type of the parameter; required
+    default: false
 
 steps:
-- script: echo ${{ parameters.yesNo }}
+  - script: echo ${{ parameters.yesNo }}
 ```
 
 ```yaml
 # File: azure-pipelines.yml
 trigger:
-- master
+  - master
 
 extends:
-    template: simple-param.yml
-    parameters:
-        yesNo: false # set to a non-boolean value to have the build fail
+  template: simple-param.yml
+  parameters:
+    yesNo: false # set to a non-boolean value to have the build fail
 ```
 
 See [templates](process/templates.md) for more about working with templates.
@@ -1060,9 +1065,9 @@ Resources in YAML represent sources of pipelines, containers, repositories, and 
 
 ```yaml
 resources:
-  pipelines: [ pipeline ]
-  repositories: [ repository ]
-  containers: [ container ]
+  pipelines: [pipeline]
+  repositories: [repository]
+  containers: [container]
 ```
 
 ### Pipeline resource
@@ -1075,38 +1080,39 @@ You can also enable [pipeline-completion triggers](process/pipeline-triggers.md)
 ```yaml
 resources:
   pipelines:
-  - pipeline: string  # identifier for the pipeline resource
-    project:  string # project for the build pipeline; optional input for current project
-    source: string  # source pipeline definition name
-    branch: string  # branch to pick the artifact, optional; defaults to all branches
-    version: string # pipeline run number to pick artifact, optional; defaults to last successfully completed run
-    trigger:     # optional; triggers are not enabled by default.
-      branches:
-        include: [string] # branches to consider the trigger events, optional; defaults to all branches.
-        exclude: [string] # branches to discard the trigger events, optional; defaults to none.
+    - pipeline: string # identifier for the pipeline resource
+      project: string # project for the build pipeline; optional input for current project
+      source: string # source pipeline definition name
+      branch: string # branch to pick the artifact, optional; defaults to all branches
+      version: string # pipeline run number to pick artifact, optional; defaults to last successfully completed run
+      trigger: # optional; triggers are not enabled by default.
+        branches:
+          include: [string] # branches to consider the trigger events, optional; defaults to all branches.
+          exclude: [string] # branches to discard the trigger events, optional; defaults to none.
 ```
+
 # [Example](#tab/example)
 
 ```yaml
 resources:
   pipelines:
-  - pipeline: MyAppA
-    source: MyCIPipelineA
-  - pipeline: MyAppB
-    source: MyCIPipelineB
-    trigger: true
-  - pipeline: MyAppC
-    project:  DevOpsProject
-    source: MyCIPipelineC
-    branch: releases/M159
-    version: 20190718.2
-    trigger:
-      branches:
-        include:
-        - master
-        - releases/*
-        exclude:
-        - users/*
+    - pipeline: MyAppA
+      source: MyCIPipelineA
+    - pipeline: MyAppB
+      source: MyCIPipelineB
+      trigger: true
+    - pipeline: MyAppC
+      project: DevOpsProject
+      source: MyCIPipelineC
+      branch: releases/M159
+      version: 20190718.2
+      trigger:
+        branches:
+          include:
+            - master
+            - releases/*
+          exclude:
+            - users/*
 ```
 
 ---
@@ -1149,14 +1155,14 @@ The `container` keyword lets you specify your container images.
 ```yaml
 resources:
   containers:
-  - container: string  # identifier (A-Z, a-z, 0-9, and underscore)
-    image: string  # container image name
-    options: string  # arguments to pass to container at startup
-    endpoint: string  # reference to a service connection for the private registry
-    env: { string: string }  # list of environment variables to add
-    ports: [ string ] # ports to expose on the container
-    volumes: [ string ] # volumes to mount on the container
-    mapDockerSocket: bool # whether to map in the Docker daemon socket; defaults to true
+    - container: string # identifier (A-Z, a-z, 0-9, and underscore)
+      image: string # container image name
+      options: string # arguments to pass to container at startup
+      endpoint: string # reference to a service connection for the private registry
+      env: { string: string } # list of environment variables to add
+      ports: [string] # ports to expose on the container
+      volumes: [string] # volumes to mount on the container
+      mapDockerSocket: bool # whether to map in the Docker daemon socket; defaults to true
 ```
 
 # [Example](#tab/example)
@@ -1164,18 +1170,18 @@ resources:
 ```yaml
 resources:
   containers:
-  - container: linux
-    image: ubuntu:16.04
-  - container: windows
-    image: myprivate.azurecr.io/windowsservercore:1803
-    endpoint: my_acr_connection
-  - container: my_service
-    image: my_service:tag
-    ports:
-    - 8080:80 # bind container port 80 to 8080 on the host machine
-    - 6379 # bind container port 6379 to a random available port on the host machine
-    volumes:
-    - /src/dir:/dst/dir # mount /src/dir on the host into /dst/dir in the container
+    - container: linux
+      image: ubuntu:16.04
+    - container: windows
+      image: myprivate.azurecr.io/windowsservercore:1803
+      endpoint: my_acr_connection
+    - container: my_service
+      image: my_service:tag
+      ports:
+        - 8080:80 # bind container port 80 to 8080 on the host machine
+        - 6379 # bind container port 6379 to a random available port on the host machine
+      volumes:
+        - /src/dir:/dst/dir # mount /src/dir on the host into /dst/dir in the container
 ```
 
 ---
@@ -1201,22 +1207,22 @@ The `repository` keyword lets you specify an external repository.
 ```yaml
 resources:
   repositories:
-  - repository: string  # identifier (A-Z, a-z, 0-9, and underscore)
-    type: enum  # see the following "Type" topic
-    name: string  # repository name (format depends on `type`)
-    ref: string  # ref name to use; defaults to 'refs/heads/master'
-    endpoint: string  # name of the service connection to use (for types that aren't Azure Repos)
+    - repository: string # identifier (A-Z, a-z, 0-9, and underscore)
+      type: enum # see the following "Type" topic
+      name: string # repository name (format depends on `type`)
+      ref: string # ref name to use; defaults to 'refs/heads/master'
+      endpoint: string # name of the service connection to use (for types that aren't Azure Repos)
 ```
 
 # [Example](#tab/example)
-```yaml
 
+```yaml
 resources:
   repositories:
-  - repository: common
-    type: github
-    name: Contoso/CommonTools
-    endpoint: MyContosoServiceConnection
+    - repository: common
+      type: github
+      name: Contoso/CommonTools
+      endpoint: MyContosoServiceConnection
 ```
 
 ---
@@ -1241,9 +1247,9 @@ The `git` type refers to Azure Repos Git repos.
 
 ## Triggers
 
-* [Push trigger](#push-trigger)
-* [Pull request trigger](#pr-trigger)
-* [Scheduled trigger](#scheduled-trigger)
+- [Push trigger](#push-trigger)
+- [Pull request trigger](#pr-trigger)
+- [Scheduled trigger](#scheduled-trigger)
 
 > [!NOTE]
 > Trigger blocks can't contain variables or template expressions.
@@ -1261,7 +1267,7 @@ There are three distinct syntax options for the `trigger` keyword: a list of bra
 List syntax:
 
 ```yaml
-trigger: [ string ] # list of branch names
+trigger: [string] # list of branch names
 ```
 
 Disablement syntax:
@@ -1278,14 +1284,14 @@ Full syntax:
 trigger:
   batch: boolean # batch changes if true; start a new build for every push if false (default)
   branches:
-    include: [ string ] # branch names which will trigger a build
-    exclude: [ string ] # branch names which will not
+    include: [string] # branch names which will trigger a build
+    exclude: [string] # branch names which will not
   tags:
-    include: [ string ] # tag names which will trigger a build
-    exclude: [ string ] # tag names which will not
+    include: [string] # tag names which will trigger a build
+    exclude: [string] # tag names which will not
   paths:
-    include: [ string ] # file paths which must match to trigger a build
-    exclude: [ string ] # file paths which will not trigger a build
+    include: [string] # file paths which must match to trigger a build
+    exclude: [string] # file paths which will not trigger a build
 ```
 
 ::: moniker-end
@@ -1296,11 +1302,11 @@ trigger:
 trigger:
   batch: boolean # batch changes if true; start a new build for every push if false (default)
   branches:
-    include: [ string ] # branch names which will trigger a build
-    exclude: [ string ] # branch names which will not
+    include: [string] # branch names which will trigger a build
+    exclude: [string] # branch names which will not
   paths:
-    include: [ string ] # file paths which must match to trigger a build
-    exclude: [ string ] # file paths which will not trigger a build
+    include: [string] # file paths which must match to trigger a build
+    exclude: [string] # file paths which will not trigger a build
 ```
 
 ::: moniker-end
@@ -1316,8 +1322,8 @@ List syntax:
 
 ```yaml
 trigger:
-- master
-- develop
+  - master
+  - develop
 ```
 
 Disablement syntax:
@@ -1333,15 +1339,15 @@ trigger:
   batch: true
   branches:
     include:
-    - features/*
+      - features/*
     exclude:
-    - features/experimental/*
+      - features/experimental/*
   paths:
     exclude:
-    - README.md
+      - README.md
 ```
 
-* * *
+---
 
 ### PR trigger
 
@@ -1372,7 +1378,7 @@ There are three distinct syntax options for the `pr` keyword: a list of branches
 List syntax:
 
 ```yaml
-pr: [ string ] # list of branch names
+pr: [string] # list of branch names
 ```
 
 Disablement syntax:
@@ -1387,11 +1393,11 @@ Full syntax:
 pr:
   autoCancel: boolean # indicates whether additional pushes to a PR should cancel in-progress runs for the same PR. Defaults to true
   branches:
-    include: [ string ] # branch names which will trigger a build
-    exclude: [ string ] # branch names which will not
+    include: [string] # branch names which will trigger a build
+    exclude: [string] # branch names which will not
   paths:
-    include: [ string ] # file paths which must match to trigger a build
-    exclude: [ string ] # file paths which will not trigger a build
+    include: [string] # file paths which must match to trigger a build
+    exclude: [string] # file paths which will not trigger a build
 ```
 
 > [!IMPORTANT]
@@ -1405,8 +1411,8 @@ List syntax:
 
 ```yaml
 pr:
-- master
-- develop
+  - master
+  - develop
 ```
 
 Disablement syntax:
@@ -1421,12 +1427,12 @@ Full syntax:
 pr:
   branches:
     include:
-    - features/*
+      - features/*
     exclude:
-    - features/experimental/*
+      - features/experimental/*
   paths:
     exclude:
-    - README.md
+      - README.md
 ```
 
 ---
@@ -1450,12 +1456,12 @@ Learn more about [scheduled triggers](process/scheduled-triggers.md?tabs=yaml) a
 
 ```yaml
 schedules:
-- cron: string # cron syntax defining a schedule in UTC time
-  displayName: string # friendly name given to a specific schedule
-  branches:
-    include: [ string ] # which branches the schedule applies to
-    exclude: [ string ] # which branches to exclude from the schedule
-  always: boolean # whether to always run the pipeline or only if there have been source code changes since the last successful scheduled run. The default is false.
+  - cron: string # cron syntax defining a schedule in UTC time
+    displayName: string # friendly name given to a specific schedule
+    branches:
+      include: [string] # which branches the schedule applies to
+      exclude: [string] # which branches to exclude from the schedule
+    always: boolean # whether to always run the pipeline or only if there have been source code changes since the last successful scheduled run. The default is false.
 ```
 
 > [!IMPORTANT]
@@ -1467,20 +1473,20 @@ schedules:
 
 ```yaml
 schedules:
-- cron: "0 0 * * *"
-  displayName: Daily midnight build
-  branches:
-    include:
-    - master
-    - releases/*
-    exclude:
-    - releases/ancient/*
-- cron: "0 12 * * 0"
-  displayName: Weekly Sunday build
-  branches:
-    include:
-    - releases/*
-  always: true
+  - cron: "0 0 * * *"
+    displayName: Daily midnight build
+    branches:
+      include:
+        - master
+        - releases/*
+      exclude:
+        - releases/ancient/*
+  - cron: "0 12 * * 0"
+    displayName: Weekly Sunday build
+    branches:
+      include:
+        - releases/*
+    always: true
 ```
 
 In the preceding example, two schedules are defined.
@@ -1508,8 +1514,8 @@ The full syntax is:
 
 ```yaml
 pool:
-  name: string  # name of the pool to run this job in
-  demands: string | [ string ]  # see the following "Demands" topic
+  name: string # name of the pool to run this job in
+  demands: string | [ string ] # see the following "Demands" topic
   vmImage: string # name of the VM image you want to use; valid only in the Microsoft-hosted pool
 ```
 
@@ -1549,7 +1555,7 @@ You can check for the existence of a capability or a specific string.
 
 ```yaml
 pool:
-  demands: [ string ]
+  demands: [string]
 ```
 
 # [Example](#tab/example)
@@ -1558,11 +1564,12 @@ pool:
 pool:
   name: MyPool
   demands:
-  - myCustomCapability   # check for existence of capability
-  - agent.os -equals Darwin  # check for specific string in capability
+    - myCustomCapability # check for existence of capability
+    - agent.os -equals Darwin # check for specific string in capability
 ```
 
 ---
+
 ::: moniker range="azure-devops"
 
 ## Environment
@@ -1575,28 +1582,28 @@ An environment also holds information about the deployment strategy for running 
 The full syntax is:
 
 ```yaml
-environment:                # create environment and/or record deployments
-  name: string              # name of the environment to run this job on.
-  resourceName: string      # name of the resource in the environment to record the deployments against
-  resourceId: number        # resource identifier
-  resourceType: string      # type of the resource you want to target. Supported types - virtualMachine, Kubernetes
+environment: # create environment and/or record deployments
+  name: string # name of the environment to run this job on.
+  resourceName: string # name of the resource in the environment to record the deployments against
+  resourceId: number # resource identifier
+  resourceType: string # type of the resource you want to target. Supported types - virtualMachine, Kubernetes
   tags: string | [ string ] # tag names to filter the resources in the environment
-strategy:                 # deployment strategy
-  runOnce:                # default strategy
+strategy: # deployment strategy
+  runOnce: # default strategy
     deploy:
       steps:
-      - script: echo Hello world
+        - script: echo Hello world
 ```
 
 If you specify an environment or one of its resources but don't need to specify other properties, you can shorten the syntax to:
 
 ```yaml
 environment: environmentName.resourceName
-strategy:                 # deployment strategy
-  runOnce:              # default strategy
+strategy: # deployment strategy
+  runOnce: # default strategy
     deploy:
       steps:
-      - script: echo Hello world
+        - script: echo Hello world
 ```
 
 # [Example](#tab/example)
@@ -1628,6 +1635,7 @@ environment: 'smarthotel-dev.bookings'
 
 The `server` value specifies a [server job](process/phases.md#server-jobs).
 Only server tasks like [invoking an Azure function app](tasks/utility/azure-function.md) can be run in a server job.
+
 <!-- some glorious day, [manual intervention](tasks/utility/manual-intervention.md) will work too -->
 
 # [Schema](#tab/schema)
@@ -1642,8 +1650,8 @@ pool: server
 
 ```yaml
 jobs:
-- job: RunOnServer
-  pool: server
+  - job: RunOnServer
+    pool: server
 ```
 
 ---
@@ -1657,34 +1665,34 @@ The task runs a script using cmd.exe on Windows and Bash on other platforms.
 
 ```yaml
 steps:
-- script: string  # contents of the script to run
-  displayName: string  # friendly name displayed in the UI
-  name: string  # identifier for this step (A-Z, a-z, 0-9, and underscore)
-  workingDirectory: string  # initial working directory for the step
-  failOnStderr: boolean  # if the script writes to stderr, should that be treated as the step failing?
-  condition: string
-  continueOnError: boolean  # 'true' if future steps should run even if this step fails; defaults to 'false'
-  enabled: boolean  # whether to run this step; defaults to 'true'
-  target:
-    container: string # where this step will run; values are the container name or the word 'host'
-    commands: enum  # whether to process all logging commands from this step; values are `any` (default) or `restricted`
-  timeoutInMinutes: number
-  env: { string: string }  # list of environment variables to add
+  - script: string # contents of the script to run
+    displayName: string # friendly name displayed in the UI
+    name: string # identifier for this step (A-Z, a-z, 0-9, and underscore)
+    workingDirectory: string # initial working directory for the step
+    failOnStderr: boolean # if the script writes to stderr, should that be treated as the step failing?
+    condition: string
+    continueOnError: boolean # 'true' if future steps should run even if this step fails; defaults to 'false'
+    enabled: boolean # whether to run this step; defaults to 'true'
+    target:
+      container: string # where this step will run; values are the container name or the word 'host'
+      commands: enum # whether to process all logging commands from this step; values are `any` (default) or `restricted`
+    timeoutInMinutes: number
+    env: { string: string } # list of environment variables to add
 ```
 
 If you don't specify a command mode, you can shorten the `target` structure to:
 
 ```yaml
 - script:
-  target: string  # container name or the word 'host'
+  target: string # container name or the word 'host'
 ```
 
 # [Example](#tab/example)
 
 ```yaml
 steps:
-- script: echo Hello world!
-  displayName: Say hello
+  - script: echo Hello world!
+    displayName: Say hello
 ```
 
 ---
@@ -1701,38 +1709,38 @@ The task runs a script in Bash on Windows, macOS, and Linux.
 
 ```yaml
 steps:
-- bash: string  # contents of the script to run
-  displayName: string  # friendly name displayed in the UI
-  name: string  # identifier for this step (A-Z, a-z, 0-9, and underscore)
-  workingDirectory: string  # initial working directory for the step
-  failOnStderr: boolean  # if the script writes to stderr, should that be treated as the step failing?
-  condition: string
-  continueOnError: boolean  # 'true' if future steps should run even if this step fails; defaults to 'false'
-  enabled: boolean  # whether to run this step; defaults to 'true'
-  target:
-    container: string # where this step will run; values are the container name or the word 'host'
-    commands: enum  # whether to process all logging commands from this step; values are `any` (default) or `restricted`
-  timeoutInMinutes: number
-  env: { string: string }  # list of environment variables to add
+  - bash: string # contents of the script to run
+    displayName: string # friendly name displayed in the UI
+    name: string # identifier for this step (A-Z, a-z, 0-9, and underscore)
+    workingDirectory: string # initial working directory for the step
+    failOnStderr: boolean # if the script writes to stderr, should that be treated as the step failing?
+    condition: string
+    continueOnError: boolean # 'true' if future steps should run even if this step fails; defaults to 'false'
+    enabled: boolean # whether to run this step; defaults to 'true'
+    target:
+      container: string # where this step will run; values are the container name or the word 'host'
+      commands: enum # whether to process all logging commands from this step; values are `any` (default) or `restricted`
+    timeoutInMinutes: number
+    env: { string: string } # list of environment variables to add
 ```
 
 If you don't specify a command mode, you can shorten the `target` structure to:
 
 ```yaml
 - bash:
-  target: string  # container name or the word 'host'
+  target: string # container name or the word 'host'
 ```
 
 # [Example](#tab/example)
 
 ```yaml
 steps:
-- bash: |
-    which bash
-    echo Hello $name
-  displayName: Multiline Bash script
-  env:
-    name: Microsoft
+  - bash: |
+      which bash
+      echo Hello $name
+    displayName: Multiline Bash script
+    env:
+      name: Microsoft
 ```
 
 ---
@@ -1749,31 +1757,31 @@ The task runs a script in PowerShell Core on Windows, macOS, and Linux.
 
 ```yaml
 steps:
-- pwsh: string  # contents of the script to run
-  displayName: string  # friendly name displayed in the UI
-  name: string  # identifier for this step (A-Z, a-z, 0-9, and underscore)
-  errorActionPreference: enum  # see the following "Error action preference" topic
-  ignoreLASTEXITCODE: boolean  # see the following "Ignore last exit code" topic
-  failOnStderr: boolean  # if the script writes to stderr, should that be treated as the step failing?
-  workingDirectory: string  # initial working directory for the step
-  condition: string
-  continueOnError: boolean  # 'true' if future steps should run even if this step fails; defaults to 'false'
-  enabled: boolean  # whether to run this step; defaults to 'true'
-  timeoutInMinutes: number
-  env: { string: string }  # list of environment variables to add
+  - pwsh: string # contents of the script to run
+    displayName: string # friendly name displayed in the UI
+    name: string # identifier for this step (A-Z, a-z, 0-9, and underscore)
+    errorActionPreference: enum # see the following "Error action preference" topic
+    ignoreLASTEXITCODE: boolean # see the following "Ignore last exit code" topic
+    failOnStderr: boolean # if the script writes to stderr, should that be treated as the step failing?
+    workingDirectory: string # initial working directory for the step
+    condition: string
+    continueOnError: boolean # 'true' if future steps should run even if this step fails; defaults to 'false'
+    enabled: boolean # whether to run this step; defaults to 'true'
+    timeoutInMinutes: number
+    env: { string: string } # list of environment variables to add
 ```
 
 # [Example](#tab/example)
 
 ```yaml
 steps:
-- pwsh: echo Hello $(name)
-  displayName: Say hello
-  name: firstStep
-  workingDirectory: $(build.sourcesDirectory)
-  failOnStderr: true
-  env:
-    name: Microsoft
+  - pwsh: echo Hello $(name)
+    displayName: Say hello
+    name: firstStep
+    workingDirectory: $(build.sourcesDirectory)
+    failOnStderr: true
+    env:
+      name: Microsoft
 ```
 
 ---
@@ -1789,31 +1797,31 @@ The task runs a script in Windows PowerShell.
 
 ```yaml
 steps:
-- powershell: string  # contents of the script to run
-  displayName: string  # friendly name displayed in the UI
-  name: string  # identifier for this step (A-Z, a-z, 0-9, and underscore)
-  errorActionPreference: enum  # see the following "Error action preference" topic
-  ignoreLASTEXITCODE: boolean  # see the following "Ignore last exit code" topic
-  failOnStderr: boolean  # if the script writes to stderr, should that be treated as the step failing?
-  workingDirectory: string  # initial working directory for the step
-  condition: string
-  continueOnError: boolean  # 'true' if future steps should run even if this step fails; defaults to 'false'
-  enabled: boolean  # whether to run this step; defaults to 'true'
-  timeoutInMinutes: number
-  env: { string: string }  # list of environment variables to add
+  - powershell: string # contents of the script to run
+    displayName: string # friendly name displayed in the UI
+    name: string # identifier for this step (A-Z, a-z, 0-9, and underscore)
+    errorActionPreference: enum # see the following "Error action preference" topic
+    ignoreLASTEXITCODE: boolean # see the following "Ignore last exit code" topic
+    failOnStderr: boolean # if the script writes to stderr, should that be treated as the step failing?
+    workingDirectory: string # initial working directory for the step
+    condition: string
+    continueOnError: boolean # 'true' if future steps should run even if this step fails; defaults to 'false'
+    enabled: boolean # whether to run this step; defaults to 'true'
+    timeoutInMinutes: number
+    env: { string: string } # list of environment variables to add
 ```
 
 # [Example](#tab/example)
 
 ```yaml
 steps:
-- powershell: echo Hello $(name)
-  displayName: Say hello
-  name: firstStep
-  workingDirectory: $(build.sourcesDirectory)
-  failOnStderr: true
-  env:
-    name: Microsoft
+  - powershell: echo Hello $(name)
+    displayName: Say hello
+    name: firstStep
+    workingDirectory: $(build.sourcesDirectory)
+    failOnStderr: true
+    env:
+      name: Microsoft
 ```
 
 ---
@@ -1837,11 +1845,11 @@ errorActionPreference: stop | continue | silentlyContinue
 
 ```yaml
 steps:
-- powershell: |
-    Write-Error 'Uh oh, an error occurred'
-    Write-Host 'Trying again...'
-  displayName: Error action preference
-  errorActionPreference: continue
+  - powershell: |
+      Write-Error 'Uh oh, an error occurred'
+      Write-Host 'Trying again...'
+    displayName: Error action preference
+    errorActionPreference: continue
 ```
 
 ---
@@ -1865,9 +1873,9 @@ ignoreLASTEXITCODE: boolean
 
 ```yaml
 steps:
-- powershell: git nosuchcommand
-  displayName: Ignore last exit code
-  ignoreLASTEXITCODE: true
+  - powershell: git nosuchcommand
+    displayName: Ignore last exit code
+    ignoreLASTEXITCODE: true
 ```
 
 ---
@@ -1885,16 +1893,16 @@ The task publishes (uploads) a file or folder as a pipeline artifact that other 
 
 ```yaml
 steps:
-- publish: string # path to a file or folder
-  artifact: string # artifact name
+  - publish: string # path to a file or folder
+    artifact: string # artifact name
 ```
 
 # [Example](#tab/example)
 
 ```yaml
 steps:
-- publish: $(Build.SourcesDirectory)/build
-  artifact: WebApp
+  - publish: $(Build.SourcesDirectory)/build
+    artifact: WebApp
 ```
 
 ---
@@ -1910,15 +1918,16 @@ The task downloads artifacts associated with the current run or from another Azu
 
 ```yaml
 steps:
-- download: [ current | pipeline resource identifier | none ] # disable automatic download if "none"
-  artifact: string ## artifact name, optional; downloads all the available artifacts if not specified
-  patterns: string # patterns representing files to include; optional
+  - download: [current | pipeline resource identifier | none] # disable automatic download if "none"
+    artifact: string ## artifact name, optional; downloads all the available artifacts if not specified
+    patterns: string # patterns representing files to include; optional
 ```
+
 ### Artifact download location
 
-Artifacts from the current pipeline are downloaded to $(**Pipeline.Workspace**)/<artifact name>.
+Artifacts from the current pipeline are downloaded to \$(**Pipeline.Workspace**)/<artifact name>.
 
-Artifacts from the associated pipeline resource are downloaded to $(**Pipeline.Workspace**)/\<pipeline resource identifier\>/<artifact name>.
+Artifacts from the associated pipeline resource are downloaded to \$(**Pipeline.Workspace**)/\<pipeline resource identifier\>/<artifact name>.
 
 ### Automatic download in deployment jobs
 
@@ -1929,10 +1938,10 @@ To prevent downloads, specify `download: none`.
 
 ```yaml
 steps:
-- download: current  # refers to artifacts published by current pipeline
-  artifact: WebApp
-  patterns: '**/.js'
-- download: MyAppA   # downloads artifacts available as part of the pipeline resource
+  - download: current # refers to artifacts published by current pipeline
+    artifact: WebApp
+    patterns: "**/.js"
+  - download: MyAppA # downloads artifacts available as part of the pipeline resource
 ```
 
 ---
@@ -1952,13 +1961,13 @@ Use the `checkout` keyword to configure or suppress this behavior.
 
 ```yaml
 steps:
-- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
-  clean: boolean  # if true, execute `execute git clean -ffdx && git reset --hard HEAD` before fetching
-  fetchDepth: number  # the depth of commits to ask Git to fetch; defaults to no limit
-  lfs: boolean  # whether to download Git-LFS files; defaults to false
-  submodules: true | recursive  # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules; defaults to not checking out submodules
-  path: string  # path to check out source code, relative to the agent's build directory (e.g. \_work\1); defaults to a directory called `s`
-  persistCredentials: boolean  # if 'true', leave the OAuth token in the Git config after the initial fetch; defaults to false
+  - checkout: self # self represents the repo where the initial Pipelines YAML file was found
+    clean: boolean # if true, execute `execute git clean -ffdx && git reset --hard HEAD` before fetching
+    fetchDepth: number # the depth of commits to ask Git to fetch; defaults to no limit
+    lfs: boolean # whether to download Git-LFS files; defaults to false
+    submodules: true | recursive # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules; defaults to not checking out submodules
+    path: string # path to check out source code, relative to the agent's build directory (e.g. \_work\1); defaults to a directory called `s`
+    persistCredentials: boolean # if 'true', leave the OAuth token in the Git config after the initial fetch; defaults to false
 ```
 
 ::: moniker-end
@@ -1967,13 +1976,13 @@ steps:
 
 ```yaml
 steps:
-- checkout: self | none | repository name # self represents the repo where the initial Pipelines YAML file was found
-  clean: boolean  # if true, run `execute git clean -ffdx && git reset --hard HEAD` before fetching
-  fetchDepth: number  # the depth of commits to ask Git to fetch; defaults to no limit
-  lfs: boolean  # whether to download Git-LFS files; defaults to false
-  submodules: true | recursive  # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules; defaults to not checking out submodules
-  path: string  # path to check out source code, relative to the agent's build directory (e.g. \_work\1); defaults to a directory called `s`
-  persistCredentials: boolean  # if 'true', leave the OAuth token in the Git config after the initial fetch; defaults to false
+  - checkout: self | none | repository name # self represents the repo where the initial Pipelines YAML file was found
+    clean: boolean # if true, run `execute git clean -ffdx && git reset --hard HEAD` before fetching
+    fetchDepth: number # the depth of commits to ask Git to fetch; defaults to no limit
+    lfs: boolean # whether to download Git-LFS files; defaults to false
+    submodules: true | recursive # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules; defaults to not checking out submodules
+    path: string # path to check out source code, relative to the agent's build directory (e.g. \_work\1); defaults to a directory called `s`
+    persistCredentials: boolean # if 'true', leave the OAuth token in the Git config after the initial fetch; defaults to false
 ```
 
 ::: moniker-end
@@ -1982,7 +1991,7 @@ To avoid syncing sources at all:
 
 ```yaml
 steps:
-- checkout: none
+  - checkout: none
 ```
 
 > [!NOTE]
@@ -2006,19 +2015,17 @@ To check out multiple repositories in your pipeline, use multiple `checkout` ste
 
 For more information, see [Check out multiple repositories in your pipeline](repos/multi-repo-checkout.md).
 
-
-
 ::: moniker-end
 
 # [Example](#tab/example)
 
 ```yaml
 steps:
-- checkout: self  # self represents the repo where the initial Azure Pipelines YAML file was found
-  clean: true
-  fetchDepth: 5
-  lfs: true
-  path: PutMyCodeHere
+  - checkout: self # self represents the repo where the initial Azure Pipelines YAML file was found
+    clean: true
+    fetchDepth: 5
+    lfs: true
+    path: PutMyCodeHere
 ```
 
 ::: moniker range="> azure-devops-2019"
@@ -2032,21 +2039,21 @@ In the following example, three repositories are checked out:
 ```yaml
 resources:
   repositories:
-  - repository: MyGitHubToolsRepo # The name used to reference this repository in the checkout step
-    type: github
-    endpoint: MyGitHubServiceConnection
-    name: MyGitHubToolsOrg/tools
+    - repository: MyGitHubToolsRepo # The name used to reference this repository in the checkout step
+      type: github
+      endpoint: MyGitHubServiceConnection
+      name: MyGitHubToolsOrg/tools
 
 trigger:
-- master
+  - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: "ubuntu-latest"
 
 steps:
-- checkout: self
-- checkout: MyGitHubToolsRepo
-- checkout: git://MyResourcesProject/resources
+  - checkout: self
+  - checkout: MyGitHubToolsRepo
+  - checkout: git://MyResourcesProject/resources
 ```
 
 ::: moniker-end
@@ -2062,36 +2069,36 @@ There's a [catalog of tasks](tasks/index.md) available to choose from.
 
 ```yaml
 steps:
-- task: string  # reference to a task and version, e.g. "VSBuild@1"
-  displayName: string  # friendly name displayed in the UI
-  name: string  # identifier for this step (A-Z, a-z, 0-9, and underscore)
-  condition: string
-  continueOnError: boolean  # 'true' if future steps should run even if this step fails; defaults to 'false'
-  enabled: boolean  # whether to run this step; defaults to 'true'
-  target:
-    container: string # where this step will run; values are the container name or the word 'host'
-    commands: enum  # whether to process all logging commands from this step; values are `any` (default) or `restricted`
-  timeoutInMinutes: number
-  inputs: { string: string }  # task-specific inputs
-  env: { string: string }  # list of environment variables to add
+  - task: string # reference to a task and version, e.g. "VSBuild@1"
+    displayName: string # friendly name displayed in the UI
+    name: string # identifier for this step (A-Z, a-z, 0-9, and underscore)
+    condition: string
+    continueOnError: boolean # 'true' if future steps should run even if this step fails; defaults to 'false'
+    enabled: boolean # whether to run this step; defaults to 'true'
+    target:
+      container: string # where this step will run; values are the container name or the word 'host'
+      commands: enum # whether to process all logging commands from this step; values are `any` (default) or `restricted`
+    timeoutInMinutes: number
+    inputs: { string: string } # task-specific inputs
+    env: { string: string } # list of environment variables to add
 ```
 
 If you don't specify a command mode, you can shorten the `target` structure to:
 
 ```yaml
 - task:
-  target: string  # container name or the word 'host'
+  target: string # container name or the word 'host'
 ```
 
 # [Example](#tab/example)
 
 ```yaml
 steps:
-- task: VSBuild@1
-  displayName: Build
-  timeoutInMinutes: 120
-  inputs:
-    solution: '**\*.sln'
+  - task: VSBuild@1
+    displayName: Build
+    timeoutInMinutes: 120
+    inputs:
+      solution: '**\*.sln'
 ```
 
 ---
@@ -2104,6 +2111,7 @@ Learn more about [conditions](process/conditions.md?tabs=yaml),
 Syntax highlighting is available for the pipeline schema via a Visual Studio Code extension.
 You can [download Visual Studio Code](https://code.visualstudio.com), [install the extension](https://marketplace.visualstudio.com/items?itemName=ms-azure-devops.azure-pipelines), and [check out the project on GitHub](https://github.com/Microsoft/azure-pipelines-vscode).
 The extension includes a [JSON schema](https://github.com/microsoft/azure-pipelines-vscode/blob/master/service-schema.json) for validation.
+
 <!-- For people who get here by searching for, say, "azure pipelines template YAML schema",
      look around a bit, and then type "Ctrl-F JSON" when they don't see anything promising
      in the first few screenfuls. -->

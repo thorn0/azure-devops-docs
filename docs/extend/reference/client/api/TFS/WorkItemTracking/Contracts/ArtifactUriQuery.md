@@ -11,8 +11,6 @@ ms.date: 11/12/2019
 
 # ArtifactUriQuery
 
-| Field        | Type
-| :----------- | :--------
-| <code>artifactUris</code> | array (string)
-
-
+| Field                     | Type           |
+| :------------------------ | :------------- |
+| <code>artifactUris</code> | array (string) |

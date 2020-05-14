@@ -18,5 +18,4 @@ Extends: [Deployment](./Deployment.md)
 
 ### Members
 
-* `runId`: number. 
-
+- `runId`: number.

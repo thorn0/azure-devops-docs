@@ -5,7 +5,7 @@ description: Learn how you can run a Git command in a build script for your work
 ms.topic: conceptual
 ms.assetid: B5481254-F39C-4F1C-BE98-44DC0A95F2AD
 ms.date: 03/22/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Run Git commands in a script
@@ -20,13 +20,13 @@ For some workflows you need your build pipeline to run Git commands. For example
 
 Git is available on [Microsoft-hosted agents](../agents/hosted.md) and on [on-premises agents](../agents/agents.md).
 
-
 <a name="enable"></a>
 
 ## Enable scripts to run Git commands
 
 > [!NOTE]
 > Before you begin, be sure your account's default identity is set with:
+>
 > ```
 > git config --global user.email "you@example.com"
 > git config --global user.name "Your Name"
@@ -74,10 +74,10 @@ On the **Version Control** tab, select the repository in which you want to run G
 
 Grant permissions needed for the Git commands you want to run. Typically you'll want to grant:
 
-* **Create branch:**  Allow
-* **Contribute:**  Allow
-* **Read:**  Allow
-* **Create tag:**  Allow
+- **Create branch:** Allow
+- **Contribute:** Allow
+- **Read:** Allow
+- **Create tag:** Allow
 
 When you're done granting the permissions, make sure to click **Save changes**.
 
@@ -87,9 +87,9 @@ When you're done granting the permissions, make sure to click **Save changes**.
 
 On the [variables tab](../build/variables.md) set this variable:
 
-| Name | Value |
-|---|---|
-| ```system.prefergit``` | ```true``` |
+| Name               | Value  |
+| ------------------ | ------ |
+| `system.prefergit` | `true` |
 
 ::: moniker-end
 
@@ -107,8 +107,8 @@ Add a `checkout` section with `persistCredentials` set to `true`.
 
 ```yaml
 steps:
-- checkout: self
-  persistCredentials: true
+  - checkout: self
+    persistCredentials: true
 ```
 
 Learn more about [`checkout`](../yaml-schema.md#checkout).
@@ -131,8 +131,8 @@ On the [options tab](../build/options.md) select **Allow scripts to access OAuth
 
 Certain kinds of changes to the local repository are not automatically cleaned up by the build pipeline. So make sure to:
 
-* Delete local branches you create.
-* Undo git config changes.
+- Delete local branches you create.
+- Undo git config changes.
 
 If you run into problems using an on-premises agent, make sure the repo is clean:
 
@@ -144,13 +144,13 @@ Make sure `checkout` has `clean` set to `true`.
 
 ```yaml
 steps:
-- checkout: self
-  clean: true
+  - checkout: self
+    clean: true
 ```
 
 # [Classic](#tab/classic)
 
-* On the [repository tab](../repos/pipeline-options-for-git.md#clean-the-local-repo-on-the-agent) set **Clean** to true.
+- On the [repository tab](../repos/pipeline-options-for-git.md#clean-the-local-repo-on-the-agent) set **Clean** to true.
 
 ---
 
@@ -158,14 +158,13 @@ steps:
 
 ::: moniker range="< azure-devops"
 
-* On the [repository tab](../repos/pipeline-options-for-git.md#clean-the-local-repo-on-the-agent) set **Clean** to true.
+- On the [repository tab](../repos/pipeline-options-for-git.md#clean-the-local-repo-on-the-agent) set **Clean** to true.
 
-* On the [variables tab](../build/variables.md) create or modify the ```Build.Clean``` variable and set it to ```source```
+- On the [variables tab](../build/variables.md) create or modify the `Build.Clean` variable and set it to `source`
 
 ::: moniker-end
 
 ## Examples
-
 
 ### List the files in your repo
 
@@ -175,8 +174,8 @@ Make sure to follow the above steps to [enable Git](#enable).
 
 On the [build tab](../tasks/index.md) add this task:
 
-| Task | Arguments |
-| ---- | --------- |
+| Task                                                                                                                                            | Arguments                                            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | ![](../tasks/utility/media/command-line.png)<br/>[Utility: Command Line](../tasks/utility/command-line.md)<br />List the files in the Git repo. | **Tool**: `git`<br /><br />**Arguments**: `ls-files` |
 
 ### Merge a feature branch to master
@@ -189,7 +188,7 @@ Make sure to follow the above steps to [enable Git](#enable).
 
 On the [Triggers tab](../build/triggers.md) select **Continuous integration (CI)** and include the branches you want to build.
 
-Create ```merge.bat``` at the root of your repo:
+Create `merge.bat` at the root of your repo:
 
 ```bat
 @echo off
@@ -215,8 +214,8 @@ git status
 
 On the [build tab](../tasks/index.md) add this as the last task:
 
-| Task | Arguments |
-| ---- | --------- |
+| Task                                                                                                                           | Arguments             |
+| ------------------------------------------------------------------------------------------------------------------------------ | --------------------- |
 | ![](../tasks/utility/media/batch-script.png)<br/>[Utility: Batch Script](../tasks/utility/batch-script.md)<br />Run merge.bat. | **Path**: `merge.bat` |
 
 ## Q & A
@@ -237,22 +236,23 @@ Yes
 
 [Shell Script](../tasks/utility/shell-script.md)
 
-
 ### How do I avoid triggering a CI build when the script pushes?
 
 ::: moniker range="<= azure-devops-2019"
 
-Add ```***NO_CI***``` to your commit message. Here are examples:
-* ```git commit -m "This is a commit message ***NO_CI***"```
-* ```git merge origin/features/hello-world -m "Merge to master ***NO_CI***"```
+Add `***NO_CI***` to your commit message. Here are examples:
+
+- `git commit -m "This is a commit message ***NO_CI***"`
+- `git merge origin/features/hello-world -m "Merge to master ***NO_CI***"`
 
 ::: moniker-end
 
 ::: moniker range="> azure-devops-2019"
 
 Add `[skip ci]` to your commit message or description. Here are examples:
-* ```git commit -m "This is a commit message [skip ci]"```
-* ```git merge origin/features/hello-world -m "Merge to master [skip ci]"```
+
+- `git commit -m "This is a commit message [skip ci]"`
+- `git merge origin/features/hello-world -m "Merge to master [skip ci]"`
 
 You can also use any of the variations below. This is supported for commits to Azure Repos Git, Bitbucket Cloud, GitHub, and GitHub Enterprise Server.
 
@@ -269,7 +269,7 @@ You can also use any of the variations below. This is supported for commits to A
 
 ### How does enabling scripts to run Git commands affect how the build pipeline gets build sources?
 
-When you set ```system.prefergit``` to ```true```, the build pipeline uses command-line Git instead of LibGit2Sharp to clone or fetch the source files.
+When you set `system.prefergit` to `true`, the build pipeline uses command-line Git instead of LibGit2Sharp to clone or fetch the source files.
 
 ::: moniker-end
 

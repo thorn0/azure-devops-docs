@@ -14,90 +14,88 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `buildConfiguration`: [BuildConfiguration](../../../TFS/TestManagement/Contracts/BuildConfiguration.md). 
+- `buildConfiguration`: [BuildConfiguration](../../../TFS/TestManagement/Contracts/BuildConfiguration.md).
 
-* `comment`: string. 
+- `comment`: string.
 
-* `completedDate`: Date. 
+- `completedDate`: Date.
 
-* `controller`: string. 
+- `controller`: string.
 
-* `createdDate`: Date. 
+- `createdDate`: Date.
 
-* `customFields`: [CustomTestField](../../../TFS/TestManagement/Contracts/CustomTestField.md)[]. 
+- `customFields`: [CustomTestField](../../../TFS/TestManagement/Contracts/CustomTestField.md)[].
 
-* `dropLocation`: string. 
+- `dropLocation`: string.
 
-* `dtlAutEnvironment`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `dtlAutEnvironment`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `dtlEnvironment`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `dtlEnvironment`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `dtlEnvironmentCreationDetails`: [DtlEnvironmentDetails](../../../TFS/TestManagement/Contracts/DtlEnvironmentDetails.md). 
+- `dtlEnvironmentCreationDetails`: [DtlEnvironmentDetails](../../../TFS/TestManagement/Contracts/DtlEnvironmentDetails.md).
 
-* `dueDate`: Date. 
+- `dueDate`: Date.
 
-* `errorMessage`: string. 
+- `errorMessage`: string.
 
-* `filter`: [RunFilter](../../../TFS/TestManagement/Contracts/RunFilter.md). 
+- `filter`: [RunFilter](../../../TFS/TestManagement/Contracts/RunFilter.md).
 
-* `id`: number. 
+- `id`: number.
 
-* `incompleteTests`: number. 
+- `incompleteTests`: number.
 
-* `isAutomated`: boolean. 
+- `isAutomated`: boolean.
 
-* `iteration`: string. 
+- `iteration`: string.
 
-* `lastUpdatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `lastUpdatedBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `lastUpdatedDate`: Date. 
+- `lastUpdatedDate`: Date.
 
-* `name`: string. 
+- `name`: string.
 
-* `notApplicableTests`: number. 
+- `notApplicableTests`: number.
 
-* `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `passedTests`: number. 
+- `passedTests`: number.
 
-* `phase`: string. 
+- `phase`: string.
 
-* `plan`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `plan`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `postProcessState`: string. 
+- `postProcessState`: string.
 
-* `project`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `project`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `releaseEnvironmentUri`: string. 
+- `releaseEnvironmentUri`: string.
 
-* `releaseUri`: string. 
+- `releaseUri`: string.
 
-* `revision`: number. 
+- `revision`: number.
 
-* `runStatistics`: [RunStatistic](../../../TFS/TestManagement/Contracts/RunStatistic.md)[]. 
+- `runStatistics`: [RunStatistic](../../../TFS/TestManagement/Contracts/RunStatistic.md)[].
 
-* `startedDate`: Date. 
+- `startedDate`: Date.
 
-* `state`: string. 
+- `state`: string.
 
-* `substate`: [TestRunSubstate](../../../TFS/TestManagement/Contracts/TestRunSubstate.md). 
+- `substate`: [TestRunSubstate](../../../TFS/TestManagement/Contracts/TestRunSubstate.md).
 
-* `testEnvironment`: [TestEnvironment](../../../TFS/TestManagement/Contracts/TestEnvironment.md). 
+- `testEnvironment`: [TestEnvironment](../../../TFS/TestManagement/Contracts/TestEnvironment.md).
 
-* `testMessageLogId`: number. 
+- `testMessageLogId`: number.
 
-* `testSettings`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `testSettings`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `totalTests`: number. 
+- `totalTests`: number.
 
-* `unanalyzedTests`: number. 
+- `unanalyzedTests`: number.
 
-* `url`: string. 
+- `url`: string.
 
-* `webAccessUrl`: string. 
-
+- `webAccessUrl`: string.

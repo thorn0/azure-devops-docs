@@ -1,5 +1,5 @@
 ---
-title: Start Using Azure Artifacts 
+title: Start Using Azure Artifacts
 description: Quickly start hosting NuGet, npm, or Maven packages in Team Foundation Server
 ms.technology: devops-artifacts
 ms.topic: quickstart
@@ -7,7 +7,7 @@ ms.assetid: 45ECCEFD-3804-4D8C-8567-57C84F92A705
 ms.author: chcomley
 author: chcomley
 ms.date: 09/03/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Start using Azure Artifacts
@@ -15,7 +15,7 @@ monikerRange: '>= tfs-2017'
 **Azure DevOps** | **Azure DevOps Server 2019** | **TFS 2018** | **TFS 2017**
 
 > [!NOTE]
-> If you are using a version of TFS, you will need to license Azure Artifacts instead of signing up. 
+> If you are using a version of TFS, you will need to license Azure Artifacts instead of signing up.
 
 ::: moniker range="azure-devops"
 
@@ -40,13 +40,13 @@ Users with a Basic license can use Azure Artifacts on-premises without needing t
 
 ::: moniker range=">= tfs-2017 <= tfs-2018"
 
-Azure Artifacts is an *extension* to TFS. The Azure Artifacts extension comes pre-installed in TFS 2017 and 2018.
+Azure Artifacts is an _extension_ to TFS. The Azure Artifacts extension comes pre-installed in TFS 2017 and 2018.
 
 Azure Artifacts is required for each user that consumes packages from (e.g., nuget restore or npm install) or produces packages to (e.g., nuget push or npm publish) Azure Artifacts feeds. Azure Artifacts is also required for each user that consumes or publishes symbols.
 
 ## Install Azure Artifacts in TFS
 
-Azure Artifacts is installed by default for TFS 2017 customers.  You must upgrade to TFS 2017 in order to use Azure Artifacts.
+Azure Artifacts is installed by default for TFS 2017 customers. You must upgrade to TFS 2017 in order to use Azure Artifacts.
 
 > If the Azure Artifacts extension has been removed, you can install it from the [Marketplace page for Azure Artifacts](https://marketplace.visualstudio.com/items?itemName=ms.feed).
 
@@ -58,8 +58,8 @@ Azure Artifacts is installed by default for TFS 2017 customers.  You must upgrad
 
 2. Select **Assign**, enter the user to whom you want to assign licenses, and then select **Ok.**
 
-   * Users with Visual Studio Enterprise subscriptions get Azure Artifacts automatically.  
-   * [Ensure that your Visual Studio Enterprise subscribers are assigned VSE access level](../organizations/security/change-access-levels.md).
+   - Users with Visual Studio Enterprise subscriptions get Azure Artifacts automatically.
+   - [Ensure that your Visual Studio Enterprise subscribers are assigned VSE access level](../organizations/security/change-access-levels.md).
 
 ::: moniker-end
 
@@ -70,59 +70,59 @@ Azure Artifacts is installed by default for TFS 2017 customers.  You must upgrad
 Azure Artifacts includes a free usage tier of 2 GB. Any usage below this level isn't billed to your subscription. Above this limit, we charge you for your actual usage. The usage limit allows you to control the maximum volume of storage that you're billed for. Once the maximum usage limit is reached, you can no longer upload artifacts. For more information on usage tiers, see the [Azure Artifacts pricing page](https://azure.microsoft.com/pricing/details/devops/azure-devops-services/).
 
 > [!NOTE]
-> Organizations created before May 6, 2019 will remain on the per-user billing model, and will be switched over to storage-based charging on July 6, 2020. This date is pushed back from the previously communicated May 9, 2020.  
+> Organizations created before May 6, 2019 will remain on the per-user billing model, and will be switched over to storage-based charging on July 6, 2020. This date is pushed back from the previously communicated May 9, 2020.
 
 ## View Billed Storage
 
 See your storage bill for Azure Artifacts.
- 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```). 
- 
-2. Select ![gear icon](../media/icons/gear-icon.png) **Organization settings**. 
- 
-   ![Open Organization settings](../media/settings/open-admin-settings-vert.png) 
- 
-3. Select **Billing**. 
- 
+
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
+
+2. Select ![gear icon](../media/icons/gear-icon.png) **Organization settings**.
+
+   ![Open Organization settings](../media/settings/open-admin-settings-vert.png)
+
+3. Select **Billing**.
+
    ![Select Billing from Organization settings](../organizations/billing/media/shared/select-billing-organization-settings.png)
- 
+
 4. Find Artifacts and review your current billed usage from Azure Artifacts.
 
    ![View storage for Azure Artifacts](media/azure-artifacts-view-storage-used.png)
-   
-## View Used Storage 
 
-Navigate and understand your used Azure Artifacts storage. 
+## View Used Storage
 
-1. In the same ![gear icon](../media/icons/gear-icon.png) **Organization settings** tab, select **Storage** under the Artifacts tab. 
+Navigate and understand your used Azure Artifacts storage.
 
-2. Review a breakdown of the different types of storage your organization is currently using. See the FAQs below for information on what artifacts count towards your storage total. 
+1. In the same ![gear icon](../media/icons/gear-icon.png) **Organization settings** tab, select **Storage** under the Artifacts tab.
 
+2. Review a breakdown of the different types of storage your organization is currently using. See the FAQs below for information on what artifacts count towards your storage total.
 
 ## Pay for Artifacts
 
 Each organization gets Azure Artifacts for free, up until they hit 2 GB of storage. If you need more than 2 GB, complete the following steps to set up billing.
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```). 
- 
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
+
 2. Repeat steps #2 and #3 from [View billed storage](#view-billed-storage).
- 
-3. Find Artifacts, under Resources, and increase the usage limit above the free tier, by selecting from the dropdown menu. Then, select **Save**. You're only charged for the storage you use, up to the limit. 
+
+3. Find Artifacts, under Resources, and increase the usage limit above the free tier, by selecting from the dropdown menu. Then, select **Save**. You're only charged for the storage you use, up to the limit.
 
    ![Increase artifacts beyond the free tier with the dropdown menu](media/increase-artifacts-beyond-free-tier.png)
 
 > [!NOTE]
-> If you have reached your storage limit and are blocked from making additional uploads, it can take up to 1 hour after increasing your limit for uploads to be re-enabled. 
+> If you have reached your storage limit and are blocked from making additional uploads, it can take up to 1 hour after increasing your limit for uploads to be re-enabled.
 
 ## FAQs
 
 ### Q: Which artifacts count toward my total billed storage?
 
-A: Currently, the following get counted in your Azure Artifacts billed cost: 
-* All packages (npm, NuGet, Python, Maven, and universal packages), including those packages stored from upstream sources
-* All symbols
+A: Currently, the following get counted in your Azure Artifacts billed cost:
 
-You are not billed by Azure Artifacts for storage of Pipeline Artifacts, Build Artifacts, and Pipeline Caching. 
+- All packages (npm, NuGet, Python, Maven, and universal packages), including those packages stored from upstream sources
+- All symbols
+
+You are not billed by Azure Artifacts for storage of Pipeline Artifacts, Build Artifacts, and Pipeline Caching.
 
 ### Q: Why do I see 0 GB of storage, even though I'm storing artifacts?
 
@@ -132,7 +132,7 @@ A: Currently, the billing page only shows integers of storage (0 GB, 1 GB, 2 GB,
 
 A: Retention for stored packages can be set via the feed retention policy. See how to [automatically delete old package versions with retention policies](how-to/delete-and-recover-packages.md#automatically-delete-old-package-versions-with-retention-policies).
 
-Symbols retention is set via pipeline and/or build retention. See [retention policies](../pipelines/policies/retention.md) for more details. 
+Symbols retention is set via pipeline and/or build retention. See [retention policies](../pipelines/policies/retention.md) for more details.
 
 ### Q: How long does it take for deleted artifacts to affect the amount of used storage?
 

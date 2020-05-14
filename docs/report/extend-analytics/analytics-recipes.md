@@ -1,21 +1,21 @@
 ---
 title: Analytics basic queries
-titleSuffix: Azure DevOps  
+titleSuffix: Azure DevOps
 description: Examples of how to create queries of work item tracking from Analytics for Azure DevOps
 ms.technology: devops-analytics
 ms.assetid: 1320852A-5C62-4954-9E9D-508D670777A4
 ms.author: kaelli
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ms.date: 11/1/2018
 ---
 
-# Query work tracking data using Analytics  
+# Query work tracking data using Analytics
 
-[!INCLUDE [temp](../includes/version-azure-devops.md)] 
+[!INCLUDE [temp](../includes/version-azure-devops.md)]
 
-You can query your Azure DevOps work tracking data using the basic queries provided in this article. These queries address everyday needs while demonstrating various capabilities of 
+You can query your Azure DevOps work tracking data using the basic queries provided in this article. These queries address everyday needs while demonstrating various capabilities of
 Analytics. You can adapt most of these queries to meet your needs.
 
 [!INCLUDE [temp](../includes/analytics-preview.md)]
@@ -31,11 +31,12 @@ https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version
   $filter=WorkItemId eq {Id}
   &$select=WorkItemId, Title, State
 ```
+
 [!INCLUDE [temp](../includes/api-versioning.md)]
 
 <a id="iteration" />
 
-## Retrieve all work items for a given Iteration Path 
+## Retrieve all work items for a given Iteration Path
 
 ```OData
 https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItems?
@@ -45,7 +46,7 @@ https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version
 
 <a id="area" />
 
-## Retrieve all work items under a given Area Path 
+## Retrieve all work items under a given Area Path
 
 ```OData
 https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItems?
@@ -55,7 +56,8 @@ https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version
 
 <a id="project-count" />
 
-## Get the count of work items in each project 
+## Get the count of work items in each project
+
 ```OData
 https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItems?
   $apply=groupby((Project/ProjectName), aggregate($count as Count))
@@ -65,19 +67,19 @@ This query will fail when the user does not have access to all the projects. Rea
 
 ## Retrieve all work items for a given iteration which fall between the first day of the iteration and the last day of the iteration
 
-Here your query is constrained by data contained within the work tracking data. 
+Here your query is constrained by data contained within the work tracking data.
 
 ```OData
 https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItems?
-  $filter=Iteration/IterationPath eq '{iteration path}' 
-    and ChangedDate ge Iteration/StartDate 
+  $filter=Iteration/IterationPath eq '{iteration path}'
+    and ChangedDate ge Iteration/StartDate
     and ChangedDate le Iteration/EndDate
   &$select=WorkItemId, Title, State
 ```
 
 <a id="tag" />
 
-## Retrieve all work items with a specific tag 
+## Retrieve all work items with a specific tag
 
 Note that the **any** operator is used here because there are a collection of tags that can be associated with a work item.
 From a usage perspective, the format is: **{Navigation Property}/any(d:d/{Field Name} {operator} {expression})**. Any item not surrounded by curly brackets ({}) is a literal. There are some variations on this (for example, you don't have to use "d" as used in the expression above)
@@ -91,7 +93,7 @@ https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version
 
 <a id="team" />
 
-## Retrieve all work items for a specific team 
+## Retrieve all work items for a specific team
 
 ```OData
 https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItems?
@@ -103,7 +105,7 @@ https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version
 
 ## Retrieve all work items that at one time had a field set to a specific value
 
-This query is similar to a Work Item query that uses the **Was Ever** operator.  
+This query is similar to a Work Item query that uses the **Was Ever** operator.
 
 ```OData
 https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItems?
@@ -111,7 +113,7 @@ https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version
      and Revisions/any(r:r/ResolvedBy/UserName eq '{User}')
 ```
 
-## Related articles 
+## Related articles
 
-- [WIT analytics](wit-analytics.md)  
+- [WIT analytics](wit-analytics.md)
 - [Aggregate data](aggregated-data-analytics.md)

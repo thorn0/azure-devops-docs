@@ -17,9 +17,8 @@ Extends: [GitPushRef](../../../TFS/VersionControl/Contracts/GitPushRef.md)
 
 ### Members
 
-* `commits`: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md)[]. 
+- `commits`: [GitCommitRef](../../../TFS/VersionControl/Contracts/GitCommitRef.md)[].
 
-* `refUpdates`: [GitRefUpdate](../../../TFS/VersionControl/Contracts/GitRefUpdate.md)[]. 
+- `refUpdates`: [GitRefUpdate](../../../TFS/VersionControl/Contracts/GitRefUpdate.md)[].
 
-* `repository`: [GitRepository](../../../TFS/VersionControl/Contracts/GitRepository.md). 
-
+- `repository`: [GitRepository](../../../TFS/VersionControl/Contracts/GitRepository.md).

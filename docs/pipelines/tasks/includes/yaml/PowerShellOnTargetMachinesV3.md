@@ -12,7 +12,7 @@ ms.technology: devops-cicd-tasks
 # Execute PowerShell scripts on remote machines using PSSession and Invoke-Command for remoting
 - task: PowerShellOnTargetMachines@3
   inputs:
-    machines: 
+    machines:
     #userName: # Optional
     #userPassword: # Optional
     #scriptType: 'Inline' # Optional. Options: filePath, inline

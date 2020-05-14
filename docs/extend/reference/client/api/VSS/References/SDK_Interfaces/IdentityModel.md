@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,24 +15,22 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Model to represent a TeamFoundationIdentity 
+Model to represent a TeamFoundationIdentity
 
 ### Members
 
-* `customDisplayName`: string. Custom display name
+- `customDisplayName`: string. Custom display name
 
-* `displayName`: string. Display name
+- `displayName`: string. Display name
 
-* `email`: string. Email address
+- `email`: string. Email address
 
-* `id`: string. Unique team foundation ID
+- `id`: string. Unique team foundation ID
 
-* `isActive`: boolean. Is the identity active
+- `isActive`: boolean. Is the identity active
 
-* `isContainer`: boolean. Is the identity a group/team
+- `isContainer`: boolean. Is the identity a group/team
 
-* `providerDisplayName`: string. The provider&#x27;s display name for this identity
+- `providerDisplayName`: string. The provider&#x27;s display name for this identity
 
-* `uniqueName`: string. Unique name for this identity
-
+- `uniqueName`: string. Unique name for this identity

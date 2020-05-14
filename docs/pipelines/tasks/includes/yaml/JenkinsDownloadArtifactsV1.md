@@ -12,10 +12,10 @@ ms.technology: devops-cicd-tasks
 # Download artifacts produced by a Jenkins job
 - task: JenkinsDownloadArtifacts@1
   inputs:
-    jenkinsServerConnection: 
-    jobName: 
+    jenkinsServerConnection:
+    jobName:
     #jenkinsJobType: # Optional
-    #saveTo: 'jenkinsArtifacts' 
+    #saveTo: 'jenkinsArtifacts'
     #jenkinsBuild: 'LastSuccessfulBuild' # Options: lastSuccessfulBuild, buildNumber
     #jenkinsBuildNumber: '1' # Required when jenkinsBuild == BuildNumber
     #itemPattern: '**' # Optional

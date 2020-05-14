@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Core/Contracts`
 
-
 ### Members
 
-* `active`: boolean. 
+- `active`: boolean.
 
-* `id`: string. 
+- `id`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `url`: string. 
-
+- `url`: string.

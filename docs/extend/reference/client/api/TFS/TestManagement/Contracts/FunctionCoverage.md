@@ -14,16 +14,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `class`: string. 
+- `class`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `namespace`: string. 
+- `namespace`: string.
 
-* `sourceFile`: string. 
+- `sourceFile`: string.
 
-* `statistics`: [CoverageStatistics](../../../TFS/TestManagement/Contracts/CoverageStatistics.md). 
-
+- `statistics`: [CoverageStatistics](../../../TFS/TestManagement/Contracts/CoverageStatistics.md).

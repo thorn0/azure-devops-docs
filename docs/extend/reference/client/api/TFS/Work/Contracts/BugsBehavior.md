@@ -15,6 +15,6 @@ Module path: `TFS/Work/Contracts`
 
 ### Values
 
-* `Off` 
-* `AsRequirements` 
-* `AsTasks` 
+- `Off`
+- `AsRequirements`
+- `AsTasks`

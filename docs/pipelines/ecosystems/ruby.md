@@ -23,9 +23,9 @@ Follow these instructions to set up a pipeline for a Ruby app.
 
 1. The code in the following repository is a simple Ruby app. To get started, fork this repo to your GitHub account.
 
-    ```
-    https://github.com/MicrosoftDocs/pipelines-ruby
-    ```
+   ```
+   https://github.com/MicrosoftDocs/pipelines-ruby
+   ```
 
 1. Sign in to your Azure DevOps organization and navigate to your project.
 
@@ -61,13 +61,13 @@ Add the [Use Ruby Version](../tasks/tool/use-ruby-version.md) task to set the ve
 ```yaml
 # https://docs.microsoft.com/azure/devops/pipelines/ecosystems/ruby
 pool:
-  vmImage: 'ubuntu-16.04' # other options: 'macOS-10.14', 'vs2017-win2016'
+  vmImage: "ubuntu-16.04" # other options: 'macOS-10.14', 'vs2017-win2016'
 
 steps:
-- task: UseRubyVersion@0
-  inputs:
-    versionSpec: '>= 2.4'
-    addToPath: true
+  - task: UseRubyVersion@0
+    inputs:
+      versionSpec: ">= 2.4"
+      addToPath: true
 ```
 
 ### Install Rails
@@ -76,7 +76,7 @@ To install Rails, add the following snippet to your `azure-pipelines.yml` file.
 
 ```yaml
 - script: gem install rails && rails -v
-  displayName: 'gem install rails'
+  displayName: "gem install rails"
 ```
 
 ### Install dependencies
@@ -87,7 +87,7 @@ To use Bundler to install dependencies, add the following snippet to your `azure
 - script: |
     CALL gem install bundler
     bundle install --retry=3 --jobs=4
-  displayName: 'bundle install'
+  displayName: "bundle install"
 ```
 
 ### Run Rake
@@ -96,12 +96,12 @@ To execute Rake in the context of the current bundle (as defined in your Gemfile
 
 ```yaml
 - script: bundle exec rake
-  displayName: 'bundle exec rake'
+  displayName: "bundle exec rake"
 ```
 
 ### Publish test results
 
-The sample code includes unit tests written using [RSpec](https://rspec.info/). When Rake is run by the previous step, it runs the RSpec tests. The RSpec RakeTask in the Rakefile has been configured to produce JUnit style results using the RspecJUnitFormatter. 
+The sample code includes unit tests written using [RSpec](https://rspec.info/). When Rake is run by the previous step, it runs the RSpec tests. The RSpec RakeTask in the Rakefile has been configured to produce JUnit style results using the RspecJUnitFormatter.
 
 Add the [Publish Test Results](../tasks/test/publish-test-results.md) task to publish JUnit style test results to the server. When you do this, you get a rich test reporting experience that can be used for easily troubleshooting any failed tests and for test timing analysis.
 
@@ -109,13 +109,13 @@ Add the [Publish Test Results](../tasks/test/publish-test-results.md) task to pu
 - task: PublishTestResults@2
   condition: succeededOrFailed()
   inputs:
-    testResultsFiles: '**/test-*.xml'
-    testRunTitle: 'Ruby tests'
+    testResultsFiles: "**/test-*.xml"
+    testRunTitle: "Ruby tests"
 ```
 
 ### Publish code coverage results
 
-The sample code uses [SimpleCov](https://github.com/colszowka/simplecov) to collect code coverage data when unit tests are run. SimpleCov is configured to use Cobertura and HTML report formatters. 
+The sample code uses [SimpleCov](https://github.com/colszowka/simplecov) to collect code coverage data when unit tests are run. SimpleCov is configured to use Cobertura and HTML report formatters.
 
 Add the [Publish Code Coverage Results](../tasks/test/publish-code-coverage-results.md) task to publish code coverage results to the server. When you do this, coverage metrics can be seen in the build summary and HTML reports can be downloaded for further analysis.
 
@@ -123,8 +123,8 @@ Add the [Publish Code Coverage Results](../tasks/test/publish-code-coverage-resu
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: Cobertura
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
+    summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/coverage.xml"
+    reportDirectory: "$(System.DefaultWorkingDirectory)/**/coverage"
 ```
 
 ## Build an image and push to container registry

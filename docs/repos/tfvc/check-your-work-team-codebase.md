@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Check in your work to the team's codebase
 
@@ -24,25 +23,24 @@ Use the **Pending Changes** page (Keyboard: Ctrl + 0, P) in Team Explorer to che
 
 ## Choose the files you want to check in
 
-You can specify which file changes you want to check in by dragging them between the **Included Changes** and **Excluded Changes** sections of the **Pending Changes** page in Team Explorer. 
+You can specify which file changes you want to check in by dragging them between the **Included Changes** and **Excluded Changes** sections of the **Pending Changes** page in Team Explorer.
 You can also check-in as you work in other areas of Visual Studio:
 
--   In Solution Explorer, select one of the following:
+- In Solution Explorer, select one of the following:
 
-    -   The solution
-    -   One or more of the code projects
-    -   One or more files   
+  - The solution
+  - One or more of the code projects
+  - One or more files
 
-    After you select the items, right-click and select **Check In**.   
+  After you select the items, right-click and select **Check In**.
 
--   In Source Control Explorer, select one or more items with pending changes or one or more folders that contain items with pending changes. (Items with pending changes are indicated by this symbol: ![TFSC Checked-Out Status Icon](media/check-your-work-team-codebase/IC51402.gif)). Open the context menu for the selected items, and choose **Check In**.   
+- In Source Control Explorer, select one or more items with pending changes or one or more folders that contain items with pending changes. (Items with pending changes are indicated by this symbol: ![TFSC Checked-Out Status Icon](media/check-your-work-team-codebase/IC51402.gif)). Open the context menu for the selected items, and choose **Check In**.
 
-   
-> [!IMPORTANT]   
+> [!IMPORTANT]  
 > The **Check in** option is not displayed if there are no pending changes to the item selected.
 
-> [!TIP]   
-> If you don't see pending changes for an item, make sure that it is not already listed as an excluded change. Open Team Explorer's **Pending Changes** view and select the 
+> [!TIP]  
+> If you don't see pending changes for an item, make sure that it is not already listed as an excluded change. Open Team Explorer's **Pending Changes** view and select the
 > **Detected: ..** link under **Excluded Changes**. Check the changes to include from the list and select **Promote** to move the excluded changes into the **Included Changes** section.
 > These changes can now be checked in.
 
@@ -50,16 +48,16 @@ You can also check-in as you work in other areas of Visual Studio:
 
 When you check in changes, you should associate such work items with the changes. Benefits of doing so include:
 
--   A team member who looks at the work item can [link directly to the changeset](../../boards/queries/link-work-items-support-traceability.md) to see the work that you did.
--   A team member who [reviews the history of a file](view-manage-past-versions.md) you changed can view the changeset and see the work items that were the justification for the change.
--   If you build your changes in your automated build system (for example with a [CI Build](../../pipelines/build/triggers.md) or a [Gated Check-in Build](../../pipelines/build/repository.md) your team members can see in which completed build the task was completed or the bug was fixed.
+- A team member who looks at the work item can [link directly to the changeset](../../boards/queries/link-work-items-support-traceability.md) to see the work that you did.
+- A team member who [reviews the history of a file](view-manage-past-versions.md) you changed can view the changeset and see the work items that were the justification for the change.
+- If you build your changes in your automated build system (for example with a [CI Build](../../pipelines/build/triggers.md) or a [Gated Check-in Build](../../pipelines/build/repository.md) your team members can see in which completed build the task was completed or the bug was fixed.
 
 To associate work items with your check-in:
 
--   Choose the **Add Work Item by ID** link in the **Related Work Items** section.
--   Drag a work item from a work item query window from [Team Explorer's **Work Item**](../../boards/queries/using-queries.md) page into the **Related Work Items** section.
+- Choose the **Add Work Item by ID** link in the **Related Work Items** section.
+- Drag a work item from a work item query window from [Team Explorer's **Work Item**](../../boards/queries/using-queries.md) page into the **Related Work Items** section.
 
-Next to each work item, select how it should be related to your check-in: **Associate** or **Resolve** (available only if the work item is not already in a state that precludes this relationship, such as **Resolved**, **Done**, or **Closed**).   
+Next to each work item, select how it should be related to your check-in: **Associate** or **Resolve** (available only if the work item is not already in a state that precludes this relationship, such as **Resolved**, **Done**, or **Closed**).
 
 ## Check in your changes
 
@@ -91,7 +89,7 @@ In the **Reason** box, explain why you chose to override the policy.
 
 ### Check in changes to a folder that is controlled by a gated check-in build process
 
- ![Gated Check-in dialog box](media/check-your-work-team-codebase/IC572351.png)
+![Gated Check-in dialog box](media/check-your-work-team-codebase/IC572351.png)
 If you are checking in changes into version control folders that are controlled by a [gated check-in build process](../../pipelines/build/repository.md), the **Gated Check-in** dialog box appears. For information about how to complete your check-in operation, see [Check in to a folder that is controlled by a gated check-in build process](check-folder-controlled-by-gated-check-build-process.md).
 
 ## Subscribe to alerts
@@ -102,21 +100,20 @@ If you want to be notified when someone checks in code in your TFVC project, you
 
 ## Work from the command prompt
 
--    [Checkin command](checkin-command.md) : View pending changes and check in files
+- [Checkin command](checkin-command.md) : View pending changes and check in files
 
 ## Tips
 
+- ![Tip](media/check-your-work-team-codebase/IC572374.png) You can ![Undock](media/check-your-work-team-codebase/IC667296.png) undock the **Pending Changes** page from Team Explorer and open it in a new window.
 
--   ![Tip](media/check-your-work-team-codebase/IC572374.png) You can ![Undock](media/check-your-work-team-codebase/IC667296.png) undock the **Pending Changes** page from Team Explorer and open it in a new window.
+- ![Tip](media/check-your-work-team-codebase/IC572374.png) You can toggle between list and tree view from the **Actions** menu.
 
--   ![Tip](media/check-your-work-team-codebase/IC572374.png) You can toggle between list and tree view from the **Actions** menu.
+- ![Tip](media/check-your-work-team-codebase/IC572374.png) Before checking in new code, you should consider conducting a code review. See [Day in the life of an devops Developer: Suspend work, fix a bug, and conduct a code review](day-life-alm-developer-suspend-work-fix-bug-conduct-code-review.md).
 
--   ![Tip](media/check-your-work-team-codebase/IC572374.png) Before checking in new code, you should consider conducting a code review. See [Day in the life of an devops Developer: Suspend work, fix a bug, and conduct a code review](day-life-alm-developer-suspend-work-fix-bug-conduct-code-review.md).
+- ![Tip](media/check-your-work-team-codebase/IC572374.png) You can manage and, if necessary, undo your pending changes. See [Develop code and manage pending changes](develop-code-manage-pending-changes.md).
 
--   ![Tip](media/check-your-work-team-codebase/IC572374.png) You can manage and, if necessary, undo your pending changes. See [Develop code and manage pending changes](develop-code-manage-pending-changes.md).
+- ![Tip](media/check-your-work-team-codebase/IC572374.png) If you need to set aside your changes, see [Suspend your work and manage your shelvesets](suspend-your-work-manage-your-shelvesets.md).
 
--   ![Tip](media/check-your-work-team-codebase/IC572374.png) If you need to set aside your changes, see [Suspend your work and manage your shelvesets](suspend-your-work-manage-your-shelvesets.md).
+- ![Tip](media/check-your-work-team-codebase/IC572374.png) A check-in is performed atomically-the operation either succeeds completely or fails completely (with one exception). If any one of the changes cannot be submitted to your Team Foundation server, none of the changes is committed and a changeset is not created. For example, if you lose network connectivity in the middle of a check-in, the whole operation fails.
 
--   ![Tip](media/check-your-work-team-codebase/IC572374.png) A check-in is performed atomically-the operation either succeeds completely or fails completely (with one exception). If any one of the changes cannot be submitted to your Team Foundation server, none of the changes is committed and a changeset is not created. For example, if you lose network connectivity in the middle of a check-in, the whole operation fails.
-
-    The exception is the association of work items with the changeset. If work item association fails but all other aspects of the check-in succeed, then the changeset is created. You can manually associate a work item with a changeset. See [Manage dependencies, link work items to support traceability](../../boards/queries/link-work-items-support-traceability.md).
+  The exception is the association of work items with the changeset. If work item association fails but all other aspects of the check-in succeed, then the changeset is created. You can manually associate a work item with a changeset. See [Manage dependencies, link work items to support traceability](../../boards/queries/link-work-items-support-traceability.md).

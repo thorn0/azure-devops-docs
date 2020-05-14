@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `existingFailures`: [TestFailureDetails](../../../TFS/TestManagement/Contracts/TestFailureDetails.md). 
+- `existingFailures`: [TestFailureDetails](../../../TFS/TestManagement/Contracts/TestFailureDetails.md).
 
-* `fixedTests`: [TestFailureDetails](../../../TFS/TestManagement/Contracts/TestFailureDetails.md). 
+- `fixedTests`: [TestFailureDetails](../../../TFS/TestManagement/Contracts/TestFailureDetails.md).
 
-* `newFailures`: [TestFailureDetails](../../../TFS/TestManagement/Contracts/TestFailureDetails.md). 
+- `newFailures`: [TestFailureDetails](../../../TFS/TestManagement/Contracts/TestFailureDetails.md).
 
-* `previousBuild`: [BuildReference](../../../TFS/TestManagement/Contracts/BuildReference.md). 
-
+- `previousBuild`: [BuildReference](../../../TFS/TestManagement/Contracts/BuildReference.md).

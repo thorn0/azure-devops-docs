@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Test Points | REST API Reference for Team Foundation Server
 description: Work with test points programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 70C0FE8E-1A6B-4C0A-BC8A-46DAF75A9418
@@ -24,22 +24,24 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/suites/{suite}/points?api-version={version}[&witFields={string}&configurationId={string}&testCaseId={string}&testPointIds={string}&includePointDetails={bool}&$skip={int}&$top={int}]
 ```
 
-| Parameter           | Type   | Default | Notes
-|:--------------------|:------|:--------|:---------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance            | string |         | TFS server name ({server:port}).
-| project             | string |         | Name or ID of the project.
-| plan                | int    |         | ID of the test plan.
-| suite               | int    |         | ID of the suite that contains the points.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
+| plan | int | | ID of the test plan.
+| suite | int | | ID of the suite that contains the points.
 | Query
-| api-version         | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| witFields           | string |         | Comma-separated list of work item field names.
-| configurationId     | string |         | Get test points for specific configuration.
-| testCaseId          | string |         | Get test points for a specific test case, valid when configurationId is not set.
-| testPointIds        | string |         | Get test points for comma-separated list of test point IDs, valid only when configurationId and testCaseId are not set.
-| includePointDetails | bool   | false   | Include all properties for the test point.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| witFields | string | | Comma-separated list of work item field names.
+| configurationId | string | | Get test points for specific configuration.
+| testCaseId | string | | Get test points for a specific test case, valid when configurationId is not set.
+| testPointIds | string | | Get test points for comma-separated list of test point IDs, valid only when configurationId and testCaseId are not set.
+| includePointDetails | bool | false | Include all properties for the test point.
 | $skip               | int    |         | Number of test points to skip.
-| $top                | int    |         | Number of test points to return.
+| $top | int | | Number of test points to return.
 
 #### Sample request
 
@@ -122,7 +124,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
   "count": 2
 }
 ```
-
 
 ### With fields
 
@@ -232,7 +233,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
 }
 ```
 
-
 ### By configuration
 
 #### Sample request
@@ -317,7 +317,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
 }
 ```
 
-
 ### By test case
 
 #### Sample request
@@ -368,7 +367,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
   "count": 1
 }
 ```
-
 
 ### Specific points
 
@@ -453,7 +451,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
   "count": 2
 }
 ```
-
 
 ### With details
 
@@ -591,7 +588,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
 }
 ```
 
-
 ### A page at a time
 
 #### Sample request
@@ -643,24 +639,25 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
 }
 ```
 
-
 ## Get a test point
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/suites/{suite}/points/{point}?api-version={version}[&witFields={string}]
 ```
 
-| Parameter           | Type   | Notes
-|:--------------------|:------|:---------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance            | string | TFS server name ({server:port}).
-| project             | string | Name or ID of the project.
-| plan                | int    | ID of the test plan.
-| suite               | int    | ID of the suite that contains the point.
-| point               | int    | ID of the test point to get.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| plan | int | ID of the test plan.
+| suite | int | ID of the suite that contains the point.
+| point | int | ID of the test point to get.
 | Query
-| api-version         | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| witFields           | string | Comma-separated list of work item field names.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| witFields | string | Comma-separated list of work item field names.
 
 #### Sample request
 
@@ -731,7 +728,6 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
   ]
 }
 ```
-
 
 ### With fields
 
@@ -817,15 +813,16 @@ GET https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1
 }
 ```
 
-
 ## Update test points
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/_apis/test/plans/{plan}/suites/{suite}/points/{point}?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
   "resetToActive": { bool },
@@ -838,21 +835,22 @@ Content-Type: application/json
 }
 ```
 
-| Parameter           | Type   | Notes
-|:--------------------|:------|:---------------------------------
-| URL
-| instance            | string     | TFS server name ({server:port}).
-| project             | string     | Name or ID of the project.
-| plan                | int        | ID of the test plan.
-| suite               | int        | ID of the suite that contains the point.
-| point               | int,int... | ID of the test point to get.<br/>Use a comma-separated list of IDs to update multiple test points.
-| Query
-| api-version         | string     | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| Body
-| resetToActive       | bool       | Reset test points to active.
-| outcome             | enum ( None, Passed, Failed, Inconclusive, Timeout, Aborted, Blocked , NotExecuted, Warning, Error, NotApplicable, Paused }  | Outcome value for a test point.<br/>Not valid if resetToActive is true.
-| tester              | string     | The tester's Team Foundation ID or display name.
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
 
+
+| URL
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| plan | int | ID of the test plan.
+| suite | int | ID of the suite that contains the point.
+| point | int,int... | ID of the test point to get.<br/>Use a comma-separated list of IDs to update multiple test points.
+| Query
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Body
+| resetToActive | bool | Reset test points to active.
+| outcome | enum ( None, Passed, Failed, Inconclusive, Timeout, Aborted, Blocked , NotExecuted, Warning, Error, NotApplicable, Paused } | Outcome value for a test point.<br/>Not valid if resetToActive is true.
+| tester | string | The tester's Team Foundation ID or display name.
 
 ### Re-activate
 
@@ -861,6 +859,7 @@ Content-Type: application/json
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/1/points/1?api-version=1.0
 ```
+
 ```json
 {
   "resetToActive": "true"
@@ -933,7 +932,6 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 }
 ```
 
-
 ### Set the outcome
 
 #### Sample request
@@ -941,6 +939,7 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/1/points/1?api-version=1.0
 ```
+
 ```json
 {
   "outcome": "Passed"
@@ -1016,7 +1015,6 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 }
 ```
 
-
 ### Change the tester
 
 #### Sample request
@@ -1024,6 +1022,7 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 ```
 PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans/1/suites/1/points/1?api-version=1.0
 ```
+
 ```json
 {
   "tester": {
@@ -1101,15 +1100,16 @@ PATCH https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/plans
 }
 ```
 
-
 ## Query test points
 
 ```no-highlight
 POST https://{instance}/DefaultCollection/{project}/_apis/test/points/?api-version={version}&$skip={int}&$top={int}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
 	"pointsFilter": {
@@ -1123,33 +1123,32 @@ Content-Type: application/json
 }
 ```
 
-| Parameter         | Type   | Default | Notes
-|:------------------|:-------|:--------|:------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| instance          | string |         | TFS server name ({server:port}).
-| project           | string |         | Name or ID of the project.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of the project.
 | Query
-| api-version       | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | $skip             | int    |         | Number of test points to skip.
-| $top              | int    |         | Number of test points to return.
+| $top | int | | Number of test points to return.
 | Body
-| testcaseIds                          | int   |		                              | Testcase ids list (Mandatory input).
-| ConfigurationNames                   | string      |       No filter                         | List of Configurations for filtering.
-| Testers.DisplayName                  | string   | No filter | DisplayName of testers for filtering.
+| testcaseIds | int | | Testcase ids list (Mandatory input).
+| ConfigurationNames | string | No filter | List of Configurations for filtering.
+| Testers.DisplayName | string | No filter | DisplayName of testers for filtering.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/points?api-version=3.1-preview.2
 ```
+
 ```json
 {
   "PointsFilter": {
-    "TestcaseIds": [
-      7,
-      8,
-      9
-    ]
+    "TestcaseIds": [7, 8, 9]
   }
 }
 ```
@@ -1420,15 +1419,10 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/points
     }
   ],
   "pointsFilter": {
-    "testcaseIds": [
-      7,
-      8,
-      9
-    ]
+    "testcaseIds": [7, 8, 9]
   }
 }
 ```
-
 
 ### With Configuration filter
 
@@ -1437,17 +1431,12 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/points
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/points?api-version=3.1-preview.2
 ```
+
 ```json
 {
   "PointsFilter": {
-    "TestcaseIds": [
-      7,
-      8,
-      9
-    ],
-    "ConfigurationNames": [
-      "Windows 10"
-    ]
+    "TestcaseIds": [7, 8, 9],
+    "ConfigurationNames": ["Windows 10"]
   }
 }
 ```
@@ -1570,18 +1559,11 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/points
     }
   ],
   "pointsFilter": {
-    "testcaseIds": [
-      7,
-      8,
-      9
-    ],
-    "configurationNames": [
-      "Windows 10"
-    ]
+    "testcaseIds": [7, 8, 9],
+    "configurationNames": ["Windows 10"]
   }
 }
 ```
-
 
 ### With tester filter
 
@@ -1590,14 +1572,11 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/points
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/points?api-version=3.1-preview.2
 ```
+
 ```json
 {
   "PointsFilter": {
-    "TestcaseIds": [
-      7,
-      8,
-      9
-    ],
+    "TestcaseIds": [7, 8, 9],
     "Testers": [
       {
         "DisplayName": "Fabrikam Fiber1"
@@ -1651,11 +1630,7 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/points
     }
   ],
   "pointsFilter": {
-    "testcaseIds": [
-      7,
-      8,
-      9
-    ],
+    "testcaseIds": [7, 8, 9],
     "testers": [
       {
         "id": null,
@@ -1666,7 +1641,6 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/points
 }
 ```
 
-
 ### fetch a page using skip , top
 
 #### Sample request
@@ -1674,14 +1648,11 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/points
 ```
 POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/points?$skip=1&$top=1&api-version=3.1-preview.2
 ```
+
 ```json
 {
   "PointsFilter": {
-    "TestcaseIds": [
-      7,
-      8,
-      9
-    ]
+    "TestcaseIds": [7, 8, 9]
   }
 }
 ```
@@ -1730,11 +1701,7 @@ POST https://mytfsserver/DefaultCollection/fabrikam-fiber-tfvc/_apis/test/points
     }
   ],
   "pointsFilter": {
-    "testcaseIds": [
-      7,
-      8,
-      9
-    ]
+    "testcaseIds": [7, 8, 9]
   }
 }
 ```

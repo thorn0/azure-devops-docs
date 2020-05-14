@@ -4,7 +4,7 @@ description: Key concepts for Azure Artifacts within Azure DevOps Services and T
 ms.technology: devops-artifacts
 ms.topic: conceptual
 ms.date: 2/6/2018
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Key concepts for Azure Artifacts
@@ -15,7 +15,7 @@ monikerRange: '>= tfs-2017'
 
 Once you publish a particular version of a package to a feed, that version number is permanently reserved. You cannot upload a newer revision package with that same version number, or delete it and upload a new package at the same version.
 
-Many package clients, including NuGet and npm, keep a local cache of packages on your machine. 
+Many package clients, including NuGet and npm, keep a local cache of packages on your machine.
 Once a client has cached a particular `package@version`, it will return that copy on future install/restore requests.
 If, on the server, you replace `package@version` (rev 1) with a new `package@version` (rev 2), the client is unable to tell the difference. This can lead to indeterminate build results from different machines. For example, a developer's machine and the build agent might have cached different revisions of the package, leading to unexpected build results.
 
@@ -28,7 +28,6 @@ The only way to work around the immutability constraint is to create a new feed 
 
 ## Recycle Bin
 
-If you've deleted/unpublished an npm package, NuGet package, or Maven artifact from Azure DevOps Services, builds that depend on that package will start to fail.  You won't be able to repush that package to the feed because of [immutability](#immutability).  In order to recover the package and have builds start working again, a feed owner can recover it from the Recycle Bin.
+If you've deleted/unpublished an npm package, NuGet package, or Maven artifact from Azure DevOps Services, builds that depend on that package will start to fail. You won't be able to repush that package to the feed because of [immutability](#immutability). In order to recover the package and have builds start working again, a feed owner can recover it from the Recycle Bin.
 
 Once in the Recycle Bin, you will see any packages that have been deleted from the current feed in the **past 30 days**.
-

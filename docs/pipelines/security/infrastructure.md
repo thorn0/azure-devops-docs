@@ -4,7 +4,7 @@ description: Learn why you should separate agents, user accounts, and other infr
 ms.assetid: 1bda2617-a03b-47e1-b987-3849517a1e81
 ms.reviewer: macoope
 ms.date: 02/04/2020
-monikerRange: '> azure-devops-2019'
+monikerRange: "> azure-devops-2019"
 ---
 
 # Recommendations to secure shared infrastructure in Azure Pipelines
@@ -31,9 +31,9 @@ To eliminate that form of lateral movement and to prevent one project from "pois
 It's tempting but dangerous to run the agent under an identity that can directly access Azure DevOps resources.
 This problematic setup is common in organizations that use Azure Active Directory (Azure AD).
 If you run the agent under an identity that's backed by Azure AD, then it can directly access Azure DevOps APIs without using the job's access token.
-You should instead run the agent as a nonprivileged local account such as *Network Service*.
+You should instead run the agent as a nonprivileged local account such as _Network Service_.
 
-Azure DevOps has a group that's misleadingly named *Project Collection Service Accounts*.
+Azure DevOps has a group that's misleadingly named _Project Collection Service Accounts_.
 By inheritance, members of Project Collection Service Accounts are also members of Project Collection Administrators.
 Customers sometimes run their build agents by using an identity that's backed by Azure AD and that's a member of Project Collection Service Accounts.
 If adversaries run a pipeline on one of these build agents, then they can take over the entire Azure DevOps organization.
@@ -43,7 +43,7 @@ Often, these agents use privileged accounts to access secrets or production envi
 But if adversaries run a compromised pipeline on one of these build agents, then they can access those secrets.
 Then the adversaries can move laterally through other systems that are accessible through those accounts.
 
-To keep your systems secure, use the lowest-privilege account to run self-hosted agents. 
+To keep your systems secure, use the lowest-privilege account to run self-hosted agents.
 For example, use your machine account or a managed service identity.
 Let Azure Pipelines manage access to secrets and environments.
 

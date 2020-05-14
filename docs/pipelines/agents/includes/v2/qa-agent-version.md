@@ -18,7 +18,7 @@ ms.date: 02/12/2020
 1. Make sure the agent is enabled.
 
 1. Navigate to the capabilities tab:
- 
+
    [!INCLUDE [agent-capabilities](../../includes/agent-capabilities-tab.md)]
 
 1. Look for the `Agent.Version` capability. You can check this value against the latest published agent version. See [Azure Pipelines Agent](https://github.com/Microsoft/azure-pipelines-agent/releases) and check the page for the highest version number listed.

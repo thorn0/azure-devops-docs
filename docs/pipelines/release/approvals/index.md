@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: shashban
 author: azooinmyluggage
 ms.date: 04/22/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Release approvals and gates overview
@@ -19,7 +19,7 @@ monikerRange: '>= tfs-2015'
 ::: moniker-end
 
 A release pipeline specifies the end-to-end release pipeline for an app to be deployed across a range of stages.
-Deployments to each stage are fully automated by using 
+Deployments to each stage are fully automated by using
 [jobs](../../process/phases.md) and [tasks](../../process/tasks.md).
 
 **Approvals** and **gates** give you additional control over the start and completion of the deployment pipeline.
@@ -40,16 +40,16 @@ are useful include the following.
 
 <a name="scenarios"></a>
 
-| Scenario | Feature(s) to use |
-| --- | --- |
-| Some users must manually validate the change request and approve the deployment to a stage. | [Pre-deployment approvals](approvals.md) |
-| Some users must manually sign out from the app after deployment before the release is promoted to other stages. | [Post-deployment approvals](approvals.md) |
-| You want to ensure there are no active issues in the work item or problem management system before deploying a build to a stage.  | [Pre-deployment gates](gates.md) |
-| You want to ensure there are no incidents from the monitoring or incident management system for the app after it's been deployed, before promoting the release. | [Post-deployment gates](gates.md) |
-| After deployment, you want to wait for a specified time before prompting some users for a manual sign out.  | [Post-deployment gates](gates.md) and [post-deployment approvals](approvals.md) |
-| During the deployment pipeline, a user must manually follow specific instructions and then resume the deployment. | [Manual Intervention](../deploy-using-approvals.md#configure-maninter) | 
-| During the deployment pipeline, you want to prompt the user to enter a value for a parameter used by the deployment tasks, or allow the user to edit the details of this release. | [Manual Intervention](../deploy-using-approvals.md#configure-a-manual-intervention) | 
-| During the deployment pipeline, you want to wait for monitoring or information portals to detect any active incidents, before continuing with other deployment jobs.  | Planned | 
+| Scenario                                                                                                                                                                          | Feature(s) to use                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Some users must manually validate the change request and approve the deployment to a stage.                                                                                       | [Pre-deployment approvals](approvals.md)                                            |
+| Some users must manually sign out from the app after deployment before the release is promoted to other stages.                                                                   | [Post-deployment approvals](approvals.md)                                           |
+| You want to ensure there are no active issues in the work item or problem management system before deploying a build to a stage.                                                  | [Pre-deployment gates](gates.md)                                                    |
+| You want to ensure there are no incidents from the monitoring or incident management system for the app after it's been deployed, before promoting the release.                   | [Post-deployment gates](gates.md)                                                   |
+| After deployment, you want to wait for a specified time before prompting some users for a manual sign out.                                                                        | [Post-deployment gates](gates.md) and [post-deployment approvals](approvals.md)     |
+| During the deployment pipeline, a user must manually follow specific instructions and then resume the deployment.                                                                 | [Manual Intervention](../deploy-using-approvals.md#configure-maninter)              |
+| During the deployment pipeline, you want to prompt the user to enter a value for a parameter used by the deployment tasks, or allow the user to edit the details of this release. | [Manual Intervention](../deploy-using-approvals.md#configure-a-manual-intervention) |
+| During the deployment pipeline, you want to wait for monitoring or information portals to detect any active incidents, before continuing with other deployment jobs.              | Planned                                                                             |
 
 You can combine all three techniques within a release pipeline to fully achieve your own deployment requirements.
 
@@ -73,17 +73,17 @@ jobs:
 
 ## Related articles
 
-* [Approvals](approvals.md)
-* [Gates](gates.md)
-* [Manual intervention](../deploy-using-approvals.md#configure-maninter)
-* [ServiceNow release and deployment control](servicenow.md)
-* [Stages](../../process/stages.md)
-* [Triggers](../triggers.md)
-* [Release pipelines and releases](../releases.md)
+- [Approvals](approvals.md)
+- [Gates](gates.md)
+- [Manual intervention](../deploy-using-approvals.md#configure-maninter)
+- [ServiceNow release and deployment control](servicenow.md)
+- [Stages](../../process/stages.md)
+- [Triggers](../triggers.md)
+- [Release pipelines and releases](../releases.md)
 
 ## Additional resources
 
-* [Video: Deploy quicker and safer with gates in Azure Pipelines](https://channel9.msdn.com/Events/Connect/2017/T181)
-* [Configure your release pipelines for safe deployments](https://devblogs.microsoft.com/devops/configuring-your-release-pipelines-for-safe-deployments/)
+- [Video: Deploy quicker and safer with gates in Azure Pipelines](https://channel9.msdn.com/Events/Connect/2017/T181)
+- [Configure your release pipelines for safe deployments](https://devblogs.microsoft.com/devops/configuring-your-release-pipelines-for-safe-deployments/)
 
 [!INCLUDE [rm-help-support-shared](../../includes/rm-help-support-shared.md)]

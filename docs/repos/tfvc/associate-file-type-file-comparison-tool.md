@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Associate a file type with a file-comparison tool
 
@@ -23,12 +22,12 @@ To perform this procedure, you must be a member of the **Administrators** or **U
 
 ### To associate a file type with a third-party compare tool
 
-1.  Perform either of the following sets of steps.  
-    1.  In Visual Studio, on the menu bar, choose **Tools**, **Options**.  
+1.  Perform either of the following sets of steps.
+    1.  In Visual Studio, on the menu bar, choose **Tools**, **Options**.
     2.  In the **Options** dialog box, expand **Source Control**, choose **Visual Studio Team Foundation Server**, and then choose **Configure User Tools**.  
-    --or--  
-    1.  In Windows, choose **Start**, **All Programs**, **Microsoft Visual Studio 2012**, **Visual Studio Tools**, **Developer Command Prompt **.  
-    2.  Type **tf diff /configure**.  
+        --or--
+    3.  In Windows, choose **Start**, **All Programs**, **Microsoft Visual Studio 2012**, **Visual Studio Tools**, **Developer Command Prompt **.
+    4.  Type **tf diff /configure**.
 2.  In the **Configure User Tools** dialog box, choose **Add**.
 
     The **Configure Tool** dialog box appears.
@@ -38,19 +37,20 @@ To perform this procedure, you must be a member of the **Administrators** or **U
     > [!TIP]
     > Specify `.*` if you want to associate all types of files with your tool.
 
-4.  In the **Operation** list, choose **Compare**.  
+4.  In the **Operation** list, choose **Compare**.
 5.  In the **Command** box, either type the path and name of your tool, or choose the ellipses (**...**) to locate and specify it. The result should resemble the following example:
 
     ```
     C:\Program Files\OtherDiff\otherdiff.exe
     ```
 
-6.  In the **Arguments** box, type any arguments that your tool requires:  
-    -   **%1**: The path to the source file.  
-    -   **%2**: The path to the target file.  
-    -   **%5**: The options that the user specified by using the **/option** option of the Difference command. For more information, see [Difference Command](difference-command.md).  
-    -   **%6**: Label ("friendly name") of the source file.  
-    -   **%7**: Label ("friendly name") of the target file.
+6.  In the **Arguments** box, type any arguments that your tool requires:
+
+    - **%1**: The path to the source file.
+    - **%2**: The path to the target file.
+    - **%5**: The options that the user specified by using the **/option** option of the Difference command. For more information, see [Difference Command](difference-command.md).
+    - **%6**: Label ("friendly name") of the source file.
+    - **%7**: Label ("friendly name") of the target file.
 
     > [!TIP]
     > For information about frequently used external tools and the arguments that they require, see the following page on the Microsoft website: [diff/merge configuration in Team Foundation - common Command and Argument values](https://devblogs.microsoft.com/buckh/configuring-different-diffmerge-tools-for-team-foundation-version-control/).
@@ -81,6 +81,6 @@ To perform this procedure, you must be a member of the **Administrators** or **U
     > [!NOTE]
     > This capability is not related to version-control labels, which you apply to specific versions of items in version control, as described in [Use labels to take a snapshot of your files](use-labels-take-snapshot-your-files.md).
 
-7.  In the **Configure Tool** dialog box, choose **OK**.  
-8.  If you want to specify more types of files, repeat steps 4-9.  
-9.  In the **Configure User Tools** dialog box, choose **OK**.  
+7.  In the **Configure Tool** dialog box, choose **OK**.
+8.  If you want to specify more types of files, repeat steps 4-9.
+9.  In the **Configure User Tools** dialog box, choose **OK**.

@@ -13,16 +13,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `changeType`: [VersionControlChangeType](../../../TFS/VersionControl/Contracts/VersionControlChangeType.md). 
+- `changeType`: [VersionControlChangeType](../../../TFS/VersionControl/Contracts/VersionControlChangeType.md).
 
-* `item`: T. 
+- `item`: T.
 
-* `newContent`: [ItemContent](../../../TFS/VersionControl/Contracts/ItemContent.md). 
+- `newContent`: [ItemContent](../../../TFS/VersionControl/Contracts/ItemContent.md).
 
-* `sourceServerItem`: string. 
+- `sourceServerItem`: string.
 
-* `url`: string. 
-
+- `url`: string.

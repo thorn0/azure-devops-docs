@@ -13,12 +13,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/WorkItemTracking/Contracts`
 
-
 ### Members
 
-* `rel`: string. 
+- `rel`: string.
 
-* `source`: [WorkItemReference](../../../TFS/WorkItemTracking/Contracts/WorkItemReference.md). 
+- `source`: [WorkItemReference](../../../TFS/WorkItemTracking/Contracts/WorkItemReference.md).
 
-* `target`: [WorkItemReference](../../../TFS/WorkItemTracking/Contracts/WorkItemReference.md). 
-
+- `target`: [WorkItemReference](../../../TFS/WorkItemTracking/Contracts/WorkItemReference.md).

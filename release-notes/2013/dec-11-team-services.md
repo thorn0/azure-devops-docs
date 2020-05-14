@@ -25,7 +25,7 @@ This tile simultaneously allows visibility into the trend of the overall request
 
 ## Application Insights – Windows Store App support
 
-In the initial release of Application Insights, we provided telemetry SDKs for web server, Windows Phone 8 and a JavaScript (for sending telemetry from the browser). In today’s update we added support for Windows Store apps. As with our other SDKs, you can use this capability to emit telemetry from your app for analysis in the Application Insights portal. 
+In the initial release of Application Insights, we provided telemetry SDKs for web server, Windows Phone 8 and a JavaScript (for sending telemetry from the browser). In today’s update we added support for Windows Store apps. As with our other SDKs, you can use this capability to emit telemetry from your app for analysis in the Application Insights portal.
 
 You can read more about emitting telemetry from your Windows Store apps on [MSDN](https://msdn.microsoft.com/library/). And, we published the SDK to [NuGet.org](https://www.nuget.org/packages/Microsoft.ApplicationInsights.Telemetry.WindowsPhone/) for consumption.
 
@@ -37,7 +37,7 @@ Finally, we’ve made a few nice improvements to the performance of product back
 
 ## Holidays
 
-We’re not planning another deployment until after the New Year so this will be it for 2013. Happy holidays everyone! 
+We’re not planning another deployment until after the New Year so this will be it for 2013. Happy holidays everyone!
 
 Thanks,
 

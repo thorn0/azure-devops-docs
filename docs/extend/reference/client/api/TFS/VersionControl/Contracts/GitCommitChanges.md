@@ -13,10 +13,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `changeCounts`: [ChangeCountDictionary](../../../TFS/VersionControl/Contracts/ChangeCountDictionary.md). 
+- `changeCounts`: [ChangeCountDictionary](../../../TFS/VersionControl/Contracts/ChangeCountDictionary.md).
 
-* `changes`: [GitChange](../../../TFS/VersionControl/Contracts/GitChange.md)[]. 
-
+- `changes`: [GitChange](../../../TFS/VersionControl/Contracts/GitChange.md)[].

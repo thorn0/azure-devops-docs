@@ -10,13 +10,12 @@ generated: true
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Values
 
-* `Unknown` 
-* `XTDesktop` 
-* `FeedbackDesktop` 
-* `XTWeb` 
-* `FeedbackWeb` 
-* `XTDesktop2` 
-* `SessionInsightsForAll`
+- `Unknown`
+- `XTDesktop`
+- `FeedbackDesktop`
+- `XTWeb`
+- `FeedbackWeb`
+- `XTDesktop2`
+- `SessionInsightsForAll`

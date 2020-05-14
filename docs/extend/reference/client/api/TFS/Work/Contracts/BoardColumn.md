@@ -13,20 +13,18 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Work/Contracts`
 
-
 ### Members
 
-* `columnType`: [BoardColumnType](../../../TFS/Work/Contracts/BoardColumnType.md). 
+- `columnType`: [BoardColumnType](../../../TFS/Work/Contracts/BoardColumnType.md).
 
-* `description`: string. 
+- `description`: string.
 
-* `id`: string. 
+- `id`: string.
 
-* `isSplit`: boolean. 
+- `isSplit`: boolean.
 
-* `itemLimit`: number. 
+- `itemLimit`: number.
 
-* `name`: string. 
+- `name`: string.
 
-* `stateMappings`: {[key: string]: string}. 
-
+- `stateMappings`: {[key: string]: string}.

@@ -5,9 +5,8 @@ description: Learn how you can automatically generate a CI/CD pipeline to deploy
 ms.topic: conceptual
 ms.assetid: 88920723-19B7-4A49-96E1-9618C384F730
 ms.date: 12/20/2017
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Use Visual Studio to automatically generate a CI/CD pipeline to deploy an ASP.NET Core web app with Docker to Azure
 
@@ -35,12 +34,14 @@ monikerRange: '>= tfs-2015'
 1. Navigate to your project using the link in the Visual Studio output window after **Configure Continuous Delivery...** command.
 1. Click on the **Pipelines** tab.
 1. Click **Builds**, select the build pipeline shown there, and click **Edit**.
+
    1. The sequence of tasks that appear are what builds the application when code is committed to the repository, and includes tasks to run unit tests.
    1. At the end you'll see tasks that publish the build artifacts to a staging directory. This is the location that the release pipeline monitors, such that when new artifacts appear, the release pipeline will begin a new deployment.
    1. You can examine the artifacts yourself by clicking **Artifacts** and then **Explore**.
    1. You can always customize the build pipeline as desired.
 
 1. Click on **Releases**, select the release pipeline shown there, and click **Edit**.
+
    1. A release pipeline takes build artifacts as input and produces one or more deployments as output.
    1. On the left side of the editor you'll see three environments named Dev, Test, and Production. This is a typical arrangement for continuous deployment within which you can add additional tests in each environment as well as manual approvals.
 
@@ -53,23 +54,23 @@ monikerRange: '>= tfs-2015'
 <h3 id="new_solution">How do I create a Docker-enabled ASP.NET Core solution?</h3>
 
 > [!NOTE]
-> 
+>
 > Docker-enabled ASP.NET Core projects are supported only in Visual Studio 2017 RC.3 and higher.
 
 1. In Visual Studio, [connect first to a project](../../../../organizations/projects/connect-to-projects.md#visual-studio).
- 
+
 2. On the Team Explorer home page under **Solutions**, click **New**. (By connecting to a project first and using the command in Team Explorer, the new project is automatically added to source control in the project.)
- 
+
 3. In the **New Project** dialog box, search on "ASP.NET Core".
- 
+
 4. Select <strong>ASP.NET Core Web Application (.NET Core)</strong>from the list and click **OK**.
- 
+
 5. Select **Web Application** from the template list.
- 
+
 6. Check that **Authentication** is set to **No Authentication**. If not, click **Change Authentication** to set it.
- 
+
 7. Set **Enable Docker Support**
- 
+
 8. Click the **Docker for Windows** link to install Docker.
 
 9. Click **OK** to complete creating the project.

@@ -6,7 +6,7 @@ ms.topic: reference
 ms.author: sdanie
 author: steved0x
 ms.date: 04/20/2020
-monikerRange: '> azure-devops-2019'
+monikerRange: "> azure-devops-2019"
 ---
 
 # Multi-stage pipelines user experience
@@ -21,7 +21,7 @@ You can view and manage your pipelines by choosing **Pipelines** from the left-h
 
 You can drill down and view pipeline details, run details, pipeline analytics, job details, logs, and more.
 
-At the top of each page is a breadcrumb navigation bar. Select the different areas of the bar to navigate to different areas of the portal. The breadcrumb navigation is a convenient way to go back one or more steps. 
+At the top of each page is a breadcrumb navigation bar. Select the different areas of the bar to navigate to different areas of the portal. The breadcrumb navigation is a convenient way to go back one or more steps.
 
 ![Breadcrumb navigation](media/breadcrumb-navigation.png)
 
@@ -96,6 +96,7 @@ If the pipeline is running, you can cancel it by choosing **Cancel**. If the run
 ![Cancel pipeline run](media/cancel-pipeline-run.png)
 
 <a name="download-logs"></a>
+
 ### Pipeline run context menu
 
 From the context menu you can download logs, add tags, edit the pipeline, delete the run, and configure [retention](../policies/retention.md) for the run.
@@ -104,7 +105,6 @@ From the context menu you can download logs, add tags, edit the pipeline, delete
 
 > [!NOTE]
 > You can't delete a run if the run is retained. If you don't see **Delete**, choose **Stop retaining run**, and then delete the run. If you see both **Delete** and **View retention releases**, one or more configured retention policies still apply to your run. Choose **View retention releases**, delete the policies (only the policies for the selected run are removed), and then delete the run.
-
 
 ### Jobs and stages
 
@@ -132,18 +132,13 @@ To support security of your pipeline operations, you can add users to a built-in
 
 Learn more about configuring pipelines in the language of your choice:
 
-* [.NET Core](../ecosystems/dotnet-core.md)
-* [Go](../ecosystems/go.md)
-* [Java](../ecosystems/java.md)
-* [Node.js](../ecosystems/javascript.md)
-* [Python](../ecosystems/python.md)
-* [Containers](../ecosystems/containers/build-image.md) and [Container jobs](../process/container-phases.md)
+- [.NET Core](../ecosystems/dotnet-core.md)
+- [Go](../ecosystems/go.md)
+- [Java](../ecosystems/java.md)
+- [Node.js](../ecosystems/javascript.md)
+- [Python](../ecosystems/python.md)
+- [Containers](../ecosystems/containers/build-image.md) and [Container jobs](../process/container-phases.md)
 
 Learn more about building [Azure Repos](../repos/azure-repos-git.md) and [GitHub](../repos/github.md) repositories.
 
 To learn what else you can do in YAML pipelines, see [Customize your pipeline](../customize-pipeline.md), and for a complete reference see [YAML schema reference](../yaml-schema.md).
-
-
-
-
-

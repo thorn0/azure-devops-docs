@@ -18,23 +18,22 @@ Extends: [TaskAgentPoolReference](../../../TFS/DistributedTask/Contracts/TaskAge
 
 ### Members
 
-* `administratorsGroup`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). Gets the administrators group for this agent pool.
+- `administratorsGroup`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). Gets the administrators group for this agent pool.
 
-* `autoProvision`: boolean. Gets or sets a value indicating whether or not a queue should be automatically provisioned for each project collection or not.
+- `autoProvision`: boolean. Gets or sets a value indicating whether or not a queue should be automatically provisioned for each project collection or not.
 
-* `createdBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). Gets the identity who created this pool. The creator of the pool is automatically added into the administrators group for the pool on creation.
+- `createdBy`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). Gets the identity who created this pool. The creator of the pool is automatically added into the administrators group for the pool on creation.
 
-* `createdOn`: Date. Gets the date/time of the pool creation.
+- `createdOn`: Date. Gets the date/time of the pool creation.
 
-* `groupScopeId`: string. Gets the scope identifier for groups/roles which are owned by this pool.
+- `groupScopeId`: string. Gets the scope identifier for groups/roles which are owned by this pool.
 
-* `isHosted`: boolean. Gets or sets a value indicating whether or not this pool is managed by the service.
+- `isHosted`: boolean. Gets or sets a value indicating whether or not this pool is managed by the service.
 
-* `properties`: any. 
+- `properties`: any.
 
-* `provisioned`: boolean. Gets a value indicating whether or not roles have been provisioned for this pool.
+- `provisioned`: boolean. Gets a value indicating whether or not roles have been provisioned for this pool.
 
-* `serviceAccountsGroup`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). Gets the service accounts group for this agent pool.
+- `serviceAccountsGroup`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). Gets the service accounts group for this agent pool.
 
-* `size`: number. Gets the current size of the pool.
-
+- `size`: number. Gets the current size of the pool.

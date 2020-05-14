@@ -15,5 +15,5 @@ Module path: `TFS/WorkItemTracking/Contracts`
 
 ### Values
 
-* `WorkItem` 
-* `WorkItemLink` 
+- `WorkItem`
+- `WorkItemLink`

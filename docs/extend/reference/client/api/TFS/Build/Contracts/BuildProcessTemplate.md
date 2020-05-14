@@ -14,26 +14,24 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `description`: string. 
+- `description`: string.
 
-* `fileExists`: boolean. 
+- `fileExists`: boolean.
 
-* `id`: number. 
+- `id`: number.
 
-* `parameters`: string. 
+- `parameters`: string.
 
-* `serverPath`: string. 
+- `serverPath`: string.
 
-* `supportedReasons`: [BuildReason](./BuildReason.md). 
+- `supportedReasons`: [BuildReason](./BuildReason.md).
 
-* `teamProject`: string. 
+- `teamProject`: string.
 
-* `templateType`: [ProcessTemplateType](./ProcessTemplateType.md). 
+- `templateType`: [ProcessTemplateType](./ProcessTemplateType.md).
 
-* `url`: string. 
+- `url`: string.
 
-* `version`: string. 
-
+- `version`: string.

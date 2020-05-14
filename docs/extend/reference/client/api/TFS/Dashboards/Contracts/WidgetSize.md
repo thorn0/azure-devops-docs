@@ -13,9 +13,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Dashboards/Contracts`
 
-
 ### Members
 
-* `columnSpan`: number. 
+- `columnSpan`: number.
 
-* `rowSpan`: number. 
+- `rowSpan`: number.

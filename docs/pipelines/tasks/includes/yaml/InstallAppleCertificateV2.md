@@ -12,7 +12,7 @@ ms.technology: devops-cicd-tasks
 # Install an Apple certificate required to build on a macOS agent machine
 - task: InstallAppleCertificate@2
   inputs:
-    certSecureFile: 
+    certSecureFile:
     #certPwd: # Optional
     #keychain: 'temp' # Options: default, temp, custom
     #keychainPassword: # Required when keychain == Custom || Keychain == Default

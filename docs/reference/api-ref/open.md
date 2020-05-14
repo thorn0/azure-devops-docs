@@ -1,7 +1,7 @@
 ---
-title: WorkItem.Open method 
-titleSuffix: Azure DevOps & TFS 
-description: Syntax and usage for the Open method to open a work item for modification when working with Azure DevOps Services or Team Foundation Server (TFS)  
+title: WorkItem.Open method
+titleSuffix: Azure DevOps & TFS
+description: Syntax and usage for the Open method to open a work item for modification when working with Azure DevOps Services or Team Foundation Server (TFS)
 ms.technology: devops-agile
 ms.assetid: 38195423-A9B7-4C5B-8FA2-F9DA5C97DB1F
 ms.author: kaelli
@@ -10,15 +10,14 @@ ms.topic: reference
 ms.date: 08/04/2016
 ---
 
-
 # WorkItem.Open Method
 
 [!INCLUDE [temp](../../includes/version-vsts-tfs-all-versions.md)]
 
 Opens a work item for modification. This method is [rate limited](../../integrate/concepts/rate-limits.md) for Azure DevOps Services. For better performance and to work around the rate limits, use [PartialOpen](partialopen.md).
 
-**Namespace:**  [Microsoft.TeamFoundation.WorkItemTracking.Client](https://msdn.microsoft.com/library/microsoft.teamfoundation.workitemtracking.client%28v=vs.120%29.aspx)  
-**Assembly:**  Microsoft.TeamFoundation.WorkItemTracking.Client (in Microsoft.TeamFoundation.WorkItemTracking.Client.dll)
+**Namespace:** [Microsoft.TeamFoundation.WorkItemTracking.Client](https://msdn.microsoft.com/library/microsoft.teamfoundation.workitemtracking.client%28v=vs.120%29.aspx)  
+**Assembly:** Microsoft.TeamFoundation.WorkItemTracking.Client (in Microsoft.TeamFoundation.WorkItemTracking.Client.dll)
 
 ## Syntax
 
@@ -71,38 +70,36 @@ Opens a work item for modification. This method is [rate limited](../../integrat
 </tr>
 </table>
 
-
 <!---
 <a data-toggle="collapse" href="#expando-agent-pools">C# ▼</a>
-<div class="collapse" id="expando-queues"> 
+<div class="collapse" id="expando-queues">
 ```public void PartialOpen()```
 </div>
 
 <a data-toggle="collapse" href="#expando-agent-pools">C++ ▼</a>
-<div class="collapse" id="expando-queues"> 
-```public:  
+<div class="collapse" id="expando-queues">
+```public:
 void Open()```
 </div>
 
 
 <a data-toggle="collapse" href="#expando-agent-pools">F# ▼</a>
-<div class="collapse" id="expando-queues"> 
+<div class="collapse" id="expando-queues">
 ```member Open : unit -> unit```
 </div>
 
 
 <a data-toggle="collapse" href="#expando-agent-pools">JScript ▼</a>
-<div class="collapse" id="expando-queues"> 
+<div class="collapse" id="expando-queues">
 ```public function Open()```
 </div>
 
 <a data-toggle="collapse" href="#expando-agent-pools">VB ▼</a>
-<div class="collapse" id="expando-queues"> 
+<div class="collapse" id="expando-queues">
 ```'Declaration
 Public Sub Open```
 </div>
 --->
- 
 
 ## Remarks
 
@@ -118,5 +115,5 @@ This method does nothing if [IsOpen](https://msdn.microsoft.com/library/microsof
 
 ## Related articles
 
-- [WorkItem Class](https://msdn.microsoft.com/library/microsoft.teamfoundation.workitemtracking.client.workitem%28v=vs.120%29.aspx)  
-- [Microsoft.TeamFoundation.WorkItemTracking.Client Namespace](https://msdn.microsoft.com/library/microsoft.teamfoundation.workitemtracking.client%28v=vs.120%29.aspx)  
+- [WorkItem Class](https://msdn.microsoft.com/library/microsoft.teamfoundation.workitemtracking.client.workitem%28v=vs.120%29.aspx)
+- [Microsoft.TeamFoundation.WorkItemTracking.Client Namespace](https://msdn.microsoft.com/library/microsoft.teamfoundation.workitemtracking.client%28v=vs.120%29.aspx)

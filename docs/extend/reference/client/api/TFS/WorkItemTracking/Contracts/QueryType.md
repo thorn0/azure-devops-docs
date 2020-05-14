@@ -15,6 +15,6 @@ Module path: `TFS/WorkItemTracking/Contracts`
 
 ### Values
 
-* `Flat` 
-* `Tree` 
-* `OneHop` 
+- `Flat`
+- `Tree`
+- `OneHop`

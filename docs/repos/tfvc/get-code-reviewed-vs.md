@@ -9,9 +9,8 @@ ms.author: apawast
 author: apawast
 ms.topic: tutorial
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Get your code reviewed with Visual Studio
 
@@ -29,7 +28,7 @@ Jamal has changed the border color in the Hello World app, and he asks Johnnie t
 
 1. Before he checks in the change, Jamal goes to the my work page.
 
-   ![My Work from the team explorer home page](media/get-code-reviewed-vs/IC682169.png) 
+   ![My Work from the team explorer home page](media/get-code-reviewed-vs/IC682169.png)
 
 2. He requests a review.
 
@@ -55,7 +54,7 @@ Johnnie will see the code review request in the team explorer, look at the chang
 
    ![The code review request in the my work page](media/get-code-reviewed-vs/IC683034.png)
 
-   You can get email alerts for code reviews, too. 
+   You can get email alerts for code reviews, too.
    If you aren't getting them, you can sign up in the team explorer settings page.
 
    ![Project alerts link in the settings page of the team explorer](media/get-code-reviewed-vs/IC682760.png)
@@ -92,5 +91,4 @@ Johnnie will see the code review request in the team explorer, look at the chang
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Create your backlog](../../boards/backlogs/create-your-backlog.md)
+> [!div class="nextstepaction"][create your backlog](../../boards/backlogs/create-your-backlog.md)

@@ -7,9 +7,7 @@ author: KathrynEE
 ms.date: 01/09/2020
 ---
 
-
 ::: moniker range=">= tfs-2017"
-
 
 <table width="100%">
 <tbody valign="top">
@@ -113,9 +111,8 @@ Not applicable
 </table>
 
 ::: moniker-end
- 
-::: moniker range="tfs-2015"
 
+::: moniker range="tfs-2015"
 
 <table width="100%">
 <tbody valign="top">
@@ -219,13 +216,9 @@ Not applicable
 </tbody>
 </table>
 
-
 ::: moniker-end
 
-
 ::: moniker range="tfs-2013"
-
-
 
 <table width="100%">
 <tbody valign="top">
@@ -325,6 +318,5 @@ Not applicable
 </tr>
 </tbody>
 </table>
-
 
 ::: moniker-end

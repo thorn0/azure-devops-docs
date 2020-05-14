@@ -1,8 +1,8 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Work Item Recycle Bin | REST API Reference for Team Foundation Server
-description: Work with deleted work items programmatically using the REST APIs for Team Foundation Server. 
+description: Work with deleted work items programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: A4633743-4644-421E-9B4F-3C906F9D4D42
 ms.topic: article
 ms.author: chcomley
@@ -16,24 +16,27 @@ ms.date: 08/04/2016
 
 [!INCLUDE [API_version](../_data/version3-preview.md)]
 
-The recycle bin contains all work items that have been deleted.  They can be restored or permanently destroyed.
+The recycle bin contains all work items that have been deleted. They can be restored or permanently destroyed.
 
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get list of ids for all deleted items in the recycle bin
+
 <a name="getalistofdeleteditemsintherecyclebin" />
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}_apis/wit/recycleBin?api-version={version}
 ```
 
-| Parameter | Type    | Notes
-|:----------|:--------|:------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string  | TFS server name ({server:port}).
-| project   | string  | Project of the deleted work items
+| instance | string | TFS server name ({server:port}).
+| project | string | Project of the deleted work items
 | Query
-| api-version | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -60,25 +63,26 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/recyclebi
 ]
 ```
 
-
 #### Sample code
 
-* [C# (GetDeleteWorkItems method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L15)
+- [C# (GetDeleteWorkItems method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L15)
 
-##	Get a deleted item in the recycle bin
+## Get a deleted item in the recycle bin
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/wit/recyclebin/{id}?api-version={version}
 ```
 
-| Parameter | Type    | Notes
-|:----------|:--------|:------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string  | TFS server name ({server:port}).
-| project   | string  | Project of the deleted work items
-| id        | int     | ID of the deleted item
+| instance | string | TFS server name ({server:port}).
+| project | string | Project of the deleted work items
+| id | int | ID of the deleted item
 | Query
-| api-version | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -144,25 +148,26 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/recyclebin/72?api-version=1.
 }
 ```
 
-
 #### Sample code
 
-* [C# (GetDeleteWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L28)
+- [C# (GetDeleteWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L28)
 
-##	Get multiple deleted items in the recycle bin
+## Get multiple deleted items in the recycle bin
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/_apis/wit/recyclebin?ids={ids}&api-version={version}
 ```
 
-| Parameter | Type    | Notes
-|:----------|:--------|:------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string  | TFS server name ({server:port}).
-| project   | string  | Project of the deleted work items
-| ids       | string  | A comma-separated list of up to 200 IDs of the deleted work items to get.
+| instance | string | TFS server name ({server:port}).
+| project | string | Project of the deleted work items
+| ids | string | A comma-separated list of up to 200 IDs of the deleted work items to get.
 | Query
-| api-version | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -207,34 +212,33 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/wit/recyclebi
 ]
 ```
 
-
-
 #### Sample code
 
-* [C# (GetMultipleDeletedWorkItems method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L41)
+- [C# (GetMultipleDeletedWorkItems method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L41)
 
 ## Restore a work item
+
 <a name="restoreaworkitem" />
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/_apis/wit/recyclebin/{id}?api-version={version}
 ```
 
-| Parameter | Type    | Notes
-|:----------|:--------|:------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string  | TFS server name ({server:port}).
-| id        | int     | ID of the deleted item
+| instance | string | TFS server name ({server:port}).
+| id | int | ID of the deleted item
 | Query
-| api-version | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | Body
 | IsDeleted | boolean | Value of the IsDeleted field (should be set to false for restoring work items.
 
-
-
 #### Sample code
 
-* [C# (RestoreWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L53)
+- [C# (RestoreWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L53)
 
 ## Restore multiple work items
 
@@ -249,6 +253,7 @@ POST https://{instance}/DefaultCollection/_apis/wit/$batch
 ```
 POST https://mytfsserver/DefaultCollection/_apis/wit/$batch?api-version=3.0-preview
 ```
+
 ```json
 [
   {
@@ -306,10 +311,9 @@ POST https://mytfsserver/DefaultCollection/_apis/wit/$batch?api-version=3.0-prev
 }
 ```
 
-
 #### Sample code
 
-* [C# (RestoreMultipleWorkItems method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L70)
+- [C# (RestoreMultipleWorkItems method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L70)
 
 ## Permanently delete a work item
 
@@ -317,14 +321,16 @@ POST https://mytfsserver/DefaultCollection/_apis/wit/$batch?api-version=3.0-prev
 DELETE https://{instance}/DefaultCollection/{project}/_apis/wit/recycleBin/{id}?api-version={version}
 ```
 
-| Parameter | Type    | Notes	
-|:----------|:--------|:------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string  | TFS server name ({server:port}).
-| project   | string  | Project of the deleted work items
-| id        | int     | ID of the deleted item
+| instance | string | TFS server name ({server:port}).
+| project | string | Project of the deleted work items
+| id | int | ID of the deleted item
 | Query
-| api-version | string  | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -332,10 +338,9 @@ DELETE https://{instance}/DefaultCollection/{project}/_apis/wit/recycleBin/{id}?
 DELETE https://mytfsserver/DefaultCollection/_apis/wit/recyclebin/403?api-version=3.0-preview
 ```
 
-
 #### Sample code
 
-* [C# (PermanentlyDeleteWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L90)
+- [C# (PermanentlyDeleteWorkItem method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L90)
 
 ## Permanently delete multiple work items
 
@@ -350,6 +355,7 @@ POST https://{instance}/DefaultCollection/_apis/wit/$batch
 ```
 POST https://mytfsserver/DefaultCollection/_apis/wit/$batch?api-version=3.0-preview
 ```
+
 ```json
 [
   {
@@ -385,7 +391,6 @@ POST https://mytfsserver/DefaultCollection/_apis/wit/$batch?api-version=3.0-prev
 }
 ```
 
-
 #### Sample code
 
-* [C# (PermanentlyDeleteMultipleWorkItems method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L101)
+- [C# (PermanentlyDeleteMultipleWorkItems method)](https://github.com/microsoft/azure-devops-dotnet-samples/blob/master/ClientLibrary/Samples/WorkItemTracking/RecycleBinSample.cs#L101)

@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Git | REST API Reference for Team Foundation Server
 description: Work with Git programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 19DFAB3F-274F-41DF-ACD5-93DCEE626121
@@ -31,6 +31,7 @@ There are [code samples](https://github.com/microsoft/azure-devops-dotnet-sample
 [!INCLUDE [ID_vs_Name](_data/id_or_name.md)]
 
 ## Common tasks
+
 <table class="table table-striped; centered-table">
 <thead class="thead-inverse">
     <tr>
@@ -110,26 +111,26 @@ There are [code samples](https://github.com/microsoft/azure-devops-dotnet-sample
 </table>
 
 ## All Git API areas
+
 In case you're looking for something not found in the **Common tasks** section above, below is a list of all areas of the Git API.
 
-* [Annotated tags](./annotatedTags.md)
-* [Blobs](./blobs.md)
-* [Commits](./commits.md)
-* [Diffs](./diffs.md)
-* [Import Requests](./import-requests.md)
-* [Items](./items.md)
-* [Pull Request Overview](./pull-requests/overview.md)
-* [Pull Request Operations](./pull-requests/pull-requests.md)
-* [Pull Request Comments](./pull-requests/threads.md)
-* [Pull Request Iterations](./pull-requests/iterations.md)
-* [Pull Request Reviewers](./pull-requests/reviewers.md)
-* [Pull Request Work Items](./pull-requests/work-items.md)
-* [Pushes](./pushes.md)
-* [Refs](./refs.md)
-* [Repositories](./repositories.md)
-* [Stats](./stats.md)
-* [Trees](./trees.md)
+- [Annotated tags](./annotatedTags.md)
+- [Blobs](./blobs.md)
+- [Commits](./commits.md)
+- [Diffs](./diffs.md)
+- [Import Requests](./import-requests.md)
+- [Items](./items.md)
+- [Pull Request Overview](./pull-requests/overview.md)
+- [Pull Request Operations](./pull-requests/pull-requests.md)
+- [Pull Request Comments](./pull-requests/threads.md)
+- [Pull Request Iterations](./pull-requests/iterations.md)
+- [Pull Request Reviewers](./pull-requests/reviewers.md)
+- [Pull Request Work Items](./pull-requests/work-items.md)
+- [Pushes](./pushes.md)
+- [Refs](./refs.md)
+- [Repositories](./repositories.md)
+- [Stats](./stats.md)
+- [Trees](./trees.md)
 
->[!NOTE]
->For more information on Git, see [Use Git with Visual Studio and Team Foundation Server](../../../repos/git/overview-2013.md).
-
+> [!NOTE]
+> For more information on Git, see [Use Git with Visual Studio and Team Foundation Server](../../../repos/git/overview-2013.md).

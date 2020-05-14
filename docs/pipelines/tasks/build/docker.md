@@ -8,7 +8,7 @@ ms.author: atulmal
 author: azooinmyluggage
 ms.date: 02/28/2020
 ms.custom: fasttrack-edit
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Docker task
@@ -17,11 +17,11 @@ Use this task to build and push Docker images to any container registry using Do
 
 ## Overview
 
-Following are the key benefits of using Docker task as compared to directly using docker client binary in script - 
+Following are the key benefits of using Docker task as compared to directly using docker client binary in script -
 
-- **Integration with Docker registry service connection** - The task makes it easy to use a Docker registry service connection for connecting to any container registry. Once logged in, the user can author follow up tasks to execute any tasks/scripts by leveraging the login already done by the Docker task. For example, you can use the Docker task to sign in to any Azure Container Registry and then use a subsequent task/script to build and push an image to this registry. 
+- **Integration with Docker registry service connection** - The task makes it easy to use a Docker registry service connection for connecting to any container registry. Once logged in, the user can author follow up tasks to execute any tasks/scripts by leveraging the login already done by the Docker task. For example, you can use the Docker task to sign in to any Azure Container Registry and then use a subsequent task/script to build and push an image to this registry.
 
-- **Metadata added as labels** - The task adds traceability-related metadata to the image in the form of the following labels -  
+- **Metadata added as labels** - The task adds traceability-related metadata to the image in the form of the following labels -
   - com.azure.dev.image.build.repository.uri
   - com.azure.dev.image.build.repository.name
   - com.azure.dev.image.build.sourcebranchname
@@ -72,7 +72,8 @@ Following are the key benefits of using Docker task as compared to directly usin
 </table>
 
 ## Login
-Following YAML snippet showcases container registry login using a Docker registry service connection - 
+
+Following YAML snippet showcases container registry login using a Docker registry service connection -
 
 ```YAML
 - task: Docker@2
@@ -83,7 +84,8 @@ Following YAML snippet showcases container registry login using a Docker registr
 ```
 
 ## Build and Push
-A convenience command called buildAndPush allows for build and push of images to container registry in a single command. The following YAML snippet is an example of building and pushing multiple tags of an image to multiple registries - 
+
+A convenience command called buildAndPush allows for build and push of images to container registry in a single command. The following YAML snippet is an example of building and pushing multiple tags of an image to multiple registries -
 
 ```YAML
 steps:
@@ -107,9 +109,9 @@ steps:
       tag2
 ```
 
-In the above snippet, the images ```contosoRepository:tag1``` and ```contosoRepository:tag2``` are built and pushed to the container registries corresponding to ```dockerRegistryServiceConnection1``` and ```dockerRegistryServiceConnection2```. 
+In the above snippet, the images `contosoRepository:tag1` and `contosoRepository:tag2` are built and pushed to the container registries corresponding to `dockerRegistryServiceConnection1` and `dockerRegistryServiceConnection2`.
 
-If one wants to build and push to a specific authenticated container registry instead of building and pushing to all authenticated container registries at once, the ```containerRegistry``` input can be explicitly specified along with ```command: buildAndPush``` as shown below - 
+If one wants to build and push to a specific authenticated container registry instead of building and pushing to all authenticated container registries at once, the `containerRegistry` input can be explicitly specified along with `command: buildAndPush` as shown below -
 
 ```YAML
 steps:
@@ -124,9 +126,9 @@ steps:
       tag2
 ```
 
-
 ## Logout
-Following YAML snippet showcases container registry logout using a Docker registry service connection - 
+
+Following YAML snippet showcases container registry logout using a Docker registry service connection -
 
 ```YAML
 - task: Docker@2
@@ -137,7 +139,8 @@ Following YAML snippet showcases container registry logout using a Docker regist
 ```
 
 ## Other commands and arguments
-The command and argument inputs can be used to pass additional arguments for build or push commands using docker client binary as shown below - 
+
+The command and argument inputs can be used to pass additional arguments for build or push commands using docker client binary as shown below -
 
 ```YAML
 steps:
@@ -177,4 +180,3 @@ Password:           Service principal key
 ## Open source
 
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks/tree/master/Tasks/DockerV2). Feedback and contributions are welcome.
-

@@ -8,11 +8,11 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 03/14/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
-
 # Git case sensitivity
+
 #### Azure Repos | Azure DevOps Server 2019 | TFS 2018
 
 The Windows and macOS file systems are case-insensitive (but case-preserving) by default.

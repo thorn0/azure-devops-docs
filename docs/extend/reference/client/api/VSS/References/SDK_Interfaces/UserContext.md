@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,17 +15,14 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-
 ### Members
 
-* `email`: string. 
+- `email`: string.
 
-* `id`: string. 
+- `id`: string.
 
-* `limitedAccess`: boolean. 
+- `limitedAccess`: boolean.
 
-* `name`: string. 
+- `name`: string.
 
-* `uniqueName`: string. 
-
+- `uniqueName`: string.

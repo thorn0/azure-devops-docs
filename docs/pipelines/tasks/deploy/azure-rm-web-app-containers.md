@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 03/13/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Azure Web App for Container task
@@ -41,7 +41,7 @@ variables:
   imageName: contoso.azurecr.io/aspnetcore:$(build.buildId)
   azureSubscription: Contoso
   # To ignore SSL error uncomment the following variable
-  # VSTS_ARM_REST_IGNORE_SSL_ERRORS: true 
+  # VSTS_ARM_REST_IGNORE_SSL_ERRORS: true
 
 steps:
 - task: AzureWebAppContainer@1

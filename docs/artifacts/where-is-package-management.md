@@ -3,7 +3,7 @@ title: Where is Package Management? | Azure DevOps
 description: Discover Azure Artifacts - the new home of Package Management in Azure DevOps.
 ms.technology: devops-artifacts
 ms.date: 05/10/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Package Management is now Azure Artifacts
@@ -18,7 +18,7 @@ Before the UI update, your Package Management home was in the **Packages** hub o
 
 ![Go to Azure Artifacts](media/goto-feed-hub.png)
 
-> If you're still using the previous navigation, or TFS, this is still how you would access your packages. 
+> If you're still using the previous navigation, or TFS, this is still how you would access your packages.
 
 The new update has introduced a new, top-level area that is the home of Package Management in Azure DevOps Services. This area is known as **Azure Artifacts** and can be reached simply by selecting the _Artifacts_ button on the left of the UI:
 

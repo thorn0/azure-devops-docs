@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,28 +15,26 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-An individual contributed menu item 
+An individual contributed menu item
 
 ### Members
 
-* `id`: string. Optional. Menu-item specific identifier
+- `id`: string. Optional. Menu-item specific identifier
 
-* `text`: string. Optional. Text to display in the menu item
+- `text`: string. Optional. Text to display in the menu item
 
-* `title`: string. Optional. Tooltip to display for the menu item
+- `title`: string. Optional. Tooltip to display for the menu item
 
-* `separator`: boolean. Optional. Set to true if this menu item is just a separator
+- `separator`: boolean. Optional. Set to true if this menu item is just a separator
 
-* `disabled`: boolean. Optional. Set to true if this menu item should be disabled
+- `disabled`: boolean. Optional. Set to true if this menu item should be disabled
 
-* `icon`: string. Optional. Url to an icon image or css class for the image cell
+- `icon`: string. Optional. Url to an icon image or css class for the image cell
 
-* `noIcon`: boolean. Optional. If true, do not render an icon or space for an icon.
+- `noIcon`: boolean. Optional. If true, do not render an icon or space for an icon.
 
-* `childItems`: [IContributedMenuItem](../../../VSS/References/VSS_SDK_Interfaces/IContributedMenuItem.md)[]. Optional. If this menu item has a sub menu, these are the contributed child items
+- `childItems`: [IContributedMenuItem](../../../VSS/References/VSS_SDK_Interfaces/IContributedMenuItem.md)[]. Optional. If this menu item has a sub menu, these are the contributed child items
 
-* `groupId`: string. Optional. ID of the menu group that this item should be placed in.
+- `groupId`: string. Optional. ID of the menu group that this item should be placed in.
 
-* `action`: (actionContext: any): void. Optional. Method invoked when the menu item is clicked.
-
+- `action`: (actionContext: any): void. Optional. Method invoked when the menu item is clicked.

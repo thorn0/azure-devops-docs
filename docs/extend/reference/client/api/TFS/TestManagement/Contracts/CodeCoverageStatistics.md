@@ -14,18 +14,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `covered`: number. Covered units
+- `covered`: number. Covered units
 
-* `delta`: number. Delta of coverage
+- `delta`: number. Delta of coverage
 
-* `isDeltaAvailable`: boolean. Is delta valid
+- `isDeltaAvailable`: boolean. Is delta valid
 
-* `label`: string. Label of coverage data (&quot;Blocks&quot;, &quot;Statements&quot;, &quot;Modules&quot;, etc.)
+- `label`: string. Label of coverage data (&quot;Blocks&quot;, &quot;Statements&quot;, &quot;Modules&quot;, etc.)
 
-* `position`: number. Position of label
+- `position`: number. Position of label
 
-* `total`: number. Total units
-
+- `total`: number. Total units

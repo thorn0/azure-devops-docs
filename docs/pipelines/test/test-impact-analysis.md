@@ -7,7 +7,7 @@ ms.custom: continuous-test, seodec18
 ms.author: pbora
 author: pboraMSFT
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Speed up testing by using Test Impact Analysis (TIA)
@@ -16,7 +16,7 @@ monikerRange: '>= tfs-2017'
 
 ::: moniker range="<= tfs-2018"
 
-> [!NOTE] 
+> [!NOTE]
 > Applies only to TFS 2017 Update 1 and later, and Visual Studio 2015 Update 3 and later.
 
 ::: moniker-end
@@ -38,14 +38,14 @@ Therefore, that test run will complete more quickly, if there is a failure you w
 
 Test Impact Analysis has:
 
-* **A robust test selection mechanism**. It includes existing impacted tests, previously failing tests, and newly added tests.
-* **Safe fallback**. For commits and scenarios that TIA cannot understand, it will fall back to running all tests. TIA is currently scoped to only managed code, and single machine topology. So, for example, if the code commit contains changes to HTML or CSS files, it cannot reason about them and will fall back to running all tests.
-* **Configurable overrides**. You can run all tests at a configured periodicity.
+- **A robust test selection mechanism**. It includes existing impacted tests, previously failing tests, and newly added tests.
+- **Safe fallback**. For commits and scenarios that TIA cannot understand, it will fall back to running all tests. TIA is currently scoped to only managed code, and single machine topology. So, for example, if the code commit contains changes to HTML or CSS files, it cannot reason about them and will fall back to running all tests.
+- **Configurable overrides**. You can run all tests at a configured periodicity.
 
 However, be aware of the following caveats when using TIA with Visual Studio 2015:
 
-* **Running tests in parallel**. In this case, tests will run serially.
-* **Running tests with code coverage enabled**. In this case, code coverage data will not get collected.
+- **Running tests in parallel**. In this case, tests will run serially.
+- **Running tests with code coverage enabled**. In this case, code coverage data will not get collected.
 
 ::: moniker range="<= tfs-2018"
 
@@ -57,25 +57,25 @@ However, be aware of the following caveats when using TIA with Visual Studio 201
 
 At present, TIA is supported for:
 
-* TFS 2017 Update 1 onwards, and Azure Pipelines
-* Version 2.* of the [Visual Studio Test](../tasks/test/vstest.md) task in the build pipeline
-* Build vNext, with multiple VSTest Tasks
-* VS2015 Update 3 onwards on the build agent
-* Local and hosted build agents
-* CI and in PR workflows
-* Git, GitHub, Other Git, TFVC repos (including partially mapped TFVC repositories with a [workaround](../../articles/test-impact-for-partially-mapped-tfvc-repositories.md))
-* IIS interactions (over REST, SOAP APIs), using HTTP/HTTPS protocols
-* Automated Tests
-* Single machine topology. Tests and app (SUT) must be running on the same machine.
-* Managed code (any .NET Framework app, any .NET service)
+- TFS 2017 Update 1 onwards, and Azure Pipelines
+- Version 2.\* of the [Visual Studio Test](../tasks/test/vstest.md) task in the build pipeline
+- Build vNext, with multiple VSTest Tasks
+- VS2015 Update 3 onwards on the build agent
+- Local and hosted build agents
+- CI and in PR workflows
+- Git, GitHub, Other Git, TFVC repos (including partially mapped TFVC repositories with a [workaround](../../articles/test-impact-for-partially-mapped-tfvc-repositories.md))
+- IIS interactions (over REST, SOAP APIs), using HTTP/HTTPS protocols
+- Automated Tests
+- Single machine topology. Tests and app (SUT) must be running on the same machine.
+- Managed code (any .NET Framework app, any .NET service)
 
 At present, TIA is **not** supported for:
 
-* Multi-machine topology (where the test is exercising an app deployed to a different machine)
-* Data driven tests
-* Test Adapter-specific parallel test execution
-* .NET Core
-* UWP
+- Multi-machine topology (where the test is exercising an app deployed to a different machine)
+- Data driven tests
+- Test Adapter-specific parallel test execution
+- .NET Core
+- UWP
 
 [More information about TIA scope and applications](https://blogs.msdn.microsoft.com/devops/2017/05/16/accelerated-continuous-testing-with-test-impact-analysis-part-2/)
 
@@ -83,7 +83,7 @@ At present, TIA is **not** supported for:
 
 ## Enable Test Impact Analysis
 
-TIA is supported through Version 2.* of the [Visual Studio Test](../tasks/test/vstest.md) task.
+TIA is supported through Version 2.\* of the [Visual Studio Test](../tasks/test/vstest.md) task.
 If your app is a single tier application, all you need to do is to check **Run only impacted tests** in the task UI.
 The Test Impact data collector is automatically configured. No additional steps are required.
 
@@ -131,20 +131,20 @@ TIA is integrated into existing test reporting at both the summary and details l
 
 You can influence the way that tests are either included or ignored during a test run:
 
-* **Through the VSTest task UI**. TIA can be conditioned to run all tests at a configured periodicity. Setting this option is recommended, and is the means to regulate test selection.
-* **By setting a build variable**. Even after TIA has been enabled in the VSTest task, it can be disabled for a specific build by setting the variable **DisableTestImpactAnalysis** to **true**. This override will force TIA to run all tests for that build. In subsequent builds, TIA will go back to optimized test selection.
+- **Through the VSTest task UI**. TIA can be conditioned to run all tests at a configured periodicity. Setting this option is recommended, and is the means to regulate test selection.
+- **By setting a build variable**. Even after TIA has been enabled in the VSTest task, it can be disabled for a specific build by setting the variable **DisableTestImpactAnalysis** to **true**. This override will force TIA to run all tests for that build. In subsequent builds, TIA will go back to optimized test selection.
 
 When TIA opens a commit and sees an unknown file type, it falls back to running all tests. While this is good from a safety perspective, tuning this behavior might be useful in some cases. For example:
 
-* Set the **TI\_IncludePathFilters** variable to specific paths to include only these paths in a repository for which you want TIA to apply. This is useful when teams use a shared repository. Setting this variable disables TIA for all other paths not included in the setting.
-* Set the **TIA\_IncludePathFilters** variable to specify file types that do not influence the outcome of tests and for which changes should be ignored. For example, to ignore changes to .csproj files set the variable to the value **!\*\*\\\*.csproj**.
+- Set the **TI_IncludePathFilters** variable to specific paths to include only these paths in a repository for which you want TIA to apply. This is useful when teams use a shared repository. Setting this variable disables TIA for all other paths not included in the setting.
+- Set the **TIA_IncludePathFilters** variable to specify file types that do not influence the outcome of tests and for which changes should be ignored. For example, to ignore changes to .csproj files set the variable to the value **!\*\*\\\*.csproj**.
 
 > Use the [minimatch pattern](../tasks/file-matching-patterns.md) when setting variables, and separate multiple items with a semicolon.
 
 To evaluate whether TIA is selecting the appropriate tests:
 
-* Manually validate the selection. A developer who knows how the SUT and tests are architected could manually validate the test selection using the [TIA reporting capabilities](#tiareports).
-* Run TIA selected tests and then all tests in sequence. In a build pipeline, use two test tasks - one that runs only impacted Tests (T1) and one that runs all tests (T2). If T1 passes, check that T2 passes as well. If there was a failing test in T1, check that T2 reports the same set of failures.
+- Manually validate the selection. A developer who knows how the SUT and tests are architected could manually validate the test selection using the [TIA reporting capabilities](#tiareports).
+- Run TIA selected tests and then all tests in sequence. In a build pipeline, use two test tasks - one that runs only impacted Tests (T1) and one that runs all tests (T2). If T1 passes, check that T2 passes as well. If there was a failing test in T1, check that T2 reports the same set of failures.
 
 [More information about TIA advanced configuration](https://blogs.msdn.microsoft.com/devops/2017/06/13/accelerated-continuous-testing-with-test-impact-analysis-part-3/)
 
@@ -152,7 +152,7 @@ To evaluate whether TIA is selecting the appropriate tests:
 
 TIA uses dependency maps of the following form.
 
-``` map
+```map
 TestMethod1
   dependency1
   dependency2
@@ -171,15 +171,15 @@ The mapping can even be approximate, and the set of tests you want to run can be
 
 The XML file should be checked into your repository, typically at the root level. Then set the build variable **TIA.UserMapFile** to point to it.
 For example, if the file is named **TIAmap.xml**,
-set the variable to **$(System.DefaultWorkingDirectory)/TIAmap.xml**.
+set the variable to **\$(System.DefaultWorkingDirectory)/TIAmap.xml**.
 
 For an example of the XML file format, see [TIA custom dependency mapping](https://blogs.msdn.microsoft.com/devops/2017/08/04/accelerated-continuous-testing-with-test-impact-analysis-part-4/).
 
 ## See Also
 
-* [TIA overview and VSTS integration](https://blogs.msdn.microsoft.com/devops/2017/03/02/accelerated-continuous-testing-with-test-impact-analysis-part-1/)
-* [TIA scope and applications](https://blogs.msdn.microsoft.com/devops/2017/05/16/accelerated-continuous-testing-with-test-impact-analysis-part-2/)
-* [TIA advanced configuration](https://blogs.msdn.microsoft.com/devops/2017/06/13/accelerated-continuous-testing-with-test-impact-analysis-part-3/)
-* [TIA custom dependency mapping](https://blogs.msdn.microsoft.com/devops/2017/08/04/accelerated-continuous-testing-with-test-impact-analysis-part-4/)
+- [TIA overview and VSTS integration](https://blogs.msdn.microsoft.com/devops/2017/03/02/accelerated-continuous-testing-with-test-impact-analysis-part-1/)
+- [TIA scope and applications](https://blogs.msdn.microsoft.com/devops/2017/05/16/accelerated-continuous-testing-with-test-impact-analysis-part-2/)
+- [TIA advanced configuration](https://blogs.msdn.microsoft.com/devops/2017/06/13/accelerated-continuous-testing-with-test-impact-analysis-part-3/)
+- [TIA custom dependency mapping](https://blogs.msdn.microsoft.com/devops/2017/08/04/accelerated-continuous-testing-with-test-impact-analysis-part-4/)
 
-[!INCLUDE [help-and-support-footer](includes/help-and-support-footer.md)] 
+[!INCLUDE [help-and-support-footer](includes/help-and-support-footer.md)]

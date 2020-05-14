@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -17,9 +17,8 @@ Defined in vss.d.ts
 
 ### Values
 
-* `Open` The request has been opened, but not yet responded to
+- `Open` The request has been opened, but not yet responded to
 
-* `Accepted` The request was accepted (extension installed or license assigned)
+- `Accepted` The request was accepted (extension installed or license assigned)
 
-* `Rejected` The request was rejected (extension not installed or license not assigned)
-
+- `Rejected` The request was rejected (extension not installed or license not assigned)

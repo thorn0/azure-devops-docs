@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `id`: string. 
+- `id`: string.
 
-* `inputs`: {[key: string]: string}. 
+- `inputs`: {[key: string]: string}.
 
-* `name`: string. 
+- `name`: string.
 
-* `version`: string. 
-
+- `version`: string.

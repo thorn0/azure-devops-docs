@@ -18,9 +18,8 @@ Extends: [TeamSettingsDataContractBase](../../../TFS/Work/Contracts/TeamSettings
 
 ### Members
 
-* `activities`: [Activity](../../../TFS/Work/Contracts/Activity.md)[]. Collection of capacities associated with the team member
+- `activities`: [Activity](../../../TFS/Work/Contracts/Activity.md)[]. Collection of capacities associated with the team member
 
-* `daysOff`: [DateRange](../../../TFS/Work/Contracts/DateRange.md)[]. The days off associated with the team member
+- `daysOff`: [DateRange](../../../TFS/Work/Contracts/DateRange.md)[]. The days off associated with the team member
 
-* `teamMember`: [Member](../../../TFS/Work/Contracts/Member.md). Shallow Ref to the associated team member
-
+- `teamMember`: [Member](../../../TFS/Work/Contracts/Member.md). Shallow Ref to the associated team member

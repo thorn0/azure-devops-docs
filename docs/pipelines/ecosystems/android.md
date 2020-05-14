@@ -21,9 +21,9 @@ Follow these instructions to set up a pipeline for a sample Android app.
 
 1. The code in the following repository is a simple Android app. To get started, fork this repo to your GitHub account.
 
-    ```
-    https://github.com/MicrosoftDocs/pipelines-android
-    ```
+   ```
+   https://github.com/MicrosoftDocs/pipelines-android
+   ```
 
 1. Sign in to your Azure DevOps organization and navigate to your project.
 
@@ -53,17 +53,17 @@ Gradle is a common build tool used for building Android projects. See the [Gradl
 ```yaml
 # https://docs.microsoft.com/azure/devops/pipelines/ecosystems/android
 pool:
-  vmImage: 'macOS-10.14'
+  vmImage: "macOS-10.14"
 
 steps:
-- task: Gradle@2
-  inputs:
-    workingDirectory: ''
-    gradleWrapperFile: 'gradlew'
-    gradleOptions: '-Xmx3072m'
-    publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
-    tasks: 'assembleDebug'
+  - task: Gradle@2
+    inputs:
+      workingDirectory: ""
+      gradleWrapperFile: "gradlew"
+      gradleOptions: "-Xmx3072m"
+      publishJUnitResults: false
+      testResultsFiles: "**/TEST-*.xml"
+      tasks: "assembleDebug"
 ```
 
 ### Adjust the build path
@@ -96,12 +96,12 @@ An APK must be signed to run on a device instead of an emulator. Zipaligning red
 ```yaml
 - task: AndroidSigning@2
   inputs:
-    apkFiles: '**/*.apk'
+    apkFiles: "**/*.apk"
     jarsign: true
-    jarsignerKeystoreFile: 'pathToYourKeystoreFile'
-    jarsignerKeystorePassword: '$(jarsignerKeystorePassword)'
-    jarsignerKeystoreAlias: 'yourKeystoreAlias'
-    jarsignerKeyPassword: '$(jarsignerKeyPassword)'
+    jarsignerKeystoreFile: "pathToYourKeystoreFile"
+    jarsignerKeystorePassword: "$(jarsignerKeystorePassword)"
+    jarsignerKeystoreAlias: "yourKeystoreAlias"
+    jarsignerKeyPassword: "$(jarsignerKeyPassword)"
     zipalign: true
 ```
 
@@ -111,9 +111,9 @@ An APK must be signed to run on a device instead of an emulator. Zipaligning red
 
 > Note: The Android Emulator is currently available only on the **Hosted macOS** agent.
 
-Create the [Bash](../tasks/utility/bash.md) Task and copy paste the code below in order to install and run the emulator. 
+Create the [Bash](../tasks/utility/bash.md) Task and copy paste the code below in order to install and run the emulator.
 Don't forget to arrange the emulator parameters to fit your testing environment.
- The emulator will be started as a background process and available in subsequent tasks.
+The emulator will be started as a background process and available in subsequent tasks.
 
 ```bash
 #!/usr/bin/env bash
@@ -159,8 +159,8 @@ to store your APK with the build record or test and deploy it in subsequent pipe
 ```yaml
 - task: CopyFiles@2
   inputs:
-    contents: '**/*.apk'
-    targetFolder: '$(build.artifactStagingDirectory)'
+    contents: "**/*.apk"
+    targetFolder: "$(build.artifactStagingDirectory)"
 - task: PublishBuildArtifacts@1
 ```
 
@@ -195,9 +195,9 @@ task to release a new Android app version to the Google Play store.
 ```yaml
 - task: GooglePlayRelease@2
   inputs:
-    apkFile: '**/*.apk'
-    serviceEndpoint: 'yourGooglePlayServiceConnectionName'
-    track: 'internal'
+    apkFile: "**/*.apk"
+    serviceEndpoint: "yourGooglePlayServiceConnectionName"
+    track: "internal"
 ```
 
 ::: moniker-end
@@ -212,10 +212,10 @@ task to promote a previously-released Android app update from one track to anoth
 ```yaml
 - task: GooglePlayPromote@2
   inputs:
-    packageName: 'com.yourCompany.appPackageName'
-    serviceEndpoint: 'yourGooglePlayServiceConnectionName'
-    sourceTrack: 'internal'
-    destinationTrack: 'alpha'
+    packageName: "com.yourCompany.appPackageName"
+    serviceEndpoint: "yourGooglePlayServiceConnectionName"
+    sourceTrack: "internal"
+    destinationTrack: "alpha"
 ```
 
 ::: moniker-end
@@ -230,17 +230,17 @@ task to increase the rollout percentage of an app that was previously released t
 ```yaml
 - task: GooglePlayIncreaseRollout@1
   inputs:
-    packageName: 'com.yourCompany.appPackageName'
-    serviceEndpoint: 'yourGooglePlayServiceConnectionName'
-    userFraction: '0.5' # 0.0 to 1.0 (0% to 100%)
+    packageName: "com.yourCompany.appPackageName"
+    serviceEndpoint: "yourGooglePlayServiceConnectionName"
+    userFraction: "0.5" # 0.0 to 1.0 (0% to 100%)
 ```
 
 ::: moniker-end
 
 ## Related extensions
 
-- [Codified Security](https://marketplace.visualstudio.com/items?itemName=codifiedsecurity.CodifiedSecurity) (Codified Security)  
-- [Google Play](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play) (Microsoft)  
-- [Mobile App Tasks for iOS and Android](https://marketplace.visualstudio.com/items?itemName=vs-publisher-473885.motz-mobile-buildtasks) (James Montemagno)  
-- [Mobile Testing Lab](https://marketplace.visualstudio.com/items?itemName=Perfecto.PerfectoCQ) (Perfecto Mobile)  
-- [React Native](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.react-native-extension) (Microsoft)  
+- [Codified Security](https://marketplace.visualstudio.com/items?itemName=codifiedsecurity.CodifiedSecurity) (Codified Security)
+- [Google Play](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play) (Microsoft)
+- [Mobile App Tasks for iOS and Android](https://marketplace.visualstudio.com/items?itemName=vs-publisher-473885.motz-mobile-buildtasks) (James Montemagno)
+- [Mobile Testing Lab](https://marketplace.visualstudio.com/items?itemName=Perfecto.PerfectoCQ) (Perfecto Mobile)
+- [React Native](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.react-native-extension) (Microsoft)

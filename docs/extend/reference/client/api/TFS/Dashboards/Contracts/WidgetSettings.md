@@ -13,11 +13,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Dashboards/WidgetContracts`
 
-
 ### Members
 
-* `name`: string. 
+- `name`: string.
 
-* `size`: [WidgetSize](./WidgetSize.md)
+- `size`: [WidgetSize](./WidgetSize.md)
 
-* `customSettings`: [CustomSettings](./CustomSettings.md). 
+- `customSettings`: [CustomSettings](./CustomSettings.md).

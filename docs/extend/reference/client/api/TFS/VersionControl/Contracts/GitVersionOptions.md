@@ -15,6 +15,6 @@ Module path: `TFS/VersionControl/Contracts`
 
 ### Values
 
-* `None` Not specified
-* `PreviousChange` Commit that changed item prior to the current version
-* `FirstParent` First parent of commit (HEAD^)
+- `None` Not specified
+- `PreviousChange` Commit that changed item prior to the current version
+- `FirstParent` First parent of commit (HEAD^)

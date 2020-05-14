@@ -7,21 +7,23 @@ ms.technology: devops-agile
 ms.author: kaelli
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= tfs-2013'
-ms.date: 08/16/2019  
+monikerRange: ">= tfs-2013"
+ms.date: 08/16/2019
 ---
 
-# Query by field value comparisons   
+# Query by field value comparisons
 
 [!INCLUDE [temp](../includes/version-vsts-tfs-all-versions.md)]
 
-You can create queries based on how one field's value compares to another using the comparison field operators. This is useful to filter work items based on: 
+You can create queries based on how one field's value compares to another using the comparison field operators. This is useful to filter work items based on:
+
 - Is the person who created the work item the same as or different than the person assigned to it, or who closed it
 - Which Tasks were closed before or after their Target Date.
 
-## Supported data types 
+## Supported data types
 
-You can use the comparison field operators&mdash;`=[Field], <>[Field], >[Field], <[Field], >=[Field], <=[Field]`&mdash;with the following field data types. The data type you select for the **Field** and the **Value** must match. 
+You can use the comparison field operators&mdash;`=[Field], <>[Field], >[Field], <[Field], >=[Field], <=[Field]`&mdash;with the following field data types. The data type you select for the **Field** and the **Value** must match.
+
 - Boolean (supports `=[Field], <>[Field]`
 - Date/Time
 - Double, Integer
@@ -30,9 +32,9 @@ You can use the comparison field operators&mdash;`=[Field], <>[Field], >[Field],
 - String (excluding Tags)
 
 > [!NOTE]  
-> Some combinations of data type and comparison field operator might not make sense to use, such as `Title >=[Field]` or `Assigned To <=[Field]`. 
+> Some combinations of data type and comparison field operator might not make sense to use, such as `Title >=[Field]` or `Assigned To <=[Field]`.
 
-## Sample filters 
+## Sample filters
 
 <table width="100%">
 <tbody valign="top">
@@ -59,20 +61,17 @@ Closed tasks completed prior to their target date
 <code>Target Date <strong> <=[Field] </strong> Closed Date</code><br/>State<strong> = </strong> Closed</code><br/></td>
 </tr>
 </tbody>
-</table>  
-
+</table>
 
 <a id="counts"/>
 
-
-
 ## Fields that support field comparison
 
-The following table provides an index to those fields that support field comparison queries. 
+The following table provides an index to those fields that support field comparison queries.
 
 > [!NOTE]  
 > Not all fields listed are supported for all projects or work item types. However, you can customize a process or work item type by adding custom fields which you can use for the purposes of queries and field comparisons. To learn more, see [Add a custom field to a work item type (Inheritance process)](../../organizations/settings/work/add-custom-field.md) or [Add or modify a field (Online XML process)](../../reference/add-modify-field.md).
- 
+
 <table>
 <tbody valign="top">
 <tr>
@@ -250,15 +249,13 @@ The following table provides an index to those fields that support field compari
 </tbody>
 </table>
 
-
-## Related articles 
+## Related articles
 
 - [Query index quick reference](query-index-quick-ref.md)
 - [Query by title, ID, or description](titles-ids-descriptions.md)
-- [Query by assignment or workflow changes](query-by-workflow-changes.md)  
-- [Query by date or current iteration](query-by-date-or-current-iteration.md)   
-- [Query a numeric field](query-numeric.md)  
-- [Query by picklist value](planning-ranking-priorities.md)  
-
+- [Query by assignment or workflow changes](query-by-workflow-changes.md)
+- [Query by date or current iteration](query-by-date-or-current-iteration.md)
+- [Query a numeric field](query-numeric.md)
+- [Query by picklist value](planning-ranking-priorities.md)
 
 [!INCLUDE [temp](../includes/rest-apis-queries.md)]

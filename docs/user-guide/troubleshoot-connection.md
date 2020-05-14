@@ -2,14 +2,14 @@
 title: Troubleshoot connecting project
 titleSuffix: Azure DevOps
 ms.custom: seodec18
-description: Follow these steps to resolve connection issues with Azure DevOps Services & Team Foundation Server  
+description: Follow these steps to resolve connection issues with Azure DevOps Services & Team Foundation Server
 ms.technology: devops-new-user
-ms.assetid: 
+ms.assetid:
 ms.author: chcomley
 author: chcomley
 ms.topic: troubleshooting
 ms.date: 04/22/2019
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Troubleshoot connecting to a project
@@ -37,14 +37,13 @@ As a first step in resolving connectivity issues with Azure DevOps, complete the
 Two types of identities can sign in: Microsoft accounts and Azure Active Directory (Azure AD) accounts. Depending on your account, you might experience one of the following errors.
 
 > 401 - Not Authorized
-> 
-> [!div class="mx-imgBorder"]
-> ![Troubleshoot Azure DevOps connection 401 error 1](media/troubleshoot-connection/401_notauthorized.png)
+>
+> [!div class="mx-imgBorder"] > ![Troubleshoot Azure DevOps connection 401 error 1](media/troubleshoot-connection/401_notauthorized.png)
 
-The most common error page is the *401 Not Authorized* error, which occurs when your identity doesn't have permissions to enter an organization. Common reasons for the error include:
+The most common error page is the _401 Not Authorized_ error, which occurs when your identity doesn't have permissions to enter an organization. Common reasons for the error include:
 
-* Your identity isn't a member of the organization.
-* Your identity has an invalid or missing license assignment.
+- Your identity isn't a member of the organization.
+- Your identity has an invalid or missing license assignment.
 
 If you think you're a member of the organization but are blocked by this error page, [contact customer support](https://support.microsoft.com/).
 
@@ -53,11 +52,10 @@ If you think you're a member of the organization but are blocked by this error p
 Your work or school Azure AD account doesn't have access, but your personal Microsoft account does.
 
 > 401 - Work or school, or Personal account
-> 
-> [!div class="mx-imgBorder"]
-> ![troubleshoot Azure DevOps connection 401 error 2](media/troubleshoot-connection/401_AAD.png)
+>
+> [!div class="mx-imgBorder"] > ![troubleshoot Azure DevOps connection 401 error 2](media/troubleshoot-connection/401_AAD.png)
 
- A highly specific 401 error case. In this case, both a personal Microsoft account and a work or school account (Azure AD) that have the same sign-in address exist. You've signed in with your work or school account, but your personal account is the identity with access to the organization.
+A highly specific 401 error case. In this case, both a personal Microsoft account and a work or school account (Azure AD) that have the same sign-in address exist. You've signed in with your work or school account, but your personal account is the identity with access to the organization.
 
 ### Mitigation
 
@@ -73,9 +71,8 @@ To sign out of your current work or school Azure AD account, select **Sign in wi
 Your personal Microsoft account doesn't have access, but your Azure AD account does. This scenario is an opposite version of the 401 error page. In this case, the personal account (Microsoft account identity) doesn't have access to the organization and the work or school account (Azure AD identity) does. The same guidance from Scenario 1 applies, but in reverse.
 
 > 401 - Work or school, or Personal account
-> 
-> [!div class="mx-imgBorder"]
-> ![troubleshoot Azure DevOps connection 401 error 3](media/troubleshoot-connection/401_MSA.png)
+>
+> [!div class="mx-imgBorder"] > ![troubleshoot Azure DevOps connection 401 error 3](media/troubleshoot-connection/401_MSA.png)
 
 ### Mitigation
 
@@ -91,7 +88,7 @@ Here's a list of the most frequently reported connection problems and what to do
 
 1. Verify that you have the required permissions.
 
-    If the errors that you receive indicate read-only or blocked actions, you might not have permissions to act on the data.
+   If the errors that you receive indicate read-only or blocked actions, you might not have permissions to act on the data.
 
 2. Verify that your computer is connected to the network and that it can access network resources.
 
@@ -107,12 +104,12 @@ For additional troubleshooting tips, see [TF31002: Unable to connect to this Tea
 
 ## Switch organizations
 
-When you use two or more organizations that are linked to Azure AD, such as organizations  created in the Azure portal, the sign-out function might not work as expected. For example, you can't switch between different organizations to connect to multiple organizations that are linked to directory tenants.
+When you use two or more organizations that are linked to Azure AD, such as organizations created in the Azure portal, the sign-out function might not work as expected. For example, you can't switch between different organizations to connect to multiple organizations that are linked to directory tenants.
 
 When this problem occurs, a blank screen flashes several times. Then, one of the following error messages appears after you connect to or add a new connection in the **Connect to Team Foundation Server** dialog box:
 
 > TF31003: Either you have not entered the necessary credentials, or your user account does not have permission to connect to the Team Foundation Server
-> 
+>
 > TF31002: Unable to connect to this Team Foundation Server
 
 To resolve this issue, apply Visual Studio 2013.2 or install a later version from the [Visual Studio download website](https://visualstudio.microsoft.com/downloads).
@@ -125,7 +122,7 @@ Another solution is to delete your browser cookies. For more information, see th
 
 ## Connect to TFS with Secure Sockets Layer
 
-If you connect to a TFS instance that has Secure Sockets Layer (SSL) configured, you must install a certificate and clear the client cache. For details, see [Set up HTTPS with Secure Sockets Layer (SSL) for TFS - Configuring client computers](/azure/devops/server/admin/setup-secure-sockets-layer#config-client-computers). 
+If you connect to a TFS instance that has Secure Sockets Layer (SSL) configured, you must install a certificate and clear the client cache. For details, see [Set up HTTPS with Secure Sockets Layer (SSL) for TFS - Configuring client computers](/azure/devops/server/admin/setup-secure-sockets-layer#config-client-computers).
 
 ## Clear the cache on client computers
 
@@ -137,14 +134,14 @@ When the on-premises TFS configuration changes, such as when you move or split a
 
 3. Open a browser and go to one of the following folders, depending on the operating system that's running on your computer:
 
-    - **Windows 10**
-        *Drive*:\\Users\<i>UserName</i>\AppData\Local\Microsoft\Team Foundation\6.0\Cache
+   - **Windows 10**
+     _Drive_:\\Users\<i>UserName</i>\AppData\Local\Microsoft\Team Foundation\6.0\Cache
 
-    - **Windows 8**
-        *Drive*:\\Users\<i>UserName</i>\AppData\Local\Microsoft\Team Foundation\4.0\Cache  
+   - **Windows 8**
+     _Drive_:\\Users\<i>UserName</i>\AppData\Local\Microsoft\Team Foundation\4.0\Cache
 
-    - **Windows 7 or Windows Vista**
-        *Drive*:\\Users\<i>UserName</i>\AppData\Local\Microsoft\Team Foundation\2.0\Cache
+   - **Windows 7 or Windows Vista**
+     _Drive_:\\Users\<i>UserName</i>\AppData\Local\Microsoft\Team Foundation\2.0\Cache
 
 4. Delete the contents of the Cache directory, including all subfolders.
 

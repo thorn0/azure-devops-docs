@@ -14,42 +14,40 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `assignTime`: Date. 
+- `assignTime`: Date.
 
-* `definition`: [TaskOrchestrationOwner](../../../TFS/DistributedTask/Contracts/TaskOrchestrationOwner.md). 
+- `definition`: [TaskOrchestrationOwner](../../../TFS/DistributedTask/Contracts/TaskOrchestrationOwner.md).
 
-* `demands`: any[]. 
+- `demands`: any[].
 
-* `finishTime`: Date. 
+- `finishTime`: Date.
 
-* `hostId`: string. 
+- `hostId`: string.
 
-* `jobId`: string. 
+- `jobId`: string.
 
-* `lockedUntil`: Date. 
+- `lockedUntil`: Date.
 
-* `matchedAgents`: [TaskAgentReference](../../../TFS/DistributedTask/Contracts/TaskAgentReference.md)[]. 
+- `matchedAgents`: [TaskAgentReference](../../../TFS/DistributedTask/Contracts/TaskAgentReference.md)[].
 
-* `owner`: [TaskOrchestrationOwner](../../../TFS/DistributedTask/Contracts/TaskOrchestrationOwner.md). 
+- `owner`: [TaskOrchestrationOwner](../../../TFS/DistributedTask/Contracts/TaskOrchestrationOwner.md).
 
-* `planId`: string. 
+- `planId`: string.
 
-* `planType`: string. 
+- `planType`: string.
 
-* `queueTime`: Date. 
+- `queueTime`: Date.
 
-* `receiveTime`: Date. 
+- `receiveTime`: Date.
 
-* `requestId`: number. 
+- `requestId`: number.
 
-* `reservedAgent`: [TaskAgentReference](../../../TFS/DistributedTask/Contracts/TaskAgentReference.md). 
+- `reservedAgent`: [TaskAgentReference](../../../TFS/DistributedTask/Contracts/TaskAgentReference.md).
 
-* `result`: [TaskResult](../../../TFS/DistributedTask/Contracts/TaskResult.md). 
+- `result`: [TaskResult](../../../TFS/DistributedTask/Contracts/TaskResult.md).
 
-* `scopeId`: string. 
+- `scopeId`: string.
 
-* `serviceOwner`: string. 
-
+- `serviceOwner`: string.

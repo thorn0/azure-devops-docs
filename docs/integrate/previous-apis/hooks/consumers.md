@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Service Hook Consumers | REST API Reference for Team Foundation Server
 description: Work with service hook consumers programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: B05297FC-F542-42FD-ACDA-E9734974ACBC
@@ -92,13 +92,9 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/zendesk/actions/createPrivateComment",
           "name": "Create a private comment in a ticket",
           "description": "Create a private comment in a ticket. <a href='https://go.microsoft.com/fwlink/?LinkId=396756'>Learn more.</a>",
-          "supportedEventTypes": [
-            "workitem.commented"
-          ],
+          "supportedEventTypes": ["workitem.commented"],
           "supportedResourceVersions": {
-            "workitem.commented": [
-              "1.0-preview.1"
-            ]
+            "workitem.commented": ["1.0-preview.1"]
           },
           "inputDescriptors": []
         }
@@ -122,19 +118,11 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/zapier/actions/sendNotification",
           "name": "Send notification",
           "description": "Send event information to the specified Zapier subscription URL.",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "supportedResourceVersions": {
-            "workitem.commented": [
-              "1.0-preview.1"
-            ],
-            "workitem.created": [
-              "1.0-preview.1"
-            ],
-            "workitem.updated": [
-              "1.0-preview.1"
-            ]
+            "workitem.commented": ["1.0-preview.1"],
+            "workitem.created": ["1.0-preview.1"],
+            "workitem.updated": ["1.0-preview.1"]
           },
           "allowResourceVersionOverride": true,
           "inputDescriptors": [
@@ -169,9 +157,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/webHooks/actions/httpRequest",
           "name": "Post via HTTP",
           "description": "This action posts a JSON object representation of the event to the specified URL. Secure, HTTPS endpoints are recommended due to the potential for private data in the event payload. <a href='https://go.microsoft.com/fwlink/?LinkID=390531'>Learn More</a>",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "supportedResourceVersions": {},
           "allowResourceVersionOverride": true,
           "inputDescriptors": [
@@ -354,17 +340,10 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/userVoice/actions/sendLinkedWorkItemEvent",
           "name": "Send linked work item event",
           "description": "Send linked work item events to UserVoice",
-          "supportedEventTypes": [
-            "workitem.created",
-            "workitem.updated"
-          ],
+          "supportedEventTypes": ["workitem.created", "workitem.updated"],
           "supportedResourceVersions": {
-            "workitem.created": [
-              "1.0-preview.1"
-            ],
-            "workitem.updated": [
-              "1.0-preview.1"
-            ]
+            "workitem.created": ["1.0-preview.1"],
+            "workitem.updated": ["1.0-preview.1"]
           },
           "inputDescriptors": [
             {
@@ -426,9 +405,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/trello/actions/createCard",
           "name": "Create a card",
           "description": "This action creates a card on an existing list in Trello. A card can represent a task, issue, event, or just about anything. A card's state is typically determined by what list it is on. <a href='https://go.microsoft.com/fwlink/?LinkID=390530'>Learn More</a>",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "supportedResourceVersions": {},
           "inputDescriptors": [
             {
@@ -444,9 +421,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
                 "minLength": 8,
                 "maxLength": 64
               },
-              "dependencyInputIds": [
-                "userToken"
-              ],
+              "dependencyInputIds": ["userToken"],
               "hasDynamicValueInformation": true
             },
             {
@@ -462,9 +437,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
                 "minLength": 9,
                 "maxLength": 64
               },
-              "dependencyInputIds": [
-                "boardId"
-              ],
+              "dependencyInputIds": ["boardId"],
               "hasDynamicValueInformation": true
             },
             {
@@ -525,9 +498,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/trello/actions/createList",
           "name": "Create a list",
           "description": "This action creates a list on an existing board in Trello. A list is used to organize cards on a board and typically represents a state. <a href='https://go.microsoft.com/fwlink/?LinkID=390530'>Learn More</a>",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "supportedResourceVersions": {},
           "inputDescriptors": [
             {
@@ -543,9 +514,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
                 "minLength": 8,
                 "maxLength": 64
               },
-              "dependencyInputIds": [
-                "userToken"
-              ],
+              "dependencyInputIds": ["userToken"],
               "hasDynamicValueInformation": true
             },
             {
@@ -583,9 +552,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/myGet/actions/publishPackage",
           "name": "Publish NuGet package to MyGet",
           "description": "Publish NuGet package produced in a build to a MyGet feed",
-          "supportedEventTypes": [
-            "build.complete"
-          ],
+          "supportedEventTypes": ["build.complete"],
           "inputDescriptors": [
             {
               "id": "feedId",
@@ -621,9 +588,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/myGet/actions/triggerBuild",
           "name": "Trigger a MyGet build",
           "description": "Trigger a MyGet build, which is based on several conventions. <a href='http://docs.myget.org/docs/reference/build-services'>Learn more</a>.",
-          "supportedEventTypes": [
-            "git.push"
-          ],
+          "supportedEventTypes": ["git.push"],
           "inputDescriptors": [
             {
               "id": "feedId",
@@ -697,9 +662,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/kato/actions/postEventToRoom",
           "name": "Post event to room",
           "description": "Posts an event to a Kato room. <a href='https://go.microsoft.com/fwlink/?LinkId=393614'>Learn more.</a>",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "inputDescriptors": []
         }
       ]
@@ -757,11 +720,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/jenkins/actions/triggerGenericBuild",
           "name": "Trigger generic build",
           "description": "Triggers a generic Jenkins build, invoking the Jenkins build URL. Secure, HTTPS endpoints are recommended due to the potential for private data in the event payload. <a href='https://go.microsoft.com/fwlink/?LinkId=393616'>Learn more.</a>",
-          "supportedEventTypes": [
-            "git.push",
-            "build.complete",
-            "tfvc.checkin"
-          ],
+          "supportedEventTypes": ["git.push", "build.complete", "tfvc.checkin"],
           "supportedResourceVersions": {},
           "inputDescriptors": [
             {
@@ -775,11 +734,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
                 "dataType": "string",
                 "isRequired": true
               },
-              "dependencyInputIds": [
-                "serverBaseUrl",
-                "username",
-                "password"
-              ],
+              "dependencyInputIds": ["serverBaseUrl", "username", "password"],
               "hasDynamicValueInformation": true
             },
             {
@@ -824,9 +779,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/jenkins/actions/triggerGitBuild",
           "name": "Trigger Git build",
           "description": "Triggers a build configured to use a Git repository using the <a href='https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin'>Jenkins Git Plugin</a>. Secure, HTTPS endpoints are recommended due to the potential for private data in the event payload.",
-          "supportedEventTypes": [
-            "git.push"
-          ],
+          "supportedEventTypes": ["git.push"],
           "supportedResourceVersions": {},
           "inputDescriptors": []
         }
@@ -848,9 +801,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/hubot/actions/postMessage",
           "name": "Post a message",
           "description": "This action sends a team room message to the specified URL (typically this URL will end with /hubot/messagehook). A strong user name and password are highly recommended. <a href='https://go.microsoft.com/fwlink/?LinkID=402677'>Learn more.</a>",
-          "supportedEventTypes": [
-            "message.posted"
-          ],
+          "supportedEventTypes": ["message.posted"],
           "supportedResourceVersions": {},
           "inputDescriptors": [
             {
@@ -899,9 +850,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/hubot/actions/postMessageToQueue",
           "name": "Post a message to an Azure Service Bus Queue",
           "description": "This action sends a team room message to the specified Azure Service Bus queue. <a href='https://go.microsoft.com/fwlink/?LinkID=402677'>Learn more.</a>",
-          "supportedEventTypes": [
-            "message.posted"
-          ],
+          "supportedEventTypes": ["message.posted"],
           "supportedResourceVersions": {},
           "inputDescriptors": [
             {
@@ -932,9 +881,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
                 "minLength": 1,
                 "maxLength": 50
               },
-              "dependencyInputIds": [
-                "connectionString"
-              ],
+              "dependencyInputIds": ["connectionString"],
               "hasDynamicValueInformation": true
             }
           ]
@@ -970,9 +917,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/hipChat/actions/postMessageToRoom",
           "name": "Post a message to a room",
           "description": "Post a message about the event to a room in HipChat. <a href='https://go.microsoft.com/fwlink/?LinkId=392098'>Learn more.</a>",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "supportedResourceVersions": {},
           "inputDescriptors": [
             {
@@ -988,9 +933,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
                 "minLength": 1,
                 "maxLength": 50
               },
-              "dependencyInputIds": [
-                "authToken"
-              ],
+              "dependencyInputIds": ["authToken"],
               "hasDynamicValueInformation": true
             },
             {
@@ -1111,9 +1054,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/flowdock/actions/postMessageToChat",
           "name": "Post a message to a team chat",
           "description": "Post a message about the event to a team chat in Flowdock. <a href='https://go.microsoft.com/fwlink/?LinkId=393615'>Learn more.</a>",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "supportedResourceVersions": {},
           "inputDescriptors": [
             {
@@ -1150,9 +1091,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/flowdock/actions/postMessageToTeamInbox",
           "name": "Post a message to a team inbox",
           "description": "Post a message about the event to a team inbox in Flowdock. <a href='https://go.microsoft.com/fwlink/?LinkId=393615'>Learn more.</a>",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "supportedResourceVersions": {},
           "inputDescriptors": [
             {
@@ -1276,9 +1215,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/campfire/actions/postMessageToRoom",
           "name": "Post a message to a room",
           "description": "Post a message about the event to a room in Campfire. <a href='https://go.microsoft.com/fwlink/?LinkID=393613'>Learn more.</a>",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "supportedResourceVersions": {},
           "inputDescriptors": [
             {
@@ -1293,10 +1230,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
                 "isRequired": true,
                 "minValue": 1
               },
-              "dependencyInputIds": [
-                "accountName",
-                "authToken"
-              ],
+              "dependencyInputIds": ["accountName", "authToken"],
               "hasDynamicValueInformation": true
             },
             {
@@ -1345,9 +1279,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/azureServiceBus/actions/serviceBusNotificationHubSend",
           "name": "Send a message to a Notification Hub",
           "description": "This action sends a generic, template notification to the specified Azure Notification Hub. <a href='https://go.microsoft.com/fwlink/?LinkID=392636'>Learn More</a>",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "supportedResourceVersions": {},
           "allowResourceVersionOverride": true,
           "inputDescriptors": [
@@ -1365,9 +1297,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
                 "minLength": 1,
                 "maxLength": 50
               },
-              "dependencyInputIds": [
-                "connectionString"
-              ],
+              "dependencyInputIds": ["connectionString"],
               "hasDynamicValueInformation": true
             },
             {
@@ -1390,9 +1320,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/azureServiceBus/actions/serviceBusQueueSend",
           "name": "Send a message to a Service Bus Queue",
           "description": "This action sends a JSON string representation of the event to the specified Azure Service Bus queue. <a href='https://go.microsoft.com/fwlink/?LinkID=392636'>Learn More</a>",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "supportedResourceVersions": {},
           "allowResourceVersionOverride": true,
           "inputDescriptors": [
@@ -1410,9 +1338,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
                 "minLength": 1,
                 "maxLength": 50
               },
-              "dependencyInputIds": [
-                "connectionString"
-              ],
+              "dependencyInputIds": ["connectionString"],
               "hasDynamicValueInformation": true
             },
             {
@@ -1529,9 +1455,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/azureServiceBus/actions/serviceBusTopicSend",
           "name": "Send a message to a Service Bus Topic",
           "description": "This action sends a JSON string representation of the event to the specified Azure Service Bus topic. <a href='https://go.microsoft.com/fwlink/?LinkID=392636'>Learn More</a>",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "supportedResourceVersions": {},
           "allowResourceVersionOverride": true,
           "inputDescriptors": [
@@ -1549,9 +1473,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
                 "minLength": 1,
                 "maxLength": 50
               },
-              "dependencyInputIds": [
-                "connectionString"
-              ],
+              "dependencyInputIds": ["connectionString"],
               "hasDynamicValueInformation": true
             },
             {
@@ -1709,9 +1631,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/azureStorageQueue/actions/enqueue",
           "name": "Insert a message in a Storage Queue",
           "description": "This action inserts a JSON string representation of the event to the specified Azure storage queue. <a href='https://go.microsoft.com/fwlink/?LinkID=390532'>Learn More</a>",
-          "supportedEventTypes": [
-            "*"
-          ],
+          "supportedEventTypes": ["*"],
           "supportedResourceVersions": {},
           "allowResourceVersionOverride": true,
           "inputDescriptors": [
@@ -1891,9 +1811,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
           "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/appVeyor/actions/triggerBuild",
           "name": "Trigger a AppVeyor build",
           "description": "Trigger a AppVeyor build <a href='https://go.microsoft.com/fwlink/?LinkID=396758'>Learn more</a>",
-          "supportedEventTypes": [
-            "git.push"
-          ],
+          "supportedEventTypes": ["git.push"],
           "inputDescriptors": [
             {
               "id": "webHookId",
@@ -1926,15 +1844,16 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
 }
 ```
 
-
 ## Get a consumer
 
 | Parameter | Type | Required | Notes |
-|:----------|:-----|:---------|:------------|
+| :-------- | :--- | :------- | :---- |
+
+
 | URL
 | consumerId | String | Yes | Identifier of the consumer. |
 | Query
-| api-version| string |     | [Version](../../concepts/rest-api-versioning.md) of the API to use. |
+| api-version| string | | [Version](../../concepts/rest-api-versioning.md) of the API to use. |
 
 #### Sample request
 
@@ -2003,20 +1922,15 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers/zendesk?api-vers
       "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/zendesk/actions/createPrivateComment",
       "name": "Create a private comment in a ticket",
       "description": "Create a private comment in a ticket. <a href='https://go.microsoft.com/fwlink/?LinkId=396756'>Learn more.</a>",
-      "supportedEventTypes": [
-        "workitem.commented"
-      ],
+      "supportedEventTypes": ["workitem.commented"],
       "supportedResourceVersions": {
-        "workitem.commented": [
-          "1.0-preview.1"
-        ]
+        "workitem.commented": ["1.0-preview.1"]
       },
       "inputDescriptors": []
     }
   ]
 }
 ```
-
 
 ## Get a list of consumer actions
 
@@ -2038,20 +1952,15 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers/zendesk/actions?
       "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/zendesk/actions/createPrivateComment",
       "name": "Create a private comment in a ticket",
       "description": "Create a private comment in a ticket. <a href='https://go.microsoft.com/fwlink/?LinkId=396756'>Learn more.</a>",
-      "supportedEventTypes": [
-        "workitem.commented"
-      ],
+      "supportedEventTypes": ["workitem.commented"],
       "supportedResourceVersions": {
-        "workitem.commented": [
-          "1.0-preview.1"
-        ]
+        "workitem.commented": ["1.0-preview.1"]
       },
       "inputDescriptors": []
     }
   ]
 }
 ```
-
 
 ## Get a consumer action
 
@@ -2070,16 +1979,10 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers/zendesk/actions/
   "url": "https://mytfsserver/DefaultCollection/_apis/hooks/consumers/zendesk/actions/createPrivateComment",
   "name": "Create a private comment in a ticket",
   "description": "Create a private comment in a ticket. <a href='https://go.microsoft.com/fwlink/?LinkId=396756'>Learn more.</a>",
-  "supportedEventTypes": [
-    "workitem.commented"
-  ],
+  "supportedEventTypes": ["workitem.commented"],
   "supportedResourceVersions": {
-    "workitem.commented": [
-      "1.0-preview.1"
-    ]
+    "workitem.commented": ["1.0-preview.1"]
   },
   "inputDescriptors": []
 }
 ```
-
-

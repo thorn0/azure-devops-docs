@@ -17,5 +17,4 @@ Extends: [WorkItemTrackingResource](../../../TFS/WorkItemTracking/Contracts/Work
 
 ### Members
 
-* `dependentFields`: [WorkItemFieldReference](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldReference.md)[]. 
-
+- `dependentFields`: [WorkItemFieldReference](../../../TFS/WorkItemTracking/Contracts/WorkItemFieldReference.md)[].

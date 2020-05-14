@@ -14,26 +14,24 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `branchName`: string. 
+- `branchName`: string.
 
-* `buildDefinitionId`: number. 
+- `buildDefinitionId`: number.
 
-* `flavor`: string. 
+- `flavor`: string.
 
-* `id`: number. 
+- `id`: number.
 
-* `number`: string. 
+- `number`: string.
 
-* `platform`: string. 
+- `platform`: string.
 
-* `project`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `project`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `repositoryId`: number. 
+- `repositoryId`: number.
 
-* `sourceVersion`: string. 
+- `sourceVersion`: string.
 
-* `uri`: string. 
-
+- `uri`: string.

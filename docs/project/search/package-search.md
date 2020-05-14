@@ -14,7 +14,7 @@ ms.date: 6/03/2019
 
 [!INCLUDE [version-header](../../includes/version-vsts-only.md)]
 
-Package Search provides fast and flexible search across all your packages inside your organization. 
+Package Search provides fast and flexible search across all your packages inside your organization.
 
 Learn more about packages here: [Azure Artifacts in Azure DevOps Services](../../artifacts/overview.md)
 
@@ -26,51 +26,49 @@ Learn more about packages here: [Azure Artifacts in Azure DevOps Services](../..
 
 1. Choose the ![start search icon](media/shared/start-search-icon-new.png) icon at the top right of the window to show the search textbox.
 
-	> [!div class="mx-imgBorder"]  
-	> ![The Work Item Search textbox in the title bar](media/shared/pkgsrch-bar.png)    
+   > [!div class="mx-imgBorder"]  
+   > ![The Work Item Search textbox in the title bar](media/shared/pkgsrch-bar.png)
 
-1. Enter a search string in the textbox, and press _Enter_ (or choose the 
+1. Enter a search string in the textbox, and press _Enter_ (or choose the
 
-	> [!div class="mx-imgBorder"]  
-	> ![start search icon](media/shared/start-search-icon-new.png) icon) to start your search. 
-
+   > [!div class="mx-imgBorder"]  
+   > ![start search icon](media/shared/start-search-icon-new.png) icon) to start your search.
 
 ## View the results
 
-1. Search results are displayed with matches to user query shown in bold.
+1.  Search results are displayed with matches to user query shown in bold.
 
-	> [!div class="mx-imgBorder"]  
-	> ![Search results](media/shared/pkgsrch-results.png)
+        	> [!div class="mx-imgBorder"]
+        	> ![Search results](media/shared/pkgsrch-results.png)
 
-   This is a full text search that uses simple search strings for words or phrases. 
-   Note that searches are _not_ case-sensitive.
+    This is a full text search that uses simple search strings for words or phrases.
+    Note that searches are _not_ case-sensitive.
 
-   > Open the search results in a new browser tab from a search box by
-   pressing _Ctrl_ + _Enter_ or by holding _Ctrl_ and clicking  the
-   ![start search icon](media/shared/start-search-icon-new.png) icon.
-   In Google Chrome or Firefox, press _Ctrl_ + _Shift_ + _Enter_ to switch the focus
-   to the new browser tab. 
+    > Open the search results in a new browser tab from a search box by
+    > pressing _Ctrl_ + _Enter_ or by holding _Ctrl_ and clicking the
+    > ![start search icon](media/shared/start-search-icon-new.png) icon.
+    > In Google Chrome or Firefox, press _Ctrl_ + _Shift_ + _Enter_ to switch the focus
+    > to the new browser tab.
 
-1. Widen your search across all feeds, or narrow it to specific views
-   and package types. Note that Views filter would only appear if a single feed is selected from Feeds filter.
-   Use the "filter" icon to show the selector lists.
+1.  Widen your search across all feeds, or narrow it to specific views
+    and package types. Note that Views filter would only appear if a single feed is selected from Feeds filter.
+    Use the "filter" icon to show the selector lists.
 
-	> [!div class="mx-imgBorder"]  
-	> ![Showing the filter lists](media/shared/pkgsrch-results-filtericon.png)    
+        	> [!div class="mx-imgBorder"]
+        	> ![Showing the filter lists](media/shared/pkgsrch-results-filtericon.png)
 
-1. Select the criteria you want in the drop-down selector lists, or search across the entire organization.
+1.  Select the criteria you want in the drop-down selector lists, or search across the entire organization.
 
-	> [!div class="mx-imgBorder"]  
-	> ![Selector drop-down lists](media/shared/pkgsrch-results-filters.png)    
+    > [!div class="mx-imgBorder"]  
+    > ![Selector drop-down lists](media/shared/pkgsrch-results-filters.png)
 
-1. By switching pivots, quickly search [code](code-search.md) containing the same search string, or 
+1.  By switching pivots, quickly search [code](code-search.md) containing the same search string, or
     search for the same string in your [wikis](../wiki/search-wiki.md)
     or search for the same string in your [work items](work-item-search.md)
 
-	> [!div class="mx-imgBorder"]  
-	> ![Search for code or wiki or work items containing the same search string](media/shared/pkgsrch-other.png)
+    > [!div class="mx-imgBorder"]  
+    > ![Search for code or wiki or work items containing the same search string](media/shared/pkgsrch-other.png)
 
 ## Next step
 
-> [!div class="nextstepaction"]
-> [Learn more about Package Search](advanced-package-syntax.md)
+> [!div class="nextstepaction"][learn more about package search](advanced-package-syntax.md)

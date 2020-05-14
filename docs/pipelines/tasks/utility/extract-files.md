@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: macoope
 author: vtbassmatt
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Extract Files task
@@ -63,7 +63,6 @@ None
 </tr>
 <tr>
 </tr>
-
 
 <tr>
 <th style="text-align: center" colspan="2"><a href="~/pipelines/process/tasks.md#controloptions" data-raw-source="[Control options](../../process/tasks.md#controloptions)">Control options</a></th>

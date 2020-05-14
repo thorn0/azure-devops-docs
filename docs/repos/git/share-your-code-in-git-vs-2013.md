@@ -3,29 +3,29 @@ title: Share your code with Git using Visual Studio 2013
 titleSuffix: Azure Repos
 description: Share code in Git using Visual Studio 2013
 ms.assetid: d4d85217-1967-412d-b253-b6c6289dc459
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 toc: show
 ms.author: apawast
 author: apawast
 ms.topic: quickstart
 ms.date: 08/29/2017
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
-
 
 # Share your code with Visual Studio 2013 and Azure Repos Git
 
 > [!div class="op_single_selector"]
+>
 > - [Visual Studio 2017](share-your-code-in-git-vs-2017.md)
 > - [Visual Studio 2015 Update 2](share-your-code-in-git-vs.md)
-> - [Visual Studio 2013](share-your-code-in-git-vs-2013.md)   
+> - [Visual Studio 2013](share-your-code-in-git-vs-2013.md)
 
-#### Azure Repos | Azure DevOps Server 2019 | TFS 2018 | TFS 2017 | TFS 2015  
+#### Azure Repos | Azure DevOps Server 2019 | TFS 2018 | TFS 2017 | TFS 2015
 
-Whether your software project is large, small, or brand new, 
-in most cases you'll be better off if you use version control 
-as early as possible. Here, we'll show you how to get started with 
-Git, a distributed system. If you want to work in a centralized system, 
+Whether your software project is large, small, or brand new,
+in most cases you'll be better off if you use version control
+as early as possible. Here, we'll show you how to get started with
+Git, a distributed system. If you want to work in a centralized system,
 you can instead use [TFVC with Azure Repos](../../repos/tfvc/share-your-code-in-tfvc-vs.md).
 
 [!INCLUDE [temp](includes/open-team-project-in-vs.md)]
@@ -41,6 +41,7 @@ you can instead use [TFVC with Azure Repos](../../repos/tfvc/share-your-code-in-
    ![Choose Clone to store the repository locally](media/share-your-code-in-git-vs/IC682931.png)
 
 ## Create a new app
+
 If you don't already have an app in the repo, create one.
 
 1. Create a new project.
@@ -64,13 +65,12 @@ If you don't already have an app in the repo, create one.
 
    ![Add app to version control on Changes page](media/share-your-code-in-git-vs/team-explorer-git-changes-add-app.png)
 
-
 ## Snapshot (commit) your code
 
-With your code project stored in a local Git repository on your dev machine, 
+With your code project stored in a local Git repository on your dev machine,
 you can commit as early and as often as you like.
 
-1. As you write your code, your changes are automatically tracked by Visual Studio. 
+1. As you write your code, your changes are automatically tracked by Visual Studio.
    You can commit one or more specific changes to your local repository from Solution Explorer
    (Keyboard: Ctrl + Alt + L).
 
@@ -116,7 +116,6 @@ When the code you've written on your dev machine is ready, you can push your cha
 
    ![Push changes](media/share-your-code-in-git-vs/IC682977.png)
 
-
 ## Q&A
 
 <!-- BEGINSECTION class="md-qanda" -->
@@ -125,28 +124,27 @@ When the code you've written on your dev machine is ready, you can push your cha
 
 [!INCLUDE [temp](includes/qa-vs-launch-fail.md)]
 
-
 #### Q: How can I see what I've changed?
 
 A: To see what you've changed, compare your changes with the last commit.
 
- ![Choose Compare with Unmodified from the context menu](media/share-your-code-in-git-vs/IC685270.png)
+![Choose Compare with Unmodified from the context menu](media/share-your-code-in-git-vs/IC685270.png)
 
 #### Q: How can I get more information about the commits from my team before I pull them?
 
 A: Sometimes you need to see the details about incoming commits from your team. That way you can understand how a change will integrate with your work.
 
- ![Choose View Commit Details](media/share-your-code-in-git-vs/IC682940.png)
+![Choose View Commit Details](media/share-your-code-in-git-vs/IC682940.png)
 
- You can get details on the changes to each file.
+You can get details on the changes to each file.
 
- ![Choose Compare with Previous from the context menu](media/share-your-code-in-git-vs/IC685291.png)
+![Choose Compare with Previous from the context menu](media/share-your-code-in-git-vs/IC685291.png)
 
 #### Q: How do I associate my changes with related work items?
 
 A: From the changes page you can run a query, and then drag a work item into the list of related work items.
 
- ![Associating a work item on the Changes page](media/share-your-code-in-git-vs/IC685315.png)
+![Associating a work item on the Changes page](media/share-your-code-in-git-vs/IC685315.png)
 
 #### Q: Can I use Git command-prompt tools?
 
@@ -156,4 +154,4 @@ A: Yes. See [Use Git from the command prompt](command-prompt.md).
 
 A: [Use Visual Studio and Team Foundation Server with Git](overview.md)
 
-<!-- ENDSECTION --> 
+<!-- ENDSECTION -->

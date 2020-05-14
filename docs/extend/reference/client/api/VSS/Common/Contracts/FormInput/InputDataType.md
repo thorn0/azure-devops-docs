@@ -15,15 +15,14 @@ Module path: `VSS/Common/Contracts/FormInput`
 
 ### Values
 
-* `None` No data type is specified.
+- `None` No data type is specified.
 
-* `String` Represents a textual value.
+- `String` Represents a textual value.
 
-* `Number` Represents a numeric value.
+- `Number` Represents a numeric value.
 
-* `Boolean` Represents a value of true or false.
+- `Boolean` Represents a value of true or false.
 
-* `Guid` Represents a Guid.
+- `Guid` Represents a Guid.
 
-* `Uri` Represents a URI.
-
+- `Uri` Represents a URI.

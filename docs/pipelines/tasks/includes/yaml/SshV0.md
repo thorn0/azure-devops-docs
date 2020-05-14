@@ -4,7 +4,7 @@ author: RoopeshNair
 ms.author: ronai
 ms.date: 12/07/2018
 ms.prod: devops
-ms.technology: devops-cicd 
+ms.technology: devops-cicd
 ---
 
 ```YAML
@@ -12,7 +12,7 @@ ms.technology: devops-cicd
 # Run shell commands or a script on a remote machine using SSH
 - task: SSH@0
   inputs:
-    sshEndpoint: 
+    sshEndpoint:
     #runOptions: 'commands' # Options: commands, script, inline
     #commands: # Required when runOptions == Commands
     #scriptPath: # Required when runOptions == Script

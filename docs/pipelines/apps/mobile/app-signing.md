@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.assetid: 1b9de1a8-0749-40af-87e8-857fb86cf0ae
 ms.reviewer: dastahel
 ms.date: 01/16/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Sign your mobile app
@@ -22,6 +22,7 @@ When developing an app for Android or Apple operating systems, you will eventual
 > **Tip**: Use a Microsoft-hosted Linux, macOS, or Windows build agent, or set up your own agent. See [Build and release agents](../../agents/agents.md).
 
 This article covers:
+
 - [Sign your Android app](#android)
 - [Sign your Apple iOS, macOS, tvOS, or watchOS app](#apple)
 
@@ -47,11 +48,11 @@ Follow these steps to sign your Android app while keeping your signing certifica
    - **key-alias**: The key alias for the signing certificate you generated.
    - **key-password**: The password for the key associated with the specified alias. _Again, be sure to click the **lock** icon._
 
-      ![Android signing variables](media/secure-certs/android-signing-variables.png)
+     ![Android signing variables](media/secure-certs/android-signing-variables.png)
 
 1. Go back to the **Tasks** tab and reference the names of your newly-created variables in the signing options.
 
-      ![Android signing input values](media/secure-certs/android-signing-input-values.png)
+   ![Android signing input values](media/secure-certs/android-signing-input-values.png)
 
 Save your build pipeline, and you are all set! Any build agent will now be able to securely sign your app without any certificate management on the build machine itself.
 
@@ -69,18 +70,19 @@ After creating your development or distribution signing certificate, export it t
 1. Click **View Details...**, right-click on the signing identity you wish to export, and click **Export...**.
 1. Enter a filename and password. Take note of the password as you will need it later.
 
-    ![Xcode Export Cert](media/secure-certs/secure-certs-1.png)
+   ![Xcode Export Cert](media/secure-certs/secure-certs-1.png)
 
 1. Alternatively, follow a similar process using the **Keychain Access** app on macOS or generate a signing certificate on Windows. Use the procedure [described in this article](http://docs.phonegap.com/phonegap-build/signing/ios/) if you prefer this method.
 
 ### Obtain your provisioning profile
 
 You can download your app provisioning profile from the Apple Developer portal, unless your app uses automatic signing. You can also use Xcode to access those that are installed on your Mac.
+
 1. Using Xcode 8 or lower, go to **Xcode** &gt; **Preferences...** &gt; **Accounts** and select your Apple Developer account.
 1. Right-click the provisioning profile you want to use and select **Show in Finder**.
 1. Copy the highlighted file from Finder to another location and give it a descriptive filename.
 
-    ![Xcode Show in Finder](media/secure-certs/secure-certs-2.png)
+   ![Xcode Show in Finder](media/secure-certs/secure-certs-2.png)
 
 ### Configure your build
 
@@ -139,8 +141,7 @@ Use this method when you do not have enduring access to the build agent, such as
          provProfileSecureFile: 'my-provisioning-profile.mobileprovision' # replace my-provisioning-profile.mobileprovision with the name of your provisioning profile file.
    ```
 
-   > [NOTE]
-   > **Remove profile after build** defaults to *true*.
+   > [NOTE] > **Remove profile after build** defaults to _true_.
 
 #### Reference the files in your Xcode task
 
@@ -156,9 +157,9 @@ Use this method when you do not have enduring access to the build agent, such as
 ```yaml
 - task: Xcode@5
   inputs:
-    signingOption: 'manual'
-    signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
-    provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
+    signingOption: "manual"
+    signingIdentity: "$(APPLE_CERTIFICATE_SIGNING_IDENTITY)"
+    provisioningProfileUuid: "$(APPLE_PROV_PROFILE_UUID)"
 ```
 
 #### Reference the files in your Xamarin.iOS task
@@ -187,6 +188,7 @@ Save your build pipeline, and you are all set! The build agent will now be able 
 Use this method only when you trust the people and processes that have access to the macOS keychain on the agent machine where these files will be installed. They will be available for continued use by builds.
 
 #### Install the P12 certificate
+
 Run the following command from a macOS Terminal window of the build agent machine to install the P12 certificate in the default keychain. Replace `<certificate.p12>` with the path to your P12 file. Replace `<password>` with your P12 file's encryption password.
 
 ```
@@ -199,20 +201,20 @@ Follow these steps:
 
 1. Find the full name of your signing identity by opening the Terminal app and typing the following:
 
-    ```
-    security find-identity -v -p codesigning
-    ```
+   ```
+   security find-identity -v -p codesigning
+   ```
 
-    You will see a list of signing identities in the form `iPhone Developer/Distribution: Developer Name (ID)`. If the identity is invalid, you will see something like `(CSSMERR_TP_CERT_REVOKED)` after the identity.
+   You will see a list of signing identities in the form `iPhone Developer/Distribution: Developer Name (ID)`. If the identity is invalid, you will see something like `(CSSMERR_TP_CERT_REVOKED)` after the identity.
 
-    Take note of the identity you want to use including the ID.
+   Take note of the identity you want to use including the ID.
 
 1. Find the UUID for the provisioning profile you want to use by following these steps:
 
-    1. Open Xcode and go to **Xcode** &gt; **Preferences...** &gt; **Accounts** and select your Apple Developer account.
-    1. Click **View Details...**, right-click the provisioning profile you want, and select **Show in Finder**.
+   1. Open Xcode and go to **Xcode** &gt; **Preferences...** &gt; **Accounts** and select your Apple Developer account.
+   1. Click **View Details...**, right-click the provisioning profile you want, and select **Show in Finder**.
       ![Xcode Show in Finder](media/secure-certs/secure-certs-2.png)
-    1. The name of the file that is highlighted in Finder is the UUID of your provisioning profile.
+   1. The name of the file that is highlighted in Finder is the UUID of your provisioning profile.
 
 1. Run the following command from a macOS Terminal window of the build agent machine to install the provisioning profile. Replace `<profile>` with the path to your provisioning profile file. Replace `<UUID>` with the UUID of the provisioning profile, obtained above.
 
@@ -235,10 +237,11 @@ sudo cp <profile> ~/Library/MobileDevice/Provisioning\ Profiles/<UUID>.mobilepro
 1. In the **Provisioning profile UUID** field, enter the UUID of the provisioning profile from the filename above.
 
 #### Authorize the agent to access the keychain
+
 1. If you are using the Xamarin.iOS task and running the build agent as a launchd service, you will need to set up the build to unlock the default keychain.
 
-    1. Go to the **Variables** tab and add a new variable named `KEYCHAIN_PWD`. Set its value to the password to the default keychain. This is normally the password for the user that is starting the agent. _Be sure to click the "lock" icon to secure this password._
-    1. For the Xamarin.iOS task, under the **Signing & Provisioning** section, enable the **Unlock default keychain** checkbox and set the **Default keychain password** field to: `$(KEYCHAIN_PWD)`
+   1. Go to the **Variables** tab and add a new variable named `KEYCHAIN_PWD`. Set its value to the password to the default keychain. This is normally the password for the user that is starting the agent. _Be sure to click the "lock" icon to secure this password._
+   1. For the Xamarin.iOS task, under the **Signing & Provisioning** section, enable the **Unlock default keychain** checkbox and set the **Default keychain password** field to: `$(KEYCHAIN_PWD)`
 
 Save your build pipeline, and you are all set! The build agent will now be able to securely sign and provision your app.
 

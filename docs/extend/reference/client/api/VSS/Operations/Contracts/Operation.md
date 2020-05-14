@@ -18,7 +18,6 @@ Extends: [OperationReference](../../../VSS/Operations/Contracts/OperationReferen
 
 ### Members
 
-* `_links`: any. The links to other objects related to this object.
+- `_links`: any. The links to other objects related to this object.
 
-* `resultMessage`: string. The result message which is generally not set.
-
+- `resultMessage`: string. The result message which is generally not set.

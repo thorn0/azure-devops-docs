@@ -16,13 +16,12 @@ In addition to specifying tags in the `branches` lists as covered in the previou
 trigger:
   tags:
     include:
-    - v2.*
+      - v2.*
     exclude:
-    - v2.0
+      - v2.0
 ```
 
 If you don't specify any tag triggers, then by default, tags will not trigger pipelines.
 
 > [!NOTE]
 > If you specify tags in combination with branch filters that include file paths, the trigger will fire if the branch filter is satisfied and either the tag or the path filter is satisfied.
-

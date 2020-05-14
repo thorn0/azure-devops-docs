@@ -13,12 +13,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `depth`: string. 
+- `depth`: string.
 
-* `serverItem`: string. 
+- `serverItem`: string.
 
-* `type`: string. 
-
+- `type`: string.

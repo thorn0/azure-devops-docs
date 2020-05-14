@@ -8,9 +8,9 @@ ms.assetid: fa4924f0-6013-4911-b0d5-04717ecfde0f
 ms.author: chcomley
 author: chcomley
 ms.date: 11/26/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
- 
+
 # Uninstall or disable extensions
 
 [!INCLUDE [version-vsts-tfs-2015-on](../boards/includes/version-vsts-tfs-2015-on.md)]
@@ -27,9 +27,9 @@ You must be a [Project Collection Administrator](../organizations/security/set-p
 
 #### [Browser](#tab/browser)
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 2. Select ![gear icon](../media/icons/gear-icon.png) **Organization settings**.
-   
+
    ![Open Organization settings](../media/settings/open-admin-settings-vert.png)
 
 3. Select **Extensions**, and then select the extension that you want to uninstall or disable.
@@ -42,56 +42,57 @@ You must be a [Project Collection Administrator](../organizations/security/set-p
 
 #### [Azure DevOps CLI](#tab/azure-devops-cli/)
 
-[Uninstall extension](#uninstall-extension) | [Disable extension](#disable-extension) 
+[Uninstall extension](#uninstall-extension) | [Disable extension](#disable-extension)
 
-<a id="uninstall-extension" /> 
+<a id="uninstall-extension" />
 
 ### Uninstall an extension
 
 You can uninstall an extension with the [az devops extension uninstall](/cli/azure/ext/azure-devops/devops/extension#ext-azure-devops-az-devops-extension-uninstall) command. To get started, see [Get started with Azure DevOps CLI](../cli/index.md).
 
-```CLI 
+```CLI
 az devops extension uninstall --extension-name
                               --publisher-name
                               [--org]
                               [--yes]
-``` 
+```
 
-#### Parameters 
+#### Parameters
 
 - **extension-name**: The name of the extension to uninstall.
 - **publisher-name**: The name of the extension publisher.
 - **org**: Azure DevOps organization URL. You can configure the default organization using `az devops configure -d organization=ORG_URL`. Required if not configured as default or picked up using `git config`. Example: `--org https://dev.azure.com/MyOrganizationName/`.
 - **yes**: Optional. Don't prompt for confirmation.
 
-#### Example 
+#### Example
 
-The following command uninstalls the **Timetracker** extension without prompting for confirmation.  
+The following command uninstalls the **Timetracker** extension without prompting for confirmation.
 
 ```CLI
 az devops extension uninstall --extension-name Timetracker --publisher-name 7pace --yes
 ```
-<a id="disable-extension" /> 
+
+<a id="disable-extension" />
 
 ### Disable an extension
 
 You can disable an extension with the [az devops extension disable](/cli/azure/ext/azure-devops/devops/extension#ext-azure-devops-az-devops-extension-disable) command. To get started, see [Get started with Azure DevOps CLI](../cli/index.md).
 
-```CLI 
+```CLI
 az devops extension disable --extension-name
                             --publisher-name
                             [--org]
-``` 
+```
 
-#### Parameters 
+#### Parameters
 
 - **extension-name**: The name of the extension to disable.
 - **publisher-name**: The name of the extension publisher.
 - **org**: Azure DevOps organization URL. You can configure the default organization using `az devops configure -d organization=ORG_URL`. Required if not configured as default or picked up using `git config`. Example: `--org https://dev.azure.com/MyOrganizationName/`.
 
-#### Example 
+#### Example
 
-The following command disables the **Timetracker** extension and shows the result in table format.  
+The following command disables the **Timetracker** extension and shows the result in table format.
 
 ```CLI
 az devops extension disable --extension-name Timetracker --publisher-name 7pace --output table
@@ -101,9 +102,9 @@ Publisher Id    Extension Id    Name         Version      Last Updated     State
 7pace           Timetracker     Timetracker  5.0.1.34507  2019-11-13       disabled
 ```
 
-[!INCLUDE [temp](../includes/note-cli-not-supported.md)] 
+[!INCLUDE [temp](../includes/note-cli-not-supported.md)]
 
-* * *
+---
 
 ::: moniker-end
 
@@ -111,7 +112,7 @@ Publisher Id    Extension Id    Name         Version      Last Updated     State
 
 ## Uninstall extensions from the local gallery in TFS or Azure DevOps Server
 
-1. Navigate to the local gallery management portal (```http://{server}/_gallery/manage```).
+1. Navigate to the local gallery management portal (`http://{server}/_gallery/manage`).
 
 2. For the wanted extension, select the ellipses (**...**), and then select **Remove**.
 
@@ -123,7 +124,7 @@ Publisher Id    Extension Id    Name         Version      Last Updated     State
 
 ## Uninstall extensions in a collection
 
-1. Navigate to the local gallery management portal (```http://{server}:8080/tfs/_gallery/manage```).
+1. Navigate to the local gallery management portal (`http://{server}:8080/tfs/_gallery/manage`).
 
 2. For the wanted extension, select the ellipses (**...**), and then select **Remove**.
 
@@ -137,51 +138,51 @@ Publisher Id    Extension Id    Name         Version      Last Updated     State
 
 You can enable an extension with the [az devops extension enable](/cli/azure/ext/azure-devops/devops/extension#ext-azure-devops-az-devops-extension-enable) command. To get started, see [Get started with Azure DevOps CLI](../cli/index.md).
 
-```CLI 
+```CLI
 az devops extension enable --extension-name
                            --publisher-name
                            [--org]
-``` 
+```
 
-### Parameters 
+### Parameters
 
 - **extension-name**: The name of the extension to enable.
 - **publisher-name**: The name of the extension publisher.
 - **org**: Azure DevOps organization URL. You can configure the default organization using `az devops configure -d organization=ORG_URL`. Required if not configured as default or picked up using `git config`. Example: `--org https://dev.azure.com/MyOrganizationName/`.
 
-### Example 
+### Example
 
-The following command enables the **Timetracker** extension and shows the result in table format.  
+The following command enables the **Timetracker** extension and shows the result in table format.
 
-```CLI 
+```CLI
 az devops extension enable --extension-name Timetracker --publisher-name 7pace --output table
 
 Publisher Id    Extension Id    Name         Version      Last Updated     States
 --------------  --------------  -----------  -----------  ---------------  --------
 7pace           Timetracker     Timetracker  5.0.1.34507  2019-11-13       none
-``` 
+```
 
 ## List extensions
 
 You can list the extensions that are installed in your organization with the [az devops extension list](/cli/azure/ext/azure-devops/devops/extension#ext-azure-devops-az-devops-extension-list) command. To get started, see [Get started with Azure DevOps CLI](../cli/index.md).
 
-```CLI 
+```CLI
 az devops extension list [--include-built-in {false, true}]
                          [--include-disabled {false, true}]
                          [--org]
-``` 
+```
 
-### Optional parameters 
+### Optional parameters
 
-- **include-built-in**: Include the built-in extensions. Accepted values are *true* (default) and *false*.
-- **include-disabled**: Include the disabled extensions. Accepted values are *true* (default) and *false*.
+- **include-built-in**: Include the built-in extensions. Accepted values are _true_ (default) and _false_.
+- **include-disabled**: Include the disabled extensions. Accepted values are _true_ (default) and _false_.
 - **org**: Azure DevOps organization URL. You can configure the default organization using `az devops configure -d organization=ORG_URL`. Required if not configured as default or picked up using `git config`. Example: `--org https://dev.azure.com/MyOrganizationName/`.
 
-### Example 
+### Example
 
 The following command lists extensions in your organization. It excludes the **disabled** and **built-in** extensions, and shows the results in table format.
 
-```CLI 
+```CLI
 az devops extension list --include-built-in false --include-disabled false -output table
 
 Publisher Id    Extension Id             Name                     Version              Last Updated     States         		 Flags
@@ -204,39 +205,34 @@ ottostreif...   wiql-editor              Wiql Editor              2.0.90        
 mohitbagra      workitem-checklist       Work item checklist      3.2.4                2019-06-24       none
 mohitbagra      witoneclickactions       Work item form one c...  2.3.2                2018-04-03       none
 ms-devlabs      WorkItemVisualizatio...  Work Item Visualizat...  1.4.64               2018-04-03       none
-``` 
+```
 
 ## List extension information
 
 You can list the details about an extension with the [az devops extension show](/cli/azure/ext/azure-devops/devops/extension#ext-azure-devops-az-devops-extension-show) command. To get started, see [Get started with Azure DevOps CLI](../cli/index.md).
 
-```CLI 
+```CLI
 az devops extension show --extension-name
                          --publisher-name
                          [--org]
-``` 
+```
 
-### Parameters 
+### Parameters
 
 - **extension-name**: The name of the extension.
 - **publisher-name**: The name of the extension publisher.
 - **org**: Azure DevOps organization URL. You can configure the default organization using `az devops configure -d organization=ORG_URL`. Required if not configured as default or picked up using `git config`. Example: `--org https://dev.azure.com/MyOrganizationName/`.
 
-### Example 
+### Example
 
-The following command shows information about the **Timetracker** extension in table format.  
+The following command shows information about the **Timetracker** extension in table format.
 
-```CLI 
+```CLI
 az devops extension show --extension-name Timetracker --publisher-name 7pace --output table
 
 Publisher Id    Extension Id    Name         Version      Last Updated     States
 --------------  --------------  -----------  -----------  ---------------  --------
 7pace           Timetracker     Timetracker  5.0.1.34507  2019-11-13       disabled
-``` 
+```
 
 ::: moniker-end
-
-
-
-
-

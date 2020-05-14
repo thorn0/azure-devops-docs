@@ -52,7 +52,7 @@ The Export Test Plan feature in Test Hub lets you email or print a test plan in 
 
 ![Sample test execution export](media/9_18_05.png)
 
-In the export selection dialog, you can choose to export the latest test outcome, which will export the latest test result for all tests of a test case, including fields like the time when the test was run, the build that was tested, the configuration that was tested, the tester who was assigned the test and the identity who actually ran the test. 
+In the export selection dialog, you can choose to export the latest test outcome, which will export the latest test result for all tests of a test case, including fields like the time when the test was run, the build that was tested, the configuration that was tested, the tester who was assigned the test and the identity who actually ran the test.
 
 ## Work item trend and rollup reporting in Power BI
 

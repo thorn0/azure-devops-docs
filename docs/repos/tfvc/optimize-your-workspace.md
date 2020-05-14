@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Optimize your workspace
 
@@ -18,11 +17,11 @@ monikerRange: '>= tfs-2015'
 
 Does your team have a large and complex codebase? Do you want your workspace to contain only the files you need to improve performance, reduce network traffic, and reduce the disk space required on your dev machine?
 
--   [Optimize your folder names](optimize-your-workspace.md#folder_name)
+- [Optimize your folder names](optimize-your-workspace.md#folder_name)
 
--   [Optimize your workspace using explicit, implicit, cloaked, and non-recursive folder mappings](optimize-your-workspace.md#mappings)
+- [Optimize your workspace using explicit, implicit, cloaked, and non-recursive folder mappings](optimize-your-workspace.md#mappings)
 
--   [Use workspaces to isolate and manage work among different branches](optimize-your-workspace.md#isolate)
+- [Use workspaces to isolate and manage work among different branches](optimize-your-workspace.md#isolate)
 
 <a name="folder_name"></a>
 
@@ -32,9 +31,9 @@ If you don't yet use branches, on your server, you should put all your code in a
 
 Some more tips on effective folder names:
 
--   Keep all folder, sub-folder, and file names short to simplify your work and avoid potential long-path issues that can occur with some types of code projects.
+- Keep all folder, sub-folder, and file names short to simplify your work and avoid potential long-path issues that can occur with some types of code projects.
 
--   Avoid whitespace if you want to make command-line operations a little easier to perform.
+- Avoid whitespace if you want to make command-line operations a little easier to perform.
 
 <a name="mappings"></a>
 
@@ -93,5 +92,4 @@ Raisa manages her work in three workspaces, each of which maps folders in a bran
 
 ![Branches](media/optimize-your-workspace/IC720117.png)
 
-> [!NOTE]
-> [Branching](use-branches-isolate-risk-team-foundation-version-control.md) or [suspending (or shelving)](suspend-your-work-manage-your-shelvesets.md) are the preferred ways to isolate different work efforts against the same codebase. However, if neither of these approaches meets your needs, you can map the same server folder in more than one workspace. In most cases you should not need to do this. If you do map the same server folder in more than one workspace, remember that you could have separate and different pending changes to the same file stored in each workspace.
+> [!NOTE][branching](use-branches-isolate-risk-team-foundation-version-control.md) or [suspending (or shelving)](suspend-your-work-manage-your-shelvesets.md) are the preferred ways to isolate different work efforts against the same codebase. However, if neither of these approaches meets your needs, you can map the same server folder in more than one workspace. In most cases you should not need to do this. If you do map the same server folder in more than one workspace, remember that you could have separate and different pending changes to the same file stored in each workspace.

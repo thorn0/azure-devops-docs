@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: macoope
 author: vtbassmatt
 ms.date: 02/18/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Batch Script task
@@ -37,17 +37,17 @@ Optionally, allow it to permanently modify environment variables.
 
 ## Arguments
 
-|Argument|Description|
-|--- |--- |
-|`filename`<br/>Path|(Required) Path of the cmd or bat script to execute. Should be fully qualified path or relative to the default working directory|
-|`arguments`<br/>Arguments|(Optional) Specify arguments to pass to the script.|
-|`modifyEnvironment`<br/>Modify environment|(Optional) Determines whether environment variable modifications will affect subsequent tasks <br/>Default value: `False`|
-|`workingFolder`<br/>Working folder|(Optional) Current working directory when script is run. Defaults to the agent's default working directory|
-|`failOnStandardError`<br/>Fail on Standard Error|(Optional) If this is true, this task will fail if any errors are written to the StandardError stream. <br/>Default value: `false`|
+| Argument                                         | Description                                                                                                                        |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `filename`<br/>Path                              | (Required) Path of the cmd or bat script to execute. Should be fully qualified path or relative to the default working directory   |
+| `arguments`<br/>Arguments                        | (Optional) Specify arguments to pass to the script.                                                                                |
+| `modifyEnvironment`<br/>Modify environment       | (Optional) Determines whether environment variable modifications will affect subsequent tasks <br/>Default value: `False`          |
+| `workingFolder`<br/>Working folder               | (Optional) Current working directory when script is run. Defaults to the agent's default working directory                         |
+| `failOnStandardError`<br/>Fail on Standard Error | (Optional) If this is true, this task will fail if any errors are written to the StandardError stream. <br/>Default value: `false` |
 
 ## Example
 
-Create ```test.bat``` at the root of your repo:
+Create `test.bat` at the root of your repo:
 
 ```bat
 @echo off

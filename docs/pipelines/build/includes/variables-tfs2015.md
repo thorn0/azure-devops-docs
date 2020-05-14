@@ -120,10 +120,10 @@ This variable is agent-scoped. It can be used as an environment variable in a sc
 
 A typical use of this variable is to make it part of the label format, which you specify on the <a href="/azure/devops/pipelines/repos/index" data-raw-source="[repository tab](../repos/index.md)">repository tab</a>.
 
-
 Note: This value can contain whitespace or other invalid label characters. In these cases, the <a href="/azure/devops/repos/tfvc/labels-command" data-raw-source="[label format](../repos/tfvc/labels-command.md)">label format</a> will fail.
 <br/><br/>
 This variable is agent-scoped. It can be used as an environment variable in a script and as a parameter in a build task, but not as part of a version control tag.
+
 </td>
 </tr>
 
@@ -151,8 +151,8 @@ This variable is agent-scoped. It can be used as an environment variable in a sc
 <td>Build.DefinitionName</td>
 <td>The name of the build pipeline.
 
-
 Note: This value can contain whitespace or other invalid label characters. In these cases, the <a href="/azure/devops/repos/tfvc/labels-command" data-raw-source="[label format](../repos/tfvc/labels-command.md)">label format</a> will fail.
+
 </td>
 </tr>
 
@@ -165,8 +165,8 @@ Note: This value can contain whitespace or other invalid label characters. In th
 <td>Build.QueuedBy</td>
 <td>See &quot;<a href="#identity_values" data-raw-source="[How are the identity variables set?](#identity_values)">How are the identity variables set?</a>&quot;.
 
-
 Note: This value can contain whitespace or other invalid label characters. In these cases, the <a href="/azure/devops/repos/tfvc/labels-command" data-raw-source="[label format](../repos/tfvc/labels-command.md)">label format</a> will fail.</td>
+
 </tr>
 
 <tr>
@@ -183,7 +183,6 @@ This variable is agent-scoped. It can be used as an environment variable in a sc
 <tr>
 <td>Build.Repository.LocalPath</td>
 <td>
-
 
 The local path on the agent where your source code files are downloaded. For example: <code>c:\agent_work\1\s</code><br><br>By default, new build pipelines update only the changed files. You can modify how files are downloaded on the <a href="/azure/devops/pipelines/repos/index" data-raw-source="[Repository tab](../repos/index.md)">Repository tab</a>.
 <br><br>
@@ -280,7 +279,6 @@ Note: In TFVC, if you are running a gated check-in build or manually building a 
 <td>Build.SourcesDirectory</td>
 <td>
 
-
 The local path on the agent where your source code files are downloaded. For example: <code>c:\agent_work\1\s</code><br><br>By default, new build pipelines update only the changed files. You can modify how files are downloaded on the <a href="/azure/devops/pipelines/repos/index" data-raw-source="[Repository tab](../repos/index.md)">Repository tab</a>.
 <br><br>
 This variable is agent-scoped. It can be used as an environment variable in a script and as a parameter in a build task, but not as part of the build number or as a version control tag.
@@ -314,6 +312,7 @@ This variable is agent-scoped. It can be used as an environment variable in a sc
 This variable is agent-scoped, and can be used as an environment variable in a script and as a parameter in a build task, but not as part of the build number or as a version control tag.
 
 Note: This variable is available in TFS 2015.4.
+
 </td>
 </tr>
 

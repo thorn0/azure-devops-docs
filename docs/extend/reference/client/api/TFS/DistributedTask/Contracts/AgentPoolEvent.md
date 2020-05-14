@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `eventType`: string. 
+- `eventType`: string.
 
-* `pool`: [TaskAgentPool](../../../TFS/DistributedTask/Contracts/TaskAgentPool.md). 
-
+- `pool`: [TaskAgentPool](../../../TFS/DistributedTask/Contracts/TaskAgentPool.md).

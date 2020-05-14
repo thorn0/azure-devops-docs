@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,12 +15,10 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Result structure from calls to GetDataProviderData 
+Result structure from calls to GetDataProviderData
 
 ### Members
 
-* `data`: {[key: string]: number}. Property bag of data keyed off of the data provider contribution ID
+- `data`: {[key: string]: number}. Property bag of data keyed off of the data provider contribution ID
 
-* `resolvedProviders`: [ResolvedDataProvider](../../../VSS/References/SDK_Interfaces/ResolvedDataProvider.md)[]. List of data providers resolved in the data-provider query
-
+- `resolvedProviders`: [ResolvedDataProvider](../../../VSS/References/SDK_Interfaces/ResolvedDataProvider.md)[]. List of data providers resolved in the data-provider query

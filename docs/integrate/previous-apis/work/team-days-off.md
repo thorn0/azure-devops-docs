@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Team Days Off | REST API Reference for Team Foundation Server
 description: Work with team days off programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: b1bfef41-c787-40dd-be4d-6ed981e55fdd
@@ -19,21 +19,24 @@ ms.date: 08/04/2016
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get a team's days off
+
 <a id="GetTeamDaysOff"></a>
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/{team}/_apis/work/TeamSettings/Iterations/{iterationId}/TeamDaysOff?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:-----------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team. 
-| iterationId  | string   | ID of the iteration.
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
+| iterationId | string | ID of the iteration.
 | Query
-| api-version| string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version| string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -70,30 +73,32 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsettings
 }
 ```
 
-
 ## Set a team's days off
+
 <a id="SetTeamDaysOff"></a>
 
 ```no-highlight
 PATCH https://{instance}/DefaultCollection/{project}/{team}/_apis/work/TeamSettings/Iterations/{iterationId}/TeamDaysOff?api-version={version}
 ```
 
-| Parameter  | Type     | Notes
-|:-----------|:---------|:-----------------------------------------------------
-| URL
-| instance   | string   | TFS server name ({server:port}).
-| project    | string   | Name or ID of the project.
-| team       | string   | Name or ID of the team. 
-| iterationId  | string   | ID of the iteration.
-| Query
-| api-version| string   | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
 
+
+| URL
+| instance | string | TFS server name ({server:port}).
+| project | string | Name or ID of the project.
+| team | string | Name or ID of the team.
+| iterationId | string | ID of the iteration.
+| Query
+| api-version| string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 PATCH https://mytfsserver/DefaultCollection/Fabrikam-Fiber/_apis/work/teamsettings/iterations/2ec76bfe-ba74-4060-970d-4567a3e997ee/teamdaysoff?api-version=2.0-preview.1
 ```
+
 ```json
 {
   "daysOff": [

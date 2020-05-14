@@ -17,11 +17,11 @@ ms.technology: devops-cicd-tasks
     #serverUrl: # Required when credentialsOption == Inputs
     #username: # Required when credentialsOption == Inputs
     #password: # Required when credentialsOption == Inputs
-    rootDirectory: 
-    #filePatterns: '**' 
-    #remoteDirectory: '/upload/$(Build.BuildId)/' 
-    #clean: false 
+    rootDirectory:
+    #filePatterns: '**'
+    #remoteDirectory: '/upload/$(Build.BuildId)/'
+    #clean: false
     #cleanContents: false # Required when clean == False
-    #preservePaths: false 
-    #trustSSL: false 
+    #preservePaths: false
+    #trustSSL: false
 ```

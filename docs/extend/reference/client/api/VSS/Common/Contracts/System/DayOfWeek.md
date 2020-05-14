@@ -15,17 +15,16 @@ Module path: `VSS/Common/Contracts/System`
 
 ### Values
 
-* `Sunday` Indicates Sunday.
+- `Sunday` Indicates Sunday.
 
-* `Monday` Indicates Monday.
+- `Monday` Indicates Monday.
 
-* `Tuesday` Indicates Tuesday.
+- `Tuesday` Indicates Tuesday.
 
-* `Wednesday` Indicates Wednesday.
+- `Wednesday` Indicates Wednesday.
 
-* `Thursday` Indicates Thursday.
+- `Thursday` Indicates Thursday.
 
-* `Friday` Indicates Friday.
+- `Friday` Indicates Friday.
 
-* `Saturday` Indicates Saturday.
-
+- `Saturday` Indicates Saturday.

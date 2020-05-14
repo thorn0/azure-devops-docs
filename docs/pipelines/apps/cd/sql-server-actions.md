@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Perform SQL server actions in Azure Pipelines or TFS
@@ -26,13 +26,13 @@ The SQL script can be specified either as an artifact or as an inline script.
 
 ## Requirements
 
-* The utility **SqlPackage.exe** must be installed on the computer or VM.
+- The utility **SqlPackage.exe** must be installed on the computer or VM.
 
-* You cannot use the Hosted agent, you must install an agent on the target computer or VM.
+- You cannot use the Hosted agent, you must install an agent on the target computer or VM.
 
-* If you execute **SQLPackage** from the folder where it is installed, you must prefix the path with `&` and wrap it in double-quotes.
+- If you execute **SQLPackage** from the folder where it is installed, you must prefix the path with `&` and wrap it in double-quotes.
 
-## Basic Syntax 
+## Basic Syntax
 
 `<Path of SQLPackage.exe> <Arguments to SQLPackage.exe>`
 
@@ -122,7 +122,7 @@ sqlpackage.exe /Action:Export /?
 
 Imports the schema and table data from a BACPAC package into a new user database in an instance of SQL Server or Microsoft Azure SQL Database.
 
-**Command Syntax:** 
+**Command Syntax:**
 
 ```command
 SqlPackage.exe /SourceFile:"<Bacpac file location>" /Action:Import /TargetServerName:"<ServerName>.database.windows.net"
@@ -146,7 +146,7 @@ sqlpackage.exe /Action:Import /?
 
 Creates an XML report of the changes that would be made by a publish action.
 
-**Command Syntax:** 
+**Command Syntax:**
 
 ```command
 SqlPackage.exe /SourceFile:"<Dacpac file location>" /Action:DeployReport /TargetServerName:"<ServerName>.database.windows.net"
@@ -157,7 +157,7 @@ SqlPackage.exe /SourceFile:"<Dacpac file location>" /Action:DeployReport /Target
 
 ```command
 SqlPackage.exe /SourceFile:"E: \dacpac\ajyadb.dacpac" /Action:DeployReport /TargetServerName:"DemoSqlServer.database.windows.net"
-/TargetDatabaseName:"Testdb" /TargetUser:"ajay" /TargetPassword:"SQLPassword" /OutputPath:"C:\temp\deployReport.xml" 
+/TargetDatabaseName:"Testdb" /TargetUser:"ajay" /TargetPassword:"SQLPassword" /OutputPath:"C:\temp\deployReport.xml"
 ```
 
 **Help:**
@@ -170,7 +170,7 @@ sqlpackage.exe /Action:DeployReport /?
 
 Creates an XML report of the changes that have been made to a registered database since it was last registered.
 
-**Command Syntax:** 
+**Command Syntax:**
 
 ```command
 SqlPackage.exe /Action:DriftReport /TargetServerName:"<ServerName>.database.windows.net" /TargetDatabaseName:"<DatabaseName>"
@@ -217,7 +217,7 @@ sqlpackage.exe /Action:Script /?
 
 ## See also
 
-* [Deploy your database to Azure SQL Database](../../targets/azure-sqldb.md)
-* [SQL Azure Dacpac Deployment task on GitHub](https://github.com/Microsoft/azure-pipelines-tasks/tree/master/Tasks/SqlAzureDacpacDeploymentV1)
+- [Deploy your database to Azure SQL Database](../../targets/azure-sqldb.md)
+- [SQL Azure Dacpac Deployment task on GitHub](https://github.com/Microsoft/azure-pipelines-tasks/tree/master/Tasks/SqlAzureDacpacDeploymentV1)
 
 [!INCLUDE [rm-help-support-shared](../../includes/rm-help-support-shared.md)]

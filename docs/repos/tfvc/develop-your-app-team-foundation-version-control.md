@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Develop your app in Team Foundation version control
 
@@ -26,28 +25,28 @@ Are you a new user of Visual Studio and Team Foundation Server (TFS)? Are you wo
 
 If so, we suggest you take a few minutes to walk step-by-step through a day in the life of Peter and Julia, two developers at Fabrikam Fiber-a fictitious company that provides cable television and related services. Their team recently began [adopting Visual Studio and Team Foundation Server](https://msdn.microsoft.com/library/dd286491). You'll see examples of how you can use Visual Studio Premium and TFS to check out and update code, suspend work when you're interrupted, request a code review, check in your changes, and perform other tasks.
 
--    [Day in the life of a developer: Write new code for a user story](day-life-alm-developer-write-new-code-user-story.md) 
+- [Day in the life of a developer: Write new code for a user story](day-life-alm-developer-write-new-code-user-story.md)
 
--    [Day in the life of a developer: Suspend work, fix a bug, and conduct a code review](day-life-alm-developer-suspend-work-fix-bug-conduct-code-review.md) 
+- [Day in the life of a developer: Suspend work, fix a bug, and conduct a code review](day-life-alm-developer-suspend-work-fix-bug-conduct-code-review.md)
 
 ## What do you want to do?
 
--    [Develop code and manage pending changes](develop-code-manage-pending-changes.md) 
+- [Develop code and manage pending changes](develop-code-manage-pending-changes.md)
 
--    [Add files to the server](add-files-server.md) 
+- [Add files to the server](add-files-server.md)
 
--    [Download (get) files from the Server](download-get-files-from-server.md) 
+- [Download (get) files from the Server](download-get-files-from-server.md)
 
--    [Check out and edit files](check-out-edit-files.md) 
+- [Check out and edit files](check-out-edit-files.md)
 
--    [Rename or move files and folders](rename-move-files-folders.md) 
+- [Rename or move files and folders](rename-move-files-folders.md)
 
--    [Delete or restore files and folders](delete-restore-files-folders.md) 
+- [Delete or restore files and folders](delete-restore-files-folders.md)
 
 ## Learn about other resources that might help
 
--    [Improving Quality with Visual Studio Diagnostic Tools](https://msdn.microsoft.com/library/dd264943) 
+- [Improving Quality with Visual Studio Diagnostic Tools](https://msdn.microsoft.com/library/dd264943)
 
--    [Testing the application](../../test/index.yml) 
+- [Testing the application](../../test/index.yml)
 
--    [Track work with Visual Studio devops and TFS](../../boards/get-started/what-is-azure-boards.md) 
+- [Track work with Visual Studio devops and TFS](../../boards/get-started/what-is-azure-boards.md)

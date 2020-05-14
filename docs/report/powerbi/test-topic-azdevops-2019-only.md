@@ -1,14 +1,14 @@
 ---
 title: azure-devops-2019  test topic
-titleSuffix: Azure DevOps 
-description: azure-devops-2019   
+titleSuffix: Azure DevOps
+description: azure-devops-2019
 robots: NOINDEX, NOFOLLOW
 ms.technology: devops-analytics
 ms.reviewer: greggboe
 ms.author: kaelli
 author: KathrynEE
 ms.topic: conceptual
-monikerRange: 'azure-devops-2019'
+monikerRange: "azure-devops-2019"
 ms.date: 04/04/2018
 ---
 
@@ -16,7 +16,7 @@ ms.date: 04/04/2018
 
 **Azure DevOps Server 2019**
 
- Analytics.
+Analytics.
 
 ## Roadmap timeline
 

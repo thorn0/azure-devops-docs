@@ -1,25 +1,25 @@
 ---
 title: Build and deploy apps, any app and platform ecosystems index
 titleSuffix: Azure DevOps Services
-description: Learn how to configure CI/CD for the app and platform of your choice using Azure Pipelines and Team Foundation Server (TFS).  
+description: Learn how to configure CI/CD for the app and platform of your choice using Azure Pipelines and Team Foundation Server (TFS).
 layout: LandingPage
 hide_bc: true
 ms.topic: landing-page
-ms.assetid: 00f4ed452-fbb8-45f9-8f0a-343702aac5b8  
-ms.manager: mijacobs 
+ms.assetid: 00f4ed452-fbb8-45f9-8f0a-343702aac5b8
+ms.manager: mijacobs
 ms.author: sdanie
 author: steved0x
 ms.date: 05/6/2019
 featureFlags:
-- clicktale 
-monikerRange: '>= tfs-2015'
+  - clicktale
+monikerRange: ">= tfs-2015"
 ---
 
 ::: moniker range=">= azure-devops-2019"
 
 # Azure Pipelines ecosystem support
 
-Build and deploy your apps. Find guidance based on your language and platform. 
+Build and deploy your apps. Find guidance based on your language and platform.
 
 ## Build your app
 
@@ -317,6 +317,7 @@ Build and deploy your apps. Find guidance based on your language and platform.
 ## Deploy your app
 
 <a href="#index3"></a>
+
 <ul id="index3" class="cardsFTitle panelContent singlePanelContent cols cols4" style="float: left; display: flex!important;">
             <li>
                 <a href="./kubernetes/deploy.md">
@@ -520,7 +521,6 @@ Build and deploy your apps. Find guidance based on your language and platform.
 ::: moniker-end
 
 ::: moniker range=">= tfs-2015 <= tfs-2018"
-
 
 ## Build your app
 
@@ -965,4 +965,3 @@ Build and deploy your apps. Find guidance based on your language and platform.
 </ul>
 
 ::: moniker-end
-

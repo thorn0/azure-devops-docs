@@ -4,7 +4,7 @@ ms.topic: conceptual
 description: Instructions for running your pipelines agent in Docker
 ms.assetid: e34461fc-8e77-4c94-8f49-cf604a925a19
 ms.date: 03/13/2020
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ---
 
 # Running a self-hosted agent in Docker
@@ -13,7 +13,7 @@ You can set up an Azure Pipelines self-hosted agent to run inside a Windows Serv
 This is useful when you want to run agents with some kind of outer orchestration, such as [Azure Container Instances](/azure/container-instances/).
 We'll walk through a complete container example, including handling agent self-update.
 
-Both [Windows](#windows) and [Linux](#linux) are supported as container hosts. 
+Both [Windows](#windows) and [Linux](#linux) are supported as container hosts.
 You'll pass a few [environment variables](#environment-variables) to `docker run` which configure the agent to connect to Azure Pipelines or Azure DevOps Server.
 Finally, you'll want to [customize the container](#adding-tools-and-customizing-the-container) to suit your needs.
 
@@ -33,8 +33,8 @@ Hyper-V is not enabled by default on Windows.
 In order to provide isolation between containers, it must be enabled.
 Otherwise, Docker for Windows won't start.
 
-* [Enable Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
-* [Enable Hyper-V on Windows Server 2016](/windows-server/virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server)
+- [Enable Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
+- [Enable Hyper-V on Windows Server 2016](/windows-server/virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server)
 
 > [!NOTE]
 > Virtualization must be enabled on your machine.
@@ -57,114 +57,114 @@ Next, we'll create the Dockerfile.
 1. Open a command prompt
 2. Create a new directory:
 
-    ```shell
-    mkdir C:\dockeragent
-    ```
+   ```shell
+   mkdir C:\dockeragent
+   ```
 
 3. Change directories to this new directory:
 
-    ```shell
-    cd C:\dockeragent
-    ```
+   ```shell
+   cd C:\dockeragent
+   ```
 
 4. Save the following content to a file called `C:\dockeragent\Dockerfile` (no file extension):
 
-    ```docker
-    FROM mcr.microsoft.com/windows/servercore:ltsc2019
-    
-    WORKDIR /azp
-    
-    COPY start.ps1 .
-    
-    CMD powershell .\start.ps1
-    ```
+   ```docker
+   FROM mcr.microsoft.com/windows/servercore:ltsc2019
+
+   WORKDIR /azp
+
+   COPY start.ps1 .
+
+   CMD powershell .\start.ps1
+   ```
 
 5. Save the following content to `C:\dockeragent\start.ps1`:
 
-    ```powershell
-    if (-not (Test-Path Env:AZP_URL)) {
-      Write-Error "error: missing AZP_URL environment variable"
-      exit 1
-    }
-    
-    if (-not (Test-Path Env:AZP_TOKEN_FILE)) {
-      if (-not (Test-Path Env:AZP_TOKEN)) {
-        Write-Error "error: missing AZP_TOKEN environment variable"
-        exit 1
-      }
-    
-      $Env:AZP_TOKEN_FILE = "\azp\.token"
-      $Env:AZP_TOKEN | Out-File -FilePath $Env:AZP_TOKEN_FILE
-    }
-    
-    Remove-Item Env:AZP_TOKEN
-    
-    if ($Env:AZP_WORK -and -not (Test-Path Env:AZP_WORK)) {
-      New-Item $Env:AZP_WORK -ItemType directory | Out-Null
-    }
-    
-    New-Item "\azp\agent" -ItemType directory | Out-Null
-    
-    # Let the agent ignore the token env variables
-    $Env:VSO_AGENT_IGNORE = "AZP_TOKEN,AZP_TOKEN_FILE"
-    
-    Set-Location agent
-    
-    Write-Host "1. Determining matching Azure Pipelines agent..." -ForegroundColor Cyan
-    
-    $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$(Get-Content ${Env:AZP_TOKEN_FILE})"))
-    $package = Invoke-RestMethod -Headers @{Authorization=("Basic $base64AuthInfo")} "$(${Env:AZP_URL})/_apis/distributedtask/packages/agent?platform=win-x64&`$top=1"
-    $packageUrl = $package[0].Value.downloadUrl
-    
-    Write-Host $packageUrl
-    
-    Write-Host "2. Downloading and installing Azure Pipelines agent..." -ForegroundColor Cyan
-    
-    $wc = New-Object System.Net.WebClient
-    $wc.DownloadFile($packageUrl, "$(Get-Location)\agent.zip")
-    
-    Expand-Archive -Path "agent.zip" -DestinationPath "\azp\agent"
-    
-    try
-    {
-      Write-Host "3. Configuring Azure Pipelines agent..." -ForegroundColor Cyan
-      
-      .\config.cmd --unattended `
-        --agent "$(if (Test-Path Env:AZP_AGENT_NAME) { ${Env:AZP_AGENT_NAME} } else { ${Env:computername} })" `
-        --url "$(${Env:AZP_URL})" `
-        --auth PAT `
-        --token "$(Get-Content ${Env:AZP_TOKEN_FILE})" `
-        --pool "$(if (Test-Path Env:AZP_POOL) { ${Env:AZP_POOL} } else { 'Default' })" `
-        --work "$(if (Test-Path Env:AZP_WORK) { ${Env:AZP_WORK} } else { '_work' })" `
-        --replace
-      
-      # remove the administrative token before accepting work
-      Remove-Item $Env:AZP_TOKEN_FILE
+   ```powershell
+   if (-not (Test-Path Env:AZP_URL)) {
+     Write-Error "error: missing AZP_URL environment variable"
+     exit 1
+   }
 
-      Write-Host "4. Running Azure Pipelines agent..." -ForegroundColor Cyan
-      
-      .\run.cmd
-    }
-    finally
-    {
-      Write-Host "Cleanup. Removing Azure Pipelines agent..." -ForegroundColor Cyan
-      
-      .\config.cmd remove --unattended `
-        --auth PAT `
-        --token "$(Get-Content ${Env:AZP_TOKEN_FILE})"
-    }
-    ```
+   if (-not (Test-Path Env:AZP_TOKEN_FILE)) {
+     if (-not (Test-Path Env:AZP_TOKEN)) {
+       Write-Error "error: missing AZP_TOKEN environment variable"
+       exit 1
+     }
+
+     $Env:AZP_TOKEN_FILE = "\azp\.token"
+     $Env:AZP_TOKEN | Out-File -FilePath $Env:AZP_TOKEN_FILE
+   }
+
+   Remove-Item Env:AZP_TOKEN
+
+   if ($Env:AZP_WORK -and -not (Test-Path Env:AZP_WORK)) {
+     New-Item $Env:AZP_WORK -ItemType directory | Out-Null
+   }
+
+   New-Item "\azp\agent" -ItemType directory | Out-Null
+
+   # Let the agent ignore the token env variables
+   $Env:VSO_AGENT_IGNORE = "AZP_TOKEN,AZP_TOKEN_FILE"
+
+   Set-Location agent
+
+   Write-Host "1. Determining matching Azure Pipelines agent..." -ForegroundColor Cyan
+
+   $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$(Get-Content ${Env:AZP_TOKEN_FILE})"))
+   $package = Invoke-RestMethod -Headers @{Authorization=("Basic $base64AuthInfo")} "$(${Env:AZP_URL})/_apis/distributedtask/packages/agent?platform=win-x64&`$top=1"
+   $packageUrl = $package[0].Value.downloadUrl
+
+   Write-Host $packageUrl
+
+   Write-Host "2. Downloading and installing Azure Pipelines agent..." -ForegroundColor Cyan
+
+   $wc = New-Object System.Net.WebClient
+   $wc.DownloadFile($packageUrl, "$(Get-Location)\agent.zip")
+
+   Expand-Archive -Path "agent.zip" -DestinationPath "\azp\agent"
+
+   try
+   {
+     Write-Host "3. Configuring Azure Pipelines agent..." -ForegroundColor Cyan
+
+     .\config.cmd --unattended `
+       --agent "$(if (Test-Path Env:AZP_AGENT_NAME) { ${Env:AZP_AGENT_NAME} } else { ${Env:computername} })" `
+       --url "$(${Env:AZP_URL})" `
+       --auth PAT `
+       --token "$(Get-Content ${Env:AZP_TOKEN_FILE})" `
+       --pool "$(if (Test-Path Env:AZP_POOL) { ${Env:AZP_POOL} } else { 'Default' })" `
+       --work "$(if (Test-Path Env:AZP_WORK) { ${Env:AZP_WORK} } else { '_work' })" `
+       --replace
+
+     # remove the administrative token before accepting work
+     Remove-Item $Env:AZP_TOKEN_FILE
+
+     Write-Host "4. Running Azure Pipelines agent..." -ForegroundColor Cyan
+
+     .\run.cmd
+   }
+   finally
+   {
+     Write-Host "Cleanup. Removing Azure Pipelines agent..." -ForegroundColor Cyan
+
+     .\config.cmd remove --unattended `
+       --auth PAT `
+       --token "$(Get-Content ${Env:AZP_TOKEN_FILE})"
+   }
+   ```
 
 6. Run the following command within that directory:
 
-    ```shell
-    docker build -t dockeragent:latest .
-    ```
+   ```shell
+   docker build -t dockeragent:latest .
+   ```
 
-    This command builds the Dockerfile in the current directory.
+   This command builds the Dockerfile in the current directory.
 
-    The final image is tagged `dockeragent:latest`.
-    You can easily run it in a container as `dockeragent`, since the `latest` tag is the default if no tag is specified.
+   The final image is tagged `dockeragent:latest`.
+   You can easily run it in a container as `dockeragent`, since the `latest` tag is the default if no tag is specified.
 
 ### Start the image
 
@@ -173,9 +173,9 @@ Now that you have created an image, you can spin up a container.
 1. Open a command prompt
 2. Run the container. This will install the latest version of the agent, configure it, and run the agent targeting the `Default` pool of a specified Azure DevOps or Azure DevOps Server instance of your choice:
 
-    ```shell
-    docker run -e AZP_URL=<Azure DevOps instance> -e AZP_TOKEN=<PAT token> -e AZP_AGENT_NAME=mydockeragent dockeragent:latest
-    ```
+   ```shell
+   docker run -e AZP_URL=<Azure DevOps instance> -e AZP_TOKEN=<PAT token> -e AZP_AGENT_NAME=mydockeragent dockeragent:latest
+   ```
 
 You can optionally control the pool and agent work directory using additional [environment variables](#environment-variables).
 
@@ -195,45 +195,45 @@ Next, we'll create the Dockerfile.
 1. Open a terminal
 2. Create a new directory (recommended):
 
-    ```shell
-    mkdir ~/dockeragent
-    ```
+   ```shell
+   mkdir ~/dockeragent
+   ```
 
 3. Change directories to this new directory:
 
-    ```shell
-    cd ~/dockeragent
-    ```
+   ```shell
+   cd ~/dockeragent
+   ```
 
 4. Save the following content to `~/dockeragent/Dockerfile`:
 
-    ```docker
-    FROM ubuntu:16.04
+   ```docker
+   FROM ubuntu:16.04
 
-    # To make it easier for build and release pipelines to run apt-get,
-    # configure apt to not require confirmation (assume the -y argument by default)
-    ENV DEBIAN_FRONTEND=noninteractive
-    RUN echo "APT::Get::Assume-Yes \"true\";" > /etc/apt/apt.conf.d/90assumeyes
+   # To make it easier for build and release pipelines to run apt-get,
+   # configure apt to not require confirmation (assume the -y argument by default)
+   ENV DEBIAN_FRONTEND=noninteractive
+   RUN echo "APT::Get::Assume-Yes \"true\";" > /etc/apt/apt.conf.d/90assumeyes
 
-    RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-            ca-certificates \
-            curl \
-            jq \
-            git \
-            iputils-ping \
-            libcurl3 \
-            libicu55 \
-            libunwind8 \
-            netcat
+   RUN apt-get update \
+   && apt-get install -y --no-install-recommends \
+           ca-certificates \
+           curl \
+           jq \
+           git \
+           iputils-ping \
+           libcurl3 \
+           libicu55 \
+           libunwind8 \
+           netcat
 
-    WORKDIR /azp
+   WORKDIR /azp
 
-    COPY ./start.sh .
-    RUN chmod +x start.sh
+   COPY ./start.sh .
+   RUN chmod +x start.sh
 
-    CMD ["./start.sh"]
-    ```
+   CMD ["./start.sh"]
+   ```
 
 > [!NOTE]
 > Tasks may depend on executables that your container is expected to provide.
@@ -242,114 +242,114 @@ Next, we'll create the Dockerfile.
 
 5. Save the following content to `~/dockeragent/start.sh`, making sure to use Unix-style (LF) line endings:
 
-    ```shell
-    #!/bin/bash
-    set -e
+   ```shell
+   #!/bin/bash
+   set -e
 
-    if [ -z "$AZP_URL" ]; then
-      echo 1>&2 "error: missing AZP_URL environment variable"
-      exit 1
-    fi
+   if [ -z "$AZP_URL" ]; then
+     echo 1>&2 "error: missing AZP_URL environment variable"
+     exit 1
+   fi
 
-    if [ -z "$AZP_TOKEN_FILE" ]; then
-      if [ -z "$AZP_TOKEN" ]; then
-        echo 1>&2 "error: missing AZP_TOKEN environment variable"
-        exit 1
-      fi
+   if [ -z "$AZP_TOKEN_FILE" ]; then
+     if [ -z "$AZP_TOKEN" ]; then
+       echo 1>&2 "error: missing AZP_TOKEN environment variable"
+       exit 1
+     fi
 
-      AZP_TOKEN_FILE=/azp/.token
-      echo -n $AZP_TOKEN > "$AZP_TOKEN_FILE"
-    fi
+     AZP_TOKEN_FILE=/azp/.token
+     echo -n $AZP_TOKEN > "$AZP_TOKEN_FILE"
+   fi
 
-    unset AZP_TOKEN
+   unset AZP_TOKEN
 
-    if [ -n "$AZP_WORK" ]; then
-      mkdir -p "$AZP_WORK"
-    fi
+   if [ -n "$AZP_WORK" ]; then
+     mkdir -p "$AZP_WORK"
+   fi
 
-    rm -rf /azp/agent
-    mkdir /azp/agent
-    cd /azp/agent
+   rm -rf /azp/agent
+   mkdir /azp/agent
+   cd /azp/agent
 
-    export AGENT_ALLOW_RUNASROOT="1"
+   export AGENT_ALLOW_RUNASROOT="1"
 
-    cleanup() {
-      if [ -e config.sh ]; then
-        print_header "Cleanup. Removing Azure Pipelines agent..."
+   cleanup() {
+     if [ -e config.sh ]; then
+       print_header "Cleanup. Removing Azure Pipelines agent..."
 
-        ./config.sh remove --unattended \
-          --auth PAT \
-          --token $(cat "$AZP_TOKEN_FILE")
-      fi
-    }
+       ./config.sh remove --unattended \
+         --auth PAT \
+         --token $(cat "$AZP_TOKEN_FILE")
+     fi
+   }
 
-    print_header() {
-      lightcyan='\033[1;36m'
-      nocolor='\033[0m'
-      echo -e "${lightcyan}$1${nocolor}"
-    }
+   print_header() {
+     lightcyan='\033[1;36m'
+     nocolor='\033[0m'
+     echo -e "${lightcyan}$1${nocolor}"
+   }
 
-    # Let the agent ignore the token env variables
-    export VSO_AGENT_IGNORE=AZP_TOKEN,AZP_TOKEN_FILE
+   # Let the agent ignore the token env variables
+   export VSO_AGENT_IGNORE=AZP_TOKEN,AZP_TOKEN_FILE
 
-    print_header "1. Determining matching Azure Pipelines agent..."
+   print_header "1. Determining matching Azure Pipelines agent..."
 
-    AZP_AGENT_RESPONSE=$(curl -LsS \
-      -u user:$(cat "$AZP_TOKEN_FILE") \
-      -H 'Accept:application/json;api-version=3.0-preview' \
-      "$AZP_URL/_apis/distributedtask/packages/agent?platform=linux-x64")
+   AZP_AGENT_RESPONSE=$(curl -LsS \
+     -u user:$(cat "$AZP_TOKEN_FILE") \
+     -H 'Accept:application/json;api-version=3.0-preview' \
+     "$AZP_URL/_apis/distributedtask/packages/agent?platform=linux-x64")
 
-    if echo "$AZP_AGENT_RESPONSE" | jq . >/dev/null 2>&1; then
-      AZP_AGENTPACKAGE_URL=$(echo "$AZP_AGENT_RESPONSE" \
-        | jq -r '.value | map([.version.major,.version.minor,.version.patch,.downloadUrl]) | sort | .[length-1] | .[3]')
-    fi
+   if echo "$AZP_AGENT_RESPONSE" | jq . >/dev/null 2>&1; then
+     AZP_AGENTPACKAGE_URL=$(echo "$AZP_AGENT_RESPONSE" \
+       | jq -r '.value | map([.version.major,.version.minor,.version.patch,.downloadUrl]) | sort | .[length-1] | .[3]')
+   fi
 
-    if [ -z "$AZP_AGENTPACKAGE_URL" -o "$AZP_AGENTPACKAGE_URL" == "null" ]; then
-      echo 1>&2 "error: could not determine a matching Azure Pipelines agent - check that account '$AZP_URL' is correct and the token is valid for that account"
-      exit 1
-    fi
+   if [ -z "$AZP_AGENTPACKAGE_URL" -o "$AZP_AGENTPACKAGE_URL" == "null" ]; then
+     echo 1>&2 "error: could not determine a matching Azure Pipelines agent - check that account '$AZP_URL' is correct and the token is valid for that account"
+     exit 1
+   fi
 
-    print_header "2. Downloading and installing Azure Pipelines agent..."
+   print_header "2. Downloading and installing Azure Pipelines agent..."
 
-    curl -LsS $AZP_AGENTPACKAGE_URL | tar -xz & wait $!
+   curl -LsS $AZP_AGENTPACKAGE_URL | tar -xz & wait $!
 
-    source ./env.sh
+   source ./env.sh
 
-    trap 'cleanup; exit 130' INT
-    trap 'cleanup; exit 143' TERM
+   trap 'cleanup; exit 130' INT
+   trap 'cleanup; exit 143' TERM
 
-    print_header "3. Configuring Azure Pipelines agent..."
+   print_header "3. Configuring Azure Pipelines agent..."
 
-    ./config.sh --unattended \
-      --agent "${AZP_AGENT_NAME:-$(hostname)}" \
-      --url "$AZP_URL" \
-      --auth PAT \
-      --token $(cat "$AZP_TOKEN_FILE") \
-      --pool "${AZP_POOL:-Default}" \
-      --work "${AZP_WORK:-_work}" \
-      --replace \
-      --acceptTeeEula & wait $!
-    
-    # remove the administrative token before accepting work
-    rm $AZP_TOKEN_FILE
+   ./config.sh --unattended \
+     --agent "${AZP_AGENT_NAME:-$(hostname)}" \
+     --url "$AZP_URL" \
+     --auth PAT \
+     --token $(cat "$AZP_TOKEN_FILE") \
+     --pool "${AZP_POOL:-Default}" \
+     --work "${AZP_WORK:-_work}" \
+     --replace \
+     --acceptTeeEula & wait $!
 
-    print_header "4. Running Azure Pipelines agent..."
+   # remove the administrative token before accepting work
+   rm $AZP_TOKEN_FILE
 
-    # `exec` the node runtime so it's aware of TERM and INT signals
-    # AgentService.js understands how to handle agent self-update and restart
-    exec ./externals/node/bin/node ./bin/AgentService.js interactive
-    ```
+   print_header "4. Running Azure Pipelines agent..."
+
+   # `exec` the node runtime so it's aware of TERM and INT signals
+   # AgentService.js understands how to handle agent self-update and restart
+   exec ./externals/node/bin/node ./bin/AgentService.js interactive
+   ```
 
 6. Run the following command within that directory:
 
-    ```shell
-    docker build -t dockeragent:latest .
-    ```
+   ```shell
+   docker build -t dockeragent:latest .
+   ```
 
-    This command builds the Dockerfile in the current directory.
+   This command builds the Dockerfile in the current directory.
 
-    The final image is tagged `dockeragent:latest`.
-    You can easily run it in a container as `dockeragent`, since the `latest` tag is the default if no tag is specified.
+   The final image is tagged `dockeragent:latest`.
+   You can easily run it in a container as `dockeragent`, since the `latest` tag is the default if no tag is specified.
 
 ### Start the image
 
@@ -358,9 +358,9 @@ Now that you have created an image, you can spin up a container.
 1. Open a terminal
 2. Run the container. This will install the latest version of the agent, configure it, and run the agent targeting the `Default` pool of a specified Azure DevOps or Azure DevOps Server instance of your choice:
 
-    ```shell
-    docker run -e AZP_URL=<Azure DevOps instance> -e AZP_TOKEN=<PAT token> -e AZP_AGENT_NAME=mydockeragent dockeragent:latest
-    ```
+   ```shell
+   docker run -e AZP_URL=<Azure DevOps instance> -e AZP_TOKEN=<PAT token> -e AZP_AGENT_NAME=mydockeragent dockeragent:latest
+   ```
 
 You can optionally control the pool and agent work directory using additional [environment variables](#environment-variables).
 
@@ -370,13 +370,12 @@ You must also use some kind of container orchestration system like Kubernetes or
 ## Environment variables
 
 | Environment variable | Description                                                 |
-|----------------------|-------------------------------------------------------------|
+| -------------------- | ----------------------------------------------------------- |
 | AZP_URL              | The URL of the Azure DevOps or Azure DevOps Server instance |
 | AZP_TOKEN            | Personal Access Token (PAT) granting access to `AZP_URL`    |
 | AZP_AGENT_NAME       | Agent name (default value: the container hostname)          |
 | AZP_POOL             | Agent pool name (default value: `Default`)                  |
 | AZP_WORK             | Work directory (default value: `_work`)                     |
-
 
 ## Adding tools and customizing the container
 

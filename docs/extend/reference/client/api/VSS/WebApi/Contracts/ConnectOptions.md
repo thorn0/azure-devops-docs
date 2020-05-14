@@ -16,7 +16,6 @@ Module path: `VSS/WebApi/Contracts`
 
 ### Values
 
-* `None` Retrieve no optional data.
+- `None` Retrieve no optional data.
 
-* `IncludeServices` Includes information about AccessMappings and ServiceDefinitions.
-
+- `IncludeServices` Includes information about AccessMappings and ServiceDefinitions.

@@ -13,8 +13,8 @@ ms.technology: devops-cicd-tasks
 - task: CopyFiles@2
   inputs:
     #sourceFolder: # Optional
-    #contents: '**' 
-    targetFolder: 
+    #contents: '**'
+    targetFolder:
     #cleanTargetFolder: false # Optional
     #overWrite: false # Optional
     #flattenFolders: false # Optional

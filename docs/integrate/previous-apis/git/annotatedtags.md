@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Git Tags - Annotated | REST API Reference for VAzure DevOps Services and Team Foundation Server
 description: Work with annotated tags in Git using the REST APIs for Team Foundation Server.
 ms.assetid: 5F749008-5513-444E-8E46-AF575132796E
@@ -27,13 +27,15 @@ Git annotated tags are tags with additional metadata including the person who cr
 GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/annotatedTags/{objectId}?api-version={version}
 ```
 
-| Parameter  | Type   | Notes
-|:-----------|:-------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance   | string | TFS server name ({server:port}).
-| project    | string | [Project](../tfs/projects.md) ID or name.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
 | repository | string | ID or name of the [repository](./repositories.md).
-| objectId   | string | objectId of Tag to be fetched, returned only if it is annotated tag
+| objectId | string | objectId of Tag to be fetched, returned only if it is annotated tag
 | Query
 | api-version| string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -63,42 +65,46 @@ GET https://mytfsserver/DefaultCollection/c34d5807-1734-4541-ad1c-d16e9ac1faca/_
 }
 ```
 
-
 ## Create annotated tag
 
 ```httprequest
 POST https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/{repository}/annotatedTags?api-version={version}
 ```
+
 ```http
 Content-Type: application/json
 ```
+
 ```json
 {
-    "name": {string},
-    "taggedObject": {
-        objectId: {string}
-    },
-    "message": {string}
+  "name": { string },
+  "taggedObject": {
+    "objectId": { string }
+  },
+  "message": { string }
 }
 ```
 
-| Parameter  | Type   | Notes
-|:-----------|:-------|:----------------------------------------------------------------------------------------------------------------------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance              | string | TFS server name ({server:port}).
-| project               | string | [Project](../tfs/projects.md) ID or name.
-| repository            | string | ID or name of the [repository](./repositories.md).
-| Query                 |
-| name                  | string | name of the tag to be created
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| repository | string | ID or name of the [repository](./repositories.md).
+| Query |
+| name | string | name of the tag to be created
 | taggedObject.objectId | string | ID of the object the tag is pointing to
-| message               | string | tag description field 
-| api-version           | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| message | string | tag description field
+| api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 POST https://mytfsserver/DefaultCollection/c34d5807-1734-4541-ad1c-d16e9ac1faca/_apis/git/repositories/ca93c3a5-87bb-4b5b-a62f-1f971d677c79/annotatedTags
 ```
+
 ```json
 {
   "name": "v0.1-beta",
@@ -128,5 +134,3 @@ POST https://mytfsserver/DefaultCollection/c34d5807-1734-4541-ad1c-d16e9ac1faca/
   "url": "https://mytfsserver/DefaultCollection/c34d5807-1734-4541-ad1c-d16e9ac1faca/_apis/git/repositories/ca93c3a5-87bb-4b5b-a62f-1f971d677c79/annotatedTags/bc57849b33949a15fa3cb889bb82d9ce21d5b6ee"
 }
 ```
-
-

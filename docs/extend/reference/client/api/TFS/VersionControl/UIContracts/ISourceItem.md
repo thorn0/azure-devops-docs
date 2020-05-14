@@ -17,7 +17,6 @@ Extends: [VCContracts.ItemModel](../../../TFS/VersionControl/Contracts/ItemModel
 
 ### Members
 
-* `sourceProvider`: string. 
+- `sourceProvider`: string.
 
-* `item`: VCContracts.GitItem or VCContracts.TfvcItem. 
-
+- `item`: VCContracts.GitItem or VCContracts.TfvcItem.

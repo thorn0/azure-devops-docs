@@ -12,12 +12,12 @@ ms.technology: devops-cicd-tasks
 # Queue a job on a Jenkins server
 - task: JenkinsQueueJob@2
   inputs:
-    serverEndpoint: 
-    jobName: 
+    serverEndpoint:
+    jobName:
     #isMultibranchJob: # Optional
     #multibranchPipelineBranch: # Required when isMultibranchJob == True
-    #captureConsole: true 
+    #captureConsole: true
     #capturePipeline: true # Required when captureConsole == True
-    isParameterizedJob: 
+    isParameterizedJob:
     #jobParameters: # Optional
 ```

@@ -16,6 +16,6 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `None` No order
-* `LastModifiedAscending` Order by created on/last modified time ascending.
-* `LastModifiedDescending` Order by created on/last modified time descending.
+- `None` No order
+- `LastModifiedAscending` Order by created on/last modified time ascending.
+- `LastModifiedDescending` Order by created on/last modified time descending.

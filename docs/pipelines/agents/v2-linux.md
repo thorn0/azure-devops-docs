@@ -5,7 +5,7 @@ description: Learn how you can easily deploy a self-hosted agent on Linux for Az
 ms.topic: conceptual
 ms.assetid: 834FFB19-DCC5-40EB-A3AD-18B7EDCA976E
 ms.date: 03/13/2020
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Self-hosted Linux agents
@@ -21,8 +21,9 @@ monikerRange: '>= tfs-2015'
 To run your jobs, you'll need at least one agent. A Linux agent can build and deploy different kinds of apps, including Java and Android apps. We support Ubuntu, Red Hat, and CentOS.
 
 > Before you begin:
-> * If your pipelines are in [Azure Pipelines](https://visualstudio.microsoft.com/products/visual-studio-team-services-vs) and a [Microsoft-hosted agent](hosted.md) meets your needs, you can skip setting up a private Linux agent.
-> *  Otherwise, you've come to the right place to set up an agent on Linux. Continue to the next section.
+>
+> - If your pipelines are in [Azure Pipelines](https://visualstudio.microsoft.com/products/visual-studio-team-services-vs) and a [Microsoft-hosted agent](hosted.md) meets your needs, you can skip setting up a private Linux agent.
+> - Otherwise, you've come to the right place to set up an agent on Linux. Continue to the next section.
 
 [!INCLUDE [include](includes/concepts.md)]
 
@@ -33,6 +34,7 @@ To run your jobs, you'll need at least one agent. A Linux agent can build and de
 The agent is based on .NET Core 2.1.
 You can run this agent on several Linux distributions.
 We support the following subset of .NET Core supported distributions:
+
 - x64
   - CentOS 7, 6 (see note 1)
   - Debian 9
@@ -73,8 +75,8 @@ See [Azure Pipelines agent prereqs](?view=azure-devops#check-prerequisites) for 
 
 If you must stay on the older agent, make sure your machine is prepared with our prerequisites for either of the supported distributions:
 
-* [Ubuntu systems](https://aka.ms/vstsagentubuntusystem)
-* [Red Hat/CentOS systems](https://aka.ms/vstsagentredhatsystem)
+- [Ubuntu systems](https://aka.ms/vstsagentubuntusystem)
+- [Red Hat/CentOS systems](https://aka.ms/vstsagentredhatsystem)
 
 ::: moniker-end
 
@@ -90,6 +92,7 @@ After you get a feel for how agents work, or if you want to automate setting up 
 [!INCLUDE [include](includes/v2/prepare-permissions.md)]
 
 <a name="download-configure"></a>
+
 ## Download and configure the agent
 
 ::: moniker range="azure-devops"
@@ -222,7 +225,7 @@ To run the agent interactively:
    ./run.sh
    ```
 
-  To restart the agent, press Ctrl+C and then run `run.sh` to restart it.
+To restart the agent, press Ctrl+C and then run `run.sh` to restart it.
 
 To use your agent, run a [job](../process/phases.md) using the agent's pool.
 If you didn't choose a different pool, your agent will be in the **Default** pool.
@@ -232,7 +235,7 @@ If you didn't choose a different pool, your agent will be in the **Default** poo
 For agents configured to run interactively, you can choose to have the agent accept only one job.
 To run in this configuration:
 
- ```bash
+```bash
 ./run.sh --once
 ```
 
@@ -242,8 +245,8 @@ Agents in this mode will accept only one job and then spin down gracefully (usef
 
 If your agent is running on these operating systems you can run the agent as a systemd service:
 
-* Ubuntu 16 LTS or newer
-* Red Hat 7.1 or newer
+- Ubuntu 16 LTS or newer
+- Red Hat 7.1 or newer
 
 > [!IMPORTANT]
 > If you run your agent as a service, you cannot run the agent service as `root` user.
@@ -313,7 +316,7 @@ The snapshot of the environment variables is stored in `.env` file (`PATH` is st
 
 ### Run instructions before the service starts
 
-You can also run your own instructions and commands to run when the service starts.  For example, you could set up the environment or call scripts.
+You can also run your own instructions and commands to run when the service starts. For example, you could set up the environment or call scripts.
 
 1. Edit `runsvc.sh`.
 
@@ -335,9 +338,9 @@ A systemd service file is created:
 
 For example, you have configured an agent (see above) with the name `our-linux-agent`. The service file will be either:
 
-* **Azure Pipelines**: the name of your organization. For example if you connect to `https://dev.azure.com/fabrikam`, then the service name would be `/etc/systemd/system/vsts.agent.fabrikam.our-linux-agent.service`
+- **Azure Pipelines**: the name of your organization. For example if you connect to `https://dev.azure.com/fabrikam`, then the service name would be `/etc/systemd/system/vsts.agent.fabrikam.our-linux-agent.service`
 
-* **TFS or Azure DevOps Server**: the name of your on-premises server. For example if you connect to `http://our-server:8080/tfs`, then the service name would be `/etc/systemd/system/vsts.agent.our-server.our-linux-agent.service`
+- **TFS or Azure DevOps Server**: the name of your on-premises server. For example if you connect to `http://our-server:8080/tfs`, then the service name would be `/etc/systemd/system/vsts.agent.our-server.our-linux-agent.service`
 
 `sudo ./svc.sh install` generates this file from this template: `./bin/vsts.agent.service.template`
 

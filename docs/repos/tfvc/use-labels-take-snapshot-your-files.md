@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Use labels to take a snapshot of your files
 
@@ -21,7 +20,6 @@ Labels let you take a snapshot of your files so that at a later date you can ref
 **Required permissions**
 
 To apply a label, you must have the **Label** permission set to **Allow**. To find, list, or view labels, you must have the **Read** permission set to **Allow**. To modify or delete a label, you must own the label or have the **Administer Labels** permission set to **Allow**.
-
 
 ## Using Labels
 
@@ -53,19 +51,19 @@ Sometimes after you apply a label you decide that you need to change it. Team Fo
 
 4.  In the **Version** list, **Latest Version** is selected by default. This option is the one most typically used, but if you need the label to target a specific version, select:
 
-    -   **Changeset**: Specify the number of the changeset in the **Changeset** box. Alternatively, choose the ellipses (**...**) to open the **Find Changesets** dialog box. For more information, see [Find and view changesets](find-view-changesets.md).
+    - **Changeset**: Specify the number of the changeset in the **Changeset** box. Alternatively, choose the ellipses (**...**) to open the **Find Changesets** dialog box. For more information, see [Find and view changesets](find-view-changesets.md).
 
-    -   **Date**: Specify a date in the **Date** box or select a date from the calendar on the drop-down menu.
+    - **Date**: Specify a date in the **Date** box or select a date from the calendar on the drop-down menu.
 
-    -   **Label**: Specify an existing label upon which to base the new label. Either type the label name in the **Label** box, or choose the ellipses (**...**) to open the **Find Label** dialog box. For more information, see [Find, Edit, and Remove Labels](use-labels-take-snapshot-your-files.md#find_label).
+    - **Label**: Specify an existing label upon which to base the new label. Either type the label name in the **Label** box, or choose the ellipses (**...**) to open the **Find Label** dialog box. For more information, see [Find, Edit, and Remove Labels](use-labels-take-snapshot-your-files.md#find_label).
 
-    -   **Workspace Version**: The label is created for the version in your workspace.
+    - **Workspace Version**: The label is created for the version in your workspace.
 
 5.  When you are satisfied with your settings, perform one of the following steps:
 
-    -   To apply the label, choose **Create**.
+    - To apply the label, choose **Create**.
 
-    -   To apply the label and then modify it after it has been applied, choose **Create and Edit**. This applies the label and then displays the **Label** window. For more information about using the **Label** window to edit a label, see [Use the Label Window to Work with Labels](use-labels-take-snapshot-your-files.md#label_window).
+    - To apply the label and then modify it after it has been applied, choose **Create and Edit**. This applies the label and then displays the **Label** window. For more information about using the **Label** window to edit a label, see [Use the Label Window to Work with Labels](use-labels-take-snapshot-your-files.md#label_window).
 
 > [!NOTE]
 > When you apply a label using a name that already exists, the system warns you and asks if you want to continue. If you choose **OK** to continue, any items not contained in the path to which you are applying the label will no longer have that label.
@@ -90,13 +88,13 @@ While you cannot modify the name of an existing label, you can easily apply a ne
 
 5.  Perform one of the following steps:
 
-    -   Type the name of the existing label.
+    - Type the name of the existing label.
 
-    -   If you are not sure of the name of the existing label, choose the browse button with the ellipses (...) next to the **Label** box.
+    - If you are not sure of the name of the existing label, choose the browse button with the ellipses (...) next to the **Label** box.
 
-        The **Find Label** dialog box appears.
+      The **Find Label** dialog box appears.
 
-        Use the options in the **Find Label** dialog box to filter the list of labels and find the existing label to which you want to apply the new label. (For more information, see [Find, Edit, and Remove Labels](use-labels-take-snapshot-your-files.md#find_label).)
+      Use the options in the **Find Label** dialog box to filter the list of labels and find the existing label to which you want to apply the new label. (For more information, see [Find, Edit, and Remove Labels](use-labels-take-snapshot-your-files.md#find_label).)
 
 6.  Choose **Create**.
 
@@ -116,11 +114,11 @@ There are two ways to list and find labels: the **Find Label** dialog box and th
 
 2.  (Optional) Refine your search by performing one or more of the following steps:
 
-    -   In the **Name** text box, type the name of the label.
+    - In the **Name** text box, type the name of the label.
 
-    -   In the **Project** list, select the project that contains the label that you want to find.
+    - In the **Project** list, select the project that contains the label that you want to find.
 
-    -   In the **Owner** text box, type the name or alias of the owner of the label.
+    - In the **Owner** text box, type the name or alias of the owner of the label.
 
 3.  Choose **Find**.
 
@@ -128,13 +126,13 @@ There are two ways to list and find labels: the **Find Label** dialog box and th
 
 4.  (Optional) Perform one of the following steps:
 
-    -   To view or edit a label, select it and choose **Edit**.
+    - To view or edit a label, select it and choose **Edit**.
 
-        The **Label** window appears. For more information, see [Use the Label Window to Work with Labels](use-labels-take-snapshot-your-files.md#label_window).
+      The **Label** window appears. For more information, see [Use the Label Window to Work with Labels](use-labels-take-snapshot-your-files.md#label_window).
 
-    -   To delete a label, select it and choose **Delete**.
+    - To delete a label, select it and choose **Delete**.
 
-    -   Choose **Close**.
+    - Choose **Close**.
 
 Sometimes you may not be sure of the name of a label, but you know that the label was applied to a particular item under version control. The following procedure explains how to find and then work with a label in this situation.
 
@@ -148,13 +146,13 @@ Sometimes you may not be sure of the name of a label, but you know that the labe
 
 3.  (Optional) Perform one of the following steps:
 
-    -   To view or edit a label, open its shortcut menu and choose **Edit Label**.
+    - To view or edit a label, open its shortcut menu and choose **Edit Label**.
 
-        The Label window appears. For information about how to use this window, see [Use the Label Window to Work with Labels](use-labels-take-snapshot-your-files.md#label_window).
+      The Label window appears. For information about how to use this window, see [Use the Label Window to Work with Labels](use-labels-take-snapshot-your-files.md#label_window).
 
-    -   To delete a label, open its shortcut menu and choose **Delete Label**.
+    - To delete a label, open its shortcut menu and choose **Delete Label**.
 
-    -   Open the shortcut menu for the label and choose other actions such as **Get This Version**, and **Compare**.
+    - Open the shortcut menu for the label and choose other actions such as **Get This Version**, and **Compare**.
 
 For more information about how to use the label tab in the History window, see [Get the history of an item](get-history-item.md).
 
@@ -182,13 +180,13 @@ After you have opened the Label window by using one of the preceding procedures,
 
 You can use the Label window to perform the following tasks:
 
--   Add an item to the label
+- Add an item to the label
 
--   Remove an item from the label
+- Remove an item from the label
 
--   Change the version of a file
+- Change the version of a file
 
--   Perform other actions on an item
+- Perform other actions on an item
 
 ### Add an item to the label
 
@@ -203,15 +201,15 @@ You can use the Label window to perform the following tasks:
 
 3.  (Optional) If you need the label to target a specific version, from the **Version** list, select:
 
-    -   **Latest Version**: The label will be applied to the latest version that is in version control.
+    - **Latest Version**: The label will be applied to the latest version that is in version control.
 
-    -   **Changeset**: Specify the number of the changeset in the **Changeset** box. Alternatively, choose the ellipses (**...**) to open the **Find Changesets** dialog box. For more information, see [Find and view changesets](find-view-changesets.md).
+    - **Changeset**: Specify the number of the changeset in the **Changeset** box. Alternatively, choose the ellipses (**...**) to open the **Find Changesets** dialog box. For more information, see [Find and view changesets](find-view-changesets.md).
 
-    -   **Date**: Specify a date in the **Date** box or select a date from the calendar on the drop-down menu.
+    - **Date**: Specify a date in the **Date** box or select a date from the calendar on the drop-down menu.
 
-    -   **Label**: Specify an existing label upon which to base the new label. Either type the label name in the **Label** box, or choose the ellipses (**...**) to open the **Find Label** dialog box. For more information, see [Find, Edit, and Remove Labels](use-labels-take-snapshot-your-files.md#find_label).
+    - **Label**: Specify an existing label upon which to base the new label. Either type the label name in the **Label** box, or choose the ellipses (**...**) to open the **Find Label** dialog box. For more information, see [Find, Edit, and Remove Labels](use-labels-take-snapshot-your-files.md#find_label).
 
-    -   **Workspace Version**: The label is created for the version in your workspace.
+    - **Workspace Version**: The label is created for the version in your workspace.
 
 4.  Choose **OK**.
 
@@ -237,52 +235,51 @@ You can use the Label window to perform the following tasks:
 
 4.  Select:
 
-    -   **Latest Version**: Apply the label to the latest version that is in version control.
+    - **Latest Version**: Apply the label to the latest version that is in version control.
 
-    -   **Changeset**: Specify the number of the changeset in the **Changeset** box. Alternatively, choose the ellipses (**...**) to open the **Find Changesets** dialog box. For more information, see [Find and view changesets](find-view-changesets.md).
+    - **Changeset**: Specify the number of the changeset in the **Changeset** box. Alternatively, choose the ellipses (**...**) to open the **Find Changesets** dialog box. For more information, see [Find and view changesets](find-view-changesets.md).
 
-    -   **Date**: Specify a date in the **Date** box or select a date from the calendar on the drop-down menu.
+    - **Date**: Specify a date in the **Date** box or select a date from the calendar on the drop-down menu.
 
-    -   **Label**: Specify an existing label upon which to base the new label. Either type the label name in the **Label** box, or choose the ellipses (**...**) to open the **Find Label** dialog box. For more information, see [Find, Edit, and Remove Labels](use-labels-take-snapshot-your-files.md#find_label).
+    - **Label**: Specify an existing label upon which to base the new label. Either type the label name in the **Label** box, or choose the ellipses (**...**) to open the **Find Label** dialog box. For more information, see [Find, Edit, and Remove Labels](use-labels-take-snapshot-your-files.md#find_label).
 
-    -   **Workspace Version**: The label is created for the version in your workspace.
+    - **Workspace Version**: The label is created for the version in your workspace.
 
 5.  Choose **File**, **Save**.
-
 
 ### Perform other actions on a labeled item
 
 When you open the shortcut menu for an item in the Label window, you can also choose one of the following commands:
 
--   **View** (files only)
+- **View** (files only)
 
--   [View History](get-history-item.md)
+- [View History](get-history-item.md)
 
--   [Compare](compare-files.md) (files only)
+- [Compare](compare-files.md) (files only)
 
--   [Annotate](view-file-changes-using-annotate.md) (files only)
+- [Annotate](view-file-changes-using-annotate.md) (files only)
 
--   [Get This Version](download-get-files-from-server.md)
+- [Get This Version](download-get-files-from-server.md)
 
 ## Work from the command prompt
 
-- [Label Command (Team Foundation Version Control)](label-command-team-foundation-version-control.md)  Apply or remove a label.
+- [Label Command (Team Foundation Version Control)](label-command-team-foundation-version-control.md) Apply or remove a label.
 
   > [!TIP]
   > When you use this command to apply a label, you can specify a scope other than the project.
 
-- [Labels Command](labels-command.md)  List labels.
+- [Labels Command](labels-command.md) List labels.
 
 ## See Also
 
 #### Other Resources
 
- [Find and view changesets](find-view-changesets.md) 
+[Find and view changesets](find-view-changesets.md)
 
- [Create and work with workspaces](create-work-workspaces.md) 
+[Create and work with workspaces](create-work-workspaces.md)
 
- [Permissions and groups reference](../../organizations/security/permissions.md) 
+[Permissions and groups reference](../../organizations/security/permissions.md)
 
- [Use branches to isolate risk in Team Foundation Version Control](use-branches-isolate-risk-team-foundation-version-control.md) 
+[Use branches to isolate risk in Team Foundation Version Control](use-branches-isolate-risk-team-foundation-version-control.md)
 
- [Use Source Control Explorer to manage files under version control](use-source-control-explorer-manage-files-under-version-control.md) 
+[Use Source Control Explorer to manage files under version control](use-source-control-explorer-manage-files-under-version-control.md)

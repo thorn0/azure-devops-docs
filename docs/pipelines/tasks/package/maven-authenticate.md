@@ -4,7 +4,7 @@ ms.custom: seodec18
 description: Provides credentials for Azure Artifacts feeds and external Maven repositories.
 ms.topic: reference
 ms.date: 04/21/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Package: Maven Authenticate
@@ -17,16 +17,16 @@ Provides credentials for Azure Artifacts feeds and external Maven repositories i
 
 ## Arguments
 
-| Argument | Description |
-| ---------| ----------- |
-| `artifactsFeeds`<br/>My feeds (select below) | (Optional) Comma-separated list of Azure Artifacts feed names to authenticate with Maven. If you only need authentication for external maven repositories, leave this field blank. |
-| `mavenServiceConnections`<br/>Feeds from external organizations | (Optional) Comma-separated list of <a href="~/pipelines/library/service-endpoints.md#sep-maven" data-raw-source="[Maven service connection](~/pipelines/library/service-endpoints.md#sep-maven)">Maven service connection</a> names from external organizations to authenticate with Maven. If you only needs authentication for Azure Artifacts feeds, leave this field blank.|
+| Argument                                                        | Description                                                                                                                                                                                                                                                                                                                                                                     |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `artifactsFeeds`<br/>My feeds (select below)                    | (Optional) Comma-separated list of Azure Artifacts feed names to authenticate with Maven. If you only need authentication for external maven repositories, leave this field blank.                                                                                                                                                                                              |
+| `mavenServiceConnections`<br/>Feeds from external organizations | (Optional) Comma-separated list of <a href="~/pipelines/library/service-endpoints.md#sep-maven" data-raw-source="[Maven service connection](~/pipelines/library/service-endpoints.md#sep-maven)">Maven service connection</a> names from external organizations to authenticate with Maven. If you only needs authentication for Azure Artifacts feeds, leave this field blank. |
 
 ## Examples
 
 ### Authenticate Maven feeds inside your organization
 
-In this example, we authenticate two Azure Artifacts feeds within our organization. 
+In this example, we authenticate two Azure Artifacts feeds within our organization.
 
 #### Task definition
 
@@ -58,9 +58,10 @@ The MavenAuthenticate task updates the settings.xml file present in the agent us
 
 You should set the repositories in your project's `pom.xml` to have the same `<id>` as the name specified in the task for Maven to be able to correctly authenticate the task.
 
-#### pom.xml 
+#### pom.xml
 
 Project scoped feed
+
 ```XML
  <repository>
    <id>MyFeedInOrg1</id>
@@ -75,6 +76,7 @@ Project scoped feed
 ```
 
 Organization scoped feed
+
 ```XML
  <repository>
    <id>MyFeedInOrg1</id>
@@ -92,7 +94,7 @@ The Artifacts feed URL may or may not contain the project. An URL for a project 
 
 ### Authenticate Maven feeds outside your organization.
 
-In this example, we authenticate two external Maven repositories. 
+In this example, we authenticate two external Maven repositories.
 
 #### Task definition
 

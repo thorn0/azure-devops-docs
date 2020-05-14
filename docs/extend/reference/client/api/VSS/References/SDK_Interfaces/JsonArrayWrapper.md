@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,10 +15,8 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Class used to wrap arrays in an object. 
+Class used to wrap arrays in an object.
 
 ### Members
 
-* `__wrappedArray`: string. 
-
+- `__wrappedArray`: string.

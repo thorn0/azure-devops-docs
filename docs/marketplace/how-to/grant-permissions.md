@@ -7,7 +7,7 @@ ms.assetid: 5b0786ec-9f5e-419f-acef-c15d15985285
 ms.author: chcomley
 author: chcomley
 ms.date: 07/11/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Manage extension permissions
@@ -28,41 +28,41 @@ In this article, learn how to grant permissions for publishing or updating exten
 
 ::: moniker range="azure-devops"
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
 2. Select ![gear icon](../../media/icons/gear-icon.png) **Organization settings**.
 
-    ![Open Organization settings](../../media/settings/open-admin-settings-vert.png)
+   ![Open Organization settings](../../media/settings/open-admin-settings-vert.png)
 
 3. Select **Extensions**.
 
-    ![Extension settings hub](../media/manage-permissions/extensions-settings.png)
+   ![Extension settings hub](../media/manage-permissions/extensions-settings.png)
 
 4. Select **Security** in the upper right of the Extension Security page:
 
-    ![Extension security button](../media/manage-permissions/extensions-security-button.png)
+   ![Extension security button](../media/manage-permissions/extensions-security-button.png)
 
 5. Add users or update permission settings:
 
-    ![Extension security](../media/manage-permissions/extensions-security.png)
+   ![Extension security](../media/manage-permissions/extensions-security.png)
 
 ::: moniker-end
 
 ::: moniker range="azure-devops-2019"
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
 2. Select ![gear icon](../../media/icons/gear-icon.png) **Admin settings**.
 
-    ![Open Admin settings](../../media/settings/open-admin-settings-server.png)
+   ![Open Admin settings](../../media/settings/open-admin-settings-server.png)
 
 3. Select **Extensions**, and then select **Security**.
 
-    ![Extension settings hub](../media/select-extensions-and-security.png)
+   ![Extension settings hub](../media/select-extensions-and-security.png)
 
 4. Add users or update permission settings:
 
-    ![Extension security](../media/manage-permissions/extensions-security.png)
+   ![Extension security](../media/manage-permissions/extensions-security.png)
 
 ::: moniker-end
 
@@ -95,11 +95,11 @@ To grant permissions for publishing or updating to users or groups, use [TFSSecu
 
 3. Add existing users and groups to the "TFS Extension Publishers" group.
 
-    ```
-    tfssecurity /g+ "[TEAM FOUNDATION]\TFS Extension Publishers" n:User /server:ServerURL
-    ```
+   ```
+   tfssecurity /g+ "[TEAM FOUNDATION]\TFS Extension Publishers" n:User /server:ServerURL
+   ```
 
-You can add users later to "TFS Extension Publishers". This permission is a server-level permission, 
+You can add users later to "TFS Extension Publishers". This permission is a server-level permission,
 so updating and deleting an extension affects all the project collections that use the extension.
 
 ::: moniker-end

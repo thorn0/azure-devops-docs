@@ -13,22 +13,20 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `comment`: string. 
+- `comment`: string.
 
-* `commentTruncated`: boolean. 
+- `commentTruncated`: boolean.
 
-* `createdDate`: Date. 
+- `createdDate`: Date.
 
-* `id`: string. 
+- `id`: string.
 
-* `name`: string. 
+- `name`: string.
 
-* `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `url`: string. 
-
+- `url`: string.

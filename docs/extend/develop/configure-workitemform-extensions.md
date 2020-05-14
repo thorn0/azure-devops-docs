@@ -4,23 +4,23 @@ description: Describes how to add and configure work item form extensions in TFS
 ms.contentid: DEC28077-2F52-490D-B87C-48D4785CD597
 ms.technology: devops-ecosystem
 ms.topic: conceptual
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.author: chcomley
 author: chcomley
 ms.date: 10/10/2017
 ---
 
-<blockquote style="font-size: 13px"><b>Note:</b> work item form customization via xml is supported only on TFS, not Azure DevOps Services</blockquote>  
+<blockquote style="font-size: 13px"><b>Note:</b> work item form customization via xml is supported only on TFS, not Azure DevOps Services</blockquote>
 
 # Add extensions in work item form via work item type definition xml
 
-A work item type can be exported as XML using witadmin tool, that includes the layout of the work item form. As part of the walk through, you add the page, group, and control contributions to the layout.  [Read more information on WebLayout XML](/azure/devops/reference/xml/weblayout-xml-elements). In this example, we add the control to the Agile "User Story" work item type.
+A work item type can be exported as XML using witadmin tool, that includes the layout of the work item form. As part of the walk through, you add the page, group, and control contributions to the layout. [Read more information on WebLayout XML](/azure/devops/reference/xml/weblayout-xml-elements). In this example, we add the control to the Agile "User Story" work item type.
 
 [!INCLUDE [extension-docs-new-sdk](../../includes/extension-docs-new-sdk.md)]
 
-**Step 1:**  Install work item form extensions in TFS.
+**Step 1:** Install work item form extensions in TFS.
 
-**Step 2:**   Open the `Developer Command Prompt`.  Export the XML file to your desktop with command shown below.
+**Step 2:** Open the `Developer Command Prompt`. Export the XML file to your desktop with command shown below.
 
 ```
     witadmin exportwitd /collection:CollectionURL /p:Project /n:TypeName /f:FileName
@@ -52,10 +52,10 @@ A work item type can be exported as XML using witadmin tool, that includes the l
 ```
 
 <br>
-<strong>Step 4:</strong>  Find your extension ID in the &quot;Work Item Extensions&quot; section: 
+<strong>Step 4:</strong>  Find your extension ID in the &quot;Work Item Extensions&quot; section:
 
 ```xml
-        <!--**********************************Work Item Extensions*************************** 
+        <!--**********************************Work Item Extensions***************************
 
     Extension:
         Name: color-control-dev
@@ -77,19 +77,21 @@ A work item type can be exported as XML using witadmin tool, that includes the l
         <Extensions>
             <Extension Id="example.color-control-dev" />
         </Extensions>
- ```
+```
 
 <br>
-<strong>Step 6:</strong>  Specifying the extensions in the xml automatically places both the <strong>page</strong> and <strong>group</strong> contributions defined in the extensions inside the form. You can move the contributions following the examples below: 
+<strong>Step 6:</strong>  Specifying the extensions in the xml automatically places both the <strong>page</strong> and <strong>group</strong> contributions defined in the extensions inside the form. You can move the contributions following the examples below:
 
 #### Add page contribution
+
 ```xml
     <Page Id="Details">
     <PageContribution Id="<page contribution id>" />
-    ...       
+    ...
 ```
 
- #### Add group contribution
+#### Add group contribution
+
 ```xml
     <Page Id="Details">
     ...
@@ -99,10 +101,11 @@ A work item type can be exported as XML using witadmin tool, that includes the l
             ...
 ```
 
-> Note that a page contribution and a group contribution can not take any other layout elements inside them. 
+> Note that a page contribution and a group contribution can not take any other layout elements inside them.
 
 #### Add control contribution
-Unlike **page** and **group** contributions, specifying the extensions in the xml doesn't automatically place **control** contributions. 
+
+Unlike **page** and **group** contributions, specifying the extensions in the xml doesn't automatically place **control** contributions.
 To add these contributions in the form, you have to add them with a contribution tag inside the form. The example below adds the "ControlContribution" to the "Planning" group.
 
 Note that if a control contribution has any required input defined, users must give a value for that input. For any non-required input, users can opt to either set or not set a value to the input. In the example below, the values of "FieldName" and "Colors" inputs are set:
@@ -124,8 +127,6 @@ Note that if a control contribution has any required input defined, users must g
                 <Control Label="Risk" Type="FieldControl" FieldName="Microsoft.Azure DevOps Services.Common.Risk" />
 ```
 
-
-
 <br>
 <strong>Step 7:</strong>  Finally, import this <em>.xml</em> file, using witadmin.
-<code>witadmin importwitd /collection:CollectionURL /p:Project /f:FileName</code> 
+<code>witadmin importwitd /collection:CollectionURL /p:Project /f:FileName</code>

@@ -15,8 +15,8 @@ Module path: `TFS/VersionControl/Contracts`
 
 ### Values
 
-* `None` 
-* `Edit` 
-* `Delete` 
-* `Add` 
-* `Rename` 
+- `None`
+- `Edit`
+- `Delete`
+- `Add`
+- `Rename`

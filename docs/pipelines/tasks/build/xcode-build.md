@@ -6,7 +6,7 @@ ms.assetid: 37B7092E-9205-4050-BBC8-E35C3A4B0A8A
 ms.author: vijayma
 author: vijayma
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015 <= tfs-2018'
+monikerRange: ">= tfs-2015 <= tfs-2018"
 ---
 
 # Xcode Build task
@@ -211,7 +211,6 @@ You can specify this argument if you have selected Use xctool and included <code
 </td>
 </tr>
 
-
 <tr>
 <th style="text-align: center" colspan="2"><a href="~/pipelines/process/tasks.md#controloptions" data-raw-source="[Control options](../../process/tasks.md#controloptions)">Control options</a></th>
 </tr>
@@ -227,6 +226,7 @@ You can specify this argument if you have selected Use xctool and included <code
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 [!INCLUDE [temp](../../includes/qa-agents.md)]

@@ -7,12 +7,12 @@ ms.author: chcomley
 author: chcomley
 ms.date: 09/29/2016
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 ---
+
 # npm
 
 [!INCLUDE [azure-devops](../_data/azure-devops-message.md)]
-
 
 [!INCLUDE [API_version](../_data/version3-preview1.md)]
 
@@ -20,18 +20,18 @@ monikerRange: '>= tfs-2015 < azure-devops'
 
 ## Get package info
 
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
 
-| Parameter             | Type    | Default   | Notes
-|:----------------------|:--------|:----------|:---------------------------------------------------------------------------------------------------
+
 | URL
-| account               | string  |           | VSTS organization.
-| feedName              | string  |           | Name or ID of the feed.
-| packageScope          | string  |           | Scope of the package, preceded by an @-symbol. Required parameter for scoped packages.
-| packageName           | string  |           | Name or ID of the package.
-| packageVersion        | string  |           | Version of the package or Version ID. Dist-tags are not currently supported.
-| showUnpublished       |   bool  |   false   | Set to true to return metadata for packages that have been unpublished.
-| api-version           | string  |           | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-
+| account | string | | VSTS organization.
+| feedName | string | | Name or ID of the feed.
+| packageScope | string | | Scope of the package, preceded by an @-symbol. Required parameter for scoped packages.
+| packageName | string | | Name or ID of the package.
+| packageVersion | string | | Version of the package or Version ID. Dist-tags are not currently supported.
+| showUnpublished | bool | false | Set to true to return metadata for packages that have been unpublished.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 ### Unscoped packages
 
@@ -57,7 +57,6 @@ GET https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/boot
 }
 ```
 
-
 ### Scoped packages
 
 ```no-highlight
@@ -82,19 +81,19 @@ GET https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/@mys
 }
 ```
 
-
 ## Deprecate a package
 
-| Parameter             | Type    | Default   | Notes
-|:----------------------|:--------|:----------|:---------------------------------------------------------------------------------------------------
-| URL
-| account               | string  |           | VSTS organization.
-| feedName              | string  |           | Name or ID of the feed.
-| packageScope          | string  |           | Scope of the package, preceded by an @-symbol. Required parameter for scoped packages.
-| packageName           | string  |           | Name or ID of the package.
-| packageVersion        | string  |           | Version of the package or Version ID.
-| api-version           | string  |           | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
 
+
+| URL
+| account | string | | VSTS organization.
+| feedName | string | | Name or ID of the feed.
+| packageScope | string | | Scope of the package, preceded by an @-symbol. Required parameter for scoped packages.
+| packageName | string | | Name or ID of the package.
+| packageVersion | string | | Version of the package or Version ID.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 ### Unscoped packages
 
@@ -107,6 +106,7 @@ PATCH https://{account}.pkgs.visualstudio.com/defaultcollection/_apis/packaging/
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/bootstrap/versions/3.3.6/?api-version=3.0-preview
 ```
+
 ```json
 {
   "deprecateMessage": "This package has been deprecated. Please use version 3.3.7 instead."
@@ -125,7 +125,6 @@ PATCH https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/bo
 }
 ```
 
-
 ### Scoped packages
 
 ```no-highlight
@@ -137,6 +136,7 @@ PATCH https://{account}.pkgs.visualstudio.com/defaultcollection/_apis/packaging/
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/@myscope/bootstrap/versions/3.3.6/?api-version=3.0-preview
 ```
+
 ```json
 {
   "deprecateMessage": "This package has been deprecated. Please use version 3.3.7 instead."
@@ -155,22 +155,23 @@ PATCH https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/@m
 }
 ```
 
-
 ## Undeprecate a package
 
 To undeprecate a package, call the deprecate package API with an empty deprecation message.
 
 ## Unpublish
 
-| Parameter             | Type    | Default   | Notes
-|:----------------------|:--------|:----------|:---------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| account               | string  |           | VSTS organization.
-| feedName              | string  |           | Name or ID of the feed.
-| packageScope          | string  |           | Scope of the package, preceded by an @-symbol. Required parameter for scoped packages.
-| packageName           | string  |           | Name or ID of the package.
-| packageVersion        | string  |           | Version of the package or Version ID.
-| api-version           | string  |           | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| account | string | | VSTS organization.
+| feedName | string | | Name or ID of the feed.
+| packageScope | string | | Scope of the package, preceded by an @-symbol. Required parameter for scoped packages.
+| packageName | string | | Name or ID of the package.
+| packageVersion | string | | Version of the package or Version ID.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 ### Unscoped packages
 
@@ -196,7 +197,6 @@ DELETE https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/b
 }
 ```
 
-
 ### Scoped packages
 
 ```no-highlight
@@ -221,22 +221,24 @@ DELETE https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/@
 }
 ```
 
-
 ## Download Package
 
-This endpoint is not intended for programmatic usage or bulk downloads.  The service will throttle when excessive use is detected.
+This endpoint is not intended for programmatic usage or bulk downloads. The service will throttle when excessive use is detected.
 
-| Parameter             | Type    | Default  | Notes
-|:----------------------|:--------|:---------|:----------------------------------------------------------------------------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
+
+
 | URL
-| account               | string  |          | VSTS organization.
-| feedName              | string  |          | Name or Id of the feed
-| packageScope          | string  |          | Scope of the package, preceded by an @-symbol. Required parameter for scoped packages.
-| packageName           | string  |          | Normalized Name or ID of the package
-| packageVersion        | string  |          | Version of the package or Version ID
-| api-version           | string  |          | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| account | string | | VSTS organization.
+| feedName | string | | Name or Id of the feed
+| packageScope | string | | Scope of the package, preceded by an @-symbol. Required parameter for scoped packages.
+| packageName | string | | Normalized Name or ID of the package
+| packageVersion | string | | Version of the package or Version ID
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 ### Unscoped packages
+
 ```no-highlight
 GET https://{account}.pkgs.visualstudio.com/defaultcollection/_apis/packaging/feeds/{feedname}/npm/packages/{packagename}/versions/{packageversion}/content?api-version={api-version}
 ```
@@ -253,8 +255,8 @@ GET https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/pack
 "ResponseIsBinary"
 ```
 
-
 ### Scoped packages
+
 ```no-highlight
 GET https://{account}.pkgs.visualstudio.com/defaultcollection/_apis/packaging/feeds/{feedname}/npm/@{packageScope}/packages/{packagename}/versions/{packageversion}/content?api-version={api-version}
 ```
@@ -271,21 +273,21 @@ GET https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/pack
 "ResponseIsBinary"
 ```
 
-
 ## Release a package
 
-| Parameter             | Type    | Default   | Notes
-|:----------------------|:--------|:----------|:---------------------------------------------------------------------------------------------------
-| URL
-| account               | string  |           | VSTS organization.
-| feedName              | string  |           | Name or ID of the feed.
-| packageScope          | string  |           | Scope of the package, preceded by an @-symbol. Required parameter for scoped packages.
-| packageName           | string  |           | Name or ID of the package.
-| packageVersion        | string  |           | Version of the package or Version ID.
-| api-version           | string  |           | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| Body
-| views                 | string  |           | JSON patch object
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | :---- |
 
+
+| URL
+| account | string | | VSTS organization.
+| feedName | string | | Name or ID of the feed.
+| packageScope | string | | Scope of the package, preceded by an @-symbol. Required parameter for scoped packages.
+| packageName | string | | Name or ID of the package.
+| packageVersion | string | | Version of the package or Version ID.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Body
+| views | string | | JSON patch object
 
 ### Unscoped packages
 
@@ -298,6 +300,7 @@ PATCH https://{account}.pkgs.VisualStudio.com/DefaultCollection/_apis/packaging/
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/bootstrap/versions/3.3.6/?api-version=3.0-preview
 ```
+
 ```json
 {
   "views": {
@@ -320,8 +323,6 @@ PATCH https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/bo
 }
 ```
 
-
-
 ### Scoped packages
 
 ```no-highlight
@@ -333,6 +334,7 @@ PATCH https://{account}.pkgs.VisualStudio.com/DefaultCollection/_apis/packaging/
 ```
 PATCH https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/@myscope/bootstrap/versions/3.3.6/?api-version=3.0-preview
 ```
+
 ```json
 {
   "views": {
@@ -354,4 +356,3 @@ PATCH https://mytfsserver/DefaultCollection/_apis/packaging/feeds/contoso/npm/@m
   "deprecateMessage": null
 }
 ```
-

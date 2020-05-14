@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,16 +15,14 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Model that can be used to customize the values sent to AppInsights via &quot;trackPage&quot; 
+Model that can be used to customize the values sent to AppInsights via &quot;trackPage&quot;
 
 ### Members
 
-* `alias`: string. 
+- `alias`: string.
 
-* `metrics`: {[key: string]: number}. 
+- `metrics`: {[key: string]: number}.
 
-* `pageName`: string. 
+- `pageName`: string.
 
-* `properties`: {[key: string]: string}. 
-
+- `properties`: {[key: string]: string}.

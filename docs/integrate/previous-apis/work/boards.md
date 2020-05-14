@@ -1,9 +1,9 @@
 ---
 title: Kanban boards | REST API Reference for Team Foundation Server
-description: Work with Kanban boards programmatically using the REST APIs for Team Foundation Server. 
+description: Work with Kanban boards programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: B7F1D3A8-8D3D-4538-945A-9D45EB81885D
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 ms.topic: article
 ms.author: chcomley
 author: chcomley
@@ -19,20 +19,23 @@ ms.date: 08/04/2016
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 
 ## Get a list of boards
+
 <a name="getalistofboards" />
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/{team}/_apis/work/boards?api-version={api-version}
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:------------ |:------------------------------
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
+
+
 | URL
-| instance  | string  | | TFS server name ({server:port}).
-| project   | string  | | Name or ID of a project.
-| team	    | string  | Project's default team Id| Name or ID of a team within the project.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of a project.
+| team | string | Project's default team Id| Name or ID of a team within the project.
 | Query
-| api-version | string  | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 ### By project default team
 
@@ -67,7 +70,6 @@ GET https://mytfsserver/DefaultCollection/Fabrikam/_apis/work/boards/?api-versio
 }
 ```
 
-
 ### By team
 
 #### Sample request
@@ -101,22 +103,23 @@ GET https://mytfsserver/DefaultCollection/Fabrikam/Fabrikam%20Team/_apis/work/bo
 }
 ```
 
-
 ## Get a board
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/{project}/{team}/_apis/work/boards/{board}?api-version={api-version}
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:------------ |:------------------------------
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
+
+
 | URL
-| instance  | string  | | TFS server name ({server:port}).
-| project   | string  | | Name or ID of a project.
-| team	    | string  | Project's default team Id| Name or ID of a team within the project.
-| board	| string  || Name or ID of the specific board.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of a project.
+| team | string | Project's default team Id| Name or ID of a team within the project.
+| board | string || Name or ID of the specific board.
 | Query
-| api-version | string  || [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string || [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 ### By ID
 
@@ -197,32 +200,16 @@ GET https://mytfsserver/DefaultCollection/Fabrikam/Fabrikam%20Team/_apis/work/bo
   "isValid": true,
   "allowedMappings": {
     "Incoming": {
-      "Bug": [
-        "New"
-      ],
-      "Product Backlog Item": [
-        "New"
-      ]
+      "Bug": ["New"],
+      "Product Backlog Item": ["New"]
     },
     "InProgress": {
-      "Bug": [
-        "Committed",
-        "Approved",
-        "New"
-      ],
-      "Product Backlog Item": [
-        "Approved",
-        "Committed",
-        "New"
-      ]
+      "Bug": ["Committed", "Approved", "New"],
+      "Product Backlog Item": ["Approved", "Committed", "New"]
     },
     "Outgoing": {
-      "Bug": [
-        "Done"
-      ],
-      "Product Backlog Item": [
-        "Done"
-      ]
+      "Bug": ["Done"],
+      "Product Backlog Item": ["Done"]
     }
   },
   "canEdit": true,
@@ -262,7 +249,6 @@ GET https://mytfsserver/DefaultCollection/Fabrikam/Fabrikam%20Team/_apis/work/bo
   }
 }
 ```
-
 
 ### By name
 
@@ -343,32 +329,16 @@ GET https://mytfsserver/DefaultCollection/Fabrikam/Fabrikam%20Team/_apis/work/bo
   "isValid": true,
   "allowedMappings": {
     "Incoming": {
-      "Bug": [
-        "New"
-      ],
-      "Product Backlog Item": [
-        "New"
-      ]
+      "Bug": ["New"],
+      "Product Backlog Item": ["New"]
     },
     "InProgress": {
-      "Bug": [
-        "Committed",
-        "Approved",
-        "New"
-      ],
-      "Product Backlog Item": [
-        "Approved",
-        "Committed",
-        "New"
-      ]
+      "Bug": ["Committed", "Approved", "New"],
+      "Product Backlog Item": ["Approved", "Committed", "New"]
     },
     "Outgoing": {
-      "Bug": [
-        "Done"
-      ],
-      "Product Backlog Item": [
-        "Done"
-      ]
+      "Bug": ["Done"],
+      "Product Backlog Item": ["Done"]
     }
   },
   "canEdit": true,
@@ -408,4 +378,3 @@ GET https://mytfsserver/DefaultCollection/Fabrikam/Fabrikam%20Team/_apis/work/bo
   }
 }
 ```
-

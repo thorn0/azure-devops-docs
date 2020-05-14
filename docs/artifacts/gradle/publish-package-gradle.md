@@ -5,9 +5,8 @@ ms.technology: devops-artifacts
 ms.reviewer: dastahel
 ms.topic: conceptual
 ms.date: 01/31/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
-
 
 # Publish a Maven artifact using Gradle
 
@@ -46,7 +45,7 @@ Navigate to `https://dev.azure.com/{yourOrganization}/_usersSettings/tokens`, wh
 
 Click **+ New Token**.
 
-Give your token a name, duration, and select the **Packaging (read and write)** scope. 
+Give your token a name, duration, and select the **Packaging (read and write)** scope.
 
 > You may have to choose "Show all scopes" at the bottom to see the Packaging area.
 
@@ -64,7 +63,7 @@ Click **Add**.
 
 ![Add a personal access token](media/add-pat.png)
 
-Give your new token a name and a duration. 
+Give your new token a name and a duration.
 
 Select the **Packaging (read and write)** scope.
 
@@ -74,58 +73,60 @@ Select the **Packaging (read and write)** scope.
 
 The token will be a long alphanumeric string, like "lzitaoxppojf6smpl2cxdoxybepfxfetjvtkmcpw3o6u2smgebfa". Copy this string and treat it securely.
 
-Now, go to the `.gradle` folder under the Gradle installation root directory. Typically, this is `%INSTALLPATH%/gradle/user/home/.gradle/`. In that folder, create a file named **gradle.properties**. 
+Now, go to the `.gradle` folder under the Gradle installation root directory. Typically, this is `%INSTALLPATH%/gradle/user/home/.gradle/`. In that folder, create a file named **gradle.properties**.
 
 Open the **gradle.properties** file with a UTF-8-capable text editor and add the following:
+
 ```ini
 vstsMavenAccessToken=YOUR_TOKEN_HERE
 ```
 
-Where *YOUR_TOKEN_HERE* is the token string you created previously. Save the file when you're done.
+Where _YOUR_TOKEN_HERE_ is the token string you created previously. Save the file when you're done.
 
-## Configure build.gradle 
+## Configure build.gradle
 
 Create a file called **build.gradle** in the root of your cloned (local) repo. Open it with a UTF-8-capable text editor and add the following code:
 
 ```groovy
-apply plugin: 'java' 
-apply plugin: 'maven-publish' 
- 
-publishing { 
-    publications { 
-        myPublication(MavenPublication) { 
-            groupId '{your-group-ID-here}' 
-            artifactId '{your-artifact-id-here}' 
-            version '{your-version-number-here}' 
-            artifact '{path-to-your-JAR-file-here}' 
-        } 
-    } 
+apply plugin: 'java'
+apply plugin: 'maven-publish'
 
-    // Repositories *to* which Gradle can publish artifacts 
-    repositories { 
-        maven { 
-            url 'https://pkgs.dev.azure.com/{yourOrganizationName}/_packaging/{yourProjectName}' 
-            credentials { 
-                username "Azure DevOps Services" 
-                //The Azure DevOps Services build system will use the "SYSTEM_ACCESSTOKEN" to authenticate to Azure DevOps Services feeds 
-                password System.getenv("Azure DevOps Services_ENV_ACCESS_TOKEN") != null ? System.getenv("Azure DevOps Services_ENV_ACCESS_TOKEN") : vstsMavenAccessToken 
-            } 
-        } 
-    } 
-} 
- 
+publishing {
+    publications {
+        myPublication(MavenPublication) {
+            groupId '{your-group-ID-here}'
+            artifactId '{your-artifact-id-here}'
+            version '{your-version-number-here}'
+            artifact '{path-to-your-JAR-file-here}'
+        }
+    }
+
+    // Repositories *to* which Gradle can publish artifacts
+    repositories {
+        maven {
+            url 'https://pkgs.dev.azure.com/{yourOrganizationName}/_packaging/{yourProjectName}'
+            credentials {
+                username "Azure DevOps Services"
+                //The Azure DevOps Services build system will use the "SYSTEM_ACCESSTOKEN" to authenticate to Azure DevOps Services feeds
+                password System.getenv("Azure DevOps Services_ENV_ACCESS_TOKEN") != null ? System.getenv("Azure DevOps Services_ENV_ACCESS_TOKEN") : vstsMavenAccessToken
+            }
+        }
+    }
+}
+
 // Repositories *from* which Gradle can download dependencies; it's the same as above in this example
-repositories { 
-    maven { 
-        url 'https://pkgs.dev.azure.com/{yourOrganizationName}/_packaging/{yourProjectName}' 
-        credentials { 
-            username "Azure DevOps Services" 
-            //The Azure DevOps Services build system will use the "SYSTEM_ACCESSTOKEN" to authenticate to Azure DevOps Services feeds 
-            password System.getenv("Azure DevOps Services_ENV_ACCESS_TOKEN") != null ? System.getenv("Azure DevOps Services_ENV_ACCESS_TOKEN") : vstsMavenAccessToken 
-        } 
-    } 
-} 
+repositories {
+    maven {
+        url 'https://pkgs.dev.azure.com/{yourOrganizationName}/_packaging/{yourProjectName}'
+        credentials {
+            username "Azure DevOps Services"
+            //The Azure DevOps Services build system will use the "SYSTEM_ACCESSTOKEN" to authenticate to Azure DevOps Services feeds
+            password System.getenv("Azure DevOps Services_ENV_ACCESS_TOKEN") != null ? System.getenv("Azure DevOps Services_ENV_ACCESS_TOKEN") : vstsMavenAccessToken
+        }
+    }
+}
 ```
+
 In the above example, you are publishing artifacts and downloading dependent artifacts from the same organization. You can configure
 publishing and downloading to use separate organizations, if you prefer.
 
@@ -137,8 +138,7 @@ Replace the following fields with your own values:
 - `groupId`: A group ID you associate with your artifact. Give it a team or organization name so consumers can identify the origin easier.
 - `artifactId`: An artifact ID used when publishing your artifact. Again, give it a meaningful name that aptly describes the intent of the APIs in the artifact.
 - `version`: The version of the artifact you're publishing. Update this when you've made changes.
-- `artifact`: The path from the root of the repo to the JAR file that is the artifact to publish. For example, *./target/myJavaClasses.jar*.
-
+- `artifact`: The path from the root of the repo to the JAR file that is the artifact to publish. For example, _./target/myJavaClasses.jar_.
 
 ## Publish your Gradle artifact
 

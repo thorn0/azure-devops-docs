@@ -45,41 +45,41 @@ You're going to add jobs that run on three platforms.
 strategy:
   matrix:
     linux:
-      imageName: 'ubuntu-16.04'
+      imageName: "ubuntu-16.04"
     mac:
-      imageName: 'macos-10.14'
+      imageName: "macos-10.14"
     windows:
-      imageName: 'vs2017-win2016'
+      imageName: "vs2017-win2016"
 
 pool:
   vmImage: $(imageName)
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '8.x'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "8.x"
 
-- script: |
-    npm install
-    npm test
+  - script: |
+      npm install
+      npm test
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFiles: '**/TEST-RESULTS.xml'
-    testRunTitle: 'Test results for JavaScript'
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFiles: "**/TEST-RESULTS.xml"
+      testRunTitle: "Test results for JavaScript"
 
-- task: PublishCodeCoverageResults@1
-  inputs: 
-    codeCoverageTool: Cobertura
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
+  - task: PublishCodeCoverageResults@1
+    inputs:
+      codeCoverageTool: Cobertura
+      summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/*coverage.xml"
+      reportDirectory: "$(System.DefaultWorkingDirectory)/**/coverage"
 
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
-    includeRootFolder: false
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: "$(System.DefaultWorkingDirectory)"
+      includeRootFolder: false
 
-- task: PublishBuildArtifacts@1
+  - task: PublishBuildArtifacts@1
 ```
 
 At the bottom of the GitHub editor, select **Commit changes**.
@@ -102,7 +102,7 @@ Now that you've configured your GitHub repo with a pipeline, you're ready to bui
 
    ![Select GitHub](media/get-started-yaml/new-pipeline.png)
 
-1. For **Repository**, select **Authorize** and then **Authorize with OAuth**. 
+1. For **Repository**, select **Authorize** and then **Authorize with OAuth**.
 
 1. You might be redirected to GitHub to sign in. If this happens, then enter your GitHub credentials. After you're redirected back to Azure Pipelines, select the **sample app** repository.
 
@@ -136,18 +136,18 @@ pool:
   vmImage: $(vmImage)
 
 steps:
-- checkout: none
-- script: echo test
+  - checkout: none
+  - script: echo test
 ```
 
 ## Next steps
 
 You've just learned the basics of using multiple platforms with Azure Pipelines. From here, you can learn more about:
 
-* [Jobs](process/phases.md?tabs=yaml)
-* [Cross-platform scripting](scripts/cross-platform-scripting.md)
-* [Templates](process/templates.md) to remove the duplication
-* Building [Node.js](ecosystems/javascript.md) apps
-* Building [.NET Core](ecosystems/dotnet-core.md), [Go](ecosystems/go.md), [Java](ecosystems/java.md), or [Python](ecosystems/python.md) apps
+- [Jobs](process/phases.md?tabs=yaml)
+- [Cross-platform scripting](scripts/cross-platform-scripting.md)
+- [Templates](process/templates.md) to remove the duplication
+- Building [Node.js](ecosystems/javascript.md) apps
+- Building [.NET Core](ecosystems/dotnet-core.md), [Go](ecosystems/go.md), [Java](ecosystems/java.md), or [Python](ecosystems/python.md) apps
 
 For details about building GitHub repositories, see [Build GitHub repositories](repos/github.md).

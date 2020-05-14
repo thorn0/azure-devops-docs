@@ -13,12 +13,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Work/Contracts`
 
-
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `rules`: {[key: string]: [Rule](../../../TFS/Work/Contracts/Rule.md)[]}. 
+- `rules`: {[key: string]: [Rule](../../../TFS/Work/Contracts/Rule.md)[]}.
 
-* `url`: string. 
-
+- `url`: string.

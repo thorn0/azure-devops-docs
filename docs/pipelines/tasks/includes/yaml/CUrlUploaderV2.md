@@ -12,7 +12,7 @@ ms.technology: devops-cicd-tasks
 # Use cURL's supported protocols to upload files
 - task: cURLUploader@2
   inputs:
-    files: 
+    files:
     #authType: 'ServiceEndpoint' # Optional. Options: serviceEndpoint, userAndPass
     #serviceEndpoint: # Required when authType == ServiceEndpoint
     #username: # Optional

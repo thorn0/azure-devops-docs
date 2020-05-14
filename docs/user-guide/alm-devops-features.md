@@ -1,30 +1,30 @@
 ---
 title: Feature overview for Azure DevOps
-titleSuffix: Azure DevOps 
+titleSuffix: Azure DevOps
 description: Comprehensive index to all features for Azure DevOps
-ms.technology: devops-new-user  
+ms.technology: devops-new-user
 ms.article: quickstart
 ms.assetid: 330E6DA5-3DC9-432D-B3CA-BF999F151733
 ms.author: chcomley
 author: chcomley
 ms.topic: reference
 ms.date: 05/28/2019
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # What are the features in Azure DevOps?
 
 [!INCLUDE [temp](../includes/version-vsts-tfs-all-versions.md)]
 
-Learn about all the features available to help you plan and track your projects and code, build, test, and release your software applications in Azure DevOps.  
+Learn about all the features available to help you plan and track your projects and code, build, test, and release your software applications in Azure DevOps.
 
 If you're new to Azure DevOps, see our overview articles that are designed to give beginners an understanding of the server-client structure and tools supported. For a description of the core services supported through the web portal, see [Essential services](services.md).
 
 > [!NOTE]  
 > Some features are platform-dependent, based on the following two platforms:
-> 
->- **Azure DevOps Services** - cloud service
->- **Azure DevOps Server** - on-premises
+>
+> - **Azure DevOps Services** - cloud service
+> - **Azure DevOps Server** - on-premises
 
 ## Access and supported clients
 
@@ -33,10 +33,8 @@ If you're new to Azure DevOps, see our overview articles that are designed to gi
 <tr valign="top">
 <td width="30%">
 
-
 <p><b>Browsers</b></p>
 <a href="../organizations/projects/connect-to-projects.md" data-raw-source="[Connect to the web portal](../organizations/projects/connect-to-projects.md)">Connect to the web portal</a> from the latest versions of these supported browsers:<br/>- Chrome<br/>- Microsoft Edge<br/>- Firefox<br/>- Internet Explorer<br/>- Safari (Mac)<br/><br/>
-
 
 <p><b>Integrated Development Environments (IDE)
 </b></p>
@@ -47,7 +45,6 @@ Use features supported by these familiar clients to manage your project and illu
 
 </td>
 <td width="30%">
-
 
 <p><b>Manage users and groups</b></p>
 <p>Add members to your project adds them to the Contributor group. When managing a large group of users, use <a href="../organizations/security/permissions.md" data-raw-source="[built-in groups to manage users and their permissions](../organizations/security/permissions.md)">built-in groups to manage users and their permissions</a>.</p>
@@ -61,7 +58,6 @@ Use features supported by these familiar clients to manage your project and illu
 
 </td>
 <td width="30%">
-
 
 <p><b>Access levels</b></p>
 <p>All users that you add to your Azure DevOps organization or to your TFS project have access to Basic features by default, except <a href="../organizations/security/get-started-stakeholder.md" data-raw-source="[Stakeholders](../organizations/security/get-started-stakeholder.md)">Stakeholders</a> who have access to a limited set of features, or those added to the Advanced access level in TFS.</p>
@@ -77,10 +73,9 @@ Use features supported by these familiar clients to manage your project and illu
 </tbody>
 </table>
 
-
 <a id="agile-tools"></a>
 
-## Agile tools to plan and track work  
+## Agile tools to plan and track work
 
 <a id="backlogs"></a>
 
@@ -95,7 +90,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p>Plan your project by <a href="../boards/backlogs/create-your-backlog.md" data-raw-source="[adding a work item for each user story or requirement](../boards/backlogs/create-your-backlog.md)">adding a work item for each user story or requirement</a> you plan to develop.  </p>
 <img src="media/features/features-quick-add-panel.png" alt="Build your backlog of user stories and requirements"/><br/> <br/>
 
-
 <p><b>Organize your backlog</b></p>
 <p><a href="../boards/backlogs/organize-backlog.md" data-raw-source="[Group items into a hierarchical list using portfolio backlogs](../boards/backlogs/organize-backlog.md)">Group items into a hierarchical list using portfolio backlogs</a> and quickly reorder and re-parent items to effectively manage your deliverables. </p>
 
@@ -107,10 +101,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Storyboard</b></p>
 <p>Visualize your ideas and user stories and support greater understanding of them by <a href="../boards/backlogs/office/storyboard-your-ideas-using-powerpoint.md" data-raw-source="[storyboarding them with PowerPoint](../boards/backlogs/office/storyboard-your-ideas-using-powerpoint.md)">storyboarding them with PowerPoint</a>, also link your storyboards to your backlog work items.  </p>
 
-
-
-
-
 </td>
 <td width="320">
 <p><b>Move work item to a different project (Azure DevOps Services)</b></p>
@@ -119,20 +109,15 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Full screen mode</b></p>
 <p>Choose <img src="../boards/media/icons/fullscreen_icon.png" alt="full screen icon"/> or <img src="../boards/media/icons/exitfullscreen_icon.png" alt="exit full screen icon"/>  to enter or exit full screen mode.  </p>
 
-
 <p><b>Backlog and board settings</b></p>
 <p>Choose <img src="../boards/media/icons/team-settings-gear-icon.png" alt="Settings icon"/>  to configure team backlogs and boards, including <a href="../organizations/settings/show-bugs-on-backlog.md" data-raw-source="[show bugs on backlogs and boards](../organizations/settings/show-bugs-on-backlog.md)">show bugs on backlogs and boards</a> and <a href="../organizations/settings/select-backlog-navigation-levels.md" data-raw-source="[set team backlog levels](../organizations/settings/select-backlog-navigation-levels.md)">set team backlog levels</a>.  </p>
 <img src="media/features/alm-feature-team-settings-gear-icon.png" alt="Backlog and board settings"/><br/><br/>
 
-
-
 <p><b>View portfolio backlog hierarchy</b></p>
 <p>Use <a href="../boards/backlogs/organize-backlog.md" data-raw-source="[**Parents Show/Hide**](../boards/backlogs/organize-backlog.md)"><strong>Parents Show/Hide</strong></a> to drill down into the backlog hierarchy.   </p>
 
-
 <p><b>Multi-team backlog ownership</b></p>
 <p>Easily view and track items <a href="../boards/backlogs/backlogs-overview.md#multi-team" data-raw-source="[owned by other teams](../boards/backlogs/backlogs-overview.md#multi-team)">owned by other teams</a> and quickly reorder and re-parent items to effectively manage your backlog. </p>
-
 
 </td>
 
@@ -161,12 +146,10 @@ Use features supported by these familiar clients to manage your project and illu
 
 ### Bug, task, and issue tracking
 
-
 <table>
 <tbody>
 <tr valign="top">
 <td width="33%">
-
 
 <p><b>Track issues and other types of work</b></p>
 <p>Different types of work items <a href="../boards/backlogs/add-work-items.md" data-raw-source="[track different types of work](../boards/backlogs/add-work-items.md)">track different types of work</a> - such as bugs, test cases, risks, issues, and more. </p>
@@ -187,40 +170,29 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Rich text comments</b></p>
 <p>Describe and comment on work using <a href="../boards/backlogs/add-work-items.md" data-raw-source="[formatted text, hyperlinks, and inline images](../boards/backlogs/add-work-items.md)">formatted text, hyperlinks, and inline images</a>. Choose <img src="../boards/media/icons/fullscreen_icon.png" alt="full screen icon"/> or <img src="../boards/media/icons/exitfullscreen_icon.png" alt="exit full screen icon"/>  to expand or contract the viewing area. </p>
 
-
 <p><b>Clear HTML formatting </b></p>
 <p>Use the <img src="../boards/media/icons/remove-formatting-icon.png" alt="Remove format"/> icon or CTRL+Spacebar to remove formatting from highlighted text.</p>
-
-
 
 <p><b>Attachments</b></p>
 <p>To support collaboration of work in progress, <a href="../boards/queries/share-plans.md#attach-files" data-raw-source="[add emails, documents, images, log files, or other file types](../boards/queries/share-plans.md#attach-files)">add emails, documents, images, log files, or other file types</a> to work items.  </p>
 
-
 </td>
 <td width="33%">
-
 
 <p><b>Estimates and time tracking</b></p>
 <p>Track <a href="https://msdn.microsoft.com/library/dd997792.aspx" data-raw-source="[estimated, completed, and remaining work](https://msdn.microsoft.com/library/dd997792.aspx)">estimated, completed, and remaining work</a> for tasks and other work items. Several reports and dashboards provide charts that display data based on team capacity and remaining work.</p>
 
-
-
 <p><b>New work item experience</b></p>
 <p>The <a href="../reference/process/new-work-item-experience.md" data-raw-source="[new work item experience](../reference/process/new-work-item-experience.md)">new work item experience</a> provides access to a more modern form, additional features, and the ability to add fields and apply other customizations to the work item type. </p>
-
 
 <p><b>Manage bugs</b></p>
 <p><a href="../boards/backlogs/manage-bugs.md" data-raw-source="[Capture and triage bugs](../boards/backlogs/manage-bugs.md)">Capture and triage bugs</a> using different kinds of tools. </p>
 
-
 <p><b>Choose how you want to track bugs</b></p>
 <p>Each team can <a href="../organizations/settings/show-bugs-on-backlog.md" data-raw-source="[choose to manage bugs on their backlog or along with tasks](../organizations/settings/show-bugs-on-backlog.md)">choose to manage bugs on their backlog or along with tasks</a>. </p>
 
-
 <p><b>Share plans and information</b></p>
 <p>Share information using work items and <a href="../boards/queries/share-plans.md" data-raw-source="[generate summary lists with links to backlogs or queries](../boards/queries/share-plans.md)">generate summary lists with links to backlogs or queries</a>. </p>
-
 
 <p><b>Remove or delete a work item</b></p>
 <p>Remove work items from the backlog by changing their State to Removed. Or, <a href="../boards/backlogs/remove-delete-work-items.md" data-raw-source="[move them to the recycle bin or permanently delete them](../boards/backlogs/remove-delete-work-items.md)">move them to the recycle bin or permanently delete them</a>.</p>
@@ -236,23 +208,17 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>History &amp; auditing</b></p>
 <p>Review and query <a href="../boards/queries/history-and-auditing.md" data-raw-source="[work item change history](../boards/queries/history-and-auditing.md)">work item change history</a> to learn of past decisions and support future ones.</p>
 
-
-
-
 </td>
 <td width="33%">
 <p><b>Discussion </b></p>
 <p><a href="../boards/backlogs/add-work-items.md" data-raw-source="[Add or review comments](../boards/backlogs/add-work-items.md)">Add or review comments</a> added to a work item. Start by choosing the <img src="../boards/backlogs/media/icon-discussions-wi.png" alt="Discussions icon"/> discussion icon.  </p>
 
-
 <p><b>Integrate Git development with work tracking </b></p>
 <p>Drive Git development and stay in sync as a team to complete backlog items and tasks using the <a href="../boards/backlogs/connect-work-items-to-git-dev-ops.md" data-raw-source="[Git Development section](../boards/backlogs/connect-work-items-to-git-dev-ops.md)">Git Development section</a>. Add branches, create pull requests, and view all development done to support the specific work item.  </p>
 <img src="media/features/alm-feature-git-dev-section.png" alt="Work item form Development section"/><br/><br/>
 
-
 <p><b>Verify a bug, rerun test case</b></p>
 <p>Choose the <strong>Verify</strong> option from the bug work item form context menu to launch the relevant test case in the web runner. For more information, see <a href="../test/run-manual-tests.md" data-raw-source="[Run tests for web apps](../test/run-manual-tests.md)">Run tests for web apps</a>. </p>
-
 
 <p><b>Link work items  </b></p>
 <p>Track related work, dependencies, and changes made over time by <a href="../boards/queries/link-work-items-support-traceability.md" data-raw-source="[linking work items](../boards/queries/link-work-items-support-traceability.md)">linking work items</a>. </p>
@@ -261,15 +227,11 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Add or modify a field </b></p>
 <p>Add a custom field (<a href="../organizations/settings/work/customize-process.md" data-raw-source="[Azure DevOps Services](../organizations/settings/work/customize-process.md)">Azure DevOps Services</a> | <a href="../reference/add-modify-field.md" data-raw-source="[TFS](../reference/add-modify-field.md)">TFS</a> to support tracking additional data requirements or modify an existing field to apply optional rules. </p>
 
-
 <p><b>Restrict access</b></p>
 <p><a href="https://msdn.microsoft.com/library/dn249791.aspx" data-raw-source="[Limit who can create or modify work items or a work item field](https://msdn.microsoft.com/library/dn249791.aspx)">Limit who can create or modify work items or a work item field</a> based on area path, work item type, or based on your specific conditions. </p>
 
-
 <p><b>Field index </b></p>
 <p>Find descriptions and usage information for each field from the <a href="../boards/work-items/guidance/work-item-field.md" data-raw-source="[work item field index](../boards/work-items/guidance/work-item-field.md)">work item field index</a>. </p>
-
-
 
 </td>
 </tr>
@@ -278,10 +240,9 @@ Use features supported by these familiar clients to manage your project and illu
 
 ::: moniker range="azure-devops"
 
-<a id="customize-vsts">  </a>
+<a id="customize-vsts"> </a>
 
 ### Customize (Azure DevOps Services)
-
 
 <table>
 <tbody>
@@ -311,8 +272,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Enable/disable a process</b></p>
 <p>To make sure no one creates a project from a process that you don&#39;t want used, <a href="../organizations/settings/work/manage-process.md#enable-process" data-raw-source="[you can disable it](../organizations/settings/work/manage-process.md#enable-process)">you can disable it</a>.  </p>
 
-
-
 </td>
 
 <td width="33%">
@@ -333,19 +292,13 @@ Use features supported by these familiar clients to manage your project and illu
 <img src="media/features/alm-feature-define-sprints.png" alt="Iterations or sprints"/><br/><br/>
 </td>
 
-
 <td width="33%">
-
-
-
 
 <p><b>Review fields</b></p>
 <p>You can <a href="../organizations/settings/work/customize-process-field.md#review-fields" data-raw-source="[review the list of fields](../organizations/settings/work/customize-process-field.md#review-fields)">review the list of fields</a> defined for a process, their data type, and the WITs which reference them. For descriptions and usage of each field, see <a href="../boards/work-items/guidance/work-item-field.md" data-raw-source="[Work item field index](../boards/work-items/guidance/work-item-field.md)">Work item field index</a>. </p>
 
 <p><b>Delete a field from the collection</b></p>
 <p>You can <a href="../organizations/settings/work/customize-process-field.md#delete-field" data-raw-source="[delete a custom field](../organizations/settings/work/customize-process-field.md#delete-field)">delete a custom field</a> if you find it&#39;s no longer required. </p>
-
-
 
 <p><b>Customize the web form</b></p>
 <p>For each work item type, you can <a href="../organizations/settings/work/customize-process-form.md" data-raw-source="[add custom pages to group additional custom fields](../organizations/settings/work/customize-process-form.md)">add custom pages to group additional custom fields</a> and you can organize your forms by placing logically related groups and HTML fields on separate pages within a form.    </p>
@@ -357,7 +310,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Customize the workflow</b></p>
 <p>For each work item type, you can <a href="../organizations/settings/work/customize-process-workflow.md" data-raw-source="[add custom workflow states to support your business tracking needs](../organizations/settings/work/customize-process-workflow.md)">add custom workflow states to support your business tracking needs</a>.    </p>
 
-
 <p><b>Delete a process</b></p>
 <p>Delete those inherited processes that you no longer want used. Simply choose the Delete option from its context menu.  </p>
 
@@ -365,7 +317,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p>To customize a process, add custom fields, or change the layout of a work item form, you must be a member of the Project Collection Administrators group or be <a href="../organizations/security/set-permissions-access-work-tracking.md#process-permissions" data-raw-source="[granted explicit permissions to edit a specific process](../organizations/security/set-permissions-access-work-tracking.md#process-permissions)">granted explicit permissions to edit a specific process</a>.  </p>
 
 </td>
-
 
 </tr>
 </tbody>
@@ -384,22 +335,17 @@ Use features supported by these familiar clients to manage your project and illu
 <tr valign="top">
 <td width="33%">
 
-
 <p><b>Add or modify a field </b></p>
 <p><a href="../reference/add-modify-field.md" data-raw-source="[Add or modify a field](../reference/add-modify-field.md)">Add or modify a field</a> to support work tracking and reporting by editing the WIT definition.</p>
-
 
 <p><b>Add rules to a field </b></p>
 <p>Apply <a href="../reference/xml/apply-rule-work-item-field.md" data-raw-source="[various rules to custom fields](../reference/xml/apply-rule-work-item-field.md)">various rules to custom fields</a> to qualify the value it can have, to copy a value, to specify a default, to restrict who can modify it, to enforce pattern matching, or to enforce conditional values.  </p>
 
-
 <p><b>Remove a field </b></p>
 <p><a href="../reference/add-modify-field.md" data-raw-source="[Stop tracking a field by removing the field](../reference/add-modify-field.md)">Stop tracking a field by removing the field</a> from the work item form of select work item types. </p>
 
-
 </td>
 <td width="33%">
-
 
 <p><b>Area path pick lists</b></p>
 <p>Change the <a href="../organizations/settings/set-area-paths.md" data-raw-source="[pick list of area paths](../organizations/settings/set-area-paths.md)">pick list of area paths</a> to support grouping work items by team, product, or feature area. </p>
@@ -407,24 +353,19 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Sprint/iteration pick lists</b></p>
 <p>Change the <a href="../boards/sprints/define-sprints.md" data-raw-source="[pick list of iteration paths](../boards/sprints/define-sprints.md)">pick list of iteration paths</a> to support grouping work into sprints, milestones, or other event-specific or time-related period.</p>
 
-
 <p><b>Custom pick lists </b></p>
 <p><a href="https://msdn.microsoft.com/library/ms194947.aspx" data-raw-source="[Define or modify pick list values](https://msdn.microsoft.com/library/ms194947.aspx)">Define or modify pick list values</a> by editing the work item type definition.</p>
 </td>
 <td width="33%">
 
-
-
 <p><b>Modify the workflow </b></p>
 <p><a href="https://msdn.microsoft.com/library/ms194981.aspx" data-raw-source="[Design your custom workflow](https://msdn.microsoft.com/library/ms194981.aspx)">Design your custom workflow</a> by adding states, transitions, reasons, and optional actions.</p>
-
 
 <p><b>Change the work item form </b></p>
 <p><a href="https://msdn.microsoft.com/library/ms194952.aspx" data-raw-source="[Change the layout of your work item form](https://msdn.microsoft.com/library/ms194952.aspx)">Change the layout of your work item form</a> by adding fields, custom controls, or tabs.</p>
 
 <p><b>Add a custom work item type </b></p>
 <p><a href="https://msdn.microsoft.com/library/ms404855.aspx" data-raw-source="[Add a custom work item type](https://msdn.microsoft.com/library/ms404855.aspx)">Add a custom work item type</a> to track different data requirements.</p>
-
 
 </td>
 </tr>
@@ -458,15 +399,11 @@ Use features supported by these familiar clients to manage your project and illu
 
 <img src="media/features/alm-feature-kanban-filter.png" alt="Kanban board filter"/><br/><br/>
 
-
-
 </td>
 <td width="33%">
 
-
 <p><b>Set WIP limits</b></p>
 <p><a href="../boards/boards/wip-limits.md" data-raw-source="[Set constraints on the amount of work your team undertakes at each work stage](../boards/boards/wip-limits.md)">Set constraints on the amount of work your team undertakes at each work stage</a> to gain access to sprint backlogs and task boards.</p>
-
 
 <p><b>Split columns</b></p>
 <p>Turn on split columns to <a href="../boards/boards/split-columns.md" data-raw-source="[track the lag between when items are done in one state and work actually starts in a new state](../boards/boards/split-columns.md)">track the lag between when items are done in one state and work actually starts in a new state</a>. </p>
@@ -478,7 +415,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Expedite work with swimlanes </b></p>
 <p>Use <a href="../boards/boards/expedite-work.md" data-raw-source="[swimlanes](../boards/boards/expedite-work.md)">swimlanes</a> to track work at different service-level classes. </p>
 
-
 <p><b>Definition of done</b></p>
 <p>Support your team to be in sync by <a href="../boards/boards/definition-of-done.md" data-raw-source="[specifying requirements to fulfill prior to handoff of items to a downstream work stage](../boards/boards/definition-of-done.md)">specifying requirements to fulfill prior to handoff of items to a downstream work stage</a>.</p><br/>
 <p><b>Filter by field values or parent work items</b></p>
@@ -489,7 +425,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p>With the CFD, you can <a href="../report/dashboards/cumulative-flow.md" data-raw-source="[monitor the count of work items as they progressively move through various states which you define](../report/dashboards/cumulative-flow.md)">monitor the count of work items as they progressively move through various states which you define</a>.  </p>
 </td>
 
-
 <td width="33%">
 
 <p><b>Customize cards</b></p>
@@ -498,7 +433,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Live updates </b></p>
 <p><a href="../boards/boards/kanban-basics.md" data-raw-source="[Enable live updates](../boards/boards/kanban-basics.md)">Enable live updates</a> to automatically refresh your Kanban board when changes are made by others or to the board settings. </p>
 <img src="media/features/alm-feature-live-updates.png" alt="Live updates"/><br/><br/>
-
 
 <p><b>Add inline tests </b></p>
 <p><a href="../boards/boards/add-run-update-tests.md" data-raw-source="[Add, run, and update tests](../boards/boards/add-run-update-tests.md)">Add, run, and update tests</a> with inline test on your Kanban board.   </p>
@@ -516,8 +450,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p>Configure how new inline tests are added to the Kanban board: <a href="../boards/boards/customize-cards.md#tests" data-raw-source="[create a new test plan/test suite or choose an existing test plan](../boards/boards/customize-cards.md#tests)">create a new test plan/test suite or choose an existing test plan</a>. </p>
 
 </td>
-
-
 
 </tr>
 </tbody>
@@ -540,21 +472,17 @@ Use features supported by these familiar clients to manage your project and illu
 </td>
 <td width="33%">
 
-
 <p><b>Set up a team hierarchy</b></p>
 <p>By <a href="../boards/plans/portfolio-management.md" data-raw-source="[configuring your teams and backlogs into an hierarchical structure](../boards/plans/portfolio-management.md)">configuring your teams and backlogs into an hierarchical structure</a>, program owners can more easily track progress across teams, manage portfolios, and generate rollup data. </p>
 
-
 <p><b>Autonomy and alignment</b></p>
 <p>As your organization grows, your tools can grow to support a <a href="../boards/plans/agile-culture.md" data-raw-source="[culture of team autonomy and organizational alignment](../boards/plans/agile-culture.md)">culture of team autonomy and organizational alignment</a>. </p>
-
 
 <p><b>Scale your tools and practices</b></p>
 <p>Incrementally adopt <a href="../boards/plans/practices-that-scale.md" data-raw-source="[practices that scale](../boards/plans/practices-that-scale.md)">practices that scale</a> to create greater rhythm and flow within your organization, engage customers, improve project visibility, and develop a productive workforce.</p>
 
 </td>
 <td width="33%">
-
 
 <p><b>Portfolio management</b></p>
 <p>Manage a <a href="../boards/plans/portfolio-management.md" data-raw-source="[portfolio of backlogs](../boards/plans/portfolio-management.md)">portfolio of backlogs</a> and gain insight into each team&#39;s progress as well as the progress of all programs.</p>
@@ -563,28 +491,22 @@ Use features supported by these familiar clients to manage your project and illu
 
 <br/>
 
-
 <p><b>Scaled Agile Framework</b></p>
 <p>Structure team projects to support <a href="../boards/plans/scaled-agile-framework.md" data-raw-source="[epics, release trains, and multiple backlogs to support the Scaled Agile Framework](../boards/plans/scaled-agile-framework.md)">epics, release trains, and multiple backlogs to support the Scaled Agile Framework</a>. </p>
-
 
 </td>
 </tr>
 </tbody>
-</table>  
-
+</table>
 
 <a id="scrum"></a>
 
 ### Scrum
 
-
-
 <table>
 <tbody>
 <tr valign="top">
 <td width="33%">
-
 
 <p><b>Define sprints</b></p>
 <p><a href="../boards/sprints/define-sprints.md" data-raw-source="[Schedule and activate your team&#39;s sprints](../boards/sprints/define-sprints.md)">Schedule and activate your team&#39;s sprints</a> to gain access to sprint backlogs and task boards.</p>
@@ -592,18 +514,14 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Select team sprints, set team defaults</b></p>
 <p>Several tools reference the team&#39;s default and active iteration paths or sprints. For the Agile tools to work best, each team needs to <a href="../organizations/settings/set-area-paths.md" data-raw-source="[set their team area path(s)](../organizations/settings/set-area-paths.md)">set their team area path(s)</a> and <a href="../organizations/settings/set-iteration-paths-sprints.md" data-raw-source="[iteration paths](../organizations/settings/set-iteration-paths-sprints.md)">iteration paths</a> to support their work tracking activities. </p>
 
-
 <p><b>Plan sprints</b></p>
 <p>Build your sprint backlog, add tasks, and load balance work across your team as you <a href="../boards/sprints/assign-work-sprint.md" data-raw-source="[plan your sprint](../boards/sprints/assign-work-sprint.md)">plan your sprint</a>.</p>
-
 
 <p><b>Track work on your task board</b></p>
 <p>Use your <a href="../boards/sprints/task-board.md" data-raw-source="[task board](../boards/sprints/task-board.md)">task board</a> during your daily Scrum meetings to view  and update progress.  </p>
 
 </td>
 <td width="33%">
-
-
 
 <p><b>Velocity &amp; forecasting</b></p>
 <p>Use <a href="../report/dashboards/team-velocity.md" data-raw-source="[velocity charts](../report/dashboards/team-velocity.md)">velocity charts</a> and <a href="../boards/sprints/forecast.md" data-raw-source="[forecast](../boards/sprints/forecast.md)">forecast</a> tools  to estimate work that can be completed in future sprints. </p>
@@ -613,48 +531,34 @@ Use features supported by these familiar clients to manage your project and illu
 <p>Monitor progress and review team patterns from <a href="../boards/sprints/sprint-burndown.md" data-raw-source="[sprint burndown charts](../boards/sprints/sprint-burndown.md)">sprint burndown charts</a>.</p>
 <img src="media/features/alm-index-sprint-burndown-widget.png" alt="Sprint burndown chart"/><br/>
 
-
 </td>
 <td width="33%">
-
-
 
 <p><b>Manage resources</b></p>
 <p>Use <a href="../boards/sprints/set-capacity.md" data-raw-source="[capacity planning tools](../boards/sprints/set-capacity.md)">capacity planning tools</a> to track individual, team, and activity over and under capacity for a sprint.</p>
 <img src="../boards/sprints/media/ALM_DS_CapacityBars_S.png" alt="Capacity bars"/><br/>
-
 
 </td>
 </tr>
 </tbody>
 </table>
 
-
 <a id="workflow"></a>
 
 ### Workflow
-
-
-
 
 <table>
 <tbody>
 <tr valign="top">
 <td width="33%">
 
-
 <p><b>What is workflow? </b></p>
 <p>You use workflow to track the progress of work as it moves from new, active, to complete or closed. Each workflow consists of a set of states, the valid transitions between the states, and the reasons for transitioning the work item to the selected state.  </p>
 <img src="../boards/work-items/guidance/media/ALM_PT_Agile_WF_Bug.png" alt="User story workflow"/><br/>
 <br/>
 
-
 <p><b>Default workflows</b></p>
 <p>Each process <a href="../boards/work-items/guidance/choose-process.md#main-distinctions" data-raw-source="[defines the workflow](../boards/work-items/guidance/choose-process.md#main-distinctions)">defines the workflow</a> for each work item type to track progress from newly defined, to in progress, to completed or closed. </p>
-
-
-
-
 
 </td>
 <td width="33%">
@@ -675,8 +579,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Reasons</b></p>
 <p>Each transition <a href="https://msdn.microsoft.com/library/ms194981.aspx" data-raw-source="[specifies a default reason as well as optional reasons](https://msdn.microsoft.com/library/ms194981.aspx)">specifies a default reason as well as optional reasons</a> for tracking the change in state.  </p>
 
-
-
 </td>
 <td width="33%">
 
@@ -686,10 +588,8 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Apply workflow conditional field rules (TFS)  </b></p>
 <p>You can define rules that <a href="../reference/xml/apply-rule-work-item-field.md" data-raw-source="[change a field value based on the contents of other fields](../reference/xml/apply-rule-work-item-field.md)">change a field value based on the contents of other fields</a> during workflow changes. </p>
 
-
 <p><b>Restrict who can make changes during workflow transitions (TFS)  </b></p>
 <p>Set a condition field rule that applies to a group to <a href="../reference/xml/apply-rule-work-item-field.md" data-raw-source="[restrict who can make changes to a workflow or a field](../reference/xml/apply-rule-work-item-field.md)">restrict who can make changes to a workflow or a field</a>.  </p>
-
 
 <p><b>Event-generated workflow changes or field assignments (TFS)</b></p>
 <p><a href="https://msdn.microsoft.com/library/ms194990.aspx" data-raw-source="[Add an action](https://msdn.microsoft.com/library/ms194990.aspx)">Add an action</a> to a custom workflow definition to automatically transition work items or specify a field value based on an internal TFS event or external event. </p>
@@ -700,14 +600,11 @@ Use features supported by these familiar clients to manage your project and illu
 </td>
 </tr>
 </tbody>
-</table>  
-
-
+</table>
 
 <a id="alerts"></a>
 
 ## Alerts and notifications
-
 
 <table>
 <tbody>
@@ -729,14 +626,12 @@ Use features supported by these familiar clients to manage your project and illu
 <p>Alert flag within the IDE automatically notifies you of the latest client changes.</p>
 <img src="media/features/alm-feature-notifications-in-vs.png" alt="Visual Studio feature notification flag"/><br/><br/>
 
-
 </td>
 <td width="30%">
 
 <p><b>Follow a work item </b></p>
 <p>Choose the <img src="../boards/media/icons/follow-icon.png" alt="Follow icon"/>/<img src="../boards/media/icons/following-icon.png" alt="Following icon"/> icons to quickly <a href="../boards/work-items/follow-work-items.md" data-raw-source="[start or stop tracking changes made to a work item](../boards/work-items/follow-work-items.md)">start or stop tracking changes made to a work item</a>.  </p>
 <img src="media/features/alm-feature-follows.png" alt="Follow a work item control"/><br/><br/>
-
 
 <p><b>Follow a pull request</b></p>
 <p>To <a href="../boards/work-items/follow-work-items.md" data-raw-source="[track the progress of a single pull request](../boards/work-items/follow-work-items.md)">track the progress of a single pull request</a>, choose the <img src="../boards/media/icons/follow-icon.png" alt="Follow icon"/> option from the context menu. </p>
@@ -745,7 +640,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Manage work items you follow  </b></p>
 <p>From the <strong>Work&gt;Queries</strong> page you can view the list of work items that you&#39;re following.  </p>
 <img src="media/features/alm-feature-followed-work-items.png" alt="Followed work items list"/><br/><br/>
-
 
 <p><b>Frequent on-line feature updates</b></p>
 <p>Check the <a href="/visualstudio/releasenotes/vs2017-relnotes" data-raw-source="[News](/visualstudio/releasenotes/vs2017-relnotes)">News</a> for product updates, or read about them by accessing the News link in your web portal.</p>
@@ -758,9 +652,8 @@ Use features supported by these familiar clients to manage your project and illu
 </tbody>
 </table>
 
-
-
 <a id="code"></a>
+
 ## Code
 
 <a id="code-git"></a>
@@ -771,7 +664,6 @@ Use features supported by these familiar clients to manage your project and illu
 <tbody>
 <tr valign="top">
 <td width="33%">
-
 
 <p><b>Get started with Git in Visual Studio </b></p>
 <p>To get started working with Git, <a href="../repos/git/create-new-repo.md" data-raw-source="[clone a repository, add code, and create branches in Azure DevOps Services](../repos/git/create-new-repo.md)">clone a repository, add code, and create branches in Azure DevOps Services</a> or <a href="../repos/git/gitquickstart.md" data-raw-source="[Visual Studio](../repos/git/gitquickstart.md)">Visual Studio</a>. Learn how to commit, publish, and conduct a pull request of your changes. </p>
@@ -790,7 +682,6 @@ Use features supported by these familiar clients to manage your project and illu
 
 <p>Quickly <a href="../repos/git/pulling.md" data-raw-source="[sync your local branch with a shared repo](../repos/git/pulling.md)">sync your local branch with a shared repo</a>.</p>
 
-
 </td>
 <td width="33%">
 <p><b>Get started using Eclipse</b></p>
@@ -799,7 +690,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Add reviewers to get feedback </b></p>
 <p>Use the <a href="../notifications/at-mentions.md" data-raw-source="[**@mention** control to add reviewers](../notifications/at-mentions.md)"><strong>@mention</strong> control to add reviewers</a> to your pull request to get their feedback about your changes.  </p>
 <img src="media/features/alm-feature-at-mention-control_305.png" alt="@mentions control sends email to team members with links"/><br/><br/>
-
 
 <p><b>Resolve Git merge conflicts</b></p>
 <p>Merge conflicts occur when commits have changes to the same files as other newer commits in the branch history. Learn how to <a href="../repos/git/merging.md" data-raw-source="[prevent and resolve merge conflicts](../repos/git/merging.md)">prevent and resolve merge conflicts</a>.   </p>
@@ -820,7 +710,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Create Git repositories </b></p>
 <p>When you create a project with Git as your version control system, you automatically create a Git repo. You can <a href="../repos/git/repo-rename.md" data-raw-source="[Create additional Git repos](../repos/git/repo-rename.md)">Create additional Git repos</a> from the admin context. </p>
 
-
 <p><b>Rename a Git repository </b></p>
 <p><a href="../repos/git/repo-rename.md" data-raw-source="[Rename Git repos](../repos/git/repo-rename.md)">Rename Git repos</a> from the admin context. </p>
 
@@ -831,7 +720,6 @@ Use features supported by these familiar clients to manage your project and illu
 <p>Drive Git development and stay in sync as a team to complete backlog items and tasks using the <a href="../boards/backlogs/connect-work-items-to-git-dev-ops.md" data-raw-source="[Git Development section](../boards/backlogs/connect-work-items-to-git-dev-ops.md)">Git Development section</a>. Add branches, create pull requests, and view all development performed to support the specific work item.  </p>
 <img src="media/features/alm-feature-git-dev-section.png" alt="Work item form Development section"/><br/><br/>
 
-
 <p><b>Quickly link work items to pull requests </b></p>
 <p>Use the <a href="../notifications/add-links-to-work-items.md" data-raw-source="[**#ID** control to link work items](../notifications/add-links-to-work-items.md)"><strong>#ID</strong> control to link work items</a> to your pull request to support tracking work.    </p>
 
@@ -841,26 +729,19 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Git commands</b></p>
 <p>Use <a href="../repos/git/command-prompt.md" data-raw-source="[Git command line tools](../repos/git/command-prompt.md)">Git command line tools</a> when you need to perform select manual tasks or to automate work using a script.</p>
 
-
-
 <p><b>Bypass a branch policy</b></p>
 <p>Grant an <a href="../repos/git/branch-policies.md" data-raw-source="[Exempt from policy enforcement permission](../repos/git/branch-policies.md)">Exempt from policy enforcement permission</a> to a user or group.</p>
 
 <p><b>Rebase a branch</b></p>
 <p>Before merging a branch into master, you may choose to first <a href="../repos/git/rebase.md" data-raw-source="[rebase your branch onto the latest commit in master](../repos/git/rebase.md)">rebase your branch onto the latest commit in master</a>.</p>
 
-
-
 <p><b>Git permissions</b></p>
 <p>Set permissions on a <a href="../organizations/security/permissions.md#git-repo" data-raw-source="[Git project, repository, or branch](../organizations/security/permissions.md#git-repo)">Git project, repository, or branch</a> from the context menu or from the web portal administration page.</p>
-
 
 </td>
 </tr>
 </tbody>
 </table>
-
-
 
 <a id="code-tfvc"></a>
 
@@ -871,14 +752,12 @@ Use features supported by these familiar clients to manage your project and illu
 <tr valign="top">
 <td width="33%">
 
-
 <p><b>Get started with TFVC in Visual Studio </b></p>
 <p><a href="../repos/tfvc/share-your-code-in-tfvc-vs.md" data-raw-source="[Develop and share your code](../repos/tfvc/share-your-code-in-tfvc-vs.md)">Develop and share your code</a>. Learn how to configure your workspace, check-in your code, compare file changes, and view file history. </p>
 <img src="media/features/features-tfvc-ui-vs.png" alt="Visual Studio Git UI pages"/><br/><br/>
 
 <p><b>Set up local or server workspaces</b></p>
 <p><a href="https://msdn.microsoft.com/library/ms181384.aspx" data-raw-source="[Create a local workspace](https://msdn.microsoft.com/library/ms181384.aspx)">Create a local workspace</a> that maps to the code base of interest. </p>
-
 
 <p><b>Resolve conflicts</b></p>
 <p><a href="https://msdn.microsoft.com/library/ms181432.aspx" data-raw-source="[Support for Resolve conflicts that arise](https://msdn.microsoft.com/library/ms181432.aspx)">Support for Resolve conflicts that arise</a> when several people work concurrently on a file.</p>
@@ -888,7 +767,6 @@ Use features supported by these familiar clients to manage your project and illu
 
 </td>
 <td width="33%">
-
 
 <p><b>Track changesets</b></p>
 <p>Find information about which <a href="https://msdn.microsoft.com/library/dd405662.aspx" data-raw-source="[branches have received a particular set of changes and when those changes were merged](https://msdn.microsoft.com/library/dd405662.aspx)">branches have received a particular set of changes and when those changes were merged</a>.</p>
@@ -908,21 +786,15 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Merge branches</b></p>
 <p><a href="https://msdn.microsoft.com/library/ms181428.aspx" data-raw-source="[Integrate work completed in different branches](https://msdn.microsoft.com/library/ms181428.aspx)">Integrate work completed in different branches</a> during certain phases of your project.</p>
 
-
-
 <p><b>Set check-in and check-out policies</b></p>
 <p>Enforce practices that lead to better code and more efficient group development by <a href="https://msdn.microsoft.com/library/ms182076.aspx" data-raw-source="[setting check-in/check-out rules](https://msdn.microsoft.com/library/ms182076.aspx)">setting check-in/check-out rules</a>.</p>
-
 
 </td>
 <td width="33%">
 
-
 <p><b>Code search</b></p>
 <p>Find code across all the projects to which you have access. Narrow down your results and focus in on code by using <a href="../project/search/overview.md" data-raw-source="[filters, preview code, view history, compare versions, and more](../project/search/overview.md)">filters, preview code, view history, compare versions, and more</a> </p>
 <img src="media/features/features-index-code-search-vsts.png" alt="Search code box"/><br/><br/>
-
-
 
 <p><b>Subscribe to alerts when check-ins occur</b></p>
 <p>Get notified when someone checks in code to your TFVC project by <a href="https://msdn.microsoft.com/library/ms181407.aspx#alerts" data-raw-source="[subscribing to receive email alerts](https://msdn.microsoft.com/library/ms181407.aspx#alerts)">subscribing to receive email alerts</a>.</p>
@@ -930,14 +802,11 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Version control locks</b></p>
 <p><a href="https://msdn.microsoft.com/library/ms181418.aspx" data-raw-source="[Lock files or folders](https://msdn.microsoft.com/library/ms181418.aspx)">Lock files or folders</a> when you need to prevent them from being checked out or modified. </p>
 
-
 <p><b>Download files from the server</b></p>
 <p><a href="https://msdn.microsoft.com/library/ms181387.aspx" data-raw-source="[Get the latest files from the server](https://msdn.microsoft.com/library/ms181387.aspx)">Get the latest files from the server</a> on a regular basis so that the code you develop is compatible with the code developed by others on your team.</p>
 
-
 <p><b>TFVC permissions</b></p>
 <p>Set permissions on <a href="../organizations/security/permissions.md#tfvc" data-raw-source="[select code management tasks](../organizations/security/permissions.md#tfvc)">select code management tasks</a> from the context menu for TFVC files or folders or the admin context for the project.</p>
-
 
 </td>
 </tr>
@@ -955,7 +824,6 @@ Use features supported by these familiar clients to manage your project and illu
 <tr valign="top">
 <td width="33%">
 
-
 <p><b>What is Azure Artifacts?</b></p>
 <p>Azure Artifacts is the new name for what was previously Package Management. Azure Artifacts helps you <a href="../artifacts/overview.md" data-raw-source="[manage code sharing by automating common tasks for discovering, consuming, and sharing components](../artifacts/overview.md)">manage code sharing by automating common tasks for discovering, consuming, and sharing components</a>.</p>
 
@@ -964,8 +832,6 @@ Use features supported by these familiar clients to manage your project and illu
 
 <p><b>Move existing file shares to the cloud</b></p>
 <p>Eliminate dependencies on on-premises file shares and hosted instances of NuGet.Server by <a href="../artifacts/nuget/move-from-fileshares.md" data-raw-source="[moving your packages to Azure DevOps Services](../artifacts/nuget/move-from-fileshares.md)">moving your packages to Azure DevOps Services</a>.</p>
-
-
 
 </td>
 <td width="33%">
@@ -979,13 +845,11 @@ Use features supported by these familiar clients to manage your project and illu
 <p><b>Add identities to your feeds </b></p>
 <p><a href="../artifacts/feeds/feed-permissions.md" data-raw-source="[Give teams and service identities](../artifacts/feeds/feed-permissions.md)">Give teams and service identities</a> access to your feeds.</p>
 
-
 </td>
 <td width="33%">
 
 <p><b>Bootstrap the developer environment</b></p>
 <p>Increase your team&#39;s velocity and decrease the amount of code duplication across your organization. Access a set of tools and conventions for integrating Azure DevOps Services NuGet into your workflow by <a href="../artifacts/nuget/bootstrap-nuget.md" data-raw-source="[getting the NuGet VSS.PackageManagement.Bootstrap package](../artifacts/nuget/bootstrap-nuget.md)">getting the NuGet VSS.PackageManagement.Bootstrap package</a>.</p>
-
 
 <p><b>Remove a NuGet package from a feed </b></p>
 <p>[Unlist or remove a package]<a href="../artifacts/how-to/delete-and-recover-packages.md" data-raw-source="[Delete packages and recover deleted packages from the recycle bin in Azure Artifacts](../artifacts/how-to/delete-and-recover-packages.md)">Delete packages and recover deleted packages from the recycle bin in Azure Artifacts</a> you no longer want users to discover.</p>
@@ -1001,7 +865,6 @@ Use features supported by these familiar clients to manage your project and illu
 
 ## Continuous delivery
 
-
 <a id="build"></a>
 
 ### Build
@@ -1011,25 +874,20 @@ Use features supported by these familiar clients to manage your project and illu
 <tr valign="top">
 <td width="32%">
 
-
 <p><b>Define builds</b></p>
 <p>Start from a build template and customize your build from there. Build for <a href="../pipelines/apps/windows/dot-net.md" data-raw-source="[Windows](../pipelines/apps/windows/dot-net.md)">Windows</a>, <a href="../pipelines/apps/mobile/xcode-ios.md" data-raw-source="[iOS](../pipelines/apps/mobile/xcode-ios.md)">iOS</a>, Android, Java (Ant, Maven, or Gradle), or Linux using the same domain-specific languages you use every day on your dev machine. <a href="../pipelines/apps/mobile/xamarin.md" data-raw-source="[Build Xamarin apps](../pipelines/apps/mobile/xamarin.md)">Build Xamarin apps</a> for both iOS and Android and run tests on the Xamarin Test Cloud as part of the build.</p>
 
 <p><b>Customize build process using scripts</b></p>
 <p><a href="../pipelines/scripts/powershell.md" data-raw-source="[Use a script](../pipelines/scripts/powershell.md)">Use a script</a> to add your team&#39;s business logic to your build process.</p>
 
-
 <p><b>Build agents and agent pools </b></p>
 <p>At least one <a href="../pipelines/agents/agents.md" data-raw-source="[agent](../pipelines/agents/agents.md)">agent</a> is require to build your code. As you scale your system with more code, people, and builds, you&#39;ll need more build agents organized within <a href="../pipelines/agents/pools-queues.md" data-raw-source="[agent pools](../pipelines/agents/pools-queues.md)">agent pools</a>. You can use both on-premises or Microsoft-hosted agent pools.</p>
-
 
 <p><b>Gated check-in (TFVC, Azure DevOps Services) </b></p>
 <p>Use <a href="../pipelines/repos/tfvc.md#gated" data-raw-source="[gated check-in](../pipelines/repos/tfvc.md#gated)">gated check-in</a> to protect against breaking changes when checking code into TFVC.  </p>
 
-
 <p><b>Branch policies (Git)</b></p>
 <p>Improve code quality by <a href="../repos/git/branch-policies.md" data-raw-source="[setting branch policies](../repos/git/branch-policies.md)">setting branch policies</a> to ensure build are never broken or getting the right people to review changes. </p>
-
 
 </td>
 <td width="38%">
@@ -1037,6 +895,7 @@ Use features supported by these familiar clients to manage your project and illu
 <p>Add steps to specify what you <a href="../pipelines/tasks/index.md#build" data-raw-source="[want to build](../pipelines/tasks/index.md#build)">want to build</a>, the <a href="../pipelines/tasks/index.md#test" data-raw-source="[tests to run](../pipelines/tasks/index.md#test)">tests to run</a>, and <a href="../pipelines/tasks/index.md" data-raw-source="[all the other steps](../pipelines/tasks/index.md)">all the other steps</a> needed to complete the process.</p>
 
 pipelines\tasks\build\media
+
 <p><img src="../pipelines/tasks/build/media/android-build.png" alt=""/>&#160;&#160;<a href="../pipelines/tasks/build/gradle.md" data-raw-source="[Build an Android app using Gradle](../pipelines/tasks/build/gradle.md)">Build an Android app using Gradle</a></p>
 <p><img src="../pipelines/tasks/build/media/android-signing.png" alt=""/>&#160;&#160;<a href="../pipelines/tasks/build/android-signing.md" data-raw-source="[Sign and align Android APK files](../pipelines/tasks/build/android-signing.md)">Sign and align Android APK files</a></p>
 <p><img src="../pipelines/tasks/build/media/ant.png" alt=""/>&#160;&#160;<a href="../pipelines/tasks/build/ant.md" data-raw-source="[Build with Apache Ant](../pipelines/tasks/build/ant.md)">Build with Apache Ant</a> </p>
@@ -1051,38 +910,30 @@ pipelines\tasks\build\media
 <p><img src="../pipelines/tasks/build/media/xamarin-android.png" alt=""/>&#160;&#160;<a href="../pipelines/tasks/build/xamarin-android.md" data-raw-source="[Build an Android app with Xamarin](../pipelines/tasks/build/xamarin-android.md)">Build an Android app with Xamarin</a> </p>
 <p><img src="../pipelines/tasks/build/media/xamarin-ios.png" alt=""/>&#160;&#160;<a href="../pipelines/tasks/build/xamarin-ios.md" data-raw-source="[Build an iOS app with Xamarin on macOS](../pipelines/tasks/build/xamarin-ios.md)">Build an iOS app with Xamarin on macOS</a> </p>
 
-
 <p><b>Build variables</b></p>
 <p>Use <a href="../pipelines/build/variables.md" data-raw-source="[predefined variables](../pipelines/build/variables.md)">predefined variables</a> or add your custom variables when configuring your build definition or your build scripts.</p>
-
 
 </td>
 <td width="30%">
 
-
 <p><b>Continuous integration builds</b></p>
 <p><a href="../pipelines/build/triggers.md#ci" data-raw-source="[Define a CI build](../pipelines/build/triggers.md#ci)">Define a CI build</a> that compiles and tests your solutions whenever your team checks in code.</p>
-
 
 <p><b>Build summary charts</b></p>
 <p>View real-time build status and <a href="../report/add-widget-to-dashboard.md" data-raw-source="[add build summary charts to your dashboards](../report/add-widget-to-dashboard.md)">add build summary charts to your dashboards</a>.  </p>
 <img src="media/features/alm-feature-build-summary-widget.png" alt="build summary chart"/><br/><br/>
 
-
 <p><b>Code coverage charts </b></p>
 <p>From the Code Coverage tab on a Build summary page, you can view percentage of code coverage as well as upload code coverage data in Jacoco or Cobertura formats.</p>
 
-
 <p><b>Audit changes </b></p>
 <p>Determine who <a href="../pipelines/build/history.md" data-raw-source="[changed what in the build definition and when they did it](../pipelines/build/history.md)">changed what in the build definition and when they did it</a>. </p>
-
 
 <p><b>Build retention policies</b></p>
 <p><a href="../pipelines/policies/retention.md" data-raw-source="[Define policies to automatically delete old completed builds ](../pipelines/policies/retention.md)">Define policies to automatically delete old completed builds </a> to minimize clutter.</p>
 
 <p><b>Build permissions</b></p>
 <p>Determine who can <a href="../organizations/security/permissions.md#build" data-raw-source="[define, delete, and manage builds](../organizations/security/permissions.md#build)">define, delete, and manage builds</a>.</p>
-
 
 </td>
 </tr>
@@ -1102,22 +953,17 @@ pipelines\tasks\build\media
 <p>Reduce time-to-market and respond to customer feedback with greater agility by <a href="../pipelines/overview.md" data-raw-source="[automating your release process](../pipelines/overview.md)">automating your release process</a>. Deploy applications across platforms to all environments of the pipeline with just one selection.</p>
 <img src="media/features/alm-feature-release-1.png" alt="Release Manager"/><br/><br />
 
-
 <p><b>When to use Azure Pipelines or Build &amp; Release in TFS?</b></p>
 <p>Evaluate how Azure Pipelines and Build &amp; Release in TFS can help you in <a href="../pipelines/overview.md" data-raw-source="[your development and deployment efforts](../pipelines/overview.md)">your development and deployment efforts</a>.</p>
-
 
 <p><b>Release definitions</b></p>
 <p>Add a release definition by <a href="../pipelines/apps/cd/deploy-webdeploy-webapps.md" data-raw-source="[choosing the build version, target release environments, and tasks](../pipelines/apps/cd/deploy-webdeploy-webapps.md)">choosing the build version, target release environments, and tasks</a>.</p>
 
-
 <p><b>Release environments</b></p>
 <p><a href="../pipelines/process/stages.md" data-raw-source="[Define and clone release environments](../pipelines/process/stages.md)">Define and clone release environments</a>, logical entities that represent where you want to deploy a release, such as a collection of servers, a cloud, multiple clouds, or an app store.</p>
 
-
 <p><b>Artifacts</b></p>
 <p>A release is fundamentally defined by <a href="../pipelines/release/artifacts.md" data-raw-source="[versioned artifacts that make up the release](../pipelines/release/artifacts.md)">versioned artifacts that make up the release</a>. As you deploy the release to various environments, you deploy and validate the same artifacts on all environments. </p>
-
 
 <p><b>Tasks</b></p>
 <p>Automate release deployment by <a href="../pipelines/release/triggers.md#release-triggers" data-raw-source="[defining the events that trigger a release](../pipelines/release/triggers.md#release-triggers)">defining the events that trigger a release</a>.</p>
@@ -1177,7 +1023,6 @@ pipelines\tasks\build\media
 </tbody>
 </table>
 
-
 <a id="test"></a>
 
 ### Test
@@ -1216,7 +1061,6 @@ pipelines\tasks\build\media
 <p>From the context menu of a test plan, test suite, or test case, you can assign a configuration.  </p>
 <img src="media/features/alm-features-test-configuration.png" alt="Assign configuration to test object"/><br/><br/>
 
-
 </td>
 <td width="33%">
 
@@ -1231,12 +1075,9 @@ pipelines\tasks\build\media
 <p><b>Record and play back manual tests</b></p>
 <p>With Azure Test Plans, you can <a href="../test/mtm/record-play-back-manual-tests.md" data-raw-source="[record your keystrokes and gestures while you test an application](../test/mtm/record-play-back-manual-tests.md)">record your keystrokes and gestures while you test an application</a>. The next time you run the test, you can play back your actions quickly and accurately.</p>
 
-
-
 <p><b>Track test status and test results</b></p>
 <p>Quickly <a href="../test/track-test-status.md" data-raw-source="[view the status](../test/track-test-status.md)">view the status</a> of your testing using lightweight charts.</p>
 <img src="media/features/features-test-results.png" alt="Test charts"/><br/><br />
-
 
 <p><b>Test environments</b></p>
 <p><a href="../test/test-different-configurations.md" data-raw-source="[Specify a combination of hardware and software](../test/test-different-configurations.md)">Specify a combination of hardware and software</a> that represents a user or machine environment in which your app runs.</p>
@@ -1244,15 +1085,14 @@ pipelines\tasks\build\media
 <p><b>Test permissions</b></p>
 <p>Set permissions on who can <a href="../organizations/security/set-project-collection-level-permissions.md" data-raw-source="[manage test configurations, test environments, and publish and delete test results](../organizations/security/set-project-collection-level-permissions.md)">manage test configurations, test environments, and publish and delete test results</a>.</p>
 
-
-
 </td>
 </tr>
 </tbody>
 </table>
 
 <a id="dashboards"></a>
-## Dashboards and reports  
+
+## Dashboards and reports
 
 <a id="charts"></a>
 
@@ -1267,12 +1107,9 @@ pipelines\tasks\build\media
 <p>Each team can create several <a href="../report/dashboards/dashboards.md" data-raw-source="[team dashboards](../report/dashboards/dashboards.md)">team dashboards</a> to help keep both the team and Stakeholders in sync. Each dashboard tile provides quick access to the progress of builds, status of work items, or latest code changes. </p>
 <img src="media/features/alm-feature-add-a-dashboard.png" alt="Add a dashboard control"/><br/> <br/>
 
-
 <p><b>Build history charts</b></p>
 <p><a href="../report/dashboards/add-charts-to-dashboard.md#build-history" data-raw-source="[Add build history charts to your dashboards](../report/dashboards/add-charts-to-dashboard.md#build-history)">Add build history charts to your dashboards</a>.  </p>
 <img src="media/features/alm-feature-build-summary-widget.png" alt="build summary chart"/><br/> <br/>
-
-
 
 <p><b>Test charts</b></p>
 <p>Track the status of your <a href="../test/track-test-status.md" data-raw-source="[test progress and test runs](../test/track-test-status.md)">test progress and test runs</a>. Optionally add these charts to a dashboard.  </p>
@@ -1288,11 +1125,9 @@ pipelines\tasks\build\media
 <p><b>Restrict or allow team members to manage dashboards (Azure DevOps Services)</b></p>
 <p>Set permissions to <a href="../report/dashboards/dashboards.md#manage" data-raw-source="[restrict or allow team members to manage dashboards](../report/dashboards/dashboards.md#manage)">restrict or allow team members to manage dashboards</a>.  </p>
 
-
 <p><b>Capacity planning and tracking</b></p>
 <p>Easily track how much work your team has completed and has left to do in a sprint by adding the <a href="../report/dashboards/widget-catalog.md#sprint-capacity-widget" data-raw-source="[sprint capacity chart widget](../report/dashboards/widget-catalog.md#sprint-capacity-widget)">sprint capacity chart widget</a> to your dashboard.  </p>
 <img src="media/features/alm-feature-capacity-widget.png" alt="Sprint capacity chart"/><br/><br/>
-
 
 <p><b>Share dashboards with Stakeholders</b></p>
 <p>Grant non-licensed users access as Stakeholders (<a href="../organizations/accounts/add-organization-users.md" data-raw-source="[Azure DevOps Services](../organizations/accounts/add-organization-users.md)">Azure DevOps Services</a> | <a href="../organizations/security/change-access-levels.md" data-raw-source="[TFS](../organizations/security/change-access-levels.md)">TFS</a>) so they can view progress, run queries, and contribute ideas.  </p>
@@ -1318,15 +1153,12 @@ pipelines\tasks\build\media
 <p><b>Auto-refresh dashboards </b></p>
 <p>You can <a href="../report/dashboards/dashboards.md#manage" data-raw-source="[enable auto-refresh for any team dashboard](../report/dashboards/dashboards.md#manage)">enable auto-refresh for any team dashboard</a>, and it automatically updates every five minutes. This is a useful feature for when your dashboard serves as a team wallboard.   </p>
 
-
 <p><b>Widget catalog</b></p>
 <p>Add <a href="../report/dashboards/widget-catalog.md" data-raw-source="[widgets](../report/dashboards/widget-catalog.md)">widgets</a> to your dashboard to provide  information and monitor the data your team needs.</p>
 <img src="../report/dashboards/media/add-widget-icon.png" alt="add a widget icon"/><br/><br/>
 
 <p><b>Work item query charts</b></p>
 <p>View the status of work in progress by <a href="../report/dashboards/charts.md" data-raw-source="[charting the results of a flat-list query](../report/dashboards/charts.md)">charting the results of a flat-list query</a>. You can create several types of charts&mdash;such as pie, column, or trend&mdash;for the same query. Optionally add these charts to a dashboard.</p>
-
-
 
 <p><b>Drag-n-drop layout</b></p>
 <p>Configure the layout to your specifications by <a href="../report/dashboards/dashboards.md" data-raw-source="[dragging tiles into the sequence you want](../report/dashboards/dashboards.md)">dragging tiles into the sequence you want</a>. </p>
@@ -1337,7 +1169,6 @@ pipelines\tasks\build\media
 <p><b>Power BI dashboards (Azure DevOps Services)</b></p>
 <p>You can create dashboards, individual reports, or explore data collected for your Visual Studio Online account once you <a href="../report/powerbi/report-on-vso-with-power-bi-vs.md" data-raw-source="[connect to Power BI](../report/powerbi/report-on-vso-with-power-bi-vs.md)">connect to Power BI</a>. </p>
 
-
 </td>
 </tr>
 </tbody>
@@ -1345,7 +1176,7 @@ pipelines\tasks\build\media
 
 ::: moniker range="azure-devops"
 
-<a id="power-bi">  </a>
+<a id="power-bi"> </a>
 
 ### Power BI dashboards and reports (Azure DevOps Services)
 
@@ -1354,23 +1185,17 @@ pipelines\tasks\build\media
 <tr valign="top">
 <td width="50%">
 
-
 <p><b>Basic Power BI concepts</b></p>
 <p>The 3 major building blocks of Power BI are <a href="https://powerbi.microsoft.com/documentation/powerbi-service-basic-concepts/" data-raw-source="[dashboards, reports, and datasets](https://powerbi.microsoft.com/documentation/powerbi-service-basic-concepts/)">dashboards, reports, and datasets</a>. </p>
 
-
 <p><b>Get started </b></p>
 <p>You can <a href="../report/powerbi/report-on-vso-with-power-bi-vs.md" data-raw-source="[create dashboards, individual reports, or explore data](../report/powerbi/report-on-vso-with-power-bi-vs.md)">create dashboards, individual reports, or explore data</a> collected for your organization once you connect to Power BI. </p>
-
-
-
 
 </td>
 <td width="50%">
 
 <p><b>Connect to Power BI</b></p>
 <p><a href="../report/powerbi/data-connector-connect.md" data-raw-source="[Steps required to authorize Power BI to access your organization](../report/powerbi/data-connector-connect.md)">Steps required to authorize Power BI to access your organization</a>.</p>
-
 
 <p><b>Available data</b></p>
 <p>The <a href="../report/powerbi/data-connector-connect.md" data-raw-source="[Power BI Data Connector](../report/powerbi/data-connector-connect.md)">Power BI Data Connector</a> supports building reports to track status and trend work items.</p>
@@ -1385,7 +1210,7 @@ pipelines\tasks\build\media
 
 ::: moniker range=">= tfs-2013"
 
-<a id="sql-server-reports">  </a>
+<a id="sql-server-reports"> </a>
 
 ### SQL Server Reports (TFS)
 
@@ -1411,17 +1236,16 @@ pipelines\tasks\build\media
 <p>Build reports track the quality of software under development. By defining tests to run automatically as part of each build definition and instrumenting tests to gather code coverage data, you can gain insight about the quality of the builds, tests, and code.</p>
 
 - <a href="https://msdn.microsoft.com/library/dd380683.aspx" data-raw-source="[Build Quality Indicators](https://msdn.microsoft.com/library/dd380683.aspx)">Build Quality Indicators</a> (Agile &amp; CMMI)<br/>- <a href="https://msdn.microsoft.com/library/dd380643.aspx" data-raw-source="[Build Success Over Time](https://msdn.microsoft.com/library/dd380643.aspx)">Build Success Over Time</a><br/>- <a href="https://msdn.microsoft.com/library/dd380708.aspx" data-raw-source="[Build Summary](https://msdn.microsoft.com/library/dd380708.aspx)">Build Summary</a><br/>
-<br/>
+  <br/>
 
 <p><b>Test and bug reports</b></p>
 <p>Test planning reports support monitoring the test progress and coverage of backlog items or user stories. Bug tracking reports illustrate the team&#39;s capacity to find and resolve bugs.</p>
 
 - <a href="https://msdn.microsoft.com/library/dd380713.aspx" data-raw-source="[Test Case Readiness](https://msdn.microsoft.com/library/dd380713.aspx)">Test Case Readiness</a><br/>- <a href="https://msdn.microsoft.com/library/dd380702.aspx" data-raw-source="[Test Plan Progress](https://msdn.microsoft.com/library/dd380702.aspx)">Test Plan Progress</a><br/>- <a href="https://msdn.microsoft.com/library/dd380736.aspx" data-raw-source="[Bug Status](https://msdn.microsoft.com/library/dd380736.aspx)">Bug Status</a> (Agile &amp; CMMI)<br/>- <a href="https://msdn.microsoft.com/library/dd380674.aspx" data-raw-source="[Bug Trends](https://msdn.microsoft.com/library/dd380674.aspx)">Bug Trends</a> (Agile &amp; CMMI)<br/>- <a href="https://msdn.microsoft.com/library/dd380731.aspx" data-raw-source="[Reactivations](https://msdn.microsoft.com/library/dd380731.aspx)">Reactivations</a> (Agile &amp; CMMI)<br/>
-<br/>
+  <br/>
 
 <p><b>Required team activities to generate useful reports</b></p>
 <p>To gain useful, actionable information from your reports, <a href="../report/admin/review-team-activities-for-useful-reports.md" data-raw-source="[team members must perform certain activities](../report/admin/review-team-activities-for-useful-reports.md)">team members must perform certain activities</a>. </p>
-
 
 </td>
 <td width="33%">
@@ -1433,14 +1257,11 @@ pipelines\tasks\build\media
 - <a href="https://msdn.microsoft.com/library/dn641200.aspx">Backlog Overview</a><br/>- <a href="https://msdn.microsoft.com/library/ff731579.aspx">Release Burndown</a><br/>- <a href="https://msdn.microsoft.com/library/ff731588.aspx">Sprint Burndown</a><br/>- <a href="https://msdn.microsoft.com/library/ff731575.aspx">Velocity</a><br/><br/>
 <p><em>Agile and CMMI</em></p>
 
-- <a href="https://msdn.microsoft.com/library/dd380678.aspx">Burndown and Burn Rate</a><br/>- <a href="https://msdn.microsoft.com/library/dd380673.aspx">Remaining Work</a><br/>- <a href="https://msdn.microsoft.com/library/ee461517.aspx">Requirements Overview</a> (CMMI)<br/>- <a href="https://msdn.microsoft.com/library/ee461582.aspx">Requirements Progress</a> (CMMI)<br/>- <a href="https://msdn.microsoft.com/library/dd380706.aspx">Status of All Iterations</a> (similar to Velocity)<br/>- <a href="https://msdn.microsoft.com/library/dd380641.aspx">Stories Overview</a>   (Agile)<br/>- <a href="https://msdn.microsoft.com/library/dd380641.aspx">Stories Progress</a> (Agile)<br/>- <a href="https://msdn.microsoft.com/library/ee707132.aspx">Unplanned Work</a><br/>
-<br/>
+- <a href="https://msdn.microsoft.com/library/dd380678.aspx">Burndown and Burn Rate</a><br/>- <a href="https://msdn.microsoft.com/library/dd380673.aspx">Remaining Work</a><br/>- <a href="https://msdn.microsoft.com/library/ee461517.aspx">Requirements Overview</a> (CMMI)<br/>- <a href="https://msdn.microsoft.com/library/ee461582.aspx">Requirements Progress</a> (CMMI)<br/>- <a href="https://msdn.microsoft.com/library/dd380706.aspx">Status of All Iterations</a> (similar to Velocity)<br/>- <a href="https://msdn.microsoft.com/library/dd380641.aspx">Stories Overview</a> (Agile)<br/>- <a href="https://msdn.microsoft.com/library/dd380641.aspx">Stories Progress</a> (Agile)<br/>- <a href="https://msdn.microsoft.com/library/ee707132.aspx">Unplanned Work</a><br/>
+  <br/>
 
 <p><b>Set permissions to view or create reports</b></p>
 <p>Enable members of your team to <a href="../report/admin/grant-permissions-to-reports.md" data-raw-source="[view or manage Reporting Services reports](../report/admin/grant-permissions-to-reports.md)">view or manage Reporting Services reports</a>. To create or modify reports, you need to grant them access to read databases. </p>
-
-
-
 
 </td>
 </tr>
@@ -1458,7 +1279,6 @@ pipelines\tasks\build\media
 <tr valign="top">
 <td width="33%">
 
-
 <p><b>What is a widget?</b></p>
 <p>You build your dashboards by adding information tiles or widgets. The <a href="../report/dashboards/widget-catalog.md" data-raw-source="[widget catalog](../report/dashboards/widget-catalog.md)">widget catalog</a> provides a number of predefined widgets.</p>
 
@@ -1467,11 +1287,9 @@ pipelines\tasks\build\media
 
 <h4><i>Informational content and other links</i></h4>
 
-
 <p><b>Markdown widget</b></p>
 <p>Adds a configurable tile to your dashboard to <a href="../report/dashboards/widget-catalog.md#markdown-widget" data-raw-source="[display any type of information, guidance, or links](../report/dashboards/widget-catalog.md#markdown-widget)">display any type of information, guidance, or links</a> that you want using markdown syntax.   </p>
 <img src="media/features/alm-feature-markdown-widget.png" alt="Markdown widget"/><br/><br/>
-
 
 <p><b>Team member </b></p>
 <p>Opens the team&#39;s quick dialog to <a href="../report/dashboards/widget-catalog.md#team-members-widget" data-raw-source="[add or remove team members](../report/dashboards/widget-catalog.md#team-members-widget)">add or remove team members</a>.</p>
@@ -1481,7 +1299,6 @@ pipelines\tasks\build\media
 
 <p><b>Visual Studio widget</b></p>
 <p><a href="../report/dashboards/widget-catalog.md#visual-studio-widget" data-raw-source="[Provides links to open or download Visual Studio](../report/dashboards/widget-catalog.md#visual-studio-widget)">Provides links to open or download Visual Studio</a>. The Visual Studio IDE client comes with the Team Explorer plug-in which provides quick access to several features (some of which aren&#39;t available through the web portal). </p>
-
 
 <p><b>Welcome widget</b></p>
 <p>Provides quick access to <a href="../report/dashboards/widget-catalog.md#how-to-widget" data-raw-source="[getting started info on how to track work, code, build, and test](../report/dashboards/widget-catalog.md#how-to-widget)">getting started info on how to track work, code, build, and test</a>. </p>
@@ -1497,17 +1314,13 @@ pipelines\tasks\build\media
 <p>Adds a configurable tile to display <a href="../report/dashboards/widget-catalog.md#pull-request-widget" data-raw-source="[active pull requests requested by the team, or assigned to or requested by the person logged in](../report/dashboards/widget-catalog.md#pull-request-widget)">active pull requests requested by the team, or assigned to or requested by the person logged in</a>. You select the Git repository for the pull requests of interest.  </p>
 <img src="media/features/feature-widget-pull-request.png" alt="Pull request widget"/>
 
-
 </td>
 <td width="33%">
 
-
 <h4><i>Plan and track work</i></h4>
-
 
 <p><b>Assigned to me widget  </b></p>
 <p>Provides quick access to <a href="../report/dashboards/widget-catalog.md" data-raw-source="[work items assigned to the logged in user](../report/dashboards/widget-catalog.md)">work items assigned to the logged in user</a>. </p>
-
 
 <p><b>Chart for work items</b></p>
 <p>Adds a configurable tile to display the <a href="../report/dashboards/widget-catalog.md#chart-wit-widget" data-raw-source="[chart for a shared query](../report/dashboards/widget-catalog.md#chart-wit-widget)">chart for a shared query</a>.  </p>
@@ -1516,7 +1329,6 @@ pipelines\tasks\build\media
 <p><b>New work item </b></p>
 <p><a href="../report/dashboards/widget-catalog.md#new-work-item-widget" data-raw-source="[Add work items](../report/dashboards/widget-catalog.md#new-work-item-widget)">Add work items</a> pre-scoped to your team&#39;s default area and iteration paths.</p>
 <img src="media/features/alm-feature-new-work-item-widget.png" alt="Add new work item widget"/><br/><br/>
-
 
 <p><b>Other links widget</b></p>
 <p>Provides quick access links from a team dashboard to <a href="../report/dashboards/widget-catalog.md#other-links-widget" data-raw-source="[request feedback, define sprints, and modify your team&#39;s area paths](../report/dashboards/widget-catalog.md#other-links-widget)">request feedback, define sprints, and modify your team&#39;s area paths</a>.</p>
@@ -1535,7 +1347,6 @@ pipelines\tasks\build\media
 </td>
 <td width="33%">
 
-
 <h4><i>Plan and track work (continued)</i></h4>
 
 <!---
@@ -1547,7 +1358,6 @@ pipelines\tasks\build\media
 <p><b>Sprint burndown </b></p>
 <p>Adds <a href="../report/dashboards/widget-catalog.md#sprint-burndown-widget" data-raw-source="[a burndown chart](../report/dashboards/widget-catalog.md#sprint-burndown-widget)">a burndown chart</a> for tracking a team&#39;s Scrum progress for the current sprint. </p>
 
-
 <p><b>Sprint capacity </b></p>
 <p>Adds <a href="../report/dashboards/widget-catalog.md#sprint-capacity-widget" data-raw-source="[a chart for tracking remaining capacity](../report/dashboards/widget-catalog.md#sprint-capacity-widget)">a chart for tracking remaining capacity</a> when tracking a team&#39;s Scrum progress for the current sprint. </p>
 <img src="media/features/alm-feature-capacity-widget.png" alt="Sprint capacity chart"/><br/><br/>
@@ -1557,7 +1367,6 @@ pipelines\tasks\build\media
 
 <p><b>Work links </b></p>
 <p>Provides quick access links from a team dashboard to open the <a href="../report/dashboards/widget-catalog.md#work-links-widget" data-raw-source="[team backlog, Kanban board, task board, and queries](../report/dashboards/widget-catalog.md#work-links-widget)">team backlog, Kanban board, task board, and queries</a>.   </p>
-
 
 <h4><i>Build and test widgets</i></h4>
 
@@ -1577,12 +1386,10 @@ pipelines\tasks\build\media
 <img src="../report/dashboards/media/widgets-test-trend-results.png" alt="Test results trend widget"/>
 <br/>
 
-
 <h4><i>Extensibility</i></h4>
 
 <p><b>Marketplace widgets</b></p>
 <p>You can find additional widgets by browsing the <a href="https://marketplace.visualstudio.com/search?term=webpage%20widget&amp;target=vsts&amp;sortby=relevance." data-raw-source="[Marketplace](https://marketplace.visualstudio.com/search?term=webpage%20widget&amp;target=vsts&amp;sortby=relevance.)">Marketplace</a></p>
-
 
 <p><b>Dashboard widget SDK  </b></p>
 <p><a href="../extend/develop/add-dashboard-widget.md" data-raw-source="[Create a dashboard widget](../extend/develop/add-dashboard-widget.md)">Create a dashboard widget</a> using the REST API service. </p>
@@ -1591,7 +1398,6 @@ pipelines\tasks\build\media
 </tr>
 </tbody>
 </table>
-
 
 <a id="extensibility"></a>
 
@@ -1602,13 +1408,12 @@ pipelines\tasks\build\media
 ### Marketplace
 
 <blockquote style="font-size: 13px"><b>Feature availability: </b>You can add Marketplace extensions from the web portal for Azure DevOps Services or TFS 2015.2 or later version or for Visual Studio or Visual Studio Code.
-</blockquote> 
+</blockquote>
 
 <table>
 <tbody>
 <tr valign="top">
 <td width="55%">
-
 
 <p><b>What is the Marketplace?</b></p>
 <p>From the <a href="https://marketplace.visualstudio.com/" data-raw-source="[Marketplace](https://marketplace.visualstudio.com/)">Marketplace</a>, you can extend the functionality available to you by installing free extensions or purchasing a subscription or paid extension. Extensions support adding new capabilities to Visual Studio, Visual Studio Code, Azure DevOps Services, or TFS.  </p>
@@ -1618,7 +1423,6 @@ pipelines\tasks\build\media
 </td>
 <td width="45%">
 
-
 <p><b>Subscriptions</b></p>
 <p><a href="https://visualstudio.microsoft.com/products/how-to-buy-vs" data-raw-source="[Visual Studio subscriptions](https://visualstudio.microsoft.com/products/how-to-buy-vs)">Visual Studio subscriptions</a> are a way for you to get the Visual Studio IDE, team collaboration benefits like Azure DevOps Services and TFS, and subscriber benefits like dev/test use of Windows, Windows Server, and SQL Server. </p>
 
@@ -1627,7 +1431,6 @@ pipelines\tasks\build\media
 
 <p><b>Try Azure Test Plans for free</b></p>
 <p>You can <a href="../billing/try-additional-features-vs.md" data-raw-source="[Try Azure Test Plans for free](../billing/try-additional-features-vs.md)">start a trial for Azure Test Plans for free</a>.</p>
-
 
 <p><b>Get extensions for...</b></p>
 <ul>
@@ -1646,17 +1449,14 @@ pipelines\tasks\build\media
 </tbody>
 </table>
 
-
 <a id="rest-apis"></a>
 
 ### REST APIs
-
 
 <table>
 <tbody>
 <tr valign="top">
 <td width="33%">
-
 
 <p><b>Get started with REST APIs</b></p>
 <p>Learn the basic patterns for <a href="../integrate/get-started/rest/basics.md" data-raw-source="[using the REST APIs](../integrate/get-started/rest/basics.md)">using the REST APIs</a> for Azure DevOps Services and TFS.</p>
@@ -1686,7 +1486,6 @@ the libraries needed by your app or service.</p>
 <p><b>C# client library samples</b></p>
 <p>Here are a few quick <a href="../integrate/get-started/client-libraries/samples.md" data-raw-source="[samples](../integrate/get-started/client-libraries/samples.md)">samples</a> to help you get started with the client libraries.</p>
 
-
 </td>
 </tr>
 </tbody>
@@ -1701,7 +1500,6 @@ the libraries needed by your app or service.</p>
 <tr valign="top">
 <td width="33%">
 
-
 <p><b>Integrate with service hooks</b></p>
 <p><a href="../service-hooks/overview.md" data-raw-source="[Service hooks](../service-hooks/overview.md)">Service hooks</a> enable you to perform tasks on other services
 when events happen in your Visual Studio Online projects</p>
@@ -1711,7 +1509,6 @@ when events happen in your Visual Studio Online projects</p>
 <a href="../service-hooks/services/slack.md" data-raw-source="[Slack](../service-hooks/services/slack.md)">Slack</a>,
 and <a href="../service-hooks/services/uservoice.md" data-raw-source="[UserVoice](../service-hooks/services/uservoice.md)">UserVoice</a> with Azure DevOps
 using <a href="../service-hooks/overview.md" data-raw-source="[service hooks](../service-hooks/overview.md)">service hooks</a>.</p>
-
 
 </td>
 
@@ -1735,7 +1532,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 ## Global
 
-
 <table>
 <tbody>
 <tr valign="top">
@@ -1745,7 +1541,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><p>Choose your name to access <a href="../organizations/settings/set-your-preferences.md" data-raw-source="[your profile settings](../organizations/settings/set-your-preferences.md)">your profile settings</a> and set your web portal preferences which include language (currently only English is supported for Azure DevOps), date and time pattern, and time zone.</p>
 <img src="media/features/features-global-profile.png" alt="Profile drop down menu"/><br/><br/>
 
-
 <p><b>Language Interface Packs (LIPs)</b></p>
 <p>By using a <a href="https://msdn.microsoft.com/library/ms246590.aspx" data-raw-source="[Windows Language Interface Pack (LIP)](https://msdn.microsoft.com/library/ms246590.aspx)">Windows Language Interface Pack (LIP)</a>, you can install a language version of Windows, and then install various User Interface Language Packs. Language packs switch your English Visual Studio Professional user interface into any of these languages and have a majority of the user interface localized. </p>
 
@@ -1754,7 +1549,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 <p><b>Localized content</b></p>
 <p>Most content that supports Azure DevOps Services and TFS is localized into the following 14 languages.</p>
-
 
 <ul>
 <li><a href="https://msdn.microsoft.com/library/fda2bad5.aspx" data-raw-source="[English](https://msdn.microsoft.com/library/fda2bad5.aspx)">English</a></li>
@@ -1807,10 +1601,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 </tbody>
 </table>
 
-
-
-
-
 <a id="monitor"></a>
 
 ## Monitor
@@ -1824,10 +1614,8 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <tr valign="top">
 <td width="33%">
 
-
 <p><b>What is Application Insights</b></p>
 <p>Application Insights, an extensible analytics service that monitors your live web application, supports developers to continuously improve the performance and usability of apps. With it you can <a href="https://azure.microsoft.com/documentation/articles/app-insights-overview/" data-raw-source="[detect and diagnose performance issues, and understand what users actually do with your app](https://azure.microsoft.com/documentation/articles/app-insights-overview/)">detect and diagnose performance issues, and understand what users actually do with your app</a>. </p>
-
 
 <p><b>Web site availability monitoring </b></p>
 <p>Know when your site or service goes down by <a href="https://azure.microsoft.com/documentation/articles/app-insights-monitor-web-app-availability/" data-raw-source="[setting up tests and performance thresholds to monitor both uptime and responsiveness](https://azure.microsoft.com/documentation/articles/app-insights-monitor-web-app-availability/)">setting up tests and performance thresholds to monitor both uptime and responsiveness</a>. </p>
@@ -1835,10 +1623,8 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Web site performance &amp; usage </b></p>
 <p>Open the Performance blade to see <a href="https://azure.microsoft.com/documentation/articles/app-insights-monitor-performance-live-website-now/#view-performance-telemetry" data-raw-source="[request, response time, dependency and other data](https://azure.microsoft.com/documentation/articles/app-insights-monitor-performance-live-website-now/#view-performance-telemetry)">request, response time, dependency and other data</a>.</p>
 
-
 <p><b>Power BI integration</b></p>
 <p><a href="https://azure.microsoft.com/blog/application-insights-content-pack-for-power-bi/" data-raw-source="[Get even more flexible views of your telemetry](https://azure.microsoft.com/blog/application-insights-content-pack-for-power-bi/)">Get even more flexible views of your telemetry</a>, and present your web app telemetry alongside data from devices and other business sources.</p>
-
 
 </td>
 <td width="33%">
@@ -1847,14 +1633,10 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p>Get the full picture with <a href="/azure/application-insights/app-insights-overview" data-raw-source="[customizable dashboards that track application health alongside usage metrics and app crashes](/azure/application-insights/app-insights-overview)">customizable dashboards that track application health alongside usage metrics and app crashes</a>. Within the dashboard, you can filter, search, and drill down to an event instance for more detail or to segment data.</p>
 <img src="media/features/features-app-insights-dashboard-blades.png" alt="Application insight dashboard blades"/><br/><br/>
 
-
-
-
 <p><b>Diagnose failures and exceptions</b></p>
 <p>Quickly diagnose causes and <a href="https://azure.microsoft.com/documentation/articles/app-insights-asp-net-exceptions/" data-raw-source="[correlate failed requests with exceptions and other events at both the client and server](https://azure.microsoft.com/documentation/articles/app-insights-asp-net-exceptions/)">correlate failed requests with exceptions and other events at both the client and server</a>.</p>
 </td>
 <td width="33%">
-
 
 <p><b>Usage analysis</b></p>
 <p>Gain a clear view of <a href="https://azure.microsoft.com/documentation/articles/app-insights-overview-usage/" data-raw-source="[where your users are coming from and how they use your app ](https://azure.microsoft.com/documentation/articles/app-insights-overview-usage/)">where your users are coming from and how they use your app </a>. Add custom instrumentation to determine usage patterns and next version investment areas.  </p>
@@ -1862,15 +1644,11 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Diagnose dependency issues</b></p>
 <p>See how long your application <a href="https://azure.microsoft.com/documentation/articles/app-insights-dependencies/" data-raw-source="[waits for dependencies and how often a dependency call fails](https://azure.microsoft.com/documentation/articles/app-insights-dependencies/)">waits for dependencies and how often a dependency call fails</a>. Dependencies are external components that your app calls such as an HTTP service, database, or file system. </p>
 
-
 <p><b>Custom data collectors </b></p>
 <p>Add custom data collectors to your app using the <a href="https://azure.microsoft.com/documentation/articles/app-insights-api-custom-events-metrics/" data-raw-source="[Application Insights API to customize your telemetry data](https://azure.microsoft.com/documentation/articles/app-insights-api-custom-events-metrics/)">Application Insights API to customize your telemetry data</a>.   </p>
 
-
 <p><b>Continuous data export</b></p>
 <p>Perform custom analysis on your telemetry through <a href="https://azure.microsoft.com/documentation/articles/app-insights-export-telemetry/" data-raw-source="[continuous export of your data](https://azure.microsoft.com/documentation/articles/app-insights-export-telemetry/)">continuous export of your data</a>. </p>
-
-
 
 </td>
 </tr>
@@ -1881,12 +1659,10 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 ### HockeyApp
 
-
 <table>
 <tbody>
 <tr valign="top">
 <td width="33%">
-
 
 <p><b>Get HockeyApp for mobile app development</b></p>
 <p>Distribute mobile apps for testing, collect user metrics and feedback, and respond to crashes more easily by <a href="https://visualstudio.microsoft.com/app-center/" data-raw-source="[adding HockeyApp to your Agile, continuous integration, and continuous delivery workflows](https://visualstudio.microsoft.com/app-center/)">adding HockeyApp to your Agile, continuous integration, and continuous delivery workflows</a>. </p>
@@ -1894,15 +1670,11 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Simplified distribution </b></p>
 <p><a href="https://docs.microsoft.com/appcenter/distribution/" data-raw-source="[Manage distribution of development and production versions of your apps](https://docs.microsoft.com/appcenter/distribution/)">Manage distribution of development and production versions of your apps</a> and use independent bundle identifiers that can run in parallel on the same device.</p>
 
-
 <p><b>Integrate with Azure DevOps Services and TFS</b></p>
 <p><a href="https://visualstudio.microsoft.com/app-center/" data-raw-source="[Integrate HockeyApp directly in Azure DevOps Services or TFS](https://visualstudio.microsoft.com/app-center/)">Integrate HockeyApp directly in Azure DevOps Services or TFS</a> to upload your Android, iOS, or Windows builds. </p>
 
-
-
 </td>
 <td width="33%">
-
 
 <p><b>Comprehensive dashboard </b></p>
 <p>Manage all your apps, users, and devices from a single dashboard. Monitor crashes and feedback as well. As an admin, you&#39;ll have full control over which user can see and install which app. </p>
@@ -1911,15 +1683,11 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 <br/>
 
-
-
-
 </td>
 <td width="33%">
 
 <p><b>Invite or recruit testers</b></p>
 <p><a href="https://docs.microsoft.com/appcenter/dashboard/" data-raw-source="[Invite beta testers and distribute your beta versions](https://docs.microsoft.com/appcenter/dashboard/)">Invite beta testers and distribute your beta versions</a> through the dashboard.</p>
-
 
 <p><b>Usage</b></p>
 <p><a href="https://docs.microsoft.com/appcenter/analytics/event-metrics" data-raw-source="[Get advanced metrics](https://docs.microsoft.com/appcenter/analytics/event-metrics)">Get advanced metrics</a> to understand the testing performed on your app. See which devices were tested, which testers used the app for how long, and which language was tested. </p>
@@ -1928,21 +1696,17 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p>Get the information you need to analyze and respond to crashes by getting <a href="https://docs.microsoft.com/appcenter/diagnostics/enabling-diagnostics" data-raw-source="[symbolicated stack traces and environment details](https://docs.microsoft.com/appcenter/diagnostics/enabling-diagnostics)">symbolicated stack traces and environment details</a>.
  </p>
 
-
 <p><b>Webhooks</b></p>
 <p>Use webhooks to <a href="https://docs.microsoft.com/appcenter/dashboard/webhooks/" data-raw-source="[receive notifications about new versions, crash groups, and feedback](https://docs.microsoft.com/appcenter/dashboard/webhooks/)">receive notifications about new versions, crash groups, and feedback</a>. </p>
-
 
 </td>
 </tr>
 </tbody>
 </table>
 
-
 <a id="navigation"></a>
 
 ## Navigation
-
 
 <a id="web-portal"></a>
 
@@ -1952,7 +1716,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <tbody>
 <tr valign="top">
 <td width="33%">
-
 
 <p><b>Operational hubs</b></p>
 <p>Each hub&mdash;<a href="../project/navigation/index.md" data-raw-source="[Home, Code, Work, build, and Test](../project/navigation/index.md)">Home, Code, Work, build, and Test</a>&mdash;supports specialized functions to share information, view and create dashboards, collaborate on code, plan and track work, build and test your applications, plus much, much more.</p>
@@ -1969,18 +1732,15 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p>Navigate to a different team or project from the top row.</p>
 <img src="media/features/alm-feature-switch-team-context.png" alt="Switch team context"/><br/><br/>
 
-
 <p><b>Change team settings</b></p>
 <p>Customize features to meet your team needs by <a href="../organizations/settings/manage-teams.md" data-raw-source="[configuring your team assets](../organizations/settings/manage-teams.md)">configuring your team assets</a>.</p>
 <img src="media/features/alm-feature-team-settings-gear-icon.png" alt="Switch team context"/><br/><br/>
-
 
 <p><b>Keyboard shortcuts</b></p>
 <p>Increase your productivity by working with <a href="../project/navigation/keyboard-shortcuts.md" data-raw-source="[hot keys and shortcuts](../project/navigation/keyboard-shortcuts.md)">hot keys and shortcuts</a>.</p>
 
 </td>
 <td width="33%">
-
 
 <p><b>Home</b></p>
 <p>Provide team guidance through <a href="../project/wiki/markdown-guidance.md" data-raw-source="[Welcome](../project/wiki/markdown-guidance.md)">Welcome</a> (Markdown format) pages and add team <a href="../report/dashboards/dashboards.md" data-raw-source="[dashboards](../report/dashboards/dashboards.md)">dashboards</a> to monitor progress and trends. </p>
@@ -1994,7 +1754,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Build</b></p>
 <p><a href="../pipelines/overview.md" data-raw-source="[Define and monitor builds](../pipelines/overview.md)">Define and monitor builds</a> and set up continuous builds to improve the quality of your app. </p>
 
-
 <p><b>Test</b></p>
 <p><a href="../test/create-a-test-plan.md" data-raw-source="[Create and run manual tests](../test/create-a-test-plan.md)">Create and run manual tests</a> for your app.</p>
 
@@ -2004,16 +1763,12 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Release (Azure DevOps Services, Preview)</b></p>
 <p>Manage the release of your app by <a href="../pipelines/overview.md" data-raw-source="[deploying it to a specific environment for each separate release step](../pipelines/overview.md)">deploying it to a specific environment for each separate release step</a>, and by controlling the process through approvals for each step.</p>
 
-
 <p><b>Code search</b></p>
 <p><a href="../project/search/overview.md" data-raw-source="[Search within your code branches (TFVC) and repositories (Git)](../project/search/overview.md)">Search within your code branches (TFVC) and repositories (Git)</a> to find files, commits, and more using powerful filters to obtain rich results. </p>
 <img src="media/features/features-index-code-search-vsts.png" alt="Search code box"/><br/><br/>
 <p><b>Find work items</b></p>
 <p>When in the Work hub, <a href="../boards/queries/using-queries.md" data-raw-source="[enter IDs or keywords to start a query](../boards/queries/using-queries.md)">enter IDs or keywords to start a query</a> to find  work items that you want to review, triage, or update.</p>
 <img src="media/features/alm-index-search-work-items-vsts.png" alt="Search work item box"/><br/><br/>
-
-
-
 
 </td>
 <td width="33%">
@@ -2026,27 +1781,21 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>My favorites</b></p>
 <p>From any context, you can drag folders, queries, or builds to My favorites when working in the Code, Work, or Build hubs to provide quick access to those items. </p>
 
-
 <p><b>Team favorites</b></p>
 <p>From your team context, drag shared queries, builds, and folders to Team favorites to provide quick access to those items. </p>
 <img src="media/features/alm-index-team-favorites.png" alt="Drag items to team favorites"/><br/><br/>
-
-
 
 <p><b>Project admin context</b></p>
 <p>Open the admin context to <a href="../organizations/settings/add-teams.md" data-raw-source="[add teams](../organizations/settings/add-teams.md)">add teams</a> and <a href="../organizations/security/change-individual-permissions.md" data-raw-source="[manage permissions](../organizations/security/change-individual-permissions.md)">manage permissions</a>. From any project hub, choose the <img src="../boards/media/icons/gear_icon.png" alt="gear icon"/> gear icon to open the admin context.</p>
 <img src="media/features/alm-feature-admin-context.png" alt="Admin context"/><br/><br/>
 
-
 <p><b>Project collection admin context</b></p>
 <p>From the collection admin context, you can <a href="../organizations/security/set-project-collection-level-permissions.md" data-raw-source="[manage collection-level permissions](../organizations/security/set-project-collection-level-permissions.md)">manage collection-level permissions</a>, and set build policies, and <a href="../extend/overview.md" data-raw-source="[manage extensions](../extend/overview.md)">manage extensions</a>. Choose the <img src="../boards/media/icons/gear_icon.png" alt="gear icon"/> gear icon to open the admin context, and then choose DefaultCollection. </p>
-
 
 </td>
 </tr>
 </tbody>
 </table>
-
 
 <a id="search"></a>
 
@@ -2057,11 +1806,9 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <tr valign="top">
 <td width="33%">
 
-
 <p><b>Quick work item search</b></p>
 <p>Find work items based on <a href="https://msdn.microsoft.com/library/cc668120.aspx" data-raw-source="[ID, assignment, changed date, or keyword](https://msdn.microsoft.com/library/cc668120.aspx)">ID, assignment, changed date, or keyword</a>. </p>
 <img src="media/features/alm-index-search-work-items-vsts.png" alt="Search work item box"/><br/><br/>
-
 
 <p><b>Code search</b></p>
 <p><a href="../project/search/overview.md" data-raw-source="[Find code based on keywords and semantic search filters](../project/search/overview.md)">Find code based on keywords and semantic search filters</a> across your Git repositories.</p>
@@ -2073,11 +1820,11 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p>Open shared queries or create your own query using the query editor <a href="../boards/queries/using-queries.md" data-raw-source="[to list work items or show hierarchical or dependent items](../boards/queries/using-queries.md)">to list work items or show hierarchical or dependent items</a>.  </p>
 
 &gt;<b>Manage risks and dependencies</b></p>
+
 <p>Link work items to <a href="../boards/queries/link-work-items-support-traceability.md" data-raw-source="[track related work, dependencies, and changes made over time](../boards/queries/link-work-items-support-traceability.md)">track related work, dependencies, and changes made over time</a>.</p>
 
 <p><b>History &amp; auditing</b></p>
 <p>Review and query <a href="../boards/queries/history-and-auditing.md" data-raw-source="[work item change history](../boards/queries/history-and-auditing.md)">work item change history</a> to learn of past decisions and support future ones.</p>
-
 
 <p><b>Bulk add or modify using Excel </b></p>
 <p><a href="../boards/backlogs/office/bulk-add-modify-work-items-excel.md" data-raw-source="[Bulk add items to track or modify multiple field values](../boards/backlogs/office/bulk-add-modify-work-items-excel.md)">Bulk add items to track or modify multiple field values</a> using Excel.</p>
@@ -2089,15 +1836,14 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><a href="../report/dashboards/charts.md" data-raw-source="[Turn your queries into a status or trend chart](../report/dashboards/charts.md)">Turn your queries into a status or trend chart</a> and share them with your team, organization, and Stakeholders.</p>
 <img src="media/features/alm-feature-test-chart.png" alt="Create status and trend charts from flat list queries"/><br/><br/>
 
-
 <p><b>Tags</b></p>
 <p><a href="../boards/queries/add-tags-to-work-items.md" data-raw-source="[Add tags to work items](../boards/queries/add-tags-to-work-items.md)">Add tags to work items</a> to filter backlogs and queries. Bulk update work items to add or remove tags: <a href="../boards/backlogs/bulk-modify-work-items.md#tags" data-raw-source="[Azure DevOps Services](../boards/backlogs/bulk-modify-work-items.md#tags)">Azure DevOps Services</a> | <a href="../boards/backlogs/office/bulk-add-modify-work-items-excel.md" data-raw-source="[TFS](../boards/backlogs/office/bulk-add-modify-work-items-excel.md)">TFS</a>. </p>
 <img src="media/features/alm-feature-tags.png" alt="Add tags to filter backlogs, boards, and queries"/><br/><br/>
 
 &lt;p
+
 </td>
 <td width="33%">
-
 
 <p><b>Bulk modify</b></p>
 <p><a href="../boards/backlogs/bulk-modify-work-items.md" data-raw-source="[Edit or update multiple work items](../boards/backlogs/bulk-modify-work-items.md)">Edit or update multiple work items</a> from any backlog or query result. Supported tasks include:  </p>
@@ -2123,13 +1869,10 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Query by Kanban board change</b> </p>
 <p>Track status and trends of work items based on <a href="../boards/queries/query-by-workflow-changes.md" data-raw-source="[changes made to the Kanban board](../boards/queries/query-by-workflow-changes.md)">changes made to the Kanban board</a>. </p>
 
-
-
 </td>
 </tr>
 </tbody>
 </table>
-
 
 <a id="security"></a>
 
@@ -2139,7 +1882,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <tbody>
 <tr valign="top">
 <td width="33%">
-
 
 <p><b>Manage users and groups</b></p>
 <p><a href="../organizations/security/permissions.md" data-raw-source="[Add users to built-in groups](../organizations/security/permissions.md)">Add users to built-in groups</a> to grant them access to your project. Optionally, create groups to customize access based on your business requirements.</p>
@@ -2159,8 +1901,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 <p><b>Built-in groups</b></p>
 <p>Understand the <a href="../organizations/security/permissions.md#groups" data-raw-source="[permissions granted to built-in groups](../organizations/security/permissions.md#groups)">permissions granted to built-in groups</a> and use them to manage access to your team projects and collections.</p>
-
-
 
 </td>
 <td width="33%">
@@ -2190,10 +1930,8 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 </ul>
 <br/>
 
-
 <p><b>Team admin role and permissions</b></p>
 <p>Add users as team administrators to enable them to <a href="../organizations/settings/manage-teams.md" data-raw-source="[configure team settings and manage team assets](../organizations/settings/manage-teams.md)">configure team settings and manage team assets</a>.</p>
-
 
 <p><b>Manage administrative permissions </b></p>
 <p>[Add users to one of the following built-in groups] to provide them permissions assigned to that group: </p>
@@ -2207,10 +1945,8 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Restrict access</b></p>
 <p>You can restrict access to several features and tasks by setting the permission state to Deny to individual users or a security group.</p>
 
-
 </td>
 <td width="33%">
-
 
 <p><b>Stakeholder access</b></p>
 <p><a href="../organizations/security/change-access-levels.md" data-raw-source="[Grant Stakeholders, non-licensed users, limited access](../organizations/security/change-access-levels.md)">Grant Stakeholders, non-licensed users, limited access</a> to contribute ideas and access team dashboards.</p>
@@ -2225,7 +1961,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Valid users</b></p>
 <p>Understand how <a href="../organizations/security/about-permissions.md#validusers" data-raw-source="[valid user groups are populated and the permissions they&#39;re granted](../organizations/security/about-permissions.md#validusers)">valid user groups are populated and the permissions they&#39;re granted</a>.</p>
 
-
 <p><b>Permission reference</b></p>
 <p><a href="../organizations/security/permissions.md" data-raw-source="[Provide or restrict access](../organizations/security/permissions.md)">Provide or restrict access</a> for practically any feature, function, or object at the collection or project level. </p>
 
@@ -2235,23 +1970,14 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>SQL Server reporting permissions (TFS)</b></p>
 <p>Grant permissions to <a href="../report/admin/grant-permissions-to-reports.md" data-raw-source="[view and author Excel and SQL Server reports](../report/admin/grant-permissions-to-reports.md)">view and author Excel and SQL Server reports</a>.</p>
 
-
-
-
-
 </td>
 </tr>
 </tbody>
 </table>
 
-
-
-
-
 <a id="setup"></a>
 
 ## Set up and installation
-
 
 <table>
 <tbody>
@@ -2260,7 +1986,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 <p><b>Free developer offers</b></p>
 <p>To get started, <a href="https://visualstudio.microsoft.com/products/free-developer-offers-vs.aspx" data-raw-source="[download and install Visual Studio](https://visualstudio.microsoft.com/products/free-developer-offers-vs.aspx)">download and install Visual Studio</a> an integrated development environment (IDE) that works with Azure DevOps Services and TFS. </p>
-
 
 <p><b>Migrate from on-premises to hosted</b></p>
 <p>You can <a href="https://docs.microsoft.com/azure/devops/migrate/migrate-from-tfs" data-raw-source="[migrate source code and work items](https://docs.microsoft.com/azure/devops/migrate/migrate-from-tfs)">migrate source code and work items</a> from an on-premises TFS to the cloud. </p>
@@ -2271,13 +1996,8 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Sign up for Azure DevOps Services </b></p>
 <p><a href="https://visualstudio.microsoft.com/docs/setup-admin/team-services/sign-up-for-visual-studio-team-services" data-raw-source="[Store your code, tests, and test results in the cloud with Azure DevOps Services](https://visualstudio.microsoft.com/docs/setup-admin/team-services/sign-up-for-visual-studio-team-services)">Store your code, tests, and test results in the cloud with Azure DevOps Services</a>, as well as plan your project and track progress. </p>
 
-
-
 <p><b>Install TFS </b></p>
 <p><a href="https://visualstudio.microsoft.com/downloads" data-raw-source="[Download and install the latest version of Team Foundation Server](https://visualstudio.microsoft.com/downloads)">Download and install the latest version of Team Foundation Server</a>. TFS provides the collaboration hub to support your teams DevOps tasks. at the center of the Microsoft devops solution. </p>
-
-
-
 
 </td>
 <td width="33%">
@@ -2290,13 +2010,10 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Built-in SQL Server database (TFS)</b></p>
 <p>For small teams, you can install <a href="/azure/devops/server/install/single-server" data-raw-source="[TFS using SQL Server Express which installs with TFS](/azure/devops/server/install/single-server)">TFS using SQL Server Express which installs with TFS</a>.  </p>
 
-
 </td>
 </tr>
 </tbody>
 </table>
-
-
 
 <a id="teams-team-projects-processes"></a>
 
@@ -2306,20 +2023,16 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 ### Processes and process guidance
 
-
 <table>
 <tbody>
 <tr valign="top">
 <td width="33%">
 
-
 <p><b>What is a process?</b></p>
 <p>A <a href="../boards/work-items/guidance/choose-process.md" data-raw-source="[process defines the building blocks](../boards/work-items/guidance/choose-process.md)">process defines the building blocks</a> of the work item tracking system as well as other sub-systems you access through your project.  </p>
 
-
 <p><b>Compare and choose a process</b></p>
 <p>Compare the three core system processes--<a href="../boards/work-items/guidance/choose-process.md" data-raw-source="[Agile, Scrum, CMMI](../boards/work-items/guidance/choose-process.md)">Agile, Scrum, CMMI</a>--before you choose one to create a project. </p>
-
 
 <p><b>Agile process </b></p>
 <p>Choose <a href="../boards/work-items/guidance/agile-process.md" data-raw-source="[Agile](../boards/work-items/guidance/agile-process.md)">Agile</a> when your team uses Agile planning methods, including Scrum, and tracks development and test activities separately. With Agile, you can track user stories and bugs on the Kanban board, or track bugs and tasks on the task board.</p>
@@ -2337,16 +2050,11 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Manage processes (Azure DevOps Services) </b></p>
 <p><a href="../organizations/settings/work/manage-process.md" data-raw-source="[Create inherited processes and migrate team projects to use them](../organizations/settings/work/manage-process.md)">Create inherited processes and migrate team projects to use them</a>. Set the default process and enable, disable, or delete processes you no longer want to use.   </p>
 
-
-
-
 </td>
 <td width="33%">
 
-
 <p><b>Kanban process tools</b></p>
 <p>You can use the Kanban board with any process--Agile, Scrum, CMMI--or project that you select or create. Agile Kanban tools support working with the <a href="../boards/boards/kanban-basics.md" data-raw-source="[Kanban board](../boards/boards/kanban-basics.md)">Kanban board</a>, <a href="../boards/boards/add-task-checklists.md" data-raw-source="[adding task checklists](../boards/boards/add-task-checklists.md)">adding task checklists</a>, <a href="../boards/boards/wip-limits.md" data-raw-source="[setting WIP limits](../boards/boards/wip-limits.md)">setting WIP limits</a>, <a href="../boards/boards/add-columns.md" data-raw-source="[custom columns](../boards/boards/add-columns.md)">custom columns</a>, <a href="../boards/boards/split-columns.md" data-raw-source="[split columns](../boards/boards/split-columns.md)">split columns</a>, <a href="../boards/boards/expedite-work.md" data-raw-source="[custom swimlanes](../boards/boards/expedite-work.md)">custom swimlanes</a>, and <a href="../boards/boards/customize-cards.md" data-raw-source="[customizing cards](../boards/boards/customize-cards.md)">customizing cards</a>. </p>
-
 
 <p><b>Scrum process</b></p>
 <p>Choose <a href="../boards/work-items/guidance/scrum-process.md" data-raw-source="[Scrum](../boards/work-items/guidance/scrum-process.md)">Scrum</a> when your team practices Scrum and you want to track product backlog items (PBIs) and bugs on the Kanban board, or break PBIs and bugs down into tasks on the task board. </p>
@@ -2361,12 +2069,10 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Work item field index</b></p>
 <p>For descriptions and usage of each field used by the core and inherited processes, see <a href="../boards/work-items/guidance/work-item-field.md" data-raw-source="[Work item field index](../boards/work-items/guidance/work-item-field.md)">Work item field index</a>.   </p>
 
-
 </td>
 <td width="33%">
 <p><b>Scrum process tools</b></p>
 <p>Scrum processes can be used with any process--Agile, Scrum, CMMI--or project that you select or create. Agile Scrum tools support <a href="../boards/sprints/assign-work-sprint.md" data-raw-source="[sprint planning](../boards/sprints/assign-work-sprint.md)">sprint planning</a>, <a href="../boards/sprints/set-capacity.md" data-raw-source="[capacity planning](../boards/sprints/set-capacity.md)">capacity planning</a>, <a href="../boards/sprints/task-board.md" data-raw-source="[task boards](../boards/sprints/task-board.md)">task boards</a>, and <a href="../boards/sprints/sprint-burndown.md" data-raw-source="[burndown charts](../boards/sprints/sprint-burndown.md)">burndown charts</a>.  </p>
-
 
 <p><b>Manage processes (Azure DevOps Services) </b></p>
 <p><a href="../organizations/security/permissions.md" data-raw-source="[Add users to built-in groups](../organizations/security/permissions.md)">Add users to built-in groups</a> to grant them access to your project. Optionally, create groups to customize access based on your business requirements.</p>
@@ -2375,10 +2081,8 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p>Choose <a href="../boards/work-items/guidance/cmmi-process.md" data-raw-source="[CMMI](../boards/work-items/guidance/cmmi-process.md)">CMMI</a> when your team follows more formal project methods that require a framework for process improvement and an auditable record of decisions. CMMI supports tracking requirements, change requests, risks, and reviews.</p>
 <img src="media/features/features-cmmi-wits.png" alt="CMMI work item types"/><br/><br/>
 
-
 <p><b>CMMI work items and workflow process guidance</b></p>
 <p>Plan and track your work using the <a href="../boards/work-items/guidance/cmmi-process-workflow.md" data-raw-source="[work item types and workflow supported by the CMMI process](../boards/work-items/guidance/cmmi-process-workflow.md)">work item types and workflow supported by the CMMI process</a>.  </p>
-
 
 </td>
 </tr>
@@ -2396,22 +2100,18 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <tr valign="top">
 <td width="33%">
 
-
 <p><b>What is a process template?</b></p>
 <p>A process template is the forerunner and on-premises version of a process. It provides the  building blocks of the work item tracking system as well as other sub-systems you access through your project. Process templates support full <a href="https://msdn.microsoft.com/library/ms243782.aspx" data-raw-source="[customization of all its objects](https://msdn.microsoft.com/library/ms243782.aspx)">customization of all its objects</a>. </p>
 
 <p><b>Manage process templates </b></p>
 <p><a href="../boards/work-items/guidance/manage-process-templates.md" data-raw-source="[Download and upload process templates](../boards/work-items/guidance/manage-process-templates.md)">Download and upload process templates</a> to support customization and upgrade of your work tracking experience and team projects. </p>
 
-
 </td>
-
 
 <td width="33%">
 
 <p><b>Process template files</b></p>
 <p>You customize the initial configuration of team projects by <a href="https://msdn.microsoft.com/library/ms243856.aspx" data-raw-source="[customizing one or more process template files](https://msdn.microsoft.com/library/ms243856.aspx)">customizing one or more process template files</a>. By customizing these files, you can define the initial configuration of all team projects that are created from the process template. </p>
-
 
 <p><b>Configure Features Wizard</b></p>
 <p>Use the Configure Features Wizard to <a href="../reference/configure-features-after-upgrade.md" data-raw-source="[configure team projects after a TFS upgrade to access new features](../reference/configure-features-after-upgrade.md)">configure team projects after a TFS upgrade to access new features</a>.  </p>
@@ -2422,11 +2122,8 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Changes made to process templates</b></p>
 <p>For a catalog of changes, see <a href="../boards/work-items/guidance/changes-to-process-templates.md" data-raw-source="[Changes made to process templates](../boards/work-items/guidance/changes-to-process-templates.md)">Changes made to process templates</a>.</p>
 
-
-
 <p><b>Customize the Microsoft Project field mapping file </b></p>
 <p>You can <a href="https://msdn.microsoft.com/library/ms404686.aspx" data-raw-source="[customize how work item fields that are defined in Team Foundation map to fields in Microsoft Project](https://msdn.microsoft.com/library/ms404686.aspx)">customize how work item fields that are defined in Team Foundation map to fields in Microsoft Project</a>. And, you can change how specific fields are published.  </p>
-
 
 </td>
 </tr>
@@ -2439,19 +2136,16 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 ### Team projects
 
-
 <table>
 <tbody>
 <tr valign="top">
 <td width="33%">
-
 
 <p><b>What is a project?</b></p>
 <p>A <a href="../organizations/projects/create-project.md" data-raw-source="[project](../organizations/projects/create-project.md)">project</a> provides a repository for source code and a place for a group of developers to plan, track progress, and collaborate on building software solutions. A project lives within a project collection. You can grant permissions to and customize a project to support your business needs. </p>
 
 <p><b>Create a project </b></p>
 <p>You can <a href="sign-up-invite-teammates.md" data-raw-source="[create a project hosted in the cloud (Azure DevOps Services)](sign-up-invite-teammates.md)">create a project hosted in the cloud (Azure DevOps Services)</a>, avoiding maintenance and administrative overhead, or <a href="../organizations/projects/create-project.md" data-raw-source="[create a project on an on-premises TFS](../organizations/projects/create-project.md)">create a project on an on-premises TFS</a>.</p>
-
 
 <p><b>Rename a project</b></p>
 <p><a href="../organizations/projects/rename-project.md" data-raw-source="[Rename a project](../organizations/projects/rename-project.md)">Rename a project</a> as needed to reflect changes that occur within your org.</p>
@@ -2470,7 +2164,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Change the process (Azure DevOps Services) </b></p>
 <p>You <a href="../organizations/settings/work/manage-process.md" data-raw-source="[change the process of a project](../organizations/settings/work/manage-process.md)">change the process of a project</a> to apply customizations you&#39;ve made to an inherited process. You can <a href="../organizations/settings/work/customize-process.md" data-raw-source="[add and modify fields and modify the layout of each work item type](../organizations/settings/work/customize-process.md)">add and modify fields and modify the layout of each work item type</a> defined for that process.  </p>
 
-
 </td>
 <td width="33%">
 
@@ -2483,7 +2176,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Update a project after an upgrade (TFS)</b></p>
 <p>Some features added when you upgrade your on-premises application server may require you to <a href="../reference/configure-features-after-upgrade.md" data-raw-source="[configure features to access them](../reference/configure-features-after-upgrade.md)">configure features to access them</a>. </p>
 
-
 <p><b>Upload reports (TFS) </b></p>
 <p><a href="../report/admin/upload-reports.md" data-raw-source="[Upload the latest reports provided for your process](../report/admin/upload-reports.md)">Upload the latest reports provided for your process</a> or add reports after you&#39;ve already created a project by adding SQL Server Reporting Services.  </p>
 </td>
@@ -2491,18 +2183,14 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 </tbody>
 </table>
 
-
-
 <a id="teams"></a>
 
 ### Teams
-
 
 <table>
 <tbody>
 <tr valign="top">
 <td width="33%">
-
 
 <p><b>What is a team?</b></p>
 <p>A team is an organizing unit used to support a number of <a href="../organizations/settings/manage-teams.md" data-raw-source="[team-configurable tools](../organizations/settings/manage-teams.md)">team-configurable tools</a> to plan and manage work and facilitate collaboration.  </p>
@@ -2511,14 +2199,11 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p>Add organizations-<a href="../organizations/accounts/add-team-members.md" data-raw-source="[Azure DevOps Services](../organizations/accounts/add-team-members.md)">Azure DevOps Services</a> | <a href="../organizations/security/add-users-team-project.md" data-raw-source="[TFS](../organizations/security/add-users-team-project.md)">TFS</a>--to a team to enable users to share code, plan and track work, and access other team assets and resources. </p>
 <img src="media/features/alm-feature-manage-members.png" alt="Manage users, add team members"/><br/><br/>
 
-
 <p><b>Add a team</b></p>
 <p>As your organization grows, consider moving from your <a href="../organizations/settings/add-teams.md" data-raw-source="[default team of one to two or more teams](../organizations/settings/add-teams.md)">default team of one to two or more teams</a> to support feature-focused groups within your org.</p>
 
-
 <p><b>Add a team admin</b></p>
 <p>Add users to the team admin role to enable them to <a href="../organizations/settings/add-team-administrator.md" data-raw-source="[Manage teams and configure team tools](../organizations/settings/add-team-administrator.md)">Manage teams and configure team tools</a>. Team settings can only be configured by a team or project admin. </p>
-
 
 <p><b>Support Stakeholders</b></p>
 <p>Members within your org who don&#39;t have a license or contribute to developing the code base <a href="../organizations/security/get-started-stakeholder.md" data-raw-source="[can track project priorities and provide direction, feature ideas, and business alignment to a team](../organizations/security/get-started-stakeholder.md)">can track project priorities and provide direction, feature ideas, and business alignment to a team</a>.  </p>
@@ -2531,9 +2216,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 <p><b>Team welcome page</b></p>
 <p>Provide in-project guidance through the <a href="../project/wiki/markdown-guidance.md" data-raw-source="[Welcome page and other pages you format using Markdown](../project/wiki/markdown-guidance.md)">Welcome page and other pages you format using Markdown</a>.  </p>
-
-
-
 
 <p><b>Setup a team hierarchy</b></p>
 <p>By <a href="../boards/plans/portfolio-management.md" data-raw-source="[configuring your teams and backlogs into an hierarchical structure](../boards/plans/portfolio-management.md)">configuring your teams and backlogs into an hierarchical structure</a>, program owners can more easily track progress across teams, manage portfolios, and generate rollup data. </p>
@@ -2550,16 +2232,11 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Configure team settings</b></p>
 <p>Configure, customize, and manage all <a href="../organizations/settings/manage-teams.md" data-raw-source="[team-related activities](../organizations/settings/manage-teams.md)">team-related activities</a></p>
 
-
-
-
 <p><b>Team alerts</b></p>
 <p>As changes occur to work items, code reviews, source control files, and builds, your team can automatically <a href="../notifications/manage-your-personal-notifications.md" data-raw-source="[receive email notifications for alerts](../notifications/manage-your-personal-notifications.md)">receive email notifications for alerts</a> that you define.  </p>
 
-
 <p><b>Team rooms</b></p>
 <p>Team rooms, like chat rooms, provide teams with a <a href="../notifications/collaborate-in-a-team-room.md" data-raw-source="[space to discuss work in progress, ask questions, share status, and clarify issues](../notifications/collaborate-in-a-team-room.md)">space to discuss work in progress, ask questions, share status, and clarify issues</a> that arise. Use team rooms to foster and capture communication among team members, both near and far.</p>
-
 
 <p><b>Team groups</b></p>
 <p>A <a href="../organizations/settings/about-teams-and-settings.md#team-group" data-raw-source="[team group is created](../organizations/settings/about-teams-and-settings.md#team-group)">team group is created</a> when you create a team. Use this group in queries or to set permissions for your team.  </p>
@@ -2568,29 +2245,21 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 </tbody>
 </table>
 
-
-
-
 <a id="traceability"></a>
 
-
 ## Traceability
-
 
 <table>
 <tbody>
 <tr valign="top">
 <td width="50%">
 
-
 <p><b>Work item history &amp; auditing</b></p>
 <p>Review and query <a href="../boards/queries/history-and-auditing.md" data-raw-source="[work item change history](../boards/queries/history-and-auditing.md)">work item change history</a> to learn of past decisions and support future ones. </p>
-
 
 <p><b>Manage risks and dependencies</b></p>
 <p>Link work items to <a href="../boards/queries/link-work-items-support-traceability.md" data-raw-source="[track related work, dependencies, and changes made over time](../boards/queries/link-work-items-support-traceability.md)">track related work, dependencies, and changes made over time</a>. <a href="../boards/queries/using-queries.md" data-raw-source="[Create queries](../boards/queries/using-queries.md)">Create queries</a> based on link type to monitor dependencies.</p>
 <img src="media/features/features-wit-link-tab.png" alt="Links control"/><br/><br/>
-
 
 <p><b>Rich text comments</b></p>
 <p>Describe and comment on work to perform using <a href="../boards/backlogs/add-work-items.md" data-raw-source="[formatted text, hyperlinks, and inline images](../boards/backlogs/add-work-items.md)">formatted text, hyperlinks, and inline images</a>.  </p>
@@ -2598,7 +2267,6 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p><b>Discussion (Azure DevOps Services) </b></p>
 <p><a href="../boards/backlogs/add-work-items.md" data-raw-source="[Add or review comments](../boards/backlogs/add-work-items.md)">Add or review comments</a> added to a work item. Start by choosing the <img src="../boards/backlogs/media/icon-discussions-wi.png" alt="Discussions icon"/> discussion icon.  </p>
 <img src="media/features/alm-feature-add-work-items-discussion.png" alt="Discussion section"/><br/><br/>
-
 
 <p><b>Storyboard</b></p>
 <p><a href="../boards/backlogs/office/storyboard-your-ideas-using-powerpoint.md" data-raw-source="[Link your storyboards to you backlog work items](../boards/backlogs/office/storyboard-your-ideas-using-powerpoint.md)">Link your storyboards to you backlog work items</a>.  </p>
@@ -2630,22 +2298,21 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 </tbody>
 </table>
 
-
-
 ## Related articles
 
 We add new features frequently. We'll work to keep this list up-to-date. Other resources you might want to bookmark:
+
 - [Azure DevOps Services - Features update](https://aka.ms/azuredevops/releasenotes)
-- [Azure DevOps Blog](https://devblogs.microsoft.com/devops/)  
+- [Azure DevOps Blog](https://devblogs.microsoft.com/devops/)
 
 <br/>
-Get started today using our cloud offering, <a href="https://visualstudio.microsoft.com/team-services/" data-raw-source="[Azure DevOps Services](https://visualstudio.microsoft.com/team-services/)">Azure DevOps Services</a>, or our <a href="https://visualstudio.microsoft.com/downloads/" data-raw-source="[on-premises TFS server](https://visualstudio.microsoft.com/downloads/)">on-premises TFS server</a>.  
+Get started today using our cloud offering, <a href="https://visualstudio.microsoft.com/team-services/" data-raw-source="[Azure DevOps Services](https://visualstudio.microsoft.com/team-services/)">Azure DevOps Services</a>, or our <a href="https://visualstudio.microsoft.com/downloads/" data-raw-source="[on-premises TFS server](https://visualstudio.microsoft.com/downloads/)">on-premises TFS server</a>.
 
-<!---   
+<!---
 ### We welcome your feedback
 
 Send suggestions on **[UserVoice](https://developercommunity.visualstudio.com/content/idea/post.html?space=21)**, and follow us on **[Twitter](https://twitter.com/AzureDevOps) @AzureDevOps**.
 
 See also our [comprehensive feedback and support page](provide-feedback.md).
 
---> 
+-->

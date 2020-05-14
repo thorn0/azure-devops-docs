@@ -14,12 +14,10 @@ ms.date: 08/25/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `changeId`: number. 
+- `changeId`: number.
 
-* `id`: string. 
+- `id`: string.
 
-* `location`: string. 
-
+- `location`: string.

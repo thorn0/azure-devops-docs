@@ -16,6 +16,6 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `LatestOnQueue` Use the latest changeset at the time the build is queued.
-* `LatestOnBuild` Use the latest changeset at the time the build is started.
-* `Custom` A user-specified version has been supplied.
+- `LatestOnQueue` Use the latest changeset at the time the build is queued.
+- `LatestOnBuild` Use the latest changeset at the time the build is started.
+- `Custom` A user-specified version has been supplied.

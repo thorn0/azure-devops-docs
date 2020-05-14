@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `lastError`: string. 
+- `lastError`: string.
 
-* `modules`: [ModuleCoverage](../../../TFS/TestManagement/Contracts/ModuleCoverage.md)[]. 
+- `modules`: [ModuleCoverage](../../../TFS/TestManagement/Contracts/ModuleCoverage.md)[].
 
-* `state`: string. 
+- `state`: string.
 
-* `testRun`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
-
+- `testRun`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).

@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `VSS/Common/Contracts/FormInput`
 
-
 ### Members
 
-* `data`: {[key: string]: any}. Any other data about this input
+- `data`: {[key: string]: any}. Any other data about this input
 
-* `displayValue`: string. The text to show for the display of this value
+- `displayValue`: string. The text to show for the display of this value
 
-* `value`: string. The value to store for this input
-
+- `value`: string. The value to store for this input

@@ -36,7 +36,7 @@ Also in the [last deployment](../2013/sep-09-team-services.md), we enabled the g
 
 ![More fields in the grid view](media/9_30_02.png)
 
-Note: The grid view will only show test case work item fields - it will not show fields such as Outcome, Assigned 
+Note: The grid view will only show test case work item fields - it will not show fields such as Outcome, Assigned
 
 Tester, Configurations etc., which are associated with running tests.
 

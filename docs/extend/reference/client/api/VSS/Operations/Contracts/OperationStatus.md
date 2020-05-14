@@ -15,15 +15,14 @@ Module path: `VSS/Operations/Contracts`
 
 ### Values
 
-* `NotSet` The operation object doesn't have the status set.
+- `NotSet` The operation object doesn't have the status set.
 
-* `Queued` The operation has been queued.
+- `Queued` The operation has been queued.
 
-* `InProgress` The operation is in progress.
+- `InProgress` The operation is in progress.
 
-* `Cancelled` The operation was cancelled by the user.
+- `Cancelled` The operation was cancelled by the user.
 
-* `Succeeded` The operation completed successfully.
+- `Succeeded` The operation completed successfully.
 
-* `Failed` The operation completed with a failure.
-
+- `Failed` The operation completed with a failure.

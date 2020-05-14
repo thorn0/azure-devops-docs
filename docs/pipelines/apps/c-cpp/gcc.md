@@ -5,7 +5,7 @@ description: Learn how you can use continuous integration in Azure Pipelines or 
 ms.assetid: 73a50551-0c2c-4d62-b582-6ba7ba51509e
 ms.date: 04/18/2018
 ms.topic: quickstart
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Build your GCC C/C++ app
@@ -20,9 +20,9 @@ Azure Pipelines and Team Foundation Server (TFS) provide a highly customizable c
 
 ## Prerequisites
 
-* You need an Azure DevOps organization. If you don't have one, you can [create one for free](https://go.microsoft.com/fwlink/?LinkId=307137). If your team already has one, then make sure you're an administrator of the Azure DevOps project that you want to use.  (An Azure DevOps organization is different from your GitHub organization. Give them the same name if you want alignment between them.)
+- You need an Azure DevOps organization. If you don't have one, you can [create one for free](https://go.microsoft.com/fwlink/?LinkId=307137). If your team already has one, then make sure you're an administrator of the Azure DevOps project that you want to use. (An Azure DevOps organization is different from your GitHub organization. Give them the same name if you want alignment between them.)
 
-* While the simplest way to try this quickstart is to use an Azure DevOps organization, you can also use a TFS server instead of an Azure DevOps organization. Make sure that you have [configured a build agent](../../agents/agents.md) for your project, and that you have GCC installed on the agent machine.
+- While the simplest way to try this quickstart is to use an Azure DevOps organization, you can also use a TFS server instead of an Azure DevOps organization. Make sure that you have [configured a build agent](../../agents/agents.md) for your project, and that you have GCC installed on the agent machine.
 
 ## Get sample app code
 
@@ -46,7 +46,7 @@ https://github.com/adventworks/cpp-gpp-sample
 
 [!INCLUDE [include](../../includes/ci-quickstart-intro.md)]
 
-[//]: # (TODO: Restore use of includes when we get support for using them in a list.)
+[//]: # "TODO: Restore use of includes when we get support for using them in a list."
 
 1. Create a new build pipeline.
 
@@ -62,15 +62,15 @@ https://github.com/adventworks/cpp-gpp-sample
 
    Navigate to the **Builds** tab in Azure Pipelines or TFS, and then click **+ New**. You are asked to **Select a template** for the new build pipeline.
 
-   ---
+   ***
 
 2. In the right panel, select **Empty**, and then click **Apply**. This template allows starting from scratch and adding your own build tasks.
 
 3. For the **Agent pool**:
 
-   * **Azure Pipelines:** Select _Hosted Ubuntu 1604_ or _Hosted macOS_. This uses an Azure Pipelines pool of agents that have the software needed to build your app.
+   - **Azure Pipelines:** Select _Hosted Ubuntu 1604_ or _Hosted macOS_. This uses an Azure Pipelines pool of agents that have the software needed to build your app.
 
-   * **TFS:** Select a pool that includes a [Linux or macOS build agent](../../agents/agents.md).
+   - **TFS:** Select a pool that includes a [Linux or macOS build agent](../../agents/agents.md).
 
 4. Click **Get sources** and then:
 
@@ -86,36 +86,36 @@ https://github.com/adventworks/cpp-gpp-sample
 
 ::: moniker range=">= tfs-2018"
 
-  ### Azure Pipelines and TFS 2018
+### Azure Pipelines and TFS 2018
 
-  1. Search for the **Shell Script** task and click **Add** to add it to your build.
+1. Search for the **Shell Script** task and click **Add** to add it to your build.
 
-  1. Click the **Shell Script** task and set its field values as follows:
+1. Click the **Shell Script** task and set its field values as follows:
 
-      Field   | Value
-      ------- | -----
-      Version | `3.*` or later
-      Type    | `Inline`
-      Script  | `make`
+   | Field   | Value          |
+   | ------- | -------------- |
+   | Version | `3.*` or later |
+   | Type    | `Inline`       |
+   | Script  | `make`         |
 
 ::: moniker-end
 
 ::: moniker range="tfs-2017"
 
-  ### TFS 2017.2
+### TFS 2017.2
 
-  1. Search for the **Command Line** task and click **Add** to add it to your build.
+1. Search for the **Command Line** task and click **Add** to add it to your build.
 
-  1. Click the **Command Line** task and set its field values as follows:
+1. Click the **Command Line** task and set its field values as follows:
 
-      Field        | Value
-      ------------ | -----
-      Display name | `Build C++ application`
-      Tool         | `make`
+   | Field        | Value                   |
+   | ------------ | ----------------------- |
+   | Display name | `Build C++ application` |
+   | Tool         | `make`                  |
 
 ::: moniker-end
 
-  ### Finish
+### Finish
 
 1. Click the **Triggers** tab and enable the **Continuous Integration** trigger. This will ensure that the build pipeline is automatically triggered every time you commit a change to your repository.
 
@@ -123,8 +123,8 @@ https://github.com/adventworks/cpp-gpp-sample
 
 1. A new build is started. You'll see a link to the new build on the top of the page. Click the link to watch the new build as it happens.
 
-[//]: # (TODO:> [!TIP])
-[//]: # (TODO:> To learn more about GitHub CI builds, see [Define CI build pipeline for your Git repo](#)
+[//]: # "TODO:> [!TIP]"
+[//]: # "TODO:> To learn more about GitHub CI builds, see [Define CI build pipeline for your Git repo](#"
 
 ## View the build summary
 

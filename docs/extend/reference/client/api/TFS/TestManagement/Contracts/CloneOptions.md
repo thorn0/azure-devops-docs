@@ -14,18 +14,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `cloneRequirements`: boolean. If set to true requirements are cloned
+- `cloneRequirements`: boolean. If set to true requirements are cloned
 
-* `copyAllSuites`: boolean. copy all suites from a source plan
+- `copyAllSuites`: boolean. copy all suites from a source plan
 
-* `copyAncestorHierarchy`: boolean. copy ancestor hierarchy
+- `copyAncestorHierarchy`: boolean. copy ancestor hierarchy
 
-* `destinationWorkItemType`: string. Name of the workitem type of the clone
+- `destinationWorkItemType`: string. Name of the workitem type of the clone
 
-* `overrideParameters`: {[key: string]: string}. Key value pairs where the key value is overridden by the value
+- `overrideParameters`: {[key: string]: string}. Key value pairs where the key value is overridden by the value
 
-* `relatedLinkComment`: string. Comment on the link that links the new clone test case to the original Set null for no comment
-
+- `relatedLinkComment`: string. Comment on the link that links the new clone test case to the original Set null for no comment

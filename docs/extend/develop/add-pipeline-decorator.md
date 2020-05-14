@@ -7,7 +7,7 @@ ms.assetid: 3347cdf7-07db-42af-85f0-6f1d8d371087
 ms.author: macoope
 author: vtbassmatt
 ms.date: 02/28/2019
-monikerRange: '> azure-devops-2019'
+monikerRange: "> azure-devops-2019"
 ---
 
 # Use a decorator to inject steps into a pipeline
@@ -25,44 +25,43 @@ Our pipeline decorator injects a custom task that does virus scanning at the end
 
 This example assumes you're familiar with the [contribution models](contributions-overview.md).
 
-Start by [creating an extension](add-build-task.md#extensionmanifest). 
+Start by [creating an extension](add-build-task.md#extensionmanifest).
 After you follow the tutorial, you'll have a `vss-extension.json` file.
 In this file, add contribution for our new pipeline decorator.
 
 #### vss-extension.json
+
 ```json
 {
-    "manifestVersion": 1,
-    "contributions": [
-        {
-            "id": "my-required-task",
-            "type": "ms.azure-pipelines.pipeline-decorator",
-            "targets": [
-                "ms.azure-pipelines-agent-job.post-job-tasks"
-            ],
-            "properties": {
-                "template": "my-decorator.yml"
-            }
-        }
-    ],
-    "files": [
-        {
-            "path": "my-decorator.yml",
-            "addressable": true,
-            "contentType": "text/plain"
-        }
-    ]
+  "manifestVersion": 1,
+  "contributions": [
+    {
+      "id": "my-required-task",
+      "type": "ms.azure-pipelines.pipeline-decorator",
+      "targets": ["ms.azure-pipelines-agent-job.post-job-tasks"],
+      "properties": {
+        "template": "my-decorator.yml"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "my-decorator.yml",
+      "addressable": true,
+      "contentType": "text/plain"
+    }
+  ]
 }
 ```
 
 Let's take a look at the properties and what they're used for:
 
-| Property | Description |
-| ------------- |:-------------|
-| `id` | Contribution identifier. Must be unique among contributions in this extension. |
-| `type` | Specifies that this contribution is a pipeline decorator. Must be the string `ms.azure-pipelines.pipeline-decorator`. |
-| `targets` | Decorators can run before your job, after, or both. For executing the decorator before or after jobs in build or yaml pipelines, the targets are `ms.azure-pipelines-agent-job.pre-job-tasks` and `ms.azure-pipelines-agent-job.post-job-tasks`. `ms.azure-release-pipelines-agent-job.pre-job-tasks` and `ms.azure-release-pipelines-agent-job.post-job-tasks` targets inject the decorators in jobs in release pipelines. In this example, we use `ms.azure-pipelines-agent-job.post-job-tasks` only because we want to run at the end of all build jobs. |
-| `properties` | The only property required is a `template`. The template is a YAML file included in your extension, which defines the steps for your pipeline decorator. It's a relative path from the root of your extension folder. |
+| Property     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`         | Contribution identifier. Must be unique among contributions in this extension.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `type`       | Specifies that this contribution is a pipeline decorator. Must be the string `ms.azure-pipelines.pipeline-decorator`.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `targets`    | Decorators can run before your job, after, or both. For executing the decorator before or after jobs in build or yaml pipelines, the targets are `ms.azure-pipelines-agent-job.pre-job-tasks` and `ms.azure-pipelines-agent-job.post-job-tasks`. `ms.azure-release-pipelines-agent-job.pre-job-tasks` and `ms.azure-release-pipelines-agent-job.post-job-tasks` targets inject the decorators in jobs in release pipelines. In this example, we use `ms.azure-pipelines-agent-job.post-job-tasks` only because we want to run at the end of all build jobs. |
+| `properties` | The only property required is a `template`. The template is a YAML file included in your extension, which defines the steps for your pipeline decorator. It's a relative path from the root of your extension folder.                                                                                                                                                                                                                                                                                                                                       |
 
 This extension contributes a pipeline decorator.
 Next, we'll create a template YAML file to define the decorator's behavior.
@@ -75,13 +74,15 @@ It holds the set of steps to run after each job.
 We'll start with a basic example and work up to the full task.
 
 #### my-decorator.yml (initial version)
-------
+
+---
+
 ```yaml
 steps:
-- task: CmdLine@2
-  displayName: 'Run my script (injected from decorator)'
-  inputs:
-    script: dir
+  - task: CmdLine@2
+    displayName: "Run my script (injected from decorator)"
+    inputs:
+      script: dir
 ```
 
 ## Installing the decorator
@@ -104,7 +105,7 @@ A pipeline run looks similar to:
 
 ![Pipeline decorator running a simple script](media/mydecorator-runmyscript.png)
 
-> [!NOTE] 
+> [!NOTE]
 > The decorator runs on every job in every pipeline in the organization.
 > In later steps, we'll add logic to control when and how the decorator runs.
 
@@ -117,12 +118,14 @@ We should limit the decorator to jobs running against the default branch.
 The updated file looks like this:
 
 #### my-decorator.yml (revised version)
-------
+
+---
+
 ```yaml
 steps:
-- ${{ if eq(resources.repositories['self'].ref, resources.repositories['self'].defaultBranch) }}:
-  - script: dir
-    displayName: 'Run my script (injected from decorator)'
+  - ? ${{ if eq(resources.repositories['self'].ref, resources.repositories['self'].defaultBranch) }}
+    : - script: dir
+        displayName: "Run my script (injected from decorator)"
 ```
 
 You can start to see the power of this extensibility point.
@@ -139,12 +142,14 @@ The script task's ID is `d9bafed4-0b18-4f58-968d-86655b4d2ce9`.
 If we see another script task, we shouldn't inject ours.
 
 #### my-decorator.yml (final version)
-------
+
+---
+
 ```yaml
 steps:
-- ${{ if and(eq(resources.repositories['self'].ref, resources.repositories['self'].defaultBranch), not(containsValue(job.steps.*.task.id, 'd9bafed4-0b18-4f58-968d-86655b4d2ce9'))) }}:
-  - script: dir
-    displayName: 'Run my script (injected from decorator)'
+  - ? ${{ if and(eq(resources.repositories['self'].ref, resources.repositories['self'].defaultBranch), not(containsValue(job.steps.*.task.id, 'd9bafed4-0b18-4f58-968d-86655b4d2ce9'))) }}
+    : - script: dir
+        displayName: "Run my script (injected from decorator)"
 ```
 
 <!--## Limitations
@@ -161,6 +166,7 @@ For now, you can't specify endpoints like SonarQube with pipeline decorators.
 
 Pipeline decorators currently work with Azure Dev Ops Git and GitHub. They do not work for other source control providers.
 -->
+
 ## Debugging
 
 While authoring your pipeline decorator, you'll likely need to debug.

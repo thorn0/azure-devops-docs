@@ -7,7 +7,7 @@ ms.custom: seodec18
 ms.author: vijayma
 author: vijayma
 ms.date: 04/21/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Node.js Tool Installer task
@@ -32,10 +32,10 @@ None
 
 ## Arguments
 
-| Argument | Description |
-|----------|-------------|
-|`versionSpec`<br/> Version Spec | (Required) Specify which [Node.js version](https://nodejs.org/en/download/releases/) you want to use. <br/>**Examples**: `7.x`, `6.x`, `6.10.0`, `>=6.10.0` <br/>Default value: `6.x`|
-|`checkLatest`<br/> Check for Latest Version | (Optional) Select if you want the agent to check for the latest available version that satisfies the version spec. For example, you select this option because you run this build on your [self-hosted agent](../../agents/agents.md#install) and you want to always use the latest `6.x` version.|
+| Argument                                    | Description                                                                                                                                                                                                                                                                                        |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `versionSpec`<br/> Version Spec             | (Required) Specify which [Node.js version](https://nodejs.org/en/download/releases/) you want to use. <br/>**Examples**: `7.x`, `6.x`, `6.10.0`, `>=6.10.0` <br/>Default value: `6.x`                                                                                                              |
+| `checkLatest`<br/> Check for Latest Version | (Optional) Select if you want the agent to check for the latest available version that satisfies the version spec. For example, you select this option because you run this build on your [self-hosted agent](../../agents/agents.md#install) and you want to always use the latest `6.x` version. |
 
 > [!TIP]
 > If you're using [the Microsoft-hosted agents](../../agents/hosted.md), you should leave this check box cleared. We update the Microsoft-hosted agents on a regular basis, but they're often slightly behind the latest version. So selecting this box will result in your build spending a lot of time updating to a newer minor version.
@@ -45,6 +45,7 @@ None
 This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
+
 <!-- BEGINSECTION class="md-qanda" -->
 
 ### Where can I learn more about tool installers?

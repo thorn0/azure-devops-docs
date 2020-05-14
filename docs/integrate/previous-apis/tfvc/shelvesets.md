@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: TFVC Shelvesets | REST API Reference for Team Foundation Server
 description: Work with TFVC shelvesets programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 01032D9F-ECAA-401A-8ECA-C857073876B9
@@ -24,16 +24,18 @@ ms.date: 08/04/2016
 GET https://{instance}/DefaultCollection/_apis/tfvc/shelvesets?api-version={version}[&owner={string}&maxContentLength={int}&$top={int}&$skip={int}]
 ```
 
-| Parameter        | Type   | Default | Notes
-|:-----------------|:-------|:--------|---------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | ----- |
+
+
 | URL
-| instance         | string |         | TFS server name ({server:port}).
+| instance | string | | TFS server name ({server:port}).
 | Query
-| api-version      | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| owner            | string |         | Display name, unique name, or ID of person who created the shelveset.
-| maxCommentLength | int    | 80      | Return only this many characters of each comment.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| owner | string | | Display name, unique name, or ID of person who created the shelveset.
+| maxCommentLength | int | 80 | Return only this many characters of each comment.
 | $top             | int    | 100     | Maximum number of shelvesets to return.
-| $skip            | int    | 0       | Number of shelvesets to skip.
+| $skip | int | 0 | Number of shelvesets to skip.
 
 #### Sample request
 
@@ -104,8 +106,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/shelvesets?api-version=1.0-
 }
 ```
 
-
 ### By person
+
 #### Sample request
 
 ```
@@ -162,8 +164,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/shelvesets?owner=Normal Pau
 }
 ```
 
-
 ### With more or less comments
+
 #### Sample request
 
 ```
@@ -234,8 +236,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/shelvesets?maxCommentLength
 }
 ```
 
-
 ### A page at a time
+
 #### Sample request
 
 ```
@@ -278,26 +280,26 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/shelvesets?$top=2&$skip=2&a
 }
 ```
 
-
-
 ## Get a shelveset
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/tfvc/shelvesets/{shelveset};{owner}?api-version={version}
 ```
 
-| Parameter        | Type   | Default | Notes
-|:-----------------|:-------|:--------|---------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | ----- |
+
+
 | URL
-| instance         | string |         | TFS server name ({server:port}).
-| shelveset        | string |         | Name of shelveset.
-| owner            | string |         | Display name, unique name, or ID of person who created the shelveset.
+| instance | string | | TFS server name ({server:port}).
+| shelveset | string | | Name of shelveset.
+| owner | string | | Display name, unique name, or ID of person who created the shelveset.
 | Query
-| api-version      | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| includeDetails   | bool   | false   | Return policy overrides and notes.
-| includeWorkItems | bool   | false   | Return work items.
-| maxChangeCount   | int    | 0       | Maximum number of changes to return. 
-| maxCommentLength | int    | 2000    | Maximum number of characters in the comment to return.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| includeDetails | bool | false | Return policy overrides and notes.
+| includeWorkItems | bool | false | Return work items.
+| maxChangeCount | int | 0 | Maximum number of changes to return.
+| maxCommentLength | int | 2000 | Maximum number of characters in the comment to return.
 
 #### Sample request
 
@@ -338,8 +340,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/shelvesets/My%20first%20she
 }
 ```
 
-
 ### With policy overrides and notes
+
 #### Sample request
 
 ```
@@ -383,8 +385,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/shelvesets/My%20first%20she
 }
 ```
 
-
 ### With work items
+
 #### Sample request
 
 ```
@@ -433,8 +435,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/shelvesets/My%20first%20she
 }
 ```
 
-
 ### With changes
+
 #### Sample request
 
 ```
@@ -507,8 +509,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/shelvesets/My%20first%20she
 }
 ```
 
-
 ### With more or less comments
+
 #### Sample request
 
 ```
@@ -549,24 +551,26 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/shelvesets/My%20first%20she
 }
 ```
 
-
 ## Get shelveset changes
+
 Retrieves a list of changes included in a shelveset. Paging is supported using $top and $skip.
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/tfvc/shelvesets/{shelveset};{owner}/changes?api-version={version}
 ```
 
-| Parameter        | Type   | Default | Notes
-|:-----------------|:-------|:--------|---------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | ----- |
+
+
 | URL
-| instance         | string |         | TFS server name ({server:port}).
-| shelveset        | string |         | Name of shelveset.
-| owner            | string |         | Display name, unique name, or ID of person who created the shelveset.
+| instance | string | | TFS server name ({server:port}).
+| shelveset | string | | Name of shelveset.
+| owner | string | | Display name, unique name, or ID of person who created the shelveset.
 | Query
-| api-version      | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | $top             | int    | 100     | Maximum number of shelvesets to return.
-| $skip            | int    | 0       | Number of shelvesets to skip.
+| $skip | int | 0 | Number of shelvesets to skip.
 
 #### Sample request
 
@@ -615,8 +619,8 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/shelvesets/My%20first%20she
 }
 ```
 
-
 ### A page at a time
+
 #### Sample request
 
 ```
@@ -648,23 +652,24 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/shelvesets/My%20first%20she
 }
 ```
 
-
 ## Get shelveset work items
 
-Retrieves the work items associated with the shelveset. 
+Retrieves the work items associated with the shelveset.
 
 ```no-highlight
 GET https://{instance}/DefaultCollection/_apis/tfvc/shelvesets/{shelveset};{owner}/workitems?api-version={version}
 ```
 
-| Parameter        | Type   | Default | Notes
-|:-----------------|:-------|:--------|---------------------------------
+| Parameter | Type | Default | Notes |
+| :-------- | :--- | :------ | ----- |
+
+
 | URL
-| instance         | string |         | TFS server name ({server:port}).
-| shelveset        | string |         | Name of shelveset.
-| owner            | string |         | Display name, unique name, or ID of person who created the shelveset.
+| instance | string | | TFS server name ({server:port}).
+| shelveset | string | | Name of shelveset.
+| owner | string | | Display name, unique name, or ID of person who created the shelveset.
 | Query
-| api-version      | string |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -688,4 +693,3 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/shelvesets/My%20first%20she
   ]
 }
 ```
-

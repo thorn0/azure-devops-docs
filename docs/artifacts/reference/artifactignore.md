@@ -8,7 +8,7 @@ ms.manager: hdixon
 ms.author: wismyth
 author: willsmythe
 ms.date: 05/04/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Use the .artifactignore file

@@ -54,9 +54,7 @@ Set permissions across all Git repositories by making changes to the top-level *
 </tbody>
 </table>
 
-
 ::: moniker-end
-
 
 ::: moniker range="tfs-2015"
 

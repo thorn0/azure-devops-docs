@@ -18,7 +18,7 @@ Each machine interacts with Azure Pipelines to coordinate deployment of your app
 
    ![Azure portal cloud shell button](../media/cloud-shell-menu-image.png)
 
-1. Initiate the session by typing the following command, substituting the IP address of your VM:   
+1. Initiate the session by typing the following command, substituting the IP address of your VM:
 
    `ssh <publicIpAddress>`
 
@@ -49,7 +49,7 @@ Each machine interacts with Azure Pipelines to coordinate deployment of your app
 
 1. When you're prompted to configure tags for the agent, press _Enter_ (you don't need any tags).
 
-1. Wait for the script to finish and display the message *Started Azure Pipelines Agent*.
+1. Wait for the script to finish and display the message _Started Azure Pipelines Agent_.
    Type "q" to exit the file editor and return to the shell prompt.
 
 1. Back in Azure Pipelines or TFS, on the **Deployment groups** page, open the **myNginx** deployment group.

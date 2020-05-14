@@ -7,9 +7,9 @@ ms.date: 12/02/2019
 description: In the **Sprint 160 Update** of Azure DevOps, we added a new sprint burndown widget that supports burning down by story points, count of tasks and by summing custom fields.
 ---
 
-#  New sprint burndown widget and improved pipelines security - Sprint 160 Update
+# New sprint burndown widget and improved pipelines security - Sprint 160 Update
 
-In the **Sprint 160 Update** of Azure DevOps, we added a new sprint burndown widget that supports burning down by story points, count of tasks and by summing custom fields. In addition, we improved pipelines security by restricting the scope of access tokens. 
+In the **Sprint 160 Update** of Azure DevOps, we added a new sprint burndown widget that supports burning down by story points, count of tasks and by summing custom fields. In addition, we improved pipelines security by restricting the scope of access tokens.
 
 Check out the [Features](#features) list below for more.
 
@@ -66,15 +66,13 @@ Check out the [Features](#features) list below for more.
 
 Head over to Azure DevOps and take a look.
 
-> [!div class="nextstepaction"]
-> [Go to Azure DevOps](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
+> [!div class="nextstepaction"][go to azure devops](https://go.microsoft.com/fwlink/?LinkId=307137&campaign=o~msft~docs~product-vsts~release-notes)
 
 ## Feedback
 
 We would love to hear what you think about these features. Use the help menu to report a problem or provide a suggestion.
 
-> [!div class="mx-imgBorder"]
-> ![Make a suggestion](../media/make-a-suggestion.png)
+> [!div class="mx-imgBorder"] > ![Make a suggestion](../media/make-a-suggestion.png)
 
 You can also get advice and your questions answered by the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-devops).
 

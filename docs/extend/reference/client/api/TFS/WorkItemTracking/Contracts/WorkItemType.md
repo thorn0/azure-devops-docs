@@ -17,11 +17,10 @@ Extends: [WorkItemTrackingResource](../../../TFS/WorkItemTracking/Contracts/Work
 
 ### Members
 
-* `description`: string. 
+- `description`: string.
 
-* `fields`: [WorkItemTypeFieldInstance](../../../TFS/WorkItemTracking/Contracts/WorkItemTypeFieldInstance.md)[]. 
+- `fields`: [WorkItemTypeFieldInstance](../../../TFS/WorkItemTracking/Contracts/WorkItemTypeFieldInstance.md)[].
 
-* `name`: string. 
+- `name`: string.
 
-* `xmlForm`: string. 
-
+- `xmlForm`: string.

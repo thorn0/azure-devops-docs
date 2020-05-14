@@ -15,7 +15,7 @@ If you're running an agent in a secure network behind a firewall, make sure the 
 
 ```
 https://login.microsoftonline.com
-https://app.vssps.visualstudio.com 
+https://app.vssps.visualstudio.com
 https://{organization_name}.visualstudio.com
 https://{organization_name}.vsrm.visualstudio.com
 https://{organization_name}.vstmr.visualstudio.com
@@ -36,14 +36,14 @@ To ensure your organization works with any existing firewall or IP restrictions,
 
 **IPv4 ranges**
 
-* `13.107.6.0/24`
-* `13.107.9.0/24`
-* `13.107.42.0/24`
-* `13.107.43.0/24`
+- `13.107.6.0/24`
+- `13.107.9.0/24`
+- `13.107.42.0/24`
+- `13.107.43.0/24`
 
 **IPv6 ranges**
 
-* `2620:1ec:4::/48`
-* `2620:1ec:a92::/48`
-* `2620:1ec:21::/48`
-* `2620:1ec:22::/48`
+- `2620:1ec:4::/48`
+- `2620:1ec:a92::/48`
+- `2620:1ec:21::/48`
+- `2620:1ec:22::/48`

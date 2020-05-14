@@ -7,55 +7,55 @@ ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
 ms.date: 02/21/2019
-monikerRange: '> tfs-2018'
+monikerRange: "> tfs-2018"
 ---
 
 # File Transform task
 
-Use this task to apply file transformations and variable substitutions on configuration and parameters files. 
+Use this task to apply file transformations and variable substitutions on configuration and parameters files.
 For details of how translations are processed, see [File transforms and variable substitution reference](../transforms-variable-substitution.md).
 
 **File transformations**
 
-* At present file transformations are supported for only XML files.
+- At present file transformations are supported for only XML files.
 
-* To apply XML transformation to configuration files (*.config) you must specify a newline-separated list of transformation file rules using the syntax:
+- To apply XML transformation to configuration files (\*.config) you must specify a newline-separated list of transformation file rules using the syntax:
 
-  `-transform <path to the transform file> -xml <path to the source file> -result <path to the result file>` 
+  `-transform <path to the transform file> -xml <path to the source file> -result <path to the result file>`
 
-* File transformations are useful in many scenarios, particularly when you are deploying to an App service and want to add,
+- File transformations are useful in many scenarios, particularly when you are deploying to an App service and want to add,
   remove or modify configurations for different environments (such as Dev, Test, or Prod) by following the standard
   [Web.config Transformation Syntax](https://docs.microsoft.com/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/web-config-transformations).
 
-* You can also use this functionality to transform other files, including Console or Windows service application configuration files
+- You can also use this functionality to transform other files, including Console or Windows service application configuration files
   (for example, FabrikamService.exe.config).
 
-* Config file transformations are run before variable substitutions. 
+- Config file transformations are run before variable substitutions.
 
 **Variable substitution**
 
-* At present only XML and JSON file formats are supported for variable substitution.
+- At present only XML and JSON file formats are supported for variable substitution.
 
-* Tokens defined in the target configuration files are updated and then replaced with variable values. 
+- Tokens defined in the target configuration files are updated and then replaced with variable values.
 
-* Variable substitutions are run after config file transformations.
+- Variable substitutions are run after config file transformations.
 
-* Variable substitution is applied for only the JSON keys predefined in the object hierarchy. It does not create new keys. 
+- Variable substitution is applied for only the JSON keys predefined in the object hierarchy. It does not create new keys.
 
 **Examples**
 
 If you need XML transformation to run on all the configuration files named with pattern **.Production.config**,
 the transformation rule should be specified as:
 
-`-transform **\*.Production.config  -xml **\*.config`
+`-transform **\*.Production.config -xml **\*.config`
 
 If you have a configuration file named based on the stage name in your pipeline, you can use:
 
 `-transform **\*.$(Release.EnvironmentName).config -xml **\*.config`
 
-To substitute JSON variables that are nested or hierarchical, specify them using JSONPath expressions. 
+To substitute JSON variables that are nested or hierarchical, specify them using JSONPath expressions.
 For example, to replace the value of **ConnectionString** in the sample below, you must define a variable
-as `Data.DefaultConnection.ConnectionString` in the build or release pipeline (or in a stage within the release pipeline). 
+as `Data.DefaultConnection.ConnectionString` in the build or release pipeline (or in a stage within the release pipeline).
 
 ```
 {
@@ -125,4 +125,3 @@ For XML, Variables defined in the build or release pipelines will be matched aga
 ## Open source
 
 This task is open source on [GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
-

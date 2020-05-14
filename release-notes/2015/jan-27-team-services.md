@@ -13,7 +13,7 @@ author: yukom
 
 ## Basic license expanded
 
-First and foremost, I’m excited to announce that this week we are rolling out upgrades across Visual Studio Online to make the following features available to ***all users*** with a “Basic” license:
+First and foremost, I’m excited to announce that this week we are rolling out upgrades across Visual Studio Online to make the following features available to **_all users_** with a “Basic” license:
 
 - Web-based test execution
 - Agile portfolio management
@@ -30,7 +30,7 @@ We made three changes to the Taskboard this sprint that I want to highlight. Fir
 
 ![Dragging a task](media/1_27_01.png)
 
-Second, notice that the parent user story now looks more like a card, matching its visual representation in other parts of the product. And finally, we updated both the Taskboard and the iteration backlog views to include unparented Tasks. This means that ***all*** Tasks assigned to an iteration now show up regardless of whether or not they are parented to a user story.
+Second, notice that the parent user story now looks more like a card, matching its visual representation in other parts of the product. And finally, we updated both the Taskboard and the iteration backlog views to include unparented Tasks. This means that **_all_** Tasks assigned to an iteration now show up regardless of whether or not they are parented to a user story.
 
 ![Unparented tasks](media/1_27_02.png)
 

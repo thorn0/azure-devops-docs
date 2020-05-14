@@ -18,13 +18,12 @@ Extends: [TaskReference](../../../TFS/DistributedTask/Contracts/TaskReference.md
 
 ### Members
 
-* `alwaysRun`: boolean. 
+- `alwaysRun`: boolean.
 
-* `continueOnError`: boolean. 
+- `continueOnError`: boolean.
 
-* `displayName`: string. 
+- `displayName`: string.
 
-* `enabled`: boolean. 
+- `enabled`: boolean.
 
-* `instanceId`: string. 
-
+- `instanceId`: string.

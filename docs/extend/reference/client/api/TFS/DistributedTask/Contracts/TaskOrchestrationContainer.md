@@ -18,11 +18,10 @@ Extends: [TaskOrchestrationItem](../../../TFS/DistributedTask/Contracts/TaskOrch
 
 ### Members
 
-* `children`: [TaskOrchestrationItem](../../../TFS/DistributedTask/Contracts/TaskOrchestrationItem.md)[]. 
+- `children`: [TaskOrchestrationItem](../../../TFS/DistributedTask/Contracts/TaskOrchestrationItem.md)[].
 
-* `continueOnError`: boolean. 
+- `continueOnError`: boolean.
 
-* `parallel`: boolean. 
+- `parallel`: boolean.
 
-* `rollback`: [TaskOrchestrationContainer](../../../TFS/DistributedTask/Contracts/TaskOrchestrationContainer.md). 
-
+- `rollback`: [TaskOrchestrationContainer](../../../TFS/DistributedTask/Contracts/TaskOrchestrationContainer.md).

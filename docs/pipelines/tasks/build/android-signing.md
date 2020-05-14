@@ -7,9 +7,8 @@ ms.assetid: 16CF200D-EC24-4485-BCF5-C9195FE278F1
 ms.author: vijayma
 author: vijayma
 ms.date: 12/17/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Android signing task
 
@@ -21,7 +20,7 @@ Use this task in a pipeline to sign and align Android APK files.
 
 The build agent must have the following capabilities:
 
- * Java JDK
+- Java JDK
 
 ::: moniker range="> tfs-2018"
 
@@ -31,7 +30,7 @@ The build agent must have the following capabilities:
 
 ::: moniker-end
 
- ## Arguments
+## Arguments
 
 <table>
    <thead>

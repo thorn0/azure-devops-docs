@@ -13,20 +13,18 @@ ms.date: 08/04/2016
 
 Module path: `TFS/VersionControl/Contracts`
 
-
 ### Members
 
-* `includeDetails`: boolean. Whether to include policyOverride and notes
+- `includeDetails`: boolean. Whether to include policyOverride and notes
 
-* `includeLinks`: boolean. Whether to include the _links field on the shallow references
+- `includeLinks`: boolean. Whether to include the \_links field on the shallow references
 
-* `includeWorkItems`: boolean. Whether to include workItems
+- `includeWorkItems`: boolean. Whether to include workItems
 
-* `maxChangeCount`: number. Max number of changes to include
+- `maxChangeCount`: number. Max number of changes to include
 
-* `maxCommentLength`: number. Max length of comment
+- `maxCommentLength`: number. Max length of comment
 
-* `name`: string. Shelveset&#x27;s name
+- `name`: string. Shelveset&#x27;s name
 
-* `owner`: string. Owner&#x27;s ID. Could be a name or a guid.
-
+- `owner`: string. Owner&#x27;s ID. Could be a name or a guid.

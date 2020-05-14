@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -17,9 +17,8 @@ Defined in vss.d.ts
 
 Extends: [IExtensionContext](../../../VSS/References/VSS_SDK_Interfaces/IExtensionContext.md)
 
-Options passed to the host management service 
+Options passed to the host management service
 
 ### Members
 
-* `registrationId`: string. The registered VSS auth application ID
-
+- `registrationId`: string. The registered VSS auth application ID

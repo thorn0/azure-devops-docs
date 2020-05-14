@@ -12,8 +12,8 @@ ms.technology: devops-cicd-tasks
 # Cache files between runs
 - task: Cache@2
   inputs:
-    key: 
-    path: 
+    key:
+    path:
     #cacheHitVar: # Optional
     #restoreKeys: # Optional
 ```

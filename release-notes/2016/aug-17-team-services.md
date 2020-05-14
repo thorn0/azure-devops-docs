@@ -25,19 +25,19 @@ When opening a pull request, the new look and feel is evident immediately. We’
 
 ### Overview
 
-The Overview now highlights the  pull request description and makes it easier than ever to give feedback. Events and comments are shown with the newest items on top to help reviewers see the latest changes and comments front and center. Policies, work items, and reviewers are all provided in detail and reorganized to be more clear and concise.
+The Overview now highlights the pull request description and makes it easier than ever to give feedback. Events and comments are shown with the newest items on top to help reviewers see the latest changes and comments front and center. Policies, work items, and reviewers are all provided in detail and reorganized to be more clear and concise.
 
 ![Pull request overview](media/8_17_02.png)
 
 ### Files
 
-The biggest new feature in this release is the ability to see past updates made to a pull request. A few sprints ago ([July 7th](jul-07-team-services.md)), we released the ability to properly track comments as a  pull request is updated with changes. However, it’s not always easy to see what’s between updates. In the Files view, you can now see exactly what changed each time new code is pushed to your pull request. This is really useful if you’ve given feedback on some code and want to see exactly how it changed isolated from all of the other changes in the review.
+The biggest new feature in this release is the ability to see past updates made to a pull request. A few sprints ago ([July 7th](jul-07-team-services.md)), we released the ability to properly track comments as a pull request is updated with changes. However, it’s not always easy to see what’s between updates. In the Files view, you can now see exactly what changed each time new code is pushed to your pull request. This is really useful if you’ve given feedback on some code and want to see exactly how it changed isolated from all of the other changes in the review.
 
 ![Viewing changes on a pull request](media/8_17_03.png)
 
 ### Updates
 
-The new Updates view is used to show how the  pull request is changing over time.  While the Files view shows how the files have changed over time, the Updates view shows the commits added in each update. If a force push ever happens, the Updates view will continue to show the past updates as they occurred in history.
+The new Updates view is used to show how the pull request is changing over time. While the Files view shows how the files have changed over time, the Updates view shows the commits added in each update. If a force push ever happens, the Updates view will continue to show the past updates as they occurred in history.
 
 ![Updates view](media/8_17_04.png)
 
@@ -63,7 +63,7 @@ Once auto-complete has been set, the pull request will display a banner that con
 
 ![Auto-complete banner](media/8_17_08.png)
 
-When all of the policies have been met (i.e., the build completes, or that final approval is granted), the  pull request will be merged using the options and comments specified. As expected, if there is a build failure or the reviewer doesn’t approve, the PR will remain active until the policies are passing.
+When all of the policies have been met (i.e., the build completes, or that final approval is granted), the pull request will be merged using the options and comments specified. As expected, if there is a build failure or the reviewer doesn’t approve, the PR will remain active until the policies are passing.
 
 ## Code
 
@@ -127,7 +127,7 @@ When you enable the “Run SonarQube Analysis” option in the Maven or Gradle b
 
 ## Build Definitions
 
-Welcome to the new build definitions UX! The experience focuses on the builds you own and care about. We hope you enjoy the richer and more personalized views into the status and quality of your code. 
+Welcome to the new build definitions UX! The experience focuses on the builds you own and care about. We hope you enjoy the richer and more personalized views into the status and quality of your code.
 
 ### Favorites and more in the Mine tab
 
@@ -158,7 +158,7 @@ Does your team have a lot of build definitions. You can now use folders to keep 
 
 ### Improved build details
 
-When you click down to focus on a specific build, we now give you a lot more information about what's happening and overall code quality. 
+When you click down to focus on a specific build, we now give you a lot more information about what's happening and overall code quality.
 
 ![Definition summary](media/8_17_17.png)
 
@@ -202,7 +202,7 @@ You can now adjust the permissions team members have with regards to dashboards.
 
 ### Sprint Overview widget
 
-We heard your feedback that the Sprint Overview was confusing, and made a few adjustments. The widget has been redesigned to  show clearly the number of days remaining in the sprint, and a quick summary of the work not started, in progress, and completed.
+We heard your feedback that the Sprint Overview was confusing, and made a few adjustments. The widget has been redesigned to show clearly the number of days remaining in the sprint, and a quick summary of the work not started, in progress, and completed.
 
 ![Sprint Overview widget](media/8_17_22.png)
 

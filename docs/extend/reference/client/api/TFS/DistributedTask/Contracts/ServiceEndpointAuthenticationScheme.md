@@ -14,16 +14,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `authorizationHeaders`: AuthorizationHeader[]. 
+- `authorizationHeaders`: AuthorizationHeader[].
 
-* `displayName`: string. 
+- `displayName`: string.
 
-* `endpointHeaders`: AuthorizationHeader[]. 
+- `endpointHeaders`: AuthorizationHeader[].
 
-* `inputDescriptors`: [VSS_FormInput_Contracts.InputDescriptor](../../../VSS/Common/Contracts/FormInput/InputDescriptor.md)[]. 
+- `inputDescriptors`: [VSS_FormInput_Contracts.InputDescriptor](../../../VSS/Common/Contracts/FormInput/InputDescriptor.md)[].
 
-* `scheme`: string. 
-
+- `scheme`: string.

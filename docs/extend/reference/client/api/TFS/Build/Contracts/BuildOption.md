@@ -14,12 +14,10 @@ ms.date: 08/04/2016
 
 Module path: `TFS/Build/Contracts`
 
-
 ### Members
 
-* `definition`: [BuildOptionDefinitionReference](./BuildOptionDefinitionReference.md). 
+- `definition`: [BuildOptionDefinitionReference](./BuildOptionDefinitionReference.md).
 
-* `enabled`: boolean. 
+- `enabled`: boolean.
 
-* `inputs`: {[key: string]: string}. 
-
+- `inputs`: {[key: string]: string}.

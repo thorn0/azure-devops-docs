@@ -1,28 +1,26 @@
 ---
-title: Bug trends sample Power BI report 
+title: Bug trends sample Power BI report
 titleSuffix: Azure DevOps
-description: Sample Power BI queries to display bug trend reports  
+description: Sample Power BI queries to display bug trend reports
 ms.technology: devops-analytics
 ms.reviewer: greggboe
 ms.author: kaelli
 ms.custom: powerbisample
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ms.date: 08/07/2019
 ---
 
-# Bug trends sample report 
+# Bug trends sample report
 
 [!INCLUDE [temp](../includes/version-azure-devops.md)]
 
-This article shows you how to display, for a given set of open Bugs, the number of Bugs in each State, trended over a period of time. The following image shows an example of such a trend. 
+This article shows you how to display, for a given set of open Bugs, the number of Bugs in each State, trended over a period of time. The following image shows an example of such a trend.
 
-> [!div class="mx-imgBorder"] 
-> ![Sample - Boards Rollup - Report](media/odatapowerbi-bugtrend-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Boards Rollup - Report](media/odatapowerbi-bugtrend-report.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
-
 
 ## Sample queries
 
@@ -43,7 +41,7 @@ let
             &"(DateValue,State,WorkItemType,Priority,Severity,Area/AreaPath,Iteration/IterationPath,AreaSK), "
             &"aggregate($count as Count) "
             &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -53,12 +51,12 @@ in
 [!INCLUDE [temp](includes/sample-odata-query.md)]
 
 ```
-https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot? 
+https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot?
         $apply=filter(
             WorkItemType eq 'Bug'
             and State ne 'Closed'
             and startswith(Area/AreaPath,'{areapath}')
-            and DateValue ge {startdate} 
+            and DateValue ge {startdate}
             )
         /groupby(
             (DateValue,State,WorkItemType,Priority,Severity,Area/AreaPath,Iteration/IterationPath,AreaSK),
@@ -66,20 +64,20 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
             )
 ```
 
-***
+---
 
 ### Substitution strings
 
 [!INCLUDE [temp](includes/sample-query-substitutions.md)]
+
 - {areapath} - Your Area Path. Example format: Project\Level1\Level2
 - {startdate} - The date to start your trend report. Format: YYYY-MM-DDZ. Example: 2019-04-01Z represents 2019-April-01. Do not enclose in quotes.
 
-<!--- How specify the end date? --> 
-
+<!--- How specify the end date? -->
 
 ### Query breakdown
 
-The following table describes each part of the query.  
+The following table describes each part of the query.
 
 <table width="90%">
 <tbody valign="top">
@@ -97,49 +95,43 @@ The following table describes each part of the query.
 </tbody>
 </table>
 
-
 ## Power BI transforms
 
 [!INCLUDE [temp](includes/sample-expandcolumns.md)]
 
 [!INCLUDE [temp](includes/sample-finish-query.md)]
 
-
 ## Create the report
 
-Power BI shows you the fields you can report on. 
+Power BI shows you the fields you can report on.
 
-> [!NOTE]   
-> The example below assumes that no one renamed any columns. 
+> [!NOTE]  
+> The example below assumes that no one renamed any columns.
 
-> [!div class="mx-imgBorder"] 
-> ![Sample - Boards Rollup - Fields](media/odatapowerbi-bugtrend-fields.png)
+> [!div class="mx-imgBorder"] > ![Sample - Boards Rollup - Fields](media/odatapowerbi-bugtrend-fields.png)
 
 For a simple report, do the following steps:
 
-1. Select Power BI Visualization **Line chart**. 
+1. Select Power BI Visualization **Line chart**.
 1. Add the field "DateValue" to **Axis**.
-    - Right-click "DateValue" and select "DateValue", rather than Date Hierarchy.
+   - Right-click "DateValue" and select "DateValue", rather than Date Hierarchy.
 1. Add the field "State" to **Legend**.
 1. Add the field "Count" to **Values**.
-    - Right-click Count field and ensure **Sum** is selected.
+   - Right-click Count field and ensure **Sum** is selected.
 
-The example report displays. 
+The example report displays.
 
-> [!div class="mx-imgBorder"] 
-> ![Sample - Boards Rollup - Report](media/odatapowerbi-bugtrend-report.png)
+> [!div class="mx-imgBorder"] > ![Sample - Boards Rollup - Report](media/odatapowerbi-bugtrend-report.png)
 
 [!INCLUDE [temp](includes/sample-multipleteams.md)]
 
 ## Additional queries
 
-
 You can use the following additional queries to create different but similar reports using the same steps defined previously in this article.
 
 ### Filter by Teams, rather than Area Path
 
-You can query for bug trends by Team Name rather than Area Path.  
-
+You can query for bug trends by Team Name rather than Area Path.
 
 #### [Power BI query](#tab/powerbi/)
 
@@ -158,7 +150,7 @@ let
             &"(DateValue,State,WorkItemType,Priority,Severity,Area/AreaPath,Iteration/IterationPath,AreaSK), "
             &"aggregate($count as Count) "
             &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -168,12 +160,12 @@ in
 [!INCLUDE [temp](includes/sample-odata-query.md)]
 
 ```
-https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot? 
+https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot?
         $apply=filter(
             WorkItemType eq 'Bug'
             and State ne 'Closed'
             and (Teams/any(x:x/TeamName eq '{teamname} or Teams/any(x:x/TeamName eq '{teamname} or Teams/any(x:x/TeamName eq '{teamname})
-            and DateValue ge {startdate} 
+            and DateValue ge {startdate}
             )
         /groupby(
             (DateValue,State,WorkItemType,Priority,Severity,Area/AreaPath,Iteration/IterationPath,AreaSK),
@@ -181,11 +173,12 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
             )
 ```
 
-***
+---
 
 ### Bug trend with a snapshot every Friday
 
-Using a weekly snapshot reduces the amount of data pulled into Power BI, and increases query performance. 
+Using a weekly snapshot reduces the amount of data pulled into Power BI, and increases query performance.
+
 #### [Power BI query](#tab/powerbi/)
 
 [!INCLUDE [temp](includes/sample-powerbi-query.md)]
@@ -204,7 +197,7 @@ let
             &"(DateValue,State,WorkItemType,Priority,Severity,Area/AreaPath,Iteration/IterationPath,AreaSK), "
             &"aggregate($count as Count) "
         &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -214,13 +207,13 @@ in
 [!INCLUDE [temp](includes/sample-odata-query.md)]
 
 ```
-https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot? 
+https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot?
         $apply=filter(
             WorkItemType eq 'Bug'
             and State ne 'Closed'
             and startswith(Area/AreaPath,'{areapath}')
             and DateValue ge {startdate}
-            and Date/DayName eq 'Friday' 
+            and Date/DayName eq 'Friday'
         )
         /groupby(
             (DateValue,State,WorkItemType,Priority,Severity,Area/AreaPath,Iteration/IterationPath,AreaSK),
@@ -228,13 +221,13 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-* * *
+---
 
 <a id="weekly-snapshots" />
 
 ### Bug trend with a snapshot on the first of every month
 
-Using a monthly snapshot reduces the amount of data pulled into Power BI, and increases query performance. 
+Using a monthly snapshot reduces the amount of data pulled into Power BI, and increases query performance.
 
 #### [Power BI query](#tab/powerbi/)
 
@@ -254,7 +247,7 @@ let
             &"(DateValue,State,WorkItemType,Priority,Severity,Area/AreaPath,Iteration/IterationPath,AreaSK), "
             &"aggregate($count as Count) "
         &") "
-    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4]) 
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
 in
     Source
 ```
@@ -264,13 +257,13 @@ in
 [!INCLUDE [temp](includes/sample-odata-query.md)]
 
 ```
-https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot? 
+https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/WorkItemSnapshot?
         $apply=filter(
             WorkItemType eq 'Bug'
             and State ne 'Closed'
             and startswith(Area/AreaPath,'{areapath}')
             and DateValue ge {startdate}
-            and Date/DayOfMonth eq 1 
+            and Date/DayOfMonth eq 1
         )
         /groupby(
             (DateValue,State,WorkItemType,Priority,Severity,Area/AreaPath,Iteration/IterationPath,AreaSK),
@@ -278,7 +271,7 @@ https://analytics.dev.azure.com/{organization}/{project}/_odata/v3.0-preview/Wor
         )
 ```
 
-***
+---
 
 ## Full list of sample reports
 

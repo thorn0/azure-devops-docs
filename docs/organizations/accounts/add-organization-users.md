@@ -9,7 +9,7 @@ ms.assetid: 19ac647f-04c1-4ddd-9953-b3ecfa0f1457
 ms.author: chcomley
 author: chcomley
 ms.date: 12/04/2019
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Add users to your organization or project
@@ -20,9 +20,9 @@ This article describes how to add and manage user access through Direct assignme
 
 The following types of users can join your organization for free:
 
-* Five users who get [Basic features](https://azure.microsoft.com/services/devops/compare-features/), such as version control, tools for Agile, Java, build, release, and more
-* Unlimited users who get [Stakeholder features](https://azure.microsoft.com/services/devops/compare-features/), such as working with your backlog, work items, and queries
-* Unlimited [Visual Studio subscribers](https://azure.microsoft.com/services/devops/compare-features/) who also get Basic features. Additional features, such as [Azure Test Plans](https://azure.microsoft.com/services/devops/test-plans/), can be assigned to users by access level, Basic + Test Plans.
+- Five users who get [Basic features](https://azure.microsoft.com/services/devops/compare-features/), such as version control, tools for Agile, Java, build, release, and more
+- Unlimited users who get [Stakeholder features](https://azure.microsoft.com/services/devops/compare-features/), such as working with your backlog, work items, and queries
+- Unlimited [Visual Studio subscribers](https://azure.microsoft.com/services/devops/compare-features/) who also get Basic features. Additional features, such as [Azure Test Plans](https://azure.microsoft.com/services/devops/test-plans/), can be assigned to users by access level, Basic + Test Plans.
 
 [Need more users with Basic features?](../billing/buy-basic-access-add-users.md)
 
@@ -37,39 +37,40 @@ and add users to groups all in one view. You can add up to 50 users at once. You
 using this Users view. When you add users, each user receives a notification email with a
 link to the organization page.
 
- > [!NOTE]
- > If you have an Azure Active Directory (Azure AD)-backed organization, and you need to add users who are external to Azure AD, first [add external users](add-external-user.md). On the **Tell us about this user page**, under **Type of user**, be sure to choose **User with an existing Microsoft account**. After you complete those steps, use the following steps to add the Azure AD
- > user to Azure DevOps.
-
+> [!NOTE]
+> If you have an Azure Active Directory (Azure AD)-backed organization, and you need to add users who are external to Azure AD, first [add external users](add-external-user.md). On the **Tell us about this user page**, under **Type of user**, be sure to choose **User with an existing Microsoft account**. After you complete those steps, use the following steps to add the Azure AD
+> user to Azure DevOps.
 
 #### [Browser](#tab/browser)
 
 To give other users access to your organization, add their email addresses.
 
-1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+1. Sign in to your organization (`https://dev.azure.com/{yourorganization}`).
 
 2. Select ![gear icon](../../media/icons/gear-icon.png) **Organization settings**.
 
-    ![Open Organization settings](../../media/settings/open-admin-settings-vert.png)
+   ![Open Organization settings](../../media/settings/open-admin-settings-vert.png)
 
 3. Select **Users**, and then select **Add users**.
-   
+
    ![Select the Users tab, and then select Add users](../../media/add-new-users.png)
 
 4. Enter information into the form.
 
    > [!div class="mx-imgBorder"]  
-   >![Web portal, organization admin context, Add new users dialog box](media/add-organization-users-from-user-hub/add-new-users-dialog.png)
+   > ![Web portal, organization admin context, Add new users dialog box](media/add-organization-users-from-user-hub/add-new-users-dialog.png)
 
    - **Users:** Enter the email addresses (Microsoft accounts) or GitHub usernames for the users. You can add several email addresses by separating them with a semicolon (;). An email address appears in red when it's accepted. For more information about GitHub authentication, see [FAQs](../security/faq-github-authentication.md).
-   - **Access level:** Leave the access level as **Basic** for users who will contribute to the code base. To learn more, see [About access levels](/azure/devops/organizations/security/access-levels).  
-   - **Add to projects:** Select the project you want to add them to.  
-   - **Azure DevOps Groups:** Leave as **Project Contributors**, the default security group for users who will contribute to your project. To learn more, see [Default permissions and access assignments](/azure/devops/organizations/security/permissions-access).  
+   - **Access level:** Leave the access level as **Basic** for users who will contribute to the code base. To learn more, see [About access levels](/azure/devops/organizations/security/access-levels).
+   - **Add to projects:** Select the project you want to add them to.
+   - **Azure DevOps Groups:** Leave as **Project Contributors**, the default security group for users who will contribute to your project. To learn more, see [Default permissions and access assignments](/azure/devops/organizations/security/permissions-access).
 
-	> [!NOTE]  
-	> Add email addresses for [personal Microsoft accounts](https://account.microsoft.com/account) and IDs for GitHub accounts unless you plan to use [Azure Active Directory (Azure AD)](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) to authenticate users and control organization access. If a user doesn't have a Microsoft or GitHub account, ask the user to [sign up](https://signup.live.com/) for a Microsoft account or a GitHub account.  
+     ```
+
+     > [!NOTE]
+     ```
+
 5. Select **Add** to complete your invitation.
-
 
 <!---
 Go to Users:
@@ -91,15 +92,14 @@ Next steps: [Manage users in table view](manage-users-table-view.md)
 
 [Add a user](#add-user) | [List users](../security/export-users-audit-log.md#list-users) | [Remove a user](delete-organization-users.md#remove-user) | [Update a user](manage-users-table-view.md#update-user) | [Show users](manage-users-table-view.md#show-users)
 
+<a id="add-user" />
 
-<a id="add-user" /> 
+### Add a user
 
-### Add a user 
-
-You can add users  to an organization by using the [az devops user add](/cli/azure/ext/azure-devops/devops/user#ext-azure-devops-az-devops-user-add) command. To get started, see [Azure DevOps CLI](../../cli/index.md).
+You can add users to an organization by using the [az devops user add](/cli/azure/ext/azure-devops/devops/user#ext-azure-devops-az-devops-user-add) command. To get started, see [Azure DevOps CLI](../../cli/index.md).
 
 ```CLI
-az devops user add –-email-id 
+az devops user add –-email-id
 		   --license-type {advanced, earlyAdopter, express, professional, stakeholder}
 		   [--send-email-invite {false, true}]
            [--org]
@@ -114,15 +114,14 @@ az devops user add –-email-id
 
 The following table provides a mapping of the access level selected through the user interface and the `AccountLicenseType` parameter.
 
-| Access level (user interface)| AccountLicenseType | 
-| --------------------------|---------------------|
-| Stakeholder | stakeholder | 
-| Basic              | express  |  
-| Basic + Test Plans | advanced | 
+| Access level (user interface) | AccountLicenseType |
+| ----------------------------- | ------------------ |
+| Stakeholder                   | stakeholder        |
+| Basic                         | express            |
+| Basic + Test Plans            | advanced           |
 
- > [!NOTE]   
- > The `earlyAdopter` AccountLicenseType is an internal value used solely by Microsoft.  
-
+> [!NOTE]  
+> The `earlyAdopter` AccountLicenseType is an internal value used solely by Microsoft.
 
 #### Example
 
@@ -134,7 +133,7 @@ az devops user add --email-id contoso@contoso.com --license-type stakeholder --o
 ID                                    Display Name          Email                 License Type    Access Level    Status
 
 ------------------------------------  --------------------  --------------------  --------------  --------------  --------
-35b1952b-ca8c-45b5-a60c-d6b0086aa584  contoso@contoso.com   contoso@contoso.com   stakeholder     Stakeholder     pending 
+35b1952b-ca8c-45b5-a60c-d6b0086aa584  contoso@contoso.com   contoso@contoso.com   stakeholder     Stakeholder     pending
 ```
 
 You can also add the user to a Azure DevOps Group- Project Contributors, the default security group for people who contribute to your project. To learn more, see [Default permissions and access assignments](https://docs.microsoft.com/azure/devops/organizations/security/permissions-access?view=azure-devops).
@@ -147,8 +146,8 @@ You can see all security groups in a project using the [az devops security group
 
 ## Related articles
 
-* [Connect to a project](../../organizations/projects/connect-to-projects.md)
-* [Change individual permissions, grant select access to specific functions](../../organizations/security/change-individual-permissions.md)
-* [Grant or restrict access to select features and functions](../../organizations/security/restrict-access.md)
-* [Delete users from Azure DevOps](delete-organization-users.md)
-* [Export a list of users and their access levels](../security/export-users-audit-log.md)
+- [Connect to a project](../../organizations/projects/connect-to-projects.md)
+- [Change individual permissions, grant select access to specific functions](../../organizations/security/change-individual-permissions.md)
+- [Grant or restrict access to select features and functions](../../organizations/security/restrict-access.md)
+- [Delete users from Azure DevOps](delete-organization-users.md)
+- [Export a list of users and their access levels](../security/export-users-audit-log.md)

@@ -12,11 +12,11 @@ ms.technology: devops-cicd-tasks
 # Run the Grunt JavaScript task runner
 - task: Grunt@0
   inputs:
-    #gruntFile: 'gruntfile.js' 
+    #gruntFile: 'gruntfile.js'
     #targets: # Optional
     #arguments: # Optional
     #workingDirectory: # Optional
-    #gruntCli: 'node_modules/grunt-cli/bin/grunt' 
+    #gruntCli: 'node_modules/grunt-cli/bin/grunt'
     #publishJUnitResults: false # Optional
     #testResultsFiles: '**/TEST-*.xml' # Required when publishJUnitResults == True
     #testRunTitle: # Optional

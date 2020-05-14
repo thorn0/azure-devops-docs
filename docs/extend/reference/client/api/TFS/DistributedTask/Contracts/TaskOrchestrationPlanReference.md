@@ -14,18 +14,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `artifactLocation`: string. 
+- `artifactLocation`: string.
 
-* `artifactUri`: string. 
+- `artifactUri`: string.
 
-* `planId`: string. 
+- `planId`: string.
 
-* `planType`: string. 
+- `planType`: string.
 
-* `scopeIdentifier`: string. 
+- `scopeIdentifier`: string.
 
-* `version`: number. 
-
+- `version`: number.

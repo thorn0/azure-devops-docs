@@ -14,10 +14,8 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `sourceFilter`: string. filter for the test case sources (test containers)
+- `sourceFilter`: string. filter for the test case sources (test containers)
 
-* `testCaseFilter`: string. filter for the test cases
-
+- `testCaseFilter`: string. filter for the test cases

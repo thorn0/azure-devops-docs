@@ -47,7 +47,6 @@ As an example, you can make a field required based on the value assigned to the 
 &nbsp;&nbsp;&nbsp;`(Condition) And when the value of *Value Area* = *Business*`  
 &nbsp;&nbsp;&nbsp;`(Action) Then make required *Story Points*`
 
-
 ::: moniker range="azure-devops"
 
 > [!div class="mx-tdBreakAll"]  
@@ -60,7 +59,6 @@ As an example, you can make a field required based on the value assigned to the 
 
 ::: moniker-end
 
-
 ::: moniker range="azure-devops-2019"
 
 > [!div class="mx-tdBreakAll"]  
@@ -69,7 +67,6 @@ As an example, you can make a field required based on the value assigned to the 
 > |![list of conditions](media/rules/when-condition-1.png) | ![list of actions](media/rules/rule-actions.png)
 
 ::: moniker-end
-
 
 [!INCLUDE [temp](../includes/tip-formula-rule.md)]
 
@@ -102,7 +99,7 @@ You add fields to a selected work item type.
     > [!TIP]  
     > You can specify the State field by entering System.State. While you'll see a message that indicates it isn't a valid field, if the Save button is active, then you can save the rule.
 
-	The sequence of actions you specify doesn't impact the behavior of the rule itself or its behavior with respect to other rules defined for the same WIT.
+    The sequence of actions you specify doesn't impact the behavior of the rule itself or its behavior with respect to other rules defined for the same WIT.
 
 1.  Once you've added a custom rule, open a work item and verify that the rule works as you intended.
 
@@ -120,7 +117,6 @@ You delete or disable the rule from the actions menu of the rule.
 
 [!INCLUDE [temp](../../../includes/restrict-modification-closed-wi.md)]
 
-
 ::: moniker range="azure-devops"
 
 ## Restrict modification of work items based on a user or group
@@ -132,22 +128,20 @@ You can add rules to work item types to support these restriction requests:
 
 <!--
 - Restrict who can create or modify a work item
-- Restrict who can create a work item types 
+- Restrict who can create a work item types
 
 For example, the following condition indicates that the State field, for the Initiative custom work item type, becomes read-only for members of the Fabrikam Fiber\Voice group. When a user of this group opens a new Initiative, they are unable to save it as the State field can't automatically be set to New.
 
-> [!div class="mx-imgBorder"]  
+> [!div class="mx-imgBorder"]
 > ![Custom rule](../../security/media/grant-restrict/restrict-creating-work-items-inheritance.png)
 
-For custom work item types you can specify the System.State. For default work item types, you can specify to make the System.ChangeDate read-only. While entering either of these fields presents a message indicating that the field is not valid, you are still able to **Save** the rule. 
---> 
+For custom work item types you can specify the System.State. For default work item types, you can specify to make the System.ChangeDate read-only. While entering either of these fields presents a message indicating that the field is not valid, you are still able to **Save** the rule.
+-->
 
-> [!NOTE]   
-> Depending on the rule action you specify, either the **Save** button on the work item form may be disabled, or an error message displays when a restricted user attempts to create or modify the work item. 
+> [!NOTE]  
+> Depending on the rule action you specify, either the **Save** button on the work item form may be disabled, or an error message displays when a restricted user attempts to create or modify the work item.
 
 ::: moniker-end
-
-
 
 ## Related articles
 

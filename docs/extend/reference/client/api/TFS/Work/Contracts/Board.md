@@ -17,17 +17,16 @@ Extends: [ShallowReference](../../../TFS/Work/Contracts/ShallowReference.md)
 
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `allowedMappings`: {[key: string]: {[key: string]: string[]}}. 
+- `allowedMappings`: {[key: string]: {[key: string]: string[]}}.
 
-* `canEdit`: boolean. 
+- `canEdit`: boolean.
 
-* `columns`: [BoardColumn](../../../TFS/Work/Contracts/BoardColumn.md)[]. 
+- `columns`: [BoardColumn](../../../TFS/Work/Contracts/BoardColumn.md)[].
 
-* `isValid`: boolean. 
+- `isValid`: boolean.
 
-* `revision`: number. 
+- `revision`: number.
 
-* `rows`: [BoardRow](../../../TFS/Work/Contracts/BoardRow.md)[]. 
-
+- `rows`: [BoardRow](../../../TFS/Work/Contracts/BoardRow.md)[].

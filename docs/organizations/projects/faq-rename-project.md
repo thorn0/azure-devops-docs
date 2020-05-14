@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.author: chcomley
 author: chcomley
 ms.date: 12/07/2018
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Troubleshoot renaming a project
@@ -30,28 +30,27 @@ Yes, project names can be reused.
 
 A project name can't be reused if there are still workspace mappings addressing it.
 This is done to avoid the ambiguity case where a workspace could be mapped to two projects.
-You need to reach out to the users that have these mappings, and either delete them or [update them](rename-project.md#tfvc-server) to use the new name. 
-If the user's machine containing the workspace is no longer available then you can delete the workspace 
+You need to reach out to the users that have these mappings, and either delete them or [update them](rename-project.md#tfvc-server) to use the new name.
+If the user's machine containing the workspace is no longer available then you can delete the workspace
 by running the following command from Visual Studio's developer command prompt:
 
-```tf workspace /delete [/collection:TeamProjectCollectionUrl] workspacename[;workspaceowner]```
-
+`tf workspace /delete [/collection:TeamProjectCollectionUrl] workspacename[;workspaceowner]`
 
 ### Q: How does renaming a project impact my browser navigation experience?
 
-After a project is renamed, any browsers with the project opened may encounter some errors. These errors are due to caches held by the browser which include the old project name. 
+After a project is renamed, any browsers with the project opened may encounter some errors. These errors are due to caches held by the browser which include the old project name.
 Refreshing makes these errors go away since the cache is repopulated with the new project name.
 
 ### Q: Do other artifacts in the project get renamed when it is renamed?
 
 ::: moniker range=">= tfs-2018"
-Yes, all artifacts which share the same name get renamed along with the project. The only exceptions to this are for the default team and repo. The rename of these artifacts is performed as a best effort. 
-For example, if a project *Foo* was renamed to *Bar*, the default team *Foo* would not be renamed if a team named *Bar* already existed in the project. 
+Yes, all artifacts which share the same name get renamed along with the project. The only exceptions to this are for the default team and repo. The rename of these artifacts is performed as a best effort.
+For example, if a project _Foo_ was renamed to _Bar_, the default team _Foo_ would not be renamed if a team named _Bar_ already existed in the project.
 ::: moniker-end
 ::: moniker range=">= tfs-2013 <= tfs-2017"
 
-Yes, all artifacts which share the same name get renamed along with the project. The only exceptions to this are for the default team room, team, and repo. The rename of these artifacts is performed as a best effort. 
-For example, if a project *Foo* was renamed to *Bar*, the default team *Foo* would not be renamed if a team named *Bar* already existed in the project. 
+Yes, all artifacts which share the same name get renamed along with the project. The only exceptions to this are for the default team room, team, and repo. The rename of these artifacts is performed as a best effort.
+For example, if a project _Foo_ was renamed to _Bar_, the default team _Foo_ would not be renamed if a team named _Bar_ already existed in the project.
 
 ::: moniker-end
 

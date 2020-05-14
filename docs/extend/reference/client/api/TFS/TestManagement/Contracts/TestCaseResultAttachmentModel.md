@@ -14,16 +14,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `id`: number. 
+- `id`: number.
 
-* `iterationId`: number. 
+- `iterationId`: number.
 
-* `name`: string. 
+- `name`: string.
 
-* `size`: number. 
+- `size`: number.
 
-* `url`: string. 
-
+- `url`: string.

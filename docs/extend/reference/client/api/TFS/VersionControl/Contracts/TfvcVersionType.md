@@ -15,11 +15,11 @@ Module path: `TFS/VersionControl/Contracts`
 
 ### Values
 
-* `None` 
-* `Changeset` 
-* `Shelveset` 
-* `Change` 
-* `Date` 
-* `Latest` 
-* `Tip` 
-* `MergeSource` 
+- `None`
+- `Changeset`
+- `Shelveset`
+- `Change`
+- `Date`
+- `Latest`
+- `Tip`
+- `MergeSource`

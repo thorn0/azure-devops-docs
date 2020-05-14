@@ -3,16 +3,16 @@ title: Version Control - Branching strategies with TFVC
 titleSuffix: Azure Repos
 description: Learn about branching strategies for Team Foundation Version Control (TFVC) and how to select an effective strategy
 ms.assetid: C9659CD5-CC5D-4522-9DB7-B887F361819F
-ms.technology: devops-code-tfvc 
+ms.technology: devops-code-tfvc
 ms.date: 04/25/2018
 ms.author: apawast
 author: wpschaub
 ms.topic: conceptual
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
-
 # Learn about branching strategies for Team Foundation Version Control (TFVC) and how to select an effective strategy
+
 #### Azure Repos | Azure DevOps Server 2019 | TFS 2018 | TFS 2017 | TFS 2015 | VS 2017 | VS 2015 | VS 2013
 
 Do you plan to adopt Team Foundation Version Control ([TFVC](overview.md)) with Team Foundation Server (TFS) or Azure DevOps Services? Are you wondering how to best use branches? This article will not delve deep into branching features, as they are well documented in the product [documentation](use-branches-isolate-risk-team-foundation-version-control.md) and [guidance](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2015/04/22/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions/), but will explore a few common branching strategies to help you make the right decision.
@@ -30,6 +30,7 @@ The **Main Only** strategy can be folder-based or with the **main** folder [conv
 Start with the main only branching strategy, [branch strategically](branch-strategically.md) and adopt other strategies to evolve into more complex strategies as needed.
 
 ## Development isolation
+
 When you need to maintain and protect a stable **main** branch, you can branch one or more **dev** branches from **main**. It enables isolation and concurrent development. Work can be isolated in development branches by feature, organization, or temporary collaboration.
 
 ![Developer Isolation branching strategy](./media/branching-strategies-with-tfvc/branching-scenarios-developer-isolation.png)
@@ -40,7 +41,7 @@ It's possible that there are changes in the **main** branch. Always forward inte
 
 ## Feature isolation
 
-Feature isolation is a special derivation of the development isolation, allowing you to branch one or more **feature** branches from **main**, as shown, or from your **dev** branches. 
+Feature isolation is a special derivation of the development isolation, allowing you to branch one or more **feature** branches from **main**, as shown, or from your **dev** branches.
 
 ![Feature Isolation branching strategy](./media/branching-strategies-with-tfvc/Branching-Scenarios-Feature-Isolation.png)
 
@@ -84,7 +85,7 @@ At this point, you have successfully explored a few of the common TFVC branching
 
 ### Why should branches be short-lived?
 
-By keeping branches short-lived,  merge conflicts are kept to as few as possible. 
+By keeping branches short-lived, merge conflicts are kept to as few as possible.
 
 ### Why only branch if necessary?
 
@@ -100,7 +101,7 @@ Yes. It is not recommended, unless teams must share source and cannot share a co
 
 ### What about the code promotion strategy?
 
-The Code Promotion strategy feels like a relic from the waterfall development era. It is typically with long testing cycles, and separate development and testing teams. The strategy is no longer recommended. For more information on this strategy, see the [branching guidance](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2015/04/22/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions/). 
+The Code Promotion strategy feels like a relic from the waterfall development era. It is typically with long testing cycles, and separate development and testing teams. The strategy is no longer recommended. For more information on this strategy, see the [branching guidance](https://blogs.msdn.microsoft.com/visualstudioalmrangers/2015/04/22/library-of-tooling-and-guidance-solutions-aka-msvsarsolutions/).
 
 ### When merging **dev** to **main** branch, why are no changes detected?
 
@@ -111,12 +112,12 @@ You have likely ignored changes in previous merges, for example, using the `keep
 The TFVC Feature Isolation branching strategy is similar to the Git [topic branches](https://www.git-scm.com/book/en/v2/Git-Branching-Branching-Workflows#Topic-Branches).
 
 > Authors: Jesse Houwing, Marcus Fernandez, Mike Fourie, and Willy Schaub from the ALM | DevOps Rangers. You can contact them [here](https://github.com/ALM-Rangers/Guidance).
- 
-*(c) 2015 Microsoft Corporation. All rights reserved. This document is
+
+_(c) 2015 Microsoft Corporation. All rights reserved. This document is
 provided "as-is." Information and views expressed in this document,
 including URL and other Internet Web site references, may change without
-notice. You bear the risk of using it.*
+notice. You bear the risk of using it._
 
-*This document does not provide you with any legal rights to any
+_This document does not provide you with any legal rights to any
 intellectual property in any Microsoft product. You may copy and use
-this document for your internal, reference purposes.*
+this document for your internal, reference purposes._

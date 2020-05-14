@@ -19,6 +19,7 @@ Use this task in your pipeline to create, edit, or discard a [GitHub release](ht
 ## Prerequisites
 
 ### GitHub service connection
+
 This task requires a [GitHub service connection](../../library/service-endpoints.md#sep-github) with **Write** permission to the GitHub repository. You can create a GitHub service connection in your Azure Pipelines project. Once created, use the name of the service connection in this task's settings.
 
 ::: moniker range="> tfs-2018"
@@ -48,7 +49,6 @@ This task requires a [GitHub service connection](../../library/service-endpoints
 <tr><td>Pre-release</td><td>(Optional) Indicate whether the release should be marked as a pre-release.</td></tr>
 <tr><td>Add changelog</td><td>(Optional) If set to <code>true</code>, a list of changes (commits and issues) between this and the last published release will be generated and appended to release notes.</td></tr>
 
-
 <tr>
 <th style="text-align: center" colspan="2"><a href="~/pipelines/process/tasks.md#controloptions" data-raw-source="[Control options](../../process/tasks.md#controloptions)">Control options</a></th>
 </tr>
@@ -59,16 +59,16 @@ This task requires a [GitHub service connection](../../library/service-endpoints
 
 ### Create a GitHub release
 
-The following YAML creates a GitHub release every time the task runs. The build number is used as the tag version for the release. All .exe files and README.txt files in the $(Build.ArtifactStagingDirectory) folder are uploaded as assets. By default, the task also generates a change log (a list of commits and issues that are part of this release) and publishes it as release notes.
+The following YAML creates a GitHub release every time the task runs. The build number is used as the tag version for the release. All .exe files and README.txt files in the \$(Build.ArtifactStagingDirectory) folder are uploaded as assets. By default, the task also generates a change log (a list of commits and issues that are part of this release) and publishes it as release notes.
 
 ```YAML
-- task: GithubRelease@0 
-  displayName: 'Create GitHub Release'      
+- task: GithubRelease@0
+  displayName: 'Create GitHub Release'
   inputs:
     gitHubConnection: zenithworks
     repositoryName: zenithworks/javaAppWithMaven
     tagSource: manual
-    tag: $(Build.BuildNumber)      
+    tag: $(Build.BuildNumber)
     assets: |
       $(Build.ArtifactStagingDirectory)/*.exe
       $(Build.ArtifactStagingDirectory)/README.txt
@@ -77,23 +77,23 @@ The following YAML creates a GitHub release every time the task runs. The build 
 You can also control the creation of the release based on repository tags. The following YAML creates a GitHub release only when the commit that triggers the pipeline has a Git tag associated with it. The GitHub release is created with the same tag version as the associated Git tag.
 
 ```YAML
-- task: GithubRelease@0 
-  displayName: 'Create GitHub Release'      
+- task: GithubRelease@0
+  displayName: 'Create GitHub Release'
   inputs:
     gitHubConnection: zenithworks
-    repositoryName: zenithworks/javaAppWithMaven           
+    repositoryName: zenithworks/javaAppWithMaven
     assets: $(Build.ArtifactStagingDirectory)/*.exe
 ```
 
-You may also want to use the task in conjunction with task conditions to get even finer control over when the task runs, thereby restricting the creation of releases. For example, in the following YAML the task runs only when the pipeline is triggered by a Git tag matching the pattern 'refs/tags/release-v*'.
+You may also want to use the task in conjunction with task conditions to get even finer control over when the task runs, thereby restricting the creation of releases. For example, in the following YAML the task runs only when the pipeline is triggered by a Git tag matching the pattern 'refs/tags/release-v\*'.
 
 ```YAML
-- task: GithubRelease@0 
-  displayName: 'Create GitHub Release'   
-  condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/release-v')   
+- task: GithubRelease@0
+  displayName: 'Create GitHub Release'
+  condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/release-v')
   inputs:
     gitHubConnection: zenithworks
-    repositoryName: zenithworks/javaAppWithMaven           
+    repositoryName: zenithworks/javaAppWithMaven
     assets: $(Build.ArtifactStagingDirectory)/*.exe
 ```
 

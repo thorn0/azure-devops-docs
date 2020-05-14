@@ -8,9 +8,8 @@ ms.author: apawast
 author: apawast
 ms.topic: reference
 ms.date: 08/10/2016
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
-
 
 # Branches Command
 
@@ -27,6 +26,7 @@ tf branches itemspec [/version:versionspec] [/collection:TeamProjectCollectionUr
 ```
 
 ## Parameters<table>
+
 <thead>
 <tr>
 <th><p><strong>Argument</strong></p></th>
@@ -94,7 +94,7 @@ The following example displays branch history for the header.h item in the Team 
 c:\projects>tf branches $/applications/header.h
 ```
 
-The following example displays the branch history of the folder $/rel30/math.
+The following example displays the branch history of the folder \$/rel30/math.
 
 ```
 c:\projects>tf branches $/rel30/math/

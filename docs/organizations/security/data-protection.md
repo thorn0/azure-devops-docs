@@ -1,12 +1,12 @@
 ---
 title: Azure DevOps - Data Protection
-description: Learn how Microsoft protects your projects and data in Azure DevOps. Microsoft is committed to making sure that your projects stay safe and secure, without exception. 
+description: Learn how Microsoft protects your projects and data in Azure DevOps. Microsoft is committed to making sure that your projects stay safe and secure, without exception.
 ms.topic: article
 ms.technology: devops-security
 ms.author: mlearned
 author: mlearned
 ms.date: 04/28/2020
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Data protection overview
@@ -55,7 +55,7 @@ Azure DevOps Services is hosted entirely in Azure data centers and uses many of 
 
 Azure DevOps Services uses Azure Storage as the primary repository for service metadata and customer data. Depending on the type of data and the storage and retrieval needs, we use Azure Blob (binary large objects) storage and Azure SQL data storage. To provide a seamless experience, we work hard to abstract these details from the end user. However, to discuss the details surrounding Azure DevOps approach to data protection, some background in these elements is important.
 
-**Azure Blob storage** is used to store large chunks of unstructured data. All projects use the Azure Blob storage service. This data includes potentially sensitive or private information such as the contents of source files and the attachments on work items. For most projects, the majority of storage in use is this type of unstructured blob storage.  For more information, see documentation on
+**Azure Blob storage** is used to store large chunks of unstructured data. All projects use the Azure Blob storage service. This data includes potentially sensitive or private information such as the contents of source files and the attachments on work items. For most projects, the majority of storage in use is this type of unstructured blob storage. For more information, see documentation on
 [Azure Blob Storage](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-blobs/).
 
 **Azure SQL database storage** is used to store the structured and transactional aspects of your organization, including project metadata, the versioned source control history, and work item details. Database storage gives you fast access to the important elements of your project and provides indexes into the blob storage to look up files and attachments. For more information, see documentation on
@@ -73,10 +73,11 @@ To protect data in the case of hardware or service failures, Microsoft Azure sto
 
 > [!NOTE]
 > Note the following regarding data redundancy and fail over:
-> * There is an inherent delta measured in minutes when we replicate your data between the primary and secondary region
-> * Fail over to the secondary region is a decision that we must make centrally as it impacts all customers on the affected scale unit. Except in extreme circumstances, we'll opt to not fail over so that customer data is not lost
-> * Azure DevOps offers a 99.9% uptime SLA guarantee and will refund portion of the monthly charges if we miss the SLA in a specific month
-> * Because there is only one region in Brazil, customer data in Brazil is replicated to South Central US for disaster recovery purposes
+>
+> - There is an inherent delta measured in minutes when we replicate your data between the primary and secondary region
+> - Fail over to the secondary region is a decision that we must make centrally as it impacts all customers on the affected scale unit. Except in extreme circumstances, we'll opt to not fail over so that customer data is not lost
+> - Azure DevOps offers a 99.9% uptime SLA guarantee and will refund portion of the monthly charges if we miss the SLA in a specific month
+> - Because there is only one region in Brazil, customer data in Brazil is replicated to South Central US for disaster recovery purposes
 
 ### Mistakes happen
 
@@ -133,12 +134,12 @@ Your credentials in Azure DevOps are stored using industry best practices. Learn
 
 If during your penetration testing you believe you've discovered a potential security flaw related to the Azure DevOps service, report it to Microsoft within 24 hours by following the instructions on the [Report a Computer Security Vulnerability](https://technet.microsoft.com/organizations/security/ff852094) page.
 
->[!IMPORTANT]
->While notifying Microsoft of penetration testing activities is no longer required, customers must still comply with the [Microsoft Cloud Unified Penetration Testing Rules of Engagement](https://technet.microsoft.com/mt784683).
+> [!IMPORTANT]
+> While notifying Microsoft of penetration testing activities is no longer required, customers must still comply with the [Microsoft Cloud Unified Penetration Testing Rules of Engagement](https://technet.microsoft.com/mt784683).
 
 ### Azure DevOps Bug Bounty Program
 
-Azure DevOps participates in the [Microsoft Cloud Bounty Program](https://www.microsoft.com/msrc/bounty-microsoft-cloud) to reward security researchers who report issues to us, and to encourage more people to help us keep Azure DevOps secure. For more details, see the [Azure DevOps Bounty Program](https://www.microsoft.com/msrc/bounty-azure-devops) page. 
+Azure DevOps participates in the [Microsoft Cloud Bounty Program](https://www.microsoft.com/msrc/bounty-microsoft-cloud) to reward security researchers who report issues to us, and to encourage more people to help us keep Azure DevOps secure. For more details, see the [Azure DevOps Bounty Program](https://www.microsoft.com/msrc/bounty-azure-devops) page.
 
 ### Restricting access
 
@@ -157,9 +158,9 @@ you and Azure DevOps, we encrypt via HTTPS / SSL.
 
 Also, data we store on your behalf in Azure DevOps is encrypted as follows:
 
-* For data stored in Azure SQL databases, Azure DevOps adopted [Transparent Data Encryption (TDE)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?view=sql-server-2017) to protect against the threat of malicious activity by doing real-time encryption of the database, associated backups, and transaction log files at rest.
+- For data stored in Azure SQL databases, Azure DevOps adopted [Transparent Data Encryption (TDE)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?view=sql-server-2017) to protect against the threat of malicious activity by doing real-time encryption of the database, associated backups, and transaction log files at rest.
 
-* Azure Blob Storage connections are encrypted to protect your data in transit. To protect data at rest stored in our Azure Blob Storage, we have adopted [Azure Storage Service Encryption (SSE)](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
+- Azure Blob Storage connections are encrypted to protect your data in transit. To protect data at rest stored in our Azure Blob Storage, we have adopted [Azure Storage Service Encryption (SSE)](https://docs.microsoft.com/azure/storage/common/storage-service-encryption).
 
 To learn more about how we encrypt your data, visit the following [blog post](https://blogs.msdn.microsoft.com/devops/2017/09/05/visual-studio-team-services-encryption-at-rest/).
 
@@ -225,8 +226,8 @@ lessons learned by operating the service.
 For some customers, it is important to understand third-party
 evaluation of our data security procedures. Towards that end, we have
 achieved ISO 27001:2013, HIPAA (Health Insurance Portability and Accountability Act)
- BAA (Business Associate Agreement), EU Model Clauses, SOC 1 Type 2, and SOC 2 Type 2 certifications.
-The SOC audit for Azure DevOps covers controls for data security, availability, 
+BAA (Business Associate Agreement), EU Model Clauses, SOC 1 Type 2, and SOC 2 Type 2 certifications.
+The SOC audit for Azure DevOps covers controls for data security, availability,
 processing integrity, and confidentiality. Azure DevOps' SOC reports are available via the [Microsoft's Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuide?docTab=4ce99610-c9c0-11e7-8c2c-f908a777fa4d_SOC%20/%20SSAE%2016%20Reports).
 If you don't have access to Microsoft's Service Trust Portal, you can contact [Azure DevOps ServicesSOC Reports](mailto:AzureDevOpsSOCReport@microsoft.com) to request a copy of Azure DevOps' SOC Reports.
 
@@ -241,27 +242,26 @@ horizon, and the damage that could occur if it is compromised. Many
 enterprises have existing classification methods that can be reused when
 projects move to Azure DevOps. For more information on how to classify your data, see the following [materials](https://download.microsoft.com/download/0/A/3/0A3BE969-85C5-4DD2-83B6-366AA71D1FE3/Data-Classification-for-Cloud-Readiness.pdf).
 
-
 ### Adopt Azure Active Directory
 
 Another way to improve the security of your end users' credentials is to use Azure Active Directory (Azure AD) instead of Microsoft Accounts (MSA) to manage your organization's access to Azure DevOps. Azure AD allows your IT department to manage its end-user access policy including password complexity, password refreshes, and expiration if the user leaves your organization. Through Active Directory federation, you can directly link Azure Active Directory to your organization's central directory, so you have only one location to manage these details for your enterprise. See the following brief comparison between MSA and Azure AD characteristics relative to Azure DevOps access:
 
-| Properties                            | MSA                        | Azure AD  |
-| :-------------------------------------|:---------------------------|:-----|
-| Identity creator      | User | Organization |
-| Single user name / password for all work assets      | No      |   Yes |
-| Password lifetime & complexity control | User      |    Organization|
-| Azure DevOps membership limits | Any MSA | Organization's directory
-| Traceable identity | No | Yes
-| Organization & IP ownership | Unclear | Organization
-| 2-factor authentication enrollment | User | Organization
-| Device-based conditional access | No | Organization
+| Properties                                      | MSA     | Azure AD                 |
+| :---------------------------------------------- | :------ | :----------------------- |
+| Identity creator                                | User    | Organization             |
+| Single user name / password for all work assets | No      | Yes                      |
+| Password lifetime & complexity control          | User    | Organization             |
+| Azure DevOps membership limits                  | Any MSA | Organization's directory |
+| Traceable identity                              | No      | Yes                      |
+| Organization & IP ownership                     | Unclear | Organization             |
+| 2-factor authentication enrollment              | User    | Organization             |
+| Device-based conditional access                 | No      | Organization             |
 
 Learn more about [configuring this support for your organization](../accounts/access-with-azure-ad.md).
 
 ### Require two-factor authentication
 
-In some cases, you might want to restrict access to your organization by requiring more than one factor to sign in. Azure AD lets you require multiple factors, 
+In some cases, you might want to restrict access to your organization by requiring more than one factor to sign in. Azure AD lets you require multiple factors,
 such as phone authentication in addition to a username and password, for all authentication requests. You can [learn more](/azure/multi-factor-authentication/) about turning on multifactor authentication for Azure AD.
 
 ### Use BitLocker
@@ -277,7 +277,7 @@ security requirements.
 
 Azure Active Directory (Azure AD) provides the capability for administrators to control access to Azure resources and applications such as Azure DevOps. With conditional access control in place, Azure AD checks for the specific conditions you set for a user to access an application. After access requirements are met, the user is authenticated and can access the application.
 Visit the [Azure documentation site](/azure/active-directory/active-directory-conditional-access)
-to learn more about conditional access policy (CAP).  Azure DevOps now enforces conditional access policies for custom Azure DevOps authentication mechanisms including personal access tokens (PATs), alternate authentication, OAuth, and SSH keys. If accessing Azure DevOps through a third-party client, like git.exe, only IP-based policies will be honored; any other policy will automatically fail as the client doesn't pass the necessary information to validate the policy. For example, if a policy requires MFA and the client can't support MFA, the policy fails and the user is automatically blocked.
+to learn more about conditional access policy (CAP). Azure DevOps now enforces conditional access policies for custom Azure DevOps authentication mechanisms including personal access tokens (PATs), alternate authentication, OAuth, and SSH keys. If accessing Azure DevOps through a third-party client, like git.exe, only IP-based policies will be honored; any other policy will automatically fail as the client doesn't pass the necessary information to validate the policy. For example, if a policy requires MFA and the client can't support MFA, the policy fails and the user is automatically blocked.
 
 ## Additional resources
 
@@ -297,11 +297,11 @@ your review and education.
 - [Revoke user PATs - for admins](../accounts/admin-revoke-user-pats.md)
 - [Token expiration](../accounts/admin-revoke-user-pats.md#token-expiration)
 
-*(c) 2018 Microsoft Corporation. All rights reserved. This document is
+_(c) 2018 Microsoft Corporation. All rights reserved. This document is
 provided "as-is." Information and views that are expressed in this document,
 including URL and other Internet Web site references, may change without
-notice. You bear the risk of using it.*
+notice. You bear the risk of using it._
 
-*This document doesn't provide you with any legal rights to any
+_This document doesn't provide you with any legal rights to any
 intellectual property in any Microsoft product. You may copy and use
-this document for your internal, reference purposes.*
+this document for your internal, reference purposes._

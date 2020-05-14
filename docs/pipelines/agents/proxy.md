@@ -5,7 +5,7 @@ description: Learn how you can run a v2 private build and release agent behind a
 ms.topic: conceptual
 ms.assetid: 6AC4BA22-9F6F-44B5-BB15-445A7CFD2AD4
 ms.date: 03/15/2019
-monikerRange: '>= tfs-2015'
+monikerRange: ">= tfs-2015"
 ---
 
 # Run a self-hosted agent behind a web proxy
@@ -29,23 +29,24 @@ Finally, it passes the proxy details through to tasks which also need proxy sett
 
 (Applies to agent version 2.122 and newer.)
 
-To enable the agent to run behind a web proxy, pass `--proxyurl`, `--proxyusername` and `--proxypassword` during agent configuration.  
-  
- For example:
- 
- # [Windows](#tab/windows)
+To enable the agent to run behind a web proxy, pass `--proxyurl`, `--proxyusername` and `--proxypassword` during agent configuration.
 
- ```
+For example:
+
+# [Windows](#tab/windows)
+
+```
 ./config.cmd --proxyurl http://127.0.0.1:8888 --proxyusername "myuser" --proxypassword "mypass"
 ```
 
- # [macOS and Linux](#tab/unix)
+# [macOS and Linux](#tab/unix)
 
- ```
+```
 ./config.sh --proxyurl http://127.0.0.1:8888 --proxyusername "myuser" --proxypassword "mypass"
 ```
- ---
- 
+
+---
+
 We store your proxy credential responsibly on each platform to prevent accidental leakage.
 On Linux, the credential is encrypted with a symmetric key based on the machine ID.
 On macOS, we use the Keychain.
@@ -62,7 +63,7 @@ On Windows, we use the Credential Store.
 
 The agent will talk to Azure DevOps/TFS service through the web proxy specified in the `.proxy` file.
 
-Since the code for the `Get Source` task in builds and `Download Artifact` task in releases are also baked into the agent, those tasks will follow the agent proxy configuration from the `.proxy` file.  
+Since the code for the `Get Source` task in builds and `Download Artifact` task in releases are also baked into the agent, those tasks will follow the agent proxy configuration from the `.proxy` file.
 
 The agent exposes proxy configuration via environment variables for every task execution.
 Task authors need to use [azure-pipelines-task-lib](https://github.com/Microsoft/azure-pipelines-task-lib) methods to retrieve proxy configuration and [handle the proxy](https://github.com/Microsoft/azure-pipelines-task-lib/blob/master/node/docs/proxy.md) within their task.
@@ -85,7 +86,7 @@ In the agent root directory, create a .proxy file with your proxy server url.
 
 ```ps
 echo http://name-of-your-proxy-server:8888 | Out-File .proxy
-```  
+```
 
 If your proxy doesn't require authentication, then you're ready to configure and run the agent. See [Deploy an agent on Windows](v2-windows.md).
 
@@ -93,7 +94,7 @@ If your proxy doesn't require authentication, then you're ready to configure and
 
 ```bash
 echo http://name-of-your-web-proxy:8888 > .proxy
-```  
+```
 
 If your proxy doesn't require authentication, then you're ready to configure and run the agent. See [Deploy an agent on macOS](v2-osx.md) or [Deploy an agent on Linux](v2-linux.md).
 
@@ -111,23 +112,24 @@ If your proxy requires authentication, the simplest way to handle it is to grant
 ```ps
 $env:VSTS_HTTP_PROXY_USERNAME = "proxyuser"
 $env:VSTS_HTTP_PROXY_PASSWORD = "proxypassword"
-```  
+```
 
 # [macOS and Linux](#tab/unix)
 
 ```bash
 export VSTS_HTTP_PROXY_USERNAME=proxyuser
 export VSTS_HTTP_PROXY_PASSWORD=proxypassword
-```  
+```
 
 If you are running your agent as a service:
 
 1.
 
- ```bash
+```bash
 export VSTS_HTTP_PROXY_USERNAME=proxyuser
 export VSTS_HTTP_PROXY_PASSWORD=proxypassword
-```  
+```
+
 1. Update the environment variables. See [macOS](v2-osx.md#service-update-environment-variables) or [Linux](v2-linux.md#service-update-environment-variables).
 
 ---

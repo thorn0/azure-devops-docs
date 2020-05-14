@@ -14,16 +14,14 @@ ms.date: 08/04/2016
 
 Module path: `TFS/DistributedTask/Contracts`
 
-
 ### Members
 
-* `authKey`: string. 
+- `authKey`: string.
 
-* `endpoint`: string. 
+- `endpoint`: string.
 
-* `keySelector`: string. 
+- `keySelector`: string.
 
-* `selector`: string. 
+- `selector`: string.
 
-* `target`: string. 
-
+- `target`: string.

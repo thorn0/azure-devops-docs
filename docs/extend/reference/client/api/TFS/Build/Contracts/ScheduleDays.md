@@ -16,12 +16,12 @@ Module path: `TFS/Build/Contracts`
 
 ### Values
 
-* `None` Do not run.
-* `Monday` Run on Monday.
-* `Tuesday` Run on Tuesday.
-* `Wednesday` Run on Wednesday.
-* `Thursday` Run on Thursday.
-* `Friday` Run on Friday.
-* `Saturday` Run on Saturday.
-* `Sunday` Run on Sunday.
-* `All` Run on all days of the week.
+- `None` Do not run.
+- `Monday` Run on Monday.
+- `Tuesday` Run on Tuesday.
+- `Wednesday` Run on Wednesday.
+- `Thursday` Run on Thursday.
+- `Friday` Run on Friday.
+- `Saturday` Run on Saturday.
+- `Sunday` Run on Sunday.
+- `All` Run on all days of the week.

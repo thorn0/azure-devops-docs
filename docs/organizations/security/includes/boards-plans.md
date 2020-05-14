@@ -2,7 +2,7 @@
 ms.topic: include
 ---
 
-::: moniker range=">= tfs-2017"  
+::: moniker range=">= tfs-2017"
 
 <table>
 <tr valign="bottom">
@@ -40,8 +40,4 @@ ms.topic: include
 </tbody>
 </table>
   
-::: moniker-end  
-
-
-
-
+::: moniker-end

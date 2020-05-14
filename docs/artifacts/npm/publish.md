@@ -5,7 +5,7 @@ ms.assetid: 85773969-1491-4242-A060-BD5D193961A0
 ms.technology: devops-artifacts
 ms.topic: conceptual
 ms.date: 11/14/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Publish an npm package

@@ -1,33 +1,33 @@
 ﻿---
 title: Improve pull request descriptions with pull request templates
 titleSuffix: Azure Repos
-description:  Learn how to standardize pull request descriptions using pull request templates
+description: Learn how to standardize pull request descriptions using pull request templates
 ms.assetid: 4C9DFD24-E894-454A-A080-DA511C90CA74
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: conceptual
 ms.date: 12/10/2018
-monikerRange: 'azure-devops'
+monikerRange: "azure-devops"
 ---
 
 # Improve pull request descriptions using templates
 
-#### Azure Repos 
+#### Azure Repos
 
 Writing good pull request descriptions is a great way to help reviewers know what to expect when reviewing code. They're also a great way to help track things that should be done for every change, such as testing, adding unit tests, and updating documentation. Pull request templates can help your developers create great pull request descriptions that meet your organization's standards.
 
 This article shows you how to get started with pull request templates.
 
->[!NOTE]
->Pull request templates can provide guidance, but are advisory only. Use branch policies to enforce best practices such as requiring pull requests for key branches like master, requiring a successful build, and enforcing required reviewers. For more information, see [branch policies](branch-policies-overview.md).
+> [!NOTE]
+> Pull request templates can provide guidance, but are advisory only. Use branch policies to enforce best practices such as requiring pull requests for key branches like master, requiring a successful build, and enforcing required reviewers. For more information, see [branch policies](branch-policies-overview.md).
 
 ## What is a pull request template?
 
-A pull request template is a file containing [markdown](../../project/wiki/markdown-guidance.md) text that is added to your pull request description when the pull request is created. 
+A pull request template is a file containing [markdown](../../project/wiki/markdown-guidance.md) text that is added to your pull request description when the pull request is created.
 
 ```markdown
-Thank you for your contribution to the Fabrikam Fiber repo. 
+Thank you for your contribution to the Fabrikam Fiber repo.
 Before submitting this PR, please make sure:
 
 - [ ] Your code builds clean without any errors or warnings
@@ -43,8 +43,8 @@ Azure Repos allows you to create the following type of pull request templates:
 
 The type of pull request template is determined by its filename and folder location, as covered in the following sections. The filenames and folder locations are not case sensitive, but they must be in the default branch of your repository.
 
->[!NOTE]
->All pull request template files must be located in the default branch (typically master) of your repository. Only pull request template files from the default branch are used.
+> [!NOTE]
+> All pull request template files must be located in the default branch (typically master) of your repository. Only pull request template files from the default branch are used.
 
 ## Default pull request templates
 
@@ -63,8 +63,8 @@ When a new pull request is created in the repository, unless a [branch specific 
 
 You can edit or add to this description and append [additional pull request templates](#additional-pull-request-templates) if desired by selecting them from the **Add a template** drop-down.
 
->[!NOTE]
->When a default or branch specific pull request template is automatically applied, it replaces the standard commit messages that are usually used for the default description. You can add them back by selecting **Add commit messages**.
+> [!NOTE]
+> When a default or branch specific pull request template is automatically applied, it replaces the standard commit messages that are usually used for the default description. You can add them back by selecting **Add commit messages**.
 
 ## Branch specific pull request templates
 
@@ -111,5 +111,5 @@ Select the name of the desired additional template to append its contents to the
 
 ![Additional pull request template appended](media/pull-request-templates/additional-pull-request-template-appended.png)
 
->[!NOTE]
->You can specify a pull request template to override any matching default or branch specific pull request by appending `?template=name.md` to the querystring.
+> [!NOTE]
+> You can specify a pull request template to override any matching default or branch specific pull request by appending `?template=name.md` to the querystring.

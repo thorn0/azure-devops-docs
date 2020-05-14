@@ -14,14 +14,12 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `fieldId`: number. 
+- `fieldId`: number.
 
-* `fieldName`: string. 
+- `fieldName`: string.
 
-* `fieldType`: [CustomTestFieldType](../../../TFS/TestManagement/Contracts/CustomTestFieldType.md). 
+- `fieldType`: [CustomTestFieldType](../../../TFS/TestManagement/Contracts/CustomTestFieldType.md).
 
-* `scope`: [CustomTestFieldScope](../../../TFS/TestManagement/Contracts/CustomTestFieldScope.md). 
-
+- `scope`: [CustomTestFieldScope](../../../TFS/TestManagement/Contracts/CustomTestFieldScope.md).

@@ -14,18 +14,16 @@ ms.date: 08/04/2016
 
 Module path: `TFS/WorkItemTracking/ExtensionContracts`
 
-
 ### Members
 
-* `onLoaded`: (workItemLoadedArgs: [IWorkItemLoadedArgs](../../../TFS/WorkItemTracking/ExtensionContracts/IWorkItemLoadedArgs.md)): void. Called when an extension is loaded
+- `onLoaded`: (workItemLoadedArgs: [IWorkItemLoadedArgs](../../../TFS/WorkItemTracking/ExtensionContracts/IWorkItemLoadedArgs.md)): void. Called when an extension is loaded
 
-* `onFieldChanged`: (fieldChangedArgs: [IWorkItemFieldChangedArgs](../../../TFS/WorkItemTracking/ExtensionContracts/IWorkItemFieldChangedArgs.md)): void. Called when a field is modified
+- `onFieldChanged`: (fieldChangedArgs: [IWorkItemFieldChangedArgs](../../../TFS/WorkItemTracking/ExtensionContracts/IWorkItemFieldChangedArgs.md)): void. Called when a field is modified
 
-* `onSaved`: (savedEventArgs: [IWorkItemChangedArgs](../../../TFS/WorkItemTracking/ExtensionContracts/IWorkItemChangedArgs.md)): void. Called when a work item is saved
+- `onSaved`: (savedEventArgs: [IWorkItemChangedArgs](../../../TFS/WorkItemTracking/ExtensionContracts/IWorkItemChangedArgs.md)): void. Called when a work item is saved
 
-* `onRefreshed`: (refreshEventArgs: [IWorkItemChangedArgs](../../../TFS/WorkItemTracking/ExtensionContracts/IWorkItemChangedArgs.md)): void. Called when a work item is refreshed
+- `onRefreshed`: (refreshEventArgs: [IWorkItemChangedArgs](../../../TFS/WorkItemTracking/ExtensionContracts/IWorkItemChangedArgs.md)): void. Called when a work item is refreshed
 
-* `onReset`: (undoEventArgs: [IWorkItemChangedArgs](../../../TFS/WorkItemTracking/ExtensionContracts/IWorkItemChangedArgs.md)): void. Called when a work item is reset (undo back to unchanged state)
+- `onReset`: (undoEventArgs: [IWorkItemChangedArgs](../../../TFS/WorkItemTracking/ExtensionContracts/IWorkItemChangedArgs.md)): void. Called when a work item is reset (undo back to unchanged state)
 
-* `onUnloaded`: (unloadedEventArgs: [IWorkItemChangedArgs](../../../TFS/WorkItemTracking/ExtensionContracts/IWorkItemChangedArgs.md)): void. Called when a work item is unloaded
-
+- `onUnloaded`: (unloadedEventArgs: [IWorkItemChangedArgs](../../../TFS/WorkItemTracking/ExtensionContracts/IWorkItemChangedArgs.md)): void. Called when a work item is unloaded

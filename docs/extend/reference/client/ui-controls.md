@@ -6,7 +6,7 @@ ms.technology: devops-ecosystem
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -19,4 +19,3 @@ ms.date: 08/04/2016
 - [ModalDialog](./controls/modaldialog.md)
 - [Splitter](./controls/splitter.md)
 - [WaitControl](./controls/waitcontrol.md)
-

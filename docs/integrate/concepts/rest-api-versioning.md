@@ -4,7 +4,7 @@ description: Learn how versioning works for REST APIs for Azure DevOps Services 
 ms.assetid: 5fc6efd4-9947-40f2-b4f6-9695a24de87c
 ms.technology: devops-ecosystem
 ms.topic: conceptual
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ms.author: chcomley
 author: chcomley
 ms.date: 05/30/2019
@@ -16,36 +16,37 @@ Azure DevOps Services and Team Foundation Server REST APIs are versioned to ensu
 
 ### Guidelines
 
-* API version **must** be specified with every request.
-* API versions are in the format {major}.{minor}[-{stage}[.{resource-version}]] - For example, ```1.0```, ```1.1```, ```1.2-preview```, ```2.0```.
-* While an API is in preview, you can specify a precise version of a particular revision of the API when needed (for example, ```1.0-preview.1```, ```1.0-preview.2```)
-* Once an API is released (1.0, for example), its preview version (1.0-preview) is deprecated and can be deactivated after 12 weeks.
-* During this time you should upgrade to the released version of the API. Once a preview API is deactivated, requests that specify a ```-preview``` version will be rejected.
+- API version **must** be specified with every request.
+- API versions are in the format {major}.{minor}[-{stage}[.{resource-version}]] - For example, `1.0`, `1.1`, `1.2-preview`, `2.0`.
+- While an API is in preview, you can specify a precise version of a particular revision of the API when needed (for example, `1.0-preview.1`, `1.0-preview.2`)
+- Once an API is released (1.0, for example), its preview version (1.0-preview) is deprecated and can be deactivated after 12 weeks.
+- During this time you should upgrade to the released version of the API. Once a preview API is deactivated, requests that specify a `-preview` version will be rejected.
 
 ### Usage
 
 API version can be specified either in the header of the HTTP request or as a URL query parameter:
 
 HTTP request header:
+
 ```http
 Accept: application/json;api-version=1.0
 ```
 
 Query parameter:
+
 ```no-highlight
 GET https://dev.azure.com/{organization}/_apis/{area}/{resource}?api-version=1.0
 ```
 
 ### Supported versions
 
-| Product                     | 1.0    | 2.0    | 3.0    | 4.0    | 5.0   |
-|:----------------------------|:------:|:------:|:------:|:------:|:------:|
-| Azure DevOps Services | X      | X      | X      | X      |   X   |
-| Azure DevOps Server 2019| X        |  X   |   X   |   X   |      X   |
-| Team Foundation Server 2018 | X      | X      | X      | X      | - |
-| Team Foundation Server 2017 | X      | X      | X      | -      | - |
-| Team Foundation Server 2015 | X      | X      | -      | -      | - |
-
+| Product                     | 1.0 | 2.0 | 3.0 | 4.0 | 5.0 |
+| :-------------------------- | :-: | :-: | :-: | :-: | :-: |
+| Azure DevOps Services       |  X  |  X  |  X  |  X  |  X  |
+| Azure DevOps Server 2019    |  X  |  X  |  X  |  X  |  X  |
+| Team Foundation Server 2018 |  X  |  X  |  X  |  X  |  -  |
+| Team Foundation Server 2017 |  X  |  X  |  X  |  -  |  -  |
+| Team Foundation Server 2015 |  X  |  X  |  -  |  -  |  -  |
 
 Major API version releases align with Team Foundation Server RTM releases. For example, the `3.0` API set was introduced with Team Foundation Server 2017.
 

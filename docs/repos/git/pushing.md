@@ -3,12 +3,12 @@ title: Sync your changes to a remote Git repo
 titleSuffix: Azure Repos
 description: Using Git Push to share code with Git.
 ms.assetid: 6c388abd-1b63-4957-9814-9ec5f104fa5b
-ms.technology: devops-code-git 
+ms.technology: devops-code-git
 ms.author: apawast
 author: apawast
 ms.topic: tutorial
 ms.date: 11/15/2019
-monikerRange: '>= tfs-2013'
+monikerRange: ">= tfs-2013"
 ---
 
 # Share code with push
@@ -24,7 +24,8 @@ Pushed branches that have finished work are reviewed and merged into the main br
 In this tutorial you learn how to:
 
 > [!div class="checklist"]
-> * Share your code with push
+>
+> - Share your code with push
 
 ## Video overview
 
@@ -35,6 +36,7 @@ In this tutorial you learn how to:
 ## Share your code with push
 
 #### [Visual Studio](#tab/visual-studio/)
+
 1. In Team Explorer, select **Home** and then choose **Sync** to open **Synchronization**.
 
    ![Synchronization](media/gitquickstart-vs2017/sync.png)
@@ -53,6 +55,7 @@ In this tutorial you learn how to:
    > Go to **Team Explorer** > **Settings** > **Repository Settings**. Make sure that you've entered the correct **User**, **Email**, **Remotes**, and other settings.
 
 #### [Command Line](#tab/command-line/)
+
 The `push` command updates the remote branch on `origin` with the commits from your local branch.
 
 ```cmd
@@ -81,7 +84,8 @@ git push -u origin users/frank/bugfix
 The command adds your commits from your local branch to the branch on `origin`. This command sets up an upstream tracking relationship in
 Git so that next time you `push` or `pull` from this local branch, you won't have to specify the remote branch name.
 
-* * *
+---
+
 ### Resolve merge conflicts before pushing
 
 If there are [conflicts](merging.md) between your local commits and the remote branch, you must resolve these conflicts before you can push your changes.
@@ -89,5 +93,4 @@ If there are [conflicts](merging.md) between your local commits and the remote b
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Review code with pull requests](pullrequest.md) or [update code with fetch and pull](pulling.md)
+> [!div class="nextstepaction"][review code with pull requests](pullrequest.md) or [update code with fetch and pull](pulling.md)

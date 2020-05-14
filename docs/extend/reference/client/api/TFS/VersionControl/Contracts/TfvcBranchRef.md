@@ -17,15 +17,14 @@ Extends: [TfvcShallowBranchRef](../../../TFS/VersionControl/Contracts/TfvcShallo
 
 ### Members
 
-* `_links`: any. 
+- `_links`: any.
 
-* `createdDate`: Date. 
+- `createdDate`: Date.
 
-* `description`: string. 
+- `description`: string.
 
-* `isDeleted`: boolean. 
+- `isDeleted`: boolean.
 
-* `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md). 
+- `owner`: [VSS_Common_Contracts.IdentityRef](../../../VSS/WebApi/Contracts/IdentityRef.md).
 
-* `url`: string. 
-
+- `url`: string.

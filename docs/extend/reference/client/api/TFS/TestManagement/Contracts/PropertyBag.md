@@ -10,11 +10,10 @@ generated: true
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* void AddOrUpdateProperties(IDictionary &lt;string, string&gt;, properties)
+- void AddOrUpdateProperties(IDictionary &lt;string, string&gt;, properties)
 
-* void AddOrUpdateProperties(string key, string value)
+- void AddOrUpdateProperties(string key, string value)
 
-* string GetProperty(string key)
+- string GetProperty(string key)

@@ -15,7 +15,7 @@ Module path: `TFS/WorkItemTracking/Contracts`
 
 ### Values
 
-* `None` 
-* `Wiql` 
-* `Clauses` 
-* `All` 
+- `None`
+- `Wiql`
+- `Clauses`
+- `All`

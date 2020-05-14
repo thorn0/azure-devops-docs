@@ -7,7 +7,7 @@ ms.topic: tutorial
 ms.author: shashban
 author: azooinmyluggage
 ms.date: 08/24/2018
-monikerRange: '>= tfs-2018'
+monikerRange: ">= tfs-2018"
 ---
 
 # Use approvals and gates to control your deployment
@@ -26,9 +26,10 @@ for your DevOps CI/CD processes.
 In this tutorial, you learn about:
 
 > [!div class="checklist"]
-> * Extending the approval process with gates
-> * Extending the approval process with manual intervention
-> * Viewing and monitoring approvals and gates
+>
+> - Extending the approval process with gates
+> - Extending the approval process with manual intervention
+> - Viewing and monitoring approvals and gates
 
 ## Prerequisites
 
@@ -43,8 +44,8 @@ new one just for this gate to use. For more information, see
 [Create managed queries with the query editor](../../boards/queries/using-queries.md).
 
 In the previous tutorial, you saw a simple use of manual approvals to allow an administrator
-to confirm that a release is ready to deploy to the production stage. In this 
-tutorial, you'll see some additional and more powerful ways to configure approvals 
+to confirm that a release is ready to deploy to the production stage. In this
+tutorial, you'll see some additional and more powerful ways to configure approvals
 for releases and deployments by using manual intervention and gates.
 For more information about the ways you can configure approvals for a release,
 see [Approvals and gates overview](../release/approvals/index.md).
@@ -64,10 +65,10 @@ meets a wide range or criteria, without requiring user intervention.
    ![Opening the release pipeline](media/deploy-using-approvals/open-pipeline.png)
 
 1. Choose the pre-deployment conditions icon for the **Production** stage to
-   open the conditions panel. Enable gates by using the switch control in the **Gates** section.   
+   open the conditions panel. Enable gates by using the switch control in the **Gates** section.
 
    ![Enabling release approval gates](media/deploy-using-approvals/gates-01.png)
- 
+
 1. To allow gate functions to initialize and stabilize (it may take some time for them
    to begin returning accurate results), you configure a delay before the results
    are evaluated and used to determine if the deployment should be approved or rejected.
@@ -88,7 +89,7 @@ meets a wide range or criteria, without requiring user intervention.
    ![Configuring the Query Work Items approval gate](media/deploy-using-approvals/gates-04.png)
 
    > You'll need to open the **Advanced** section to see the **Lower Threshold** setting.
-   > You can also set an **Output Variable** to be returned from the gate task. 
+   > You can also set an **Output Variable** to be returned from the gate task.
    > For more details about the gate arguments, see [Work Item Query task](../tasks/utility/work-item-query.md).
 
 1. Open the **Evaluation options** section and specify the timeout and the sampling interval.
@@ -97,10 +98,10 @@ meets a wide range or criteria, without requiring user intervention.
 
    ![Configuring the options for all gates](media/deploy-using-approvals/gates-05.png)
 
-   >The sampling interval and timeout work together so that the gates will call their functions
-   at suitable intervals, and reject the deployment if they don't all succeed during the same sampling
-   interval and within the timeout period.
-   For more details, see [Gates](../release/approvals/gates.md).
+   > The sampling interval and timeout work together so that the gates will call their functions
+   > at suitable intervals, and reject the deployment if they don't all succeed during the same sampling
+   > interval and within the timeout period.
+   > For more details, see [Gates](../release/approvals/gates.md).
 
 1. Save you release pipeline.
 
@@ -111,12 +112,12 @@ For more information about using other types of approval gates, see [Approvals a
 <!-- TBD - ADD GATE TASK TO TASKS LIST -->
 
 <a name="configure-maninter"></a>
-   
+
 ## Configure a manual intervention
 
 Sometimes, you may need to introduce manual intervention into a release pipeline.
 For example, there may be tasks that cannot be accomplished automatically such as
-confirming network conditions are appropriate, or that specific hardware or software 
+confirming network conditions are appropriate, or that specific hardware or software
 is in place, before you approve a deployment. You can do this by using the **Manual
 Intervention** task in your pipeline.
 
@@ -151,7 +152,7 @@ Intervention** task in your pipeline.
 
 <a name="view-approvals"></a>
 
-## View the logs for approvals 
+## View the logs for approvals
 
 You typically need to validate and audit a release and the associated deployments
 after it has completed, or even during the deployment pipeline. This is useful when
@@ -164,10 +165,10 @@ granted. The comprehensive logging capabilities provide this information.
 
    ![Opening the release summary](media/deploy-using-approvals/open-summary.png)
 
-1. You'll see the live status for each step in the release pipeline. It indicates that a 
+1. You'll see the live status for each step in the release pipeline. It indicates that a
    manual intervention is pending (this pre-deployment approval was configured in the
    previous tutorial [Define your multi-stage continuous deployment pipeline](define-multistage-release-process.md)).
-   Choose the **Resume** link.  
+   Choose the **Resume** link.
 
    ![Viewing the status for the manual intervention](media/deploy-using-approvals/view-log-03.png)
 
@@ -175,7 +176,7 @@ granted. The comprehensive logging capabilities provide this information.
    Enter some text response to the intervention and choose **Resume**.
 
    ![Resuming or rejecting the deployment](media/deploy-using-approvals/view-log-01.png)
-   
+
 1. Go back to the pipeline view of the release. After deployment to the QA stage succeeds,
    you see the pre-deployment approval pending message for the **Production** environment.
 
@@ -185,7 +186,7 @@ granted. The comprehensive logging capabilities provide this information.
 
    ![Approve the deployment](media/deploy-using-approvals/view-log-06.png)
 
-1. Go back to the pipeline view of the release. Now you see that the gates are being processed before the release continues.  
+1. Go back to the pipeline view of the release. Now you see that the gates are being processed before the release continues.
 
    ![Status while executing gates in the deployment](media/deploy-using-approvals/view-log-04.png)
 
@@ -198,5 +199,4 @@ auditing capabilities you may require.
 
 ## Next step
 
-> [!div class="nextstepaction"]
-> [Integrate with ServiceNow change management](approvals/servicenow.md)
+> [!div class="nextstepaction"][integrate with servicenow change management](approvals/servicenow.md)

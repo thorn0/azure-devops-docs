@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.author: sdanie
 author: steved0x
 ms.date: 12/07/2018
-monikerRange: '> tfs-2018'
+monikerRange: "> tfs-2018"
 ---
 
 # New test plans view
 
-[!INCLUDE [version-header-devops-services](../includes/version-header-devops-services.md)] 
+[!INCLUDE [version-header-devops-services](../includes/version-header-devops-services.md)]
 
 A new and fully redesigned user experience is available for test plans in Azure DevOps.
 To use this page, you simply need to switch it on using one of the on-screen prompts,
 or from the [user profile **Previews** panel](../../project/navigation/preview-features.md#enable-features-for-your-use).
 
-[!INCLUDE [feature-availability](../includes/feature-availability.md)] 
+[!INCLUDE [feature-availability](../includes/feature-availability.md)]
 
 In [!INCLUDE [test-hub-include](../includes/test-hub-include.md)], choose the **Test plans** link to access the new test plans view.
 
@@ -34,16 +34,15 @@ Use the shortcut menu to edit or delete the selected plan.
 ![Editing or deleting a test plan](media/2.png)
 
 Show the filter controls to help you find plans if you have a large number of plans in the list.
-Filter the plans by name, team, state, or iteration. 
+Filter the plans by name, team, state, or iteration.
 
 ![Filtering the lits of test plans](media/3.png)
-
 
 ## The "All" page
 
 The **All** page shows a list of all test plans.
 Filter test plans, and edit and delete plans using the shortcut menu, in the same way as in the **Mine** page.
-Use this page to add any test plan to your favorites list. 
+Use this page to add any test plan to your favorites list.
 
 ![The All list of test plans](media/4.png)
 
@@ -51,5 +50,4 @@ You can also add a plan to your favorites list while you are viewing it.
 
 ![Adding a plan to your favorites list](media/5.png)
 
-
-[!INCLUDE [help-and-support-footer](../includes/help-and-support-footer.md)] 
+[!INCLUDE [help-and-support-footer](../includes/help-and-support-footer.md)]

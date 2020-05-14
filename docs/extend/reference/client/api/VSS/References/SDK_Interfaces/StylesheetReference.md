@@ -7,7 +7,7 @@ generated: true
 ms.author: chcomley
 author: chcomley
 ms.topic: article
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ms.date: 08/04/2016
 ---
 
@@ -15,14 +15,12 @@ ms.date: 08/04/2016
 
 Defined in vss.d.ts
 
-
-Reference to a CSS file to include on a page 
+Reference to a CSS file to include on a page
 
 ### Members
 
-* `highContrastUrl`: string. Url of the high-contrast version of the CSS file
+- `highContrastUrl`: string. Url of the high-contrast version of the CSS file
 
-* `isCoreStylesheet`: boolean. Is this a core stylesheet that needs to be included in child frames
+- `isCoreStylesheet`: boolean. Is this a core stylesheet that needs to be included in child frames
 
-* `url`: string. Url of the CSS file
-
+- `url`: string. Url of the CSS file

@@ -18,23 +18,22 @@ Extends: [TaskOrchestrationPlanReference](../../../TFS/DistributedTask/Contracts
 
 ### Members
 
-* `environment`: [PlanEnvironment](../../../TFS/DistributedTask/Contracts/PlanEnvironment.md). 
+- `environment`: [PlanEnvironment](../../../TFS/DistributedTask/Contracts/PlanEnvironment.md).
 
-* `finishTime`: Date. 
+- `finishTime`: Date.
 
-* `implementation`: [TaskOrchestrationContainer](../../../TFS/DistributedTask/Contracts/TaskOrchestrationContainer.md). 
+- `implementation`: [TaskOrchestrationContainer](../../../TFS/DistributedTask/Contracts/TaskOrchestrationContainer.md).
 
-* `requestedById`: string. 
+- `requestedById`: string.
 
-* `requestedForId`: string. 
+- `requestedForId`: string.
 
-* `result`: [TaskResult](../../../TFS/DistributedTask/Contracts/TaskResult.md). 
+- `result`: [TaskResult](../../../TFS/DistributedTask/Contracts/TaskResult.md).
 
-* `resultCode`: string. 
+- `resultCode`: string.
 
-* `startTime`: Date. 
+- `startTime`: Date.
 
-* `state`: [TaskOrchestrationPlanState](../../../TFS/DistributedTask/Contracts/TaskOrchestrationPlanState.md). 
+- `state`: [TaskOrchestrationPlanState](../../../TFS/DistributedTask/Contracts/TaskOrchestrationPlanState.md).
 
-* `timeline`: [TimelineReference](../../../TFS/DistributedTask/Contracts/TimelineReference.md). 
-
+- `timeline`: [TimelineReference](../../../TFS/DistributedTask/Contracts/TimelineReference.md).

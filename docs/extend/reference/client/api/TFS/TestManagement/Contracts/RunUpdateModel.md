@@ -14,42 +14,40 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `build`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `comment`: string. 
+- `comment`: string.
 
-* `completedDate`: string. 
+- `completedDate`: string.
 
-* `controller`: string. 
+- `controller`: string.
 
-* `deleteInProgressResults`: boolean. 
+- `deleteInProgressResults`: boolean.
 
-* `dtlAutEnvironment`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `dtlAutEnvironment`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `dtlEnvironment`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
+- `dtlEnvironment`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).
 
-* `dtlEnvironmentDetails`: [DtlEnvironmentDetails](../../../TFS/TestManagement/Contracts/DtlEnvironmentDetails.md). 
+- `dtlEnvironmentDetails`: [DtlEnvironmentDetails](../../../TFS/TestManagement/Contracts/DtlEnvironmentDetails.md).
 
-* `dueDate`: string. 
+- `dueDate`: string.
 
-* `errorMessage`: string. 
+- `errorMessage`: string.
 
-* `iteration`: string. 
+- `iteration`: string.
 
-* `logEntries`: [TestMessageLogDetails](../../../TFS/TestManagement/Contracts/TestMessageLogDetails.md)[]. 
+- `logEntries`: [TestMessageLogDetails](../../../TFS/TestManagement/Contracts/TestMessageLogDetails.md)[].
 
-* `name`: string. 
+- `name`: string.
 
-* `startedDate`: string. 
+- `startedDate`: string.
 
-* `state`: string. 
+- `state`: string.
 
-* `substate`: [TestRunSubstate](../../../TFS/TestManagement/Contracts/TestRunSubstate.md). 
+- `substate`: [TestRunSubstate](../../../TFS/TestManagement/Contracts/TestRunSubstate.md).
 
-* `testEnvironmentId`: string. 
+- `testEnvironmentId`: string.
 
-* `testSettings`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md). 
-
+- `testSettings`: [ShallowReference](../../../TFS/TestManagement/Contracts/ShallowReference.md).

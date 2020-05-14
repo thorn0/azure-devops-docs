@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Notification event types | REST API Reference for Team Foundation Server
 description: REST APIs for Team Foundation Server.
 ms.assetid: 70F8A8F8-474C-4664-A26C-A5DC714E6242
@@ -21,34 +21,34 @@ ms.date: 03/13/2017
 <a name="Get"></a>
 
 ## Get
-Get a specific event type.
 
+Get a specific event type.
 
 ```no-highlight
 GET https://{instance}/_apis/notification/eventtypes/{eventType}?api-version={version}
 ```
 
-
 #### Authorization scopes
+
 For more details, see section on how to [authorize access to REST APIs](../../get-started/authentication/oauth.md).
 
-| Scope | Name | Notes
-|:------|:-----|:-----
-| vso.notification | Notifications (read) | Provides read access to subscriptions and event metadata, including filterable field values.
-
+| Scope            | Name                 | Notes                                                                                        |
+| :--------------- | :------------------- | :------------------------------------------------------------------------------------------- |
+| vso.notification | Notifications (read) | Provides read access to subscriptions and event metadata, including filterable field values. |
 
 #### Request parameters
-| Name | In  | Type | Notes
-|:--------------|:-----------|:---------|:------------
-| <code>instance</code> | URL | string | Required. TFS server name ({server:port}).
-| <code>eventType</code> | URL | string | Required.
-| <code>api-version</code> | Query | string | Required. [Version](../../concepts/rest-api-versioning.md) of the API to use.  This should be set to '3.2-preview' to use this version of the API.
+
+| Name                     | In    | Type   | Notes                                                                                                                                             |
+| :----------------------- | :---- | :----- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <code>instance</code>    | URL   | string | Required. TFS server name ({server:port}).                                                                                                        |
+| <code>eventType</code>   | URL   | string | Required.                                                                                                                                         |
+| <code>api-version</code> | Query | string | Required. [Version](../../concepts/rest-api-versioning.md) of the API to use. This should be set to '3.2-preview' to use this version of the API. |
 
 #### Response
 
-| Type       | Notes
-|:-----------|:---------
-| [NotificationEventType](./contracts.md#NotificationEventType) | Encapsulates the properties of an event type. It defines the fields, that can be used for filtering, for that event type.
+| Type                                                          | Notes                                                                                                                     |
+| :------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------ |
+| [NotificationEventType](./contracts.md#NotificationEventType) | Encapsulates the properties of an event type. It defines the fields, that can be used for filtering, for that event type. |
 
 #### Sample request
 
@@ -79,158 +79,99 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes/ms.vss-b
       "name": "Build controller",
       "fieldType": {
         "id": "ms.vss-build.build-controller-field-type",
-        "operators": [
-          "=",
-          "<>"
-        ],
+        "operators": ["=", "<>"],
         "operatorConstraints": []
       },
       "path": "tb1:Controller/@Name",
-      "supportedScopes": [
-        "project",
-        "collection"
-      ]
+      "supportedScopes": ["project", "collection"]
     },
     "ms.vss-build.build-reason-event-field": {
       "id": "ms.vss-build.build-reason-event-field",
       "name": "Build reason",
       "fieldType": {
         "id": "ms.vss-build.build-reason-field-type",
-        "operators": [
-          "=",
-          "<>",
-          "Contains",
-          "Does not contain"
-        ],
+        "operators": ["=", "<>", "Contains", "Does not contain"],
         "operatorConstraints": []
       },
       "path": "tb1:Build/@Reason",
-      "supportedScopes": [
-        "project",
-        "collection"
-      ]
+      "supportedScopes": ["project", "collection"]
     },
     "ms.vss-build.compilation-status-event-field": {
       "id": "ms.vss-build.compilation-status-event-field",
       "name": "Compilation status",
       "fieldType": {
         "id": "ms.vss-build.phase-status-field-type",
-        "operators": [
-          "=",
-          "<>",
-          "Contains",
-          "Does not contain"
-        ],
+        "operators": ["=", "<>", "Contains", "Does not contain"],
         "operatorConstraints": []
       },
       "path": "tb1:Build/@CompilationStatus",
-      "supportedScopes": [
-        "project",
-        "collection"
-      ]
+      "supportedScopes": ["project", "collection"]
     },
     "ms.vss-build.definition-name-event-field": {
       "id": "ms.vss-build.definition-name-event-field",
       "name": "Definition name",
       "fieldType": {
         "id": "ms.vss-build.definition-name-field-type",
-        "operators": [
-          "=",
-          "<>",
-          "Contains"
-        ],
+        "operators": ["=", "<>", "Contains"],
         "operatorConstraints": []
       },
       "path": "tb1:Definition/@FullPath",
-      "supportedScopes": [
-        "project"
-      ]
+      "supportedScopes": ["project"]
     },
     "ms.vss-build.requested-by-event-field": {
       "id": "ms.vss-build.requested-by-event-field",
       "name": "Requested by",
       "fieldType": {
         "id": "ms.vss-notifications.identity-array-field-type",
-        "operators": [
-          "Contains",
-          "Does not contain"
-        ],
+        "operators": ["Contains", "Does not contain"],
         "operatorConstraints": []
       },
       "path": "RequestedBy",
-      "supportedScopes": [
-        "project",
-        "collection"
-      ]
+      "supportedScopes": ["project", "collection"]
     },
     "ms.vss-build.requested-for-event-field": {
       "id": "ms.vss-build.requested-for-event-field",
       "name": "Requested for",
       "fieldType": {
         "id": "ms.vss-notifications.identity-array-field-type",
-        "operators": [
-          "Contains",
-          "Does not contain"
-        ],
+        "operators": ["Contains", "Does not contain"],
         "operatorConstraints": []
       },
       "path": "RequestedFor",
-      "supportedScopes": [
-        "project",
-        "collection"
-      ]
+      "supportedScopes": ["project", "collection"]
     },
     "ms.vss-build.status-event-field": {
       "id": "ms.vss-build.status-event-field",
       "name": "Status",
       "fieldType": {
         "id": "ms.vss-build.status-field-type",
-        "operators": [
-          "=",
-          "<>"
-        ],
+        "operators": ["=", "<>"],
         "operatorConstraints": []
       },
       "path": "tb1:Build/@Status",
-      "supportedScopes": [
-        "project",
-        "collection"
-      ]
+      "supportedScopes": ["project", "collection"]
     },
     "ms.vss-build.team-project-event-field": {
       "id": "ms.vss-build.team-project-event-field",
       "name": "Team project",
       "fieldType": {
         "id": "ms.vss-tfs.project-field-type",
-        "operators": [
-          "=",
-          "<>"
-        ],
+        "operators": ["=", "<>"],
         "operatorConstraints": []
       },
       "path": "tb1:Build/@TeamProject",
-      "supportedScopes": [
-        "collection"
-      ]
+      "supportedScopes": ["collection"]
     },
     "ms.vss-build.test-status-event-field": {
       "id": "ms.vss-build.test-status-event-field",
       "name": "Test status",
       "fieldType": {
         "id": "ms.vss-build.phase-status-field-type",
-        "operators": [
-          "=",
-          "<>",
-          "Contains",
-          "Does not contain"
-        ],
+        "operators": ["=", "<>", "Contains", "Does not contain"],
         "operatorConstraints": []
       },
       "path": "tb1:Build/@TestStatus",
-      "supportedScopes": [
-        "project",
-        "collection"
-      ]
+      "supportedScopes": ["project", "collection"]
     }
   },
   "roles": [
@@ -247,10 +188,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes/ms.vss-b
       "name": "Requested for"
     }
   ],
-  "supportedScopes": [
-    "project",
-    "collection"
-  ],
+  "supportedScopes": ["project", "collection"],
   "hasInitiator": false,
   "customSubscriptionsAllowed": true,
   "icon": "css://bowtie-icon bowtie-build",
@@ -258,40 +196,40 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes/ms.vss-b
 }
 ```
 
-
 <a name="List"></a>
 
 ## List
-List available event types for this service. Optionally filter by only event types for the specified publisher.
 
+List available event types for this service. Optionally filter by only event types for the specified publisher.
 
 ```no-highlight
 GET https://{instance}/_apis/notification/eventtypes?api-version={version}
 ```
 
-
 #### Authorization scopes
+
 For more details, see section on how to [authorize access to REST APIs](../../get-started/authentication/oauth.md).
 
-| Scope | Name | Notes
-|:------|:-----|:-----
-| vso.notification | Notifications (read) | Provides read access to subscriptions and event metadata, including filterable field values.
-
+| Scope            | Name                 | Notes                                                                                        |
+| :--------------- | :------------------- | :------------------------------------------------------------------------------------------- |
+| vso.notification | Notifications (read) | Provides read access to subscriptions and event metadata, including filterable field values. |
 
 #### Request parameters
-| Name | In  | Type | Notes
-|:--------------|:-----------|:---------|:------------
-| <code>instance</code> | URL | string | Required. TFS server name ({server:port}).
-| <code>api-version</code> | Query | string | Required. [Version](../../concepts/rest-api-versioning.md) of the API to use.  This should be set to '3.2-preview' to use this version of the API.
-| <code>publisherId</code> | Query | string | Optional. Limit to event types for this publisher
+
+| Name                     | In    | Type   | Notes                                                                                                                                             |
+| :----------------------- | :---- | :----- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <code>instance</code>    | URL   | string | Required. TFS server name ({server:port}).                                                                                                        |
+| <code>api-version</code> | Query | string | Required. [Version](../../concepts/rest-api-versioning.md) of the API to use. This should be set to '3.2-preview' to use this version of the API. |
+| <code>publisherId</code> | Query | string | Optional. Limit to event types for this publisher                                                                                                 |
 
 #### Response
 
-| Type       | Notes
-|:-----------|:---------
+| Type                                                                                                  | Notes |
+| :---------------------------------------------------------------------------------------------------- | :---- |
 | VssJsonCollectionWrapper&lt;array ([NotificationEventType](./contracts.md#NotificationEventType))&gt; |
 
 ### All
+
 #### Sample request
 
 ```
@@ -332,10 +270,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
           "name": "Requested for"
         }
       ],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-build",
@@ -356,10 +291,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
         "name": "Build"
       },
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": false,
       "icon": "css://bowtie-icon bowtie-build",
@@ -380,10 +312,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
         "name": "Build"
       },
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": false,
       "icon": "css://bowtie-icon bowtie-build",
@@ -401,10 +330,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "",
@@ -425,10 +351,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
         "name": "Build"
       },
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "",
@@ -449,10 +372,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
         "name": "Build"
       },
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-build",
@@ -482,10 +402,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
           "name": "Owner"
         }
       ],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": true,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-repo-tfvc",
@@ -511,10 +428,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
           "name": "Pushed by"
         }
       ],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-tfvc-commit",
@@ -532,10 +446,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-repo-git",
@@ -553,10 +464,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-repo-git",
@@ -574,10 +482,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-repo-git",
@@ -595,10 +500,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "collection",
-        "project"
-      ],
+      "supportedScopes": ["collection", "project"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "",
@@ -616,10 +518,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "collection",
-        "project"
-      ],
+      "supportedScopes": ["collection", "project"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "",
@@ -653,10 +552,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
           "name": "Changed reviewers"
         }
       ],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": true,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-tfvc-pull-request",
@@ -677,10 +573,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
         "name": "Code (Git)"
       },
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": true,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-tfvc-merge",
@@ -718,10 +611,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
           "name": "Declined reviewer"
         }
       ],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": true,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-tfvc-pull-request",
@@ -739,10 +629,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "collection",
-        "project"
-      ],
+      "supportedScopes": ["collection", "project"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": false,
       "icon": "",
@@ -760,10 +647,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": false,
       "icon": "",
@@ -797,10 +681,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
           "name": "Current Assignee"
         }
       ],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": true,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-work-item",
@@ -810,8 +691,8 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
 }
 ```
 
-
 ### By publisher
+
 #### Sample request
 
 ```
@@ -844,10 +725,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?publishe
           "name": "Pushed by"
         }
       ],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-tfvc-commit",
@@ -865,10 +743,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?publishe
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-repo-git",
@@ -886,10 +761,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?publishe
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-repo-git",
@@ -907,10 +779,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?publishe
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-repo-git",
@@ -928,10 +797,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?publishe
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "collection",
-        "project"
-      ],
+      "supportedScopes": ["collection", "project"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "",
@@ -949,10 +815,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?publishe
       },
       "category": null,
       "roles": [],
-      "supportedScopes": [
-        "collection",
-        "project"
-      ],
+      "supportedScopes": ["collection", "project"],
       "hasInitiator": false,
       "customSubscriptionsAllowed": true,
       "icon": "",
@@ -986,10 +849,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?publishe
           "name": "Changed reviewers"
         }
       ],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": true,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-tfvc-pull-request",
@@ -1010,10 +870,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?publishe
         "name": "Code (Git)"
       },
       "roles": [],
-      "supportedScopes": [
-        "project",
-        "collection"
-      ],
+      "supportedScopes": ["project", "collection"],
       "hasInitiator": true,
       "customSubscriptionsAllowed": true,
       "icon": "css://bowtie-icon bowtie-tfvc-merge",

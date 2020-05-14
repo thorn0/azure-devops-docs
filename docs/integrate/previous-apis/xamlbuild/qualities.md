@@ -1,6 +1,6 @@
 ---
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < azure-devops'
+monikerRange: ">= tfs-2015 < azure-devops"
 title: Build Qualities (XAML Build) | REST API Reference for Team Foundation Server
 description: Configure a project's build qualities programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 0C352988-B949-4515-A89F-5562F86E937F
@@ -28,11 +28,13 @@ Gets the build qualities that are used in a project.
 GET https://{instance}/DefaultCollection/{project}/_apis/build/qualities?api-version={version}&projectId={string}
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
-| project   | string | [Project](../tfs/projects.md) ID or name.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -60,8 +62,8 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/qualiti
 }
 ```
 
-
 ## Add a quality
+
 <a name="addaquality" />
 
 Adds a build quality value to the list of qualities that can be used for builds in the project.
@@ -70,12 +72,14 @@ Adds a build quality value to the list of qualities that can be used for builds 
 PUT https://{instance}/DefaultCollection/{project}/_apis/build/qualities/{quality}?api-version={version}
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
-| project   | string | [Project](../tfs/projects.md) ID or name.
-| quality   | string | Quality value to add.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| quality | string | Quality value to add.
 | Query
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
@@ -84,10 +88,10 @@ PUT https://{instance}/DefaultCollection/{project}/_apis/build/qualities/{qualit
 ```
 PUT https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/qualities/To%20be%20evaluated?api-version=1.0
 ```
+
 ```json
 {}
 ```
-
 
 ## Remove a quality
 
@@ -97,12 +101,14 @@ Removes a build quality value from the list of qualities that can be used in the
 DELETE https://{instance}/DefaultCollection/{project}/_apis/build/qualities/{quality}?api-version={version}
 ```
 
-| Parameter | Type   | Notes
-|:----------|:-------|:------------
+| Parameter | Type | Notes |
+| :-------- | :--- | :---- |
+
+
 | URL
-| instance  | string | TFS server name ({server:port}).
-| project   | string | [Project](../tfs/projects.md) ID or name.
-| quality   | string | Quality value to add.
+| instance | string | TFS server name ({server:port}).
+| project | string | [Project](../tfs/projects.md) ID or name.
+| quality | string | Quality value to add.
 | Query
 | projectId | string | Add the build quality to the project with this name.
 | api-version | string | [Version](../../concepts/rest-api-versioning.md) of the API to use.
@@ -112,4 +118,3 @@ DELETE https://{instance}/DefaultCollection/{project}/_apis/build/qualities/{qua
 ```
 DELETE https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/build/qualities/To%20be%20evaluated?api-version=1.0
 ```
-

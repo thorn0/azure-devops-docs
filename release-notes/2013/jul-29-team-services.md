@@ -19,8 +19,6 @@ We also added a few more permissions at the repo level. You can now control who 
 
 You can access all of this from the repository management page in project administration.
 
-
-
 ## Additional version control improvements
 
 We now use [Gravatar](https://en.gravatar.com/) in the web, just like our VS client tooling for Git. When viewing Git repositories that contain commits from outside your organization, we now attempt to request a profile image from Gravatar. This option can be disabled in the Version Control admin settings for Git based projects. In this new options area, you will also find an option to disable the automatic linking of commits to work items when they contain #1234 syntax. This is useful when importing Git repositories whose work items do not reside in your TFS server. We also improved the image diffing capabilities, including adding a pixel diff.
@@ -33,13 +31,9 @@ Finally, based on user feedback, the shortcut keys when entering code comments h
 
 Before today’s update, we only supported showing Team Foundation Version Control changeset events. Going forward you can now see Git push events as well. The **Manage events** dialog has been updated to show a list of repositories for all Git projects. Simply choose a Git based Team Project, choose the repository you want push events from, and check the checkbox to enable the event.
 
-
-
 ## Team room emoticons
 
 We’ve had support for emoticons in the team room since it launched on the service back on June 3rd. However, they weren’t easy to discover because we didn’t have a UI to create them. I’m happy to report that we’ve now got an emoticon picker right on the chat window. You can still type the emoticon character set as before, or you can use the picker to find the emoticon you’re after :).
-
-
 
 ## Deleting team rooms
 

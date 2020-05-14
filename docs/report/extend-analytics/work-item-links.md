@@ -1,66 +1,64 @@
 ---
-title: Query for linked work items 
-titleSuffix: Azure DevOps 
-description: How to guidance for creating a query for linked work items using Analytics for Azure DevOps   
+title: Query for linked work items
+titleSuffix: Azure DevOps
+description: How to guidance for creating a query for linked work items using Analytics for Azure DevOps
 ms.technology: devops-analytics
 ms.topic: conceptual
 ms.assetid: BF30FE4E-0370-4C9B-A660-51207D816F8B
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= azure-devops-2019'
+monikerRange: ">= azure-devops-2019"
 ms.date: 11/2/2018
 ---
 
-# Query for linked work items 
+# Query for linked work items
 
 [!INCLUDE [temp](../includes/version-azure-devops.md)]
 
 Querying work items across links is much like using typical navigation properties. Links themselves are entities though, so there is some additional complexity.
 
-There are two ways to query for linked work items. The first is the Parent/Child hierarchy, and the second is the Links navigation property.  
+There are two ways to query for linked work items. The first is the Parent/Child hierarchy, and the second is the Links navigation property.
 
-In this article you'll learn: 
+In this article you'll learn:
 
 > [!div class="checklist"]
-> * How to construct a query to return hierarchically (parent-child) linked work items
-> * How to construct a query to return non-hierarchically (related, direct) linked work items 
+>
+> - How to construct a query to return hierarchically (parent-child) linked work items
+> - How to construct a query to return non-hierarchically (related, direct) linked work items
 
 [!INCLUDE [temp](../includes/analytics-preview.md)]
 
-
-
 > [!NOTE]
 > The examples shown in this document are based on a Azure DevOps Services URL, you will need to substitute in your Azure DevOps Server URL.
-> 
+>
 > [!div class="tabbedCodeSnippets"]
+>
 > ```OData
 > https://{servername}:{port}/tfs/{OrganizationName}/{ProjectName}/_odata/{version}/
 > ```
 
 [!INCLUDE [temp](../includes/api-versioning.md)]
 
-
-
 ## Parent/Child hierarchy
 
-You can include items related through Parent/Child links by using ```$expand``` on the Parent and Children properties.
+You can include items related through Parent/Child links by using `$expand` on the Parent and Children properties.
 
 ### Example: Parent to child query
 
-To return information about an item's children use ```$expand``` on the **Children** navigation property.
-
+To return information about an item's children use `$expand` on the **Children** navigation property.
 
 **Request**
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```OData
 > https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItems?$select=WorkItemId,Title,State&$expand=Children($select=WorkItemId,Title,State)&$filter=WorkItemId eq 103
 > ```
 
-
 **Response**
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```JSON
 > {
 >     "@odata.context": "https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//$metadata#WorkItems(WorkItemId,Title,State,Children,Children(WorkItemId,Title,State))",
@@ -87,11 +85,12 @@ To return information about an item's children use ```$expand``` on the **Childr
 
 ### Example: Child to parent query
 
-By replacing **Children** with **Parent** in the ```$expand``` option you can retrieve an item's ancestry.
+By replacing **Children** with **Parent** in the `$expand` option you can retrieve an item's ancestry.
 
 **Request**
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```OData
 > https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItems?$select=WorkItemId,Title,State&$expand=Parent($select=WorkItemId,Title,State)&$filter=WorkItemId eq 105
 > ```
@@ -99,6 +98,7 @@ By replacing **Children** with **Parent** in the ```$expand``` option you can re
 **Response**
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```JSON
 > {
 >     "@odata.context": "https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//$metadata#WorkItems(WorkItemId,Title,State,Parent,Parent(WorkItemId,Title,State,Parent,Parent(WorkItemId,Title,State)))",
@@ -117,15 +117,16 @@ By replacing **Children** with **Parent** in the ```$expand``` option you can re
 
 ## Query for non-hierarchical links
 
-In addition to the Parent/Child hierarchy items can be directly related to other items with link types like *Related* or *Duplicate*. The **Links** navigation property allows you to request these relationships.
+In addition to the Parent/Child hierarchy items can be directly related to other items with link types like _Related_ or _Duplicate_. The **Links** navigation property allows you to request these relationships.
 
 ### Example: Request an item's links
 
-To retrieve the links associated with an item you may ```$expand``` the **Links** navigation property. In this example the SourceWorkItemId, TargetWorkItemId, and LinkTypeName will be retrieved for all links associated with the work item.
+To retrieve the links associated with an item you may `$expand` the **Links** navigation property. In this example the SourceWorkItemId, TargetWorkItemId, and LinkTypeName will be retrieved for all links associated with the work item.
 
 **Request**
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```OData
 > https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItems?$select=WorkItemId,Title,WorkItemType,State&$filter=WorkItemId%20eq%20103&$expand=Links($select=SourceWorkItemId,TargetWorkItemId,LinkTypeName)
 > ```
@@ -133,6 +134,7 @@ To retrieve the links associated with an item you may ```$expand``` the **Links*
 **Response**
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```JSON
 > {
 >     "@odata.context": "https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//$metadata#WorkItems(WorkItemId,Title,WorkItemType,State,Links(SourceWorkItemId,TargetWorkItemId,LinkTypeName))",
@@ -161,13 +163,15 @@ To retrieve the links associated with an item you may ```$expand``` the **Links*
 >     }]
 > }
 > ```
+>
 > ### Example: Request details of linked items
 
-You may include the details of your linked work items by using ```$expand``` on the **TargetWorkItem** or **SourceWorkItem** navigation properties. In this example we will retrieve the WorkItemId, Title, and State of the target work item for each link.
+You may include the details of your linked work items by using `$expand` on the **TargetWorkItem** or **SourceWorkItem** navigation properties. In this example we will retrieve the WorkItemId, Title, and State of the target work item for each link.
 
 **Request**
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```OData
 > https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItems?$select=WorkItemId,Title,WorkItemType,State&$filter=WorkItemId%20eq%20103&$expand=Links($select=SourceWorkItemId,TargetWorkItemId,LinkTypeName;$expand=TargetWorkItem($select=WorkItemId,Title,State))
 > ```
@@ -175,6 +179,7 @@ You may include the details of your linked work items by using ```$expand``` on 
 **Response**
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```JSON
 > {
 >     "@odata.context": "https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//$metadata#WorkItems(WorkItemId,Title,WorkItemType,State,Links(SourceWorkItemId,TargetWorkItemId,LinkTypeName,TargetWorkItem(WorkItemId,Title,State)))",
@@ -225,11 +230,13 @@ You may include the details of your linked work items by using ```$expand``` on 
 > ```
 
 ### Example: Links of a specific type
-You may also be interested in a particular type of link between items, in which case the **LinkTypeName** property can be used in a ```$filter```. This query expands all 'Related' links and filters out all other link types.
+
+You may also be interested in a particular type of link between items, in which case the **LinkTypeName** property can be used in a `$filter`. This query expands all 'Related' links and filters out all other link types.
 
 **Request**
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```OData
 > https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItems?$select=WorkItemId,Title,WorkItemType,State&$filter=WorkItemId eq 103&$expand=Links($select=SourceWorkItemId,TargetWorkItemId,LinkTypeName;$filter=LinkTypeName eq 'Related';$expand=TargetWorkItem($select=WorkItemId,Title,State))
 > ```
@@ -237,6 +244,7 @@ You may also be interested in a particular type of link between items, in which 
 **Response**
 
 > [!div class="tabbedCodeSnippets"]
+>
 > ```JSON
 > {
 >     "@odata.context": "https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//$metadata#WorkItems(WorkItemId,Title,WorkItemType,State,Links(SourceWorkItemId,TargetWorkItemId,LinkTypeName,TargetWorkItem(WorkItemId,Title,State)))",
@@ -259,8 +267,6 @@ You may also be interested in a particular type of link between items, in which 
 > }
 > ```
 
-
 ## Try this next
 
-> [!div class="nextstepaction"]
-> [Explore Analytics metadata](analytics-metadata.md) 
+> [!div class="nextstepaction"][explore analytics metadata](analytics-metadata.md)

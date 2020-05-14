@@ -1,6 +1,6 @@
 ---
 title: Events, subscriptions, and notifications
-titleSuffix: Azure DevOps 
+titleSuffix: Azure DevOps
 description: Learn about events and subscriptions in Azure DevOps and Team Foundation Server (TFS), and how they're used to create notifications to users.
 ms.technology: devops-collab
 ms.reviewer: wismythe
@@ -8,14 +8,14 @@ ms.author: chcomley
 author: chcomley
 ms.topic: conceptual
 ms.date: 12/30/2019
-monikerRange: '>= tfs-2017'
+monikerRange: ">= tfs-2017"
 ---
 
 # Events, subscriptions, and notifications
 
 [!INCLUDE [version-vsts-tfs-2017-on](../includes/version-tfs-2017-through-vsts.md)]
 
-This article describes the different actions or operations that generate email notifications. 
+This article describes the different actions or operations that generate email notifications.
 
 ## Events
 

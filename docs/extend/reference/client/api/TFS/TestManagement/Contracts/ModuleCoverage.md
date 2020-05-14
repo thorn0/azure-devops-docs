@@ -14,20 +14,18 @@ ms.date: 08/04/2016
 
 Module path: `TFS/TestManagement/Contracts`
 
-
 ### Members
 
-* `blockCount`: number. 
+- `blockCount`: number.
 
-* `blockData`: number[]. 
+- `blockData`: number[].
 
-* `functions`: [FunctionCoverage](../../../TFS/TestManagement/Contracts/FunctionCoverage.md)[]. 
+- `functions`: [FunctionCoverage](../../../TFS/TestManagement/Contracts/FunctionCoverage.md)[].
 
-* `name`: string. 
+- `name`: string.
 
-* `signature`: string. 
+- `signature`: string.
 
-* `signatureAge`: number. 
+- `signatureAge`: number.
 
-* `statistics`: [CoverageStatistics](../../../TFS/TestManagement/Contracts/CoverageStatistics.md). 
-
+- `statistics`: [CoverageStatistics](../../../TFS/TestManagement/Contracts/CoverageStatistics.md).

@@ -1,6 +1,6 @@
 ---
 title: Plans | REST API Reference for Team Foundation Server
-description: Work with agile plans programmatically using the REST APIs for Team Foundation Server. 
+description: Work with agile plans programmatically using the REST APIs for Team Foundation Server.
 ms.contentid: D7B8FEC4-75F9-432E-8140-091C535C514B
 ---
 
@@ -20,14 +20,15 @@ ms.contentid: D7B8FEC4-75F9-432E-8140-091C535C514B
 GET https://{instance}/DefaultCollection/{project}/_apis/work/plans?api-version={api-version}
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:------------ |:------------------------------
-| URL
-| instance  | string  | | TFS server name ({server:port}).
-| project   | string  | | Name or ID of a project.
-| Query
-| api-version | string  | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
 
+
+| URL
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of a project.
+| Query
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -81,21 +82,22 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/work/plans?ap
 }
 ```
 
-
 ## Get a plan associated with the project
 
 ```httprequest
 GET https://{instance}/DefaultCollection/{project}/_apis/work/plans/{id}?api-version={api-version}
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:------------ |:------------------------------
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
+
+
 | URL
-| instance  | string  | | TFS server name ({server:port}).
-| project   | string  | | Name or ID of a project.
-| id        | string  || ID of the specific plan.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of a project.
+| id | string || ID of the specific plan.
 | Query
-| api-version | string  | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
@@ -170,24 +172,23 @@ GET https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/work/plans/27
 }
 ```
 
-
 ## Add a plan for the project
 
 ```httprequest
 POST https://{instance}/DefaultCollection/{project}/_apis/work/plans?api-version={api-version}
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:------------ |:------------------------------
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
+
+
 | URL
-| instance  | string  | | TFS server name ({server:port}).
-| project   | string  | | Name or ID of a project.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of a project.
 | Query
-| api-version | string  | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 ### Add a new "Delivery Plan"
-
-
 
 ## Update an existing plan
 
@@ -195,20 +196,23 @@ POST https://{instance}/DefaultCollection/{project}/_apis/work/plans?api-version
 PUT https://{instance}/DefaultCollection/{project}/_apis/work/plans{id}?api-version={api-version}
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:------------ |:------------------------------
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
+
+
 | URL
-| instance  | string  | | TFS server name ({server:port}).
-| project   | string  | | Name or ID of a project.
-| id        | string  || ID of the specific plan.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of a project.
+| id | string || ID of the specific plan.
 | Query
-| api-version | string  | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 PUT https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/work/plans/27af220a-2293-4030-9e95-a7c54dabf947?api-version=3.0-preview.1
 ```
+
 ```json
 {
   "id": "27af220a-2293-4030-9e95-a7c54dabf947",
@@ -330,25 +334,25 @@ PUT https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/work/plans/27
 }
 ```
 
-
 ## Delete a plan associated with the project
 
 ```httprequest
 DELETE https://{instance}/DefaultCollection/{project}/_apis/work/plans/{id}?api-version={api-version}
 ```
 
-| Parameter | Type    |Default Value | Notes	
-|:----------|:--------|:------------ |:------------------------------
+| Parameter | Type | Default Value | Notes |
+| :-------- | :--- | :------------ | :---- |
+
+
 | URL
-| instance  | string  | | TFS server name ({server:port}).
-| project   | string  | | Name or ID of a project.
-| id        | string  || ID of the specific plan.
+| instance | string | | TFS server name ({server:port}).
+| project | string | | Name or ID of a project.
+| id | string || ID of the specific plan.
 | Query
-| api-version | string  | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
+| api-version | string | | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 
 #### Sample request
 
 ```
 DELETE https://mytfsserver/DefaultCollection/Fabrikam-Fiber-Git/_apis/work/plans/3a43ac93-a474-416f-b30a-430bed6734dc?api-version=3.0-preview.1
 ```
-

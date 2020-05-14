@@ -1,13 +1,13 @@
 ---
 title: Deploy a Docker container app to an AKS cluster
 description: Set up continuous deployment (CD) of a Docker-enabled app to an Azure Kubernetes Service (AKS) from Azure Pipelines
-ms.assetid: 
+ms.assetid:
 ms.topic: quickstart
 ms.custom: seodec18
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 08/30/2019
-monikerRange: '> tfs-2018'
+monikerRange: "> tfs-2018"
 ---
 
 # Deploy a Docker container app to Azure Kubernetes Service
@@ -18,7 +18,6 @@ We'll show you how to set up continuous deployment of your containerized applica
 Azure Pipelines.
 
 After you commit and push a code change, it will be automatically built and deployed to the target Kubernetes cluster.
-
 
 ## Get the code
 
@@ -31,6 +30,7 @@ If you want some sample code that works with this guidance, [import](../../../re
 ```
 https://github.com/spring-guides/gs-spring-boot-docker.git
 ```
+
 #### [JavaScript](#tab/java-script)
 
 [!INCLUDE [include](../../ecosystems/includes/get-code-before-sample-repo-option-to-use-own-code.md)]
@@ -38,6 +38,7 @@ https://github.com/spring-guides/gs-spring-boot-docker.git
 ```
 https://github.com/MicrosoftDocs/pipelines-javascript-docker
 ```
+
 #### [Python](#tab/python)
 
 [!INCLUDE [include](../../ecosystems/includes/get-code-before-sample-repo-option-to-use-own-code.md)]
@@ -45,6 +46,7 @@ https://github.com/MicrosoftDocs/pipelines-javascript-docker
 ```
 https://github.com/Microsoft/python-sample-vscode-flask-tutorial/
 ```
+
 #### [.NET Core](#tab/dotnet-core)
 
 [!INCLUDE [include](../../ecosystems/includes/get-code-before-sample-repo-option-to-use-own-code.md)]
@@ -52,8 +54,8 @@ https://github.com/Microsoft/python-sample-vscode-flask-tutorial/
 ```
 https://github.com/MicrosoftDocs/pipelines-dotnet-core-docker
 ```
-* * *
 
+---
 
 ## Define your CI build process
 
@@ -67,7 +69,7 @@ You'll need an Azure subscription. You can get one free through [Visual Studio D
 
 1. Sign into Azure at [https://portal.azure.com](https://portal.azure.com).
 
-1. In the Azure portal, choose **Create a resource**, **New**, **Containers**, then choose **Kubernetes Service**.    
+1. In the Azure portal, choose **Create a resource**, **New**, **Containers**, then choose **Kubernetes Service**.
 
 1. Select or create a new Resource Group, enter name for your new Kubernetes Service cluster and DNS name prefix.
 
@@ -113,63 +115,63 @@ It also packaged and published a Helm chart as an artifact. In the release pipel
      cluster by using kubeconfig or a service account, you can select **Kubernetes Service Connection**.
      In this case, you will need to create and select a Kubernetes service connection instead of
      an Azure subscription for the following setting.
- 
+
    - **Azure subscription**: Select a connection from the list under **Available Azure Service Connections** or create a more restricted permissions connection to your Azure subscription.
      If you see an **Authorize** button next to the input, use it to authorize the connection to your Azure subscription.
      If you do not see the required Azure subscription in the list of subscriptions, see [Create an Azure service connection](../../library/connect-to-azure.md) to manually set up the connection.
 
-   - **Resource group**: Enter or select the resource group containing your AKS cluster.  
-   
-   - **Kubernetes cluster**: Enter or select the AKS cluster you created.  
-   
+   - **Resource group**: Enter or select the resource group containing your AKS cluster.
+
+   - **Kubernetes cluster**: Enter or select the AKS cluster you created.
+
    - **Command**: Select **init** as the Helm command. This will install Tiller to your running Kubernetes cluster.
      It will also set up any necessary local configuration.
      Tick **Use canary image version** to install the latest pre-release version of Tiller.
      You could also choose to upgrade Tiller if it is pre-installed by ticking **Upgrade Tiller**.
      If these options are enabled, the task will run `helm init --canary-image --upgrade`
-   
+
 1. Choose **+** in the **Agent job** and add another **Package and deploy Helm charts** task.
    Configure the settings for this task as follows:
-   
-   - **Kubernetes cluster**: Enter or select the AKS cluster you created.  
-   
+
+   - **Kubernetes cluster**: Enter or select the AKS cluster you created.
+
    - **Namespace**: Enter your Kubernetes cluster namespace where you want to deploy your application.
      Kubernetes supports multiple virtual clusters backed by the same physical cluster.
      These virtual clusters are called _namespaces_.
-     You can use namespaces to create different environments such as dev, test, and staging in the same cluster. 
+     You can use namespaces to create different environments such as dev, test, and staging in the same cluster.
 
    - **Command**: Select **upgrade** as the Helm command.
      You can run any Helm command using this task and pass in command options as arguments.
      When you select the **upgrade**, the task shows some additional fields:
 
-     * **Chart Type**: Select **File Path**. Alternatively, you can specify **Chart Name** if you want to
+     - **Chart Type**: Select **File Path**. Alternatively, you can specify **Chart Name** if you want to
        specify a URL or a chart name. For example, if the chart name is `stable/mysql`, the task will execute
-       `helm upgrade stable/mysql` 
-   
-     * **Chart Path**: This can be a path to a packaged chart or a path to an unpacked chart directory.
+       `helm upgrade stable/mysql`
+
+     - **Chart Path**: This can be a path to a packaged chart or a path to an unpacked chart directory.
        In this example you are publishing the chart using a CI build, so select the file package using file picker
        or enter `$(System.DefaultWorkingDirectory)/**/*.tgz`
-   
-     * **Release Name**: Enter a name for your release; for example `azuredevops`
-   
-     * **Recreate Pods**: Tick this checkbox if there is a configuration change during the release and you want to replace a running pod with the new configuration.
 
-     * **Reset Values**: Tick this checkbox if you want the values built into the chart to override all values provided by the task.
+     - **Release Name**: Enter a name for your release; for example `azuredevops`
 
-     * **Force**: Tick this checkbox if, should conflicts occur, you want to upgrade and rollback to delete, recreate the resource, and reinstall the full release.
-       This is useful in scenarios where applying patches can fail (for example, for services because the cluster IP address is immutable). 
+     - **Recreate Pods**: Tick this checkbox if there is a configuration change during the release and you want to replace a running pod with the new configuration.
 
-     * **Arguments**: Enter the Helm command arguments and their values; for this example
-       `--set image.repository=$(imageRepoName) --set image.tag=$(Build.BuildId)` 
-       See [this section](#argument-details) for a description of why we are using these arguments. 
-   
-     * **Enable TLS**: Tick this checkbox to enable strong TLS-based connections between Helm and Tiller.
+     - **Reset Values**: Tick this checkbox if you want the values built into the chart to override all values provided by the task.
 
-     * **CA certificate**: Specify a CA certificate to be uploaded and used to issue certificates for Tiller and Helm client.
- 
-     * **Certificate**: Specify the Tiller certificate or Helm client certificate
+     - **Force**: Tick this checkbox if, should conflicts occur, you want to upgrade and rollback to delete, recreate the resource, and reinstall the full release.
+       This is useful in scenarios where applying patches can fail (for example, for services because the cluster IP address is immutable).
 
-     * **Key**: Specify the Tiller Key or Helm client key
+     - **Arguments**: Enter the Helm command arguments and their values; for this example
+       `--set image.repository=$(imageRepoName) --set image.tag=$(Build.BuildId)`
+       See [this section](#argument-details) for a description of why we are using these arguments.
+
+     - **Enable TLS**: Tick this checkbox to enable strong TLS-based connections between Helm and Tiller.
+
+     - **CA certificate**: Specify a CA certificate to be uploaded and used to issue certificates for Tiller and Helm client.
+
+     - **Certificate**: Specify the Tiller certificate or Helm client certificate
+
+     - **Key**: Specify the Tiller Key or Helm client key
 
 1. In the **Variables** page of the pipeline, add a variable named **imageRepoName** and set the value
    to the name of your Helm image repository. Typically, this is in the format `name.azurecr.io/coderepository`
@@ -180,16 +182,16 @@ It also packaged and published a Helm chart as an artifact. In the release pipel
 
 ### Arguments used in the Helm upgrade task
 
-In the build pipeline, the container image is tagged with `$(Build.BuildId)` and this is pushed to an Azure Container Registry. 
+In the build pipeline, the container image is tagged with `$(Build.BuildId)` and this is pushed to an Azure Container Registry.
 In a Helm chart you can parameterize the container image details such as the name and tag
 because the same chart can be used to deploy to different environments.
 These values can also be specified in the **values.yaml** file or be overridden by a user-supplied values file,
 which can in turn be overridden by `--set` parameters during the Helm install or upgrade.
-   
-In this example, we pass the following arguments:   
 
-`--set image.repository=$(imageRepoName) --set image.tag=$(Build.BuildId)` 
-   
+In this example, we pass the following arguments:
+
+`--set image.repository=$(imageRepoName) --set image.tag=$(Build.BuildId)`
+
 The value of `$(imageRepoName)` was set in the **Variables** page (or the **variables** section of your YAML file).
 Alternatively, you can directly replace it with your image repository name in the `--set` arguments value or **values.yaml** file.
 For example:
@@ -214,7 +216,6 @@ You're now ready to create a release, which means to start the process of runnin
 
 1. In the pipeline view, choose the status link in the stages of the pipeline to see the logs and agent output.
 
-
 ## Next steps
 
-* [Set up multi-stage release](../../release/define-multistage-release-process.md)
+- [Set up multi-stage release](../../release/define-multistage-release-process.md)
